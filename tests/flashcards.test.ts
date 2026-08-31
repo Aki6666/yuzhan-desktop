@@ -290,6 +290,8 @@ describe('FlashcardsPage 单卡复习流', () => {
     await w.find('[data-testid="next-button"]').trigger('click') // 完成本轮
     await flushPromises()
 
+    // 会话小结（根 div class=summary 自带 session-summary testid；inner testid 不受 fallthrough 影响）
+    expect(w.find('.summary').exists()).toBe(true)
     expect(w.find('[data-testid="session-summary"]').exists()).toBe(true)
     expect(w.find('[data-testid="summary-known"]').text()).toBe('1')
     expect(w.find('[data-testid="summary-unknown"]').text()).toBe('1')
@@ -311,6 +313,7 @@ describe('FlashcardsPage 单卡复习流', () => {
     await w.find('[data-testid="next-button"]').trigger('click')
     await flushPromises()
 
+    expect(w.find('.summary').exists()).toBe(true)
     expect(w.find('[data-testid="session-summary"]').exists()).toBe(true)
     await w.find('[data-testid="restart-button"]').trigger('click')
     await flushPromises()
