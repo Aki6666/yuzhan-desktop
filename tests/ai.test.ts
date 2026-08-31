@@ -26,7 +26,13 @@ function makeDir(): string {
 }
 
 afterEach(() => {
-  for (const d of dirs.splice(0)) rmSync(d, { recursive: true, force: true })
+  for (const d of dirs.splice(0)) {
+    try {
+      rmSync(d, { recursive: true, force: true, maxRetries: 5, retryDelay: 50 })
+    } catch {
+      /* 残留临时目录交由系统清理，不阻塞用例 */
+    }
+  }
   vi.unstubAllGlobals()
 })
 
