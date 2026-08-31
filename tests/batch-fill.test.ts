@@ -425,18 +425,22 @@ describe('PendingPage 批量 AI 补全（V2-H）', () => {
     expect(wrapper.find('[data-testid="pending-empty"]').exists()).toBe(true)
   })
 
-  it('既有行为不回归：列表渲染 / 立即复习未收录提示 / 删除', async () => {
+  it('既有行为不回归：列表渲染 / 删除', async () => {
     const { wrapper, api } = await mountPending({ aiMode: 'disabled', pending: ['鞠躬尽瘁', '未收录词xyz'] })
     expect(wrapper.findAll('[data-testid="pending-row"]').length).toBe(2)
     expect(wrapper.find('[data-testid="pending-count"]').text()).toContain('共 2 条')
-    // 立即复习：未收录 → 提示
-    await wrapper.find('[data-testid="pending-review"]').trigger('click')
-    await flushPromises()
-    expect(wrapper.find('[data-testid="pending-hint"]').text()).toContain('无法记录复习进度')
-    // 删除
+    // 删除（首行）
     await wrapper.find('[data-testid="pending-remove"]').trigger('click')
     await flushPromises()
     expect(api.pending.remove).toHaveBeenCalled()
     expect(wrapper.findAll('[data-testid="pending-row"]').length).toBe(1)
+  })
+
+  it('既有行为不回归：立即复习未收录词 → 提示', async () => {
+    const { wrapper } = await mountPending({ aiMode: 'disabled', pending: ['未收录词xyz'] })
+    await wrapper.find('[data-testid="pending-review"]').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('[data-testid="pending-hint"]').text()).toContain('无法记录复习进度')
+    expect(wrapper.find('[data-testid="pending-row"]').exists()).toBe(true) // 未跳转
   })
 })
