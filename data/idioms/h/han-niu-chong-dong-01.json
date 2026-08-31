@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "han-niu-chong-dong-01",
+  "word": "汗牛充栋",
+  "pinyin": "hàn niú chōng dòng",
+  "meaning": "运书时牛累得出汗，存放时堆满屋子，形容书籍极多。",
+  "origin": "唐·柳宗元《陆文通先生墓表》",
+  "usage": "只用于书籍多。【误用判定依据】§5.2 对象误用：只能形容书籍，不能用于资料、人才、商品等其他事物。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "浩如烟海",
+      "diff": "汗牛充栋专指书籍多，浩如烟海指文献资料等丰富浩繁"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "馆藏古籍汗牛充栋。",
+      "exam": "2023-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2023-国考-副省级"
+  ],
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

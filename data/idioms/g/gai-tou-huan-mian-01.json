@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "gai-tou-huan-mian-01",
+  "word": "改头换面",
+  "pinyin": "gǎi tóu huàn miàn",
+  "meaning": "只改变外表形式，实质内容不变（贬义）。",
+  "origin": "唐·寒山《诗三百三首》",
+  "usage": "多用于批评换汤不换药。【误用判定依据】§5.2 褒贬误用：常被误用于中性或褒义，实为贬义，与\"改弦更张\"（彻底变更）相对。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "改弦更张",
+      "diff": "改头换面只改形式不改内容（贬），改弦更张是彻底变更方针做法"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "新规不过是旧条文的改头换面。",
+      "exam": "2025-联考-山东",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2025-联考-山东"
+  ],
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

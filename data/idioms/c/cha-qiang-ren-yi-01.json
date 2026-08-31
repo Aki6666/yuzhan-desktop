@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "cha-qiang-ren-yi-01",
+  "word": "差强人意",
+  "pinyin": "chā qiáng rén yì",
+  "meaning": "大体上还能使人满意（\"差\"=稍微，读 chā）。",
+  "origin": "《后汉书·吴汉传》",
+  "usage": "多用于对结果的勉强肯定。【误用判定依据】§5.2 望文生义：常被误解为\"不尽如人意、令人不满意\"，实为\"大体上还满意\"。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "不尽如人意",
+      "diff": "差强人意是大体上还令人满意（肯定），不尽如人意是不令人满意（否定）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "本次成绩虽非最佳，但也差强人意。",
+      "exam": "2024-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 5,
+  "exams": [
+    "2024-国考-副省级"
+  ],
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

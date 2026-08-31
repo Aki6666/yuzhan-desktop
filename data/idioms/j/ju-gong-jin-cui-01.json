@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-gong-jin-cui-01",
+  "word": "鞠躬尽瘁",
+  "pinyin": "jū gōng jìn cuì",
+  "meaning": "小心谨慎，贡献出全部力量直到死，形容忠诚奉献。",
+  "origin": "三国·蜀·诸葛亮《后出师表》",
+  "usage": "多用于忠诚奉献。【误用判定依据】§5.2 形近/音近混淆：与\"殚精竭虑\"相混，前者重\"忠诚付出\"，后者重\"用尽心思\"。",
+  "emotion": "褒",
+  "register": "无",
+  "near": [
+    {
+      "word": "殚精竭虑",
+      "diff": "鞠躬尽瘁重忠诚奉献、死而后已，殚精竭虑重用尽心思竭尽全力"
+    },
+    {
+      "word": "呕心沥血",
+      "diff": "鞠躬尽瘁重\"至死方休\"的忠诚，呕心沥血重\"耗尽心血\"的付出"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他鞠躬尽瘁，为人民服务一生。",
+      "exam": "2024-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2024-国考-副省级"
+  ],
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

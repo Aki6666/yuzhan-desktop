@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "kua-kua-qi-tan-01",
+  "word": "夸夸其谈",
+  "pinyin": "kuā kuā qí tán",
+  "meaning": "说话浮夸、不切实际（贬义）。",
+  "usage": "多用于指责空谈。【误用判定依据】§5.2 褒贬误用：常被误用于中性或褒义语境，实为贬义，指浮夸空谈。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "侃侃而谈",
+      "diff": "夸夸其谈是浮夸空谈（贬），侃侃而谈是从容自信地谈（褒）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "与其夸夸其谈，不如脚踏实地。",
+      "exam": "2023-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2023-国考-副省级"
+  ],
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

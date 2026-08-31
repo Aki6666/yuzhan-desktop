@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-hu-qi-wei-01",
+  "word": "微乎其微",
+  "pinyin": "wēi hū qí wēi",
+  "meaning": "形容非常小或非常少。",
+  "usage": "多用于数量、程度极小。【误用判定依据】§5.2 轻重失当：常被当作\"微不足道\"的加强版，实际只强调\"小/少\"，不含\"不值得一提\"义。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "微不足道",
+      "diff": "微乎其微强调数量程度极小，微不足道强调价值小不值得说"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "出错概率微乎其微。",
+      "exam": "2024-省考-浙江",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2024-省考-浙江"
+  ],
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

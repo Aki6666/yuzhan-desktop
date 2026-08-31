@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "nan-yuan-bei-zhe-01",
+  "word": "南辕北辙",
+  "pinyin": "nán yuán běi zhé",
+  "meaning": "心里想往南去却驾车往北走，比喻行动和目的相反。",
+  "origin": "《战国策·魏策四》",
+  "usage": "多用于行动与目标相悖。【误用判定依据】§5.2 搭配不当：常与\"背道而驰\"混用，前者指同一主体行动与目的相反，后者指两事物方向相反。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "背道而驰",
+      "diff": "南辕北辙指行动与目的相反（同一主体），背道而驰指两者方向目标相反"
+    },
+    {
+      "word": "缘木求鱼",
+      "diff": "南辕北辙重在方向相反，缘木求鱼重在方法根本错误"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "搭配不当"
+  ],
+  "examples": [
+    {
+      "text": "若不转变思路，努力只会南辕北辙。",
+      "exam": "2023-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 5,
+  "exams": [
+    "2023-国考-副省级"
+  ],
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

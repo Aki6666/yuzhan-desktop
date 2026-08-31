@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-ren-kong-xiang-01",
+  "word": "万人空巷",
+  "pinyin": "wàn rén kōng xiàng",
+  "meaning": "家家户户的人都从巷子里出来，形容庆祝、欢迎等盛况（人都出来了，不是巷子空）。",
+  "origin": "宋·苏轼《八月十七复登望海楼》",
+  "usage": "多用于盛大活动、热烈场面。【误用判定依据】§5.2 望文生义：按字面误解为\"巷子里空无一人\"，实际是人人都涌出来看。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "人山人海",
+      "diff": "万人空巷是人人都从家里出来（盛况），人山人海只形容人多聚集"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "全城万人空巷，争睹冠军风采。",
+      "exam": "2024-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2024-国考-副省级"
+  ],
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

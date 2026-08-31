@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ke-hou-fei-01",
+  "word": "无可厚非",
+  "pinyin": "wú kě hòu fēi",
+  "meaning": "虽有缺点但可以原谅，不能过分指责。",
+  "origin": "《汉书·王莽传》",
+  "usage": "多用于对有小缺点行为的评价。【误用判定依据】§5.2 轻重失当：与\"无可非议\"程度不同，前者承认有小缺点可原谅，后者指毫无缺点。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "无可非议",
+      "diff": "无可厚非指虽有缺点但可原谅（程度轻），无可非议指无可指责（程度重）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "他选择稳妥方案，虽不亮眼也无可厚非。",
+      "exam": "2024-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2024-国考-副省级"
+  ],
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

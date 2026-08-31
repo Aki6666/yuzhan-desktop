@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "wang-qi-xiang-bei-01",
+  "word": "望其项背",
+  "pinyin": "wàng qí xiàng bèi",
+  "meaning": "能够望见别人的颈项和背脊，表示赶得上或比得上（多用于否定：难以望其项背）。",
+  "usage": "多用于否定句。【误用判定依据】§5.2 形近/音近混淆：常与\"望尘莫及\"混用，前者须用于否定，后者可直接表落后。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "望尘莫及",
+      "diff": "望其项背多用于否定句（表示赶不上），望尘莫及直接表示远远落后"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "其实力令同行难以望其项背。",
+      "exam": "2025-国考-行政执法",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2025-国考-行政执法"
+  ],
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

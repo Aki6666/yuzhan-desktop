@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-yan-wei-xing-01",
+  "word": "危言危行",
+  "pinyin": "wēi yán wēi xíng",
+  "meaning": "说正直的话、做正直的事（\"危\"=正直，不是危险）。",
+  "origin": "《论语·宪问》",
+  "usage": "多用于正直言行。【收录依据】freq=1：近五年真题语料未见命中，按教研经验收录（\"危\"字古义高频考点）。【误用判定依据】§5.2 望文生义：\"危\"被误释为\"危险\"，把\"危言危行\"误解为\"危险的言行\"。",
+  "emotion": "褒",
+  "register": "无",
+  "near": [
+    {
+      "word": "危言耸听",
+      "diff": "危言危行是说正直话做正直事（褒），危言耸听是故意说吓人的话（贬）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [],
+  "frequency": 1,
+  "exams": [],
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

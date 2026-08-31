@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yi-er-fei-01",
+  "word": "不翼而飞",
+  "pinyin": "bù yì ér fēi",
+  "meaning": "没有翅膀却飞走，比喻东西突然消失，也指消息传播极快。",
+  "usage": "多用于物品消失。【误用判定依据】§5.2 形近/音近混淆：与\"不胫而走\"相混，前者多指物品凭空消失，后者多指消息传播。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "不胫而走",
+      "diff": "不翼而飞多指物品凭空消失，不胫而走专指消息迅速传播"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "桌上的钱包不翼而飞。",
+      "exam": "2024-省考-浙江",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2024-省考-浙江"
+  ],
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

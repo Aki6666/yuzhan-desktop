@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-wen-bu-huo-01",
+  "word": "不温不火",
+  "pinyin": "bù wēn bù huǒ",
+  "meaning": "不冷淡也不火爆，形容性格温和或行情、销售等平稳。",
+  "usage": "多用于性格、行情。【误用判定依据】§5.2 形近/音近混淆：与\"不瘟不火\"相混，后者专指表演既不沉闷也不过火。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "不瘟不火",
+      "diff": "不温不火形容性格温和或行情平稳，不瘟不火专指表演不过火不沉闷"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "新盘开盘后销售不温不火。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "exams": [],
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

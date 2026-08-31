@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-zuo-yong-zhe-01",
+  "word": "始作俑者",
+  "pinyin": "shǐ zuò yǒng zhě",
+  "meaning": "比喻首先做某件坏事的人（贬义）。",
+  "origin": "《孟子·梁惠王上》",
+  "usage": "只用于坏事的发起者。【误用判定依据】§5.2 褒贬误用：常被误用于中性或褒义的\"首创者\"，实为贬义，指坏风气的开先例者。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "开山鼻祖",
+      "diff": "始作俑者指坏事的开创者（贬），开山鼻祖指学术技艺的创始人（褒）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他是这种不良风气的始作俑者。",
+      "exam": "2023-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 5,
+  "exams": [
+    "2023-国考-副省级"
+  ],
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}

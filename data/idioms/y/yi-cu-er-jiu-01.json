@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-cu-er-jiu-01",
+  "word": "一蹴而就",
+  "pinyin": "yī cù ér jiù",
+  "meaning": "踏一步就成功，形容事情轻而易举、一下子完成（用于事情，不用于写作）。",
+  "origin": "宋·苏洵《上田枢密书》",
+  "usage": "多用于否定\"急于求成\"。【误用判定依据】§5.2 形近/音近混淆：与\"一挥而就\"相混，前者用于事情办成，后者用于写作完成。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "一挥而就",
+      "diff": "一蹴而就指事情一下子成功，一挥而就指一动笔就写成"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "人才培养不可能一蹴而就。",
+      "exam": "2025-联考-山东",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2025-联考-山东"
+  ],
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "用户",
+  "updatedAt": "2026-08-31"
+}
