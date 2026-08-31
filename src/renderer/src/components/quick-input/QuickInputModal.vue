@@ -112,8 +112,10 @@ function onUpdateShow(v: boolean): void {
 
 /**
  * 弹层打开后自动聚焦输入框（§3.3 自动聚焦）。
- * NModal 自身 autoFocus=false（避免 VFocusTrap 在内容挂载前抢焦到面板/遮罩），
- * 这里以宏任务延迟 + 重试（最多 5×30ms）确保输入框真正挂载后再聚焦，时序与 NModal 异步渲染解耦。
+ * NModal 关闭 autoFocus（VFocusTrap 不再主动抢焦）与 trapFocus（禁用陷阱的 document
+ * capture 焦点监听，jsdom 下 isFocusable 判定异常会回退聚焦容器 div），快速输入弹层
+ * 无需焦点陷阱；聚焦完全由本组件以宏任务延迟 + 重试（最多 5×30ms）负责，
+ * 确保输入框真正挂载后再聚焦，时序与 NModal 异步渲染解耦。
  */
 function focusInput(): void {
   let attempts = 0
@@ -201,6 +203,7 @@ defineExpose({ open, close, isOpen: () => show.value })
     :title="`快速记录 ${shortcut}`"
     :bordered="false"
     :auto-focus="false"
+    :trap-focus="false"
     @update:show="onUpdateShow"
   >
     <div class="quick-input" data-testid="quick-input-modal">
