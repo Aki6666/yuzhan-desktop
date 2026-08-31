@@ -136,8 +136,6 @@ const bodyClick = (testId: string): void => {
   el.click()
 }
 
-const waitMs = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms))
-
 /** 弹层打开状态（defineExpose 暴露，状态级断言，不依赖过渡动画时序） */
 const isOpen = (wrapper: VueWrapper): boolean =>
   (wrapper.vm as unknown as { isOpen: () => boolean }).isOpen()
@@ -207,10 +205,12 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
     await openModal(wrapper)
     expect(isOpen(wrapper)).toBe(true)
     expect(modal()).not.toBeNull()
-    await waitMs(80) // 等组件 30ms 聚焦宏任务 + NModal 渲染完成
+    // 事件驱动等待：组件 30ms 宏任务 + 重试聚焦完成，轮询直到 activeElement 落在输入框
     const input = qInput()
     expect(input).not.toBeNull()
-    expect(document.activeElement).toBe(input)
+    await vi.waitFor(() => {
+      expect(document.activeElement).toBe(input)
+    }, { timeout: 2000, interval: 40 })
 
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
     await nextTick()

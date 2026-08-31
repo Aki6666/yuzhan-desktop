@@ -112,13 +112,20 @@ function onUpdateShow(v: boolean): void {
 
 /**
  * 弹层打开后自动聚焦输入框（§3.3 自动聚焦）。
- * NModal 自身 autoFocus=false（避免 VFocusTrap 把焦点抢到面板 div），
- * 这里用宏任务延迟，确保 NModal 内容挂载完成后再聚焦。
+ * NModal 自身 autoFocus=false（避免 VFocusTrap 在内容挂载前抢焦到面板/遮罩），
+ * 这里以宏任务延迟 + 重试（最多 5×30ms）确保输入框真正挂载后再聚焦，时序与 NModal 异步渲染解耦。
  */
 function focusInput(): void {
-  setTimeout(() => {
-    document.querySelector<HTMLInputElement>('[data-testid="quick-input"] input')?.focus()
-  }, 30)
+  let attempts = 0
+  const tryFocus = (): void => {
+    const el = document.querySelector<HTMLInputElement>('[data-testid="quick-input"] input')
+    if (el) {
+      el.focus()
+      return
+    }
+    if (++attempts < 5) setTimeout(tryFocus, 30)
+  }
+  setTimeout(tryFocus, 30)
 }
 
 // ---------------------------------------------------------------------------
