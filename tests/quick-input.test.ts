@@ -10,7 +10,7 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
-import { createMemoryHistory, createRouter, type Router } from 'vue-router'
+import { createMemoryHistory, createRouter } from 'vue-router'
 import { nextTick } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'
 import QuickInputModal from '../src/renderer/src/components/quick-input/QuickInputModal.vue'
@@ -120,10 +120,8 @@ async function mountModal(opts: { items?: Idiom[] } = {}) {
   return { wrapper, router, api, pinia }
 }
 
-async function openAndType(text: string): Promise<void> {
-  window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
-  await nextTick()
-  await nextTick()
+async function openAndType(wrapper: VueWrapper, text: string): Promise<void> {
+  await openModal(wrapper)
   const input = qInput()
   if (!input) throw new Error('quick input 未渲染')
   input.value = text
@@ -136,6 +134,19 @@ const bodyClick = (testId: string): void => {
   const el = document.body.querySelector<HTMLElement>(`[data-testid="${testId}"]`)
   if (!el) throw new Error(`未找到 ${testId}`)
   el.click()
+}
+
+const waitMs = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms))
+
+/** 弹层打开状态（defineExpose 暴露，状态级断言，不依赖过渡动画时序） */
+const isOpen = (wrapper: VueWrapper): boolean =>
+  (wrapper.vm as unknown as { isOpen: () => boolean }).isOpen()
+
+async function openModal(wrapper: VueWrapper): Promise<void> {
+  window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
+  await nextTick()
+  await nextTick()
+  await flushPromises()
 }
 
 afterEach(() => {
@@ -193,10 +204,10 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
     const { wrapper } = await mountModal()
     expect(modal()).toBeNull()
 
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
-    await nextTick()
-    await nextTick()
+    await openModal(wrapper)
+    expect(isOpen(wrapper)).toBe(true)
     expect(modal()).not.toBeNull()
+    await waitMs(40) // 等 NModal 渲染 + 自聚焦完成
     const input = qInput()
     expect(input).not.toBeNull()
     expect(document.activeElement).toBe(input)
@@ -204,27 +215,25 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
     await nextTick()
     await nextTick()
-    expect(modal()).toBeNull()
+    expect(isOpen(wrapper)).toBe(false)
     wrapper.unmount()
   })
 
   it('Esc 关闭弹层', async () => {
     const { wrapper } = await mountModal()
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
-    await nextTick()
-    await nextTick()
+    await openModal(wrapper)
     expect(modal()).not.toBeNull()
 
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }))
     await nextTick()
     await nextTick()
-    expect(modal()).toBeNull()
+    expect(isOpen(wrapper)).toBe(false)
     wrapper.unmount()
   })
 
   it('AC-03 输入拼音 jgj → 命中卡片展示鞠躬尽瘁（前缀命中）', async () => {
     const { wrapper } = await mountModal()
-    await openAndType('jgj')
+    await openAndType(wrapper, 'jgj')
     const card = document.body.querySelector('[data-testid="quick-hit-card"]')
     expect(card).not.toBeNull()
     expect(card?.textContent).toContain('鞠躬尽瘁')
@@ -235,7 +244,7 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
 
   it('命中「复习一次」→ progress 写 status=learning（记录闭环 + 强制 flush）', async () => {
     const { wrapper, api } = await mountModal()
-    await openAndType('jgj')
+    await openAndType(wrapper, 'jgj')
     bodyClick('action-review')
     await flushPromises()
     expect(api.progress.save).toHaveBeenCalledWith(
@@ -247,7 +256,7 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
 
   it('「标记掌握」→ progress 写 status=mastered', async () => {
     const { wrapper, api } = await mountModal()
-    await openAndType('jgj')
+    await openAndType(wrapper, 'jgj')
     bodyClick('action-master')
     await flushPromises()
     expect(api.progress.save).toHaveBeenCalledWith(
@@ -258,7 +267,7 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
 
   it('AC-04 未命中 → 「存入生词本」按钮 → pending.add 且反馈可见', async () => {
     const { wrapper, api } = await mountModal()
-    await openAndType('生僻词')
+    await openAndType(wrapper, '生僻词')
     expect(document.body.querySelector('[data-testid="quick-state-miss"]')).not.toBeNull()
     bodyClick('action-add-pending')
     await flushPromises()
@@ -269,7 +278,7 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
 
   it('未命中时回车直接存入生词本', async () => {
     const { wrapper, api } = await mountModal()
-    await openAndType('不入流词')
+    await openAndType(wrapper, '不入流词')
     qInput()?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }))
     await flushPromises()
     expect(api.pending.add).toHaveBeenCalledWith('不入流词')
@@ -278,13 +287,11 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
 
   it('命中卡片「查看详情」→ 跳转 /idioms/:id 并关闭弹层', async () => {
     const { wrapper, router } = await mountModal()
-    await openAndType('jgj')
+    await openAndType(wrapper, 'jgj')
     bodyClick('action-detail')
     await flushPromises()
     expect(router.currentRoute.value.path).toBe('/idioms/ju-gong-jin-cui-01')
-    await nextTick()
-    await nextTick()
-    expect(modal()).toBeNull()
+    expect(isOpen(wrapper)).toBe(false)
     wrapper.unmount()
   })
 })
