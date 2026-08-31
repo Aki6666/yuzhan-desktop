@@ -120,4 +120,11 @@ describe('命中优先级：精确 → 前缀 → 子串 → 编辑距离', () =
     const r = search(index, '  鞠躬尽瘁  ')
     expect(r[0]?.id).toBe('ju-gong-jin-cui-01')
   })
+
+  it.skip('【已知缺陷·待修复】带声调全拼查询应命中（jū gōng jìn cuì）', () => {
+    // 缺陷：normalizeQuery 只 trim+toLowerCase，不去声调；索引 pinyinFlat 已 stripTones，
+    // 带声调查询无法命中精确/前缀/子串/编辑距离任一层。修复方向：normalizeQuery 时去声调。
+    const r = search(index, 'jū gōng jìn cuì')
+    expect(r[0]?.id).toBe('ju-gong-jin-cui-01')
+  })
 })
