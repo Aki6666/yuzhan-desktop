@@ -179,12 +179,11 @@ function retryLoad(): void {
       </NEmpty>
     </div>
 
-    <!-- 会话小结 -->
+    <!-- 会话小结（组件根自带 data-testid="session-summary"；勿传同名 fallthrough 覆盖） -->
     <FlashcardSessionSummary
       v-else-if="finished"
       :summary="summary"
       :total="history.length"
-      data-testid="summary-block"
       @restart="startSession"
     />
 
