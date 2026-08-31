@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-gu-jue-chang-01",
+  "word": "千古绝唱",
+  "pinyin": "qiān gǔ jué chàng",
+  "meaning": "千百年来绝无仅有的杰作，形容诗文、乐曲等极好。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

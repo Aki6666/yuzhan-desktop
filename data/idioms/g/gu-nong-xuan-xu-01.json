@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gu-nong-xuan-xu-01",
+  "word": "故弄玄虚",
+  "pinyin": "gù nòng xuán xū",
+  "meaning": "故意玩弄花招、迷惑人，也指故意用玄妙的话掩盖真相（\"玄虚\"=玄妙虚无）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

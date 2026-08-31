@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-mi-mo-ce-01",
+  "word": "神秘莫测",
+  "pinyin": "shén mì mò cè",
+  "meaning": "非常神秘，难以推测（\"测\"=推测）。",
+  "usage": "强调深奥难测。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "深海世界神秘莫测，有待探索。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

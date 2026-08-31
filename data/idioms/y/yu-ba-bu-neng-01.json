@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-ba-bu-neng-01",
+  "word": "欲罢不能",
+  "pinyin": "yù bà bù néng",
+  "meaning": "想停止也停止不了（\"罢\"=停止）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

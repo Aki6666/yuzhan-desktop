@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-guan-qi-bian-01",
+  "word": "静观其变",
+  "pinyin": "jìng guān qí biàn",
+  "meaning": "冷静地观察事情的变化，暂不采取行动。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

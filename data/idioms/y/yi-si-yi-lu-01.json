@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-si-yi-lu-01",
+  "word": "一丝一缕",
+  "pinyin": "yì sī yì lǚ",
+  "meaning": "一根丝、一根线，形容极其细微。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

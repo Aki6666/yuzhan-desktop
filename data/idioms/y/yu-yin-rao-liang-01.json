@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-yin-rao-liang-01",
+  "word": "余音绕梁",
+  "pinyin": "yú yīn rào liáng",
+  "meaning": "歌声或乐曲的余音在屋梁上回旋不绝，形容歌声优美动听、耐人回味。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

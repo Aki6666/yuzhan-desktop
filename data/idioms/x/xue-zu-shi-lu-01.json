@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xue-zu-shi-lu-01",
+  "word": "削足适履",
+  "pinyin": "xuē zú shì lǚ",
+  "meaning": "把脚削小去适应鞋子，比喻不合理地迁就现成条件，或生搬硬套（\"履\"=鞋）。",
+  "usage": "批评不顾实际、生搬硬套。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "引进制度不能削足适履，要因地制宜。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fang-xing-wei-ai-01",
+  "word": "方兴未艾",
+  "pinyin": "fāng xīng wèi ài",
+  "meaning": "事物正在发展，一时不会终止（\"艾\"=停止）。",
+  "usage": "多用于形容新生事物、潮流、运动等正处于上升期。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "近年来，人工智能产业方兴未艾。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 106
+}

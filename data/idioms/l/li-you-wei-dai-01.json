@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-you-wei-dai-01",
+  "word": "力有未逮",
+  "pinyin": "lì yǒu wèi dǎi",
+  "meaning": "力量有所不及、达不到（\"逮\"=及）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

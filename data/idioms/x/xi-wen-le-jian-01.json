@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-wen-le-jian-01",
+  "word": "喜闻乐见",
+  "pinyin": "xǐ wén lè jiàn",
+  "meaning": "喜欢听、乐意看，形容很受欢迎（\"闻\"=听）。",
+  "usage": "多用于文艺作品、形式等受欢迎。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这种接地气的节目深受群众喜闻乐见。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

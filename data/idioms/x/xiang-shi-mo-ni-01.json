@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-shi-mo-ni-01",
+  "word": "相视莫逆",
+  "pinyin": "xiāng shì mò nì",
+  "meaning": "彼此看着对方，心意相通、没有抵触，形容友谊深厚、情投意合（\"莫逆\"=不相违背）。",
+  "usage": "多用于知心朋友之间。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "二人志趣相投，相视莫逆，结为至交。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

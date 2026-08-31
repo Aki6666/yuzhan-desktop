@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tong-qi-lian-zhi-01",
+  "word": "同气连枝",
+  "pinyin": "tóng qì lián zhī",
+  "meaning": "同受父母之气、枝条相连，比喻兄弟或同族关系极为密切。",
+  "usage": "多用于兄弟姐妹、同胞之间。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "海峡两岸同胞同气连枝，血脉相连。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

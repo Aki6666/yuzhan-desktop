@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ke-jian-yi-ban-01",
+  "word": "可见一斑",
+  "pinyin": "kě jiàn yì bān",
+  "meaning": "比喻见到事物的一小部分也能推知事物的整体（常与\"管中窥豹\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

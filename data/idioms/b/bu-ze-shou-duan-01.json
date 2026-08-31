@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ze-shou-duan-01",
+  "word": "不择手段",
+  "pinyin": "bù zé shǒu duàn",
+  "meaning": "为了达到目的什么手段都使得出来（多含贬义）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

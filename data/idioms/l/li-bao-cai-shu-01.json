@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-bao-cai-shu-01",
+  "word": "力薄才疏",
+  "pinyin": "lì báo cái shū",
+  "meaning": "力量薄弱、才识浅陋（多作谦辞）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

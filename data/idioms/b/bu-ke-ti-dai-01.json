@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-ti-dai-01",
+  "word": "不可替代",
+  "pinyin": "bù kě tì dài",
+  "meaning": "不能被替换、代替。",
+  "usage": "强调唯一性、重要性。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "教师的作用在网络时代依然不可替代。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 62
+}

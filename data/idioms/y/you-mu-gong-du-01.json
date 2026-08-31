@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "you-mu-gong-du-01",
+  "word": "有目共睹",
+  "pinyin": "yǒu mù gòng dǔ",
+  "meaning": "大家的眼睛都能看见，形容事实极其明显。",
+  "usage": "强调事实明显、众人皆知。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "城市面貌的巨大变化有目共睹。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 40
+}

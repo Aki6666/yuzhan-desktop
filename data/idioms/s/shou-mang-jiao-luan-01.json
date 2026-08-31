@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shou-mang-jiao-luan-01",
+  "word": "手忙脚乱",
+  "pinyin": "shǒu máng jiǎo luàn",
+  "meaning": "形容遇事慌张、不知如何是好。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

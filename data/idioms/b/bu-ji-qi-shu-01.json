@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ji-qi-shu-01",
+  "word": "不计其数",
+  "pinyin": "bú jì qí shù",
+  "meaning": "无法计算数目，形容极多。",
+  "usage": "强调数量多得无法计算。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "历史上因灾荒而流离失所的人不计其数。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

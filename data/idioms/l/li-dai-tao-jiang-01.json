@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-dai-tao-jiang-01",
+  "word": "李代桃僵",
+  "pinyin": "lǐ dài táo jiāng",
+  "meaning": "李树代替桃树而死，原比喻兄弟互相爱护、互相帮助，后转用来比喻以此代彼或代人受过。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "de-yi-shuang-xin-01",
+  "word": "德艺双馨",
+  "pinyin": "dé yì shuāng xīn",
+  "meaning": "品德和技艺（艺术）都非常好（\"馨\"=香气远闻）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

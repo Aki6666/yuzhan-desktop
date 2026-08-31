@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-zu-xian-deng-01",
+  "word": "捷足先登",
+  "pinyin": "jié zú xiān dēng",
+  "meaning": "行动快的人先达到目的或先得到所求的东西。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

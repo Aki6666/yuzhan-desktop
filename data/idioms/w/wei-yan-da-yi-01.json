@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-yan-da-yi-01",
+  "word": "微言大义",
+  "pinyin": "wēi yán dà yì",
+  "meaning": "精微的语言中包含深刻的意义（\"微言\"=精当而含义深远的话）。",
+  "usage": "多用于经典著作等言简意赅。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "《论语》微言大义，值得反复研读。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

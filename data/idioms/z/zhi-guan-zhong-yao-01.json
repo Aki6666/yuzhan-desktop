@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-guan-zhong-yao-01",
+  "word": "至关重要",
+  "pinyin": "zhì guān zhòng yào",
+  "meaning": "相当重要，关系到全局（\"至\"=极）。",
+  "usage": "不与\"非常\"\"极其\"叠用（已含\"至\"）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "examples": [
+    {
+      "text": "人才是创新驱动发展至关重要的资源。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 42
+}

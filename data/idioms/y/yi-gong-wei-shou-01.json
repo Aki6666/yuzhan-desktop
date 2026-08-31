@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-gong-wei-shou-01",
+  "word": "以攻为守",
+  "pinyin": "yǐ gōng wéi shǒu",
+  "meaning": "用进攻作为防御的手段。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

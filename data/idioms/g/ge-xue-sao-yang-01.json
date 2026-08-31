@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-xue-sao-yang-01",
+  "word": "隔靴搔痒",
+  "pinyin": "gé xuē sāo yǎng",
+  "meaning": "隔着靴子挠痒痒，比喻说话、作文等不中肯、没有抓住要害。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

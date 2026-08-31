@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-yu-er-an-01",
+  "word": "随遇而安",
+  "pinyin": "suí yù ér ān",
+  "meaning": "能适应各种环境、在任何境遇中都能满足。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

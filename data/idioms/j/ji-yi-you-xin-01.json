@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-yi-you-xin-01",
+  "word": "记忆犹新",
+  "pinyin": "jì yì yóu xīn",
+  "meaning": "过去的事至今还记得清清楚楚，就像新发生的一样。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

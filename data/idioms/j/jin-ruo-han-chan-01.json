@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-ruo-han-chan-01",
+  "word": "噤若寒蝉",
+  "pinyin": "jìn ruò hán chán",
+  "meaning": "像深秋的蝉那样一声不响，形容不敢作声（\"噤\"=闭口）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

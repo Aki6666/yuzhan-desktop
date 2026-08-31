@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-wu-suo-huo-01",
+  "word": "一无所获",
+  "pinyin": "yì wú suǒ huò",
+  "meaning": "什么也没有得到，形容白费力气。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

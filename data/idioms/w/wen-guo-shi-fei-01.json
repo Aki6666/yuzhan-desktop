@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wen-guo-shi-fei-01",
+  "word": "文过饰非",
+  "pinyin": "wén guò shì fēi",
+  "meaning": "用漂亮的言词掩饰自己的过失和错误（\"文\"\"饰\"=掩饰）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

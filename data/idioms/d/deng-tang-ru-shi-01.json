@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "deng-tang-ru-shi-01",
+  "word": "登堂入室",
+  "pinyin": "dēng táng rù shì",
+  "meaning": "登上厅堂、进入内室，比喻学问或技能由浅入深达到很高水平。",
+  "usage": "注意不是\"登门入室\"；多用于技艺、学问精进。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "经过多年研习，他在国画上已登堂入室。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

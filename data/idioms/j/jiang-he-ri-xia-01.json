@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jiang-he-ri-xia-01",
+  "word": "江河日下",
+  "pinyin": "jiāng hé rì xià",
+  "meaning": "江河的水一天天向下游流，比喻情况一天天坏下去。",
+  "usage": "多用于形势、风气、业绩等日趋衰败。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "该报发行量江河日下，经营困难。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

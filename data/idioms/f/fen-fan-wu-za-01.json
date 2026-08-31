@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-fan-wu-za-01",
+  "word": "纷繁芜杂",
+  "pinyin": "fēn fán wú zá",
+  "meaning": "头绪多而杂乱，事情复杂（\"芜\"=杂乱）。",
+  "usage": "多用于头绪、情况、信息等繁杂。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "面对纷繁芜杂的信息，要保持清醒。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

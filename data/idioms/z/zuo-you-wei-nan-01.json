@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zuo-you-wei-nan-01",
+  "word": "左右为难",
+  "pinyin": "zuǒ yòu wéi nán",
+  "meaning": "左也不好、右也不好，形容无论怎样做都有难处。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

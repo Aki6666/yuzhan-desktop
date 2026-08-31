@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shou-qu-yi-zhi-01",
+  "word": "首屈一指",
+  "pinyin": "shǒu qū yì zhǐ",
+  "meaning": "扳指头计算，首先弯下大拇指，表示第一、居首位。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

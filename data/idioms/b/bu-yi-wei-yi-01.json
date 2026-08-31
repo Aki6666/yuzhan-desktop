@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yi-wei-yi-01",
+  "word": "不以为意",
+  "pinyin": "bù yǐ wéi yì",
+  "meaning": "不把它放在心上，表示对人或事抱轻视态度。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

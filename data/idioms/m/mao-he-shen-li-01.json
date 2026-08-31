@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mao-he-shen-li-01",
+  "word": "貌合神离",
+  "pinyin": "mào hé shén lí",
+  "meaning": "表面上关系很融洽、实际上各有各的心。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mu-guang-ru-ju-01",
+  "word": "目光如炬",
+  "pinyin": "mù guāng rú jù",
+  "meaning": "眼光亮得像火炬，形容目光远大、见解高明，也形容发怒时目光逼人。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

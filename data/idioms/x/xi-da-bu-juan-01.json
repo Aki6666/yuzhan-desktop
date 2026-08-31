@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-da-bu-juan-01",
+  "word": "细大不捐",
+  "pinyin": "xì dà bù juān",
+  "meaning": "小的大的都不抛弃，形容包罗一切、没有遗漏（\"捐\"=舍弃）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

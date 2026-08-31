@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ku-xin-gu-yi-01",
+  "word": "苦心孤诣",
+  "pinyin": "kǔ xīn gū yì",
+  "meaning": "苦心钻研，达到了别人达不到的境地（\"诣\"=造诣）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

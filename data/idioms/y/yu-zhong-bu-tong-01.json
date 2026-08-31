@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-zhong-bu-tong-01",
+  "word": "与众不同",
+  "pinyin": "yǔ zhòng bù tóng",
+  "meaning": "跟大家不一样。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

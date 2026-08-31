@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-yi-qiu-jing-01",
+  "word": "精益求精",
+  "pinyin": "jīng yì qiú jīng",
+  "meaning": "已经很好了，还要求更好（\"益\"=更加）。",
+  "usage": "多用于工匠精神、治学态度等追求极致。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "工匠们对每一道工序都精益求精。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 62
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ang-shou-kuo-bu-01",
+  "word": "昂首阔步",
+  "pinyin": "áng shǒu kuò bù",
+  "meaning": "仰着头大步前进，形容精神振奋、意气昂扬。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gong-kui-yi-kui-01",
+  "word": "功亏一篑",
+  "pinyin": "gōng kuī yí kuì",
+  "meaning": "堆九仞高的山，只差一筐土而不能完成，比喻只差最后一点而功败垂成（\"篑\"=土筐）。",
+  "usage": "与\"功败垂成\"\"前功尽弃\"辨析（详见各条）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "行百里者半九十，切忌功亏一篑。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 40
+}

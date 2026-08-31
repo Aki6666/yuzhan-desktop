@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xuan-li-duo-cai-01",
+  "word": "绚丽多彩",
+  "pinyin": "xuàn lì duō cǎi",
+  "meaning": "形容色彩灿烂、丰富多彩。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

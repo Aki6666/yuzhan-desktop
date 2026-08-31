@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhong-gui-zhong-ju-01",
+  "word": "中规中矩",
+  "pinyin": "zhōng guī zhōng jǔ",
+  "meaning": "合乎规矩、正派，形容行为端正或做事符合标准。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

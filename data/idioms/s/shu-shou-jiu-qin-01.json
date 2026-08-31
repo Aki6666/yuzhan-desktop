@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shu-shou-jiu-qin-01",
+  "word": "束手就擒",
+  "pinyin": "shù shǒu jiù qín",
+  "meaning": "捆起手来让人捉住，比喻无法逃脱或不愿抵抗。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

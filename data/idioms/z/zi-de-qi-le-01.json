@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-de-qi-le-01",
+  "word": "自得其乐",
+  "pinyin": "zì dé qí lè",
+  "meaning": "自己能从中得到乐趣。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-zhi-bu-jue-01",
+  "word": "不知不觉",
+  "pinyin": "bù zhī bù jué",
+  "meaning": "没有意识到、没有觉察到。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

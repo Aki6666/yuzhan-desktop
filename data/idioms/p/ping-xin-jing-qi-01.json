@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ping-xin-jing-qi-01",
+  "word": "平心静气",
+  "pinyin": "píng xīn jìng qì",
+  "meaning": "心情平和、态度冷静，形容不感情用事。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

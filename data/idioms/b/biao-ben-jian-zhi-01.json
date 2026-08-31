@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "biao-ben-jian-zhi-01",
+  "word": "标本兼治",
+  "pinyin": "biāo běn jiān zhì",
+  "meaning": "既解决表面的问题，也解决根本的问题。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

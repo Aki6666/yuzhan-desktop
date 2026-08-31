@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-chui-cao-dong-01",
+  "word": "风吹草动",
+  "pinyin": "fēng chuī cǎo dòng",
+  "meaning": "风一吹、草就动，比喻轻微的动静或变故。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

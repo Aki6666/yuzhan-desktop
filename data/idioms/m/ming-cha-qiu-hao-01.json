@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-cha-qiu-hao-01",
+  "word": "明察秋毫",
+  "pinyin": "míng chá qiū háo",
+  "meaning": "连秋天鸟兽新生的细毛都能看得清，形容目光敏锐，能洞察极细微的事物（\"秋毫\"=秋天鸟兽新生的细毛）。",
+  "usage": "强调观察细致、洞察入微。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "监察机关明察秋毫，精准查处问题。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qing-miao-dan-xie-01",
+  "word": "轻描淡写",
+  "pinyin": "qīng miáo dàn xiě",
+  "meaning": "原指绘画时用浅淡颜色轻轻描绘，现多形容说话或写文章时对重要问题轻轻带过。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

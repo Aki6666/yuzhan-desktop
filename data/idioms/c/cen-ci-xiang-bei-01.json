@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cen-ci-xiang-bei-01",
+  "word": "参差向背",
+  "pinyin": "cēn cī xiàng bèi",
+  "meaning": "形容字迹或事物参差不齐、朝向各异。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

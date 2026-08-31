@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wang-hu-suo-yi-01",
+  "word": "忘乎所以",
+  "pinyin": "wàng hū suǒ yǐ",
+  "meaning": "因过分得意或兴奋而忘记了一切（\"所以\"=应有的态度）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

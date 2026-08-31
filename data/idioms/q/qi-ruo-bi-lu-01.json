@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-ruo-bi-lu-01",
+  "word": "弃若敝履",
+  "pinyin": "qì ruò bì lǚ",
+  "meaning": "像扔掉破鞋一样抛弃，形容毫不可惜地抛弃（\"履\"=鞋）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

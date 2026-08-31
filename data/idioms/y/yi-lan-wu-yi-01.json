@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-lan-wu-yi-01",
+  "word": "一览无遗",
+  "pinyin": "yì lǎn wú yí",
+  "meaning": "一眼看去，所有的景物全部看见，形容事物展露无遗。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

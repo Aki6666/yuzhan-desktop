@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tong-tong-yi-qi-01",
+  "word": "通同一气",
+  "pinyin": "tōng tóng yí qì",
+  "meaning": "串通在一起、结成一伙。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

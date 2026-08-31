@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-ren-lun-shi-01",
+  "word": "知人论世",
+  "pinyin": "zhī rén lùn shì",
+  "meaning": "原指了解一个人并研究他所处的时代背景，现泛指鉴别人物、评论世事。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

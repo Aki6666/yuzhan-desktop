@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sha-li-tao-jin-01",
+  "word": "沙里淘金",
+  "pinyin": "shā lǐ táo jīn",
+  "meaning": "从沙子里淘出黄金，比喻从大量材料中选取精华，也比喻费力大而收效小。",
+  "usage": "多用于筛选、研究等从大量中取精。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "在海量数据中沙里淘金，才能发现规律。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

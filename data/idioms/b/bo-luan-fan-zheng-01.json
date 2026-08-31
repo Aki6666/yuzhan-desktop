@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bo-luan-fan-zheng-01",
+  "word": "拨乱反正",
+  "pinyin": "bō luàn fǎn zhèng",
+  "meaning": "整顿混乱局面，恢复正常秩序。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

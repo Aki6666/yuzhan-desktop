@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-jian-zhong-qing-01",
+  "word": "一见钟情",
+  "pinyin": "yí jiàn zhōng qíng",
+  "meaning": "一见面就产生了爱情（\"钟情\"=感情专注）。",
+  "usage": "多用于男女之间初次见面即生好感。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "两人一见钟情，结为连理。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chang-sheng-bu-shuai-01",
+  "word": "长盛不衰",
+  "pinyin": "cháng shèng bù shuāi",
+  "meaning": "长久兴盛，不衰落。",
+  "usage": "多用于品牌、文化、行业等持久兴盛。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这家老字号历经百年，长盛不衰。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 54
+}

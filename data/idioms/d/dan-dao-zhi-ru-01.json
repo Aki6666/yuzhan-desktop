@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dan-dao-zhi-ru-01",
+  "word": "单刀直入",
+  "pinyin": "dān dāo zhí rù",
+  "meaning": "原指认定目标、勇猛直前，后比喻说话、办事直截了当、不绕弯子。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

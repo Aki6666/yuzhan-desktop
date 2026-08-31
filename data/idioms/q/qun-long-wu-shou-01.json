@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qun-long-wu-shou-01",
+  "word": "群龙无首",
+  "pinyin": "qún lóng wú shǒu",
+  "meaning": "一群龙没有领头的，比喻没有人领导、无法统一行动。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

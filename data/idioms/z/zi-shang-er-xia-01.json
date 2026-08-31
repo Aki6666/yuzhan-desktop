@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-shang-er-xia-01",
+  "word": "自上而下",
+  "pinyin": "zì shàng ér xià",
+  "meaning": "从上到下、从上级到下级。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

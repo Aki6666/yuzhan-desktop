@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nan-yi-ming-zhuang-01",
+  "word": "难以名状",
+  "pinyin": "nán yǐ míng zhuàng",
+  "meaning": "难以用言语形容（\"名\"=说出，\"状\"=描绘）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

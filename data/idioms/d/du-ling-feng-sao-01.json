@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "du-ling-feng-sao-01",
+  "word": "独领风骚",
+  "pinyin": "dú lǐng fēng sāo",
+  "meaning": "泛指在某个领域居于领先地位（\"风骚\"=《诗经》与《楚辞》）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

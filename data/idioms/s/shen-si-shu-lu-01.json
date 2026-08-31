@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-si-shu-lu-01",
+  "word": "深思熟虑",
+  "pinyin": "shēn sī shú lǜ",
+  "meaning": "深入细致地思索、反复周到地考虑。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

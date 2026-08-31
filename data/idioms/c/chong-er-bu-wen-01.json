@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chong-er-bu-wen-01",
+  "word": "充耳不闻",
+  "pinyin": "chōng ěr bù wén",
+  "meaning": "塞住耳朵不听，形容有意不听别人的意见。",
+  "usage": "与\"视而不见\"相对应用。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "对群众的批评建议不能充耳不闻。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

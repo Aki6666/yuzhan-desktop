@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-nan-xian-zu-01",
+  "word": "艰难险阻",
+  "pinyin": "jiān nán xiǎn zǔ",
+  "meaning": "前进道路上的困难、危险和障碍。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

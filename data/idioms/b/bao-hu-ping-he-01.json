@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bao-hu-ping-he-01",
+  "word": "暴虎冯河",
+  "pinyin": "bào hǔ píng hé",
+  "meaning": "空手打虎、徒步过河，比喻有勇无谋、冒险蛮干（\"暴\"=徒手搏斗，\"冯\"=涉水）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

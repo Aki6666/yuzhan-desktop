@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-wei-da-guan-01",
+  "word": "蔚为大观",
+  "pinyin": "wèi wéi dà guān",
+  "meaning": "形容事物美好繁多，形成盛大壮观的景象（\"蔚\"=茂盛，\"大观\"=盛大的景象）。",
+  "usage": "多用于景观、收藏、作品等壮观丰富。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "馆藏文物蔚为大观。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

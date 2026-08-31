@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-mei-wu-xia-01",
+  "word": "完美无瑕",
+  "pinyin": "wán měi wú xiá",
+  "meaning": "完善美好、没有瑕疵（\"瑕\"=玉上的斑点）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

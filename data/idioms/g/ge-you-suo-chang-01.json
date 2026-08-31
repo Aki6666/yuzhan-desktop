@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-you-suo-chang-01",
+  "word": "各有所长",
+  "pinyin": "gè yǒu suǒ cháng",
+  "meaning": "各有各的长处、优点。",
+  "usage": "强调各具优势。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两位候选人各有所长，难分伯仲。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

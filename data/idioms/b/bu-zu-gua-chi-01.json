@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-zu-gua-chi-01",
+  "word": "不足挂齿",
+  "pinyin": "bù zú guà chǐ",
+  "meaning": "不值得一提（\"挂齿\"=挂在嘴边提起）。",
+  "usage": "多作谦辞，表示事情微小。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "举手之劳，不足挂齿。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

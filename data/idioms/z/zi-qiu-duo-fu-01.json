@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-qiu-duo-fu-01",
+  "word": "自求多福",
+  "pinyin": "zì qiú duō fú",
+  "meaning": "自己寻求更多的幸福，现多指凡事靠自己努力。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

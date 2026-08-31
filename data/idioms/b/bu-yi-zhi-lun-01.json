@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yi-zhi-lun-01",
+  "word": "不易之论",
+  "pinyin": "bú yì zhī lùn",
+  "meaning": "不可更改的言论，指内容正确、不可改变的论断（\"易\"=改变）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

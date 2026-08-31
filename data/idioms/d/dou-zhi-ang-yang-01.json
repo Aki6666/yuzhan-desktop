@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dou-zhi-ang-yang-01",
+  "word": "斗志昂扬",
+  "pinyin": "dòu zhì áng yáng",
+  "meaning": "斗争的意志旺盛。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-sun-ju-sun-01",
+  "word": "一损俱损",
+  "pinyin": "yì sǔn jù sǔn",
+  "meaning": "一个受到损害、其他也一起受到损害，形容关系密切、利害一致（常与\"一荣俱荣\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-ti-er-wei-01",
+  "word": "具体而微",
+  "pinyin": "jù tǐ ér wēi",
+  "meaning": "内容大体具备而形状或规模较小（\"微\"=小）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

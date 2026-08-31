@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-wei-tian-hai-01",
+  "word": "精卫填海",
+  "pinyin": "jīng wèi tián hǎi",
+  "meaning": "精卫鸟衔木石填海，比喻意志坚决、不畏艰难。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

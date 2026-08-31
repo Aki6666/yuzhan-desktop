@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-an-si-wei-01",
+  "word": "居安思危",
+  "pinyin": "jū ān sī wēi",
+  "meaning": "处在安定的环境里，也要想到可能出现的危险。",
+  "usage": "强调有忧患意识；与\"未雨绸缪\"\"防微杜渐\"常并列。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "企业要居安思危，提前布局转型。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 59
+}

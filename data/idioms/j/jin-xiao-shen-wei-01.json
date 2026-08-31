@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-xiao-shen-wei-01",
+  "word": "谨小慎微",
+  "pinyin": "jǐn xiǎo shèn wēi",
+  "meaning": "对细小的问题也采取谨慎小心的态度，现多形容过分小心、畏首畏尾。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

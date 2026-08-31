@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-yu-cong-cong-01",
+  "word": "郁郁葱葱",
+  "pinyin": "yù yù cōng cōng",
+  "meaning": "形容草木苍翠茂盛。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

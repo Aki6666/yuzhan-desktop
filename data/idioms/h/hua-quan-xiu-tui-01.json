@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hua-quan-xiu-tui-01",
+  "word": "花拳绣腿",
+  "pinyin": "huā quán xiù tuǐ",
+  "meaning": "指姿势好看而搏斗时用处不大的拳术，比喻外表好看而实际没有用处的本领。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

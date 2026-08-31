@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gang-rou-jian-ji-01",
+  "word": "刚柔兼济",
+  "pinyin": "gāng róu jiān jì",
+  "meaning": "刚强与柔和互相配合、互为补充。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

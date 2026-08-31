@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-wang-wu-qian-01",
+  "word": "一往无前",
+  "pinyin": "yì wǎng wú qián",
+  "meaning": "一直向前，无所阻挡，形容不怕困难、奋勇前进。",
+  "usage": "强调勇往直前、义无反顾。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "改革者要有一往无前的勇气。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

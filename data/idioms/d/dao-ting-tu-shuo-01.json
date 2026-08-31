@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "dao-ting-tu-shuo-01",
+  "word": "道听途说",
+  "pinyin": "dào tīng tú shuō",
+  "meaning": "在路上听到、在路上传播的话，指没有根据的传闻。",
+  "usage": "批评轻信无根据的传言。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "新闻报道不能靠道听途说。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

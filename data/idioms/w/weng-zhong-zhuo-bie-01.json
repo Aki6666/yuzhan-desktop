@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "weng-zhong-zhuo-bie-01",
+  "word": "瓮中捉鳖",
+  "pinyin": "wèng zhōng zhuō biē",
+  "meaning": "在瓮里捉甲鱼，比喻捕捉的对象已在掌握之中、手到擒来。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

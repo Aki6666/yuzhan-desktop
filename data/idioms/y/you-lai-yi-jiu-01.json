@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "you-lai-yi-jiu-01",
+  "word": "由来已久",
+  "pinyin": "yóu lái yǐ jiǔ",
+  "meaning": "事情从发生到现在已经很久了（\"由来\"=从发生到现在）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

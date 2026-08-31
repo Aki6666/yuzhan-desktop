@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-ying-ti-tou-01",
+  "word": "晶莹剔透",
+  "pinyin": "jīng yíng tī tòu",
+  "meaning": "形容器物精致光亮、透明洁净（\"剔透\"=明澈）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

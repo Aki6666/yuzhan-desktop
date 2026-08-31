@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qiao-duo-tian-gong-01",
+  "word": "巧夺天工",
+  "pinyin": "qiǎo duó tiān gōng",
+  "meaning": "人工的精巧胜过天然，形容技艺极其精巧（\"夺\"=胜过）。",
+  "usage": "仅用于人工技艺，不用于天然景物。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "这座微雕作品巧夺天工，令人称奇。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

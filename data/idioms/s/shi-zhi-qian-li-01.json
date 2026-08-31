@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-zhi-qian-li-01",
+  "word": "失之千里",
+  "pinyin": "shī zhī qiān lǐ",
+  "meaning": "指失误虽然很小、造成的差错却很大（常与\"失之毫厘\"连用）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

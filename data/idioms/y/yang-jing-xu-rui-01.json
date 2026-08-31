@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yang-jing-xu-rui-01",
+  "word": "养精蓄锐",
+  "pinyin": "yǎng jīng xù ruì",
+  "meaning": "养足精神、积蓄力量（\"锐\"=锐气）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

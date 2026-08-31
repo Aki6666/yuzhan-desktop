@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-yi-zang-pi-01",
+  "word": "予以臧否",
+  "pinyin": "yǔ yǐ zāng pǐ",
+  "meaning": "加以评论、褒贬（\"臧\"=好，\"否\"=坏）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

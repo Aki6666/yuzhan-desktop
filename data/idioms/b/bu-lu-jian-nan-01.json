@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-lu-jian-nan-01",
+  "word": "步履艰难",
+  "pinyin": "bù lǚ jiān nán",
+  "meaning": "行走困难，比喻行动艰难、进展不顺。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

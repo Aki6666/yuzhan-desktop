@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhun-que-wu-wu-01",
+  "word": "准确无误",
+  "pinyin": "zhǔn què wú wù",
+  "meaning": "完全准确、没有错误。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

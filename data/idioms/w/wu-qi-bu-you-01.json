@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-qi-bu-you-01",
+  "word": "无奇不有",
+  "pinyin": "wú qí bù yǒu",
+  "meaning": "什么奇怪的事物都有。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-quan-shi-mei-01",
+  "word": "十全十美",
+  "pinyin": "shí quán shí měi",
+  "meaning": "各方面都非常完美、毫无缺陷。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

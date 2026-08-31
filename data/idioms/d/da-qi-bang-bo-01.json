@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-qi-bang-bo-01",
+  "word": "大气磅礴",
+  "pinyin": "dà qì bàng bó",
+  "meaning": "形容气势雄浑浩大（\"磅礴\"=广大无边）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

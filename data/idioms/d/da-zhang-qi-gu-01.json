@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "da-zhang-qi-gu-01",
+  "word": "大张旗鼓",
+  "pinyin": "dà zhāng qí gǔ",
+  "meaning": "大规模地摇旗擂鼓，比喻声势和规模很大。",
+  "usage": "多用于宣传、行动等声势浩大。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "各地大张旗鼓地开展普法宣传。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

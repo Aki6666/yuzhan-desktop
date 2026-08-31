@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-jiu-bu-shuai-01",
+  "word": "经久不衰",
+  "pinyin": "jīng jiǔ bù shuāi",
+  "meaning": "经过很长时间仍然不衰退。",
+  "usage": "多用于事物、热潮等持久不衰；与\"历久弥新\"近义。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "经典影片的魅力经久不衰。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 50
+}

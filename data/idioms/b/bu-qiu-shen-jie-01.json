@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-qiu-shen-jie-01",
+  "word": "不求甚解",
+  "pinyin": "bù qiú shèn jiě",
+  "meaning": "读书只领会精神实质、不咬文嚼字，现多指只求懂得个大概、不求深刻了解。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

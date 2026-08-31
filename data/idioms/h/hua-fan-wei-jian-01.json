@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hua-fan-wei-jian-01",
+  "word": "化繁为简",
+  "pinyin": "huà fán wèi jiǎn",
+  "meaning": "把复杂的事物简化。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

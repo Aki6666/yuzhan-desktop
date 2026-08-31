@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-shen-zhi-di-01",
+  "word": "栖身之地",
+  "pinyin": "qī shēn zhī dì",
+  "meaning": "临时安身的地方。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

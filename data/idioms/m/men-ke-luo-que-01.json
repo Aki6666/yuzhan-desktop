@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "men-ke-luo-que-01",
+  "word": "门可罗雀",
+  "pinyin": "mén kě luó què",
+  "meaning": "大门前可以张网捕雀，形容门庭冷落、宾客稀少。",
+  "usage": "与\"门庭若市\"相对。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "实体店生意冷清，门可罗雀。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

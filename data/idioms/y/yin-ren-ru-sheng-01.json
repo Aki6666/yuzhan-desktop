@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-ren-ru-sheng-01",
+  "word": "引人入胜",
+  "pinyin": "yǐn rén rù shèng",
+  "meaning": "引人进入佳境（\"胜\"=美好的境界），多指风景或文艺作品非常吸引人。",
+  "usage": "多用于作品、风景、讲解等有吸引力。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "这部小说的情节引人入胜。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

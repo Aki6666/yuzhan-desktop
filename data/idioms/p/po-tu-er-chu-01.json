@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "po-tu-er-chu-01",
+  "word": "破土而出",
+  "pinyin": "pò tǔ ér chū",
+  "meaning": "从土里钻出来，形容植物发芽生长或新事物出现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chui-tou-sang-qi-01",
+  "word": "垂头丧气",
+  "pinyin": "chuí tóu sàng qì",
+  "meaning": "低着头、没了志气，形容因失败或不顺利而情绪低落。",
+  "usage": "与\"灰心丧气\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "失败后他垂头丧气，一蹶不振。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

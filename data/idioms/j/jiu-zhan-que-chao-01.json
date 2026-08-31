@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jiu-zhan-que-chao-01",
+  "word": "鸠占鹊巢",
+  "pinyin": "jiū zhàn què cháo",
+  "meaning": "斑鸠占住喜鹊的巢，比喻强占别人的房屋、土地、位置等。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

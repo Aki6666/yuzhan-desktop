@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-wei-zhuang-guan-01",
+  "word": "蔚为壮观",
+  "pinyin": "wèi wéi zhuàng guān",
+  "meaning": "形容事物美好繁多、形成盛大壮丽的景象。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

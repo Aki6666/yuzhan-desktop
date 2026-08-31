@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhua-da-fang-xiao-01",
+  "word": "抓大放小",
+  "pinyin": "zhuā dà fàng xiǎo",
+  "meaning": "抓住主要的、放开次要的。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bian-huan-wu-chang-01",
+  "word": "变幻无常",
+  "pinyin": "biàn huàn wú cháng",
+  "meaning": "事物经常变化，没有一定规律。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

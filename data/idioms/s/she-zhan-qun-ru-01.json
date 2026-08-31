@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "she-zhan-qun-ru-01",
+  "word": "舌战群儒",
+  "pinyin": "shé zhàn qún rú",
+  "meaning": "与众多的儒生谋士争辩、驳倒对方，形容能言善辩。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

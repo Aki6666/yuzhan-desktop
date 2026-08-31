@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-zu-qing-zhong-01",
+  "word": "无足轻重",
+  "pinyin": "wú zú qīng zhòng",
+  "meaning": "无关紧要，不值得重视。",
+  "usage": "强调影响小、不重要。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "每一个环节都无足轻重，都要认真对待。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-zu-wei-ping-01",
+  "word": "不足为凭",
+  "pinyin": "bù zú wéi píng",
+  "meaning": "不能作为凭证、依据（\"凭\"=依据）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

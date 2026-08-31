@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-zhi-cheng-li-01",
+  "word": "言之成理",
+  "pinyin": "yán zhī chéng lǐ",
+  "meaning": "话说得合乎道理。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

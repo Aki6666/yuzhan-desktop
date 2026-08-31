@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-gan-chen-lun-01",
+  "word": "不甘沉沦",
+  "pinyin": "bù gān chén lún",
+  "meaning": "不甘心沉沦堕落、不情愿自暴自弃。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

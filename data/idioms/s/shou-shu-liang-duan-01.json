@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shou-shu-liang-duan-01",
+  "word": "首鼠两端",
+  "pinyin": "shǒu shǔ liǎng duān",
+  "meaning": "犹豫不决、瞻前顾后（\"首鼠\"=踌躇）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

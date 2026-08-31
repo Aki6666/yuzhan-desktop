@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-yu-zhong-di-01",
+  "word": "一语中的",
+  "pinyin": "yì yǔ zhòng dì",
+  "meaning": "一句话就说中要害（\"的\"=靶心）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

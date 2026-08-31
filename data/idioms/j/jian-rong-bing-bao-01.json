@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-rong-bing-bao-01",
+  "word": "兼容并包",
+  "pinyin": "jiān róng bìng bāo",
+  "meaning": "把各个方面或各种事物都容纳进去。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

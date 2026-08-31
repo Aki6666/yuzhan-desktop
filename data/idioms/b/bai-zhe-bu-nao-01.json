@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-zhe-bu-nao-01",
+  "word": "百折不挠",
+  "pinyin": "bǎi zhé bù náo",
+  "meaning": "无论受多少挫折都不退缩、不屈服（\"折\"=挫折，\"挠\"=弯曲）。",
+  "usage": "强调意志坚强、屡败屡战。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "科研攻关需要百折不挠的精神。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

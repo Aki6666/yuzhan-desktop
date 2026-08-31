@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-ran-bu-tong-01",
+  "word": "截然不同",
+  "pinyin": "jié rán bù tóng",
+  "meaning": "形容界限分明，完全不一样（\"截然\"=界限分明）。",
+  "usage": "强调完全不同。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两种教学理念截然不同。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

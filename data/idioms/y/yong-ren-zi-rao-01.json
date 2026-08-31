@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yong-ren-zi-rao-01",
+  "word": "庸人自扰",
+  "pinyin": "yōng rén zì rǎo",
+  "meaning": "平庸的人无事找事、自寻烦恼（\"扰\"=扰乱）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

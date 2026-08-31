@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "liang-shen-ding-zhi-01",
+  "word": "量身定制",
+  "pinyin": "liáng shēn dìng zhì",
+  "meaning": "按照身体尺寸制作，比喻根据实际情况有针对性地安排。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lai-shi-xiong-xiong-01",
+  "word": "来势汹汹",
+  "pinyin": "lái shì xiōng xiōng",
+  "meaning": "动作或事物到来的气势很凶猛（\"汹汹\"=声势盛大的样子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

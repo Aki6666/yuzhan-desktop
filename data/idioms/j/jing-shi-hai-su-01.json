@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-shi-hai-su-01",
+  "word": "惊世骇俗",
+  "pinyin": "jīng shì hài sú",
+  "meaning": "言行或事物新奇惊人，使世人惊骇（\"骇\"=惊吓）。",
+  "usage": "强调言论、行为等惊人、出格。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "该学说提出时惊世骇俗，如今已成共识。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

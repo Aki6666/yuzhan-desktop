@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-yi-wei-shi-01",
+  "word": "自以为是",
+  "pinyin": "zì yǐ wéi shì",
+  "meaning": "总以为自己是对的，形容主观、不虚心。",
+  "usage": "批评骄傲自负、听不进意见。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "领导切忌自以为是、独断专行。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

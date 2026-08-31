@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ling-pi-qi-jing-01",
+  "word": "另辟蹊径",
+  "pinyin": "lìng pì qī jìng",
+  "meaning": "另外开辟一条路，比喻另创一种新风格或新方法（\"蹊径\"=小路）。",
+  "usage": "强调另寻新路、创新突破。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "该品牌另辟蹊径，走差异化竞争之路。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

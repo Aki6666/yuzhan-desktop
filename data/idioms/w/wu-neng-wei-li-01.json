@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-neng-wei-li-01",
+  "word": "无能为力",
+  "pinyin": "wú néng wéi lì",
+  "meaning": "用不上力量，指没有能力去做好某件事或解决某个问题。",
+  "usage": "强调能力不足、无法施展。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "面对如此严重的旱情，人力已无能为力。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

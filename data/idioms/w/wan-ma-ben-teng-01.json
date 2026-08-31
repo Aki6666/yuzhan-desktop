@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-ma-ben-teng-01",
+  "word": "万马奔腾",
+  "pinyin": "wàn mǎ bēn téng",
+  "meaning": "无数马匹奔跑跳跃，形容声势浩大、进展迅速。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

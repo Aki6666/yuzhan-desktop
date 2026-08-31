@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-zhen-zhi-ke-01",
+  "word": "饮鸩止渴",
+  "pinyin": "yǐn zhèn zhǐ kě",
+  "meaning": "喝毒酒解渴，比喻用错误的办法解决眼前的困难而不顾严重后果（\"鸩\"=毒酒）。",
+  "usage": "强调办法有害、后果严重。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "靠举债维持高增长，无异于饮鸩止渴。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

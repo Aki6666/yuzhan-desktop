@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-xie-ke-ji-01",
+  "word": "无懈可击",
+  "pinyin": "wú xiè kě jī",
+  "meaning": "没有可以被人攻击或挑剔的漏洞，形容十分严密。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ren-suo-gong-zhi-01",
+  "word": "人所共知",
+  "pinyin": "rén suǒ gòng zhī",
+  "meaning": "人人都知道。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

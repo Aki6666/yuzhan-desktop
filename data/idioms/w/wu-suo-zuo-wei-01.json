@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-suo-zuo-wei-01",
+  "word": "无所作为",
+  "pinyin": "wú suǒ zuò wéi",
+  "meaning": "不去努力做出成绩或没有做出什么成绩。",
+  "usage": "批评消极怠惰、不求进取。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "面对困难裹足不前、无所作为，就会错失机遇。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

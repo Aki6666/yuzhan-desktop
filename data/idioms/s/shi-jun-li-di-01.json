@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-jun-li-di-01",
+  "word": "势均力敌",
+  "pinyin": "shì jūn lì dí",
+  "meaning": "双方力量相等，不分高低（\"敌\"=相当）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

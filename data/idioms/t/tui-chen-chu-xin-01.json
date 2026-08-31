@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tui-chen-chu-xin-01",
+  "word": "推陈出新",
+  "pinyin": "tuī chén chū xīn",
+  "meaning": "去掉旧事物的糟粕，取其精华，并使之向新的方向发展（\"陈\"=旧的）。",
+  "usage": "多用于文化、技术、制度等的革新；与\"革故鼎新\"近义。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "传统文化需要推陈出新，才能焕发活力。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 77
+}

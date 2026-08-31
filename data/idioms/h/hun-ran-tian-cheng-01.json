@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hun-ran-tian-cheng-01",
+  "word": "浑然天成",
+  "pinyin": "hún rán tiān chéng",
+  "meaning": "自然形成的整体，没有雕琢的痕迹，形容才德、诗文等自然完美。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

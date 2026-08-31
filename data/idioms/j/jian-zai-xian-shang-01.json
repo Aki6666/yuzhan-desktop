@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-zai-xian-shang-01",
+  "word": "箭在弦上",
+  "pinyin": "jiàn zài xián shàng",
+  "meaning": "箭已搭在弦上、不得不发，比喻事情已经到了不得不做或话不得不说的时候。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-chao-yi-xi-01",
+  "word": "一朝一夕",
+  "pinyin": "yì cháo yì xī",
+  "meaning": "一个早晨或一个晚上，形容很短的时间。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

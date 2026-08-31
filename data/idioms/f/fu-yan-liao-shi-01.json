@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-yan-liao-shi-01",
+  "word": "敷衍了事",
+  "pinyin": "fū yǎn liǎo shì",
+  "meaning": "做事马马虎虎，应付一下就算完事（\"敷衍\"=应付）。",
+  "usage": "批评工作态度不认真。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "安全检查不能敷衍了事。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-shen-zi-hao-01",
+  "word": "洁身自好",
+  "pinyin": "jié shēn zì hào",
+  "meaning": "保持自身纯洁、不同流合污，也指怕招惹是非、只顾自己。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

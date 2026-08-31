@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cang-hai-sang-tian-01",
+  "word": "沧海桑田",
+  "pinyin": "cāng hǎi sāng tián",
+  "meaning": "大海变成桑田、桑田变成大海，比喻世事变化很大。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

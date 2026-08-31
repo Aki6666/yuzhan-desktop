@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yue-ran-zhi-shang-01",
+  "word": "跃然纸上",
+  "pinyin": "yuè rán zhǐ shàng",
+  "meaning": "形容描写或刻画得非常生动、逼真，好像要从纸上跳出来一样（\"跃然\"=生动显现的样子）。",
+  "usage": "仅用于文字描写生动传神。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "作者笔下的人物形象跃然纸上。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ding-tian-li-di-01",
+  "word": "顶天立地",
+  "pinyin": "dǐng tiān lì dì",
+  "meaning": "头顶青天、脚踏大地，形容形象高大、气概豪迈。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-er-fa-men-01",
+  "word": "不二法门",
+  "pinyin": "bú èr fǎ mén",
+  "meaning": "佛家用语，指直接入道、不可言传的门径，现比喻最好的或独一无二的方法。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

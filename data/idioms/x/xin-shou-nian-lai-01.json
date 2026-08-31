@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-shou-nian-lai-01",
+  "word": "信手拈来",
+  "pinyin": "xìn shǒu niān lái",
+  "meaning": "随手拿来，多指写文章时能自由纯熟地选用词语或应用典故（\"拈\"=用手指夹取）。",
+  "usage": "多用于写作、说话时用典自如；不用于实物拿取。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他引经据典信手拈来，学识渊博。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

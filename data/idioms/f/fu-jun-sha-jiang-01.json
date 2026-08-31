@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-jun-sha-jiang-01",
+  "word": "覆军杀将",
+  "pinyin": "fù jūn shā jiāng",
+  "meaning": "全军覆没、主将战死，形容战败惨重。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

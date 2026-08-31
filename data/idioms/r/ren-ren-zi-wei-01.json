@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ren-ren-zi-wei-01",
+  "word": "人人自危",
+  "pinyin": "rén rén zì wēi",
+  "meaning": "每个人都感到危险、不安全。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

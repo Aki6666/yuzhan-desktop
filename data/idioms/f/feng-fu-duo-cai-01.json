@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-fu-duo-cai-01",
+  "word": "丰富多彩",
+  "pinyin": "fēng fù duō cǎi",
+  "meaning": "内容丰富，形式多样。",
+  "usage": "多用于生活、活动、内容等多样。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "校园文化生活丰富多彩。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

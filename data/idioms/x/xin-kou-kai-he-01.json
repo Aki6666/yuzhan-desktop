@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-kou-kai-he-01",
+  "word": "信口开河",
+  "pinyin": "xìn kǒu kāi hé",
+  "meaning": "随口乱说一气（\"信口\"=随口）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

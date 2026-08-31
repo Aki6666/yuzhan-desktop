@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-yi-lin-ran-01",
+  "word": "大义凛然",
+  "pinyin": "dà yì lǐn rán",
+  "meaning": "坚持正义、威武不屈的样子（\"凛然\"=严肃可畏）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

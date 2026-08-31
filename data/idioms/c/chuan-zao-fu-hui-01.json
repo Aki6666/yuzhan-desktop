@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chuan-zao-fu-hui-01",
+  "word": "穿凿附会",
+  "pinyin": "chuān záo fù huì",
+  "meaning": "生拉硬扯、牵强解释，把讲不通的道理硬要讲通（\"穿凿\"=牵强解释）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

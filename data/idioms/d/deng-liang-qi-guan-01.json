@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "deng-liang-qi-guan-01",
+  "word": "等量齐观",
+  "pinyin": "děng liàng qí guān",
+  "meaning": "把有差别的事物不加区别地同等看待（\"齐观\"=同等看待，多用于否定句）。",
+  "usage": "多用于否定句\"不可等量齐观\"。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两种文化背景不同，不可等量齐观。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

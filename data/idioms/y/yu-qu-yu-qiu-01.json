@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-qu-yu-qiu-01",
+  "word": "予取予求",
+  "pinyin": "yú qǔ yú qiú",
+  "meaning": "从我这里取、从我这里求，指任意索取。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

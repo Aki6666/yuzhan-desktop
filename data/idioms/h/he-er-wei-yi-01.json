@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "he-er-wei-yi-01",
+  "word": "合二为一",
+  "pinyin": "hé èr wéi yī",
+  "meaning": "把两者合成一个整体。",
+  "usage": "强调由分到合。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "公司将研发与销售部门合二为一。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-long-hun-za-01",
+  "word": "鱼龙混杂",
+  "pinyin": "yú lóng hùn zá",
+  "meaning": "比喻坏人和好人混在一起。",
+  "usage": "与\"泥沙俱下\"\"良莠不齐\"辨析；不用于物。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "网络主播行业鱼龙混杂，需加强监管。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ru-fan-zhang-01",
+  "word": "易如反掌",
+  "pinyin": "yì rú fǎn zhǎng",
+  "meaning": "像翻一下手掌那样容易，形容事情极容易办。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

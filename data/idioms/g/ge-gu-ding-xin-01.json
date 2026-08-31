@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-gu-ding-xin-01",
+  "word": "革故鼎新",
+  "pinyin": "gé gù dǐng xīn",
+  "meaning": "去除旧的，建立新的（\"革\"=除去，\"鼎\"=更新）。",
+  "usage": "多用于制度、文化等的除旧布新。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "深化改革就是革故鼎新的过程。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

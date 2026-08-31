@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-jue-ru-lu-01",
+  "word": "不绝如缕",
+  "pinyin": "bù jué rú lǚ",
+  "meaning": "像细线一样连着、差点儿就要断了，多形容声音、气息等微弱，也形容局势危急。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gan-ren-zhi-shen-01",
+  "word": "感人至深",
+  "pinyin": "gǎn rén zhì shēn",
+  "meaning": "感动人到了很深的程度。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

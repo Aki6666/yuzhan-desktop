@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qiu-quan-ze-bei-01",
+  "word": "求全责备",
+  "pinyin": "qiú quán zé bèi",
+  "meaning": "对人或对事物要求十全十美、毫无缺点（\"责\"=要求，\"备\"=完备）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

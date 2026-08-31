@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chun-qiang-she-jian-01",
+  "word": "唇枪舌剑",
+  "pinyin": "chún qiāng shé jiàn",
+  "meaning": "嘴唇像枪、舌头像剑，形容辩论时言辞犀利、针锋相对。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

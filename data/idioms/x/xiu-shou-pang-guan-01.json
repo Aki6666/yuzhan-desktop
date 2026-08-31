@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiu-shou-pang-guan-01",
+  "word": "袖手旁观",
+  "pinyin": "xiù shǒu páng guān",
+  "meaning": "把手揣在袖子里在一旁观看，比喻置身事外、不过问不协助。",
+  "usage": "批评见危不救、漠不关心。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他人遇险，我们岂能袖手旁观。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

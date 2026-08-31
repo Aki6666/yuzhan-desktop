@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ping-pu-zhi-xu-01",
+  "word": "平铺直叙",
+  "pinyin": "píng pū zhí xù",
+  "meaning": "说话或写文章不加修饰、直接简单地把意思叙述出来，形容没有起伏、平淡。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

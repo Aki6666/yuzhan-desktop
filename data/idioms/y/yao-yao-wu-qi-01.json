@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yao-yao-wu-qi-01",
+  "word": "遥遥无期",
+  "pinyin": "yáo yáo wú qī",
+  "meaning": "形容时间长远、没有期限，多指事情难以实现（\"遥遥\"=久远）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

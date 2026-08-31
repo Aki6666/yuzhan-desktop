@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sheng-qing-bing-mao-01",
+  "word": "声情并茂",
+  "pinyin": "shēng qíng bìng mào",
+  "meaning": "演唱、朗诵等声音和感情都很丰富动人（\"茂\"=丰富）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

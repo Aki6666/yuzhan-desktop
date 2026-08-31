@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-ji-ying-bian-01",
+  "word": "随机应变",
+  "pinyin": "suí jī yìng biàn",
+  "meaning": "随着情况的变化灵活机动地应付。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

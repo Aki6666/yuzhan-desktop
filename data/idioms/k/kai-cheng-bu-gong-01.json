@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kai-cheng-bu-gong-01",
+  "word": "开诚布公",
+  "pinyin": "kāi chéng bù gōng",
+  "meaning": "坦白无私、诚恳相见，指以诚心待人、坦白地谈问题。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-hui-yi-leng-01",
+  "word": "心灰意冷",
+  "pinyin": "xīn huī yì lěng",
+  "meaning": "灰心丧气、意志消沉，形容丧失信心。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

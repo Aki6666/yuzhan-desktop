@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "geng-pu-nan-jin-01",
+  "word": "更仆难尽",
+  "pinyin": "gèng pú nán jìn",
+  "meaning": "换了几班侍者、还说不完，形容事物繁多、说不完（\"仆\"=侍者）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shu-shi-wu-du-01",
+  "word": "熟视无睹",
+  "pinyin": "shú shì wú dǔ",
+  "meaning": "看惯了就像没看见一样，形容对事物漠不关心。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

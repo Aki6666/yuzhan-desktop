@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ma-dang-xian-01",
+  "word": "一马当先",
+  "pinyin": "yì mǎ dāng xiān",
+  "meaning": "作战时策马冲在最前面，形容领先、带头（\"当\"读dāng）。",
+  "usage": "强调走在最前、起带头作用。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "党员干部在抗洪一线一马当先。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

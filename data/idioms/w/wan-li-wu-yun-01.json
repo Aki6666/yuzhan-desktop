@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-li-wu-yun-01",
+  "word": "万里无云",
+  "pinyin": "wàn lǐ wú yún",
+  "meaning": "天气晴朗、天空没有一丝云。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

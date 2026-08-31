@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-da-xi-suan-01",
+  "word": "精打细算",
+  "pinyin": "jīng dǎ xì suàn",
+  "meaning": "精心细致地计算、安排，指在使用人力物力上计算得很精细。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

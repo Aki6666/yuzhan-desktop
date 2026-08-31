@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-gong-jin-li-01",
+  "word": "急功近利",
+  "pinyin": "jí gōng jìn lì",
+  "meaning": "急于求成，贪图眼前的成效和利益（\"功\"=成效）。",
+  "usage": "批评只顾眼前、不顾长远。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "发展经济不能急功近利、竭泽而渔。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

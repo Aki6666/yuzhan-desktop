@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-xiang-shang-xia-01",
+  "word": "不相上下",
+  "pinyin": "bù xiāng shàng xià",
+  "meaning": "分不出高低，形容程度、水平等相当。",
+  "usage": "强调实力相当。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两队实力不相上下，鏖战至加时。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

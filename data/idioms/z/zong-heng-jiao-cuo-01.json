@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zong-heng-jiao-cuo-01",
+  "word": "纵横交错",
+  "pinyin": "zòng héng jiāo cuò",
+  "meaning": "横的竖的交叉在一起，形容事物复杂、交错。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

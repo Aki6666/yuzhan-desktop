@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "quan-yi-zhi-ji-01",
+  "word": "权宜之计",
+  "pinyin": "quán yí zhī jì",
+  "meaning": "为了应付某种情况而暂时采取的办法（\"权宜\"=暂时适宜）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

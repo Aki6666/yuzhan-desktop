@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-zai-nan-feng-01",
+  "word": "千载难逢",
+  "pinyin": "qiān zǎi nán féng",
+  "meaning": "一千年也难遇到一次，形容机会极其难得（\"载\"=年）。",
+  "usage": "强调机会极其难得。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这是千载难逢的发展机遇。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

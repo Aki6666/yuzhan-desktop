@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-wu-liao-lai-01",
+  "word": "百无聊赖",
+  "pinyin": "bǎi wú liáo lài",
+  "meaning": "思想感情没有依托、精神空虚，形容非常无聊（\"聊赖\"=依靠）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

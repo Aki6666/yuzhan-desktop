@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-yu-qiu-cheng-01",
+  "word": "急于求成",
+  "pinyin": "jí yú qiú chéng",
+  "meaning": "急着要取得成功（\"急\"=急切）。",
+  "usage": "多用于批评不顾实际、急功近利。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "人才培养不能急于求成。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

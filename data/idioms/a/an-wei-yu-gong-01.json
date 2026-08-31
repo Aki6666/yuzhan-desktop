@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "an-wei-yu-gong-01",
+  "word": "安危与共",
+  "pinyin": "ān wēi yǔ gòng",
+  "meaning": "共同承受忧患祸福，形容关系密切、利害一致。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

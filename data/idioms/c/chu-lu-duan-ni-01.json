@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chu-lu-duan-ni-01",
+  "word": "初露端倪",
+  "pinyin": "chū lù duān ní",
+  "meaning": "刚刚显露出事情的眉目、迹象（\"端倪\"=头绪）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

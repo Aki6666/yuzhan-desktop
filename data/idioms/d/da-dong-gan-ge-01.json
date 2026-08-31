@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-dong-gan-ge-01",
+  "word": "大动干戈",
+  "pinyin": "dà dòng gān gē",
+  "meaning": "原指发动战争，现多比喻大张旗鼓地做某事或发生大的冲突。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

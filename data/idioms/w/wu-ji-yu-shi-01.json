@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ji-yu-shi-01",
+  "word": "无济于事",
+  "pinyin": "wú jì yú shì",
+  "meaning": "对事情没有什么帮助（\"济\"=补益）。",
+  "usage": "强调不起作用。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "事后补救往往无济于事。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

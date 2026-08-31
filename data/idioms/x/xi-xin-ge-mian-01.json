@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-xin-ge-mian-01",
+  "word": "洗心革面",
+  "pinyin": "xǐ xīn gé miàn",
+  "meaning": "清除坏思想、改变旧面目，比喻彻底悔改。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

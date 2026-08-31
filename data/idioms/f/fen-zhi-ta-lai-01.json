@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-zhi-ta-lai-01",
+  "word": "纷至沓来",
+  "pinyin": "fēn zhì tà lái",
+  "meaning": "纷纷到来，连续不断地到来（\"沓\"=多而重复）。",
+  "usage": "多用于人、消息、订单等接连到来。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "各地游客纷至沓来，古镇热闹非凡。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

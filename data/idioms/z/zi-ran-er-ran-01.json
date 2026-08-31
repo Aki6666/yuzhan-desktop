@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-ran-er-ran-01",
+  "word": "自然而然",
+  "pinyin": "zì rán ér rán",
+  "meaning": "自由发展，必然这样，形容不经人力干预而自然如此。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

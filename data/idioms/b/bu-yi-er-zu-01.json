@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yi-er-zu-01",
+  "word": "不一而足",
+  "pinyin": "bù yī ér zú",
+  "meaning": "原指不是一事一物可以满足，后形容同类的事物或情况很多，不止一种或一次。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

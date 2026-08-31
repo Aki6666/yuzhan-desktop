@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-shao-cheng-duo-01",
+  "word": "积少成多",
+  "pinyin": "jī shǎo chéng duō",
+  "meaning": "一点一滴地积累，就会由少变多。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

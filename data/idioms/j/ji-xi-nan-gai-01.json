@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-xi-nan-gai-01",
+  "word": "积习难改",
+  "pinyin": "jī xí nán gǎi",
+  "meaning": "长期形成的旧习惯很难改变。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

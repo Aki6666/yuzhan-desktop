@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-lin-wei-he-01",
+  "word": "以邻为壑",
+  "pinyin": "yǐ lín wéi hè",
+  "meaning": "把邻国当作大水坑、把本国的洪水排泄到那里去，比喻只图自己一方利益而把困难或祸害转嫁给别人（\"壑\"=沟）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

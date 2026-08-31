@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cheng-feng-po-lang-01",
+  "word": "乘风破浪",
+  "pinyin": "chéng fēng pò làng",
+  "meaning": "船只乘着风势破浪前进，比喻不畏艰险、勇往直前。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

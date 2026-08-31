@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zheng-ben-qing-yuan-01",
+  "word": "正本清源",
+  "pinyin": "zhèng běn qīng yuán",
+  "meaning": "从根本上整顿、从源头上清理，比喻从根本上彻底解决问题。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

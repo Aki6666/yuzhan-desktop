@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jiang-xin-du-yun-01",
+  "word": "匠心独运",
+  "pinyin": "jiàng xīn dú yùn",
+  "meaning": "独创性地运用精巧的心思（\"匠心\"=巧妙的心思）。",
+  "usage": "多用于艺术、设计、创作等构思巧妙。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "园林设计匠心独运，处处是景。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

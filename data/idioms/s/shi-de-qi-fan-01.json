@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-de-qi-fan-01",
+  "word": "适得其反",
+  "pinyin": "shì dé qí fǎn",
+  "meaning": "结果跟希望正好相反（\"适\"=恰好）。",
+  "usage": "强调结果与预期相反。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "过度干预反而适得其反。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

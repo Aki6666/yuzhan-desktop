@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-ji-ke-wei-01",
+  "word": "岌岌可危",
+  "pinyin": "jí jí kě wēi",
+  "meaning": "形容非常危险，快要倒塌或灭亡（\"岌岌\"=山高将倾的样子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

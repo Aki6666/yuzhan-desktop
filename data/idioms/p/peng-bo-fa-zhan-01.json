@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "peng-bo-fa-zhan-01",
+  "word": "蓬勃发展",
+  "pinyin": "péng bó fā zhǎn",
+  "meaning": "形容事物繁荣发展、势头旺盛。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

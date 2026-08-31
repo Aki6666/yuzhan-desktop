@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhen-long-fa-kui-01",
+  "word": "振聋发聩",
+  "pinyin": "zhèn lóng fā kuì",
+  "meaning": "发出很大的声响，使耳聋的人也能听见，比喻用语言文字唤醒糊涂麻木的人（\"聩\"=耳聋）。",
+  "usage": "对象为语言文字、言论等，强调警醒作用。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他的演讲振聋发聩，发人深省。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 51
+}

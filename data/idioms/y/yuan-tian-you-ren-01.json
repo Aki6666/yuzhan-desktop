@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yuan-tian-you-ren-01",
+  "word": "怨天尤人",
+  "pinyin": "yuàn tiān yóu rén",
+  "meaning": "遇到挫折或出了问题，一味抱怨天命、责怪别人（\"尤\"=责怪）。",
+  "usage": "批评推卸责任、只知抱怨。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "与其怨天尤人，不如反躬自省。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

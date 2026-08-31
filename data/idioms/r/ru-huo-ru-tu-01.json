@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-huo-ru-tu-01",
+  "word": "如火如荼",
+  "pinyin": "rú huǒ rú tú",
+  "meaning": "像火那样红、像荼（茅草的白花）那样白，形容气势旺盛、气氛热烈。",
+  "usage": "多用于运动、建设、活动等正蓬勃开展。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "各地乡村振兴建设开展得如火如荼。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 59
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-xian-shen-shou-01",
+  "word": "大显身手",
+  "pinyin": "dà xiǎn shēn shǒu",
+  "meaning": "充分显示出自己的本领。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

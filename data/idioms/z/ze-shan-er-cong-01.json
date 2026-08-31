@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ze-shan-er-cong-01",
+  "word": "择善而从",
+  "pinyin": "zé shàn ér cóng",
+  "meaning": "选择好的、正确的来遵循或学习（\"从\"=听从）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

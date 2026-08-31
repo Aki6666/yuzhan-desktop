@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qiao-wu-sheng-xi-01",
+  "word": "悄无声息",
+  "pinyin": "qiǎo wú shēng xī",
+  "meaning": "没有声音、没有动静，形容非常安静或行动隐秘。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fan-pu-gui-zhen-01",
+  "word": "返璞归真",
+  "pinyin": "fǎn pú guī zhēn",
+  "meaning": "去掉外在的修饰，回复到本来的质朴状态（\"璞\"=含玉的石头）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

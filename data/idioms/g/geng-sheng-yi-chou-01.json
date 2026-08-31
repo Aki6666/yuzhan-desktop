@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "geng-sheng-yi-chou-01",
+  "word": "更胜一筹",
+  "pinyin": "gèng shèng yì chóu",
+  "meaning": "技艺、水平等比别人高出一等。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

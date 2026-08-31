@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-yi-guan-zhi-01",
+  "word": "一以贯之",
+  "pinyin": "yī yǐ guàn zhī",
+  "meaning": "用一种思想理论贯穿始终（\"贯\"=贯穿）。",
+  "usage": "强调原则、思想等自始至终贯彻。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "以人民为中心的发展思想要一以贯之。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

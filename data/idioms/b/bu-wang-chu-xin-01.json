@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-wang-chu-xin-01",
+  "word": "不忘初心",
+  "pinyin": "bú wàng chū xīn",
+  "meaning": "不忘记最初的心愿、信念。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

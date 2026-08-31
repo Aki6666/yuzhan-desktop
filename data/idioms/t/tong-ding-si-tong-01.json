@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tong-ding-si-tong-01",
+  "word": "痛定思痛",
+  "pinyin": "tòng dìng sī tòng",
+  "meaning": "悲痛的心情平定之后回想以前的痛苦，指吸取教训、警惕未来。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

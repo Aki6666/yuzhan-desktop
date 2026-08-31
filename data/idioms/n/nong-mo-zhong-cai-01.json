@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nong-mo-zhong-cai-01",
+  "word": "浓墨重彩",
+  "pinyin": "nóng mò zhòng cǎi",
+  "meaning": "用浓重的墨汁和颜色描绘，形容着力描写、刻画或渲染。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

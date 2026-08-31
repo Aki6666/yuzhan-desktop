@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dang-ren-bu-rang-01",
+  "word": "当仁不让",
+  "pinyin": "dāng rén bú ràng",
+  "meaning": "遇到应该做的事就积极主动去做，不推让。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

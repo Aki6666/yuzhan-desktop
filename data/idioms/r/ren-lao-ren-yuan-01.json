@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ren-lao-ren-yuan-01",
+  "word": "任劳任怨",
+  "pinyin": "rèn láo rèn yuàn",
+  "meaning": "做事不辞劳苦，不怕埋怨。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

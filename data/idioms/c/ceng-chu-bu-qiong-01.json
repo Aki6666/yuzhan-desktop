@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ceng-chu-bu-qiong-01",
+  "word": "层出不穷",
+  "pinyin": "céng chū bù qióng",
+  "meaning": "接连不断地出现，没有穷尽。",
+  "usage": "多用于新事物、问题等连续出现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "电信诈骗手段层出不穷，需提高警惕。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 79
+}

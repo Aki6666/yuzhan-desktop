@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-men-bie-lei-01",
+  "word": "分门别类",
+  "pinyin": "fēn mén bié lèi",
+  "meaning": "根据事物的特性分成各种门类。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

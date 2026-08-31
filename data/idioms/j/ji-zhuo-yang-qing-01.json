@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-zhuo-yang-qing-01",
+  "word": "激浊扬清",
+  "pinyin": "jī zhuó yáng qīng",
+  "meaning": "冲去污水、扬起清水，比喻清除坏的、发扬好的。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

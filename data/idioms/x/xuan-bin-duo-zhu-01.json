@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xuan-bin-duo-zhu-01",
+  "word": "喧宾夺主",
+  "pinyin": "xuān bīn duó zhǔ",
+  "meaning": "客人的声音压过了主人的声音，比喻外来的或次要的事物占据了原有的、主要的事物的位置。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

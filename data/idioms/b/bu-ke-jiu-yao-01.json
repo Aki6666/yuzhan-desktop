@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-jiu-yao-01",
+  "word": "不可救药",
+  "pinyin": "bù kě jiù yào",
+  "meaning": "病重到无法医治，比喻坏到无法挽救。",
+  "usage": "与「无可救药」同义、互为易混对（data/pairs.json）；本节为教研备用词（§5.4 frequency=1），未在真题选项中出现≥2次。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-09-01"
+}

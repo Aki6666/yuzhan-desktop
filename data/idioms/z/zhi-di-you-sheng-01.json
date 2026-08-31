@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-di-you-sheng-01",
+  "word": "掷地有声",
+  "pinyin": "zhì dì yǒu shēng",
+  "meaning": "扔在地上发出响亮的声音，形容文章、话语等铿锵有力、气势不凡。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

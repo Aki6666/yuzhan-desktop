@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "er-mu-yi-xin-01",
+  "word": "耳目一新",
+  "pinyin": "ěr mù yì xīn",
+  "meaning": "听到的、看到的都跟以前不一样，令人感到新鲜。",
+  "usage": "不说\"让人耳目一新\"亦可，但避免与\"全新\"叠用。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "examples": [
+    {
+      "text": "改造后的街区让人耳目一新。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

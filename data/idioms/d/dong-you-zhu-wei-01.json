@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dong-you-zhu-wei-01",
+  "word": "洞幽烛微",
+  "pinyin": "dòng yōu zhú wēi",
+  "meaning": "洞察幽深细微之处，形容观察力敏锐、看得透彻。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-yu-jiao-jia-01",
+  "word": "风雨交加",
+  "pinyin": "fēng yǔ jiāo jiā",
+  "meaning": "又是刮风、又是下雨，形容天气恶劣，也比喻处境艰难。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

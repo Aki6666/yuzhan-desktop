@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-ting-ze-ming-01",
+  "word": "兼听则明",
+  "pinyin": "jiān tīng zé míng",
+  "meaning": "听取多方面的意见才能明辨是非（与\"偏信则暗\"连用）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

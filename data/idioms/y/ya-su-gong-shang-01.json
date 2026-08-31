@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ya-su-gong-shang-01",
+  "word": "雅俗共赏",
+  "pinyin": "yǎ sú gòng shǎng",
+  "meaning": "文化高的人和文化低的人都能欣赏。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

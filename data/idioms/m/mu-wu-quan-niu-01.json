@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mu-wu-quan-niu-01",
+  "word": "目无全牛",
+  "pinyin": "mù wú quán niú",
+  "meaning": "眼中没有完整的牛，只有牛的筋骨结构，比喻技术熟练到了得心应手的境地。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tan-wei-guan-zhi-01",
+  "word": "叹为观止",
+  "pinyin": "tàn wéi guān zhǐ",
+  "meaning": "赞叹所见到的事物好到了极点（\"止\"=尽头）。",
+  "usage": "对象应为令人赞叹的美好事物；注意与\"望洋兴叹\"区别。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "这场演出美轮美奂，令人叹为观止。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 61
+}

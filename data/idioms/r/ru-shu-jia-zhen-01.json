@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-shu-jia-zhen-01",
+  "word": "如数家珍",
+  "pinyin": "rú shǔ jiā zhēn",
+  "meaning": "像数自己家里的珍宝一样，形容对所讲的事物非常熟悉。",
+  "usage": "强调熟悉到能详尽列举。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "老店主对店里的每件瓷器都如数家珍。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

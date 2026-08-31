@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bian-chang-mo-ji-01",
+  "word": "鞭长莫及",
+  "pinyin": "biān cháng mò jí",
+  "meaning": "鞭子虽长，打不到马肚子，比喻力量达不到。",
+  "usage": "强调能力或力量够不着、管不到。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "偏远地区监管鞭长莫及，需创新手段。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

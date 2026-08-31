@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-zhi-you-li-01",
+  "word": "言之有理",
+  "pinyin": "yán zhī yǒu lǐ",
+  "meaning": "说的话有道理。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

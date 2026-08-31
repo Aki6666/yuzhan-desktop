@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-dong-yu-zhong-01",
+  "word": "无动于衷",
+  "pinyin": "wú dòng yú zhōng",
+  "meaning": "心里一点儿也不受感动、一点也不动心（\"衷\"=内心）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shan-qiong-shui-jin-01",
+  "word": "山穷水尽",
+  "pinyin": "shān qióng shuǐ jìn",
+  "meaning": "山和水都到了尽头，比喻无路可走、陷入绝境。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

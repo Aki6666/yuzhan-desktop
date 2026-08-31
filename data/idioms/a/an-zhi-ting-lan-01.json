@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "an-zhi-ting-lan-01",
+  "word": "岸芷汀兰",
+  "pinyin": "àn zhǐ tīng lán",
+  "meaning": "岸边的香草、小洲上的兰花，形容景色幽美（\"芷\"=白芷，\"汀\"=小洲）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

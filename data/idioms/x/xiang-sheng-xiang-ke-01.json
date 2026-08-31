@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-sheng-xiang-ke-01",
+  "word": "相生相克",
+  "pinyin": "xiāng shēng xiāng kè",
+  "meaning": "五行之间互相生发、互相制约，泛指事物相互依存、相互制约的关系。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hui-xin-yi-xiao-01",
+  "word": "会心一笑",
+  "pinyin": "huì xīn yí xiào",
+  "meaning": "领会了对方的意思而微微一笑（\"会心\"=领会）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

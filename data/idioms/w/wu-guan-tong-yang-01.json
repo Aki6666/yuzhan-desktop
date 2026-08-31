@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-guan-tong-yang-01",
+  "word": "无关痛痒",
+  "pinyin": "wú guān tòng yǎng",
+  "meaning": "与切身利害无关，形容无关紧要。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

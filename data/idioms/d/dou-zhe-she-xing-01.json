@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dou-zhe-she-xing-01",
+  "word": "斗折蛇行",
+  "pinyin": "dòu zhé shé xíng",
+  "meaning": "像北斗星那样曲折、像蛇那样蜿蜒前行。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

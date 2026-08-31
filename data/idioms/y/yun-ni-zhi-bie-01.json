@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yun-ni-zhi-bie-01",
+  "word": "云泥之别",
+  "pinyin": "yún ní zhī bié",
+  "meaning": "像天上的云和地下的泥那样差别很大，形容高低悬殊。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

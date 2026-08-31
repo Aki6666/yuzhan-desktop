@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-wo-du-zun-01",
+  "word": "唯我独尊",
+  "pinyin": "wéi wǒ dú zūn",
+  "meaning": "认为只有自己最了不起，形容极端自高自大（\"尊\"=尊贵）。",
+  "usage": "批评狂妄自大。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "大国不应唯我独尊，要平等相待。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

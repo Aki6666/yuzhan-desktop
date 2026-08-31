@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-shi-wen-ming-01",
+  "word": "举世闻名",
+  "pinyin": "jǔ shì wén míng",
+  "meaning": "全世界都知道，形容非常有名。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

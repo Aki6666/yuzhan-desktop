@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fan-fu-wu-chang-01",
+  "word": "反复无常",
+  "pinyin": "fǎn fù wú cháng",
+  "meaning": "一会儿这样，一会儿那样，变化不定（\"无常\"=没有常规）。",
+  "usage": "多形容人态度、主意等变化不定。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他态度反复无常，令人难以捉摸。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

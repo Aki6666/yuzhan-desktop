@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mi-ran-cheng-feng-01",
+  "word": "靡然成风",
+  "pinyin": "mí rán chéng fēng",
+  "meaning": "纷纷仿效而成为风气（\"靡然\"=倒下的样子，引申为纷纷）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

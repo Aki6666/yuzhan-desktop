@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-jin-suo-neng-01",
+  "word": "各尽所能",
+  "pinyin": "gè jìn suǒ néng",
+  "meaning": "各人尽自己的能力去做（常与\"按劳分配\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lao-sheng-chang-tan-01",
+  "word": "老生常谈",
+  "pinyin": "lǎo shēng cháng tán",
+  "meaning": "老书生经常说的话，比喻人们听惯了的没有新鲜意思的话。",
+  "usage": "批评内容陈旧、缺乏新意。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "这些道理虽是老生常谈，却句句在理。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

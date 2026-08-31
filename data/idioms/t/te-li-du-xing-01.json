@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "te-li-du-xing-01",
+  "word": "特立独行",
+  "pinyin": "tè lì dú xíng",
+  "meaning": "有操守、有见识，不随波逐流（\"特\"=独特）。",
+  "usage": "强调品格独立、与众不同；中性偏褒。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他特立独行，从不盲从潮流。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 40
+}

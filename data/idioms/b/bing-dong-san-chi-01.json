@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bing-dong-san-chi-01",
+  "word": "冰冻三尺",
+  "pinyin": "bīng dòng sān chǐ",
+  "meaning": "冰冻了三尺不是一天的寒冷所致，比喻事物的形成有深厚根源（常与\"非一日之寒\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

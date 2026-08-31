@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-ren-he-yi-01",
+  "word": "天人合一",
+  "pinyin": "tiān rén hé yī",
+  "meaning": "天道与人道、自然与人能够相通、和谐统一，是中国哲学的基本观念。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

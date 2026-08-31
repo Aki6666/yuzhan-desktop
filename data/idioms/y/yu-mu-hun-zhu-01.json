@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-mu-hun-zhu-01",
+  "word": "鱼目混珠",
+  "pinyin": "yú mù hùn zhū",
+  "meaning": "用鱼眼睛假冒珍珠，比喻以假乱真。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

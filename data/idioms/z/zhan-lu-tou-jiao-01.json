@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhan-lu-tou-jiao-01",
+  "word": "崭露头角",
+  "pinyin": "zhǎn lù tóu jiǎo",
+  "meaning": "比喻突出地显露出才能和本领（\"头角\"=比喻青年的气概和才华）。",
+  "usage": "多用于年轻人初显才能。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这位小将在本届大赛中崭露头角。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

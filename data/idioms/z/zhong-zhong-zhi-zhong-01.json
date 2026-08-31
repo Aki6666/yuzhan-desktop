@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhong-zhong-zhi-zhong-01",
+  "word": "重中之重",
+  "pinyin": "zhòng zhōng zhī zhòng",
+  "meaning": "最重要、最关键的部分（\"重\"读zhòng）。",
+  "usage": "避免\"最重中之重\"叠用。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "examples": [
+    {
+      "text": "粮食安全是国家安全的重中之重。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

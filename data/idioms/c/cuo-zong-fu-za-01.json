@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cuo-zong-fu-za-01",
+  "word": "错综复杂",
+  "pinyin": "cuò zōng fù zá",
+  "meaning": "形容头绪繁多，情况复杂。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

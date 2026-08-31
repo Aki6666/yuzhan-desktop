@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-le-bai-dang-01",
+  "word": "一了百当",
+  "pinyin": "yī le bǎi dāng",
+  "meaning": "办事妥当、彻底，或形容一切都处理得干净利落。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

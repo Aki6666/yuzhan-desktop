@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-er-yuan-zhi-01",
+  "word": "敬而远之",
+  "pinyin": "jìng ér yuǎn zhī",
+  "meaning": "表示尊敬，但不愿接近。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

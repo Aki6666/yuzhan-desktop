@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-yu-tong-zhou-01",
+  "word": "风雨同舟",
+  "pinyin": "fēng yǔ tóng zhōu",
+  "meaning": "在狂风暴雨中同乘一条船，比喻共同经历患难。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

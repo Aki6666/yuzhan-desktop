@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kuai-ma-jia-bian-01",
+  "word": "快马加鞭",
+  "pinyin": "kuài mǎ jiā biān",
+  "meaning": "给快跑的马再抽几鞭，比喻快上加快。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

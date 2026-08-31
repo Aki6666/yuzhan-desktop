@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-ban-gong-bei-01",
+  "word": "事半功倍",
+  "pinyin": "shì bàn gōng bèi",
+  "meaning": "花一半力气就收到成倍的功效。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

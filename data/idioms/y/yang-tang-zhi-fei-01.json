@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yang-tang-zhi-fei-01",
+  "word": "扬汤止沸",
+  "pinyin": "yáng tāng zhǐ fèi",
+  "meaning": "把开水舀起来再倒回去以止沸，比喻办法不彻底、不能从根本上解决问题。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

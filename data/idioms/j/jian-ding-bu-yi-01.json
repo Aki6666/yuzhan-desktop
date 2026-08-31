@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-ding-bu-yi-01",
+  "word": "坚定不移",
+  "pinyin": "jiān dìng bù yí",
+  "meaning": "稳定坚强，毫不动摇。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

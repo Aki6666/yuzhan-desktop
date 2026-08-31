@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nong-zhuang-yan-mo-01",
+  "word": "浓妆艳抹",
+  "pinyin": "nóng zhuāng yàn mǒ",
+  "meaning": "形容女子妆饰浓重、艳丽。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

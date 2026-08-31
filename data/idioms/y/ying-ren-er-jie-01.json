@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ying-ren-er-jie-01",
+  "word": "迎刃而解",
+  "pinyin": "yíng rèn ér jiě",
+  "meaning": "劈竹子时，头上几节一破开，下面的就顺着刀口裂开，比喻主要问题解决了，其他问题就很容易解决。",
+  "usage": "强调关键问题解决后其余问题随之解决。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "核心技术一旦突破，其他难题便迎刃而解。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

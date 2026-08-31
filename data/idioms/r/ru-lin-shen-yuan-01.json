@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-lin-shen-yuan-01",
+  "word": "如临深渊",
+  "pinyin": "rú lín shēn yuān",
+  "meaning": "好像面临深渊一样，形容心存戒惧、小心谨慎。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

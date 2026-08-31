@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bian-fei-wei-bao-01",
+  "word": "变废为宝",
+  "pinyin": "biàn fèi wèi bǎo",
+  "meaning": "把没有用的东西变成有用的东西。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

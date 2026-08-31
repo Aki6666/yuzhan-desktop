@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chui-mao-qiu-ci-01",
+  "word": "吹毛求疵",
+  "pinyin": "chuī máo qiú cī",
+  "meaning": "吹开皮上的毛寻找瑕疵，比喻故意挑剔毛病、寻找差错。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

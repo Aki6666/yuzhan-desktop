@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-gao-lin-xia-01",
+  "word": "居高临下",
+  "pinyin": "jū gāo lín xià",
+  "meaning": "处在高处、俯视下面，形容占据有利地势，也形容处于有利地位、气势逼人。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

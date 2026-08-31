@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ri-bo-xi-shan-01",
+  "word": "日薄西山",
+  "pinyin": "rì bó xī shān",
+  "meaning": "太阳快要落山了，比喻衰老的人或腐朽的事物临近死亡（\"薄\"=迫近）。",
+  "usage": "多用于形容事物衰败将亡。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "这种落后的生产方式已日薄西山。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

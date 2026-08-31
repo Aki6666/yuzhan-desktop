@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "you-suo-zuo-wei-01",
+  "word": "有所作为",
+  "pinyin": "yǒu suǒ zuò wéi",
+  "meaning": "能够做出成绩、有所成就。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

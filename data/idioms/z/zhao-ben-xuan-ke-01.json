@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhao-ben-xuan-ke-01",
+  "word": "照本宣科",
+  "pinyin": "zhào běn xuān kē",
+  "meaning": "照着本子读，形容只是死板地照现成文章或稿子宣读，不能结合实际灵活运用。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

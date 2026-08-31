@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-tong-jiao-la-01",
+  "word": "味同嚼蜡",
+  "pinyin": "wèi tóng jiáo là",
+  "meaning": "像吃蜡一样没有味道，形容语言、文章等枯燥无味。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

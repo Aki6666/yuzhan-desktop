@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-ru-yi-mo-01",
+  "word": "相濡以沫",
+  "pinyin": "xiāng rú yǐ mò",
+  "meaning": "泉水干涸，鱼儿用唾沫互相湿润，比喻在困境中互相扶持（\"濡\"=沾湿，\"沫\"=唾沫）。",
+  "usage": "多用于夫妻、亲人等在困境中相互扶持。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "老两口相濡以沫，携手走过一生。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

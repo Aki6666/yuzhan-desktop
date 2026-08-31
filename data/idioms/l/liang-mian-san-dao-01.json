@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "liang-mian-san-dao-01",
+  "word": "两面三刀",
+  "pinyin": "liǎng miàn sān dāo",
+  "meaning": "比喻居心不良、当面一套背后一套。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

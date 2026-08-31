@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gu-ci-shi-bi-01",
+  "word": "顾此失彼",
+  "pinyin": "gù cǐ shī bǐ",
+  "meaning": "顾了这个，丢了那个，形容无法全面照顾。",
+  "usage": "强调忙乱、难以兼顾。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "多线并行容易顾此失彼，应分清主次。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

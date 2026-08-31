@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-bu-zhi-yao-01",
+  "word": "一步之遥",
+  "pinyin": "yí bù zhī yáo",
+  "meaning": "相差一步的距离，形容距离或差距极小。",
+  "usage": "强调近在眼前、即将达成。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "距冠军仅一步之遥，他却功亏一篑。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

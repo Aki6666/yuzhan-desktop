@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bi-men-zao-che-01",
+  "word": "闭门造车",
+  "pinyin": "bì mén zào chē",
+  "meaning": "关起门来造车，比喻脱离实际、凭主观办事。",
+  "usage": "批评脱离实际、主观臆断。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "产品设计不能闭门造车，要贴近用户。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

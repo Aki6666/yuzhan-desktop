@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gu-ku-ling-ding-01",
+  "word": "孤苦伶仃",
+  "pinyin": "gū kǔ líng dīng",
+  "meaning": "孤独困苦，无依无靠。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

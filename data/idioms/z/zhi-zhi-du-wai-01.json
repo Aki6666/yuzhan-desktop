@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-zhi-du-wai-01",
+  "word": "置之度外",
+  "pinyin": "zhì zhī dù wài",
+  "meaning": "放在考虑之外，指不把个人的生死利害等放在心上（\"度\"=考虑）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

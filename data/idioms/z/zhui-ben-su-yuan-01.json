@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhui-ben-su-yuan-01",
+  "word": "追本溯源",
+  "pinyin": "zhuī běn sù yuán",
+  "meaning": "追究根本、探索源头（\"溯\"=逆流而上）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

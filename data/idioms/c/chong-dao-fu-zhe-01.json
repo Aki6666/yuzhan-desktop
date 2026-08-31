@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chong-dao-fu-zhe-01",
+  "word": "重蹈覆辙",
+  "pinyin": "chóng dǎo fù zhé",
+  "meaning": "再走翻过车的老路，比喻不吸取教训、重视过去的错误（\"辙\"=车轮印）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

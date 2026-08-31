@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shu-bu-sheng-shu-01",
+  "word": "数不胜数",
+  "pinyin": "shǔ bú shèng shǔ",
+  "meaning": "数都数不过来，形容数量极多。",
+  "usage": "强调数量极多；与\"不计其数\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "古籍中的典故数不胜数。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

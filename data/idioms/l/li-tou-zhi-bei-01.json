@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-tou-zhi-bei-01",
+  "word": "力透纸背",
+  "pinyin": "lì tòu zhǐ bèi",
+  "meaning": "形容书法遒劲有力、笔力几乎要透到纸的背面，也形容诗文深刻有力。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

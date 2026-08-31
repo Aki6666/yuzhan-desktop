@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-zhuo-bian-ji-01",
+  "word": "不着边际",
+  "pinyin": "bù zhuó biān jì",
+  "meaning": "挨不着边儿，形容言论空泛、不切实际或离题太远。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

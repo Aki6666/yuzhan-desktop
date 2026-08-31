@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-bu-wo-dai-01",
+  "word": "时不我待",
+  "pinyin": "shí bù wǒ dài",
+  "meaning": "时间不会等待我们，形容要抓紧时间（\"待\"=等待）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

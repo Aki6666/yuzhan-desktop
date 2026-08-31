@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "duo-ru-niu-mao-01",
+  "word": "多如牛毛",
+  "pinyin": "duō rú niú máo",
+  "meaning": "多得像牛身上的毛，形容数量极多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

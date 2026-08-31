@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "du-zhan-ao-tou-01",
+  "word": "独占鳌头",
+  "pinyin": "dú zhàn áo tóu",
+  "meaning": "科举时代中状元，比喻占首位或第一名（\"鳌\"=传说中海里的大龟）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

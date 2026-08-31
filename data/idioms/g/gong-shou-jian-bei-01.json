@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gong-shou-jian-bei-01",
+  "word": "攻守兼备",
+  "pinyin": "gōng shǒu jiān bèi",
+  "meaning": "进攻和防守的能力都具备，形容能力全面。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

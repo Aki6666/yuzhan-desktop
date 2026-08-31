@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cong-rong-bu-po-01",
+  "word": "从容不迫",
+  "pinyin": "cóng róng bú pò",
+  "meaning": "非常镇静、不慌不忙。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

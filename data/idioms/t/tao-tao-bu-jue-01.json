@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tao-tao-bu-jue-01",
+  "word": "滔滔不绝",
+  "pinyin": "tāo tāo bù jué",
+  "meaning": "形容话很多、连续不断（\"滔滔\"=水流不断）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

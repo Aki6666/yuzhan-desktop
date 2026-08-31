@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-gai-er-lun-01",
+  "word": "一概而论",
+  "pinyin": "yí gài ér lùn",
+  "meaning": "用同一标准来对待或处理不同的事物（多用于否定句）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

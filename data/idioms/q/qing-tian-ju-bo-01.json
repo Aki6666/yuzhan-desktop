@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qing-tian-ju-bo-01",
+  "word": "擎天巨擘",
+  "pinyin": "qíng tiān jù bò",
+  "meaning": "托住天的巨擘，比喻能担当重任、支撑大局的杰出人物（\"擘\"=大拇指）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

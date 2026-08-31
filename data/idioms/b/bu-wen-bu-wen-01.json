@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-wen-bu-wen-01",
+  "word": "不闻不问",
+  "pinyin": "bù wén bú wèn",
+  "meaning": "不听也不问，形容对事情不关心、不理会。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

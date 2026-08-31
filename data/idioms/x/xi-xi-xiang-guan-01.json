@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-xi-xiang-guan-01",
+  "word": "息息相关",
+  "pinyin": "xī xī xiāng guān",
+  "meaning": "呼吸相互关联，形容关系非常密切（\"息\"=呼吸）。",
+  "usage": "与\"休戚相关\"辨析：后者含祸福与共之意。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "空气质量与每个人的健康息息相关。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chong-ru-ruo-jing-01",
+  "word": "宠辱若惊",
+  "pinyin": "chǒng rǔ ruò jīng",
+  "meaning": "受宠或受辱都感到惊恐，形容患得患失、斤斤计较。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

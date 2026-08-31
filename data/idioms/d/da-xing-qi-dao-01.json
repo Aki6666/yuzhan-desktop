@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "da-xing-qi-dao-01",
+  "word": "大行其道",
+  "pinyin": "dà xíng qí dào",
+  "meaning": "某种学术、思想、做法等盛行一时（多含贬义）。",
+  "usage": "多用于批评不良风气、做法流行。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "形式主义一度大行其道，损害了群众利益。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

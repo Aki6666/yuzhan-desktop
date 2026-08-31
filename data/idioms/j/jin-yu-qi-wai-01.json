@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-yu-qi-wai-01",
+  "word": "金玉其外",
+  "pinyin": "jīn yù qí wài",
+  "meaning": "外表像金玉一样美好（常与\"败絮其中\"连用），比喻外表华美、内里败坏。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

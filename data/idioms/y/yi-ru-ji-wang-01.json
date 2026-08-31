@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ru-ji-wang-01",
+  "word": "一如既往",
+  "pinyin": "yì rú jì wǎng",
+  "meaning": "完全像从前一样（\"既\"=已经）。",
+  "usage": "强调态度、做法始终不变。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "我们将一如既往地支持企业发展。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

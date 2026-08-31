@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-luo-qian-zhang-01",
+  "word": "一落千丈",
+  "pinyin": "yí luò qiān zhàng",
+  "meaning": "形容地位、声誉、成绩等急剧下降。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

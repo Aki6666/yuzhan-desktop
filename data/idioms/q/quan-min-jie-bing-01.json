@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "quan-min-jie-bing-01",
+  "word": "全民皆兵",
+  "pinyin": "quán mín jiē bīng",
+  "meaning": "全国人民都武装起来，比喻人人都参与。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

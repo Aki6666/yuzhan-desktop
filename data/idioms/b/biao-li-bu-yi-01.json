@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "biao-li-bu-yi-01",
+  "word": "表里不一",
+  "pinyin": "biǎo lǐ bù yī",
+  "meaning": "表面和内心不一致，形容虚伪。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-chu-ji-zhu-01",
+  "word": "自出机杼",
+  "pinyin": "zì chū jī zhù",
+  "meaning": "比喻写文章、创作等能创造出新的风格和意境，不落俗套（\"机杼\"=织布机）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yi-bu-rao-01",
+  "word": "不依不饶",
+  "pinyin": "bù yī bù ráo",
+  "meaning": "纠缠个没完、不肯放过。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

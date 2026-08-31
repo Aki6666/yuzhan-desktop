@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chuan-liu-bu-xi-01",
+  "word": "川流不息",
+  "pinyin": "chuān liú bù xī",
+  "meaning": "（行人、车马等）像水流一样连续不断（\"川\"=河流）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

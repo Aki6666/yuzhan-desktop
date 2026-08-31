@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-yong-zhi-yi-01",
+  "word": "毋庸置疑",
+  "pinyin": "wú yōng zhì yí",
+  "meaning": "事实明显或理由充分，不必怀疑（\"庸\"=用、须）。",
+  "usage": "强调确定无疑；与\"不容置疑\"\"毫无疑问\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "科技对发展的推动作用毋庸置疑。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 67
+}

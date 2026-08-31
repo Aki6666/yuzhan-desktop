@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lin-lang-man-mu-01",
+  "word": "琳琅满目",
+  "pinyin": "lín láng mǎn mù",
+  "meaning": "满眼都是珍贵的东西（\"琳琅\"=美玉），形容美好事物多。",
+  "usage": "多用于商品、展品、书籍等繁多且美好。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "展销会上商品琳琅满目，令人目不暇接。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 69
+}

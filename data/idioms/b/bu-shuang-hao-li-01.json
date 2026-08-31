@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-shuang-hao-li-01",
+  "word": "不爽毫厘",
+  "pinyin": "bù shuǎng háo lí",
+  "meaning": "形容一点儿也不差（\"爽\"=差失）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

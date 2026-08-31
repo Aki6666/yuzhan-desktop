@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-di-zhi-yi-01",
+  "word": "因地制宜",
+  "pinyin": "yīn dì zhì yí",
+  "meaning": "根据不同地区的具体情况规定适宜的办法（\"制\"=制定）。",
+  "usage": "强调按实际情况灵活施策。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "乡村振兴要因地制宜，发展特色产业。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

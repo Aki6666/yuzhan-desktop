@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-zhi-ming-gui-01",
+  "word": "实至名归",
+  "pinyin": "shí zhì míng guī",
+  "meaning": "有了真正的学识、本领或业绩，相应的名声自然就随之而来。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

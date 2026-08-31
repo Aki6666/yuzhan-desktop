@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gao-shen-mo-ce-01",
+  "word": "高深莫测",
+  "pinyin": "gāo shēn mò cè",
+  "meaning": "高深得无法揣测，形容学问、造诣等深奥难懂。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

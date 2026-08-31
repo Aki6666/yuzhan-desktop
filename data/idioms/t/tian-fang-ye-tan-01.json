@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-fang-ye-tan-01",
+  "word": "天方夜谭",
+  "pinyin": "tiān fāng yè tán",
+  "meaning": "阿拉伯民间故事集，借指虚妄荒诞的谈论或不可能实现的事情。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

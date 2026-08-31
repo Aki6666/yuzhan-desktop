@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hao-bu-dong-yao-01",
+  "word": "毫不动摇",
+  "pinyin": "háo bú dòng yáo",
+  "meaning": "一点也不动摇，形容意志坚定。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

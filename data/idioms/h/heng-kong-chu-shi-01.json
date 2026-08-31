@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "heng-kong-chu-shi-01",
+  "word": "横空出世",
+  "pinyin": "héng kōng chū shì",
+  "meaning": "形容人或事物突然出现，不同凡响。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ti-hu-guan-ding-01",
+  "word": "醍醐灌顶",
+  "pinyin": "tí hú guàn dǐng",
+  "meaning": "把纯酥油浇到头顶，佛教比喻灌输智慧使人彻底醒悟，现比喻听了高明的意见使人受到很大启发。",
+  "usage": "强调恍然大悟、深受启发。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "老师的一番话如醍醐灌顶，让我茅塞顿开。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

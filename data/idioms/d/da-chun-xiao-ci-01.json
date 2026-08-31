@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-chun-xiao-ci-01",
+  "word": "大醇小疵",
+  "pinyin": "dà chún xiǎo cī",
+  "meaning": "大体上是好的、只有小的缺点（\"醇\"=纯正，\"疵\"=毛病）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

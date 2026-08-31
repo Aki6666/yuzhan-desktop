@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qiang-nu-zhi-mo-01",
+  "word": "强弩之末",
+  "pinyin": "qiáng nǔ zhī mò",
+  "meaning": "用强弓射出的箭到了射程尽头，比喻强大的力量已经衰弱、起不了什么作用。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

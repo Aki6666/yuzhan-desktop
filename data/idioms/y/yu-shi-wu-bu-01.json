@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-shi-wu-bu-01",
+  "word": "于事无补",
+  "pinyin": "yú shì wú bǔ",
+  "meaning": "对事情没有什么帮助（\"补\"=补益）。",
+  "usage": "强调毫无助益。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "抱怨已于事无补，不如立即行动。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

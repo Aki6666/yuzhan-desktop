@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-hu-tian-yi-01",
+  "word": "如虎添翼",
+  "pinyin": "rú hǔ tiān yì",
+  "meaning": "好像老虎长上了翅膀，比喻强有力的人得到帮助后更加强大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

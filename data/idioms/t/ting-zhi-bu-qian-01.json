@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ting-zhi-bu-qian-01",
+  "word": "停滞不前",
+  "pinyin": "tíng zhì bù qián",
+  "meaning": "停留下来、不再前进（\"停滞\"=停留不前进）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

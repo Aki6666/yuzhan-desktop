@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-wei-ji-kun-01",
+  "word": "扶危济困",
+  "pinyin": "fú wēi jì kùn",
+  "meaning": "扶助危难的人、救济困苦的人。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

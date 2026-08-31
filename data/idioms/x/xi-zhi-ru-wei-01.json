@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-zhi-ru-wei-01",
+  "word": "细致入微",
+  "pinyin": "xì zhì rù wēi",
+  "meaning": "形容描写、观察、照顾等非常细致、深入到细微之处。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

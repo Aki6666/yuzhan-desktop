@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-chen-dai-xie-01",
+  "word": "新陈代谢",
+  "pinyin": "xīn chén dài xiè",
+  "meaning": "生物体不断以新物质代替旧物质的过程，比喻新事物滋生发展、代替旧事物。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

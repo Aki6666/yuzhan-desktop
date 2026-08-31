@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "guan-zhong-kui-bao-01",
+  "word": "管中窥豹",
+  "pinyin": "guǎn zhōng kuī bào",
+  "meaning": "从竹管里看豹，只看到豹身上的一块斑纹，比喻只见到事物的一小部分（常与\"可见一斑\"连用）。",
+  "usage": "常作\"管中窥豹，可见一斑\"，由局部推知整体。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "从这座古城的街巷，管中窥豹，可见当年繁华。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

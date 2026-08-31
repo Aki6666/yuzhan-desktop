@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ying-yun-er-sheng-01",
+  "word": "应运而生",
+  "pinyin": "yìng yùn ér shēng",
+  "meaning": "顺应时机而产生（\"运\"=时运、时机）。",
+  "usage": "多用于新事物、新需求随时代需要而出现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "随着共享经济兴起，各种服务平台应运而生。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 82
+}

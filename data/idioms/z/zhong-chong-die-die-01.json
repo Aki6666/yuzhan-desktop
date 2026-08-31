@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhong-chong-die-die-01",
+  "word": "重重叠叠",
+  "pinyin": "zhòng chóng dié dié",
+  "meaning": "一层又一层地堆积，形容很多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ning-shen-bing-qi-01",
+  "word": "凝神屏气",
+  "pinyin": "níng shén bǐng qì",
+  "meaning": "聚精会神、屏住呼吸，形容注意力高度集中。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

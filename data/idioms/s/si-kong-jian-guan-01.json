@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "si-kong-jian-guan-01",
+  "word": "司空见惯",
+  "pinyin": "sī kōng jiàn guàn",
+  "meaning": "看惯了就不觉得奇怪（\"司空\"=古代官名）。",
+  "usage": "对象为常见现象；常接\"对……司空见惯\"。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "城市堵车已让人司空见惯。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 50
+}

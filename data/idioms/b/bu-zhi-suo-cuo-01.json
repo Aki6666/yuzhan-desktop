@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-zhi-suo-cuo-01",
+  "word": "不知所措",
+  "pinyin": "bù zhī suǒ cuò",
+  "meaning": "不知道怎么办才好，形容处境为难或心神慌乱（\"措\"=安置）。",
+  "usage": "强调慌乱、无计可施。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "突发状况让他一时不知所措。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-zhi-bi-jian-01",
+  "word": "与之比肩",
+  "pinyin": "yǔ zhī bǐ jiān",
+  "meaning": "和它并列、地位相当（\"比肩\"=并肩）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

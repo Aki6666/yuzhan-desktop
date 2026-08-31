@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-meng-ru-huan-01",
+  "word": "如梦如幻",
+  "pinyin": "rú mèng rú huàn",
+  "meaning": "像梦和幻境一样，形容不真实或变幻莫测。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xue-yi-zhi-yong-01",
+  "word": "学以致用",
+  "pinyin": "xué yǐ zhì yòng",
+  "meaning": "为了实际应用而学习。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

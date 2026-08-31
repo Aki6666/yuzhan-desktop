@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-yan-li-se-01",
+  "word": "疾言厉色",
+  "pinyin": "jí yán lì sè",
+  "meaning": "说话急躁、脸色严厉，形容对人发怒时的神情。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

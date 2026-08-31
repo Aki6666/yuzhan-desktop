@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bei-dao-er-chi-01",
+  "word": "背道而驰",
+  "pinyin": "bèi dào ér chí",
+  "meaning": "朝相反的方向走，比喻行动与目的或应遵循的道理完全相反。",
+  "usage": "与\"南辕北辙\"近义；可接\"与……背道而驰\"。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他的做法与环保理念背道而驰。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 78
+}

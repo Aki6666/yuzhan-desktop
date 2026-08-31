@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhui-yu-lian-zhu-01",
+  "word": "缀玉联珠",
+  "pinyin": "zhuì yù lián zhū",
+  "meaning": "把美玉珍珠连缀起来，比喻诗词佳句迭出、文采斐然（\"缀\"=连缀）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

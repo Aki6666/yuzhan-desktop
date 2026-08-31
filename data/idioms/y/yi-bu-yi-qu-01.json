@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-bu-yi-qu-01",
+  "word": "亦步亦趋",
+  "pinyin": "yì bù yì qū",
+  "meaning": "老师走学生也走，老师跑学生也跑，比喻自己没有主张，跟着别人走或模仿别人。",
+  "usage": "批评一味模仿、缺乏主见。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "发展模式不能亦步亦趋地照搬他人。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

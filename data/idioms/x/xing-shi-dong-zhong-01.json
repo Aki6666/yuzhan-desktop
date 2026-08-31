@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-shi-dong-zhong-01",
+  "word": "兴师动众",
+  "pinyin": "xīng shī dòng zhòng",
+  "meaning": "原指大规模出兵，现多指动用很多人力去做某件事（多含贬义）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

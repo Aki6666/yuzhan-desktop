@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-ren-cheng-dao-01",
+  "word": "为人称道",
+  "pinyin": "wèi rén chēng dào",
+  "meaning": "被人称赞、传颂。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

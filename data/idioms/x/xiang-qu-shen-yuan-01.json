@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-qu-shen-yuan-01",
+  "word": "相去甚远",
+  "pinyin": "xiāng qù shèn yuǎn",
+  "meaning": "互相距离很远，形容差别很大（\"去\"=距离）。",
+  "usage": "强调差距明显。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "实际效果与预期相去甚远。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

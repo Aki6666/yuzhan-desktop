@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-ma-xing-kong-01",
+  "word": "天马行空",
+  "pinyin": "tiān mǎ xíng kōng",
+  "meaning": "天马奔驰神速，比喻才思奔放、气势豪放不羁，也指不切实际地空想。",
+  "usage": "褒义指想象奔放，贬义指脱离实际，依语境。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他的想象力天马行空，常有意想不到的创意。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 37
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wen-cai-fei-ran-01",
+  "word": "文采斐然",
+  "pinyin": "wén cǎi fěi rán",
+  "meaning": "文章辞藻华丽、很有文采（\"斐然\"=有文采的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

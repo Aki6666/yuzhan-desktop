@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "li-gan-jian-ying-01",
+  "word": "立竿见影",
+  "pinyin": "lì gān jiàn yǐng",
+  "meaning": "在阳光下竖起竹竿，立刻看到影子，比喻见效快。",
+  "usage": "强调效果立即显现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "该政策出台后立竿见影，市场迅速回暖。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-wu-shi-chu-01",
+  "word": "一无是处",
+  "pinyin": "yì wú shì chù",
+  "meaning": "没有一点对的地方（\"是\"=对）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

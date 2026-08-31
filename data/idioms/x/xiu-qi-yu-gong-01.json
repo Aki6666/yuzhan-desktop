@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiu-qi-yu-gong-01",
+  "word": "休戚与共",
+  "pinyin": "xiū qī yǔ gòng",
+  "meaning": "忧喜、祸福共同承担，形容关系密切、利害一致（\"休\"=喜悦，\"戚\"=忧愁）。",
+  "usage": "与\"休戚相关\"辨析：前者强调共同承担祸福，后者强调关系密切。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两岸同胞血脉相连，休戚与共。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 60
+}

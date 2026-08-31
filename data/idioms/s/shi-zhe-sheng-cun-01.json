@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-zhe-sheng-cun-01",
+  "word": "适者生存",
+  "pinyin": "shì zhě shēng cún",
+  "meaning": "能够适应环境者才能生存（达尔文进化论用语）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

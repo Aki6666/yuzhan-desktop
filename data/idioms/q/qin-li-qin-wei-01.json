@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qin-li-qin-wei-01",
+  "word": "亲力亲为",
+  "pinyin": "qīn lì qīn wèi",
+  "meaning": "亲自出力、亲自去做。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

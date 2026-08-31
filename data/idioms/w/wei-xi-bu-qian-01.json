@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-xi-bu-qian-01",
+  "word": "畏葸不前",
+  "pinyin": "wèi xǐ bù qián",
+  "meaning": "害怕退缩、不敢前进（\"葸\"=害怕）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

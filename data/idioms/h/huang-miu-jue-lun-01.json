@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "huang-miu-jue-lun-01",
+  "word": "荒谬绝伦",
+  "pinyin": "huāng miù jué lún",
+  "meaning": "荒唐错误到了极点（\"绝伦\"=独一无二）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

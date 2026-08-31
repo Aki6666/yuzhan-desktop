@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-bu-wei-ying-01",
+  "word": "步步为营",
+  "pinyin": "bù bù wéi yíng",
+  "meaning": "军队每前进一步就设下一道营垒，比喻行动谨慎，防备严密。",
+  "usage": "强调稳扎稳打、步步推进。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "公司步步为营，逐步打开全国市场。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

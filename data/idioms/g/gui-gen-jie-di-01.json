@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gui-gen-jie-di-01",
+  "word": "归根结底",
+  "pinyin": "guī gēn jié dǐ",
+  "meaning": "归结到根本上（\"结底\"=归结到底）。",
+  "usage": "用于引出根本原因或结论。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "归根结底，发展要靠人才。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

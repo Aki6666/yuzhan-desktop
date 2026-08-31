@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-yue-zheng-rong-01",
+  "word": "岁月峥嵘",
+  "pinyin": "suì yuè zhēng róng",
+  "meaning": "形容不平凡的岁月、艰苦的年月（\"峥嵘\"=高峻，引申为不平凡）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

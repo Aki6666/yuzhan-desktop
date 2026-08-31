@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qiao-ran-xing-qi-01",
+  "word": "悄然兴起",
+  "pinyin": "qiǎo rán xīng qǐ",
+  "meaning": "不知不觉地兴起、流行起来（\"悄然\"=寂静无声）。",
+  "usage": "多用于新潮流、新事物悄然出现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "露营经济近年来悄然兴起。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

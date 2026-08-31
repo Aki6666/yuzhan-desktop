@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ke-tiao-ti-01",
+  "word": "无可挑剔",
+  "pinyin": "wú kě tiāo tī",
+  "meaning": "没有什么可以挑剔、指责的，形容十分完美。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

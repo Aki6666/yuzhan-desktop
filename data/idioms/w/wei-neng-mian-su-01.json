@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-neng-mian-su-01",
+  "word": "未能免俗",
+  "pinyin": "wèi néng miǎn sú",
+  "meaning": "没能摆脱世俗的习惯、做法。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

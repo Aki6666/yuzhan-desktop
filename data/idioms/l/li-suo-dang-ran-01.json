@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "li-suo-dang-ran-01",
+  "word": "理所当然",
+  "pinyin": "lǐ suǒ dāng rán",
+  "meaning": "按道理应当这样（\"当然\"=应当如此）。",
+  "usage": "多用于强调事情合乎情理、天经地义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "依法纳税是每个公民理所当然的义务。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 100
+}

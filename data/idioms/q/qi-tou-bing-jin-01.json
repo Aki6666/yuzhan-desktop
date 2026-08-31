@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-tou-bing-jin-01",
+  "word": "齐头并进",
+  "pinyin": "qí tóu bìng jìn",
+  "meaning": "几方面不分先后地一同前进。",
+  "usage": "多用于多方面同时推进。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "经济建设与生态保护要齐头并进。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-zhi-you-xiao-01",
+  "word": "行之有效",
+  "pinyin": "xíng zhī yǒu xiào",
+  "meaning": "实行起来很有成效，多指措施、方法有效。",
+  "usage": "多用于经验、措施、方法等被实践证明有效。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这套管理办法在实践中行之有效。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

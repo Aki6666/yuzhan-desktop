@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yi-yu-li-01",
+  "word": "不遗余力",
+  "pinyin": "bù yí yú lì",
+  "meaning": "把所有的力量都使出来，一点也不保留（\"遗\"=保留）。",
+  "usage": "强调尽心尽力、毫无保留。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "志愿者不遗余力地帮助受灾群众。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

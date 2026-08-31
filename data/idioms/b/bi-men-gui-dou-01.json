@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bi-men-gui-dou-01",
+  "word": "筚门圭窦",
+  "pinyin": "bì mén guī dòu",
+  "meaning": "柴门和墙上凿的圭形小门，形容贫苦人家（\"筚\"=荆竹，\"窦\"=小门）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-yu-yan-biao-01",
+  "word": "溢于言表",
+  "pinyin": "yì yú yán biǎo",
+  "meaning": "（感情、意思等）从言辞表情中流露出来（\"溢\"=充满而流出）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

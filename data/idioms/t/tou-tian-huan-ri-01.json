@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tou-tian-huan-ri-01",
+  "word": "偷天换日",
+  "pinyin": "tōu tiān huàn rì",
+  "meaning": "比喻暗中改变事物的真相、以达到蒙混欺骗的目的。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

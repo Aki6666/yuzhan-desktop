@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cang-hai-yi-su-01",
+  "word": "沧海一粟",
+  "pinyin": "cāng hǎi yí sù",
+  "meaning": "大海中的一粒小米，比喻非常渺小（\"粟\"=谷子）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

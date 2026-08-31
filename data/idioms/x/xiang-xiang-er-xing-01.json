@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-xiang-er-xing-01",
+  "word": "相向而行",
+  "pinyin": "xiāng xiàng ér xíng",
+  "meaning": "朝相反的方向行走，比喻双方目标、方向不同。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

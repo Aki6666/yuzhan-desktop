@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhuan-shun-ji-shi-01",
+  "word": "转瞬即逝",
+  "pinyin": "zhuǎn shùn jí shì",
+  "meaning": "转眼之间就消失，形容时间、机会等极易失去。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

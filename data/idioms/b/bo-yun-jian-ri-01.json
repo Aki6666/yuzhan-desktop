@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bo-yun-jian-ri-01",
+  "word": "拨云见日",
+  "pinyin": "bō yún jiàn rì",
+  "meaning": "拨开云雾见到太阳，比喻冲破黑暗见到光明，也比喻疑团消除、真相大白。",
+  "usage": "多用于真相大白或走出困境。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "在多方努力下，案件终于拨云见日。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

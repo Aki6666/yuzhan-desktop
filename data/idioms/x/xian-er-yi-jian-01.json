@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xian-er-yi-jian-01",
+  "word": "显而易见",
+  "pinyin": "xiǎn ér yì jiàn",
+  "meaning": "事情或道理非常明显，容易看清。",
+  "usage": "强调明显易见；与\"不言而喻\"\"有目共睹\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "过度捕捞的危害显而易见。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 59
+}

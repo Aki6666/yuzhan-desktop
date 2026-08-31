@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-zuo-chun-feng-01",
+  "word": "如坐春风",
+  "pinyin": "rú zuò chūn fēng",
+  "meaning": "像坐在春风中间，比喻同品德高尚且有学识的人相处并受到熏陶。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

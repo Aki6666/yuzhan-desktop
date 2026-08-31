@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yue-er-tong-01",
+  "word": "不约而同",
+  "pinyin": "bù yuē ér tóng",
+  "meaning": "没有事先商量而彼此行动或见解一致。",
+  "usage": "与\"不谋而合\"辨析：前者多指行动、后者多指意见。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "大家不约而同地鼓起掌来。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

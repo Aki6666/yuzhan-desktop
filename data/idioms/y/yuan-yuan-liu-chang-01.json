@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yuan-yuan-liu-chang-01",
+  "word": "源远流长",
+  "pinyin": "yuán yuǎn liú cháng",
+  "meaning": "河流的源头很远、水流很长，比喻历史悠久、根底深厚。",
+  "usage": "多用于文化、传统、友谊等历史积淀深厚的事物。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "中华文明源远流长，绵延不绝。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 99
+}

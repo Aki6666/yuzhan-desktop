@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sheng-zhe-wei-wang-01",
+  "word": "胜者为王",
+  "pinyin": "shèng zhě wèi wáng",
+  "meaning": "胜利的一方就是王者（常与\"败者为寇\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

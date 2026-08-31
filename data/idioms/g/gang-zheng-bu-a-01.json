@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gang-zheng-bu-a-01",
+  "word": "刚正不阿",
+  "pinyin": "gāng zhèng bù ā",
+  "meaning": "刚强正直、不徇私迎合（\"阿\"=迎合）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

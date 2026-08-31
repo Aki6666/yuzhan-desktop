@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chao-ran-wu-wai-01",
+  "word": "超然物外",
+  "pinyin": "chāo rán wù wài",
+  "meaning": "超脱于世俗事物之外，形容置身事外、不关心世事。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

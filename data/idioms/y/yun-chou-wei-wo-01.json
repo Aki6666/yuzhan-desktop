@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yun-chou-wei-wo-01",
+  "word": "运筹帷幄",
+  "pinyin": "yùn chóu wéi wò",
+  "meaning": "在军帐中谋划作战方案，泛指策划机要、制定策略（\"帷幄\"=军帐）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

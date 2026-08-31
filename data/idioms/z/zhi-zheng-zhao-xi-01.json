@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-zheng-zhao-xi-01",
+  "word": "只争朝夕",
+  "pinyin": "zhī zhēng zhāo xī",
+  "meaning": "力争在最短的时间内达到目的，形容抓紧时间、分秒必争。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

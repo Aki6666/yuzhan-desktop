@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "du-shu-yi-zhi-01",
+  "word": "独树一帜",
+  "pinyin": "dú shù yí zhì",
+  "meaning": "单独树起一面旗帜，比喻自成一家、风格独特（\"树\"=树立）。",
+  "usage": "用于形容风格、主张、学派等与众不同、自成体系。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他的写作风格独树一帜，在文坛广受赞誉。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 109
+}

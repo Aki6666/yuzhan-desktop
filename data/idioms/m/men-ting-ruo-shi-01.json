@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "men-ting-ruo-shi-01",
+  "word": "门庭若市",
+  "pinyin": "mén tíng ruò shì",
+  "meaning": "门口和庭院里热闹得像市场一样，形容交际来往的人很多。",
+  "usage": "与\"门可罗雀\"（冷清）相对。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "开业当天店内门庭若市，生意火爆。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

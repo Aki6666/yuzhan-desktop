@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gen-shen-di-gu-01",
+  "word": "根深蒂固",
+  "pinyin": "gēn shēn dì gù",
+  "meaning": "根基牢固，不易动摇（\"蒂\"=瓜果与茎相连处）。",
+  "usage": "多用于观念、习惯、制度等积久难改；中性偏贬语境常见。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "重男轻女的思想在一些地区根深蒂固。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 73
+}

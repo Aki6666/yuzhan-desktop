@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "niu-gui-she-shen-01",
+  "word": "牛鬼蛇神",
+  "pinyin": "niú guǐ shé shén",
+  "meaning": "奇形怪状的鬼神，比喻形形色色的坏人。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

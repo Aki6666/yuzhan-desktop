@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xun-gui-dao-ju-01",
+  "word": "循规蹈矩",
+  "pinyin": "xún guī dǎo jǔ",
+  "meaning": "遵守规矩，不敢稍有变动（\"蹈\"=踩）。",
+  "usage": "中性偏贬（守旧、缺乏创新），也可中性（守规矩），依语境判断。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他做事循规蹈矩，从不越雷池半步。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 66
+}

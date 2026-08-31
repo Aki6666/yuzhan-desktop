@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ji-zhi-tan-01",
+  "word": "无稽之谈",
+  "pinyin": "wú jī zhī tán",
+  "meaning": "没有根据、无法查考的言论（\"稽\"=查考）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

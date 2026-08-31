@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-cang-bu-lu-01",
+  "word": "深藏不露",
+  "pinyin": "shēn cáng bú lù",
+  "meaning": "把才能、实力等隐藏起来、不显露。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

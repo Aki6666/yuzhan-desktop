@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hua-di-wei-lao-01",
+  "word": "画地为牢",
+  "pinyin": "huà dì wéi láo",
+  "meaning": "在地上画圈当监狱，比喻只许在指定范围内活动。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tong-sheng-xiang-ying-01",
+  "word": "同声相应",
+  "pinyin": "tóng shēng xiāng yìng",
+  "meaning": "同类的声音互相应和，比喻志趣相同的人互相呼应。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

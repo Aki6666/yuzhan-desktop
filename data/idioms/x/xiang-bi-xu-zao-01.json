@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-bi-xu-zao-01",
+  "word": "向壁虚造",
+  "pinyin": "xiàng bì xū zào",
+  "meaning": "对着墙壁凭空捏造，比喻无事实根据、凭空编造。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

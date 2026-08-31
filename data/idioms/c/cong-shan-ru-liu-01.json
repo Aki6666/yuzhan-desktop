@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cong-shan-ru-liu-01",
+  "word": "从善如流",
+  "pinyin": "cóng shàn rú liú",
+  "meaning": "形容能很快地接受别人的好意见、像水从高处流到低处一样自然。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

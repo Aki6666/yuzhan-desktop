@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-luo-qi-bu-01",
+  "word": "星罗棋布",
+  "pinyin": "xīng luó qí bù",
+  "meaning": "像星星那样罗列、像棋子那样分布，形容数量多、分布广。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

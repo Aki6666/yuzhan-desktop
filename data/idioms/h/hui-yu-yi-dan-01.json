@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hui-yu-yi-dan-01",
+  "word": "毁于一旦",
+  "pinyin": "huǐ yú yí dàn",
+  "meaning": "在一天之间被毁掉，形容得来不易的东西一下子被毁。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

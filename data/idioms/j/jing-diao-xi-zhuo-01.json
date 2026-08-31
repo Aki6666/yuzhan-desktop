@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-diao-xi-zhuo-01",
+  "word": "精雕细琢",
+  "pinyin": "jīng diāo xì zhuó",
+  "meaning": "精心细致地雕刻，比喻对作品等反复加工、精益求精。",
+  "usage": "多用于艺术创作、产品打磨等细致用心。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "每件展品都经过工匠精雕细琢。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

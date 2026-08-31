@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-shi-zhi-yong-01",
+  "word": "经世致用",
+  "pinyin": "jīng shì zhì yòng",
+  "meaning": "治理世事、注重实效，指学问必须有益于国事。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

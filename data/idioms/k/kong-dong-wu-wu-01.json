@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kong-dong-wu-wu-01",
+  "word": "空洞无物",
+  "pinyin": "kōng dòng wú wù",
+  "meaning": "（文章、言论等）内容空洞、没有东西。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiao-zhu-yan-kai-01",
+  "word": "笑逐颜开",
+  "pinyin": "xiào zhú yán kāi",
+  "meaning": "眉开眼笑、十分高兴（\"逐\"=随着，\"颜\"=脸面）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

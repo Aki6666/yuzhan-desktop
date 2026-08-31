@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ke-bian-bo-01",
+  "word": "无可辩驳",
+  "pinyin": "wú kě biàn bó",
+  "meaning": "没有可以辩驳的余地，形容道理、事实等十分确凿。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

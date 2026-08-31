@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lai-long-qu-mai-01",
+  "word": "来龙去脉",
+  "pinyin": "lái lóng qù mài",
+  "meaning": "山形地势像龙的血脉一样连贯，后比喻人或事物的来历、前因后果。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

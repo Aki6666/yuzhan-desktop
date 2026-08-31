@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lao-yi-jie-he-01",
+  "word": "劳逸结合",
+  "pinyin": "láo yì jié hé",
+  "meaning": "工作和休息相结合，指既紧张工作又适当休息。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

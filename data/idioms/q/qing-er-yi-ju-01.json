@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qing-er-yi-ju-01",
+  "word": "轻而易举",
+  "pinyin": "qīng ér yì jǔ",
+  "meaning": "形容事情容易做，不费力。",
+  "usage": "强调不费力气。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "破解这一难题并非轻而易举。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

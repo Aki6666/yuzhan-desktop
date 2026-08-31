@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hu-shuo-ba-dao-01",
+  "word": "胡说八道",
+  "pinyin": "hú shuō bā dào",
+  "meaning": "没有根据、不负责任地乱说一气。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

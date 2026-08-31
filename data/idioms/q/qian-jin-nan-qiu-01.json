@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-jin-nan-qiu-01",
+  "word": "千金难求",
+  "pinyin": "qiān jīn nán qiú",
+  "meaning": "用千金也难以求得，形容非常珍贵难得。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

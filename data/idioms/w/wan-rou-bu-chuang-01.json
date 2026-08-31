@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-rou-bu-chuang-01",
+  "word": "剜肉补疮",
+  "pinyin": "wān ròu bǔ chuāng",
+  "meaning": "剜下身上的肉来补疮，比喻只顾眼前、用有害的方法来救急（\"剜\"=挖）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

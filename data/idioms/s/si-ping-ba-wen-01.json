@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "si-ping-ba-wen-01",
+  "word": "四平八稳",
+  "pinyin": "sì píng bā wěn",
+  "meaning": "原指说话、做事稳当，现多指做事只求不出差错、缺乏进取精神。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

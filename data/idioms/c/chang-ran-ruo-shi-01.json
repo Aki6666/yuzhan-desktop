@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chang-ran-ruo-shi-01",
+  "word": "怅然若失",
+  "pinyin": "chàng rán ruò shī",
+  "meaning": "心情沮丧，好像丢了什么东西似的（\"怅然\"=不如意的样子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

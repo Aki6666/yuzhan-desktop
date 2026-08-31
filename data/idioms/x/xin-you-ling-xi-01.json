@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-you-ling-xi-01",
+  "word": "心有灵犀",
+  "pinyin": "xīn yǒu líng xī",
+  "meaning": "比喻彼此心意相通、不用说出就能互相领会（\"灵犀\"=犀牛角）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

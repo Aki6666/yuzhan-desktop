@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "da-shi-suo-qu-01",
+  "word": "大势所趋",
+  "pinyin": "dà shì suǒ qū",
+  "meaning": "整个局势发展的趋向（\"趋\"=趋向）。",
+  "usage": "强调客观趋势不可逆转。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "绿色发展是大势所趋。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

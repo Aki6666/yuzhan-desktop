@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pi-li-yang-qiu-01",
+  "word": "皮里阳秋",
+  "pinyin": "pí lǐ yáng qiū",
+  "meaning": "指藏在心里不说出来的评论（\"阳秋\"=春秋，寓褒贬）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

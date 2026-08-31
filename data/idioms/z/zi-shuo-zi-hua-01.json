@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-shuo-zi-hua-01",
+  "word": "自说自话",
+  "pinyin": "zì shuō zì huà",
+  "meaning": "自己跟自己说话，形容不顾别人、只按自己的想法说或做。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

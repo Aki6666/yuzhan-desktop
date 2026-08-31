@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bao-jian-chou-si-01",
+  "word": "剥茧抽丝",
+  "pinyin": "bāo jiǎn chōu sī",
+  "meaning": "比喻根据顺序寻求事物的发生发展过程，也形容分析细致。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

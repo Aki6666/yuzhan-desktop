@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-nian-ju-hui-01",
+  "word": "万念俱灰",
+  "pinyin": "wàn niàn jù huī",
+  "meaning": "一切念头都破灭了，形容极端灰心失望。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

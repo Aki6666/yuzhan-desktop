@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-huang-bu-mang-01",
+  "word": "不慌不忙",
+  "pinyin": "bù huāng bù máng",
+  "meaning": "不慌张、不忙乱，形容态度从容镇定。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

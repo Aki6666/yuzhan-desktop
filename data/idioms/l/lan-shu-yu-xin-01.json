@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lan-shu-yu-xin-01",
+  "word": "烂熟于心",
+  "pinyin": "làn shú yú xīn",
+  "meaning": "熟练到烂在心里，形容记得非常熟。",
+  "usage": "强调牢记于心、滚瓜烂熟。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这些公式他已烂熟于心。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

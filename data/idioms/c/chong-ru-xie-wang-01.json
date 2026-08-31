@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chong-ru-xie-wang-01",
+  "word": "宠辱偕忘",
+  "pinyin": "chǒng rǔ xié wàng",
+  "meaning": "受宠和受辱都不放在心上（\"偕\"=一同）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

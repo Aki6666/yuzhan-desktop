@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "you-bao-pi-pa-01",
+  "word": "犹抱琵琶",
+  "pinyin": "yóu bào pí pa",
+  "meaning": "指女子害羞地遮遮掩掩，也形容说话、做事不痛快、欲言又止。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

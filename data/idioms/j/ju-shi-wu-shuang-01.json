@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-shi-wu-shuang-01",
+  "word": "举世无双",
+  "pinyin": "jǔ shì wú shuāng",
+  "meaning": "全世界没有第二个，形容极其稀有、独一无二。",
+  "usage": "强调全球唯一、无可匹敌。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "这件国宝举世无双。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

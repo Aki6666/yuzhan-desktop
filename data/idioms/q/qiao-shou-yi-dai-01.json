@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qiao-shou-yi-dai-01",
+  "word": "翘首以待",
+  "pinyin": "qiáo shǒu yǐ dài",
+  "meaning": "抬起头来等待，形容殷切盼望（\"翘\"=抬起）。",
+  "usage": "强调急切期盼。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "影迷们翘首以待新片上映。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

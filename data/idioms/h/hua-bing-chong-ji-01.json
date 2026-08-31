@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hua-bing-chong-ji-01",
+  "word": "画饼充饥",
+  "pinyin": "huà bǐng chōng jī",
+  "meaning": "画个饼来解饿，比喻用空想来安慰自己或虚假的东西不能解决实际问题。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

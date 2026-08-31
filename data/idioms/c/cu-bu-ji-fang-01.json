@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cu-bu-ji-fang-01",
+  "word": "猝不及防",
+  "pinyin": "cù bù jí fáng",
+  "meaning": "事情来得突然，来不及防备（\"猝\"=突然）。",
+  "usage": "强调事发突然、措手不及。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "暴雨猝不及防，街道瞬间积水。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

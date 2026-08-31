@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-di-fang-shi-01",
+  "word": "无的放矢",
+  "pinyin": "wú dì fàng shǐ",
+  "meaning": "没有箭靶子乱射箭，比喻说话做事没有明确目的或不切合实际（\"的\"=靶心）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

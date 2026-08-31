@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-qu-dao-qiong-01",
+  "word": "力屈道穷",
+  "pinyin": "lì qū dào qióng",
+  "meaning": "力量已经穷尽、办法已经用尽（\"屈\"\"穷\"=尽）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

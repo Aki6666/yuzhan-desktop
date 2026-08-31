@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhan-qian-gu-hou-01",
+  "word": "瞻前顾后",
+  "pinyin": "zhān qián gù hòu",
+  "meaning": "看看前面又看看后面，形容做事谨慎、考虑周密，也形容顾虑太多、犹豫不决。",
+  "usage": "中性（谨慎）或贬义（犹豫），依语境。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "决策要瞻前顾后，通盘考虑。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

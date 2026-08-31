@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-you-wei-jin-01",
+  "word": "意犹未尽",
+  "pinyin": "yì yóu wèi jìn",
+  "meaning": "意思还没有全部表达完，也指兴致还没有结束（\"犹\"=还）。",
+  "usage": "多用于表演、文章、聚会等使人回味不尽。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "演出结束，观众仍意犹未尽。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-li-zai-mu-01",
+  "word": "历历在目",
+  "pinyin": "lì lì zài mù",
+  "meaning": "清楚地呈现在眼前（\"历历\"=清楚）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

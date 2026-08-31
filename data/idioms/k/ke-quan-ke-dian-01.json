@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ke-quan-ke-dian-01",
+  "word": "可圈可点",
+  "pinyin": "kě quān kě diǎn",
+  "meaning": "文章精彩、值得加以圈点，形容表现好、值得肯定或赞扬。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

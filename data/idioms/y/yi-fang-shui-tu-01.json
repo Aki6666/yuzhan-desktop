@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-fang-shui-tu-01",
+  "word": "一方水土",
+  "pinyin": "yì fāng shuǐ tǔ",
+  "meaning": "指某一地区的自然环境（常与\"养一方人\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

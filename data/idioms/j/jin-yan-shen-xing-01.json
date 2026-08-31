@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-yan-shen-xing-01",
+  "word": "谨言慎行",
+  "pinyin": "jǐn yán shèn xíng",
+  "meaning": "言语行动小心谨慎。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

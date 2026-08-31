@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sheng-ji-bo-bo-01",
+  "word": "生机勃勃",
+  "pinyin": "shēng jī bó bó",
+  "meaning": "形容生命力旺盛，充满活力（\"勃勃\"=旺盛）。",
+  "usage": "多用于景象、事业、万物等蓬勃。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "春天的田野生机勃勃。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

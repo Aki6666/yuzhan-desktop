@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-jing-di-yi-01",
+  "word": "天经地义",
+  "pinyin": "tiān jīng dì yì",
+  "meaning": "天地间经久不变的道理，指绝对正确、不容置疑的道理，也指理所当然。",
+  "usage": "强调理应如此、不容置疑。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "依法纳税是天经地义的事。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

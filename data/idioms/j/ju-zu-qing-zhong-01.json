@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-zu-qing-zhong-01",
+  "word": "举足轻重",
+  "pinyin": "jǔ zú qīng zhòng",
+  "meaning": "一抬脚就会影响两边的轻重，比喻所处地位重要，一举一动都影响全局。",
+  "usage": "用于形容人或事物在全局中地位重要。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "数字经济已成为国民经济举足轻重的力量。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 96
+}

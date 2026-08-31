@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-hua-ba-men-01",
+  "word": "五花八门",
+  "pinyin": "wǔ huā bā mén",
+  "meaning": "原指古代兵法中五花阵和八门阵，现比喻事物繁多、花样繁多。",
+  "usage": "强调种类繁多、名目多样。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "市面上的养生课程五花八门，需仔细甄别。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

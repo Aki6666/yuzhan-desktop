@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "neng-qu-neng-shen-01",
+  "word": "能屈能伸",
+  "pinyin": "néng qū néng shēn",
+  "meaning": "能弯曲也能伸直，比喻人在失意时能忍耐、得志时能大干一番。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

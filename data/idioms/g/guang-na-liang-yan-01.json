@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "guang-na-liang-yan-01",
+  "word": "广纳良言",
+  "pinyin": "guǎng nà liáng yán",
+  "meaning": "广泛听取、采纳好的意见。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

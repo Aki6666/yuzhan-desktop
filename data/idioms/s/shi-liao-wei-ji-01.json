@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-liao-wei-ji-01",
+  "word": "始料未及",
+  "pinyin": "shǐ liào wèi jí",
+  "meaning": "当初没有预料到（\"料\"=预料）。",
+  "usage": "强调结果出于意料之外。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "疫情的冲击始料未及。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

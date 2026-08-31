@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-zhi-qi-shi-01",
+  "word": "颐指气使",
+  "pinyin": "yí zhǐ qì shǐ",
+  "meaning": "不说话而用面部表情和口鼻出气来指挥别人，形容有权势的人傲慢地指挥别人。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

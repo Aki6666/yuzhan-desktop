@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhu-lian-bi-he-01",
+  "word": "珠联璧合",
+  "pinyin": "zhū lián bì hé",
+  "meaning": "珍珠串在一起、美玉合在一起，比喻杰出的人才或美好的事物结合在一起。",
+  "usage": "多用于赞美两者结合完美。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "两位大师的合作堪称珠联璧合。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 53
+}

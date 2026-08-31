@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shui-zhang-chuan-gao-01",
+  "word": "水涨船高",
+  "pinyin": "shuǐ zhǎng chuán gāo",
+  "meaning": "水位升高船身随之升高，比喻事物随着所凭借的基础的提高而提高。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

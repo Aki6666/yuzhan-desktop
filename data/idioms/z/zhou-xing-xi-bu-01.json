@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhou-xing-xi-bu-01",
+  "word": "肘行膝步",
+  "pinyin": "zhǒu xíng xī bù",
+  "meaning": "用肘爬行、用膝走路，形容十分恐惧或竭尽全力。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

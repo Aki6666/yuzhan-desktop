@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-shang-mei-shao-01",
+  "word": "喜上眉梢",
+  "pinyin": "xǐ shàng méi shāo",
+  "meaning": "喜悦之情从眉梢上流露出来，形容非常高兴。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "he-ze-er-yu-01",
+  "word": "涸泽而渔",
+  "pinyin": "hé zé ér yú",
+  "meaning": "抽干池水捉鱼，比喻只顾眼前利益、不留余地（\"涸\"=干涸，\"泽\"=聚水的洼地）。",
+  "usage": "与\"竭泽而渔\"\"杀鸡取卵\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "透支资源发展经济，无异于涸泽而渔。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

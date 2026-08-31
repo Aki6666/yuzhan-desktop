@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tou-gong-jian-liao-01",
+  "word": "偷工减料",
+  "pinyin": "tōu gōng jiǎn liào",
+  "meaning": "不按产品或工程所规定的质量要求而暗中掺假或削减工序和用料。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

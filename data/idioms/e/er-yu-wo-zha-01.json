@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "er-yu-wo-zha-01",
+  "word": "尔虞我诈",
+  "pinyin": "ěr yú wǒ zhà",
+  "meaning": "你骗我、我骗你，互相欺骗（\"虞\"\"诈\"=欺骗）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-dian-mi-jin-01",
+  "word": "指点迷津",
+  "pinyin": "zhǐ diǎn mí jīn",
+  "meaning": "针对事物的困难处，提供解决的方向、办法或途径（\"津\"=渡口）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-ren-jian-zhi-01",
+  "word": "见仁见智",
+  "pinyin": "jiàn rén jiàn zhì",
+  "meaning": "对同一个问题，各人有各人的见解。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhen-zhi-zhuo-jian-01",
+  "word": "真知灼见",
+  "pinyin": "zhēn zhī zhuó jiàn",
+  "meaning": "正确而透彻的见解（\"灼\"=明白）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

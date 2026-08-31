@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wen-yi-zhi-shi-01",
+  "word": "闻一知十",
+  "pinyin": "wén yī zhī shí",
+  "meaning": "听到一点就能推知很多，形容善于类推、聪明。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

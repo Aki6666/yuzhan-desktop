@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shao-zhi-you-shao-01",
+  "word": "少之又少",
+  "pinyin": "shǎo zhī yòu shǎo",
+  "meaning": "非常少、极少。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-bo-zhu-liu-01",
+  "word": "随波逐流",
+  "pinyin": "suí bō zhú liú",
+  "meaning": "随着波浪起伏、跟着流水漂荡，比喻没有坚定的立场，缺乏判断是非的能力，只跟着别人走。",
+  "usage": "与\"人云亦云\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "做研究要独立思考，不能随波逐流。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

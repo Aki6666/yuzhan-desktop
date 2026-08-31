@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-shi-zi-tong-01",
+  "word": "无师自通",
+  "pinyin": "wú shī zì tōng",
+  "meaning": "没有老师传授就自己学会、懂得。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

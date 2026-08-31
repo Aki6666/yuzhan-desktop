@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mao-ju-xi-gu-01",
+  "word": "毛举细故",
+  "pinyin": "máo jǔ xì gù",
+  "meaning": "烦琐地列举细小的琐事（\"毛举\"=烦琐列举）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

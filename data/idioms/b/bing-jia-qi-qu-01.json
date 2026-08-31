@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bing-jia-qi-qu-01",
+  "word": "并驾齐驱",
+  "pinyin": "bìng jià qí qū",
+  "meaning": "几匹马并排拉着车一齐快跑，比喻彼此力量、地位等不相上下。",
+  "usage": "强调齐头并进、难分高下。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两家企业在市场份额上并驾齐驱。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

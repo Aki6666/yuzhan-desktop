@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-jin-qian-hua-01",
+  "word": "洗尽铅华",
+  "pinyin": "xǐ jìn qiān huá",
+  "meaning": "洗掉脸上的脂粉，比喻去掉伪装、恢复本来面目（\"铅华\"=化妆品）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

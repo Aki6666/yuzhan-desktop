@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-jun-tu-qi-01",
+  "word": "异军突起",
+  "pinyin": "yì jūn tū qǐ",
+  "meaning": "另一支军队突然出现，比喻与众不同的新派别或新力量突然崛起。",
+  "usage": "多用于新兴力量、企业等迅速崛起。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "新能源汽车产业异军突起。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

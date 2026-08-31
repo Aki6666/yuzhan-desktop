@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-yan-jiu-ding-01",
+  "word": "一言九鼎",
+  "pinyin": "yì yán jiǔ dǐng",
+  "meaning": "一句话抵得上九鼎重，形容说话分量极重、作用极大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

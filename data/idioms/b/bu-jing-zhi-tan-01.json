@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-jing-zhi-tan-01",
+  "word": "不经之谈",
+  "pinyin": "bù jīng zhī tán",
+  "meaning": "荒诞无稽、没有根据的话（\"经\"=正常、常理）。",
+  "usage": "\"不经\"意为不合常理，非\"没有经历\"。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "这些说法纯属不经之谈。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

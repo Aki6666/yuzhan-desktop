@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "du-wu-si-ren-01",
+  "word": "睹物思人",
+  "pinyin": "dǔ wù sī rén",
+  "meaning": "看到死去或离别的人留下的东西就想起那个人。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

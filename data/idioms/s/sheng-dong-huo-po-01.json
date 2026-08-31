@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sheng-dong-huo-po-01",
+  "word": "生动活泼",
+  "pinyin": "shēng dòng huó pō",
+  "meaning": "形容内容充实、形态活泼、不呆板。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

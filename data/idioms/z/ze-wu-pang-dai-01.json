@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ze-wu-pang-dai-01",
+  "word": "责无旁贷",
+  "pinyin": "zé wú páng dài",
+  "meaning": "自己应尽的责任，不能推卸给别人（\"贷\"=推卸）。",
+  "usage": "强调责任不可推卸；\"贷\"不读dài之外音。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "保护生态环境，人人责无旁贷。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

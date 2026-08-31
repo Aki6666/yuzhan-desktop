@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-chu-yi-zhe-01",
+  "word": "如出一辙",
+  "pinyin": "rú chū yì zhé",
+  "meaning": "好像出自同一个车辙，比喻两件事物非常相像（\"辙\"=车轮印）。",
+  "usage": "多含贬义（言行雷同）；中性也可。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "两人的说法如出一辙，疑点重重。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 50
+}

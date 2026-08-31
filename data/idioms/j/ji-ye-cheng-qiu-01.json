@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-ye-cheng-qiu-01",
+  "word": "集腋成裘",
+  "pinyin": "jí yè chéng qiú",
+  "meaning": "狐狸腋下的皮虽很小，但聚集起来就能制成皮袍，比喻积少成多（\"腋\"=腋窝）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

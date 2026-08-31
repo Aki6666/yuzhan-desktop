@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "rong-hui-guan-tong-01",
+  "word": "融会贯通",
+  "pinyin": "róng huì guàn tōng",
+  "meaning": "把各方面的知识或道理融合贯穿起来，得到系统透彻的理解。",
+  "usage": "多用于学习、理解后融会而贯通。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "学习要举一反三，融会贯通。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 60
+}

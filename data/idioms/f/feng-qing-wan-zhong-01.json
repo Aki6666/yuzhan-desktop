@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-qing-wan-zhong-01",
+  "word": "风情万种",
+  "pinyin": "fēng qíng wàn zhǒng",
+  "meaning": "形容仪态、举止等极有风韵、极具魅力。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

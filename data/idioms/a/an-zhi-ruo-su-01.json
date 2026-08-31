@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "an-zhi-ruo-su-01",
+  "word": "安之若素",
+  "pinyin": "ān zhī ruò sù",
+  "meaning": "（遇到不顺利情况或反常现象）像平常一样对待，毫不在意（\"素\"=平常）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

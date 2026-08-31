@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "huang-dan-bu-jing-01",
+  "word": "荒诞不经",
+  "pinyin": "huāng dàn bù jīng",
+  "meaning": "形容言论、行为等荒谬离奇，不合常理（\"经\"=常理）。",
+  "usage": "批评言论行为荒谬。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这些荒诞不经的说法不值一驳。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-shen-jian-bei-01",
+  "word": "形神兼备",
+  "pinyin": "xíng shén jiān bèi",
+  "meaning": "形体和精神都具备，形容描写、刻画或表演既重外形又重内在。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

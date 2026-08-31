@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-jia-zheng-ming-01",
+  "word": "百家争鸣",
+  "pinyin": "bǎi jiā zhēng míng",
+  "meaning": "比喻各种学派或意见自由发表、互相争论。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

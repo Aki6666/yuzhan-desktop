@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "du-li-zi-zhu-01",
+  "word": "独立自主",
+  "pinyin": "dú lì zì zhǔ",
+  "meaning": "国家、民族或政党等自己掌握自己的命运、不受别人支配。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

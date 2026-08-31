@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-wei-dao-lai-01",
+  "word": "娓娓道来",
+  "pinyin": "wěi wěi dào lái",
+  "meaning": "连续不断、从容不迫地说出来（\"娓娓\"=说话不倦的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

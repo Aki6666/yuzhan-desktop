@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-ting-bu-yan-01",
+  "word": "百听不厌",
+  "pinyin": "bǎi tīng bú yàn",
+  "meaning": "听一百遍也不厌倦，形容乐曲、话语等动听、耐听。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

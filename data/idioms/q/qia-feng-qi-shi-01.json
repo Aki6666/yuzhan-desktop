@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qia-feng-qi-shi-01",
+  "word": "恰逢其时",
+  "pinyin": "qià féng qí shí",
+  "meaning": "正好碰到那个时机。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

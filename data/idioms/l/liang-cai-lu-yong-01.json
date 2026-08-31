@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "liang-cai-lu-yong-01",
+  "word": "量才录用",
+  "pinyin": "liàng cái lù yòng",
+  "meaning": "根据才能的大小来安排使用（\"量\"=衡量）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

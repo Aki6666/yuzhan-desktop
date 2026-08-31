@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xu-shi-xiang-sheng-01",
+  "word": "虚实相生",
+  "pinyin": "xū shí xiāng shēng",
+  "meaning": "虚与实互相生成、互相映衬，形容艺术表现手法等虚实结合、相得益彰。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

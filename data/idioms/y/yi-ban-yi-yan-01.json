@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ban-yi-yan-01",
+  "word": "一板一眼",
+  "pinyin": "yì bǎn yì yǎn",
+  "meaning": "比喻言语、行动有条理、合规矩，也比喻做事死板、不知变通。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

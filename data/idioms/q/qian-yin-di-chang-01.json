@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-yin-di-chang-01",
+  "word": "浅吟低唱",
+  "pinyin": "qiǎn yín dī chàng",
+  "meaning": "低声吟咏、歌唱，形容声音轻柔或悠闲吟唱。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

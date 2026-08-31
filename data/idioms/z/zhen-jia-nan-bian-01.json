@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhen-jia-nan-bian-01",
+  "word": "真假难辨",
+  "pinyin": "zhēn jiǎ nán biàn",
+  "meaning": "真假难以分辨。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

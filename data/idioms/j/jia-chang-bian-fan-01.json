@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jia-chang-bian-fan-01",
+  "word": "家常便饭",
+  "pinyin": "jiā cháng biàn fàn",
+  "meaning": "家中日常的饭食，比喻常见、平常的事情。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

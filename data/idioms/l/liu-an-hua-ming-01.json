@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "liu-an-hua-ming-01",
+  "word": "柳暗花明",
+  "pinyin": "liǔ àn huā míng",
+  "meaning": "形容柳树成荫、繁花似锦的景象，也比喻在困难中遇到转机。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

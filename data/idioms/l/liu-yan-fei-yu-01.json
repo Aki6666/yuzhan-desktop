@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "liu-yan-fei-yu-01",
+  "word": "流言蜚语",
+  "pinyin": "liú yán fēi yǔ",
+  "meaning": "没有根据的话，多指背后议论、诬蔑或挑拨的话。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

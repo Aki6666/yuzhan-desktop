@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jia-qing-jiu-shu-01",
+  "word": "驾轻就熟",
+  "pinyin": "jià qīng jiù shú",
+  "meaning": "驾着轻便的车走熟悉的路，比喻对事情熟悉，做起来容易（\"熟\"=熟悉）。",
+  "usage": "强调经验丰富、轻车熟路。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "处理这类纠纷他驾轻就熟。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

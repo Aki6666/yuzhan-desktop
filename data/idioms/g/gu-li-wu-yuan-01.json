@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gu-li-wu-yuan-01",
+  "word": "孤立无援",
+  "pinyin": "gū lì wú yuán",
+  "meaning": "单独行动，没有别人援助。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

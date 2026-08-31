@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-wang-bu-li-01",
+  "word": "无往不利",
+  "pinyin": "wú wǎng bú lì",
+  "meaning": "所到之处没有不顺利的，形容处处行得通、事事顺利。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

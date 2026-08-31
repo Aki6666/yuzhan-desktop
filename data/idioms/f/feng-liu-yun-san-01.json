@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-liu-yun-san-01",
+  "word": "风流云散",
+  "pinyin": "fēng liú yún sàn",
+  "meaning": "像风一样流动、像云一样散开，比喻原来聚在一起的人四下离散。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

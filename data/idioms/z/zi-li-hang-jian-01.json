@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-li-hang-jian-01",
+  "word": "字里行间",
+  "pinyin": "zì lǐ háng jiān",
+  "meaning": "字句中间，指文章所表达、流露的思想感情。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

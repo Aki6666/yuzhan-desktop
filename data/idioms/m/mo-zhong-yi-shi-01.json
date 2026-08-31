@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mo-zhong-yi-shi-01",
+  "word": "莫衷一是",
+  "pinyin": "mò zhōng yī shì",
+  "meaning": "意见分歧，不能得出一致的结论（\"衷\"=折中、断定）。",
+  "usage": "强调众说纷纭、无法统一。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "对于该方案的可行性，专家们莫衷一是。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 56
+}

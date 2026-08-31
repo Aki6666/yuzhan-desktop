@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bie-wu-er-zhi-01",
+  "word": "别无二致",
+  "pinyin": "bié wú èr zhì",
+  "meaning": "没有两样，完全一致（\"二致\"=两样）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

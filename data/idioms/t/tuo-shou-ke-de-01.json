@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tuo-shou-ke-de-01",
+  "word": "唾手可得",
+  "pinyin": "tuò shǒu kě dé",
+  "meaning": "往手上吐口唾沫就能拿到，形容极容易得到（\"唾手\"=往手上吐唾沫）。",
+  "usage": "强调易得；与\"易如反掌\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "冠军奖杯并非唾手可得。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 41
+}

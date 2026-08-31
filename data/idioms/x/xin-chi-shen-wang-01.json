@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-chi-shen-wang-01",
+  "word": "心驰神往",
+  "pinyin": "xīn chí shén wǎng",
+  "meaning": "心神奔向所向往的事物，形容一心向往（\"驰\"=奔跑）。",
+  "usage": "强调内心极其向往。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "文中描绘的江南水乡令人心驰神往。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

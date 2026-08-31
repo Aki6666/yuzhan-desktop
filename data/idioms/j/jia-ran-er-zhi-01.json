@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jia-ran-er-zhi-01",
+  "word": "戛然而止",
+  "pinyin": "jiá rán ér zhǐ",
+  "meaning": "形容声音突然终止（\"戛然\"=象声词）。",
+  "usage": "仅用于声音、乐曲等突然停止。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "琴声戛然而止，全场寂静。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dan-da-du-dou-01",
+  "word": "单打独斗",
+  "pinyin": "dān dǎ dú dòu",
+  "meaning": "单独一个人或单个势力独自作战，比喻缺乏协作。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

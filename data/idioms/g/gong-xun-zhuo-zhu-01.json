@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gong-xun-zhuo-zhu-01",
+  "word": "功勋卓著",
+  "pinyin": "gōng xūn zhuó zhù",
+  "meaning": "功劳很大、非常显著。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

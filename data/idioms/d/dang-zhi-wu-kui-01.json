@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dang-zhi-wu-kui-01",
+  "word": "当之无愧",
+  "pinyin": "dāng zhī wú kuì",
+  "meaning": "完全够条件承当，毫不惭愧。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bi-bu-ke-shao-01",
+  "word": "必不可少",
+  "pinyin": "bì bù kě shǎo",
+  "meaning": "绝对不可缺少。",
+  "usage": "强调必要性；不与\"非常\"等程度副词叠用。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "examples": [
+    {
+      "text": "阅读是语文学习中必不可少的一环。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 55
+}

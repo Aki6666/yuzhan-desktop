@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "que-yi-bu-ke-01",
+  "word": "缺一不可",
+  "pinyin": "quē yí bù kě",
+  "meaning": "少一样也不行。",
+  "usage": "强调各部分都必不可少。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "天时、地利、人和缺一不可。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

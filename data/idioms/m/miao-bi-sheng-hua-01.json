@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "miao-bi-sheng-hua-01",
+  "word": "妙笔生花",
+  "pinyin": "miào bǐ shēng huā",
+  "meaning": "比喻杰出的写作才能，也形容文章写得精彩。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

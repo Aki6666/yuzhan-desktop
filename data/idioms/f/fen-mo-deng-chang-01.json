@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-mo-deng-chang-01",
+  "word": "粉墨登场",
+  "pinyin": "fěn mò dēng chǎng",
+  "meaning": "化好妆登台演戏，今多指坏人乔装打扮后登上政治舞台（含讥讽）。",
+  "usage": "多含讥讽义，指坏人登台。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "政客们粉墨登场，上演闹剧。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

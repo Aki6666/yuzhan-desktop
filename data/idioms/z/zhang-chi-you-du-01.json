@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhang-chi-you-du-01",
+  "word": "张弛有度",
+  "pinyin": "zhāng chí yǒu dù",
+  "meaning": "松紧、进退有分寸，形容安排得当、有节制。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fei-ma-qing-qiu-01",
+  "word": "肥马轻裘",
+  "pinyin": "féi mǎ qīng qiú",
+  "meaning": "骑肥壮的马、穿轻暖的皮衣，形容生活豪华阔绰（\"裘\"=皮衣）。",
+  "usage": "多形容富贵奢华生活。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他过惯了肥马轻裘的生活，难耐清贫。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

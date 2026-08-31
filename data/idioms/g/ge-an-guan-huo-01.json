@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-an-guan-huo-01",
+  "word": "隔岸观火",
+  "pinyin": "gé àn guān huǒ",
+  "meaning": "站在对岸看火，比喻对别人的危难不加援救、在一旁看热闹。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

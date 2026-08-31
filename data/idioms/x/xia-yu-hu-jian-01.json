@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xia-yu-hu-jian-01",
+  "word": "瑕瑜互见",
+  "pinyin": "xiá yú hù jiàn",
+  "meaning": "比喻优点和缺点同时存在（\"瑕\"=玉上的斑点，\"瑜\"=玉的光彩）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

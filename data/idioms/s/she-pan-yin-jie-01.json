@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "she-pan-yin-jie-01",
+  "word": "蛇蟠蚓结",
+  "pinyin": "shé pán yǐn jié",
+  "meaning": "形容书法盘旋屈曲的样子（\"蟠\"=盘曲）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-shi-zhi-zhong-01",
+  "word": "自始至终",
+  "pinyin": "zì shǐ zhì zhōng",
+  "meaning": "从开始到结束，一贯如此。",
+  "usage": "强调全程不变。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "谈判自始至终在友好气氛中进行。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

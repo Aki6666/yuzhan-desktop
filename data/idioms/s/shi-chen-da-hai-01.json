@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-chen-da-hai-01",
+  "word": "石沉大海",
+  "pinyin": "shí chén dà hǎi",
+  "meaning": "石头沉到大海里，比喻始终没有消息或不见踪影。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bian-da-kuai-niu-01",
+  "word": "鞭打快牛",
+  "pinyin": "biān dǎ kuài niú",
+  "meaning": "越能干的牛越挨打，比喻对能干的人或单位要求过高。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

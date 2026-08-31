@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wen-wen-er-ya-01",
+  "word": "温文尔雅",
+  "pinyin": "wēn wén ěr yǎ",
+  "meaning": "态度温和、举止文雅。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

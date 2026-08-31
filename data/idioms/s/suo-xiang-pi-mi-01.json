@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "suo-xiang-pi-mi-01",
+  "word": "所向披靡",
+  "pinyin": "suǒ xiàng pī mǐ",
+  "meaning": "力量所到之处，一切障碍都被扫除，形容力量强大、无往不胜（\"披靡\"=草木倒伏）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-chui-bai-lian-01",
+  "word": "千锤百炼",
+  "pinyin": "qiān chuí bǎi liàn",
+  "meaning": "比喻经历多次艰苦斗争的锻炼和考验，也指对文章和作品进行多次精心的修改。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

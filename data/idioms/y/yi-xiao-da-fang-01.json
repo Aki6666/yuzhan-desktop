@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-xiao-da-fang-01",
+  "word": "贻笑大方",
+  "pinyin": "yí xiào dà fāng",
+  "meaning": "让内行的人笑话（\"大方\"=见识广博的人）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

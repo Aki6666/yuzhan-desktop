@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kai-tian-pi-di-01",
+  "word": "开天辟地",
+  "pinyin": "kāi tiān pì dì",
+  "meaning": "古代神话中说盘古氏开辟天地、开始有人类历史，后比喻前所未有、有史以来第一次。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

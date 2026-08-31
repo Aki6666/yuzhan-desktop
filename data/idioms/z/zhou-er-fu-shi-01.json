@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhou-er-fu-shi-01",
+  "word": "周而复始",
+  "pinyin": "zhōu ér fù shǐ",
+  "meaning": "一圈又一圈地轮转，形容不断循环（\"复始\"=重新开始）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

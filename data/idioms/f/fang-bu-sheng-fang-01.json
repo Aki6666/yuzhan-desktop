@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fang-bu-sheng-fang-01",
+  "word": "防不胜防",
+  "pinyin": "fáng bú shèng fáng",
+  "meaning": "要防备的太多，防备不过来。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

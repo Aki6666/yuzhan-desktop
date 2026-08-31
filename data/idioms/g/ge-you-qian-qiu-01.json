@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-you-qian-qiu-01",
+  "word": "各有千秋",
+  "pinyin": "gè yǒu qiān qiū",
+  "meaning": "各有各的存在价值，各有所长（\"千秋\"=流传久远）。",
+  "usage": "强调各有长处，难分高下。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两大流派各有千秋，难分伯仲。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 40
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "guang-ming-lei-luo-01",
+  "word": "光明磊落",
+  "pinyin": "guāng míng lěi luò",
+  "meaning": "形容胸怀坦白、正大光明（\"磊落\"=坦白）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

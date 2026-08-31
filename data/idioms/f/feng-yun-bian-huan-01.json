@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-yun-bian-huan-01",
+  "word": "风云变幻",
+  "pinyin": "fēng yún biàn huàn",
+  "meaning": "风云忽起忽灭、变化不定，比喻局势变化迅速、复杂。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "di-shui-bu-lou-01",
+  "word": "滴水不漏",
+  "pinyin": "dī shuǐ bú lòu",
+  "meaning": "一滴水也不漏，形容说话、办事十分周密、毫无漏洞。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

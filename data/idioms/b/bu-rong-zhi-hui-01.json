@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-rong-zhi-hui-01",
+  "word": "不容置喙",
+  "pinyin": "bù róng zhì huì",
+  "meaning": "不容许插嘴（\"置喙\"=插嘴）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

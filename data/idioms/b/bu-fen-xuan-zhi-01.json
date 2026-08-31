@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-fen-xuan-zhi-01",
+  "word": "不分轩轾",
+  "pinyin": "bù fēn xuān zhì",
+  "meaning": "不分高低轻重（\"轩轾\"=车前高后低与前低后高）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

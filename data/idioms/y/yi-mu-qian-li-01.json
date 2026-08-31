@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-mu-qian-li-01",
+  "word": "一目千里",
+  "pinyin": "yí mù qiān lǐ",
+  "meaning": "一眼能看千里远，形容视野开阔，也形容看得远、有远见。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

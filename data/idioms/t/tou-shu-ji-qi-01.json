@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tou-shu-ji-qi-01",
+  "word": "投鼠忌器",
+  "pinyin": "tóu shǔ jì qì",
+  "meaning": "想用东西打老鼠、又怕打坏旁边的器物，比喻想打击坏人而又有所顾忌。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

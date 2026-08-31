@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ming-yi-wen-01",
+  "word": "不名一文",
+  "pinyin": "bù míng yì wén",
+  "meaning": "一个钱也没有，形容极其贫穷（\"名\"=占有）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

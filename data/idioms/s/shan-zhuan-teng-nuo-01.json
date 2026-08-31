@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shan-zhuan-teng-nuo-01",
+  "word": "闪转腾挪",
+  "pinyin": "shǎn zhuǎn téng nuó",
+  "meaning": "形容灵活地移动躲避、施展身手。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

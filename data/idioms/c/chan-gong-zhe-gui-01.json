@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chan-gong-zhe-gui-01",
+  "word": "蟾宫折桂",
+  "pinyin": "chán gōng zhé guì",
+  "meaning": "科举时代比喻考中进士，现比喻在考试或竞赛中取得优异成绩（\"蟾宫\"=月宫）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

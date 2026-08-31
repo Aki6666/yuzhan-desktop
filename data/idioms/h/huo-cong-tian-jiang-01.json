@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "huo-cong-tian-jiang-01",
+  "word": "祸从天降",
+  "pinyin": "huò cóng tiān jiàng",
+  "meaning": "灾祸从天上降下来，形容突然遭到灾祸。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

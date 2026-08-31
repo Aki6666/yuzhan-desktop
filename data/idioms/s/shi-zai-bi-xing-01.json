@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-zai-bi-xing-01",
+  "word": "势在必行",
+  "pinyin": "shì zài bì xíng",
+  "meaning": "从形势看，非做不可。",
+  "usage": "强调客观形势要求必须推行。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "垃圾分类改革势在必行。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

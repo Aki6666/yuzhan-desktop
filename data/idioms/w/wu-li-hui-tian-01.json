@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-li-hui-tian-01",
+  "word": "无力回天",
+  "pinyin": "wú lì huí tiān",
+  "meaning": "比喻局势或病情严重，已无法挽救。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

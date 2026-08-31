@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-mu-yi-dai-01",
+  "word": "拭目以待",
+  "pinyin": "shì mù yǐ dài",
+  "meaning": "擦亮眼睛等待着，形容殷切期望或密切关注事态的发展（\"拭\"=擦）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

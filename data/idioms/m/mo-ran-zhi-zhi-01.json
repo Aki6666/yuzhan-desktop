@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mo-ran-zhi-zhi-01",
+  "word": "漠然置之",
+  "pinyin": "mò rán zhì zhī",
+  "meaning": "冷淡地把它放在一边，形容对人或事态度冷淡、不关心。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

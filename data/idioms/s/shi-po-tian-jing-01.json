@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-po-tian-jing-01",
+  "word": "石破天惊",
+  "pinyin": "shí pò tiān jīng",
+  "meaning": "原形容箜篌的声音忽而高亢、忽而低沉，后多比喻文章议论新奇惊人。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

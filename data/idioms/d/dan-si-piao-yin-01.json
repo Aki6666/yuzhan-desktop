@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dan-si-piao-yin-01",
+  "word": "箪食瓢饮",
+  "pinyin": "dān sì piáo yǐn",
+  "meaning": "一箪饭、一瓢水，形容生活清贫（\"箪\"=盛饭的竹器）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ji-bu-xu-01",
+  "word": "不疾不徐",
+  "pinyin": "bù jí bù xú",
+  "meaning": "不快不慢，从容自然（\"疾\"=快，\"徐\"=慢）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

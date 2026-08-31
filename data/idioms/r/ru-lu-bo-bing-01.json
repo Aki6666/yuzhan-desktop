@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-lu-bo-bing-01",
+  "word": "如履薄冰",
+  "pinyin": "rú lǚ bó bīng",
+  "meaning": "像走在薄冰上一样，比喻行事极为谨慎，存有戒心（\"履\"=踩）。",
+  "usage": "强调小心谨慎、战战兢兢。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "安全生产须如履薄冰，时刻警醒。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

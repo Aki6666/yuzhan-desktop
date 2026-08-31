@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shun-teng-mo-gua-01",
+  "word": "顺藤摸瓜",
+  "pinyin": "shùn téng mō guā",
+  "meaning": "顺着瓜藤去摸瓜，比喻沿着发现的线索追根究底。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

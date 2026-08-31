@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qu-jing-tong-you-01",
+  "word": "曲径通幽",
+  "pinyin": "qū jìng tōng yōu",
+  "meaning": "弯曲的小路通到幽深僻静的地方，形容景色雅致，也比喻经过曲折才能获得成功。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

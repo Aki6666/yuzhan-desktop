@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-shou-bing-xu-01",
+  "word": "兼收并蓄",
+  "pinyin": "jiān shōu bìng xù",
+  "meaning": "把内容不同、性质相反的东西都吸收进来（\"蓄\"=保存）。",
+  "usage": "多用于文化、思想等的包容吸纳。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "中华文化兼收并蓄，历久弥新。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jiu-bie-chong-feng-01",
+  "word": "久别重逢",
+  "pinyin": "jiǔ bié chóng féng",
+  "meaning": "长久分别后再次相逢。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

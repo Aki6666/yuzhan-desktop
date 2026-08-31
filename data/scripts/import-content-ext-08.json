@@ -1,0 +1,2006 @@
+[
+ {
+  "word": "安于现状",
+  "meaning": "满足于目前的状况，不求进步。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "暗度陈仓",
+  "meaning": "指正面迷惑敌人、从侧面偷袭的战术，后比喻暗中进行某种活动。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "拔得头筹",
+  "meaning": "取得第一名、夺得头名（\"头筹\"=第一名）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "学习事业"
+  ]
+ },
+ {
+  "word": "白驹过隙",
+  "meaning": "像白色骏马在缝隙前飞快越过，形容时间过得极快（\"白驹\"=白马）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "白手起家",
+  "meaning": "空手创立家业，形容原来没有基础或条件很差而靠艰苦奋斗创立事业。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "白纸黑字",
+  "meaning": "白纸上写着黑字，指有文字凭据、不容抵赖。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "暴殄天物",
+  "meaning": "任意糟蹋东西（\"殄\"=灭绝，\"天物\"=自然界的万物）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "笔底生花",
+  "meaning": "笔下生出的花朵，比喻写作能力高超、文章写得好。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "毕恭毕敬",
+  "meaning": "十分恭敬，形容态度极其恭敬有礼。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "闭目塞听",
+  "meaning": "闭上眼睛、堵住耳朵，形容对外界事物不闻不问。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "碧海青天",
+  "meaning": "形容天空碧蓝、大海无边，多形容境界高远或愁思难解。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "自然景物"
+  ]
+ },
+ {
+  "word": "避实击虚",
+  "meaning": "避开敌人主力、攻击其薄弱环节，比喻避开要害而谈次要问题。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "鞭打快牛",
+  "meaning": "越能干的牛越挨打，比喻对能干的人或单位要求过高。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "冰冻三尺",
+  "meaning": "冰冻了三尺不是一天的寒冷所致，比喻事物的形成有深厚根源（常与\"非一日之寒\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "波谲云诡",
+  "meaning": "形容事物像云彩和波浪那样变化莫测（\"谲\"\"诡\"=奇异多变）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "伯仲之间",
+  "meaning": "比喻事物不相上下、难分优劣（\"伯仲\"=兄弟排行的次序）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "不辨真伪",
+  "meaning": "分不清真假。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "不差毫厘",
+  "meaning": "形容丝毫不差（\"毫厘\"=极小的长度单位）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "不攻自破",
+  "meaning": "不用攻击就自行破灭，比喻论点站不住脚、经不起批驳。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "不欢而散",
+  "meaning": "很不愉快地分开。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "不可取代",
+  "meaning": "不能被取代、替代。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "不离不弃",
+  "meaning": "永远在身边、不分离不放弃。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "不屈不挠",
+  "meaning": "在困难或恶势力面前不屈服、不退缩（\"挠\"=弯曲）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "不痛不痒",
+  "meaning": "比喻议论或批评不触及要害、不起作用。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "不忘初心",
+  "meaning": "不忘记最初的心愿、信念。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "不为人知",
+  "meaning": "不被别人知道。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "不务正业",
+  "meaning": "不干正当的工作，形容不专心于本职。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "不依不饶",
+  "meaning": "纠缠个没完、不肯放过。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "不以为意",
+  "meaning": "不把它放在心上，表示对人或事抱轻视态度。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "超然物外",
+  "meaning": "超脱于世俗事物之外，形容置身事外、不关心世事。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "车载斗量",
+  "meaning": "用车装、用斗量，形容数量很多、不足为奇。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "承上启下",
+  "meaning": "承接上面的、引出下面的，多用于写文章或事物衔接。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "乘风破浪",
+  "meaning": "船只乘着风势破浪前进，比喻不畏艰险、勇往直前。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "抽丁拔楔",
+  "meaning": "拔出钉子、拔掉楔子，比喻解决疑难问题（\"丁\"=钉子，\"楔\"=楔子）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "穿凿附会",
+  "meaning": "生拉硬扯、牵强解释，把讲不通的道理硬要讲通（\"穿凿\"=牵强解释）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "唇枪舌剑",
+  "meaning": "嘴唇像枪、舌头像剑，形容辩论时言辞犀利、针锋相对。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "从善如流",
+  "meaning": "形容能很快地接受别人的好意见、像水从高处流到低处一样自然。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "寸草不生",
+  "meaning": "连小草都不生长，形容土地贫瘠或灾害严重。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "自然景物"
+  ]
+ },
+ {
+  "word": "寸积铢累",
+  "meaning": "一寸一寸地积累、一铢一铢地积聚，形容从微小处逐渐积累（\"铢\"=古代重量单位）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "打道回府",
+  "meaning": "旧时官员外出返回时先派人回去通知，现指返回原处。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "大醇小疵",
+  "meaning": "大体上是好的、只有小的缺点（\"醇\"=纯正，\"疵\"=毛病）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "大公无私",
+  "meaning": "一心为公、没有私心。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "大名鼎鼎",
+  "meaning": "名声很大（\"鼎鼎\"=盛大的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "大有人在",
+  "meaning": "形容某一种人为数很多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "胆战心惊",
+  "meaning": "形容非常害怕。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "荡然无存",
+  "meaning": "形容原有的东西全部失去、一点也不剩（\"荡然\"=空无所有的样子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "得意洋洋",
+  "meaning": "形容十分得意的样子。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "低人一等",
+  "meaning": "比别人低一个等级，多指社会地位低下。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "独来独往",
+  "meaning": "独身来往、不与人交往，也指独自行动、不受拘束。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "度德量力",
+  "meaning": "衡量自己的德行能否服人、估计自己的能力能否胜任（\"度\"\"量\"=衡量）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "对牛弹琴",
+  "meaning": "比喻对不懂道理的人讲道理、对外行说内行话，也讥讽说话不看对象。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "多管齐下",
+  "meaning": "比喻从多方面同时采取措施、一齐进行。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "多如牛毛",
+  "meaning": "多得像牛身上的毛，形容数量极多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "扼腕叹息",
+  "meaning": "握着手腕叹息，形容十分惋惜、感叹（\"扼\"=握住）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "分秒必争",
+  "meaning": "一分一秒也一定要争取，形容抓紧时间。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "风尘仆仆",
+  "meaning": "形容旅途奔波、劳累（\"仆仆\"=旅途劳累的样子）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "风和日丽",
+  "meaning": "微风和煦、阳光明丽，形容天气晴好。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "自然景物"
+  ]
+ },
+ {
+  "word": "风雨如晦",
+  "meaning": "风雨交加、天色昏暗如夜，比喻社会黑暗或局势动乱（\"晦\"=昏暗）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "锋芒毕露",
+  "meaning": "刀剑的锋芒全部显露出来，比喻人的才干、锐气完全显露，也形容人骄傲、爱表现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "肤寸而合",
+  "meaning": "形容云气密集合拢、将要下雨。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "自然景物"
+  ]
+ },
+ {
+  "word": "拂袖而归",
+  "meaning": "甩动衣袖、愤然而归，形容因不满而离去。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "改天换地",
+  "meaning": "改变天地，比喻彻底改变原来的面貌。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "竿头直上",
+  "meaning": "比喻学问、技艺等进步很快、直往上长。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "学习事业"
+  ]
+ },
+ {
+  "word": "感人至深",
+  "meaning": "感动人到了很深的程度。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "隔岸观火",
+  "meaning": "站在对岸看火，比喻对别人的危难不加援救、在一旁看热闹。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "隔三差五",
+  "meaning": "每隔不久、时常。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "各得其所",
+  "meaning": "原指各人都得到满足，后指每个人或事物都得到恰当的安置。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "各尽所能",
+  "meaning": "各人尽自己的能力去做（常与\"按劳分配\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "各司其职",
+  "meaning": "各自负责掌握自己的职责。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "各显神通",
+  "meaning": "各自显示自己的本领。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "学习事业"
+  ]
+ },
+ {
+  "word": "各自为战",
+  "meaning": "各自独立作战，比喻各自独立行事、互不协作。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "公而忘私",
+  "meaning": "为了公事而不考虑私事。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "功勋卓著",
+  "meaning": "功劳很大、非常显著。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "供过于求",
+  "meaning": "供应超过需求。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "狗尾续貂",
+  "meaning": "比喻拿不好的东西接到好的东西后面，显得好坏不相称（多指文学作品）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "瓜熟蒂落",
+  "meaning": "瓜熟了瓜蒂自然脱落，比喻条件成熟、事情自然成功。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "挂一漏万",
+  "meaning": "形容列举不全、遗漏很多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "毫不相干",
+  "meaning": "彼此完全不相干。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "毫发无损",
+  "meaning": "一根毫毛也没有损伤，形容没有任何损失。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "和睦相处",
+  "meaning": "彼此和好地相处。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "和盘托出",
+  "meaning": "把东西整个盘子端出来，比喻全部说出、毫无保留。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "后患无穷",
+  "meaning": "以后的祸患没有穷尽。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "胡说八道",
+  "meaning": "没有根据、不负责任地乱说一气。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "虎视眈眈",
+  "meaning": "像老虎要扑食那样注视着，形容贪婪而凶狠地盯着（\"眈眈\"=注视的样子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "化繁为简",
+  "meaning": "把复杂的事物简化。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "画蛇添足",
+  "meaning": "画蛇时给蛇添上脚，比喻做了多余的事、反而弄巧成拙。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "恍若隔世",
+  "meaning": "好像隔了一世，形容人事、景物变化很大。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "讳疾忌医",
+  "meaning": "隐瞒疾病、不愿医治，比喻怕人批评而掩饰自己的缺点错误。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "浑浑噩噩",
+  "meaning": "形容糊里糊涂、无知无识、不求上进。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "火眼金睛",
+  "meaning": "原指《西游记》中孙悟空能识别妖魔鬼怪的眼睛，后比喻眼光锐利、能识别真伪。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "货真价实",
+  "meaning": "货物是真正的、价格是实在的，形容实实在在、一点不假。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "祸从天降",
+  "meaning": "灾祸从天上降下来，形容突然遭到灾祸。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "积极进取",
+  "meaning": "努力向前、立志有所作为。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "积习难改",
+  "meaning": "长期形成的旧习惯很难改变。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "佶屈聱牙",
+  "meaning": "形容文章读起来不顺口、艰涩难懂（\"佶屈\"=曲折，\"聱牙\"=拗口）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "急公好义",
+  "meaning": "热心公益、爱打抱不平。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "记忆犹新",
+  "meaning": "过去的事至今还记得清清楚楚，就像新发生的一样。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "兼容并包",
+  "meaning": "把各个方面或各种事物都容纳进去。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "箭在弦上",
+  "meaning": "箭已搭在弦上、不得不发，比喻事情已经到了不得不做或话不得不说的时候。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "匠心独具",
+  "meaning": "具有独到的巧妙构思（\"匠心\"=巧妙的心思）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "诘屈聱牙",
+  "meaning": "形容文章艰涩、读起来不顺口（\"诘屈\"=曲折）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "金玉其外",
+  "meaning": "外表像金玉一样美好（常与\"败絮其中\"连用），比喻外表华美、内里败坏。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "尽心竭力",
+  "meaning": "费尽心思、用尽力量。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "精妙绝伦",
+  "meaning": "精致巧妙到了极点、没有可以相比的（\"绝伦\"=独一无二）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "居心叵测",
+  "meaning": "存心险恶、不可推测（\"叵\"=不可）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "拒之门外",
+  "meaning": "把人挡在门外，形容拒绝接纳。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "具体而微",
+  "meaning": "内容大体具备而形状或规模较小（\"微\"=小）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "望文生义"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "据理力争",
+  "meaning": "根据道理竭力争辩或争取。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "开诚布公",
+  "meaning": "坦白无私、诚恳相见，指以诚心待人、坦白地谈问题。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "开门见山",
+  "meaning": "比喻说话或写文章直截了当、一开始就切入正题。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "看家本领",
+  "meaning": "自己特别擅长的本领。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "学习事业"
+  ]
+ },
+ {
+  "word": "恪尽职守",
+  "meaning": "谨慎认真地做好本职工作（\"恪\"=谨慎恭敬）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "空洞无物",
+  "meaning": "（文章、言论等）内容空洞、没有东西。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "空手而归",
+  "meaning": "白白地去了、什么也没得到就回来了。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "空头支票",
+  "meaning": "无法兑现的支票，比喻不兑现的诺言。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "口碑载道",
+  "meaning": "群众口头上的称颂像在路上都能听到一样，形容到处都受到称赞。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "苦口婆心",
+  "meaning": "好心好意、不厌其烦地劝说或开导（\"苦口\"=反复恳切地说）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "狂妄自大",
+  "meaning": "极其放肆、自高自大。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "来龙去脉",
+  "meaning": "山形地势像龙的血脉一样连贯，后比喻人或事物的来历、前因后果。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "劳苦功高",
+  "meaning": "出了很多力、吃了很多苦、立下了大功。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "劳逸结合",
+  "meaning": "工作和休息相结合，指既紧张工作又适当休息。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "理直气壮",
+  "meaning": "理由充分、说话就有气势。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "力不能及",
+  "meaning": "力量达不到。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "力屈道穷",
+  "meaning": "力量已经穷尽、办法已经用尽（\"屈\"\"穷\"=尽）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "力透纸背",
+  "meaning": "形容书法遒劲有力、笔力几乎要透到纸的背面，也形容诗文深刻有力。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "力争上游",
+  "meaning": "努力争取先进、上游。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "例行公事",
+  "meaning": "按照惯例处理公事，多指形式主义地应付工作。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "联袂登场",
+  "meaning": "手拉着手一同登台演出，比喻一同参与（\"袂\"=衣袖）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "敛声屏气",
+  "meaning": "压低声音、屏住呼吸，形容十分小心、不敢出声（\"敛\"=收拢）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "两全其美",
+  "meaning": "做一件事顾全两个方面、使两方面都得到好处。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "量力而行",
+  "meaning": "按照自己力量的大小去做、不要勉强（\"量\"=估计）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "寥若晨星",
+  "meaning": "稀少得像早晨的星星，形容数量极少。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "临危不惧",
+  "meaning": "遇到危难的时候毫不害怕。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "令人瞩目",
+  "meaning": "使人关注、注目。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "碌碌无为",
+  "meaning": "平平庸庸、无所作为。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "率性而为",
+  "meaning": "顺着自己的本性、任由自己性子去做。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "落荒而逃",
+  "meaning": "离开大路、向荒野逃跑，形容战败后狼狈逃窜。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "茫然失措",
+  "meaning": "精神迷茫、不知怎么办才好。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "美美与共",
+  "meaning": "各种美的事物共同存在、相互交融、和谐统一。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "门庭冷落",
+  "meaning": "门口和庭院冷冷清清，形容宾客稀少、十分冷清。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "扪心自问",
+  "meaning": "摸着胸口自己问自己，指反省自己的言行（\"扪\"=按、摸）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "妙不可言",
+  "meaning": "美妙得不能用言语形容。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "明知故犯",
+  "meaning": "明明知道不对却故意去犯。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "难以估量",
+  "meaning": "难以估计、衡量。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "难以捉摸",
+  "meaning": "难以猜测、把握。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "拈轻怕重",
+  "meaning": "接受工作时挑拈轻松的、害怕繁重的。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "凝神屏气",
+  "meaning": "聚精会神、屏住呼吸，形容注意力高度集中。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "浓妆淡抹",
+  "meaning": "浓艳和淡雅的妆饰，形容女子打扮得体（常与\"总相宜\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "自然景物"
+  ]
+ },
+ {
+  "word": "刨根问底",
+  "meaning": "比喻追究底细、盘问根由。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "学习事业"
+  ]
+ },
+ {
+  "word": "怦然心动",
+  "meaning": "心怦怦地跳动，形容因受感动或吸引而心动。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "披坚执锐",
+  "meaning": "穿着坚固的铠甲、拿着锋利的武器，形容全副武装。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "匹夫之勇",
+  "meaning": "不用智谋、单凭个人蛮干的勇气（\"匹夫\"=普通人）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "平铺直叙",
+  "meaning": "说话或写文章不加修饰、直接简单地把意思叙述出来，形容没有起伏、平淡。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "旗鼓相当",
+  "meaning": "比喻双方力量不相上下（\"旗鼓\"=古时作战的旗帜和战鼓）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "弃若敝履",
+  "meaning": "像扔掉破鞋一样抛弃，形容毫不可惜地抛弃（\"履\"=鞋）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "恰逢其时",
+  "meaning": "正好碰到那个时机。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "千里迢迢",
+  "meaning": "形容路途遥远（\"迢迢\"=遥远）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ },
+ {
+  "word": "巧舌如簧",
+  "meaning": "舌头灵巧得像簧片一样，形容能说会道、花言巧语。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "言语表达"
+  ]
+ },
+ {
+  "word": "倾尽全力",
+  "meaning": "用尽全部力量。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "清新淡雅",
+  "meaning": "清新素雅、不浓艳，形容风格、色彩等清爽雅致。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "自然景物"
+  ]
+ },
+ {
+  "word": "情不自胜",
+  "meaning": "感情激动得不能控制（\"胜\"=能承受）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "曲突徙薪",
+  "meaning": "把烟囱改弯、把柴草搬走，比喻事先采取措施、防患于未然（\"突\"=烟囱，\"徙\"=搬移）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "望文生义"
+  ],
+  "tags": [
+   "处事方法"
+  ]
+ },
+ {
+  "word": "群雄逐鹿",
+  "meaning": "比喻各派势力争夺天下或竞争激烈（\"逐鹿\"=争夺政权）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "人声鼎沸",
+  "meaning": "人群的声音像锅里的水开了一样翻腾，形容人声嘈杂、非常喧闹。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "社会现象"
+  ]
+ },
+ {
+  "word": "日思夜想",
+  "meaning": "白天黑夜都在想念，形容非常思念。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "态度奉献"
+  ]
+ },
+ {
+  "word": "荣辱与共",
+  "meaning": "光荣与耻辱共同承担。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "人际交往"
+  ]
+ },
+ {
+  "word": "融为一体",
+  "meaning": "融合成一个整体。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+   "形近/音近混淆"
+  ],
+  "tags": [
+   "状态程度"
+  ]
+ }
+]

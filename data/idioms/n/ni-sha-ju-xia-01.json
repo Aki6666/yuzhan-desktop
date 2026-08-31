@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ni-sha-ju-xia-01",
+  "word": "泥沙俱下",
+  "pinyin": "ní shā jù xià",
+  "meaning": "泥土和沙子一起冲下来，比喻好坏不同的人或事物混杂在一起。",
+  "usage": "多与\"鱼龙混杂\"\"良莠不齐\"并列辨析。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "网络信息泥沙俱下，需要去伪存真。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

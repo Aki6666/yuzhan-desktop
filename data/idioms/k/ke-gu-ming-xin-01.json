@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ke-gu-ming-xin-01",
+  "word": "刻骨铭心",
+  "pinyin": "kè gǔ míng xīn",
+  "meaning": "铭刻在心灵深处，形容记忆深刻，永远不忘（\"铭\"=在器物上刻字）。",
+  "usage": "多用于恩情、教训、记忆等极深刻。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "那次教训让他刻骨铭心。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

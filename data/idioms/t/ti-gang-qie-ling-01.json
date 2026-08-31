@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ti-gang-qie-ling-01",
+  "word": "提纲挈领",
+  "pinyin": "tí gāng qiè lǐng",
+  "meaning": "抓住纲绳、提起衣领，比喻抓住要领、简明扼要（\"挈\"=提）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

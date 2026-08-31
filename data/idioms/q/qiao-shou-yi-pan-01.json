@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qiao-shou-yi-pan-01",
+  "word": "翘首以盼",
+  "pinyin": "qiáo shǒu yǐ pàn",
+  "meaning": "抬起头来盼望，形容殷切等待。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

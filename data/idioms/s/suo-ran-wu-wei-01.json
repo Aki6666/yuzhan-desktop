@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "suo-ran-wu-wei-01",
+  "word": "索然无味",
+  "pinyin": "suǒ rán wú wèi",
+  "meaning": "形容呆板枯燥、毫无趣味（\"索然\"=无兴味）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

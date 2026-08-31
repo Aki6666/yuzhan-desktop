@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mo-leng-liang-ke-01",
+  "word": "模棱两可",
+  "pinyin": "mó léng liǎng kě",
+  "meaning": "对问题不明确表态，这样也可以、那样也可以（\"模棱\"=含糊）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

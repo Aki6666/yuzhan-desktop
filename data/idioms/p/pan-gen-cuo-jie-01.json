@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "pan-gen-cuo-jie-01",
+  "word": "盘根错节",
+  "pinyin": "pán gēn cuò jié",
+  "meaning": "树根盘绕、枝节交错，比喻事情复杂、难以处理，也比喻势力根深蒂固。",
+  "usage": "多用于问题、关系等错综复杂。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "利益关系盘根错节，改革难度极大。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

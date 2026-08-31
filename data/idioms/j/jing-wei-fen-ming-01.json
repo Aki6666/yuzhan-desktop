@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-wei-fen-ming-01",
+  "word": "泾渭分明",
+  "pinyin": "jīng wèi fēn míng",
+  "meaning": "泾河水清、渭河水浊，两水交汇清浊不混，比喻界限清楚、是非分明。",
+  "usage": "强调界限清晰、互不混淆。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "公私分明，账目泾渭分明。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 42
+}

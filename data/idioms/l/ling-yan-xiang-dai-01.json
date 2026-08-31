@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ling-yan-xiang-dai-01",
+  "word": "另眼相待",
+  "pinyin": "lìng yǎn xiāng dài",
+  "meaning": "用另一种眼光看待，多指看重或优待。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

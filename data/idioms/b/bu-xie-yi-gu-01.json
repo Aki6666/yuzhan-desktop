@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-xie-yi-gu-01",
+  "word": "不屑一顾",
+  "pinyin": "bú xiè yí gù",
+  "meaning": "认为不值得一看，形容极端轻视（\"屑\"=值得）。",
+  "usage": "强调轻视、看不上。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他对这种投机取巧的做法不屑一顾。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

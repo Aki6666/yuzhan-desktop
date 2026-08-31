@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-ding-zhi-tian-01",
+  "word": "未定之天",
+  "pinyin": "wèi dìng zhī tiān",
+  "meaning": "事情还没有定局。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tu-fa-qi-xiang-01",
+  "word": "突发奇想",
+  "pinyin": "tū fā qí xiǎng",
+  "meaning": "突然产生一种奇特的想法（\"奇想\"=奇特的想法）。",
+  "usage": "强调想法来得突然、出人意料。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他突发奇想，把旧集装箱改造成咖啡馆。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

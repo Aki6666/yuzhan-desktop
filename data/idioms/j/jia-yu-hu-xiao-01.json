@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jia-yu-hu-xiao-01",
+  "word": "家喻户晓",
+  "pinyin": "jiā yù hù xiǎo",
+  "meaning": "家家户户都知道，形容人人皆知。",
+  "usage": "与\"妇孺皆知\"\"众所周知\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这个传说在当地家喻户晓。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

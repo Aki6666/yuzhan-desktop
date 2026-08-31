@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ying-si-wu-bi-01",
+  "word": "营私舞弊",
+  "pinyin": "yíng sī wǔ bì",
+  "meaning": "为自己谋求私利而耍弄手段、做违法乱纪的事。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

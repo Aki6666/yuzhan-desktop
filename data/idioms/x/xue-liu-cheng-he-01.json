@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xue-liu-cheng-he-01",
+  "word": "血流成河",
+  "pinyin": "xuè liú chéng hé",
+  "meaning": "形容被杀的人极多。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

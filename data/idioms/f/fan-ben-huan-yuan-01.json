@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fan-ben-huan-yuan-01",
+  "word": "返本还原",
+  "pinyin": "fǎn běn huán yuán",
+  "meaning": "返回根本、恢复原样，多指回到最初的状态。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

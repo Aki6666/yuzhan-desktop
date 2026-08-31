@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-rang-zhi-bie-01",
+  "word": "天壤之别",
+  "pinyin": "tiān rǎng zhī bié",
+  "meaning": "形容差别极大（\"壤\"=地）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ying-jie-bu-xia-01",
+  "word": "应接不暇",
+  "pinyin": "yìng jiē bù xiá",
+  "meaning": "原形容景物繁多，来不及观赏，现多形容来人或事情太多，应付不过来（\"暇\"=空闲）。",
+  "usage": "强调事物多、应付不及。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "顾客盈门，店员应接不暇。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

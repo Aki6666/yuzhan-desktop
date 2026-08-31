@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-bu-shi-shou-01",
+  "word": "爱不释手",
+  "pinyin": "ài bú shì shǒu",
+  "meaning": "喜爱得舍不得放手。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

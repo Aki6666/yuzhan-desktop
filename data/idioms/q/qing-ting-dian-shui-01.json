@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qing-ting-dian-shui-01",
+  "word": "蜻蜓点水",
+  "pinyin": "qīng tíng diǎn shuǐ",
+  "meaning": "蜻蜓触水即起，比喻做事肤浅、不深入。",
+  "usage": "与\"浅尝辄止\"\"浮光掠影\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "调研若蜻蜓点水，就发现不了真问题。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 67
+}

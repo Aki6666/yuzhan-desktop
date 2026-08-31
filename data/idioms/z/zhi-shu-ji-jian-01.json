@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-shu-ji-jian-01",
+  "word": "直抒己见",
+  "pinyin": "zhí shū jǐ jiàn",
+  "meaning": "坦率地说出自己的意见（\"抒\"=表达）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

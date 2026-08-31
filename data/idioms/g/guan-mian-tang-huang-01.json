@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "guan-mian-tang-huang-01",
+  "word": "冠冕堂皇",
+  "pinyin": "guān miǎn táng huáng",
+  "meaning": "形容表面上庄严体面、实际上虚伪（\"冠冕\"=古代帝王礼帽）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

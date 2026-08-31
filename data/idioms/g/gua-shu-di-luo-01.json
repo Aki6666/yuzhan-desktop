@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gua-shu-di-luo-01",
+  "word": "瓜熟蒂落",
+  "pinyin": "guā shú dì luò",
+  "meaning": "瓜熟了瓜蒂自然脱落，比喻条件成熟、事情自然成功。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

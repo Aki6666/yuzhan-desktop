@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-ruo-zhen-bao-01",
+  "word": "视若珍宝",
+  "pinyin": "shì ruò zhēn bǎo",
+  "meaning": "看得像珍宝一样珍贵，形容非常珍视。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

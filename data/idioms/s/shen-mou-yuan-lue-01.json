@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-mou-yuan-lue-01",
+  "word": "深谋远略",
+  "pinyin": "shēn móu yuǎn lüè",
+  "meaning": "深远的谋划、长远的策略。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

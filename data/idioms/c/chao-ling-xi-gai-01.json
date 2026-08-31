@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chao-ling-xi-gai-01",
+  "word": "朝令夕改",
+  "pinyin": "cháo lìng xī gǎi",
+  "meaning": "早晨下的命令、晚上就改变，形容政令多变、使人无所适从。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

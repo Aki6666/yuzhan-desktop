@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xia-bu-yan-yu-01",
+  "word": "瑕不掩瑜",
+  "pinyin": "xiá bù yǎn yú",
+  "meaning": "玉上的斑点掩盖不了玉的光彩，比喻缺点掩盖不了优点（\"瑕\"=斑点，\"瑜\"=光彩）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

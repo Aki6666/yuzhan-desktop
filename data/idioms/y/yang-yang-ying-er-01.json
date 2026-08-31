@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yang-yang-ying-er-01",
+  "word": "洋洋盈耳",
+  "pinyin": "yáng yáng yíng ěr",
+  "meaning": "形容讲话、读书的声音悦耳动听（\"盈\"=充满）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

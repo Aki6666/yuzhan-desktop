@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-li-bu-qi-01",
+  "word": "不离不弃",
+  "pinyin": "bù lí bú qì",
+  "meaning": "永远在身边、不分离不放弃。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

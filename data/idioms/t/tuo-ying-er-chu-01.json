@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tuo-ying-er-chu-01",
+  "word": "脱颖而出",
+  "pinyin": "tuō yǐng ér chū",
+  "meaning": "锥尖透过布囊显露出来，比喻才能全部显露出来。",
+  "usage": "多用于人才在竞争中显露头角。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "她在本次大赛中脱颖而出，一举夺魁。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 89
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hun-ran-bu-jue-01",
+  "word": "浑然不觉",
+  "pinyin": "hún rán bù jué",
+  "meaning": "完全没有察觉。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

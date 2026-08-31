@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-wu-pang-wu-01",
+  "word": "心无旁骛",
+  "pinyin": "xīn wú páng wù",
+  "meaning": "心里没有别的追求，形容心思集中、专心致志（\"骛\"=追求）。",
+  "usage": "\"骛\"读wù，非\"务\"；强调专心。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "科研人员心无旁骛，潜心攻关。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 42
+}

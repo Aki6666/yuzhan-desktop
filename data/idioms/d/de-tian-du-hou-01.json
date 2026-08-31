@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "de-tian-du-hou-01",
+  "word": "得天独厚",
+  "pinyin": "dé tiān dú hòu",
+  "meaning": "具有特殊优越的条件，指所处环境或具备的条件特别好（\"厚\"=优越）。",
+  "usage": "多用于地理、资源、条件等优越。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这里依山傍海，发展旅游得天独厚。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

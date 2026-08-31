@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cai-qing-ren-zhong-01",
+  "word": "才轻任重",
+  "pinyin": "cái qīng rèn zhòng",
+  "meaning": "才能小却担子重，形容力不胜任。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

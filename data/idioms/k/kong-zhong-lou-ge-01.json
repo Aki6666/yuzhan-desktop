@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kong-zhong-lou-ge-01",
+  "word": "空中楼阁",
+  "pinyin": "kōng zhōng lóu gé",
+  "meaning": "悬在半空中的楼阁，比喻虚幻的事物或脱离实际的空想。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "e-yu-feng-cheng-01",
+  "word": "阿谀奉承",
+  "pinyin": "ē yú fèng chéng",
+  "meaning": "迎合别人的意思、说好听的话来讨好人（\"阿\"=迎合，\"谀\"=谄媚）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

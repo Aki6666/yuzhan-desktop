@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-guai-bu-guai-01",
+  "word": "见怪不怪",
+  "pinyin": "jiàn guài bu guài",
+  "meaning": "看到奇怪的现象也不大惊小怪，形容镇定自若（常与\"其怪自败\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

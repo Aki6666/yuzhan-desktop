@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "nan-neng-ke-gui-01",
+  "word": "难能可贵",
+  "pinyin": "nán néng kě guì",
+  "meaning": "不容易做到的事居然能做到，非常可贵。",
+  "usage": "强调品质、行为等难得。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他坚守偏远山区数十载，难能可贵。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

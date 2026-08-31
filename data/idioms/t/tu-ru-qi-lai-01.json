@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tu-ru-qi-lai-01",
+  "word": "突如其来",
+  "pinyin": "tū rú qí lái",
+  "meaning": "突然到来、突然发生（\"突如\"=突然）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-gong-er-fan-01",
+  "word": "无功而返",
+  "pinyin": "wú gōng ér fǎn",
+  "meaning": "没有任何成绩或功劳而返回，形容白跑一趟。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

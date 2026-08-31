@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "deng-feng-zao-ji-01",
+  "word": "登峰造极",
+  "pinyin": "dēng fēng zào jí",
+  "meaning": "登上山峰到达顶点，比喻达到最高境界、最高水平。",
+  "usage": "多用于技艺、学问、成就等达到顶峰。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他的书法技艺已登峰造极。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

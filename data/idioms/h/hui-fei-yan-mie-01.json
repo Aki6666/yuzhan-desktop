@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hui-fei-yan-mie-01",
+  "word": "灰飞烟灭",
+  "pinyin": "huī fēi yān miè",
+  "meaning": "像灰、烟一样消失干净，比喻人或事物迅速消失。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

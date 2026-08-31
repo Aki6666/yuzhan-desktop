@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nan-yi-qi-ji-01",
+  "word": "难以企及",
+  "pinyin": "nán yǐ qǐ jí",
+  "meaning": "难以达到、难以赶上（\"企及\"=盼望达到）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

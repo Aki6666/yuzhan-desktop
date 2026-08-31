@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-xin-suo-yu-01",
+  "word": "随心所欲",
+  "pinyin": "suí xīn suǒ yù",
+  "meaning": "完全按照自己的意愿去行事（\"欲\"=想要）。",
+  "usage": "中性或贬义（任性妄为），依语境。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "公共空间不是可以随心所欲的私人领地。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

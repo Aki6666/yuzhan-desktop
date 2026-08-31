@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zou-huo-ru-mo-01",
+  "word": "走火入魔",
+  "pinyin": "zǒu huǒ rù mó",
+  "meaning": "原指练气功出了偏差、神志失常，比喻因迷恋某种事物而神情恍惚、失去理智。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-yuan-yi-chang-01",
+  "word": "如愿以偿",
+  "pinyin": "rú yuàn yǐ cháng",
+  "meaning": "按照心愿得到了满足（\"偿\"=满足）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-mu-liao-ran-01",
+  "word": "一目了然",
+  "pinyin": "yí mù liǎo rán",
+  "meaning": "一眼就能看清楚。",
+  "usage": "强调清晰易见；与\"了如指掌\"（了解透彻）区别。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这张图表把收支情况展示得一目了然。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 46
+}

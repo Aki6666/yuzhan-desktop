@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-hu-bai-ying-01",
+  "word": "一呼百应",
+  "pinyin": "yì hū bǎi yìng",
+  "meaning": "一声呼喊、百人响应，形容号召力大、响应的人多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-xiang-tian-kai-01",
+  "word": "异想天开",
+  "pinyin": "yì xiǎng tiān kāi",
+  "meaning": "形容想法非常离奇，不切实际；也指思想解放、有独特见解（中性）。",
+  "usage": "贬义（不切实际）或褒义（大胆想象），依语境。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "科技创新需要一些异想天开的灵感。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

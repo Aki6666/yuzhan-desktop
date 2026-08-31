@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-zhong-nan-fan-01",
+  "word": "积重难返",
+  "pinyin": "jī zhòng nán fǎn",
+  "meaning": "长期形成的不良风气、习惯等积习深重，难以改变（\"重\"=深重）。",
+  "usage": "专指积弊深重、难以扭转，多用于制度、风气等。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "官僚主义积重难返，必须下大力气整治。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 65
+}

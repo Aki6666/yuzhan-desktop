@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-bu-liang-li-01",
+  "word": "势不两立",
+  "pinyin": "shì bù liǎng lì",
+  "meaning": "敌对双方矛盾尖锐，不能同时存在。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

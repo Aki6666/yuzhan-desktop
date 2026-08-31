@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-yong-feng-ya-01",
+  "word": "附庸风雅",
+  "pinyin": "fù yōng fēng yǎ",
+  "meaning": "为了装点门面而结交名士、从事有关文化的活动（\"附庸\"=依附）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

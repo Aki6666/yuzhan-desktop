@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "luo-huang-er-tao-01",
+  "word": "落荒而逃",
+  "pinyin": "luò huāng ér táo",
+  "meaning": "离开大路、向荒野逃跑，形容战败后狼狈逃窜。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

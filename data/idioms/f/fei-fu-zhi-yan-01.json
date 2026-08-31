@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fei-fu-zhi-yan-01",
+  "word": "肺腑之言",
+  "pinyin": "fèi fǔ zhī yán",
+  "meaning": "发自内心深处的真诚话（\"肺腑\"=内心）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

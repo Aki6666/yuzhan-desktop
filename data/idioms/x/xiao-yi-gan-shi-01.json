@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiao-yi-gan-shi-01",
+  "word": "宵衣旰食",
+  "pinyin": "xiāo yī gàn shí",
+  "meaning": "天不亮就穿衣起床、天晚了才吃饭，形容勤于政务（\"宵\"=夜间，\"旰\"=天晚）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-zhong-er-lai-01",
+  "word": "接踵而来",
+  "pinyin": "jiē zhǒng ér lái",
+  "meaning": "一个接一个地到来，形容接连不断（\"踵\"=脚后跟）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

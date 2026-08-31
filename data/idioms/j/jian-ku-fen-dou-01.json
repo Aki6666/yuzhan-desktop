@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-ku-fen-dou-01",
+  "word": "艰苦奋斗",
+  "pinyin": "jiān kǔ fèn dòu",
+  "meaning": "不怕艰难困苦、坚持英勇斗争。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

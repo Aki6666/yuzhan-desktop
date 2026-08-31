@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jiu-niu-yi-mao-01",
+  "word": "九牛一毛",
+  "pinyin": "jiǔ niú yì máo",
+  "meaning": "九头牛身上的一根毛，比喻极大数量中的极微小的数量。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

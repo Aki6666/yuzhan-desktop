@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-tu-jing-ji-01",
+  "word": "仕途经济",
+  "pinyin": "shì tú jīng jì",
+  "meaning": "指做官和为官之道（\"经济\"=经世济民）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

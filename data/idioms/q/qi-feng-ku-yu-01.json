@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-feng-ku-yu-01",
+  "word": "凄风苦雨",
+  "pinyin": "qī fēng kǔ yǔ",
+  "meaning": "凄惨的寒风、连绵的苦雨，形容天气恶劣，也比喻处境悲惨。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

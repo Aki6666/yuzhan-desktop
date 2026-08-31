@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lian-lei-bi-wu-01",
+  "word": "连类比物",
+  "pinyin": "lián lèi bǐ wù",
+  "meaning": "连缀同类事物、加以比较（\"连\"\"比\"=连接比较，\"类\"\"物\"=同类事物）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

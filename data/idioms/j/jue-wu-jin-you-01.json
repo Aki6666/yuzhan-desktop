@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jue-wu-jin-you-01",
+  "word": "绝无仅有",
+  "pinyin": "jué wú jǐn yǒu",
+  "meaning": "极其少有，独一无二。",
+  "usage": "强调极其罕见；注意与\"绝无\"\"绝无此事\"区分。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "这一发现堪称绝无仅有。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 50
+}

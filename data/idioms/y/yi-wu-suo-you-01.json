@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-wu-suo-you-01",
+  "word": "一无所有",
+  "pinyin": "yì wú suǒ yǒu",
+  "meaning": "什么都没有，形容极其贫穷或失去一切。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

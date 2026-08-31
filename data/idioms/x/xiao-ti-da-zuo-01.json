@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiao-ti-da-zuo-01",
+  "word": "小题大做",
+  "pinyin": "xiǎo tí dà zuò",
+  "meaning": "把小事情当作大事情来办，比喻把小事渲染扩大。",
+  "usage": "批评过度渲染、夸大其词。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "一点误会而已，不必小题大做。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

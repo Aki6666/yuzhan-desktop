@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ying-you-jin-you-01",
+  "word": "应有尽有",
+  "pinyin": "yīng yǒu jìn yǒu",
+  "meaning": "应该有的全都有了，形容很齐全（\"尽\"=全）。",
+  "usage": "强调物品齐全。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "超市里生活用品应有尽有。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

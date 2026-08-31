@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-chu-bu-zai-01",
+  "word": "无处不在",
+  "pinyin": "wú chù bú zài",
+  "meaning": "到处都存在，没有地方没有。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

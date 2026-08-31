@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-ye-fei-shi-01",
+  "word": "因噎废食",
+  "pinyin": "yīn yē fèi shí",
+  "meaning": "因为吃饭噎住过就不再吃饭，比喻因为怕出问题而索性不干。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

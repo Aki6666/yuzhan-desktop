@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-chi-ru-zui-01",
+  "word": "如痴如醉",
+  "pinyin": "rú chī rú zuì",
+  "meaning": "形容神态失常、失去自制，多形容专注入迷。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

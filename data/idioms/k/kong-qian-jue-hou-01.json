@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kong-qian-jue-hou-01",
+  "word": "空前绝后",
+  "pinyin": "kōng qián jué hòu",
+  "meaning": "以前没有过、以后也不会有，形容独一无二、极其突出。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "kuai-zhi-ren-kou-01",
+  "word": "脍炙人口",
+  "pinyin": "kuài zhì rén kǒu",
+  "meaning": "美味的食物人人爱吃，比喻好的诗文或事物人人称赞传诵（\"脍\"=细切的肉，\"炙\"=烤肉）。",
+  "usage": "多用于诗文、作品等广为流传、广受好评。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他的诗作脍炙人口，传诵至今。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

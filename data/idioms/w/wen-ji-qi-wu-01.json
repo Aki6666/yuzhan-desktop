@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wen-ji-qi-wu-01",
+  "word": "闻鸡起舞",
+  "pinyin": "wén jī qǐ wǔ",
+  "meaning": "听到鸡叫就起来舞剑，形容有志之士及时奋发、刻苦自励。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

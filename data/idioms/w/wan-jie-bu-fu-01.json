@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-jie-bu-fu-01",
+  "word": "万劫不复",
+  "pinyin": "wàn jié bú fù",
+  "meaning": "永远不能恢复（\"劫\"=佛教指世界毁灭的灾难）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

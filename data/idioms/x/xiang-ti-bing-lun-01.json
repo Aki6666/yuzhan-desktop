@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-ti-bing-lun-01",
+  "word": "相提并论",
+  "pinyin": "xiāng tí bìng lùn",
+  "meaning": "把不同的人或事物放在一起谈论或同等看待（多用于否定句）。",
+  "usage": "多用于否定语境\"不可相提并论\"，对象应存在明显差异。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "业余爱好与专业造诣不可相提并论。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 82
+}

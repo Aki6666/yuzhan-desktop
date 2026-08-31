@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "you-ju-ke-cha-01",
+  "word": "有据可查",
+  "pinyin": "yǒu jù kě chá",
+  "meaning": "有根据可以查考。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-ran-cheng-feng-01",
+  "word": "蔚然成风",
+  "pinyin": "wèi rán chéng fēng",
+  "meaning": "形容一种事物逐渐发展、盛行，形成风气（\"蔚然\"=茂盛的样子）。",
+  "usage": "多用于良好风气、风尚的形成。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "垃圾分类在社区已蔚然成风。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

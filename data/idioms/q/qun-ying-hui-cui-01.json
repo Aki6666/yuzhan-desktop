@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qun-ying-hui-cui-01",
+  "word": "群英荟萃",
+  "pinyin": "qún yīng huì cuì",
+  "meaning": "许多有才能的人聚集在一起（\"荟萃\"=聚集）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

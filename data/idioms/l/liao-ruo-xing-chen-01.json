@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "liao-ruo-xing-chen-01",
+  "word": "寥若星辰",
+  "pinyin": "liáo ruò xīng chén",
+  "meaning": "稀少得像早晨的星星，形容数量极少。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

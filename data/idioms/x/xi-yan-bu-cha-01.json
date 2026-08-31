@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-yan-bu-cha-01",
+  "word": "习焉不察",
+  "pinyin": "xí yān bù chá",
+  "meaning": "习惯了就觉察不到其中的问题（\"焉\"=语助词）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiong-yong-peng-pai-01",
+  "word": "汹涌澎湃",
+  "pinyin": "xiōng yǒng péng pài",
+  "meaning": "水势奔腾、波浪猛烈，比喻声势浩大、不可阻挡，也形容心情激荡。",
+  "usage": "多用于波涛、情感、形势等汹涌。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "改革浪潮汹涌澎湃。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

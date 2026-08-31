@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hao-shou-qiong-jing-01",
+  "word": "皓首穷经",
+  "pinyin": "hào shǒu qióng jīng",
+  "meaning": "头发白了还在钻研经籍，形容勤学苦读到老。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

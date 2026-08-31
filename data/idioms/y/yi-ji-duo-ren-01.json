@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ji-duo-ren-01",
+  "word": "以己度人",
+  "pinyin": "yǐ jǐ duó rén",
+  "meaning": "拿自己的心思去揣度别人（\"度\"=揣度）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

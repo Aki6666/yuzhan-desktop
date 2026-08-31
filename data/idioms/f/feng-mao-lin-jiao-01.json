@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-mao-lin-jiao-01",
+  "word": "凤毛麟角",
+  "pinyin": "fèng máo lín jiǎo",
+  "meaning": "凤凰的毛、麒麟的角，比喻稀少而珍贵的人或事物。",
+  "usage": "对象应为稀少珍贵的人或物，不可用于一般\"少\"。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "能精通多种语言的人才凤毛麟角。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 57
+}

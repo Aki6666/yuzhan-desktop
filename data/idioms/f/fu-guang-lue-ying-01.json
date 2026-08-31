@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-guang-lue-ying-01",
+  "word": "浮光掠影",
+  "pinyin": "fú guāng lüè yǐng",
+  "meaning": "水面的光和一闪而过的影子，比喻观察不细致、印象不深。",
+  "usage": "与\"走马观花\"近义，都指不深入；常并列出现于选项。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "读书切忌浮光掠影，要深入思考。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 93
+}

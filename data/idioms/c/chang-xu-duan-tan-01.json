@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chang-xu-duan-tan-01",
+  "word": "长吁短叹",
+  "pinyin": "cháng xū duǎn tàn",
+  "meaning": "长一声、短一声地叹气，形容发愁、叹息。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

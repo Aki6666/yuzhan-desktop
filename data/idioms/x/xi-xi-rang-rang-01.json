@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-xi-rang-rang-01",
+  "word": "熙熙攘攘",
+  "pinyin": "xī xī rǎng rǎng",
+  "meaning": "形容人来人往，非常热闹拥挤。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-cha-di-bie-01",
+  "word": "天差地别",
+  "pinyin": "tiān chà dì bié",
+  "meaning": "形容差别极大。",
+  "usage": "强调差异悬殊；与\"天壤之别\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "城乡教育资源的差距天差地别。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

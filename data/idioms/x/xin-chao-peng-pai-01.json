@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-chao-peng-pai-01",
+  "word": "心潮澎湃",
+  "pinyin": "xīn cháo péng pài",
+  "meaning": "心情像波涛冲击一样起伏，形容心情十分激动、不能平静（\"澎湃\"=波涛冲击）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

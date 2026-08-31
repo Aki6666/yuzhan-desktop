@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-xiao-yun-san-01",
+  "word": "烟消云散",
+  "pinyin": "yān xiāo yún sàn",
+  "meaning": "像烟云消散一样，比喻事物消失得无影无踪。",
+  "usage": "多用于疑虑、误会、烦恼等的消除。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "经他耐心解释，误会烟消云散。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

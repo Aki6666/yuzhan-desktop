@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shou-xiao-shen-wei-01",
+  "word": "收效甚微",
+  "pinyin": "shōu xiào shèn wēi",
+  "meaning": "收到的效果很小。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

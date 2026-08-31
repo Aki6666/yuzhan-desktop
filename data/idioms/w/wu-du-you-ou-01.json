@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-du-you-ou-01",
+  "word": "无独有偶",
+  "pinyin": "wú dú yǒu ǒu",
+  "meaning": "虽然罕见、但不只一个、还有可以配对的，多含贬义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

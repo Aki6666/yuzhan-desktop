@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ling-ji-yi-dong-01",
+  "word": "灵机一动",
+  "pinyin": "líng jī yí dòng",
+  "meaning": "形容突然想出办法来（\"灵机\"=灵巧的心机）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

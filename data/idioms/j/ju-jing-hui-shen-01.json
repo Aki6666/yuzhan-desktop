@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-jing-hui-shen-01",
+  "word": "聚精会神",
+  "pinyin": "jù jīng huì shén",
+  "meaning": "集中精神，注意力高度集中。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

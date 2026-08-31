@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-ru-bi-xi-01",
+  "word": "弃如敝屣",
+  "pinyin": "qì rú bì xǐ",
+  "meaning": "像扔掉破鞋一样抛弃，形容毫不可惜地抛弃（\"敝屣\"=破鞋）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

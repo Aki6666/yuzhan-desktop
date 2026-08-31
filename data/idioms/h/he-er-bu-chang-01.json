@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "he-er-bu-chang-01",
+  "word": "和而不唱",
+  "pinyin": "hé ér bú chàng",
+  "meaning": "赞同别人的意见但不随声附和，指有自己的主张。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-chen-bu-ran-01",
+  "word": "一尘不染",
+  "pinyin": "yì chén bù rǎn",
+  "meaning": "佛教指色、声、香、味、触、法六尘，形容非常清洁，也形容人品纯洁、丝毫不沾坏习气。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

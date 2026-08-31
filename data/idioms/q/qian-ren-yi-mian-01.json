@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-ren-yi-mian-01",
+  "word": "千人一面",
+  "pinyin": "qiān rén yí miàn",
+  "meaning": "一千个人一个样子，比喻文章或描写公式化、没有变化。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

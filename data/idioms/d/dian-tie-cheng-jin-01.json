@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dian-tie-cheng-jin-01",
+  "word": "点铁成金",
+  "pinyin": "diǎn tiě chéng jīn",
+  "meaning": "用手一点、铁就变成金子，比喻把不好的文字改好。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

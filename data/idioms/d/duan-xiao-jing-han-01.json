@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "duan-xiao-jing-han-01",
+  "word": "短小精悍",
+  "pinyin": "duǎn xiǎo jīng hàn",
+  "meaning": "形容人身材短小而精明强干，也形容文章、戏剧等篇幅短而有力。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

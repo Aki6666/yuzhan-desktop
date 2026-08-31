@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ke-bu-rong-huan-01",
+  "word": "刻不容缓",
+  "pinyin": "kè bù róng huǎn",
+  "meaning": "片刻也不能拖延，形容形势紧迫。",
+  "usage": "强调紧迫性极强；与\"迫在眉睫\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "保护古村落已刻不容缓。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 45
+}

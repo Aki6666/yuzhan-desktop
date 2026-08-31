@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-qu-suo-xu-01",
+  "word": "各取所需",
+  "pinyin": "gè qǔ suǒ xū",
+  "meaning": "各自选取自己所需要的。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

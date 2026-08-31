@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shui-zhong-lao-yue-01",
+  "word": "水中捞月",
+  "pinyin": "shuǐ zhōng lāo yuè",
+  "meaning": "到水里去捞月亮，比喻去做根本做不到的事情、白费力气。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

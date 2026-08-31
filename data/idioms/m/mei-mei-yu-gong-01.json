@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mei-mei-yu-gong-01",
+  "word": "美美与共",
+  "pinyin": "měi měi yǔ gòng",
+  "meaning": "各种美的事物共同存在、相互交融、和谐统一。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

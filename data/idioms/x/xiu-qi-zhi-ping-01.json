@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiu-qi-zhi-ping-01",
+  "word": "修齐治平",
+  "pinyin": "xiū qí zhì píng",
+  "meaning": "修身、齐家、治国、平天下，儒家推崇的人生理想。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

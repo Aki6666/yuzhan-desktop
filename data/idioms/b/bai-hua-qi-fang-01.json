@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-hua-qi-fang-01",
+  "word": "百花齐放",
+  "pinyin": "bǎi huā qí fàng",
+  "meaning": "各种花卉同时开放，比喻各种艺术形式和风格自由发展，也形容繁荣景象。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

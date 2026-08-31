@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xian-shan-lu-shui-01",
+  "word": "显山露水",
+  "pinyin": "xiǎn shān lù shuǐ",
+  "meaning": "比喻显露才华、名声或显眼出众，多用于否定句。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

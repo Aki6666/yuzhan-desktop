@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-jian-bu-cui-01",
+  "word": "无坚不摧",
+  "pinyin": "wú jiān bù cuī",
+  "meaning": "没有什么坚固的东西不能摧毁，形容力量极其强大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

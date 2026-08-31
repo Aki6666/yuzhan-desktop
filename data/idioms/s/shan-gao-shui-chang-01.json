@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shan-gao-shui-chang-01",
+  "word": "山高水长",
+  "pinyin": "shān gāo shuǐ cháng",
+  "meaning": "像山一样高、像水一样长，比喻人的品德高尚、影响深远，也比喻情谊深厚。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "nian-nian-bu-wang-01",
+  "word": "念念不忘",
+  "pinyin": "niàn niàn bú wàng",
+  "meaning": "牢记在心，时刻不忘（\"念念\"=不断地想念）。",
+  "usage": "强调牢记不忘。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他念念不忘恩师的教诲。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

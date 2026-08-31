@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ma-ke-dai-01",
+  "word": "倚马可待",
+  "pinyin": "yǐ mǎ kě dài",
+  "meaning": "站在即将出发的战马前起草文件、可以等着完稿，形容文思敏捷、写文章快。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

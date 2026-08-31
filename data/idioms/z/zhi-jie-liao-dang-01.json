@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-jie-liao-dang-01",
+  "word": "直截了当",
+  "pinyin": "zhí jié liǎo dàng",
+  "meaning": "形容说话、做事爽快、不绕弯子。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-meng-chu-xing-01",
+  "word": "如梦初醒",
+  "pinyin": "rú mèng chū xǐng",
+  "meaning": "像刚从梦中醒来，比喻过去一直糊涂、在启发下才恍然大悟。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

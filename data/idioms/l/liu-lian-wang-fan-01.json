@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "liu-lian-wang-fan-01",
+  "word": "流连忘返",
+  "pinyin": "liú lián wàng fǎn",
+  "meaning": "留恋不止，舍不得离去（\"流连\"=留恋）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

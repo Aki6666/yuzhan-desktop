@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-wei-zhi-zhu-01",
+  "word": "见微知著",
+  "pinyin": "jiàn wēi zhī zhù",
+  "meaning": "见到事情的苗头就能知道它的实质和发展趋势（\"微\"=苗头，\"著\"=明显）。",
+  "usage": "强调观察敏锐、以小见大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他见微知著，从细微处发现了隐患。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

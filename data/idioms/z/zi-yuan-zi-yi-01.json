@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-yuan-zi-yi-01",
+  "word": "自怨自艾",
+  "pinyin": "zì yuàn zì yì",
+  "meaning": "原指悔恨自己的错误并自己改正，现只指悔恨自己的错误（\"艾\"读yì，治理、改正）。",
+  "usage": "\"艾\"读yì非ài；强调一味悔恨自责。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "失败后与其自怨自艾，不如振作重来。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

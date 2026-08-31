@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gan-jin-sha-jue-01",
+  "word": "赶尽杀绝",
+  "pinyin": "gǎn jìn shā jué",
+  "meaning": "驱除干净、彻底消灭，比喻残忍狠毒、不留余地。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

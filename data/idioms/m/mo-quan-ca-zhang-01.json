@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mo-quan-ca-zhang-01",
+  "word": "摩拳擦掌",
+  "pinyin": "mó quán cā zhǎng",
+  "meaning": "形容战斗或劳动前精神振奋、跃跃欲试的样子。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

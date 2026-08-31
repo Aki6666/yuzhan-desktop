@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hua-er-bu-shi-01",
+  "word": "华而不实",
+  "pinyin": "huá ér bù shí",
+  "meaning": "只开花不结果，比喻外表好看、内容空虚。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

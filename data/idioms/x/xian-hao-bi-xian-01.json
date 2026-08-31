@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xian-hao-bi-xian-01",
+  "word": "纤毫毕现",
+  "pinyin": "xiān háo bì xiàn",
+  "meaning": "极细微的部分都显现出来，形容刻画、描绘得非常细致逼真（\"纤毫\"=极细微）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

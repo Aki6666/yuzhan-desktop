@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "han-tian-zhen-di-01",
+  "word": "撼天震地",
+  "pinyin": "hàn tiān zhèn dì",
+  "meaning": "撼动天地，形容力量或声势极大。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

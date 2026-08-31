@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wang-zi-fei-bo-01",
+  "word": "妄自菲薄",
+  "pinyin": "wàng zì fěi bó",
+  "meaning": "过分地看轻自己（\"菲薄\"=轻视）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

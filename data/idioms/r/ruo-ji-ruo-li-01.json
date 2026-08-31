@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ruo-ji-ruo-li-01",
+  "word": "若即若离",
+  "pinyin": "ruò jí ruò lí",
+  "meaning": "好像接近、又好像离开，形容对人的态度捉摸不定，也形容事物之间既有关联又有距离。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

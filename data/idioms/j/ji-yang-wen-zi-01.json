@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-yang-wen-zi-01",
+  "word": "激扬文字",
+  "pinyin": "jī yáng wén zì",
+  "meaning": "挥笔书写激昂的文字，指抒发激越的情怀。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

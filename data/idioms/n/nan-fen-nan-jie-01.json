@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nan-fen-nan-jie-01",
+  "word": "难分难解",
+  "pinyin": "nán fēn nán jiě",
+  "meaning": "双方相持不下、难以分开，也形容关系十分亲密、难以分离。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

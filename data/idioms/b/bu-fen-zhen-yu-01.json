@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-fen-zhen-yu-01",
+  "word": "不分畛域",
+  "pinyin": "bù fēn zhěn yù",
+  "meaning": "不分界限、范围，形容不分彼此、没有隔阂（\"畛域\"=范围）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

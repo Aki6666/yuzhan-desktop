@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-kuang-shen-yi-01",
+  "word": "心旷神怡",
+  "pinyin": "xīn kuàng shén yí",
+  "meaning": "心境开阔，精神愉快（\"旷\"=开阔，\"怡\"=愉快）。",
+  "usage": "多用于置身优美景色的愉悦感受。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "站在山顶远眺，令人心旷神怡。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

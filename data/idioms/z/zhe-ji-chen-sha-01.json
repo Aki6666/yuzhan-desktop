@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhe-ji-chen-sha-01",
+  "word": "折戟沉沙",
+  "pinyin": "zhé jǐ chén shā",
+  "meaning": "折断的戟沉埋在沙里，形容惨败，也形容战争遗迹（\"戟\"=古代兵器）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

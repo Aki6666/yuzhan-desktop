@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-ku-zhuo-jue-01",
+  "word": "艰苦卓绝",
+  "pinyin": "jiān kǔ zhuó jué",
+  "meaning": "形容斗争十分艰苦，超出寻常。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

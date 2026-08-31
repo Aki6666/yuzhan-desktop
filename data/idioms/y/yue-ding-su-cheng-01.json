@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yue-ding-su-cheng-01",
+  "word": "约定俗成",
+  "pinyin": "yuē dìng sú chéng",
+  "meaning": "指某种事物的名称或社会习惯是由人们长期实践而认定或形成的。",
+  "usage": "多用于语言、风俗、规则等经久形成的惯例。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "\"老字号\"的称呼是约定俗成的。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

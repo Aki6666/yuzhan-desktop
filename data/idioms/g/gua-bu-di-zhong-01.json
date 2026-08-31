@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gua-bu-di-zhong-01",
+  "word": "寡不敌众",
+  "pinyin": "guǎ bù dí zhòng",
+  "meaning": "人少的抵挡不住人多的。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

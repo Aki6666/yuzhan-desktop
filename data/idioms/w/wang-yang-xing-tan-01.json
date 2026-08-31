@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wang-yang-xing-tan-01",
+  "word": "望洋兴叹",
+  "pinyin": "wàng yáng xīng tàn",
+  "meaning": "原指在伟大的事物面前感叹自己的渺小，现多比喻做事时因力量不够或没有条件而感到无可奈何（\"望洋\"=仰视的样子）。",
+  "usage": "强调力所不及的无奈感叹。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "面对高昂的学费，他只能望洋兴叹。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

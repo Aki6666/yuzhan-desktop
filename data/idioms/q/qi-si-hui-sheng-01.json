@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-si-hui-sheng-01",
+  "word": "起死回生",
+  "pinyin": "qǐ sǐ huí shēng",
+  "meaning": "把快要死的人救活，形容医术高明，也比喻把已经没有希望的事物挽救过来。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

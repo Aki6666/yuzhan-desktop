@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zuo-di-qi-jia-01",
+  "word": "坐地起价",
+  "pinyin": "zuò dì qǐ jià",
+  "meaning": "卖方看到买方急需或行情看涨而趁机抬高价格。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

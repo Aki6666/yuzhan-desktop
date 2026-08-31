@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-qi-er-yu-01",
+  "word": "不期而遇",
+  "pinyin": "bù qī ér yù",
+  "meaning": "没有约定而意外地相遇（\"期\"=约定）。",
+  "usage": "强调偶然相遇。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "多年老友在异乡不期而遇。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

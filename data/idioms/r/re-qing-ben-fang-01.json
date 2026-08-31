@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "re-qing-ben-fang-01",
+  "word": "热情奔放",
+  "pinyin": "rè qíng bēn fàng",
+  "meaning": "情绪热烈、不受拘束。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

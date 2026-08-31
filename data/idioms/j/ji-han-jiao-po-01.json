@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-han-jiao-po-01",
+  "word": "饥寒交迫",
+  "pinyin": "jī hán jiāo pò",
+  "meaning": "饥饿和寒冷一齐逼来，形容生活极端贫困。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

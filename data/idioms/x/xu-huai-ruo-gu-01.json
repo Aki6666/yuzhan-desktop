@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xu-huai-ruo-gu-01",
+  "word": "虚怀若谷",
+  "pinyin": "xū huái ruò gǔ",
+  "meaning": "胸怀像山谷一样深广，形容十分谦虚、能容纳别人的意见。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

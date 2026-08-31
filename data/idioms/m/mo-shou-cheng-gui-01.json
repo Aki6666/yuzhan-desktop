@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mo-shou-cheng-gui-01",
+  "word": "墨守成规",
+  "pinyin": "mò shǒu chéng guī",
+  "meaning": "守着老规矩不肯改变（\"墨守\"=战国时墨翟善守城）。",
+  "usage": "与\"因循守旧\"\"固步自封\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "企业若墨守成规，终将被市场淘汰。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

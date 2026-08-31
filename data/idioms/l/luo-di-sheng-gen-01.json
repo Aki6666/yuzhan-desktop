@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "luo-di-sheng-gen-01",
+  "word": "落地生根",
+  "pinyin": "luò dì shēng gēn",
+  "meaning": "比喻在某处长期安顿下来、扎下根基。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

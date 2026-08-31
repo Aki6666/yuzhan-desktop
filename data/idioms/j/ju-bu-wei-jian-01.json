@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-bu-wei-jian-01",
+  "word": "举步维艰",
+  "pinyin": "jǔ bù wéi jiān",
+  "meaning": "迈开步子都很困难，比喻行动困难重重。",
+  "usage": "多用于企业经营、事业发展等困难重重。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "初创企业融资难，发展举步维艰。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

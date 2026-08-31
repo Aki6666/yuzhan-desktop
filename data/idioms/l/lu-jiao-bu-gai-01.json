@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lu-jiao-bu-gai-01",
+  "word": "屡教不改",
+  "pinyin": "lǚ jiào bù gǎi",
+  "meaning": "多次教育仍然不改正。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

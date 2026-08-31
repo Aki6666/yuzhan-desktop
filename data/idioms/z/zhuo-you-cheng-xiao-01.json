@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhuo-you-cheng-xiao-01",
+  "word": "卓有成效",
+  "pinyin": "zhuó yǒu chéng xiào",
+  "meaning": "有突出的成绩和效果。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shuang-guan-qi-xia-01",
+  "word": "双管齐下",
+  "pinyin": "shuāng guǎn qí xià",
+  "meaning": "两支笔同时作画，比喻两方面同时进行。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

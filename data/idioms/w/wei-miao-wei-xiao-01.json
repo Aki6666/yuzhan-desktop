@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-miao-wei-xiao-01",
+  "word": "惟妙惟肖",
+  "pinyin": "wéi miào wéi xiào",
+  "meaning": "形容描写或模仿得非常逼真（\"惟\"=语气词，\"肖\"=相似）。",
+  "usage": "仅用于描写、模仿、表演等逼真，不用于实物本身。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他模仿大师的笔法惟妙惟肖。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-fan-chang-tai-01",
+  "word": "一反常态",
+  "pinyin": "yì fǎn cháng tài",
+  "meaning": "完全改变了平时的态度或举动。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

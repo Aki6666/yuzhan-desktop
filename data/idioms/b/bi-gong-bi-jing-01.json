@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bi-gong-bi-jing-01",
+  "word": "毕恭毕敬",
+  "pinyin": "bì gōng bì jìng",
+  "meaning": "十分恭敬，形容态度极其恭敬有礼。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

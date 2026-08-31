@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wang-fei-xin-ji-01",
+  "word": "枉费心机",
+  "pinyin": "wǎng fèi xīn jī",
+  "meaning": "白费心思、毫无收获（\"枉\"=白白地）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

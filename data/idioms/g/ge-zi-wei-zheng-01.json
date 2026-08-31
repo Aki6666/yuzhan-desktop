@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-zi-wei-zheng-01",
+  "word": "各自为政",
+  "pinyin": "gè zì wéi zhèng",
+  "meaning": "各人按自己的主张办事，不顾整体、不协作配合。",
+  "usage": "批评缺乏统一协调、各行其是。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "部门各自为政，形成合力就难。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mang-ran-bu-jie-01",
+  "word": "茫然不解",
+  "pinyin": "máng rán bù jiě",
+  "meaning": "一无所知、完全不明白的样子。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

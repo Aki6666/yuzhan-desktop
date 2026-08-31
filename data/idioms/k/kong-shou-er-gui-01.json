@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kong-shou-er-gui-01",
+  "word": "空手而归",
+  "pinyin": "kōng shǒu ér guī",
+  "meaning": "白白地去了、什么也没得到就回来了。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

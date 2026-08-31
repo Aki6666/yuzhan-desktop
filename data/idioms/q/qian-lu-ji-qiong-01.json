@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-lu-ji-qiong-01",
+  "word": "黔驴技穷",
+  "pinyin": "qián lǘ jì qióng",
+  "meaning": "黔地的驴子本领用尽，比喻仅有的一点伎俩也用完了。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

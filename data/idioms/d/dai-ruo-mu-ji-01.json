@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dai-ruo-mu-ji-01",
+  "word": "呆若木鸡",
+  "pinyin": "dāi ruò mù jī",
+  "meaning": "呆得像木头鸡一样，形容因恐惧或惊讶而发愣的样子。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

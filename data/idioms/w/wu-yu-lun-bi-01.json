@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-yu-lun-bi-01",
+  "word": "无与伦比",
+  "pinyin": "wú yǔ lún bǐ",
+  "meaning": "没有可以与之相比的（\"伦\"=同类）。",
+  "usage": "用于强调程度或水平达到极致，含赞美色彩。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "examples": [
+    {
+      "text": "这座城市的夜景无与伦比。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 104
+}

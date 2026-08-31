@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-da-zhe-kou-01",
+  "word": "大打折扣",
+  "pinyin": "dà dǎ zhé kòu",
+  "meaning": "指商品的价钱降低，也比喻打了很大折扣、效果降低。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

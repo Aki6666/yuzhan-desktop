@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-zi-liang-li-01",
+  "word": "不自量力",
+  "pinyin": "bú zì liàng lì",
+  "meaning": "不能正确估量自己的力量，形容过高地估计自己。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

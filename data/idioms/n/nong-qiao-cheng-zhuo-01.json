@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nong-qiao-cheng-zhuo-01",
+  "word": "弄巧成拙",
+  "pinyin": "nòng qiǎo chéng zhuō",
+  "meaning": "本想耍弄聪明、结果反而做了蠢事（\"拙\"=笨）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

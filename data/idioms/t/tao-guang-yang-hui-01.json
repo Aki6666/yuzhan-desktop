@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tao-guang-yang-hui-01",
+  "word": "韬光养晦",
+  "pinyin": "tāo guāng yǎng huì",
+  "meaning": "隐藏才能、收敛锋芒、不使外露（\"韬\"=隐藏，\"晦\"=暗）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-qiang-bu-xi-01",
+  "word": "自强不息",
+  "pinyin": "zì qiáng bù xī",
+  "meaning": "自己努力向上、永远不懈怠。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

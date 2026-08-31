@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fang-ren-zi-liu-01",
+  "word": "放任自流",
+  "pinyin": "fàng rèn zì liú",
+  "meaning": "听凭它自然发展、不加约束引导。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

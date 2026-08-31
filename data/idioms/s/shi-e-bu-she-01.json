@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-e-bu-she-01",
+  "word": "十恶不赦",
+  "pinyin": "shí è bú shè",
+  "meaning": "罪恶极大、不可饶恕（\"赦\"=赦免）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

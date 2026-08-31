@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-hua-liao-luan-01",
+  "word": "眼花缭乱",
+  "pinyin": "yǎn huā liáo luàn",
+  "meaning": "眼睛看见复杂纷繁的东西而感到迷乱（\"缭乱\"=纷乱）。",
+  "usage": "强调事物繁多使人目眩。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "商场里商品繁多，让人眼花缭乱。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

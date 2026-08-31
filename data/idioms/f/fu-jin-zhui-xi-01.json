@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-jin-zhui-xi-01",
+  "word": "抚今追昔",
+  "pinyin": "fǔ jīn zhuī xī",
+  "meaning": "看看现在、想想过去，形容感慨万千（\"抚\"=接触）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

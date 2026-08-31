@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-chu-suo-liao-01",
+  "word": "不出所料",
+  "pinyin": "bù chū suǒ liào",
+  "meaning": "没有超出预料，指事情的发生在预料之中。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yang-yang-sa-sa-01",
+  "word": "洋洋洒洒",
+  "pinyin": "yáng yáng sǎ sǎ",
+  "meaning": "形容文章或谈话丰富明快、连续不断，也形容规模或气势盛大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

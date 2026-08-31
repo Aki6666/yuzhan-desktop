@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wang-yang-bu-lao-01",
+  "word": "亡羊补牢",
+  "pinyin": "wáng yáng bǔ láo",
+  "meaning": "羊丢了再去修补羊圈，比喻出了问题以后想办法补救，可以防止继续受损失。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

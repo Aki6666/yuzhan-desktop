@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "kuang-ri-chi-jiu-01",
+  "word": "旷日持久",
+  "pinyin": "kuàng rì chí jiǔ",
+  "meaning": "多费时日，拖得很久（\"旷\"=荒废、拖延）。",
+  "usage": "多用于战争、谈判、纠纷等拖延过久。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "旷日持久的诉讼让双方都疲惫不堪。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

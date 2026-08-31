@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qiu-zhi-bu-de-01",
+  "word": "求之不得",
+  "pinyin": "qiú zhī bù dé",
+  "meaning": "想找都找不到，形容十分难得、正合心愿。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

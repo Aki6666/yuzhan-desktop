@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mang-ran-ruo-shi-01",
+  "word": "茫然若失",
+  "pinyin": "máng rán ruò shī",
+  "meaning": "精神恍惚、好像丢失了什么似的。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

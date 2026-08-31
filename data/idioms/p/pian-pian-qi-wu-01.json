@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pian-pian-qi-wu-01",
+  "word": "翩翩起舞",
+  "pinyin": "piān piān qǐ wǔ",
+  "meaning": "轻快地跳起舞来（\"翩翩\"=轻快的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

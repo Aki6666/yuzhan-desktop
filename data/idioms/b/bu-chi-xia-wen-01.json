@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-chi-xia-wen-01",
+  "word": "不耻下问",
+  "pinyin": "bù chǐ xià wèn",
+  "meaning": "不以向地位、学问比自己低的人请教为耻，形容谦虚好学。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

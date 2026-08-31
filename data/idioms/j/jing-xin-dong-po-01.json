@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-xin-dong-po-01",
+  "word": "惊心动魄",
+  "pinyin": "jīng xīn dòng pò",
+  "meaning": "形容使人震惊、感动很深，也形容极度紧张害怕。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

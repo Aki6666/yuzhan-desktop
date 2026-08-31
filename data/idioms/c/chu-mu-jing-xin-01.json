@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chu-mu-jing-xin-01",
+  "word": "触目惊心",
+  "pinyin": "chù mù jīng xīn",
+  "meaning": "看到某种严重的情况使人内心震惊（\"触目\"=目光所及）。",
+  "usage": "多用于惨状、数据等令人震惊。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "污染现场触目惊心。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

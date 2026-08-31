@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-xiang-wan-qian-01",
+  "word": "气象万千",
+  "pinyin": "qì xiàng wàn qiān",
+  "meaning": "形容景色或事物多种多样、非常壮观。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

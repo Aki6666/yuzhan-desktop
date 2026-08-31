@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-si-bu-gou-01",
+  "word": "一丝不苟",
+  "pinyin": "yì sī bù gǒu",
+  "meaning": "连最细微的地方也不马虎，形容办事认真仔细。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

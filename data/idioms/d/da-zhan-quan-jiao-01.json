@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-zhan-quan-jiao-01",
+  "word": "大展拳脚",
+  "pinyin": "dà zhǎn quán jiǎo",
+  "meaning": "放开手脚施展本领。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

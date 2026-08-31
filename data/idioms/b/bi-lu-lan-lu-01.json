@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bi-lu-lan-lu-01",
+  "word": "筚路蓝缕",
+  "pinyin": "bì lù lán lǚ",
+  "meaning": "驾着简陋的车、穿着破烂的衣服去开辟山林，形容创业的艰苦（\"筚路\"=柴车，\"蓝缕\"=破衣）。",
+  "usage": "多用于形容创业艰难。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "老一辈科学家筚路蓝缕，奠定了航天事业的基础。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

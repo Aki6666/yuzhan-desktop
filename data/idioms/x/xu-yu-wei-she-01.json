@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xu-yu-wei-she-01",
+  "word": "虚与委蛇",
+  "pinyin": "xū yǔ wěi shé",
+  "meaning": "对人假意敷衍、应酬（\"委蛇\"=随顺）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

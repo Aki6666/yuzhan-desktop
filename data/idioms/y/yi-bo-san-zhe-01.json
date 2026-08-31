@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-bo-san-zhe-01",
+  "word": "一波三折",
+  "pinyin": "yì bō sān zhé",
+  "meaning": "原指写字笔法的曲折多变，现比喻文章的结构起伏曲折，也比喻事情进行中意外的变化很多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

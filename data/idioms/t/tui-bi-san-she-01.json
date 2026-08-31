@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tui-bi-san-she-01",
+  "word": "退避三舍",
+  "pinyin": "tuì bì sān shè",
+  "meaning": "主动退让九十里，比喻退让和回避，避免冲突（\"舍\"=三十里）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

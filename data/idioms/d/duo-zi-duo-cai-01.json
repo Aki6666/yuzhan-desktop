@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "duo-zi-duo-cai-01",
+  "word": "多姿多彩",
+  "pinyin": "duō zī duō cǎi",
+  "meaning": "形容颜色、样式等丰富多样。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ling-ren-zan-tan-01",
+  "word": "令人赞叹",
+  "pinyin": "lìng rén zàn tàn",
+  "meaning": "让人称赞、佩服。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

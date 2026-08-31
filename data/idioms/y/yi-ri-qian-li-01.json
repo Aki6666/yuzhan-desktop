@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ri-qian-li-01",
+  "word": "一日千里",
+  "pinyin": "yí rì qiān lǐ",
+  "meaning": "原形容马跑得很快，现比喻进展极快。",
+  "usage": "多用于事业、科技、建设等发展迅猛。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "我国高铁技术发展一日千里。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

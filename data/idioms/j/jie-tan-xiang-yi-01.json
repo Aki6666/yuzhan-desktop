@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-tan-xiang-yi-01",
+  "word": "街谈巷议",
+  "pinyin": "jiē tán xiàng yì",
+  "meaning": "大街小巷里人们的谈论（\"议\"=议论）。",
+  "usage": "多指民间的议论传闻。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "此事已成街谈巷议的热点。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

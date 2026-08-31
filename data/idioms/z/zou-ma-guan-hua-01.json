@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zou-ma-guan-hua-01",
+  "word": "走马观花",
+  "pinyin": "zǒu mǎ guān huā",
+  "meaning": "骑在奔跑的马上看花，比喻粗略地观察事物、不深入。",
+  "usage": "多用于批评学习、考察等不深入、不细致。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "参观博物馆若走马观花，便收获甚微。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 96
+}

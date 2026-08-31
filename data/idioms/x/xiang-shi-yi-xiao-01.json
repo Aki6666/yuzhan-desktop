@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-shi-yi-xiao-01",
+  "word": "相视一笑",
+  "pinyin": "xiāng shì yí xiào",
+  "meaning": "互相看着对方微微一笑，形容心有灵犀或会心默契。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

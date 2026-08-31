@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shun-li-cheng-zhang-01",
+  "word": "顺理成章",
+  "pinyin": "shùn lǐ chéng zhāng",
+  "meaning": "写文章、做事情顺着条理就能做好，比喻某种情况自然产生某种结果。",
+  "usage": "强调合乎逻辑、自然而然。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "基础打牢了，成绩提高便顺理成章。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

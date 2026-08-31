@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "she-shen-chu-di-01",
+  "word": "设身处地",
+  "pinyin": "shè shēn chǔ dì",
+  "meaning": "设想自己处在别人的地位或环境中，指替别人着想。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

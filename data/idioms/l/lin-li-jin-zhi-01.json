@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lin-li-jin-zhi-01",
+  "word": "淋漓尽致",
+  "pinyin": "lín lí jìn zhì",
+  "meaning": "形容文章或说话表达得非常充分、透彻，也形容暴露得很彻底（\"淋漓\"=畅快，\"尽致\"=极点）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

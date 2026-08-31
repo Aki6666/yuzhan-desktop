@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-fei-xi-bi-01",
+  "word": "今非昔比",
+  "pinyin": "jīn fēi xī bǐ",
+  "meaning": "现在不是过去所能比得上的，形容变化很大。",
+  "usage": "强调今昔变化巨大（多向好）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "老城区的面貌今非昔比。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

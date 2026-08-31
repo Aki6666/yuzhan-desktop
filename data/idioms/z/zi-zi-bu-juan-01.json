@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-zi-bu-juan-01",
+  "word": "孜孜不倦",
+  "pinyin": "zī zī bú juàn",
+  "meaning": "勤奋努力，不知疲倦（\"孜孜\"=勤勉）。",
+  "usage": "多用于学习、工作等勤奋不懈。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他孜孜不倦地钻研古籍十余年。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 40
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chun-se-man-yuan-01",
+  "word": "春色满园",
+  "pinyin": "chūn sè mǎn yuán",
+  "meaning": "园内到处都是春天美丽的景色，比喻欣欣向荣的景象。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

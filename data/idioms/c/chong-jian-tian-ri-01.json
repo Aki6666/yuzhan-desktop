@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chong-jian-tian-ri-01",
+  "word": "重见天日",
+  "pinyin": "chóng jiàn tiān rì",
+  "meaning": "比喻脱离黑暗环境、重新见到光明。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

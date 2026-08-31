@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "da-tong-xiao-yi-01",
+  "word": "大同小异",
+  "pinyin": "dà tóng xiǎo yì",
+  "meaning": "大体相同，略有差异。",
+  "usage": "强调基本相同、差别很小。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "各家方案大同小异，核心思路一致。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

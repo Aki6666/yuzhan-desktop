@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xun-huan-wang-fu-01",
+  "word": "循环往复",
+  "pinyin": "xún huán wǎng fù",
+  "meaning": "周而复始地重复出现或进行。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-shang-wang-lai-01",
+  "word": "礼尚往来",
+  "pinyin": "lǐ shàng wǎng lái",
+  "meaning": "礼节上注重有来有往，也指以同样的态度或做法回报对方（\"尚\"=注重）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

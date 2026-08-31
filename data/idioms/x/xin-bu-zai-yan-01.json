@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-bu-zai-yan-01",
+  "word": "心不在焉",
+  "pinyin": "xīn bú zài yān",
+  "meaning": "心思不在这里，形容思想不集中（\"焉\"=这里）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

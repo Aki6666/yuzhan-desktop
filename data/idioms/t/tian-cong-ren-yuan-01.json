@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-cong-ren-yuan-01",
+  "word": "天从人愿",
+  "pinyin": "tiān cóng rén yuàn",
+  "meaning": "上天顺从人的意愿，形容事情恰好合乎人的心愿。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

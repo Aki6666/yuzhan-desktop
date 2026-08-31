@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bo-da-jing-shen-01",
+  "word": "博大精深",
+  "pinyin": "bó dà jīng shēn",
+  "meaning": "形容思想、学识等广博高深。",
+  "usage": "多用于文化、思想、学问等。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "中华传统文化博大精深，源远流长。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 61
+}

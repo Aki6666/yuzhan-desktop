@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zheng-yi-lin-ran-01",
+  "word": "正义凛然",
+  "pinyin": "zhèng yì lǐn rán",
+  "meaning": "坚持正义、令人敬畏的样子（\"凛然\"=严肃可畏）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

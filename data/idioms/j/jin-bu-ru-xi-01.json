@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-bu-ru-xi-01",
+  "word": "今不如昔",
+  "pinyin": "jīn bù rú xī",
+  "meaning": "现在不如过去，形容情况在退步。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

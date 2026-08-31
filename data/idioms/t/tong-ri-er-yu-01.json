@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tong-ri-er-yu-01",
+  "word": "同日而语",
+  "pinyin": "tóng rì ér yǔ",
+  "meaning": "把不同时间或不同情况的人或事物放在一起谈论（多用于否定句\"不可同日而语\"）。",
+  "usage": "多用于否定句，强调今昔或双方差距悬殊。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "今昔生活水平已不可同日而语。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 58
+}

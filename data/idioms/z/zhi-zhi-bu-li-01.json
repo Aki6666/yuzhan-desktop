@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-zhi-bu-li-01",
+  "word": "置之不理",
+  "pinyin": "zhì zhī bù lǐ",
+  "meaning": "放在一边，不予理睬。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

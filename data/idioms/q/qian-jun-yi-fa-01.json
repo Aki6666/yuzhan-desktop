@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-jun-yi-fa-01",
+  "word": "千钧一发",
+  "pinyin": "qiān jūn yì fā",
+  "meaning": "千钧的重量系在一根头发上，比喻极其危急（\"钧\"=古代重量单位）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

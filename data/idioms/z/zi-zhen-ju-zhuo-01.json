@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-zhen-ju-zhuo-01",
+  "word": "字斟句酌",
+  "pinyin": "zì zhēn jù zhuó",
+  "meaning": "一字一句都仔细斟酌推敲（\"斟酌\"=考虑取舍）。",
+  "usage": "多用于写作、说话极其认真。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这份报告字斟句酌，措辞严谨。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

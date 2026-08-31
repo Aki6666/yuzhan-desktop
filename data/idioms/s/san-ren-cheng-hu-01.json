@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "san-ren-cheng-hu-01",
+  "word": "三人成虎",
+  "pinyin": "sān rén chéng hǔ",
+  "meaning": "三个人谎报城市里有老虎、听的人就信以为真，比喻说的人多了就能使人把谣言当事实。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

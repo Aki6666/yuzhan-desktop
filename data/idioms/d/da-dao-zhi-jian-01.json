@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-dao-zhi-jian-01",
+  "word": "大道至简",
+  "pinyin": "dà dào zhì jiǎn",
+  "meaning": "大道理极其简单，形容最高深的道理往往最朴素。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "luo-jing-xia-shi-01",
+  "word": "落井下石",
+  "pinyin": "luò jǐng xià shí",
+  "meaning": "见人掉进井里，不但不救，反而往下扔石头，比喻乘人之危加以陷害。",
+  "usage": "批评乘人之危、加害于人。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "同事落难，他不帮忙反而落井下石。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

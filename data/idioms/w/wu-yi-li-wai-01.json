@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-yi-li-wai-01",
+  "word": "无一例外",
+  "pinyin": "wú yí lì wài",
+  "meaning": "没有一个是例外，全部如此。",
+  "usage": "强调全部、没有例外。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "所有考生无一例外都要参加笔试。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

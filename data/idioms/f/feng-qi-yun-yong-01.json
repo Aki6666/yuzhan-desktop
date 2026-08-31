@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-qi-yun-yong-01",
+  "word": "风起云涌",
+  "pinyin": "fēng qǐ yún yǒng",
+  "meaning": "大风刮起、乌云涌聚，比喻事物迅速发展，声势浩大。",
+  "usage": "多用于形势、运动等迅猛发展。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "新一轮科技革命风起云涌。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

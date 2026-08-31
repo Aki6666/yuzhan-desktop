@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-bu-xu-chuan-01",
+  "word": "名不虚传",
+  "pinyin": "míng bù xū chuán",
+  "meaning": "传出的名声与实际相符合，不是空有虚名。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

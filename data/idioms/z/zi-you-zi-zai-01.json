@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-you-zi-zai-01",
+  "word": "自由自在",
+  "pinyin": "zì yóu zì zài",
+  "meaning": "形容没有约束、安闲舒适。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

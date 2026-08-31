@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-tong-mo-lu-01",
+  "word": "形同陌路",
+  "pinyin": "xíng tóng mò lù",
+  "meaning": "像走在路上互不相识的陌生人一样，形容关系疏远、互不理睬。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

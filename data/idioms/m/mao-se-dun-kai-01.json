@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mao-se-dun-kai-01",
+  "word": "茅塞顿开",
+  "pinyin": "máo sè dùn kāi",
+  "meaning": "原来心里好像有茅草堵塞着，现在忽然被打开了，形容忽然理解、领会。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

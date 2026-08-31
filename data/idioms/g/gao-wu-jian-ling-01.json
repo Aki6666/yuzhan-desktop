@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gao-wu-jian-ling-01",
+  "word": "高屋建瓴",
+  "pinyin": "gāo wū jiàn líng",
+  "meaning": "从高屋顶上倾倒瓶水，居高临下、势不可挡（\"瓴\"=盛水瓶子）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

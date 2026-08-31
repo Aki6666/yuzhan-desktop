@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-gu-xiang-ying-01",
+  "word": "桴鼓相应",
+  "pinyin": "fú gǔ xiāng yìng",
+  "meaning": "鼓槌和鼓互相应和，比喻相互配合、紧密呼应（\"桴\"=鼓槌）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

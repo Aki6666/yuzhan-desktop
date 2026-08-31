@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gong-guo-yu-qiu-01",
+  "word": "供过于求",
+  "pinyin": "gōng guò yú qiú",
+  "meaning": "供应超过需求。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

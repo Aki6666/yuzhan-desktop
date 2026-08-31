@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-lu-kai-ge-01",
+  "word": "一路凯歌",
+  "pinyin": "yí lù kǎi gē",
+  "meaning": "一路上唱着胜利的歌曲，比喻进展顺利、连连获胜。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

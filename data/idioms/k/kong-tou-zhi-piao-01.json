@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kong-tou-zhi-piao-01",
+  "word": "空头支票",
+  "pinyin": "kōng tóu zhī piào",
+  "meaning": "无法兑现的支票，比喻不兑现的诺言。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

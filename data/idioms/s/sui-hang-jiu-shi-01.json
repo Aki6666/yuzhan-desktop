@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-hang-jiu-shi-01",
+  "word": "随行就市",
+  "pinyin": "suí háng jiù shì",
+  "meaning": "价格随着市场行情而变动。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

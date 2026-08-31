@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-ru-hao-mang-01",
+  "word": "细入毫芒",
+  "pinyin": "xì rù háo máng",
+  "meaning": "细微到毫毛芒刺那样小，形容极其细微（\"毫芒\"=极细微）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

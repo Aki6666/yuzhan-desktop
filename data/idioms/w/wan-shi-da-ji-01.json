@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wan-shi-da-ji-01",
+  "word": "万事大吉",
+  "pinyin": "wàn shì dà jí",
+  "meaning": "什么事都很顺利、平安，也指事情已了结、不必再操心。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

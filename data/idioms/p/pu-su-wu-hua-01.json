@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pu-su-wu-hua-01",
+  "word": "朴素无华",
+  "pinyin": "pǔ sù wú huá",
+  "meaning": "质朴而不华丽。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

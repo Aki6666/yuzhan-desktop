@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-hua-jie-mu-01",
+  "word": "移花接木",
+  "pinyin": "yí huā jiē mù",
+  "meaning": "把一种花木的枝条嫁接在另一种花木上，比喻暗中使用手段更换人或事物。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-shou-qi-jia-01",
+  "word": "白手起家",
+  "pinyin": "bái shǒu qǐ jiā",
+  "meaning": "空手创立家业，形容原来没有基础或条件很差而靠艰苦奋斗创立事业。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

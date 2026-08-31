@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gan-wei-ren-xian-01",
+  "word": "敢为人先",
+  "pinyin": "gǎn wèi rén xiān",
+  "meaning": "敢于做别人没有做过的事、走在前面。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-bu-sheng-ju-01",
+  "word": "举不胜举",
+  "pinyin": "jǔ bú shèng jǔ",
+  "meaning": "列举也列举不完，形容数量很多。",
+  "usage": "与\"不胜枚举\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这样的案例举不胜举。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

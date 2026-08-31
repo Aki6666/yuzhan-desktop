@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sheng-dong-ji-xi-01",
+  "word": "声东击西",
+  "pinyin": "shēng dōng jī xī",
+  "meaning": "表面宣称攻打东边、实际攻打西边，指迷惑对方、出奇制胜。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

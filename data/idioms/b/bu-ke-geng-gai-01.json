@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-geng-gai-01",
+  "word": "不可更改",
+  "pinyin": "bù kě gēng gǎi",
+  "meaning": "不能改变。",
+  "usage": "强调已定、无法变更。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "档案一经确认，一般不可更改。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

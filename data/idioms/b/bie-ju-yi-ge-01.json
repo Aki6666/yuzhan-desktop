@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bie-ju-yi-ge-01",
+  "word": "别具一格",
+  "pinyin": "bié jù yì gé",
+  "meaning": "另有一种独特的风格。",
+  "usage": "多用于风格、艺术、建筑等独特。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这座园林的设计别具一格。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 47
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "e-guan-man-ying-01",
+  "word": "恶贯满盈",
+  "pinyin": "è guàn mǎn yíng",
+  "meaning": "罪恶多得像绳子穿铜钱一样已穿满，形容罪大恶极（\"贯\"=穿钱的绳子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

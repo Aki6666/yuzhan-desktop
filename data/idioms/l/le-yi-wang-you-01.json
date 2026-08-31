@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "le-yi-wang-you-01",
+  "word": "乐以忘忧",
+  "pinyin": "lè yǐ wàng yōu",
+  "meaning": "快乐得忘记了忧愁，形容陶醉其中。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

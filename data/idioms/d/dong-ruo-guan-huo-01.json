@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "dong-ruo-guan-huo-01",
+  "word": "洞若观火",
+  "pinyin": "dòng ruò guān huǒ",
+  "meaning": "形容看得非常清楚，像看火一样明白（\"洞\"=透彻）。",
+  "usage": "强调洞察力强、看得透彻。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他对市场走势洞若观火。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

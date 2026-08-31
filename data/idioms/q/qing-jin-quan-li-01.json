@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qing-jin-quan-li-01",
+  "word": "倾尽全力",
+  "pinyin": "qīng jìn quán lì",
+  "meaning": "用尽全部力量。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

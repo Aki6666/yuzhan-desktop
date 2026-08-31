@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bing-xing-bu-bei-01",
+  "word": "并行不悖",
+  "pinyin": "bìng xíng bú bèi",
+  "meaning": "同时进行，互不冲突（\"悖\"=冲突）。",
+  "usage": "强调两事可同时进行而不矛盾。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "经济发展与生态保护完全可以并行不悖。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cheng-qian-qi-hou-01",
+  "word": "承前启后",
+  "pinyin": "chéng qián qǐ hòu",
+  "meaning": "承接前面的、开创后面的，多用于学问、事业等。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

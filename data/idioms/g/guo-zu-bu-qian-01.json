@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "guo-zu-bu-qian-01",
+  "word": "裹足不前",
+  "pinyin": "guǒ zú bù qián",
+  "meaning": "停步不前，多指有所顾虑而不敢前进。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

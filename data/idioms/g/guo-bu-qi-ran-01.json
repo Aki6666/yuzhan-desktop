@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "guo-bu-qi-ran-01",
+  "word": "果不其然",
+  "pinyin": "guǒ bù qí rán",
+  "meaning": "果然如此，指事物的发展变化跟预料的一样（\"其然\"=那样）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

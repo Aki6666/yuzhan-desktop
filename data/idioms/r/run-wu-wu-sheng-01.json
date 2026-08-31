@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "run-wu-wu-sheng-01",
+  "word": "润物无声",
+  "pinyin": "rùn wù wú shēng",
+  "meaning": "春雨滋润万物而悄然无声，比喻在不知不觉中给人益处、产生影响。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

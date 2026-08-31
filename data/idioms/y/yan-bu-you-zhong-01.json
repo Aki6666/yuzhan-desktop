@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-bu-you-zhong-01",
+  "word": "言不由衷",
+  "pinyin": "yán bù yóu zhōng",
+  "meaning": "说的话不是发自内心，形容心口不一（\"衷\"=内心）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

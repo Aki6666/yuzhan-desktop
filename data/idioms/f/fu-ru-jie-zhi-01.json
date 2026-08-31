@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-ru-jie-zhi-01",
+  "word": "妇孺皆知",
+  "pinyin": "fù rú jiē zhī",
+  "meaning": "妇女和小孩都知道，形容人人都知道。",
+  "usage": "不与\"人人\"\"所有\"等叠用；与\"家喻户晓\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "examples": [
+    {
+      "text": "安全常识应做到妇孺皆知。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 42
+}

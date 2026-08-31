@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-si-yi-01",
+  "word": "不可思议",
+  "pinyin": "bù kě sī yì",
+  "meaning": "原为佛教用语，现指不可想象、难以理解。",
+  "usage": "多用于形容难以理解或奇妙异常。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "量子纠缠现象令人不可思议。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

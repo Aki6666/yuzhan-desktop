@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "de-bu-chang-shi-01",
+  "word": "得不偿失",
+  "pinyin": "dé bù cháng shī",
+  "meaning": "得到的抵不上失去的（\"偿\"=抵补）。",
+  "usage": "强调付出大于收获。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "为短期利益牺牲环境，得不偿失。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 51
+}

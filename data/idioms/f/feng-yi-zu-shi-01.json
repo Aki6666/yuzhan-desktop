@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-yi-zu-shi-01",
+  "word": "丰衣足食",
+  "pinyin": "fēng yī zú shí",
+  "meaning": "穿的、吃的都很充足，形容生活富裕。",
+  "usage": "形容生活富足。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "如今乡亲们丰衣足食，日子越过越好。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

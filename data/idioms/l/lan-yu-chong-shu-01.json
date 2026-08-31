@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lan-yu-chong-shu-01",
+  "word": "滥竽充数",
+  "pinyin": "làn yú chōng shù",
+  "meaning": "不会吹竽的人混在吹竽的队伍里充数，比喻没有真才实学的人混在行家里充数，也比喻以次充好。",
+  "usage": "批评以次充好、混日子。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "评审不能走过场，防止滥竽充数。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

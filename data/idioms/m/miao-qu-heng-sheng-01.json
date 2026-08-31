@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "miao-qu-heng-sheng-01",
+  "word": "妙趣横生",
+  "pinyin": "miào qù héng shēng",
+  "meaning": "美妙的意趣层出不穷（\"横生\"=不断出现）。",
+  "usage": "多用于文章、话语、表演等有趣。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他的演讲妙趣横生，引得阵阵掌声。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

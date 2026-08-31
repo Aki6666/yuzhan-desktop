@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hui-xin-sang-qi-01",
+  "word": "灰心丧气",
+  "pinyin": "huī xīn sàng qì",
+  "meaning": "因失败或不顺利而失去信心、意志消沉。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

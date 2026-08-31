@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ye-zhang-mu-01",
+  "word": "一叶障目",
+  "pinyin": "yí yè zhàng mù",
+  "meaning": "一片树叶挡住了眼睛，比喻被局部或暂时的现象迷惑、看不到全局或根本。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

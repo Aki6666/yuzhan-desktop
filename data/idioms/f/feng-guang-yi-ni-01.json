@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-guang-yi-ni-01",
+  "word": "风光旖旎",
+  "pinyin": "fēng guāng yǐ nǐ",
+  "meaning": "景色柔和美好（\"旖旎\"=柔美的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

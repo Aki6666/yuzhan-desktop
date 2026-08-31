@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "an-bu-jiu-ban-01",
+  "word": "按部就班",
+  "pinyin": "àn bù jiù bān",
+  "meaning": "按照一定的条理、步骤进行（\"部\"\"班\"=门类、次序）。",
+  "usage": "中性偏褒（按规矩办事）；也可含贬义（缺乏创新），依语境判断。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "工程按部就班地推进，进度顺利。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 69
+}

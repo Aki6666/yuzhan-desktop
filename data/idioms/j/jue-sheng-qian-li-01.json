@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jue-sheng-qian-li-01",
+  "word": "决胜千里",
+  "pinyin": "jué shèng qiān lǐ",
+  "meaning": "在千里之外就能决定战局的胜负，形容将领善于谋划指挥。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

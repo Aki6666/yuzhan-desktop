@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-xun-shou-jiu-01",
+  "word": "因循守旧",
+  "pinyin": "yīn xún shǒu jiù",
+  "meaning": "沿袭旧规，不思革新（\"因循\"=沿袭）。",
+  "usage": "与\"墨守成规\"\"固步自封\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "改革就要打破因循守旧的思维。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zong-heng-bai-he-01",
+  "word": "纵横捭阖",
+  "pinyin": "zòng héng bǎi hé",
+  "meaning": "在政治上、外交上运用手段进行分化或争取（\"捭阖\"=开合）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

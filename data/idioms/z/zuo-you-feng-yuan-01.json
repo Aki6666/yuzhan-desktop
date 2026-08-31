@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zuo-you-feng-yuan-01",
+  "word": "左右逢源",
+  "pinyin": "zuǒ yòu féng yuán",
+  "meaning": "原指做学问功夫到家后自然用之不尽、取之不竭，现多指做事得心应手、处处顺利，也含贬义指为人圆滑。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

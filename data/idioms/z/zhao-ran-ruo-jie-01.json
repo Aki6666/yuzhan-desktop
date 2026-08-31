@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhao-ran-ruo-jie-01",
+  "word": "昭然若揭",
+  "pinyin": "zhāo rán ruò jiē",
+  "meaning": "真相、问题等全部暴露出来，非常明显（\"昭然\"=明显，\"揭\"=高举）。",
+  "usage": "多用于揭露坏事、谎言等大白于天下。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "其造假行为在证据面前昭然若揭。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 45
+}

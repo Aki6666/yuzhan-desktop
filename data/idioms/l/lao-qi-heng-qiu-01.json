@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lao-qi-heng-qiu-01",
+  "word": "老气横秋",
+  "pinyin": "lǎo qì héng qiū",
+  "meaning": "形容人没有朝气、暮气沉沉的样子，也形容摆老资格、自以为了不起。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

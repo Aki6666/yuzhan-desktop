@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-yu-chou-mou-01",
+  "word": "未雨绸缪",
+  "pinyin": "wèi yǔ chóu móu",
+  "meaning": "趁天还没下雨，先修缮房屋门窗，比喻事先做好防备。",
+  "usage": "强调事前准备；与\"防微杜渐\"\"居安思危\"常并列出现。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "防汛工作应未雨绸缪，防患于未然。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 73
+}

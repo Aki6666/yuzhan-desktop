@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wen-zha-wen-da-01",
+  "word": "稳扎稳打",
+  "pinyin": "wěn zhā wěn dǎ",
+  "meaning": "有把握地作战，比喻有步骤、有把握地做事。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

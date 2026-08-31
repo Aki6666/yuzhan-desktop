@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-ru-ren-xin-01",
+  "word": "深入人心",
+  "pinyin": "shēn rù rén xīn",
+  "meaning": "指理论、学说、政策等被人们深切了解和信服。",
+  "usage": "多用于理念、政策、思想等被广泛认同。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "绿色发展理念日益深入人心。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

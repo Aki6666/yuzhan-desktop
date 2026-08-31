@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-ting-ji-cong-01",
+  "word": "言听计从",
+  "pinyin": "yán tīng jì cóng",
+  "meaning": "说的话都听从、出的主意都采纳，形容十分信任。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

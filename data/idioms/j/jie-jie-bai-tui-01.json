@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-jie-bai-tui-01",
+  "word": "节节败退",
+  "pinyin": "jié jié bài tuì",
+  "meaning": "接连不断地失败后退。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

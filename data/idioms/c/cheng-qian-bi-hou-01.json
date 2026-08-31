@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cheng-qian-bi-hou-01",
+  "word": "惩前毖后",
+  "pinyin": "chéng qián bì hòu",
+  "meaning": "把以前的错误作为教训，使以后谨慎些、不再重犯（\"毖\"=谨慎）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

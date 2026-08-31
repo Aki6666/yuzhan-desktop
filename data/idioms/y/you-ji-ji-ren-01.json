@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "you-ji-ji-ren-01",
+  "word": "由己及人",
+  "pinyin": "yóu jǐ jí rén",
+  "meaning": "由自己推想到别人，指设身处地为别人着想。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

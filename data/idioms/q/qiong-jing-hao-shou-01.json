@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qiong-jing-hao-shou-01",
+  "word": "穷经皓首",
+  "pinyin": "qióng jīng hào shǒu",
+  "meaning": "到老还钻研经籍，形容勤学不辍（\"穷\"=尽、钻研到底）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

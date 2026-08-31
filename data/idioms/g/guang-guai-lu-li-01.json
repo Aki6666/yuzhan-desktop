@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "guang-guai-lu-li-01",
+  "word": "光怪陆离",
+  "pinyin": "guāng guài lù lí",
+  "meaning": "形容现象奇异、色彩斑斓，也形容事物离奇多变（\"陆离\"=色彩繁杂）。",
+  "usage": "多用于景象奇异或社会现象光怪。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "极光在海面上空呈现出光怪陆离的景象。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

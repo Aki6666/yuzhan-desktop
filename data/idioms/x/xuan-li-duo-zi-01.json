@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xuan-li-duo-zi-01",
+  "word": "绚丽多姿",
+  "pinyin": "xuàn lì duō zī",
+  "meaning": "灿烂美丽、姿态多样。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

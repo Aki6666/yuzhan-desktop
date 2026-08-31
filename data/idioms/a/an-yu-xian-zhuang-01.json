@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "an-yu-xian-zhuang-01",
+  "word": "安于现状",
+  "pinyin": "ān yú xiàn zhuàng",
+  "meaning": "满足于目前的状况，不求进步。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

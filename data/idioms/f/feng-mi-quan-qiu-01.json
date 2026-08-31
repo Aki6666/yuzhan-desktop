@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-mi-quan-qiu-01",
+  "word": "风靡全球",
+  "pinyin": "fēng mǐ quán qiú",
+  "meaning": "形容事物在整个世界盛行。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

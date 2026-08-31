@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiong-you-cheng-zhu-01",
+  "word": "胸有成竹",
+  "pinyin": "xiōng yǒu chéng zhú",
+  "meaning": "画竹子时心里有一幅竹子的形象，比喻做事之前已经有通盘的考虑。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

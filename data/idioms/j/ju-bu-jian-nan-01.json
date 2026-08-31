@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-bu-jian-nan-01",
+  "word": "举步艰难",
+  "pinyin": "jǔ bù jiān nán",
+  "meaning": "迈步困难，比喻处境困难、进展不顺。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

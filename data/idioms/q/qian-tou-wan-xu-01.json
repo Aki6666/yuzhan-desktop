@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-tou-wan-xu-01",
+  "word": "千头万绪",
+  "pinyin": "qiān tóu wàn xù",
+  "meaning": "形容事情头绪繁多，纷乱复杂（\"绪\"=丝头，比喻开端）。",
+  "usage": "强调事情多而乱、不知从何下手。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "灾后重建工作千头万绪。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

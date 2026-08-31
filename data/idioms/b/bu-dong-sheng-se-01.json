@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-dong-sheng-se-01",
+  "word": "不动声色",
+  "pinyin": "bú dòng shēng sè",
+  "meaning": "内心活动不从语气和神态上表现出来，形容态度镇静。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhen-dao-shi-qiang-01",
+  "word": "真刀实枪",
+  "pinyin": "zhēn dāo shí qiāng",
+  "meaning": "真刀真枪，比喻真实地进行或毫不含糊。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

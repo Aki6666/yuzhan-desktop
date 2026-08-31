@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-chang-zhe-zhi-01",
+  "word": "浅尝辄止",
+  "pinyin": "qiǎn cháng zhé zhǐ",
+  "meaning": "略微尝试一下就停止，比喻不深入钻研。",
+  "usage": "多用于批评学习、研究等浅尝而止、不求深入。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "科研工作浅尝辄止，难有突破。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 89
+}

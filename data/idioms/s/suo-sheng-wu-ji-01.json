@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "suo-sheng-wu-ji-01",
+  "word": "所剩无几",
+  "pinyin": "suǒ shèng wú jǐ",
+  "meaning": "剩下的没有多少了。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

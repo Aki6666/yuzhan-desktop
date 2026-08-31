@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hou-ji-wu-ren-01",
+  "word": "后继无人",
+  "pinyin": "hòu jì wú rén",
+  "meaning": "没有继承的人，形容事业无人接续。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

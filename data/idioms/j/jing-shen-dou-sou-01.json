@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-shen-dou-sou-01",
+  "word": "精神抖擞",
+  "pinyin": "jīng shén dǒu sǒu",
+  "meaning": "精神振奋、情绪饱满（\"抖擞\"=振作）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

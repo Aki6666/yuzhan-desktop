@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-fa-tu-qiang-01",
+  "word": "奋发图强",
+  "pinyin": "fèn fā tú qiáng",
+  "meaning": "振作精神，努力谋求强盛（\"图\"=谋求）。",
+  "usage": "多用于国家、民族、个人立志自强。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "青年一代要奋发图强，担当时代重任。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

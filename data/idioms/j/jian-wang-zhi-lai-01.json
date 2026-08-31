@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-wang-zhi-lai-01",
+  "word": "鉴往知来",
+  "pinyin": "jiàn wǎng zhī lái",
+  "meaning": "根据以往的情形便知道今后怎样发展变化（\"鉴\"=审察）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

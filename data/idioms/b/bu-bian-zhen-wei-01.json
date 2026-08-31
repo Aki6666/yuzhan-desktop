@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-bian-zhen-wei-01",
+  "word": "不辨真伪",
+  "pinyin": "bú biàn zhēn wěi",
+  "meaning": "分不清真假。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

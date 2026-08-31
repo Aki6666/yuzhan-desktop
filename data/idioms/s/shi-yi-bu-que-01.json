@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-yi-bu-que-01",
+  "word": "拾遗补缺",
+  "pinyin": "shí yí bǔ quē",
+  "meaning": "拾取遗漏的、补足缺少的（\"遗\"=遗漏）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wang-yang-zi-si-01",
+  "word": "汪洋恣肆",
+  "pinyin": "wāng yáng zì sì",
+  "meaning": "形容文章、言论等气势宏大、奔放自由（\"恣肆\"=豪放不拘）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

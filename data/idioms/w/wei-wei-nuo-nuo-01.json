@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-wei-nuo-nuo-01",
+  "word": "唯唯诺诺",
+  "pinyin": "wéi wéi nuò nuò",
+  "meaning": "形容一味顺从别人的意见、不敢表示不同意见（\"唯唯\"\"诺诺\"=应答声）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

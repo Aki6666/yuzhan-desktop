@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-sang-ma-huai-01",
+  "word": "指桑骂槐",
+  "pinyin": "zhǐ sāng mà huái",
+  "meaning": "指着桑树骂槐树，比喻表面上骂这个人、实际上骂那个人。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

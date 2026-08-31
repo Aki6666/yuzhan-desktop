@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-huo-que-01",
+  "word": "不可或缺",
+  "pinyin": "bù kě huò quē",
+  "meaning": "不能有一点点缺少，形容非常重要、必不可少（\"或\"=稍微）。",
+  "usage": "强调不可缺少；与\"必不可少\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "水是生命活动中不可或缺的物质。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

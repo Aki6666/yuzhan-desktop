@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ke-qin-ke-jian-01",
+  "word": "克勤克俭",
+  "pinyin": "kè qín kè jiǎn",
+  "meaning": "既能勤劳，又能节俭（\"克\"=能够）。",
+  "usage": "多用于持家、治国的美德。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "老一辈克勤克俭，为我们树起榜样。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

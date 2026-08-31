@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shao-zong-ji-shi-01",
+  "word": "稍纵即逝",
+  "pinyin": "shāo zòng jí shì",
+  "meaning": "稍微一放松就消失了，形容时间或机会等很容易失去（\"纵\"=放松）。",
+  "usage": "多用于时间、机会、灵感等转瞬即逝。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "商机稍纵即逝，须果断决策。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

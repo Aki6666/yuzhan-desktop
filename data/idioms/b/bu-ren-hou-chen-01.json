@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ren-hou-chen-01",
+  "word": "步人后尘",
+  "pinyin": "bù rén hòu chén",
+  "meaning": "跟在别人后面走，比喻追随、模仿别人（\"后尘\"=走路扬起的尘土）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-ruo-wang-wen-01",
+  "word": "置若罔闻",
+  "pinyin": "zhì ruò wǎng wén",
+  "meaning": "放在一边，好像没有听见一样，形容不予理睬（\"罔\"=没有）。",
+  "usage": "强调对意见、警告等不理不睬。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "他对多次警告置若罔闻，酿成大祸。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

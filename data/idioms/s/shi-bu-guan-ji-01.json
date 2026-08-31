@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-bu-guan-ji-01",
+  "word": "事不关己",
+  "pinyin": "shì bù guān jǐ",
+  "meaning": "事情与自己无关，形容态度冷漠（常与\"高高挂起\"连用）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

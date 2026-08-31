@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-gan-ji-mo-01",
+  "word": "不甘寂寞",
+  "pinyin": "bù gān jì mò",
+  "meaning": "不甘心被冷落、急于要表现自己或有所作为。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

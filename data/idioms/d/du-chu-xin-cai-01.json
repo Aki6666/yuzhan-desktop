@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "du-chu-xin-cai-01",
+  "word": "独出心裁",
+  "pinyin": "dú chū xīn cái",
+  "meaning": "原指诗文的构思有独到之处，后泛指想出的办法与众不同。",
+  "usage": "与\"别出心裁\"近义。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "展台设计独出心裁，吸引众多目光。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

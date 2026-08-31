@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qing-zhong-dao-zhi-01",
+  "word": "轻重倒置",
+  "pinyin": "qīng zhòng dǎo zhì",
+  "meaning": "把重要的和次要的位置弄颠倒了。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

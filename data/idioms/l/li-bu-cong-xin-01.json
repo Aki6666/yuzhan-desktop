@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "li-bu-cong-xin-01",
+  "word": "力不从心",
+  "pinyin": "lì bù cóng xīn",
+  "meaning": "心里想做，可是能力够不上。",
+  "usage": "强调心有余而力不足。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "年事已高，很多事他已力不从心。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

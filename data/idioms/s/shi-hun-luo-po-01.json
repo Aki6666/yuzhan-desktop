@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-hun-luo-po-01",
+  "word": "失魂落魄",
+  "pinyin": "shī hún luò pò",
+  "meaning": "形容心神不定、非常惊慌或沮丧。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

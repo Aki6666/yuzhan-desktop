@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-xing-he-yi-01",
+  "word": "知行合一",
+  "pinyin": "zhī xíng hé yī",
+  "meaning": "认识与行动相统一、理论与实践相结合。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

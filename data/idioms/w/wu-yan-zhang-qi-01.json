@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-yan-zhang-qi-01",
+  "word": "乌烟瘴气",
+  "pinyin": "wū yān zhàng qì",
+  "meaning": "形容环境嘈杂、秩序混乱或社会黑暗（\"瘴气\"=热带山林中的湿热空气）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

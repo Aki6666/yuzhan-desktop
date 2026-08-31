@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-yi-dai-lao-01",
+  "word": "以逸待劳",
+  "pinyin": "yǐ yì dài láo",
+  "meaning": "养精蓄锐，等对方疲劳时再出击，比喻做好准备、从容应对。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

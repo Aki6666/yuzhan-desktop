@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sheng-sheng-bu-xi-01",
+  "word": "生生不息",
+  "pinyin": "shēng shēng bù xī",
+  "meaning": "不断地生长、繁殖，永不停止。",
+  "usage": "多用于生命、文化、文明等的延续。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "中华文明生生不息，历久弥新。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

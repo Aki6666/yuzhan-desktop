@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "you-zhang-ke-xun-01",
+  "word": "有章可循",
+  "pinyin": "yǒu zhāng kě xún",
+  "meaning": "有规章或章程可以遵循。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-zheng-yan-shun-01",
+  "word": "名正言顺",
+  "pinyin": "míng zhèng yán shùn",
+  "meaning": "名义正当、道理讲得通，形容做事理由充分、有依据。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

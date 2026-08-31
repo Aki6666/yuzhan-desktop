@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gai-mo-neng-wai-01",
+  "word": "概莫能外",
+  "pinyin": "gài mò néng wài",
+  "meaning": "一概不能除外，指都在所指范围之内（\"概\"=一律）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

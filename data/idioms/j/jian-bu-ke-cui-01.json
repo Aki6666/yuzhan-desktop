@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-bu-ke-cui-01",
+  "word": "坚不可摧",
+  "pinyin": "jiān bù kě cuī",
+  "meaning": "非常坚固，摧毁不了。",
+  "usage": "多用于意志、防线、友谊等坚固。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "军民团结坚不可摧。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

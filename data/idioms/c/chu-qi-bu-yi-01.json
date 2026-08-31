@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chu-qi-bu-yi-01",
+  "word": "出其不意",
+  "pinyin": "chū qí bú yì",
+  "meaning": "趁对方没有意料到就采取行动（\"其\"=对方）。",
+  "usage": "强调攻其不备、出人意料。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "游击队出其不意，夜袭敌营。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

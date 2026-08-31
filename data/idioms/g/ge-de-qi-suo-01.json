@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-de-qi-suo-01",
+  "word": "各得其所",
+  "pinyin": "gè dé qí suǒ",
+  "meaning": "原指各人都得到满足，后指每个人或事物都得到恰当的安置。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

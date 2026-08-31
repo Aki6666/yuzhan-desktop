@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-mo-mie-01",
+  "word": "不可磨灭",
+  "pinyin": "bù kě mó miè",
+  "meaning": "永远不会消失，多指功绩、印象等（\"磨灭\"=逐渐消失）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

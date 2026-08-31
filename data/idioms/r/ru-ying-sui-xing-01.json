@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-ying-sui-xing-01",
+  "word": "如影随形",
+  "pinyin": "rú yǐng suí xíng",
+  "meaning": "好像影子跟着形体一样，比喻两个人或事物关系密切，形影不离。",
+  "usage": "强调关系紧密、时刻相随。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "机遇与挑战如影随形。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 50
+}

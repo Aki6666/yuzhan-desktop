@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "huan-huan-xiang-kou-01",
+  "word": "环环相扣",
+  "pinyin": "huán huán xiāng kòu",
+  "meaning": "一环套一环，形容衔接紧密、联系密切。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

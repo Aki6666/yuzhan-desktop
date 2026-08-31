@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bao-xin-jiu-huo-01",
+  "word": "抱薪救火",
+  "pinyin": "bào xīn jiù huǒ",
+  "meaning": "抱着柴草去救火，比喻用错误的方法去消除灾祸、反而使灾祸扩大。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

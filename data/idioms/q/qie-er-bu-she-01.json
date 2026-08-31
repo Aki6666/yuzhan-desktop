@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qie-er-bu-she-01",
+  "word": "锲而不舍",
+  "pinyin": "qiè ér bù shě",
+  "meaning": "不停地镂刻，比喻有恒心、有毅力（\"锲\"=镂刻，\"舍\"=停止）。",
+  "usage": "与\"持之以恒\"近义；\"锲\"读qiè。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "治学需要锲而不舍的精神。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

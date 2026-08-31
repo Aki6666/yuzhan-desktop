@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-mi-bu-wu-01",
+  "word": "执迷不悟",
+  "pinyin": "zhí mí bú wù",
+  "meaning": "坚持错误而不觉悟（\"执\"=坚持）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

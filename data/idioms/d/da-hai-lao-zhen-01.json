@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-hai-lao-zhen-01",
+  "word": "大海捞针",
+  "pinyin": "dà hǎi lāo zhēn",
+  "meaning": "在大海里捞一根针，比喻极难找到。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

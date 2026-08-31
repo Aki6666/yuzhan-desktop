@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-shu-ge-jue-01",
+  "word": "音书隔绝",
+  "pinyin": "yīn shū gé jué",
+  "meaning": "音信、书信完全断绝，无法联系。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

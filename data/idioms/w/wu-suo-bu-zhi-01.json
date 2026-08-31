@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-suo-bu-zhi-01",
+  "word": "无所不至",
+  "pinyin": "wú suǒ bù zhì",
+  "meaning": "没有达不到的地方，指什么坏事都做（多含贬义）。",
+  "usage": "与「无微不至」互为易混对（data/pairs.json）：无所不至=坏事做尽（贬），无微不至=关怀周到（褒）；本节为教研备用词（§5.4 frequency=1）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-09-01"
+}

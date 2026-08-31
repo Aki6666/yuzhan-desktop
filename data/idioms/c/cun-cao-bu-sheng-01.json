@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cun-cao-bu-sheng-01",
+  "word": "寸草不生",
+  "pinyin": "cùn cǎo bù shēng",
+  "meaning": "连小草都不生长，形容土地贫瘠或灾害严重。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

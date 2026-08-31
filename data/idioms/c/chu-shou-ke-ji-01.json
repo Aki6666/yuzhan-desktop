@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chu-shou-ke-ji-01",
+  "word": "触手可及",
+  "pinyin": "chù shǒu kě jí",
+  "meaning": "近在手边，一伸手就可以够到，形容距离极近或很容易得到。",
+  "usage": "强调近、易得。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "公共服务应让群众触手可及。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

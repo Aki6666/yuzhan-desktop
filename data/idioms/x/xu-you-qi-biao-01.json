@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xu-you-qi-biao-01",
+  "word": "虚有其表",
+  "pinyin": "xū yǒu qí biǎo",
+  "meaning": "空有好看的外表、实际上并不中用。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

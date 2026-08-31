@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-tui-wei-jin-01",
+  "word": "以退为进",
+  "pinyin": "yǐ tuì wéi jìn",
+  "meaning": "以退让作为进取的手段。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

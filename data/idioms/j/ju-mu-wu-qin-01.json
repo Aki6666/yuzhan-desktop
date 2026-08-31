@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-mu-wu-qin-01",
+  "word": "举目无亲",
+  "pinyin": "jǔ mù wú qīn",
+  "meaning": "抬起眼睛看不到一个亲人，形容孤单。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

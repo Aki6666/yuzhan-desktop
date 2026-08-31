@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-bao-zi-qi-01",
+  "word": "自暴自弃",
+  "pinyin": "zì bào zì qì",
+  "meaning": "自己糟蹋自己、自己鄙弃自己，形容不求上进、甘于落后。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

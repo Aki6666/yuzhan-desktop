@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-bu-fu-shi-01",
+  "word": "名不副实",
+  "pinyin": "míng bú fù shí",
+  "meaning": "名称或名声与实际不相符合（\"副\"=相称）。",
+  "usage": "与\"名副其实\"相对。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "号称\"有机\"却滥用农药，名不副实。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

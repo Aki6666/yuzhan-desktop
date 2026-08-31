@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ai-mo-neng-zhu-01",
+  "word": "爱莫能助",
+  "pinyin": "ài mò néng zhù",
+  "meaning": "虽然同情、愿意帮助，但无力做到（\"莫\"=不能）。",
+  "usage": "强调有心无力；注意与\"无能为力\"（能力不足）区别。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "对于他的困境，大家爱莫能助。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 41
+}

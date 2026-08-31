@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-wan-huo-ji-01",
+  "word": "十万火急",
+  "pinyin": "shí wàn huǒ jí",
+  "meaning": "形容事情紧急到了极点（旧时文书急递用语）。",
+  "usage": "强调极其紧急。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "消防警报十万火急，全员立即出动。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

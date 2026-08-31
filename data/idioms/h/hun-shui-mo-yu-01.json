@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hun-shui-mo-yu-01",
+  "word": "浑水摸鱼",
+  "pinyin": "hún shuǐ mō yú",
+  "meaning": "比喻趁混乱的时机攫取不正当的利益。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

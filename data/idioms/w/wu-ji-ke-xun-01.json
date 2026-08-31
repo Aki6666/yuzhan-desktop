@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ji-ke-xun-01",
+  "word": "无迹可循",
+  "pinyin": "wú jì kě xún",
+  "meaning": "没有踪迹可以追寻，形容消失得毫无痕迹。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

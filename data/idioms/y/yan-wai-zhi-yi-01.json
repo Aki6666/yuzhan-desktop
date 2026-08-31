@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-wai-zhi-yi-01",
+  "word": "言外之意",
+  "pinyin": "yán wài zhī yì",
+  "meaning": "话里没有明说而暗含的意思。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

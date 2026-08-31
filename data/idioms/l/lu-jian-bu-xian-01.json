@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lu-jian-bu-xian-01",
+  "word": "屡见不鲜",
+  "pinyin": "lǚ jiàn bù xiān",
+  "meaning": "经常看见，并不新奇（\"鲜\"=新奇、少）。",
+  "usage": "\"鲜\"读xiǎn，意为新奇，非\"新鲜\"。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "此类消费陷阱屡见不鲜，消费者须谨慎。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 56
+}

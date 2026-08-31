@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhong-zhi-cheng-cheng-01",
+  "word": "众志成城",
+  "pinyin": "zhòng zhì chéng chéng",
+  "meaning": "大家同心协力就像城墙一样坚固，形容团结一致、力量无比强大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

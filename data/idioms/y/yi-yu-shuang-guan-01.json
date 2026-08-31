@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-yu-shuang-guan-01",
+  "word": "一语双关",
+  "pinyin": "yì yǔ shuāng guān",
+  "meaning": "一句话包含两层意思。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-wei-bu-zhi-01",
+  "word": "无微不至",
+  "pinyin": "wú wēi bú zhì",
+  "meaning": "没有一个细微的地方不照顾到，形容关怀、照顾得非常周到（\"至\"=到）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

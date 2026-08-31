@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ming-jiu-li-01",
+  "word": "不明就里",
+  "pinyin": "bù míng jiù lǐ",
+  "meaning": "不明白其中的道理、内情（\"就里\"=内部情况）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

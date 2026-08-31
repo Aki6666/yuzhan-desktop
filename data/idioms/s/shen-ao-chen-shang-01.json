@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-ao-chen-shang-01",
+  "word": "甚嚣尘上",
+  "pinyin": "shèn áo chén shàng",
+  "meaning": "原形容军中喧哗纷乱，后形容对某人某事议论纷纷，也指某种言论十分嚣张。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

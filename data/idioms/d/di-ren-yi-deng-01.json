@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "di-ren-yi-deng-01",
+  "word": "低人一等",
+  "pinyin": "dī rén yī děng",
+  "meaning": "比别人低一个等级，多指社会地位低下。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

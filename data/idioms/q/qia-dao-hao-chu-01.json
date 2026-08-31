@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qia-dao-hao-chu-01",
+  "word": "恰到好处",
+  "pinyin": "qià dào hǎo chù",
+  "meaning": "说话、办事正好达到最适当的程度。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

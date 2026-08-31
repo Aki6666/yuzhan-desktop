@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xu-xu-ru-sheng-01",
+  "word": "栩栩如生",
+  "pinyin": "xǔ xǔ rú shēng",
+  "meaning": "形容画作、雕塑等艺术形象生动逼真，像活的一样（\"栩栩\"=生动活泼）。",
+  "usage": "仅用于艺术形象、描写等逼真。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "画中的骏马栩栩如生。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

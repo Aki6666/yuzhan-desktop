@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bao-cheng-shou-zhen-01",
+  "word": "抱诚守真",
+  "pinyin": "bào chéng shǒu zhēn",
+  "meaning": "怀抱真诚、坚守本真，形容为人诚实正直。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

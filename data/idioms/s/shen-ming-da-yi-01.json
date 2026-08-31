@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-ming-da-yi-01",
+  "word": "深明大义",
+  "pinyin": "shēn míng dà yì",
+  "meaning": "深刻懂得为人处世的大道理（\"大义\"=大道理）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

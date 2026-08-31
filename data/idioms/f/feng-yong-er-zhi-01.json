@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-yong-er-zhi-01",
+  "word": "蜂拥而至",
+  "pinyin": "fēng yōng ér zhì",
+  "meaning": "像蜂群一样拥来，形容很多人乱哄哄地朝一个地方聚拢。",
+  "usage": "多用于人群大批涌来。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "消息一出，记者蜂拥而至。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

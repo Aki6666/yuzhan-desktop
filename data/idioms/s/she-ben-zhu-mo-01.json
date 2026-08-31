@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "she-ben-zhu-mo-01",
+  "word": "舍本逐末",
+  "pinyin": "shè běn zhú mò",
+  "meaning": "放弃根本而去追求枝节，比喻做事抓不住主要问题而只顾细枝末节。",
+  "usage": "与\"本末倒置\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "只重形式轻内容，无异于舍本逐末。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

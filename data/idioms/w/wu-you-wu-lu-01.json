@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-you-wu-lu-01",
+  "word": "无忧无虑",
+  "pinyin": "wú yōu wú lǜ",
+  "meaning": "没有一点忧愁和顾虑。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

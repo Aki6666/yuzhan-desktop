@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhen-ding-zi-ru-01",
+  "word": "镇定自如",
+  "pinyin": "zhèn dìng zì rú",
+  "meaning": "在情况紧急时不慌不乱。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

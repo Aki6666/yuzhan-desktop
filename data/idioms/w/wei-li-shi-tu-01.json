@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-li-shi-tu-01",
+  "word": "唯利是图",
+  "pinyin": "wéi lì shì tú",
+  "meaning": "一心只为利益、别的什么都不顾。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

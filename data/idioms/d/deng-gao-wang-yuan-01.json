@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "deng-gao-wang-yuan-01",
+  "word": "登高望远",
+  "pinyin": "dēng gāo wàng yuǎn",
+  "meaning": "登上高处、看得更远，比喻站得高、看得远。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

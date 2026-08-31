@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-tian-dong-di-01",
+  "word": "惊天动地",
+  "pinyin": "jīng tiān dòng dì",
+  "meaning": "形容声音响亮、声势浩大或事业伟大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

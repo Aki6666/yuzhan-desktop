@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hu-bian-luan-zao-01",
+  "word": "胡编乱造",
+  "pinyin": "hú biān luàn zào",
+  "meaning": "没有根据、不合情理地随意编造。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

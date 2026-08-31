@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-yi-fan-san-01",
+  "word": "举一反三",
+  "pinyin": "jǔ yī fǎn sān",
+  "meaning": "从一件事类推而知道许多同类的事（\"反\"=类推）。",
+  "usage": "强调触类旁通、善于类推。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "老师鼓励学生举一反三，灵活运用知识。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 45
+}

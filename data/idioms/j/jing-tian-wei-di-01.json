@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-tian-wei-di-01",
+  "word": "经天纬地",
+  "pinyin": "jīng tiān wěi dì",
+  "meaning": "以天为经、以地为纬，形容人有治理天下的才能、本领极大。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

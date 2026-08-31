@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "du-mu-nan-zhi-01",
+  "word": "独木难支",
+  "pinyin": "dú mù nán zhī",
+  "meaning": "一根木头难以支撑将要倾倒的大厦，比喻一个人的力量难以支撑全局。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

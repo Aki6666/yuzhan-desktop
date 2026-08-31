@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-fang-she-fa-01",
+  "word": "想方设法",
+  "pinyin": "xiǎng fāng shè fǎ",
+  "meaning": "想尽种种办法。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

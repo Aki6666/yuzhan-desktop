@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-lai-zhi-bi-01",
+  "word": "神来之笔",
+  "pinyin": "shén lái zhī bǐ",
+  "meaning": "形容文艺作品等极其精彩、仿佛由神灵相助写出。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

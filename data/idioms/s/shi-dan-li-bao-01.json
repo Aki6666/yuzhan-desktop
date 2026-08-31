@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-dan-li-bao-01",
+  "word": "势单力薄",
+  "pinyin": "shì dān lì báo",
+  "meaning": "势力孤单，力量薄弱。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

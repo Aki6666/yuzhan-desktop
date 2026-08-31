@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zuo-gu-you-pan-01",
+  "word": "左顾右盼",
+  "pinyin": "zuǒ gù yòu pàn",
+  "meaning": "向左右两边看，形容得意、犹豫或仔细观察的样子。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

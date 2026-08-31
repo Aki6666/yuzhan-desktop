@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-xi-ruo-kuang-01",
+  "word": "欣喜若狂",
+  "pinyin": "xīn xǐ ruò kuáng",
+  "meaning": "高兴得像发狂一样，形容高兴到了极点。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

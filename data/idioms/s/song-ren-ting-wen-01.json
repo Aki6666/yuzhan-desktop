@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "song-ren-ting-wen-01",
+  "word": "耸人听闻",
+  "pinyin": "sǒng rén tīng wén",
+  "meaning": "故意说夸大或惊奇的话使人震惊（\"耸\"=惊动）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-ji-zhi-bi-01",
+  "word": "知己知彼",
+  "pinyin": "zhī jǐ zhī bǐ",
+  "meaning": "对对方的情况和自己情况都了解得很透彻（常与\"百战不殆\"连用）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

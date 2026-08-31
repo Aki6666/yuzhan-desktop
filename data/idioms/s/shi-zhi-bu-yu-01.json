@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-zhi-bu-yu-01",
+  "word": "矢志不渝",
+  "pinyin": "shǐ zhì bù yú",
+  "meaning": "立定志向，永不改变（\"渝\"=改变）。",
+  "usage": "强调志向坚定；与\"坚贞不渝\"近义。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他矢志不渝地投身于扶贫事业。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 47
+}

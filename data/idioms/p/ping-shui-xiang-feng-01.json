@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ping-shui-xiang-feng-01",
+  "word": "萍水相逢",
+  "pinyin": "píng shuǐ xiāng féng",
+  "meaning": "像浮萍随水飘泊、偶然聚在一起，比喻素不相识的人偶然相遇。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

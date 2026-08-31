@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-yi-wu-kao-01",
+  "word": "无依无靠",
+  "pinyin": "wú yī wú kào",
+  "meaning": "孤苦而无所依赖，形容孤独困苦。",
+  "usage": "多形容孤苦无援的处境。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "老人无依无靠，社区志愿者常来照料。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

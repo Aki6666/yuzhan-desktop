@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-zai-qian-qiu-01",
+  "word": "利在千秋",
+  "pinyin": "lì zài qiān qiū",
+  "meaning": "好处、功劳惠及千秋万代（常与\"功在当代\"连用）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

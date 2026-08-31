@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "han-chang-lin-li-01",
+  "word": "酣畅淋漓",
+  "pinyin": "hān chàng lín lí",
+  "meaning": "形容非常畅快，也形容文章、乐曲等表达得充分透彻。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

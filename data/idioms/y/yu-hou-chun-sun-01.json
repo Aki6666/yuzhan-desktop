@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-hou-chun-sun-01",
+  "word": "雨后春笋",
+  "pinyin": "yǔ hòu chūn sǔn",
+  "meaning": "春天下雨后竹笋长得又多又快，比喻新事物大量涌现。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

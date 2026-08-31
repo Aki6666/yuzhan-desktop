@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "min-bu-liao-sheng-01",
+  "word": "民不聊生",
+  "pinyin": "mín bù liáo shēng",
+  "meaning": "人民无法生活下去（\"聊\"=依赖）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

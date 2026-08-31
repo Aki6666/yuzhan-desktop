@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bian-di-kai-hua-01",
+  "word": "遍地开花",
+  "pinyin": "biàn dì kāi huā",
+  "meaning": "比喻好的事物到处涌现或普遍发展。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

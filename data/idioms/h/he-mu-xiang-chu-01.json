@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "he-mu-xiang-chu-01",
+  "word": "和睦相处",
+  "pinyin": "hé mù xiāng chǔ",
+  "meaning": "彼此和好地相处。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

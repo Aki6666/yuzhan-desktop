@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hu-tong-you-wu-01",
+  "word": "互通有无",
+  "pinyin": "hù tōng yǒu wú",
+  "meaning": "互相交换、彼此通融，指以自己多余的换自己缺少的。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

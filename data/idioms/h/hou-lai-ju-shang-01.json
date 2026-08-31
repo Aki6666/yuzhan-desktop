@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "hou-lai-ju-shang-01",
+  "word": "后来居上",
+  "pinyin": "hòu lái jū shàng",
+  "meaning": "后来的超过先前的，多指年轻人或后起之秀超过前辈。",
+  "usage": "强调后来者超越前人。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "在新能源领域，中国实现了后来居上。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

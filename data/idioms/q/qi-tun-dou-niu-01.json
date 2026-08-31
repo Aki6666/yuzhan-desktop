@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-tun-dou-niu-01",
+  "word": "气吞斗牛",
+  "pinyin": "qì tūn dòu niú",
+  "meaning": "气势能吞下斗、牛二星，形容气魄很大（\"斗牛\"=二十八宿中的斗宿和牛宿）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

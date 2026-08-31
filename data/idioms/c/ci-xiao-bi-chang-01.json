@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ci-xiao-bi-chang-01",
+  "word": "此消彼长",
+  "pinyin": "cǐ xiāo bǐ cháng",
+  "meaning": "这个下降、消失，那个上升、增长。",
+  "usage": "多用于描述两者互为消长的关系。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "传统媒体与新媒体此消彼长，格局深刻调整。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 43
+}

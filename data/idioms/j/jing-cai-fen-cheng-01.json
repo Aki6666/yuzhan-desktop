@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-cai-fen-cheng-01",
+  "word": "精彩纷呈",
+  "pinyin": "jīng cǎi fēn chéng",
+  "meaning": "精彩的场面、内容等纷纷呈现。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

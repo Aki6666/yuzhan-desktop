@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "duo-guan-qi-xia-01",
+  "word": "多管齐下",
+  "pinyin": "duō guǎn qí xià",
+  "meaning": "比喻从多方面同时采取措施、一齐进行。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

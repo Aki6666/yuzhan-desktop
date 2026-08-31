@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhu-si-ma-ji-01",
+  "word": "蛛丝马迹",
+  "pinyin": "zhū sī mǎ jì",
+  "meaning": "蜘蛛的细丝、马蹄的痕迹，比喻查究事情根源的不明显的线索。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

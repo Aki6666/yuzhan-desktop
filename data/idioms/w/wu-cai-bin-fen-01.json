@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-cai-bin-fen-01",
+  "word": "五彩缤纷",
+  "pinyin": "wǔ cǎi bīn fēn",
+  "meaning": "颜色繁多而美丽（\"缤纷\"=繁多杂乱）。",
+  "usage": "多用于色彩丰富的景象。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "节日的烟花五彩缤纷，照亮夜空。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 43
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-jian-yi-gai-01",
+  "word": "言简意赅",
+  "pinyin": "yán jiǎn yì gāi",
+  "meaning": "语言简练而意思完备（\"赅\"=完备）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

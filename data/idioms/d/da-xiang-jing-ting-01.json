@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "da-xiang-jing-ting-01",
+  "word": "大相径庭",
+  "pinyin": "dà xiāng jìng tíng",
+  "meaning": "相差很远，彼此矛盾（\"径\"=门外小路，\"庭\"=堂前空地）。",
+  "usage": "用于强调两者差异极大甚至相反。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "调查结果与预想大相径庭。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 86
+}

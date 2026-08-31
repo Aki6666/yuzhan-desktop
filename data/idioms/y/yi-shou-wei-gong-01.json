@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-shou-wei-gong-01",
+  "word": "以守为攻",
+  "pinyin": "yǐ shǒu wéi gōng",
+  "meaning": "用防守的办法来进攻，指在防守中伺机反攻。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

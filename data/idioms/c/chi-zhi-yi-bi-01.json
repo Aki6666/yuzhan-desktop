@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chi-zhi-yi-bi-01",
+  "word": "嗤之以鼻",
+  "pinyin": "chī zhī yǐ bí",
+  "meaning": "用鼻子吭气，表示轻蔑、看不起。",
+  "usage": "用于形容对某人某事不屑一顾。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他对这种哗众取宠的做法嗤之以鼻。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 72
+}

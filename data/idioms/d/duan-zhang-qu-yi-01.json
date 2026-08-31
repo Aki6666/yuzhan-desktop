@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "duan-zhang-qu-yi-01",
+  "word": "断章取义",
+  "pinyin": "duàn zhāng qǔ yì",
+  "meaning": "不顾全篇文章或谈话的内容，只孤立地取其中的一段或一句的意思。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

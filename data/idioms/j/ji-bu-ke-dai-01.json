@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-bu-ke-dai-01",
+  "word": "急不可待",
+  "pinyin": "jí bù kě dài",
+  "meaning": "急得不能再等待，形容心情急切。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

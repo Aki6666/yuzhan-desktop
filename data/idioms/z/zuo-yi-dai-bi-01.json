@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zuo-yi-dai-bi-01",
+  "word": "坐以待毙",
+  "pinyin": "zuò yǐ dài bì",
+  "meaning": "坐着等死，比喻不设法应付而消极等后果。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

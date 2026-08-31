@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "weng-zhong-zhi-bie-01",
+  "word": "瓮中之鳖",
+  "pinyin": "wèng zhōng zhī biē",
+  "meaning": "瓮里的甲鱼，比喻已在掌握之中、无法逃脱的人或物。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

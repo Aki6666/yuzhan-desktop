@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xun-xun-shan-you-01",
+  "word": "循循善诱",
+  "pinyin": "xún xún shàn yòu",
+  "meaning": "善于有步骤地引导别人学习（\"循循\"=有步骤）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

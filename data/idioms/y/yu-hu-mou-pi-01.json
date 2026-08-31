@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-hu-mou-pi-01",
+  "word": "与虎谋皮",
+  "pinyin": "yǔ hǔ móu pí",
+  "meaning": "同老虎商量要它的皮，比喻跟恶人商量要他牺牲自己的利益、绝对办不到。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

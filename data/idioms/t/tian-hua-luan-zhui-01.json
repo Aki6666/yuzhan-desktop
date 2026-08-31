@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-hua-luan-zhui-01",
+  "word": "天花乱坠",
+  "pinyin": "tiān huā luàn zhuì",
+  "meaning": "形容说话有声有色、极其动听（多指夸大的、不切实际的）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

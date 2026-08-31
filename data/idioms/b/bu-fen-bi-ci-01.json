@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-fen-bi-ci-01",
+  "word": "不分彼此",
+  "pinyin": "bù fēn bǐ cǐ",
+  "meaning": "不分你我，形容关系密切、不分界限。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fan-shan-yue-ling-01",
+  "word": "翻山越岭",
+  "pinyin": "fān shān yuè lǐng",
+  "meaning": "翻过重重山岭，形容旅途或行动艰苦。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

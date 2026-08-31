@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gang-bi-zi-yong-01",
+  "word": "刚愎自用",
+  "pinyin": "gāng bì zì yòng",
+  "meaning": "十分固执自信，不考虑别人的意见（\"愎\"=固执）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

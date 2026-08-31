@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhan-cao-chu-gen-01",
+  "word": "斩草除根",
+  "pinyin": "zhǎn cǎo chú gēn",
+  "meaning": "除草时连根除掉，比喻除去祸根、不留后患。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

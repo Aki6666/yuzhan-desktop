@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-yi-wei-chang-01",
+  "word": "习以为常",
+  "pinyin": "xí yǐ wéi cháng",
+  "meaning": "常常做某件事或见某种现象，成了习惯，就觉得很平常了。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

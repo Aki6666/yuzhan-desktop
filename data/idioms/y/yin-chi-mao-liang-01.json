@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-chi-mao-liang-01",
+  "word": "寅吃卯粮",
+  "pinyin": "yín chī mǎo liáng",
+  "meaning": "寅年吃了卯年的粮食，比喻入不敷出、预先支用以后的收入。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

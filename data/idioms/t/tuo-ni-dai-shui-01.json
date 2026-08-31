@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tuo-ni-dai-shui-01",
+  "word": "拖泥带水",
+  "pinyin": "tuō ní dài shuǐ",
+  "meaning": "比喻说话、写文章不简洁或做事不干脆利落。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

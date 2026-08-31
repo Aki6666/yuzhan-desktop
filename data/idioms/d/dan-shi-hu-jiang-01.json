@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dan-shi-hu-jiang-01",
+  "word": "箪食壶浆",
+  "pinyin": "dān shí hú jiāng",
+  "meaning": "百姓用箪盛饭、用壶盛汤来欢迎军队，形容军队受到群众拥护（\"箪\"=竹器）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

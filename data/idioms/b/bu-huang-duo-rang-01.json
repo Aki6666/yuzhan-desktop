@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-huang-duo-rang-01",
+  "word": "不遑多让",
+  "pinyin": "bù huáng duō ràng",
+  "meaning": "不比别人差、不甘落后（\"不遑\"=来不及，\"让\"=谦让）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

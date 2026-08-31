@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-jin-qi-yong-01",
+  "word": "物尽其用",
+  "pinyin": "wù jìn qí yòng",
+  "meaning": "各种东西的功用都尽量发挥出来。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

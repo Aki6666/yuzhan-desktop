@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "geng-jie-ba-su-01",
+  "word": "耿介拔俗",
+  "pinyin": "gěng jiè bá sú",
+  "meaning": "正直而有节操、超凡脱俗（\"耿介\"=正直）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

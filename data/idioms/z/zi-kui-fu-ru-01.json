@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-kui-fu-ru-01",
+  "word": "自愧弗如",
+  "pinyin": "zì kuì fú rú",
+  "meaning": "自己感到惭愧、不如别人（\"弗\"=不）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

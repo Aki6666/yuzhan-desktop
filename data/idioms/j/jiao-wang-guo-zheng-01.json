@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jiao-wang-guo-zheng-01",
+  "word": "矫枉过正",
+  "pinyin": "jiǎo wǎng guò zhèng",
+  "meaning": "纠正偏差做得过了头（\"枉\"=弯曲）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

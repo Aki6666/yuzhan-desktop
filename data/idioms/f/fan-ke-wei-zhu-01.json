@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fan-ke-wei-zhu-01",
+  "word": "反客为主",
+  "pinyin": "fǎn kè wéi zhǔ",
+  "meaning": "客人反过来成了主人，比喻变被动为主动。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

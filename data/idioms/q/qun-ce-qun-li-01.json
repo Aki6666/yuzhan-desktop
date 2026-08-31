@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qun-ce-qun-li-01",
+  "word": "群策群力",
+  "pinyin": "qún cè qún lì",
+  "meaning": "大家一起出主意、出力量（\"策\"=计谋）。",
+  "usage": "强调集中众人智慧和力量。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "灾后重建需要群策群力。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

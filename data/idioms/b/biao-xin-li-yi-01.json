@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "biao-xin-li-yi-01",
+  "word": "标新立异",
+  "pinyin": "biāo xīn lì yì",
+  "meaning": "提出新奇的主张，表示与众不同（\"标\"\"立\"=提出）。",
+  "usage": "中性偏贬（故意立异）；褒义（有创新）时注意语境。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "设计要标新立异，但也要符合实际。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 61
+}

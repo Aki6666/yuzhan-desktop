@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-wang-wu-ji-01",
+  "word": "一望无际",
+  "pinyin": "yí wàng wú jì",
+  "meaning": "一眼望不到边，形容非常辽阔。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

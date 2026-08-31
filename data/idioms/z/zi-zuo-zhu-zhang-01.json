@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-zuo-zhu-zhang-01",
+  "word": "自作主张",
+  "pinyin": "zì zuò zhǔ zhāng",
+  "meaning": "不征求别人意见、自己擅自做主。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhen-bi-gao-hu-01",
+  "word": "振臂高呼",
+  "pinyin": "zhèn bì gāo hū",
+  "meaning": "举起手臂高声呼喊，形容发出号召或表达激愤。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lue-xun-yi-chou-01",
+  "word": "略逊一筹",
+  "pinyin": "lüè xùn yì chóu",
+  "meaning": "比较起来，稍微差一点（\"逊\"=差，\"筹\"=筹码）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

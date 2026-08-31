@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tun-ji-ju-qi-01",
+  "word": "囤积居奇",
+  "pinyin": "tún jī jū qí",
+  "meaning": "把稀少的货物储藏起来、等待高价出售（\"居奇\"=囤积起来等待高价）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

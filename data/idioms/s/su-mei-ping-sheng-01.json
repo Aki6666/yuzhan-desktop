@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "su-mei-ping-sheng-01",
+  "word": "素昧平生",
+  "pinyin": "sù mèi píng shēng",
+  "meaning": "向来不认识、不了解（\"素\"=向来，\"昧\"=不了解）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ge-si-qi-zhi-01",
+  "word": "各司其职",
+  "pinyin": "gè sī qí zhí",
+  "meaning": "各自负责掌握自己的职责。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

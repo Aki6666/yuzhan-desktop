@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qing-you-ke-yuan-01",
+  "word": "情有可原",
+  "pinyin": "qíng yǒu kě yuán",
+  "meaning": "按情理可以原谅。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

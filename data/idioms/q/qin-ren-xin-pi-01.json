@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qin-ren-xin-pi-01",
+  "word": "沁人心脾",
+  "pinyin": "qìn rén xīn pí",
+  "meaning": "指呼吸到新鲜空气或喝了清凉饮料使人感到舒适，也形容诗文、乐曲等清新动人。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

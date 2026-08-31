@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ju-yi-ge-01",
+  "word": "不拘一格",
+  "pinyin": "bù jū yì gé",
+  "meaning": "不局限于一种规格或方式（\"格\"=规格、方式）。",
+  "usage": "多用于选拔人才、写作风格等不拘泥成规。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "选拔人才要不拘一格，唯才是举。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

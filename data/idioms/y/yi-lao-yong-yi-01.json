@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-lao-yong-yi-01",
+  "word": "一劳永逸",
+  "pinyin": "yì láo yǒng yì",
+  "meaning": "辛苦一次，把事情办好，以后就不再费事了。",
+  "usage": "多用于否定或提醒语境：没有真正一劳永逸的办法。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "生态治理没有一劳永逸的捷径。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 45
+}

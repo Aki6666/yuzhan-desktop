@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-ru-qian-chu-01",
+  "word": "深入浅出",
+  "pinyin": "shēn rù qiǎn chū",
+  "meaning": "内容深刻，表达却浅显易懂。",
+  "usage": "多用于讲解、著述等通俗而深刻。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "专家深入浅出地讲解了复杂的经济问题。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 42
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bei-tian-min-ren-01",
+  "word": "悲天悯人",
+  "pinyin": "bēi tiān mǐn rén",
+  "meaning": "哀叹时世艰辛、怜悯百姓疾苦，形容忧国忧民。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

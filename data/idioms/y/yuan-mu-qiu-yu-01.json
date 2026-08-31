@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yuan-mu-qiu-yu-01",
+  "word": "缘木求鱼",
+  "pinyin": "yuán mù qiú yú",
+  "meaning": "爬到树上去找鱼，比喻方向或方法不对，劳而无功。",
+  "usage": "用于批评方法、方向根本错误，必然徒劳。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "不改革制度就想根治腐败，无异于缘木求鱼。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 67
+}

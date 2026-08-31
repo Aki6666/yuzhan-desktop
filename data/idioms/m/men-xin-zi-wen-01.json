@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "men-xin-zi-wen-01",
+  "word": "扪心自问",
+  "pinyin": "mén xīn zì wèn",
+  "meaning": "摸着胸口自己问自己，指反省自己的言行（\"扪\"=按、摸）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-jiu-bu-xi-01",
+  "word": "经久不息",
+  "pinyin": "jīng jiǔ bù xī",
+  "meaning": "长时间不停息，多形容掌声、欢呼声等。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kang-kai-jie-nang-01",
+  "word": "慷慨解囊",
+  "pinyin": "kāng kǎi jiě náng",
+  "meaning": "毫不吝啬地拿出钱来帮助别人（\"解囊\"=解开钱袋）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

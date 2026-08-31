@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhan-zhan-jing-jing-01",
+  "word": "战战兢兢",
+  "pinyin": "zhàn zhàn jīng jīng",
+  "meaning": "形容因害怕而微微发抖的样子，也形容小心谨慎的样子。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

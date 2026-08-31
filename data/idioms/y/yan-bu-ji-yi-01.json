@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-bu-ji-yi-01",
+  "word": "言不及义",
+  "pinyin": "yán bù jí yì",
+  "meaning": "只说些无聊的话、不涉及正经道理（\"义\"=正义、道理）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

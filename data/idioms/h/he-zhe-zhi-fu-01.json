@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "he-zhe-zhi-fu-01",
+  "word": "涸辙之鲋",
+  "pinyin": "hé zhé zhī fù",
+  "meaning": "干涸的车辙里的鲫鱼，比喻处于困境、急待救援的人（\"涸\"=干，\"辙\"=车辙，\"鲋\"=鲫鱼）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

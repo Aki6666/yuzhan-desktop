@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-xue-lai-chao-01",
+  "word": "心血来潮",
+  "pinyin": "xīn xuè lái cháo",
+  "meaning": "形容一时冲动，忽然产生某种念头。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-zhen-yi-dai-01",
+  "word": "严阵以待",
+  "pinyin": "yán zhèn yǐ dài",
+  "meaning": "摆好严整的阵势等待着，指做好充分战斗准备。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

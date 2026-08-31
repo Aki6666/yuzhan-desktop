@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-mang-bi-lu-01",
+  "word": "锋芒毕露",
+  "pinyin": "fēng máng bì lù",
+  "meaning": "刀剑的锋芒全部显露出来，比喻人的才干、锐气完全显露，也形容人骄傲、爱表现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

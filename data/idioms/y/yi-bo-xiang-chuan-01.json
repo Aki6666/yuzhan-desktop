@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-bo-xiang-chuan-01",
+  "word": "衣钵相传",
+  "pinyin": "yī bō xiāng chuán",
+  "meaning": "佛教徒把袈裟和食钵传给弟子，泛指思想、技艺等的师徒相传。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yao-bu-ke-ji-01",
+  "word": "遥不可及",
+  "pinyin": "yáo bù kě jí",
+  "meaning": "遥远得无法触及，比喻目标、愿望等难以实现。",
+  "usage": "强调距离远或难以达到。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "梦想并非遥不可及，贵在坚持。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

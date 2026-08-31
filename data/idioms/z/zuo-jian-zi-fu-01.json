@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zuo-jian-zi-fu-01",
+  "word": "作茧自缚",
+  "pinyin": "zuò jiǎn zì fù",
+  "meaning": "蚕吐丝作茧把自己包在里面，比喻自己束缚自己。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

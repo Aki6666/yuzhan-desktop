@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-suo-yu-wei-01",
+  "word": "为所欲为",
+  "pinyin": "wéi suǒ yù wéi",
+  "meaning": "想干什么就干什么（多含贬义）（\"为\"=做）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

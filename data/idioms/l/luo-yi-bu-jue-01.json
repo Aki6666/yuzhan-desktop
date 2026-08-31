@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "luo-yi-bu-jue-01",
+  "word": "络绎不绝",
+  "pinyin": "luò yì bù jué",
+  "meaning": "形容人或车马等前后相接，连续不断（\"络绎\"=连续不断）。",
+  "usage": "多用于人、车、船等往来不断。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "景区游客络绎不绝。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

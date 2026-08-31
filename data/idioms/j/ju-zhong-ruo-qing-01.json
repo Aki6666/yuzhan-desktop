@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-zhong-ruo-qing-01",
+  "word": "举重若轻",
+  "pinyin": "jǔ zhòng ruò qīng",
+  "meaning": "举起重物像举起轻东西一样，比喻能轻松地处理繁重或困难的事务。",
+  "usage": "强调能力强、处理难题从容。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他举重若轻地化解了这次危机。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

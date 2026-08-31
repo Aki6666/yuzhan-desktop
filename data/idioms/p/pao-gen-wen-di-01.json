@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pao-gen-wen-di-01",
+  "word": "刨根问底",
+  "pinyin": "páo gēn wèn dǐ",
+  "meaning": "比喻追究底细、盘问根由。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

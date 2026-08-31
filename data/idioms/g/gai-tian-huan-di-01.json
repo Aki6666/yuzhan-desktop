@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gai-tian-huan-di-01",
+  "word": "改天换地",
+  "pinyin": "gǎi tiān huàn dì",
+  "meaning": "改变天地，比喻彻底改变原来的面貌。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

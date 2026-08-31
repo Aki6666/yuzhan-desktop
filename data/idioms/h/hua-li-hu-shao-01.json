@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hua-li-hu-shao-01",
+  "word": "花里胡哨",
+  "pinyin": "huā lǐ hú shào",
+  "meaning": "形容颜色过分鲜艳繁杂，也比喻浮华而不实在。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

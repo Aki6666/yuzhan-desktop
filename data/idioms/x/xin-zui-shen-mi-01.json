@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-zui-shen-mi-01",
+  "word": "心醉神迷",
+  "pinyin": "xīn zuì shén mí",
+  "meaning": "形容心绪迷乱，多指被美好事物吸引而陶醉。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

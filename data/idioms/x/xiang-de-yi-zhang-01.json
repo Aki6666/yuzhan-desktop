@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-de-yi-zhang-01",
+  "word": "相得益彰",
+  "pinyin": "xiāng dé yì zhāng",
+  "meaning": "互相配合、映衬，更能显出各自的长处（\"彰\"=明显）。",
+  "usage": "强调两方配合产生\"1+1>2\"的效果；注意与\"相辅相成\"区别。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "传统艺术与现代科技相得益彰。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 79
+}

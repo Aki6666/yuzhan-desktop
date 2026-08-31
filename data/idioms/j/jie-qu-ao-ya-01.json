@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-qu-ao-ya-01",
+  "word": "诘屈聱牙",
+  "pinyin": "jié qū áo yá",
+  "meaning": "形容文章艰涩、读起来不顺口（\"诘屈\"=曲折）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

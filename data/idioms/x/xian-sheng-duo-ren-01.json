@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xian-sheng-duo-ren-01",
+  "word": "先声夺人",
+  "pinyin": "xiān shēng duó rén",
+  "meaning": "先造成声势以压倒对方，比喻做事抢先一步。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

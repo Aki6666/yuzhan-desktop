@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-zhua-nao-xin-01",
+  "word": "百爪挠心",
+  "pinyin": "bǎi zhuǎ náo xīn",
+  "meaning": "像有一百只爪子挠心一样，形容心情十分难受、烦乱（\"挠\"=抓）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

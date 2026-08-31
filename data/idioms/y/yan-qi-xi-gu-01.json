@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-qi-xi-gu-01",
+  "word": "偃旗息鼓",
+  "pinyin": "yǎn qí xī gǔ",
+  "meaning": "放倒旗子、停止敲鼓，指停止战斗，也比喻停止批评、攻击等。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jia-shou-yu-ren-01",
+  "word": "假手于人",
+  "pinyin": "jiǎ shǒu yú rén",
+  "meaning": "利用别人做某事，自己不出面（\"假\"=借）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

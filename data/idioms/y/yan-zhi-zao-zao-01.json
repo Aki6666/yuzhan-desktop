@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-zhi-zao-zao-01",
+  "word": "言之凿凿",
+  "pinyin": "yán zhī záo záo",
+  "meaning": "话说得非常确实、有根据（\"凿凿\"=确实）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

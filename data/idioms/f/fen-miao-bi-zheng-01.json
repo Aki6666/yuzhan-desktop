@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-miao-bi-zheng-01",
+  "word": "分秒必争",
+  "pinyin": "fēn miǎo bì zhēng",
+  "meaning": "一分一秒也一定要争取，形容抓紧时间。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qu-chang-bu-duan-01",
+  "word": "取长补短",
+  "pinyin": "qǔ cháng bǔ duǎn",
+  "meaning": "吸取别人的长处来弥补自己的短处。",
+  "usage": "强调互相学习、优势互补。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "区域合作可以取长补短、互利共赢。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

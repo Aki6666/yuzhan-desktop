@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-yang-dun-cuo-01",
+  "word": "抑扬顿挫",
+  "pinyin": "yì yáng dùn cuò",
+  "meaning": "（声音）高低起伏、停顿转折，形容诗文、乐曲等节奏鲜明、富于变化。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

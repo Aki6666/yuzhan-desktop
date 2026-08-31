@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yue-zu-dai-pao-01",
+  "word": "越俎代庖",
+  "pinyin": "yuè zǔ dài páo",
+  "meaning": "主祭的人跨过礼器去代替厨师办席，比喻超出自己的业务范围去处理别人所管的事（\"俎\"=礼器）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

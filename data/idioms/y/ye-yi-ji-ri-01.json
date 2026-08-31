@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ye-yi-ji-ri-01",
+  "word": "夜以继日",
+  "pinyin": "yè yǐ jì rì",
+  "meaning": "晚上接着白天，形容日夜不停。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

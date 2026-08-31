@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-sheng-fu-he-01",
+  "word": "随声附和",
+  "pinyin": "suí shēng fù hè",
+  "meaning": "别人说什么就跟着说什么，形容没有主见。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

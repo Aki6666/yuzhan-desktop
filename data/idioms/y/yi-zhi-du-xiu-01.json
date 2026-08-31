@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-zhi-du-xiu-01",
+  "word": "一枝独秀",
+  "pinyin": "yì zhī dú xiù",
+  "meaning": "一枝花单独地盛开，比喻在同类中最为突出、超群。",
+  "usage": "强调在同类中最出众。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "在众多品牌中，该产品一枝独秀。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-ying-ju-quan-01",
+  "word": "一应俱全",
+  "pinyin": "yí yìng jù quán",
+  "meaning": "一切齐全、应有尽有。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

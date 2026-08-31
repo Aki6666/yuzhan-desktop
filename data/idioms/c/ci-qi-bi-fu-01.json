@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ci-qi-bi-fu-01",
+  "word": "此起彼伏",
+  "pinyin": "cǐ qǐ bǐ fú",
+  "meaning": "这里起来、那里落下，形容接连不断地出现。",
+  "usage": "多用于声音、浪潮、事件等接连不断。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "欢呼声此起彼伏，响彻全场。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

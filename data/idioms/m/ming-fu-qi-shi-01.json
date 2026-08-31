@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-fu-qi-shi-01",
+  "word": "名副其实",
+  "pinyin": "míng fù qí shí",
+  "meaning": "名称或名声与实际相符合。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

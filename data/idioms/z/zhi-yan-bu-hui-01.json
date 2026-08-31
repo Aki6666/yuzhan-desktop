@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-yan-bu-hui-01",
+  "word": "直言不讳",
+  "pinyin": "zhí yán bú huì",
+  "meaning": "有话直说，毫不隐讳（\"讳\"=隐瞒）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

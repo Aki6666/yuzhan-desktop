@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jie-zhong-er-zhi-01",
+  "word": "接踵而至",
+  "pinyin": "jiē zhǒng ér zhì",
+  "meaning": "一个接一个地到来（\"踵\"=脚后跟）。",
+  "usage": "强调接连不断到来。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "利好消息接踵而至，市场信心大增。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-shi-ge-jue-01",
+  "word": "与世隔绝",
+  "pinyin": "yǔ shì gé jué",
+  "meaning": "与社会上的人们隔离，断绝来往。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

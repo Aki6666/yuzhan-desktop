@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-ri-ke-dai-01",
+  "word": "指日可待",
+  "pinyin": "zhǐ rì kě dài",
+  "meaning": "（事情、希望等）不久就可以实现（\"指日\"=为期不远）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

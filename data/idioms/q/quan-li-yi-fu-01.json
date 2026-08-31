@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "quan-li-yi-fu-01",
+  "word": "全力以赴",
+  "pinyin": "quán lì yǐ fù",
+  "meaning": "把全部力量都投入进去。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

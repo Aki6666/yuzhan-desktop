@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-qu-tong-gong-01",
+  "word": "异曲同工",
+  "pinyin": "yì qǔ tóng gōng",
+  "meaning": "不同的曲调却同样精妙，比喻不同人的辞章或言论同样精彩，或做法不同而效果一样。",
+  "usage": "与\"殊途同归\"辨析：前者侧重同样精彩、效果相同。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两位大师的作品异曲同工，各有千秋。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

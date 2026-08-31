@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fan-guan-nei-shi-01",
+  "word": "返观内视",
+  "pinyin": "fǎn guān nèi shì",
+  "meaning": "反省自己的言行、检查自己的内心。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

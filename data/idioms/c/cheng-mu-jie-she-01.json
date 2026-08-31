@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cheng-mu-jie-she-01",
+  "word": "瞠目结舌",
+  "pinyin": "chēng mù jié shé",
+  "meaning": "瞪着眼睛说不出话来，形容惊呆或窘迫的样子（\"瞠\"=瞪眼）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

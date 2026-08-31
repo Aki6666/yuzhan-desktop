@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-chi-qian-li-01",
+  "word": "咫尺千里",
+  "pinyin": "zhǐ chǐ qiān lǐ",
+  "meaning": "形容距离虽近、却像相隔千里一样难以相见或沟通。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

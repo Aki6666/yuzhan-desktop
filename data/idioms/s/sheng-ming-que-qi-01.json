@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sheng-ming-que-qi-01",
+  "word": "声名鹊起",
+  "pinyin": "shēng míng què qǐ",
+  "meaning": "名声迅速提高（\"鹊起\"=如喜鹊飞起般迅速）。",
+  "usage": "强调名声短时间内大振。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这家初创企业因核心技术声名鹊起。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 43
+}

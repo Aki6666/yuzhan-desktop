@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "er-shu-neng-xiang-01",
+  "word": "耳熟能详",
+  "pinyin": "ěr shú néng xiáng",
+  "meaning": "听得多了，能够详细地说出来（\"详\"=详细）。",
+  "usage": "强调因熟悉而能详述。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这些典故大家都耳熟能详。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 54
+}

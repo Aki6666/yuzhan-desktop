@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-ke-yu-lu-01",
+  "word": "金科玉律",
+  "pinyin": "jīn kē yù lǜ",
+  "meaning": "原形容法令条文尽善尽美，现比喻必须遵守、不能变更的信条。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

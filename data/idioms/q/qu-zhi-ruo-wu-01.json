@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qu-zhi-ruo-wu-01",
+  "word": "趋之若鹜",
+  "pinyin": "qū zhī ruò wù",
+  "meaning": "像鸭子一样成群跑过去，比喻很多人争着去追逐不好的事物（\"鹜\"=鸭子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

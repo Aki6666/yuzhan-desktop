@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-zao-di-she-01",
+  "word": "天造地设",
+  "pinyin": "tiān zào dì shè",
+  "meaning": "天地自然生成而合乎理想，形容事物自然形成、十分完美。",
+  "usage": "多用于环境、条件、搭配等自然天成。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这里的山水是天造地设的旅游胜地。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

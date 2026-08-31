@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-jin-huo-chuan-01",
+  "word": "薪尽火传",
+  "pinyin": "xīn jìn huǒ chuán",
+  "meaning": "柴虽烧尽、火种仍留传，比喻学问、技艺等代代相传（\"薪\"=柴）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

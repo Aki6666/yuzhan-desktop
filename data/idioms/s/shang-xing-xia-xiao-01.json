@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shang-xing-xia-xiao-01",
+  "word": "上行下效",
+  "pinyin": "shàng xíng xià xiào",
+  "meaning": "上面的人怎么做、下面的人就跟着怎么做（\"效\"=仿效）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

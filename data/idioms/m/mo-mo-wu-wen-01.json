@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mo-mo-wu-wen-01",
+  "word": "默默无闻",
+  "pinyin": "mò mò wú wén",
+  "meaning": "不出名、不为人所知，也指不声不响地做事。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

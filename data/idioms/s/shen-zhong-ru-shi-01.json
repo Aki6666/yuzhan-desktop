@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shen-zhong-ru-shi-01",
+  "word": "慎终如始",
+  "pinyin": "shèn zhōng rú shǐ",
+  "meaning": "谨慎地对待结尾、如同对待开始一样，形容做事始终如一、善始善终。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

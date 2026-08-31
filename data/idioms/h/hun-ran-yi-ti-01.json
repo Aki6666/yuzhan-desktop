@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hun-ran-yi-ti-01",
+  "word": "浑然一体",
+  "pinyin": "hún rán yì tǐ",
+  "meaning": "融合成一个整体，不可分割。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

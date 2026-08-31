@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ping-fen-qiu-se-01",
+  "word": "平分秋色",
+  "pinyin": "píng fēn qiū sè",
+  "meaning": "比喻双方各得一半，不分上下。",
+  "usage": "强调双方实力相当、难分高下。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两队实力相当，场上平分秋色。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

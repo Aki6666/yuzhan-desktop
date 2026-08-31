@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "san-xin-er-yi-01",
+  "word": "三心二意",
+  "pinyin": "sān xīn èr yì",
+  "meaning": "心里想这样又想那样，形容犹豫不决或用心不专一。",
+  "usage": "批评用心不专。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "做事三心二意，很难成功。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

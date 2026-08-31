@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "han-hu-qi-ci-01",
+  "word": "含糊其辞",
+  "pinyin": "hán hú qí cí",
+  "meaning": "说话含含糊糊、躲躲闪闪，不肯把话说清楚。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

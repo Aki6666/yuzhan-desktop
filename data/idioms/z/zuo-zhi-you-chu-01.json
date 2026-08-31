@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zuo-zhi-you-chu-01",
+  "word": "左支右绌",
+  "pinyin": "zuǒ zhī yòu chù",
+  "meaning": "应付了这边，那边又不够，形容顾此失彼、穷于应付（\"支\"=支撑，\"绌\"=不足）。",
+  "usage": "强调财力、人力等匮乏难以应付。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "开支越来越大，家庭财政左支右绌。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

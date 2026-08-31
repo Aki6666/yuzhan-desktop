@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "guang-wei-ren-zhi-01",
+  "word": "广为人知",
+  "pinyin": "guǎng wèi rén zhī",
+  "meaning": "流传得很广，大家都知道。",
+  "usage": "强调知名度高。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他的事迹已广为人知。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

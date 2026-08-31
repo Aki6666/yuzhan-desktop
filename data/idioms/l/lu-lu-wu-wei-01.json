@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lu-lu-wu-wei-01",
+  "word": "碌碌无为",
+  "pinyin": "lù lù wú wéi",
+  "meaning": "平平庸庸、无所作为。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

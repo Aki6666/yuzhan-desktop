@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pi-jian-zhi-rui-01",
+  "word": "披坚执锐",
+  "pinyin": "pī jiān zhí ruì",
+  "meaning": "穿着坚固的铠甲、拿着锋利的武器，形容全副武装。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

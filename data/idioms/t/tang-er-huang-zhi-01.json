@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tang-er-huang-zhi-01",
+  "word": "堂而皇之",
+  "pinyin": "táng ér huáng zhī",
+  "meaning": "形容公然、毫不掩饰地，也形容体面、气派。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hai-shi-shen-lou-01",
+  "word": "海市蜃楼",
+  "pinyin": "hǎi shì shèn lóu",
+  "meaning": "大气中由于光线的折射而形成的一种自然现象，比喻虚幻的事物。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

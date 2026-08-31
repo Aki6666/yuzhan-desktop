@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-ren-ya-hui-01",
+  "word": "拾人牙慧",
+  "pinyin": "shí rén yá huì",
+  "meaning": "拾取别人的只言片语当自己的话，比喻蹈袭他人的言论或见解。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

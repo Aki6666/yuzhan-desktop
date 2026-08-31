@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mai-du-huan-zhu-01",
+  "word": "买椟还珠",
+  "pinyin": "mǎi dú huán zhū",
+  "meaning": "买下装珍珠的木匣而退还珍珠，比喻没有眼力、取舍不当（\"椟\"=木匣）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

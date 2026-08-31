@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-tong-xu-she-01",
+  "word": "形同虚设",
+  "pinyin": "xíng tóng xū shè",
+  "meaning": "形式上存在、实际上不起作用，如同虚设。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-quan-shang-ji-01",
+  "word": "兼权尚计",
+  "pinyin": "jiān quán shàng jì",
+  "meaning": "指多方面权衡、深入比较（\"权\"=权衡，\"尚\"=崇尚）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

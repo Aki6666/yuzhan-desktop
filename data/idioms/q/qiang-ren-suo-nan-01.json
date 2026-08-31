@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qiang-ren-suo-nan-01",
+  "word": "强人所难",
+  "pinyin": "qiáng rén suǒ nán",
+  "meaning": "勉强别人做不愿做或做不到的事。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "dong-dang-bu-an-01",
+  "word": "动荡不安",
+  "pinyin": "dòng dàng bù ān",
+  "meaning": "局势、社会等不稳定、不安宁。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

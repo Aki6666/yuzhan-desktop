@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shou-kou-ru-ping-01",
+  "word": "守口如瓶",
+  "pinyin": "shǒu kǒu rú píng",
+  "meaning": "闭住嘴不说，形容说话谨慎或严守秘密。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

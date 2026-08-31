@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-beng-li-xi-01",
+  "word": "分崩离析",
+  "pinyin": "fēn bēng lí xī",
+  "meaning": "形容国家或集团分裂瓦解，不可收拾（\"析\"=分开）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

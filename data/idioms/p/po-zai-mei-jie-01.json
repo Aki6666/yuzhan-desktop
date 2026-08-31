@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "po-zai-mei-jie-01",
+  "word": "迫在眉睫",
+  "pinyin": "pò zài méi jié",
+  "meaning": "形容事情已到眼前，十分紧迫（\"眉睫\"=眉毛和睫毛）。",
+  "usage": "强调紧迫性；注意与\"当务之急\"（最紧迫要办的事）区别。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "生态修复工作已迫在眉睫。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 58
+}

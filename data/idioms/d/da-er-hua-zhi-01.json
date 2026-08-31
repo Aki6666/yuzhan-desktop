@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "da-er-hua-zhi-01",
+  "word": "大而化之",
+  "pinyin": "dà ér huà zhī",
+  "meaning": "原指大行其道、化育万物，现多指做事疏忽大意、不细致。",
+  "usage": "考试中多取其\"做事马虎\"义（望文生义考点）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "做手术岂能大而化之、粗心大意。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yuan-yuan-bu-duan-01",
+  "word": "源源不断",
+  "pinyin": "yuán yuán bú duàn",
+  "meaning": "形容接连不断（\"源源\"=水流不断的样子）。",
+  "usage": "与\"连绵不断\"\"络绎不绝\"辨析；多用于供给、人流、水流等。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "志愿者的爱心源源不断地涌向灾区。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 39
+}

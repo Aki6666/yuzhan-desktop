@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ti-xiao-jie-fei-01",
+  "word": "啼笑皆非",
+  "pinyin": "tí xiào jiē fēi",
+  "meaning": "哭也不是，笑也不是，形容既令人难受又令人发笑、不知如何是好。",
+  "usage": "多用于尴尬、荒诞的处境。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "面对这样荒唐的要求，他啼笑皆非。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 34
+}

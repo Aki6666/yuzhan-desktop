@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-lie-qian-mao-01",
+  "word": "名列前茅",
+  "pinyin": "míng liè qián máo",
+  "meaning": "比喻名次列在前面（\"前茅\"=古代行军时的前哨）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

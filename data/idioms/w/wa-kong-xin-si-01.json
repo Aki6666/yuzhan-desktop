@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wa-kong-xin-si-01",
+  "word": "挖空心思",
+  "pinyin": "wā kōng xīn sī",
+  "meaning": "费尽心思、想尽办法（多含贬义）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

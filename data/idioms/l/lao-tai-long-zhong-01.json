@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lao-tai-long-zhong-01",
+  "word": "老态龙钟",
+  "pinyin": "lǎo tài lóng zhōng",
+  "meaning": "形容年老体衰、行动不灵便（\"龙钟\"=行动不灵便）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

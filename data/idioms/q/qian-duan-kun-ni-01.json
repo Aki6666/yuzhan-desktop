@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-duan-kun-ni-01",
+  "word": "乾端坤倪",
+  "pinyin": "qián duān kūn ní",
+  "meaning": "天地万物的端绪、征兆（\"乾\"=天，\"坤\"=地，\"端倪\"=头绪）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

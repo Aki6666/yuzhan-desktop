@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fei-qin-wang-shi-01",
+  "word": "废寝忘食",
+  "pinyin": "fèi qǐn wàng shí",
+  "meaning": "顾不上睡觉、忘记吃饭，形容专心致志、十分勤奋。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ku-mu-feng-chun-01",
+  "word": "枯木逢春",
+  "pinyin": "kū mù féng chūn",
+  "meaning": "枯树遇到春天又恢复了活力，比喻垂危的人或事物重获生机。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

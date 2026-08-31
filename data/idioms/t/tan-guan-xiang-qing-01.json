@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tan-guan-xiang-qing-01",
+  "word": "弹冠相庆",
+  "pinyin": "tán guān xiāng qìng",
+  "meaning": "指官场中一人当了官或升了官，同伙就互相庆贺将有官可做（\"冠\"=帽子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 14
+}

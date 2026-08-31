@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-gen-zhi-di-01",
+  "word": "知根知底",
+  "pinyin": "zhī gēn zhī dǐ",
+  "meaning": "知道根底、了解底细，形容非常了解。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

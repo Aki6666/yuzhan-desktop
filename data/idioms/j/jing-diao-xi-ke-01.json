@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-diao-xi-ke-01",
+  "word": "精雕细刻",
+  "pinyin": "jīng diāo xì kè",
+  "meaning": "精心细致地雕刻，比喻认真细致地加工。",
+  "usage": "与\"精雕细琢\"近义。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "人物雕像精雕细刻，栩栩如生。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

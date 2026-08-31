@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-ju-guo-xi-01",
+  "word": "白驹过隙",
+  "pinyin": "bái jū guò xì",
+  "meaning": "像白色骏马在缝隙前飞快越过，形容时间过得极快（\"白驹\"=白马）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

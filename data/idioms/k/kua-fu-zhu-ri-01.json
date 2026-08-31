@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kua-fu-zhu-ri-01",
+  "word": "夸父逐日",
+  "pinyin": "kuā fù zhú rì",
+  "meaning": "夸父追太阳，比喻人有大志、也比喻不自量力。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

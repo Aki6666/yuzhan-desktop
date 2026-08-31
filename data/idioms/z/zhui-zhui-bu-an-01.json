@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhui-zhui-bu-an-01",
+  "word": "惴惴不安",
+  "pinyin": "zhuì zhuì bù ān",
+  "meaning": "形容因害怕或担心而心神不定（\"惴惴\"=恐惧的样子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lin-zhen-mo-qiang-01",
+  "word": "临阵磨枪",
+  "pinyin": "lín zhèn mó qiāng",
+  "meaning": "到了阵前才磨枪，比喻事到临头才匆忙准备。",
+  "usage": "批评平时不准备、临时抱佛脚。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "考试前临时临阵磨枪，效果有限。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gen-gu-bu-bian-01",
+  "word": "亘古不变",
+  "pinyin": "gèn gǔ bú biàn",
+  "meaning": "从古到今一直不变（\"亘古\"=终古、整个古代）。",
+  "usage": "强调历时久远而不变。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "对美好生活的向往是亘古不变的人心所向。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

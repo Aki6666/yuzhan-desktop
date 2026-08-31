@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mi-huo-bu-jie-01",
+  "word": "迷惑不解",
+  "pinyin": "mí huò bù jiě",
+  "meaning": "对某事非常疑惑，不能理解。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

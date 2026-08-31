@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-shi-tong-ren-01",
+  "word": "一视同仁",
+  "pinyin": "yí shì tóng rén",
+  "meaning": "原指圣人对百姓一样看待，现指不分厚薄，同样看待。",
+  "usage": "强调公平对待、不分亲疏。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "执法必须一视同仁，不搞双重标准。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

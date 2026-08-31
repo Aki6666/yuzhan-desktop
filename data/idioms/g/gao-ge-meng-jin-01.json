@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gao-ge-meng-jin-01",
+  "word": "高歌猛进",
+  "pinyin": "gāo gē měng jìn",
+  "meaning": "放声歌唱、勇猛前进，形容情绪高涨、斗志昂扬地前进。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "li-jiu-mi-xin-01",
+  "word": "历久弥新",
+  "pinyin": "lì jiǔ mí xīn",
+  "meaning": "经历的时间越久，反而越显得有活力、越新（\"弥\"=更加）。",
+  "usage": "多用于传统、精神、作品等经久不衰且焕发生机。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "经典作品历久弥新，常读常新。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 78
+}

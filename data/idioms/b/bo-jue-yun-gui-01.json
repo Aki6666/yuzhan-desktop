@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bo-jue-yun-gui-01",
+  "word": "波谲云诡",
+  "pinyin": "bō jué yún guǐ",
+  "meaning": "形容事物像云彩和波浪那样变化莫测（\"谲\"\"诡\"=奇异多变）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

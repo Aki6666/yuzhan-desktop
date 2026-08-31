@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yuan-yuan-xiang-bao-01",
+  "word": "冤冤相报",
+  "pinyin": "yuān yuān xiāng bào",
+  "meaning": "仇人之间互相报复，循环不已。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

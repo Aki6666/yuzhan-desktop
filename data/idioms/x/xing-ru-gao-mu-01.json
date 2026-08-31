@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-ru-gao-mu-01",
+  "word": "形如槁木",
+  "pinyin": "xíng rú gǎo mù",
+  "meaning": "形体像枯干的树木，形容身体消瘦或神情冷漠（\"槁\"=枯干）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

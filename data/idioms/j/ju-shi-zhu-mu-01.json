@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-shi-zhu-mu-01",
+  "word": "举世瞩目",
+  "pinyin": "jǔ shì zhǔ mù",
+  "meaning": "全世界的人都注视着，形容影响很大、为世人关注。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

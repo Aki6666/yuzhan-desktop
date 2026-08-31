@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ke-nai-he-01",
+  "word": "无可奈何",
+  "pinyin": "wú kě nài hé",
+  "meaning": "没有办法可想，只能这样（\"奈何\"=怎么办）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xu-wu-piao-miao-01",
+  "word": "虚无缥缈",
+  "pinyin": "xū wú piāo miǎo",
+  "meaning": "形容空虚渺茫、不可捉摸。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

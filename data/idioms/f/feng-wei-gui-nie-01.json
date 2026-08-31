@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-wei-gui-nie-01",
+  "word": "奉为圭臬",
+  "pinyin": "fèng wéi guī niè",
+  "meaning": "把某些言论或事物尊崇为准则（\"圭臬\"=测日影的器具，比喻标准）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

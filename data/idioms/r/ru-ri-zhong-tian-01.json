@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ru-ri-zhong-tian-01",
+  "word": "如日中天",
+  "pinyin": "rú rì zhōng tiān",
+  "meaning": "好像太阳正当中天，比喻事物正发展到最兴盛的阶段。",
+  "usage": "多用于事业、势力等正处鼎盛。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他的演艺事业如日中天。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

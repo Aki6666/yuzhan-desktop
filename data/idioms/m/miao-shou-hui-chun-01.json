@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "miao-shou-hui-chun-01",
+  "word": "妙手回春",
+  "pinyin": "miào shǒu huí chūn",
+  "meaning": "医生医术高明，能把垂危的病人治好（\"回春\"=使春天重来）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qu-wu-cun-jing-01",
+  "word": "去芜存菁",
+  "pinyin": "qù wú cún jīng",
+  "meaning": "除去杂质、保留精华（\"芜\"=杂乱，\"菁\"=精华）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 11
+}

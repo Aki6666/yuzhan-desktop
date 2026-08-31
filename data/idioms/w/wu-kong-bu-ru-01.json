@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-kong-bu-ru-01",
+  "word": "无孔不入",
+  "pinyin": "wú kǒng bú rù",
+  "meaning": "没有什么空子不钻，比喻利用一切机会进行活动（多含贬义）。",
+  "usage": "多用于贬义，指坏人坏事、病菌等乘隙而入。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "诈骗分子无孔不入，须时刻保持警惕。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 46
+}

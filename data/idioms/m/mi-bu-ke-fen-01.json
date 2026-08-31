@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mi-bu-ke-fen-01",
+  "word": "密不可分",
+  "pinyin": "mì bù kě fēn",
+  "meaning": "形容关系十分紧密，无法分割。",
+  "usage": "强调联系紧密、不可分离。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "科技与产业发展密不可分。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

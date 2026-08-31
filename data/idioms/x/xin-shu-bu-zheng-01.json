@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xin-shu-bu-zheng-01",
+  "word": "心术不正",
+  "pinyin": "xīn shù bú zhèng",
+  "meaning": "居心不良、存心不正。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

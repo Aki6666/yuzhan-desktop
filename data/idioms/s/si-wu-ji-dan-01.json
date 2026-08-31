@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "si-wu-ji-dan-01",
+  "word": "肆无忌惮",
+  "pinyin": "sì wú jì dàn",
+  "meaning": "任意妄为、毫无顾忌（\"肆\"=放肆，\"惮\"=害怕）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

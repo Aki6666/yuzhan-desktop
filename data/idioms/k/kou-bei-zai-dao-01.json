@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kou-bei-zai-dao-01",
+  "word": "口碑载道",
+  "pinyin": "kǒu bēi zài dào",
+  "meaning": "群众口头上的称颂像在路上都能听到一样，形容到处都受到称赞。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

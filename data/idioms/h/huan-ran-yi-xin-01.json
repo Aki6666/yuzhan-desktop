@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "huan-ran-yi-xin-01",
+  "word": "焕然一新",
+  "pinyin": "huàn rán yì xīn",
+  "meaning": "形容出现了崭新的面貌（\"焕然\"=光亮的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

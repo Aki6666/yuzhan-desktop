@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-xing-se-se-01",
+  "word": "形形色色",
+  "pinyin": "xíng xíng sè sè",
+  "meaning": "形容事物种类繁多，各式各样（\"形形\"\"色色\"=各种形态颜色）。",
+  "usage": "多含贬义或中性，指种类繁杂。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "形形色色的网络谣言扰乱视听。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 32
+}

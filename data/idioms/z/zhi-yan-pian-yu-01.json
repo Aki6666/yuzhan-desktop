@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-yan-pian-yu-01",
+  "word": "只言片语",
+  "pinyin": "zhī yán piàn yǔ",
+  "meaning": "个别词句或片段的话（\"片\"=零碎）。",
+  "usage": "强调话语零碎、不成篇。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "从老人的只言片语中，能感受到往昔的艰辛。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

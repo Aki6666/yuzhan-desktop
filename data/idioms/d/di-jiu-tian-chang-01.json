@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "di-jiu-tian-chang-01",
+  "word": "地久天长",
+  "pinyin": "dì jiǔ tiān cháng",
+  "meaning": "像天地一样长久，形容时间悠久、感情永恒。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

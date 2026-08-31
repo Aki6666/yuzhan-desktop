@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "du-yi-wu-er-01",
+  "word": "独一无二",
+  "pinyin": "dú yī wú èr",
+  "meaning": "没有相同的或可以相比的，唯一。",
+  "usage": "中性描述唯一性，褒贬随语境。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这幅书法作品在收藏界独一无二。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 5,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 101
+}

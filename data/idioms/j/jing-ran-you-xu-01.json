@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jing-ran-you-xu-01",
+  "word": "井然有序",
+  "pinyin": "jǐng rán yǒu xù",
+  "meaning": "整齐而有次序（\"井然\"=整齐的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

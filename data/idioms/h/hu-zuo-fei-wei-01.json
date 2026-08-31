@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hu-zuo-fei-wei-01",
+  "word": "胡作非为",
+  "pinyin": "hú zuò fēi wéi",
+  "meaning": "不顾法纪或舆论、任意干坏事。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

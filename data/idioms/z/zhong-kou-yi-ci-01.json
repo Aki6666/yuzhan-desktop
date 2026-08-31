@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhong-kou-yi-ci-01",
+  "word": "众口一词",
+  "pinyin": "zhòng kǒu yì cí",
+  "meaning": "许多人都说同样的话，形容意见一致。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

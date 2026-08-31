@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-da-bu-diao-01",
+  "word": "尾大不掉",
+  "pinyin": "wěi dà bú diào",
+  "meaning": "尾巴太大就不好摆动，比喻机构庞大、指挥不灵，也比喻部下势力强大、难以驾驭。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

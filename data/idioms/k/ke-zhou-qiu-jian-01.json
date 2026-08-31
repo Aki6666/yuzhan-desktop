@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ke-zhou-qiu-jian-01",
+  "word": "刻舟求剑",
+  "pinyin": "kè zhōu qiú jiàn",
+  "meaning": "在船上刻记号找落水的剑，比喻拘泥成法、不知变通。",
+  "usage": "用于批评死守教条、不看形势变化。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "用旧模式应对新问题，无异于刻舟求剑。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 45
+}

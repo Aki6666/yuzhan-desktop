@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xi-mo-ru-jin-01",
+  "word": "惜墨如金",
+  "pinyin": "xī mò rú jīn",
+  "meaning": "爱惜笔墨像爱惜金子一样，指写字、作画、作文不轻易下笔、力求精练。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-ni-zhuan-01",
+  "word": "不可逆转",
+  "pinyin": "bù kě nì zhuǎn",
+  "meaning": "不能倒转过来，形容局势、趋势等无法改变。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

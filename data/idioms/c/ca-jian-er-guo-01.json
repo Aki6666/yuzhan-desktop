@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ca-jian-er-guo-01",
+  "word": "擦肩而过",
+  "pinyin": "cā jiān ér guò",
+  "meaning": "互相挨着肩膀过去，形容错过机会或擦身而过。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

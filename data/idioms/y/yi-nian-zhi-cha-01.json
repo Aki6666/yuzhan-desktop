@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-nian-zhi-cha-01",
+  "word": "一念之差",
+  "pinyin": "yí niàn zhī chā",
+  "meaning": "一个念头的差错（造成严重后果）（\"差\"=差错）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

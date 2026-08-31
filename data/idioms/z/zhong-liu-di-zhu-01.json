@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhong-liu-di-zhu-01",
+  "word": "中流砥柱",
+  "pinyin": "zhōng liú dǐ zhù",
+  "meaning": "比喻在艰难环境中起支柱作用的、坚强有力的人或集体（\"砥柱\"=山名）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

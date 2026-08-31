@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-suo-wei-you-01",
+  "word": "前所未有",
+  "pinyin": "qián suǒ wèi yǒu",
+  "meaning": "历史上从来没有过。",
+  "usage": "强调首次出现、史无前例。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "数字经济展现出前所未有的活力。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 40
+}

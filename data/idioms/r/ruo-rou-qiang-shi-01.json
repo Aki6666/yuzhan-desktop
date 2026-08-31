@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ruo-rou-qiang-shi-01",
+  "word": "弱肉强食",
+  "pinyin": "ruò ròu qiáng shí",
+  "meaning": "动物中弱者被强者吞食，比喻弱者被强者欺凌吞并。",
+  "usage": "多用于丛林法则、竞争残酷的语境。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "国际竞争并非简单的弱肉强食，更重合作共赢。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 30
+}

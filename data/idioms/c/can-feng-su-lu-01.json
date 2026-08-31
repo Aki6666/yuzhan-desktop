@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "can-feng-su-lu-01",
+  "word": "餐风宿露",
+  "pinyin": "cān fēng sù lù",
+  "meaning": "在风里吃饭、在露天睡觉，形容旅途或野外生活的辛苦。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ren-xin-suo-xiang-01",
+  "word": "人心所向",
+  "pinyin": "rén xīn suǒ xiàng",
+  "meaning": "人民群众所拥护的、向往的。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

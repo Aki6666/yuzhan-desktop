@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "che-tou-che-wei-01",
+  "word": "彻头彻尾",
+  "pinyin": "chè tóu chè wěi",
+  "meaning": "从头到尾，完完全全（多含贬义）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

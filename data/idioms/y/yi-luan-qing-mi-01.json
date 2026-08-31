@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-luan-qing-mi-01",
+  "word": "意乱情迷",
+  "pinyin": "yì luàn qíng mí",
+  "meaning": "心绪纷乱、神情迷惑，形容因迷恋而心神不定。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

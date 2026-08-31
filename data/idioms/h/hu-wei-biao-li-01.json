@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "hu-wei-biao-li-01",
+  "word": "互为表里",
+  "pinyin": "hù wéi biǎo lǐ",
+  "meaning": "互相之间是表与里的关系，形容彼此关联、相辅相成。",
+  "usage": "强调内外关联、不可分割。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "经济发展与环境保护互为表里。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

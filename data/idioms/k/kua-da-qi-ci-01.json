@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kua-da-qi-ci-01",
+  "word": "夸大其词",
+  "pinyin": "kuā dà qí cí",
+  "meaning": "说话或写文章时把事情说得超过实际。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

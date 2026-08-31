@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yin-lou-jiu-jian-01",
+  "word": "因陋就简",
+  "pinyin": "yīn lòu jiù jiǎn",
+  "meaning": "利用原有的简陋条件、将就着办事（\"陋\"=简陋，\"就\"=将就）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

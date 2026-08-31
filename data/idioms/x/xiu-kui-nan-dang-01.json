@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiu-kui-nan-dang-01",
+  "word": "羞愧难当",
+  "pinyin": "xiū kuì nán dāng",
+  "meaning": "感到十分羞愧、不好意思。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-zhe-bu-kou-01",
+  "word": "不折不扣",
+  "pinyin": "bù zhé bú kòu",
+  "meaning": "不打折扣，形容完全、十足。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

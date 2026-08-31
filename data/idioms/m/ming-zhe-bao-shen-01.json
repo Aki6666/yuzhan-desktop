@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-zhe-bao-shen-01",
+  "word": "明哲保身",
+  "pinyin": "míng zhé bǎo shēn",
+  "meaning": "原指明智的人善于保全自己，现指因怕犯错误或有损自己利益而对原则性问题不置可否。",
+  "usage": "现代语境多含贬义，批评回避矛盾。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "面对问题绕道走，是明哲保身的庸俗哲学。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 27
+}

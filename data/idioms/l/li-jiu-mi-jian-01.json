@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "li-jiu-mi-jian-01",
+  "word": "历久弥坚",
+  "pinyin": "lì jiǔ mí jiān",
+  "meaning": "经历的时间越久、意志越坚定。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

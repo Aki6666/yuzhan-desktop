@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-shen-shi-wai-01",
+  "word": "置身事外",
+  "pinyin": "zhì shēn shì wài",
+  "meaning": "把自己放在事情之外，指不闻不问、漠不关心。",
+  "usage": "与\"袖手旁观\"近义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "面对公共事务，不能置身事外。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

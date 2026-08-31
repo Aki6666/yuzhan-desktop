@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bi-zhong-jiu-qing-01",
+  "word": "避重就轻",
+  "pinyin": "bì zhòng jiù qīng",
+  "meaning": "避开重要的而拣次要的来承担，也指回避要害问题。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 12
+}

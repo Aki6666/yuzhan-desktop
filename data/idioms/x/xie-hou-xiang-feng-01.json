@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xie-hou-xiang-feng-01",
+  "word": "邂逅相逢",
+  "pinyin": "xiè hòu xiāng féng",
+  "meaning": "没有约定而偶然相遇（\"邂逅\"=不期而遇）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

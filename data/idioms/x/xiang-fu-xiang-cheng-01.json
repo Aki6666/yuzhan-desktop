@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-fu-xiang-cheng-01",
+  "word": "相辅相成",
+  "pinyin": "xiāng fǔ xiāng chéng",
+  "meaning": "互相补充、互相配合，缺一不可。",
+  "usage": "强调两者互为条件、共同促成；与\"相得益彰\"辨析是高频考点。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "理论与实践相辅相成，缺一不可。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 66
+}

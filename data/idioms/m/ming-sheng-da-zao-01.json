@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-sheng-da-zao-01",
+  "word": "名声大噪",
+  "pinyin": "míng shēng dà zào",
+  "meaning": "名声一下子大了起来（\"噪\"=喧哗、广传）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "po-you-wei-ci-01",
+  "word": "颇有微词",
+  "pinyin": "pō yǒu wēi cí",
+  "meaning": "有很多隐晦的批评、不满（\"微词\"=隐晦的批评）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

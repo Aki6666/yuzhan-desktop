@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qun-xiong-zhu-lu-01",
+  "word": "群雄逐鹿",
+  "pinyin": "qún xióng zhú lù",
+  "meaning": "比喻各派势力争夺天下或竞争激烈（\"逐鹿\"=争夺政权）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

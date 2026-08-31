@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "an-du-chen-cang-01",
+  "word": "暗度陈仓",
+  "pinyin": "àn dù chén cāng",
+  "meaning": "指正面迷惑敌人、从侧面偷袭的战术，后比喻暗中进行某种活动。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

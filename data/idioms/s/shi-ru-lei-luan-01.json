@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-ru-lei-luan-01",
+  "word": "势如累卵",
+  "pinyin": "shì rú lèi luǎn",
+  "meaning": "形势像堆叠的蛋一样，随时可能倒塌，形容形势非常危险（\"累\"=堆叠）。",
+  "usage": "强调局势岌岌可危。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "债务危机使该国经济势如累卵。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

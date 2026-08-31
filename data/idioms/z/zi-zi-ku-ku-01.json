@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-zi-ku-ku-01",
+  "word": "孜孜矻矻",
+  "pinyin": "zī zī kū kū",
+  "meaning": "勤勉不懈（\"矻矻\"=勤劳不懈的样子）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 13
+}

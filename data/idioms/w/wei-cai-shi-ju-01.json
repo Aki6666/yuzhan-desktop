@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-cai-shi-ju-01",
+  "word": "唯才是举",
+  "pinyin": "wéi cái shì jǔ",
+  "meaning": "只要有才能就推荐、任用，不讲究出身等。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-zhong-ru-yi-01",
+  "word": "始终如一",
+  "pinyin": "shǐ zhōng rú yī",
+  "meaning": "自始至终都是一个样子，形容能坚持、不间断。",
+  "usage": "强调从始至终不变。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他几十年始终如一地坚守在乡村讲台。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

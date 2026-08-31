@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bing-ru-gao-huang-01",
+  "word": "病入膏肓",
+  "pinyin": "bìng rù gāo huāng",
+  "meaning": "病重到了无法医治的地步，比喻事情严重到了不可挽救的程度。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

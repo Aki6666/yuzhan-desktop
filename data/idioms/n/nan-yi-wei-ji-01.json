@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "nan-yi-wei-ji-01",
+  "word": "难以为继",
+  "pinyin": "nán yǐ wéi jì",
+  "meaning": "难以继续下去（\"继\"=继续）。",
+  "usage": "多用于经营、生活、机制等无法维持。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "高成本低效益的模式难以为继。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ying-nan-er-shang-01",
+  "word": "迎难而上",
+  "pinyin": "yíng nán ér shàng",
+  "meaning": "迎着困难而上，形容不怕困难、勇敢前进。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 16
+}

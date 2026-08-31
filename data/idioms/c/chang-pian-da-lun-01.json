@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chang-pian-da-lun-01",
+  "word": "长篇大论",
+  "pinyin": "cháng piān dà lùn",
+  "meaning": "滔滔不绝的言论或篇幅很长的文章。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bao-jia-hu-hang-01",
+  "word": "保驾护航",
+  "pinyin": "bǎo jià hù háng",
+  "meaning": "保护航行安全，现比喻为某事提供保障。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

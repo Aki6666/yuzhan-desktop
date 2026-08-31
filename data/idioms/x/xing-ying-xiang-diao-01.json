@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xing-ying-xiang-diao-01",
+  "word": "形影相吊",
+  "pinyin": "xíng yǐng xiāng diào",
+  "meaning": "只有自己的身体和影子互相慰问，形容孤苦无依（\"吊\"=慰问）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

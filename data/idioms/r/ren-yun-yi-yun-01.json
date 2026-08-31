@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ren-yun-yi-yun-01",
+  "word": "人云亦云",
+  "pinyin": "rén yún yì yún",
+  "meaning": "别人怎么说，自己也跟着怎么说，形容没有主见。",
+  "usage": "与\"随声附和\"近义，含贬义。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "做研究不能人云亦云，要有独立判断。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 56
+}

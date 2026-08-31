@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lei-da-bu-dong-01",
+  "word": "雷打不动",
+  "pinyin": "léi dǎ bú dòng",
+  "meaning": "形容决心、态度等非常坚定，或制度、习惯等固定不变。",
+  "usage": "强调固定不变、不可动摇。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他每天晨跑，雷打不动。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-chi-gan-tou-01",
+  "word": "百尺竿头",
+  "pinyin": "bǎi chǐ gān tóu",
+  "meaning": "百尺高的竿子，佛教比喻道行、造诣虽深、仍需修炼，比喻学问、事业取得很高成就后仍需努力（常与\"更进一步\"连用）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

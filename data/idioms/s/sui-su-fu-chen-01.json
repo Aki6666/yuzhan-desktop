@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "sui-su-fu-chen-01",
+  "word": "随俗浮沉",
+  "pinyin": "suí sú fú chén",
+  "meaning": "随着世俗的潮流浮沉，比喻没有自己的立场、随波逐流。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "you-rou-gua-duan-01",
+  "word": "优柔寡断",
+  "pinyin": "yōu róu guǎ duàn",
+  "meaning": "办事迟疑，没有决断（\"优柔\"=迟疑不决）。",
+  "usage": "批评犹豫不决、缺乏魄力。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "领导优柔寡断，贻误了战机。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

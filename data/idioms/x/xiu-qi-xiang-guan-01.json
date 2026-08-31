@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "xiu-qi-xiang-guan-01",
+  "word": "休戚相关",
+  "pinyin": "xiū qī xiāng guān",
+  "meaning": "彼此之间的忧喜、福祸互相关联，形容关系密切、利害一致。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "gong-bu-ying-qiu-01",
+  "word": "供不应求",
+  "pinyin": "gōng bú yìng qiú",
+  "meaning": "供应满足不了需求（\"供\"读gōng）。",
+  "usage": "多用于市场、商品、服务等紧缺。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "新品上市后供不应求。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

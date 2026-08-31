@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cun-ji-zhu-lei-01",
+  "word": "寸积铢累",
+  "pinyin": "cùn jī zhū lěi",
+  "meaning": "一寸一寸地积累、一铢一铢地积聚，形容从微小处逐渐积累（\"铢\"=古代重量单位）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

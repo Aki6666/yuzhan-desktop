@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-jing-xiao-you-01",
+  "word": "以儆效尤",
+  "pinyin": "yǐ jǐng xiào yóu",
+  "meaning": "用对一个坏人或一件坏事的处理来警告那些学做坏事的人（\"儆\"=告诫，\"尤\"=过错）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fa-yang-guang-da-01",
+  "word": "发扬光大",
+  "pinyin": "fā yáng guāng dà",
+  "meaning": "使好的作风、传统等得到发展和提高（\"光大\"=使显赫盛大）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-xiang-lian-pian-01",
+  "word": "浮想联翩",
+  "pinyin": "fú xiǎng lián piān",
+  "meaning": "许多想象接连不断地涌现（\"联翩\"=鸟飞的样子，比喻连续不断）。",
+  "usage": "强调思绪不断涌现。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "望着满天星斗，他浮想联翩。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

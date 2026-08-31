@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "keng-qiang-you-li-01",
+  "word": "铿锵有力",
+  "pinyin": "kēng qiāng yǒu lì",
+  "meaning": "形容声音响亮而有节奏、坚定有力（\"铿锵\"=响亮悦耳）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

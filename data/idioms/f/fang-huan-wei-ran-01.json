@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fang-huan-wei-ran-01",
+  "word": "防患未然",
+  "pinyin": "fáng huàn wèi rán",
+  "meaning": "在事故或灾害尚未发生时采取措施加以防备。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bing-zhu-ye-you-01",
+  "word": "秉烛夜游",
+  "pinyin": "bǐng zhú yè yóu",
+  "meaning": "手持蜡烛、夜里出游，形容及时行乐（\"秉\"=拿着）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

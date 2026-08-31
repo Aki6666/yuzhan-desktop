@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jiao-xiang-hui-ying-01",
+  "word": "交相辉映",
+  "pinyin": "jiāo xiāng huī yìng",
+  "meaning": "各种光亮、色彩等互相映照（\"辉映\"=照耀映射）。",
+  "usage": "多用于灯光、色彩、事物等互相衬托生辉。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "两岸灯光与江水交相辉映，美不胜收。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 28
+}

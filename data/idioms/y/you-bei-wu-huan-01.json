@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "you-bei-wu-huan-01",
+  "word": "有备无患",
+  "pinyin": "yǒu bèi wú huàn",
+  "meaning": "事先有准备，就可以避免祸患（\"患\"=祸患）。",
+  "usage": "与\"未雨绸缪\"近义。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "防灾物资要提前储备，有备无患。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ri-xin-yue-yi-01",
+  "word": "日新月异",
+  "pinyin": "rì xīn yuè yì",
+  "meaning": "每天每月都有新的变化，形容发展、进步迅速。",
+  "usage": "多用于时代、科技、面貌等变化快。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "科学技术日新月异，知识更新不断加快。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 55
+}

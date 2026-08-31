@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zheng-jin-wei-zuo-01",
+  "word": "正襟危坐",
+  "pinyin": "zhèng jīn wēi zuò",
+  "meaning": "整理好衣襟端正地坐着，形容严肃或拘谨的样子。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

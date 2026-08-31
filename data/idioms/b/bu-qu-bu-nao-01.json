@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-qu-bu-nao-01",
+  "word": "不屈不挠",
+  "pinyin": "bù qū bù náo",
+  "meaning": "在困难或恶势力面前不屈服、不退缩（\"挠\"=弯曲）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

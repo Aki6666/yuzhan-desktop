@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-yi-qi-qu-01",
+  "word": "大异其趣",
+  "pinyin": "dà yì qí qù",
+  "meaning": "指表现得大不相同、趣味各异（\"趣\"=趣味、趋向）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

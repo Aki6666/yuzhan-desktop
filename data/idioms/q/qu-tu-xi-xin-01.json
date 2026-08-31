@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qu-tu-xi-xin-01",
+  "word": "曲突徙薪",
+  "pinyin": "qǔ tū xǐ xīn",
+  "meaning": "把烟囱改弯、把柴草搬走，比喻事先采取措施、防患于未然（\"突\"=烟囱，\"徙\"=搬移）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

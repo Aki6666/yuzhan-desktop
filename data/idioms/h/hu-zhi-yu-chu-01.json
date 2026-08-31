@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hu-zhi-yu-chu-01",
+  "word": "呼之欲出",
+  "pinyin": "hū zhī yù chū",
+  "meaning": "一召唤就会出来，形容画像非常逼真，也形容文学作品中人物描写十分生动。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

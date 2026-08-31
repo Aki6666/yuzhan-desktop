@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yan-er-dao-ling-01",
+  "word": "掩耳盗铃",
+  "pinyin": "yǎn ěr dào líng",
+  "meaning": "捂住耳朵偷铃铛，以为自己听不见别人也听不见，比喻自己欺骗自己。",
+  "usage": "强调自欺欺人。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "隐瞒问题不整改，无异于掩耳盗铃。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 29
+}

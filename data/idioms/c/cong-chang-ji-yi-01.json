@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "cong-chang-ji-yi-01",
+  "word": "从长计议",
+  "pinyin": "cóng cháng jì yì",
+  "meaning": "慢慢儿地多加商量，不急于做决定。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

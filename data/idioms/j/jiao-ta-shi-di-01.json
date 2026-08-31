@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jiao-ta-shi-di-01",
+  "word": "脚踏实地",
+  "pinyin": "jiǎo tà shí dì",
+  "meaning": "脚踏在实地上，比喻做事踏实、认真。",
+  "usage": "与\"好高骛远\"相对。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "年轻人要脚踏实地，从小事做起。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 41
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ji-ke-shi-01",
+  "word": "无计可施",
+  "pinyin": "wú jì kě shī",
+  "meaning": "没有计策可以施展，一点办法也没有。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 18
+}

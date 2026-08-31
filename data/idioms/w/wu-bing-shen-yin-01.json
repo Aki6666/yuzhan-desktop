@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-bing-shen-yin-01",
+  "word": "无病呻吟",
+  "pinyin": "wú bìng shēn yín",
+  "meaning": "没病却装出有病的样子哼哼，比喻没有值得忧伤的事而叹息感慨，也比喻文艺作品没有真情实感。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

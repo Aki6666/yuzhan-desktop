@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-ri-ju-zeng-01",
+  "word": "与日俱增",
+  "pinyin": "yǔ rì jù zēng",
+  "meaning": "随着时间一天天增长，形容不断增长（\"俱\"=一起）。",
+  "usage": "多用于感情、压力、矛盾等持续增长。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "群众的环保意识与日俱增。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 25
+}

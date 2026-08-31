@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hua-zhong-qu-chong-01",
+  "word": "哗众取宠",
+  "pinyin": "huá zhòng qǔ chǒng",
+  "meaning": "用浮夸的言行迎合众人、博取好感或支持。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

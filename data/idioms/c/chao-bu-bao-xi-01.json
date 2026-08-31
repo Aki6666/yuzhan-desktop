@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chao-bu-bao-xi-01",
+  "word": "朝不保夕",
+  "pinyin": "cháo bù bǎo xī",
+  "meaning": "保得住早上、不一定保得住晚上，形容形势危急或生活极端困难。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

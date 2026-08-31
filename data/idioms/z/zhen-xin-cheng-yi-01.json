@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zhen-xin-cheng-yi-01",
+  "word": "真心诚意",
+  "pinyin": "zhēn xīn chéng yì",
+  "meaning": "心意真实诚恳、没有虚假。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

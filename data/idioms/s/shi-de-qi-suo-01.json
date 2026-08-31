@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-de-qi-suo-01",
+  "word": "适得其所",
+  "pinyin": "shì dé qí suǒ",
+  "meaning": "得到适当的处所或位置，形容安排得恰当。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

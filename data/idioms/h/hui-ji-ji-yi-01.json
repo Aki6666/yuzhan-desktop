@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hui-ji-ji-yi-01",
+  "word": "讳疾忌医",
+  "pinyin": "huì jí jì yī",
+  "meaning": "隐瞒疾病、不愿医治，比喻怕人批评而掩饰自己的缺点错误。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-wen-bu-zhi-01",
+  "word": "一文不值",
+  "pinyin": "yì wén bù zhí",
+  "meaning": "一个铜钱也不值，形容毫无价值。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

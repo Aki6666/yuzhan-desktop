@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qu-gao-he-gua-01",
+  "word": "曲高和寡",
+  "pinyin": "qǔ gāo hè guǎ",
+  "meaning": "曲调越高深，能跟着唱的人就越少，比喻言论或作品不通俗，能理解的人很少。",
+  "usage": "多用于高雅艺术、深奥言论知音少。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "这部高雅歌剧曲高和寡，知音寥寥。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 40
+}

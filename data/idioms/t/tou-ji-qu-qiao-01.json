@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tou-ji-qu-qiao-01",
+  "word": "投机取巧",
+  "pinyin": "tóu jī qǔ qiǎo",
+  "meaning": "用不正当的手段谋取私利，也指不付出艰苦劳动、想靠小聪明取得成功。",
+  "usage": "批评走捷径、耍小聪明。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "学习不能投机取巧，要下真功夫。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

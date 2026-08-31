@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "re-xue-fei-teng-01",
+  "word": "热血沸腾",
+  "pinyin": "rè xuè fèi téng",
+  "meaning": "全身的血液都沸腾起来，形容情绪高涨、激动。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-zhi-ruo-yu-01",
+  "word": "大智若愚",
+  "pinyin": "dà zhì ruò yú",
+  "meaning": "有很高的才能、却不露锋芒、外表像很愚笨，形容才智很高而不炫耀。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

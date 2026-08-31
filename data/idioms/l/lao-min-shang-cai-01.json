@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "lao-min-shang-cai-01",
+  "word": "劳民伤财",
+  "pinyin": "láo mín shāng cái",
+  "meaning": "既使人民劳苦，又浪费钱财，形容滥用人力物力。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

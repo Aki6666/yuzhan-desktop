@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fa-ren-shen-xing-01",
+  "word": "发人深省",
+  "pinyin": "fā rén shēn xǐng",
+  "meaning": "启发人深刻思考而有所醒悟（\"省\"读xǐng，醒悟）。",
+  "usage": "多用于言论、文章、事件等启发人思考。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这部纪录片发人深省。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

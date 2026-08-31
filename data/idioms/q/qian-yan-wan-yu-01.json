@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-yan-wan-yu-01",
+  "word": "千言万语",
+  "pinyin": "qiān yán wàn yǔ",
+  "meaning": "形容说的话很多。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

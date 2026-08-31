@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-mai-xiang-cheng-01",
+  "word": "一脉相承",
+  "pinyin": "yí mài xiāng chéng",
+  "meaning": "由一个血统或一个派别世代流传下来，比喻思想、学说等前后相继。",
+  "usage": "强调前后传承关系；与\"一脉相通\"（强调相通）辨析。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "儒家思想一脉相承，影响深远。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 59
+}

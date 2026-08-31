@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "you-zhong-xuan-you-01",
+  "word": "优中选优",
+  "pinyin": "yōu zhōng xuǎn yōu",
+  "meaning": "在优秀的里面再选出更好的。",
+  "usage": "强调层层筛选、精益求精。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "评委们优中选优，评出最终大奖。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

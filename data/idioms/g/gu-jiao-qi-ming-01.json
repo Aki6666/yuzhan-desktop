@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "gu-jiao-qi-ming-01",
+  "word": "鼓角齐鸣",
+  "pinyin": "gǔ jiǎo qí míng",
+  "meaning": "战鼓和号角一齐响起，形容军队进攻时的壮观场面。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

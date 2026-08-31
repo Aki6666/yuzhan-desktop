@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chao-du-mu-ze-01",
+  "word": "朝督暮责",
+  "pinyin": "cháo dū mù zé",
+  "meaning": "从早到晚不停地督促、责求。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

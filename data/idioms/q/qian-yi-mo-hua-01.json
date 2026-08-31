@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-yi-mo-hua-01",
+  "word": "潜移默化",
+  "pinyin": "qián yí mò huà",
+  "meaning": "人的思想或性格在不知不觉中受到影响而发生变化（\"潜\"\"默\"=不知不觉）。",
+  "usage": "强调在不知不觉中受影响。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "家风对孩子的成长起着潜移默化的作用。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 38
+}

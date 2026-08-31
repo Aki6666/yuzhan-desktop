@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhuo-jin-jian-zhou-01",
+  "word": "捉襟见肘",
+  "pinyin": "zhuō jīn jiàn zhǒu",
+  "meaning": "拉一下衣襟就露出胳膊肘，形容衣服破烂，比喻顾此失彼、穷于应付。",
+  "usage": "多用于资金、人力、资源等匮乏窘迫。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "公司资金链紧张，已捉襟见肘。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 49
+}

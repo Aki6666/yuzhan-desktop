@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-yan-er-yu-01",
+  "word": "不言而喻",
+  "pinyin": "bù yán ér yù",
+  "meaning": "不用说明就能明白（\"喻\"=明白）。",
+  "usage": "用于强调道理或事实显而易见；注意不与\"众所周知\"等叠用。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "examples": [
+    {
+      "text": "教育的重要性不言而喻。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 73
+}

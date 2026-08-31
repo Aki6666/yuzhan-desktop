@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hou-ci-bo-bi-01",
+  "word": "厚此薄彼",
+  "pinyin": "hòu cǐ bó bǐ",
+  "meaning": "重视或优待一方、轻视或怠慢另一方，形容对人不公平。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

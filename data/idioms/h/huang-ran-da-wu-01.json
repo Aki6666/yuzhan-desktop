@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "huang-ran-da-wu-01",
+  "word": "恍然大悟",
+  "pinyin": "huǎng rán dà wù",
+  "meaning": "忽然醒悟、一下子明白过来（\"恍然\"=忽然）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "语义重复"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

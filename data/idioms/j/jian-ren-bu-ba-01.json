@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-ren-bu-ba-01",
+  "word": "坚忍不拔",
+  "pinyin": "jiān rěn bù bá",
+  "meaning": "意志坚定，不可动摇（\"拔\"=动摇、改变）。",
+  "usage": "强调意志顽强、百折不挠。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "女排姑娘坚忍不拔，逆转夺冠。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

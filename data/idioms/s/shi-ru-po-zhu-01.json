@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "shi-ru-po-zhu-01",
+  "word": "势如破竹",
+  "pinyin": "shì rú pò zhú",
+  "meaning": "形势像劈竹子一样，劈开头几节，下面的就顺着刀口分开，比喻节节胜利、毫无阻碍。",
+  "usage": "多用于战事、竞赛、工作推进等顺利。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "球队势如破竹，连下三城。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

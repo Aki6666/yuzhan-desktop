@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ban-jin-ba-liang-01",
+  "word": "半斤八两",
+  "pinyin": "bàn jīn bā liǎng",
+  "meaning": "旧制一斤合十六两，半斤等于八两，比喻彼此一样，不相上下（多含贬义）。",
+  "usage": "多用于水平、实力相当且都不高。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "两队实力半斤八两，难分胜负。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

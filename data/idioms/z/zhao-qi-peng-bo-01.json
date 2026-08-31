@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhao-qi-peng-bo-01",
+  "word": "朝气蓬勃",
+  "pinyin": "zhāo qì péng bó",
+  "meaning": "形容充满了生气和活力（\"蓬勃\"=旺盛）。",
+  "usage": "多用于青年、队伍、事业等充满活力。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "年轻的团队朝气蓬勃，干劲十足。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

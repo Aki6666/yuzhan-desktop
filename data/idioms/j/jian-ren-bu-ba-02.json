@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "jian-ren-bu-ba-02",
+  "word": "坚韧不拔",
+  "pinyin": "jiān rèn bù bá",
+  "meaning": "意志坚定、不可动摇（\"韧\"=柔软而结实，\"拔\"=动摇）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-09-01",
+  "occurrences": 8
+}

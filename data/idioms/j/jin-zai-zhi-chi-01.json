@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jin-zai-zhi-chi-01",
+  "word": "近在咫尺",
+  "pinyin": "jìn zài zhǐ chǐ",
+  "meaning": "形容距离非常近（\"咫\"\"尺\"=古代长度单位）。",
+  "usage": "强调距离极近。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "机会近在咫尺，就看你能否把握。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

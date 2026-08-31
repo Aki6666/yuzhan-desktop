@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chun-chi-xiang-yi-01",
+  "word": "唇齿相依",
+  "pinyin": "chún chǐ xiāng yī",
+  "meaning": "嘴唇和牙齿互相依存，比喻关系密切，互相依靠。",
+  "usage": "多用于两国、两方关系密切。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "两国山水相连，唇齿相依。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

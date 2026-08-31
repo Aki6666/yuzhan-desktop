@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-tu-wei-bu-01",
+  "word": "前途未卜",
+  "pinyin": "qián tú wèi bǔ",
+  "meaning": "将来的光景难以预测（\"卜\"=预测）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 15
+}

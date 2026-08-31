@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ri-mu-tu-qiong-01",
+  "word": "日暮途穷",
+  "pinyin": "rì mù tú qióng",
+  "meaning": "天已晚了、路已走到了尽头，比喻到了末日或走投无路。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

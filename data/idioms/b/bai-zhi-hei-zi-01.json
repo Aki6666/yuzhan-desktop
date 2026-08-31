@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bai-zhi-hei-zi-01",
+  "word": "白纸黑字",
+  "pinyin": "bái zhǐ hēi zì",
+  "meaning": "白纸上写着黑字，指有文字凭据、不容抵赖。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

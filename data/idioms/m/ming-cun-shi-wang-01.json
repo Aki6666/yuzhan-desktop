@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ming-cun-shi-wang-01",
+  "word": "名存实亡",
+  "pinyin": "míng cún shí wáng",
+  "meaning": "名义上还存在，实际上已经消亡。",
+  "usage": "强调名实不符、徒有虚名。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "该协会长期不活动，已名存实亡。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 22
+}

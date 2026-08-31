@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qu-li-bi-hai-01",
+  "word": "趋利避害",
+  "pinyin": "qū lì bì hài",
+  "meaning": "趋向有利的一面、避开有害的一面。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

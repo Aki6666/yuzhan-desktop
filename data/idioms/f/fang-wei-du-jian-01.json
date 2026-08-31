@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fang-wei-du-jian-01",
+  "word": "防微杜渐",
+  "pinyin": "fáng wēi dù jiàn",
+  "meaning": "在错误或坏事刚露出苗头时就及时制止，不让它发展（\"微\"=细小，\"渐\"=开端）。",
+  "usage": "强调防患于萌芽；与\"未雨绸缪\"近义。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "廉政建设要防微杜渐，抓早抓小。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 31
+}

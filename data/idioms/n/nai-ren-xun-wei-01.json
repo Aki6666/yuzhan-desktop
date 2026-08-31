@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "nai-ren-xun-wei-01",
+  "word": "耐人寻味",
+  "pinyin": "nài rén xún wèi",
+  "meaning": "意味深长，值得仔细体会琢磨。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

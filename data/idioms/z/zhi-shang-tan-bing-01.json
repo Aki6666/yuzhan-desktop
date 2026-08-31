@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "zhi-shang-tan-bing-01",
+  "word": "纸上谈兵",
+  "pinyin": "zhǐ shàng tán bīng",
+  "meaning": "在纸面上谈论打仗，比喻空谈理论，不能解决实际问题。",
+  "usage": "批评脱离实际、空谈误事。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "方案再好，只停留于纸上谈兵也无用。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

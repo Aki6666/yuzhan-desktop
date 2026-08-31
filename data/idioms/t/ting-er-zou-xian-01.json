@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ting-er-zou-xian-01",
+  "word": "铤而走险",
+  "pinyin": "tǐng ér zǒu xiǎn",
+  "meaning": "因无路可走而采取冒险行动（\"铤\"=快走的样子）。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

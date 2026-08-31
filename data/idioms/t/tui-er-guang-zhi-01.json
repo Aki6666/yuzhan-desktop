@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tui-er-guang-zhi-01",
+  "word": "推而广之",
+  "pinyin": "tuī ér guǎng zhī",
+  "meaning": "推展开去、使范围扩大。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

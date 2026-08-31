@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bo-zhong-zhi-jian-01",
+  "word": "伯仲之间",
+  "pinyin": "bó zhòng zhī jiān",
+  "meaning": "比喻事物不相上下、难分优劣（\"伯仲\"=兄弟排行的次序）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

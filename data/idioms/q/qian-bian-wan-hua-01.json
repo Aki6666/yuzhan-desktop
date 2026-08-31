@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "qian-bian-wan-hua-01",
+  "word": "千变万化",
+  "pinyin": "qiān biàn wàn huà",
+  "meaning": "形容变化极多。",
+  "usage": "强调变化无穷。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "天气千变万化，出行需留意预报。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yang-feng-yin-wei-01",
+  "word": "阳奉阴违",
+  "pinyin": "yáng fèng yīn wéi",
+  "meaning": "表面遵从、暗地违背，形容当面一套背后一套。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

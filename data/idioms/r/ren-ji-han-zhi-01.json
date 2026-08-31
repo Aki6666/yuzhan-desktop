@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ren-ji-han-zhi-01",
+  "word": "人迹罕至",
+  "pinyin": "rén jì hǎn zhì",
+  "meaning": "很少有人到的地方（\"罕\"=少）。",
+  "usage": "多用于偏远、荒凉之地。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "科考队深入人迹罕至的原始森林。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 24
+}

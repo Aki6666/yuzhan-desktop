@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ri-si-ye-xiang-01",
+  "word": "日思夜想",
+  "pinyin": "rì sī yè xiǎng",
+  "meaning": "白天黑夜都在想念，形容非常思念。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

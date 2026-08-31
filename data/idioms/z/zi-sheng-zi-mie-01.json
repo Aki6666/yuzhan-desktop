@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "zi-sheng-zi-mie-01",
+  "word": "自生自灭",
+  "pinyin": "zì shēng zì miè",
+  "meaning": "自然地发生、生长，又自然地消灭，形容不加干预、任其发展。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

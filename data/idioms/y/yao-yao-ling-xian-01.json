@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yao-yao-ling-xian-01",
+  "word": "遥遥领先",
+  "pinyin": "yáo yáo lǐng xiān",
+  "meaning": "远远地走在最前面（\"遥遥\"=距离远）。",
+  "usage": "强调优势明显、远超对手。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "该队在积分榜上遥遥领先。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 23
+}

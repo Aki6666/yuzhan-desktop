@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "kong-kong-ru-ye-01",
+  "word": "空空如也",
+  "pinyin": "kōng kōng rú yě",
+  "meaning": "形容空空的、什么也没有（\"如也\"=形容状态）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

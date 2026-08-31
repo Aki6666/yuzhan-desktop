@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ren-tou-cuan-dong-01",
+  "word": "人头攒动",
+  "pinyin": "rén tóu cuán dòng",
+  "meaning": "形容人很多，拥挤移动（\"攒\"=聚拢）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 17
+}

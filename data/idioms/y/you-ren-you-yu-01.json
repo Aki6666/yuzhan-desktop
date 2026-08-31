@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "you-ren-you-yu-01",
+  "word": "游刃有余",
+  "pinyin": "yóu rèn yǒu yú",
+  "meaning": "刀刃运转于骨节空隙中，有回旋的余地，比喻做事熟练、轻松自如。",
+  "usage": "强调技艺娴熟、从容不迫。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "处理这类技术难题，他游刃有余。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 21
+}

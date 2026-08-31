@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "fei-yi-suo-si-01",
+  "word": "匪夷所思",
+  "pinyin": "fěi yí suǒ sī",
+  "meaning": "不是平常人所能想象的（\"匪\"=非，\"夷\"=平常）。",
+  "usage": "中性偏贬，形容离奇难解；褒义\"出人意料\"时慎用。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "褒贬误用"
+  ],
+  "examples": [
+    {
+      "text": "这种离奇的情节简直匪夷所思。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 42
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-ru-xing-huo-01",
+  "word": "急如星火",
+  "pinyin": "jí rú xīng huǒ",
+  "meaning": "像流星的火光那样急促，形容非常急迫（\"星火\"=流星的光）。",
+  "usage": "强调事情急迫。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "疫情就是命令，驰援急如星火。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 20
+}

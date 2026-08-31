@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shui-di-shi-chuan-01",
+  "word": "水滴石穿",
+  "pinyin": "shuǐ dī shí chuān",
+  "meaning": "水不停地滴、能把石头滴穿，比喻只要坚持不懈、力量虽小也能做成难事。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

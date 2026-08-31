@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pian-yan-zhi-yu-01",
+  "word": "片言只语",
+  "pinyin": "piàn yán zhǐ yǔ",
+  "meaning": "零碎的话语或文字材料，形容话很少。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 7
+}

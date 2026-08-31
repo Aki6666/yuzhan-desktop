@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "huang-ruo-ge-shi-01",
+  "word": "恍若隔世",
+  "pinyin": "huǎng ruò gé shì",
+  "meaning": "好像隔了一世，形容人事、景物变化很大。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 3
+}

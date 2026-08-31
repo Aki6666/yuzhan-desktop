@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bi-bi-jie-shi-01",
+  "word": "比比皆是",
+  "pinyin": "bǐ bǐ jiē shì",
+  "meaning": "到处都是，形容极其常见（\"比比\"=到处）。",
+  "usage": "强调普遍、常见。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "这种不文明现象在景区比比皆是。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 35
+}

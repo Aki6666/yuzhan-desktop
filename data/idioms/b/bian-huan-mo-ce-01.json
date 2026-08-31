@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bian-huan-mo-ce-01",
+  "word": "变幻莫测",
+  "pinyin": "biàn huàn mò cè",
+  "meaning": "事物变化多端，难以预测（\"测\"=推测）。",
+  "usage": "多用于形势、天气、股市等变化无常。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "国际局势变幻莫测，充满不确定性。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 4,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 45
+}

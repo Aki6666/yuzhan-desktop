@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "da-dao-kuo-fu-01",
+  "word": "大刀阔斧",
+  "pinyin": "dà dāo kuò fǔ",
+  "meaning": "原指使用大刀阔斧砍杀敌人，后比喻办事果断而有魄力。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

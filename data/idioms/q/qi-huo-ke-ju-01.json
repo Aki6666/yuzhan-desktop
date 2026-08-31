@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "qi-huo-ke-ju-01",
+  "word": "奇货可居",
+  "pinyin": "qí huò kě jū",
+  "meaning": "把稀有的货物囤积起来、等待高价出售，比喻挟持某种独特的技艺或东西作为资本。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "望文生义"
+  ],
+  "frequency": 1,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 4
+}

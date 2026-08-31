@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "tu-fei-meng-jin-01",
+  "word": "突飞猛进",
+  "pinyin": "tū fēi měng jìn",
+  "meaning": "形容进步或发展非常迅速。",
+  "usage": "多用于事业、技术、学业等进展神速。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "我国航天事业突飞猛进，捷报频传。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 36
+}

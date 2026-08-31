@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-lan-er-jin-01",
+  "word": "一览而尽",
+  "pinyin": "yì lǎn ér jìn",
+  "meaning": "一眼看去就全部看见，形容事物简单明了或展露无遗。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

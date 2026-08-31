@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "chu-jing-sheng-qing-01",
+  "word": "触景生情",
+  "pinyin": "chù jǐng shēng qíng",
+  "meaning": "受到眼前景物的触动而产生某种感情。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "态度奉献"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

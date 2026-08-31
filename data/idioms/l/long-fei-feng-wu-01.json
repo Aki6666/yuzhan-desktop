@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "long-fei-feng-wu-01",
+  "word": "龙飞凤舞",
+  "pinyin": "lóng fēi fèng wǔ",
+  "meaning": "形容山势蜿蜒雄壮，也形容书法笔势有力、灵活舒展。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 10
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "ji-gao-yi-chou-01",
+  "word": "技高一筹",
+  "pinyin": "jì gāo yì chóu",
+  "meaning": "技术或本领比别人高出一等（\"筹\"=筹码）。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 8
+}

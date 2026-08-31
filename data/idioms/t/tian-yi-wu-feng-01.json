@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tian-yi-wu-feng-01",
+  "word": "天衣无缝",
+  "pinyin": "tiān yī wú fèng",
+  "meaning": "神话中仙女穿的天衣没有衣缝，比喻事物周密完善、找不出破绽。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 5
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-sheng-shui-qi-01",
+  "word": "风生水起",
+  "pinyin": "fēng shēng shuǐ qǐ",
+  "meaning": "风从水面吹过、水面掀起波澜，形容事情做得有生气、蓬勃兴旺。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 6
+}

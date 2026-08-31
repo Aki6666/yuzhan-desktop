@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "du-shan-qi-shen-01",
+  "word": "独善其身",
+  "pinyin": "dú shàn qí shēn",
+  "meaning": "原指独自修养好品德，现多指只顾自己、不管他人（\"善\"=使……好）。",
+  "usage": "现代语境多含贬义，指明哲保身、不管他人。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "面对不公，我们不能独善其身。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 33
+}

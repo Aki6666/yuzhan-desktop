@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "yu-shi-ju-jin-01",
+  "word": "与时俱进",
+  "pinyin": "yǔ shí jù jìn",
+  "meaning": "随着时代的发展而不断发展、前进（\"俱\"=一起）。",
+  "usage": "强调与时代同进步。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "理论创新要与时俱进。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 26
+}

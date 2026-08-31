@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "juan-tu-chong-lai-01",
+  "word": "卷土重来",
+  "pinyin": "juàn tǔ chóng lái",
+  "meaning": "人马卷起尘土重新扑来，比喻失败后重新组织力量再来。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

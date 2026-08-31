@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bo-lan-bu-jing-01",
+  "word": "波澜不惊",
+  "pinyin": "bō lán bù jīng",
+  "meaning": "水面平静、没有波浪，比喻局面平静、情绪稳定，也形容人胸怀坦荡、遇事镇定。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 2,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 9
+}

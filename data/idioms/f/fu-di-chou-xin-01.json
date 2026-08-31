@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fu-di-chou-xin-01",
+  "word": "釜底抽薪",
+  "pinyin": "fǔ dǐ chōu xīn",
+  "meaning": "从锅底抽掉柴火，比喻从根本上解决问题。",
+  "emotion": "褒",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 3,
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 19
+}

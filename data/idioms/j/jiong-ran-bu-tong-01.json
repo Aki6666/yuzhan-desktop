@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "jiong-ran-bu-tong-01",
+  "word": "迥然不同",
+  "pinyin": "jiǒng rán bù tóng",
+  "meaning": "形容差别很大，完全不一样（\"迥然\"=差得远）。",
+  "usage": "强调差异极大；与\"大相径庭\"近义。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "南北饮食文化迥然不同。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 3,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 44
+}

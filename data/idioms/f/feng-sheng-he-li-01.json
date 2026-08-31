@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "feng-sheng-he-li-01",
+  "word": "风声鹤唳",
+  "pinyin": "fēng shēng hè lì",
+  "meaning": "听到风声和鹤叫声都疑心是追兵，形容惊慌失措或自相惊扰。",
+  "emotion": "贬",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}

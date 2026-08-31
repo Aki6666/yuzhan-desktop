@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "mang-mang-zhen-zhen-01",
+  "word": "莽莽榛榛",
+  "pinyin": "mǎng mǎng zhēn zhēn",
+  "meaning": "形容草木丛生、荒芜繁茂（\"榛榛\"=草木丛生的样子）。",
+  "emotion": "中性",
+  "register": "无",
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "frequency": 1,
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "reviewed",
+  "library": "official",
+  "verifiedBy": "AI导入",
+  "updatedAt": "2026-08-31",
+  "occurrences": 2
+}
