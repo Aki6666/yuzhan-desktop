@@ -38,20 +38,20 @@ defineProps<{ examples: ExampleItem[] }>()
 }
 
 .example-item {
-  padding: 8px 12px;
-  border: 1px solid #eceef1;
-  border-radius: 8px;
-  background: #fafbfc;
+  padding: 10px 14px;
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-sm);
+  background: var(--y-bg-subtle);
 }
 
 .example-text {
   margin: 0 0 6px;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #333;
+  font-size: var(--y-font-body);
+  line-height: var(--y-line-height-body);
+  color: var(--y-text-body);
 }
 
 .example-badge {
-  font-size: 12px;
+  font-size: var(--y-font-aux);
 }
 </style>

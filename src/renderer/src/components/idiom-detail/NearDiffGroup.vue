@@ -39,9 +39,9 @@ function toggle(): void {
 
 <style scoped>
 .near-group {
-  border: 1px solid #e3e6ea;
-  border-radius: 8px;
-  background: #fafbfc;
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-sm);
+  background: var(--y-bg-subtle);
 }
 
 .near-toggle {
@@ -53,19 +53,21 @@ function toggle(): void {
   border: none;
   background: transparent;
   cursor: pointer;
-  font-size: 14px;
-  color: #2c3e50;
+  font-size: var(--y-font-body);
+  color: var(--y-text-body);
   text-align: left;
+  border-radius: var(--y-radius-sm);
+  transition: background-color 0.12s ease;
 }
 
 .near-toggle:hover {
-  background: #f0f2f5;
+  background: var(--y-bg-hover);
 }
 
 .near-caret {
   display: inline-block;
   transition: transform 0.15s ease;
-  color: #7a8699;
+  color: var(--y-text-tertiary);
 }
 
 .near-caret.open {
@@ -74,6 +76,7 @@ function toggle(): void {
 
 .near-title {
   font-weight: 600;
+  color: var(--y-text-body);
 }
 
 .near-list {
@@ -85,17 +88,17 @@ function toggle(): void {
 .near-item {
   padding: 4px 0;
   font-size: 13px;
-  line-height: 1.6;
-  color: #444;
+  line-height: var(--y-line-height-body);
+  color: var(--y-text-body);
 }
 
 .near-word {
   font-weight: 600;
-  color: #1f2d3d;
+  color: var(--y-text-primary);
   margin-right: 6px;
 }
 
 .near-diff {
-  color: #555;
+  color: var(--y-text-secondary);
 }
 </style>

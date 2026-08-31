@@ -36,9 +36,9 @@ const hitSpan = computed<HighlightSpan | null>(() =>
 
 <style scoped>
 .hl-hit {
-  background: #fff3bf;
-  color: #ad6800;
-  border-radius: 2px;
+  background: var(--y-primary-soft);
+  color: var(--y-primary);
+  border-radius: 3px;
   padding: 0 1px;
 }
 </style>

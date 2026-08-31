@@ -44,10 +44,11 @@ function goBackToList(): void {
 </script>
 
 <template>
-  <section class="view">
+  <section class="view detail-page">
     <div class="detail-toolbar">
-      <NButton size="small" quaternary @click="goBackToList">← 返回列表</NButton>
-      <h1 class="detail-h1">成语详情</h1>
+      <NButton size="small" quaternary class="back-btn" @click="goBackToList">
+        <span aria-hidden="true">←</span> 返回列表
+      </NButton>
     </div>
 
     <!-- 加载中 -->
@@ -77,29 +78,37 @@ function goBackToList(): void {
 </template>
 
 <style scoped>
+.detail-page {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
 .detail-toolbar {
   display: flex;
   align-items: center;
-  gap: 8px;
   margin-bottom: 14px;
 }
 
-.detail-h1 {
-  margin: 0;
-  font-size: 18px;
+.back-btn {
+  color: var(--y-text-secondary);
 }
 
 .state-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 32px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 280px;
+  padding: 40px;
+  background: var(--y-bg-card);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
 }
 
 .state-text {
   margin: 0;
-  color: #7a8699;
-  font-size: 14px;
+  color: var(--y-text-secondary);
+  font-size: var(--y-font-body);
 }
 </style>

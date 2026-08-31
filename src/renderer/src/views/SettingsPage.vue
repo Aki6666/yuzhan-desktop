@@ -1,16 +1,18 @@
 <script setup lang="ts">
+/**
+ * 设置页（F10 简版）：快捷键说明 + 数据备份（userData JSON 导出）
+ * - 快捷键：v0.1 应用内快捷键为主（窗口聚焦时生效）；全局注册为增强，失败静默降级（§3.4/§10.2）
+ * - 备份：renderer 可及会话数据快照（设置/生词本/进度会话态）；全量备份为 v0.2 必补项
+ *
+ * U2 视觉重构：分组设置卡片，消费 U1 设计 token；data-testid 与行为不变。
+ */
 import { onMounted, ref } from 'vue'
-import { NButton, NCard, NEmpty, NTag } from 'naive-ui'
+import { NButton, NCard, NTag } from 'naive-ui'
 import { useSettingsStore } from '@renderer/stores/settings'
 import { usePendingStore } from '@renderer/stores/pending'
 import { useProgressStore } from '@renderer/stores/progress'
 import { backupFileName, buildBackupPayload } from '@renderer/lib/backup'
 
-/**
- * 设置页（F10 简版）：快捷键说明 + 数据备份（userData JSON 导出）
- * - 快捷键：v0.1 应用内快捷键为主（窗口聚焦时生效）；全局注册为增强，失败静默降级（§3.4/§10.2）
- * - 备份：renderer 可及会话数据快照（设置/生词本/进度会话态）；全量备份为 v0.2 必补项
- */
 const settingsStore = useSettingsStore()
 const pendingStore = usePendingStore()
 const progressStore = useProgressStore()
@@ -65,12 +67,24 @@ const aiModeTag = {
 </script>
 
 <template>
-  <section class="view" data-testid="settings-page">
-    <h1>设置</h1>
+  <section class="view settings-page" data-testid="settings-page">
+    <header class="page-header">
+      <div class="page-heading">
+        <h1 class="page-title">设置</h1>
+        <p class="page-sub">快捷键与数据</p>
+      </div>
+    </header>
 
-    <NCard title="快捷键" class="card" data-testid="card-shortcut">
+    <!-- 快捷键 -->
+    <NCard class="card" data-testid="card-shortcut">
+      <template #header>
+        <div class="card-header">
+          <span class="card-title">快捷键</span>
+          <NTag size="small" :bordered="false" round>快速输入</NTag>
+        </div>
+      </template>
       <div class="row">
-        <span>快速记录（快速输入弹层）</span>
+        <span class="row-label">快速记录（快速输入弹层）</span>
         <NTag size="small" type="primary" round data-testid="shortcut-tag">
           {{ settingsStore.settings.quickInputShortcut }}
         </NTag>
@@ -80,9 +94,16 @@ const aiModeTag = {
       </p>
     </NCard>
 
-    <NCard title="AI 模式" class="card" data-testid="card-aimode">
+    <!-- AI 模式 -->
+    <NCard class="card" data-testid="card-aimode">
+      <template #header>
+        <div class="card-header">
+          <span class="card-title">AI 模式</span>
+          <NTag size="small" :bordered="false" round>v0.2</NTag>
+        </div>
+      </template>
       <div class="row">
-        <span>AI 查询模式</span>
+        <span class="row-label">AI 查询模式</span>
         <NTag size="small" :type="aiModeTag[settingsStore.settings.aiMode].type" round data-testid="aimode-tag">
           {{ aiModeTag[settingsStore.settings.aiMode].label }}
         </NTag>
@@ -90,13 +111,14 @@ const aiModeTag = {
       <p class="muted">v0.1 无 AI 联网（AI 闭环 v0.2）；无 key/断网时本地功能完整可用（AC-02）。</p>
     </NCard>
 
-    <NCard title="数据备份" class="card" data-testid="card-backup">
-      <NEmpty
-        v-if="exportedAt"
-        description="备份已导出"
-        :show-description="false"
-        class="exported-hint"
-      />
+    <!-- 数据备份 -->
+    <NCard class="card" data-testid="card-backup">
+      <template #header>
+        <div class="card-header">
+          <span class="card-title">数据备份</span>
+          <NTag size="small" :bordered="false" round>JSON 导出</NTag>
+        </div>
+      </template>
       <div class="row">
         <NButton
           type="primary"
@@ -121,29 +143,81 @@ const aiModeTag = {
 </template>
 
 <style scoped>
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: var(--y-font-title-lg);
+  font-weight: 700;
+  color: var(--y-text-primary);
+}
+
+.page-sub {
+  margin: 0;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+}
+
 .card {
-  margin-bottom: 16px;
+  background: var(--y-bg-card);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--y-text-primary);
 }
 
 .row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
   margin-bottom: 8px;
 }
 
+.row-label {
+  font-size: var(--y-font-body);
+  color: var(--y-text-body);
+}
+
 .muted {
-  color: #999;
-  font-size: 12px;
-  margin: 4px 0;
+  color: var(--y-text-tertiary);
+  font-size: var(--y-font-aux);
+  margin: 4px 0 0;
+  line-height: 1.6;
 }
 
 .error {
-  color: #d03050;
+  color: var(--y-danger);
   font-size: 13px;
-}
-
-.exported-hint {
-  margin-bottom: 8px;
+  margin: 4px 0 0;
 }
 </style>

@@ -4,10 +4,12 @@
  * - 列表 + 手动删除 + 「立即复习」（命中库内词 → progress 记录 + 跳转详情；未收录 → 提示）
  * - 空态引导：刷题遇到生词，Ctrl+K 记下来（§3.3）
  * - 数据走 pending store（T3：userData/pending.json 即时写）与 progress store（T3）
+ *
+ * U2 视觉重构：消费 U1 设计 token；data-testid、文案与行为保持不变。
  */
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { NButton, NEmpty, NSpin, NTag } from 'naive-ui'
+import { NButton, NSpin, NTag } from 'naive-ui'
 import { useIdiomsStore } from '@renderer/stores/idioms'
 import { usePendingStore } from '@renderer/stores/pending'
 import { useProgressStore } from '@renderer/stores/progress'
@@ -57,7 +59,10 @@ function goBrowse(): void {
 <template>
   <section class="view pending-page">
     <header class="page-header">
-      <h1 class="page-title">生词本</h1>
+      <div class="page-heading">
+        <h1 class="page-title">生词本</h1>
+        <p class="page-sub">刷题遇到的未收录生词 · 可立即复习或删除</p>
+      </div>
       <span class="result-count" data-testid="pending-count">共 {{ count }} 条</span>
     </header>
 
@@ -76,15 +81,27 @@ function goBrowse(): void {
       <p class="state-text">生词本加载失败：{{ pendingStore.error }}</p>
     </div>
 
-    <!-- 空态引导（§3.3） -->
+    <!-- 空态引导（§3.3：刷题遇到生词，Ctrl+K 记下来） -->
     <div v-else-if="count === 0" class="list-state" data-testid="pending-empty">
-      <NEmpty description="刷题遇到生词，Ctrl+K 记下来">
-        <template #extra>
-          <NButton size="small" type="primary" data-testid="goto-browse" @click="goBrowse">
-            去成语库浏览
-          </NButton>
-        </template>
-      </NEmpty>
+      <svg
+        class="empty-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+        <path d="M12 7v6" />
+        <path d="M9 10h6" />
+      </svg>
+      <p class="empty-title">生词本还是空的</p>
+      <p class="empty-desc">刷题遇到生词，Ctrl+K 记下来</p>
+      <NButton size="small" type="primary" data-testid="goto-browse" @click="goBrowse">
+        去成语库浏览
+      </NButton>
     </div>
 
     <!-- 生词列表 -->
@@ -117,25 +134,41 @@ function goBrowse(): void {
 .pending-page {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   max-width: 720px;
+  margin: 0 auto;
 }
 
 .page-header {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 12px;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .page-title {
   margin: 0;
-  font-size: 20px;
-  color: #2c3e50;
+  font-size: var(--y-font-title-lg);
+  font-weight: 700;
+  color: var(--y-text-primary);
+}
+
+.page-sub {
+  margin: 0;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .result-count {
-  font-size: 12px;
-  color: #888;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-secondary);
+  padding-bottom: 2px;
 }
 
 .hint-bar {
@@ -148,22 +181,48 @@ function goBrowse(): void {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 240px;
+  min-height: 280px;
+  padding: 40px;
+  background: var(--y-bg-card);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
+  text-align: center;
 }
 
 .state-text {
-  font-size: 13px;
-  color: #999;
+  font-size: var(--y-font-body);
+  color: var(--y-text-secondary);
+}
+
+.empty-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--y-text-tertiary);
+  margin-bottom: 4px;
+}
+
+.empty-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--y-text-body);
+}
+
+.empty-desc {
+  margin: 0 0 6px;
+  font-size: var(--y-font-body);
+  color: var(--y-text-tertiary);
 }
 
 .pending-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 1px solid #ececec;
-  border-radius: 10px;
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
   overflow: hidden;
-  background: #fff;
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
 }
 
 .pending-row {
@@ -171,8 +230,9 @@ function goBrowse(): void {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 10px 14px;
-  border-bottom: 1px solid #f2f2f2;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--y-border-light);
+  transition: background-color 0.12s ease;
 }
 
 .pending-row:last-child {
@@ -180,7 +240,7 @@ function goBrowse(): void {
 }
 
 .pending-row:hover {
-  background: #f7f9fc;
+  background: var(--y-bg-hover);
 }
 
 .pending-main {
@@ -193,12 +253,12 @@ function goBrowse(): void {
 .pending-word {
   font-size: 16px;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--y-text-primary);
 }
 
 .pending-date {
-  font-size: 12px;
-  color: #9aa4b2;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .pending-actions {

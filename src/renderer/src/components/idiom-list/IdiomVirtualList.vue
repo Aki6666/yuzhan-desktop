@@ -97,9 +97,10 @@ onBeforeUnmount(() => {
 <style scoped>
 .idiom-virtual-list {
   overflow: auto;
-  border: 1px solid #ececec;
-  border-radius: 8px;
-  background: #fff;
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
 }
 
 .idiom-virtual-list-spacer {

@@ -2,6 +2,8 @@
 /**
  * 列表行（固定行高 56px，与 IdiomVirtualList rowHeight 保持一致）
  * 点击跳转详情 /idioms/:id（§3.2；详情页为 T5 产物，链接先就位）
+ *
+ * U2 视觉重构：消费 U1 设计 token，行 hover/激活态，data-testid 与行为不变。
  */
 import { computed } from 'vue'
 import { NTag } from 'naive-ui'
@@ -45,7 +47,7 @@ const freqTag = computed(() => tagType(props.idiom.frequency))
     </div>
     <div class="idiom-row-meta">
       <NTag size="small" :type="freqTag" round data-testid="freq-tag">频 {{ idiom.frequency }}</NTag>
-      <NTag size="small" round bordered>{{ idiom.emotion }}</NTag>
+      <NTag size="small" round bordered class="emotion-tag">{{ idiom.emotion }}</NTag>
     </div>
   </RouterLink>
 </template>
@@ -57,14 +59,23 @@ const freqTag = computed(() => tagType(props.idiom.frequency))
   justify-content: space-between;
   gap: 12px;
   height: 56px; /* 与虚拟列表 rowHeight 一致（固定行高） */
-  padding: 0 14px;
-  border-bottom: 1px solid #f2f2f2;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--y-border-light);
   text-decoration: none;
   color: inherit;
+  transition: background-color 0.12s ease;
 }
 
 .idiom-row:hover {
-  background: #f7f9fc;
+  background: var(--y-bg-hover);
+}
+
+.idiom-row:active {
+  background: var(--y-bg-active);
+}
+
+.idiom-row:last-child {
+  border-bottom: none;
 }
 
 .idiom-row-main {
@@ -77,17 +88,21 @@ const freqTag = computed(() => tagType(props.idiom.frequency))
 .idiom-word {
   font-size: 17px;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--y-text-primary);
 }
 
 .idiom-pinyin {
-  font-size: 12px;
-  color: #9aa4b2;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .idiom-row-meta {
   display: flex;
   gap: 6px;
   flex: 0 0 auto;
+}
+
+.emotion-tag {
+  color: var(--y-text-secondary);
 }
 </style>
