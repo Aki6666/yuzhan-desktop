@@ -8,7 +8,6 @@
  * - 纯 Node（无 electron 依赖，fetch 用全局），可单测（tests/ai.test.ts）
  */
 import { createHash } from 'node:crypto'
-import { promises as fsp } from 'node:fs'
 import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import type { AiDraftResult, AiMode, Emotion, Register } from '@shared/ipc/contracts'
