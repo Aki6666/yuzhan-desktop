@@ -327,9 +327,9 @@ describe('quiz store（AC-06）', () => {
     }
     quizStore.next()
     await flushPromises()
-    const wrongIds = [...quizStore.lastSessionWrongIds.value]
+    const wrongIds = [...quizStore.lastSessionWrongIds]
     expect(wrongIds).toHaveLength(10)
-    expect(quizStore.lastSessionIds.value).toHaveLength(10)
+    expect(quizStore.lastSessionIds).toHaveLength(10)
 
     quizStore.reset()
     expect(quizStore.start(fixture, {})).toBe(true)
@@ -388,8 +388,7 @@ describe('QuizPage（§3.2 三态 / §3.3 空态 / F6）', () => {
     expect(wrapper.find('[data-testid="quiz-question"]').exists()).toBe(true)
 
     // 第 1 题答对：反馈「回答正确」+ 考点展示
-    const qOptions = wrapper.findAll('[data-testid^="q-option-"]')
-    // 找到正确答案：从 q-option 文案匹配词条释义不可行（随机），改为从 store 取
+    // 正确答案下标从 store 取（选项顺序由组卷随机决定）
     const pinia = wrapper.vm.$pinia
     const quizStore = useQuizStore(pinia)
     const first = quizStore.current!
