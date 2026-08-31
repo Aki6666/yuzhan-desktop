@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "yuzhan://schemas/idiom.full.json",
+  "title": "idiom.full — 正式库/个人确认库严格校验入口",
+  "description": "§5.7 双入口之严格入口：required 字段齐全（id/word/pinyin/meaning/emotion/register/errorTypes/frequency/quality/library + schemaVersion）；属性定义复用 idiom.schema.json 的同一份 $defs，防止与 draft 入口漂移。",
+  "allOf": [{ "$ref": "yuzhan://schemas/idiom.schema.json#/$defs/idiomProperties" }],
+  "required": [
+    "schemaVersion",
+    "id",
+    "word",
+    "pinyin",
+    "meaning",
+    "emotion",
+    "register",
+    "errorTypes",
+    "frequency",
+    "quality",
+    "library"
+  ]
+}

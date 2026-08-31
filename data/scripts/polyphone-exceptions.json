@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "description": "§5.7 约束 #8 多音字例外清单（人工维护）：当词条 id 的拼音 slug 与其 pinyin 字段按规则推导（去声调、空格转连字符）不一致时，须在此登记放行——按教育部《普通话异读词审音表》人工确认拼音后生成 slug（§5.5）。每条含 word/pinyin/slug/reason 四字段。T2b 种子库阶段随词条补充。",
+  "exceptions": []
+}

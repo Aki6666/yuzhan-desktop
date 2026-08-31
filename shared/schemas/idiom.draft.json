@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "yuzhan://schemas/idiom.draft.json",
+  "title": "idiom.draft — AI 初稿宽松校验入口",
+  "description": "§5.7 双入口之宽松入口：仅要求 id/word/pinyin 三字段，其余字段允许缺失（缺字段由校验脚本明确标记待补充，见 validate-data.mjs）；已提供的字段仍须过同一份 $defs 的属性约束（枚举/数量上限等），防止脏数据混入。",
+  "allOf": [{ "$ref": "yuzhan://schemas/idiom.schema.json#/$defs/idiomProperties" }],
+  "required": ["id", "word", "pinyin"]
+}
