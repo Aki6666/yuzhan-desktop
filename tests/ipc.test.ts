@@ -35,6 +35,11 @@ vi.mock('electron', () => ({
     handle: (channel: string, fn: Handler) => {
       handlers.set(channel, fn)
     }
+  },
+  safeStorage: {
+    isEncryptionAvailable: () => true,
+    encryptString: (plain: string) => Buffer.from(`enc:${plain}`, 'utf8'),
+    decryptString: (buf: Buffer) => buf.toString('utf8').replace(/^enc:/, '')
   }
 }))
 
@@ -181,5 +186,59 @@ describe('IPC 入参校验与错误码（§4.6 / §10.4）', () => {
   it('app:log：合法 { level, message } → ok:true', async () => {
     const r = (await call(IPC_CHANNELS.appLog, { level: 'warn', message: 'renderer error' })) as { ok: boolean }
     expect(r.ok).toBe(true)
+  })
+})
+
+describe('AI（v0.2，§10.2/§10.4 ai:searchWord）', () => {
+  it('ai:searchWord：入参校验（缺 word / 空白）→ INVALID_ARGS', async () => {
+    await expect(call(IPC_CHANNELS.aiSearchWord, {})).resolves.toEqual(INVALID)
+    await expect(call(IPC_CHANNELS.aiSearchWord, { word: '   ' })).resolves.toEqual(INVALID)
+    await expect(call(IPC_CHANNELS.aiSearchWord, 'word')).resolves.toEqual(INVALID)
+  })
+
+  it('ai:searchWord：无 apiKey → NO_API_KEY（renderer 降级生词本）', async () => {
+    const r = (await call(IPC_CHANNELS.aiSearchWord, { word: '鞠躬尽瘁' })) as { ok: boolean; error?: { code: string } }
+    expect(r.ok).toBe(false)
+    expect(r.error?.code).toBe('NO_API_KEY')
+  })
+
+  it('settings:set 配置 apiKey → 加密存储，settings:get 返回掩码与 hasApiKey', async () => {
+    const setR = (await call(IPC_CHANNELS.settingsSet, { apiKey: 'sk-test-123456' })) as {
+      ok: boolean
+      data?: { hasApiKey?: boolean; apiKeyMasked?: string; aiMode?: string }
+    }
+    expect(setR.ok).toBe(true)
+    expect(setR.data?.hasApiKey).toBe(true)
+    expect(setR.data?.apiKeyMasked).toBe('sk-t****')
+    expect(setR.data?.aiMode).toBe('configured') // key-set → configured（§10.2）
+
+    const getR = (await call(IPC_CHANNELS.settingsGet)) as {
+      ok: boolean
+      data: { hasApiKey?: boolean; apiKeyMasked?: string }
+    }
+    expect(getR.data.hasApiKey).toBe(true)
+    expect(getR.data.apiKeyMasked).toBe('sk-t****')
+  })
+
+  it('settings:set 清除 apiKey（空串）→ hasApiKey false、aiMode → disabled', async () => {
+    await call(IPC_CHANNELS.settingsSet, { apiKey: 'sk-x' })
+    const clearR = (await call(IPC_CHANNELS.settingsSet, { apiKey: '' })) as {
+      ok: boolean
+      data?: { hasApiKey?: boolean; aiMode?: string }
+    }
+    expect(clearR.data?.hasApiKey).toBe(false)
+    expect(clearR.data?.aiMode).toBe('disabled')
+  })
+
+  it('settings:set：aiBaseUrl/aiModel 可配；空串 → INVALID_ARGS', async () => {
+    const r = (await call(IPC_CHANNELS.settingsSet, { aiBaseUrl: 'https://ollama.local/v1', aiModel: 'qwen' })) as {
+      ok: boolean
+      data?: { aiBaseUrl?: string; aiModel?: string }
+    }
+    expect(r.ok).toBe(true)
+    expect(r.data?.aiBaseUrl).toBe('https://ollama.local/v1')
+    expect(r.data?.aiModel).toBe('qwen')
+    await expect(call(IPC_CHANNELS.settingsSet, { aiBaseUrl: '' })).resolves.toEqual(INVALID)
+    await expect(call(IPC_CHANNELS.settingsSet, { aiModel: '' })).resolves.toEqual(INVALID)
   })
 })

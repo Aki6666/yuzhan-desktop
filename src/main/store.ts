@@ -32,6 +32,7 @@ import type {
   SettingsSetRequest,
   UserProgress
 } from '@shared/ipc/contracts'
+import { DEFAULT_AI_BASE_URL, DEFAULT_AI_MODEL } from '@shared/ipc/contracts'
 
 // ---------------------------------------------------------------------------
 // 日志接口（由调用方注入；生产接 electron-log，测试可静默）
@@ -99,7 +100,13 @@ function today(): string {
 }
 
 function defaultSettings(): AppSettings {
-  return { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+  return {
+    schemaVersion: 1,
+    aiMode: 'disabled',
+    quickInputShortcut: 'CommandOrControl+K',
+    aiBaseUrl: DEFAULT_AI_BASE_URL,
+    aiModel: DEFAULT_AI_MODEL
+  }
 }
 
 /** SM-2 调度默认值（v0.2，§5.6）：due=now、interval=0、ease=2.5 */
@@ -288,7 +295,9 @@ export function createStorage(options: StorageOptions): Storage {
       quickInputShortcut:
         typeof raw.quickInputShortcut === 'string' && raw.quickInputShortcut.length > 0
           ? raw.quickInputShortcut
-          : def.quickInputShortcut
+          : def.quickInputShortcut,
+      aiBaseUrl: typeof raw.aiBaseUrl === 'string' && raw.aiBaseUrl.length > 0 ? raw.aiBaseUrl : def.aiBaseUrl,
+      aiModel: typeof raw.aiModel === 'string' && raw.aiModel.length > 0 ? raw.aiModel : def.aiModel
     }
   }
 

@@ -9,7 +9,7 @@
  * U2 视觉重构：分组设置卡片，消费 U1 设计 token；data-testid 与行为不变。
  */
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import { NButton, NCard, NTag } from 'naive-ui'
+import { NButton, NCard, NInput, NTag } from 'naive-ui'
 import { useSettingsStore } from '@renderer/stores/settings'
 import { usePendingStore } from '@renderer/stores/pending'
 import { useProgressStore } from '@renderer/stores/progress'
@@ -23,6 +23,66 @@ const progressStore = useProgressStore()
 const exporting = ref(false)
 const exportedAt = ref<string | null>(null)
 const exportError = ref<string | null>(null)
+
+// ---------------------------------------------------------------------------
+// AI 配置（v0.2，t23）：apiKey（safeStorage 加密）+ OpenAI 兼容端点/模型
+// ---------------------------------------------------------------------------
+
+const apiKeyInput = ref('')
+const aiSaving = ref(false)
+const aiMessage = ref<string | null>(null)
+const aiError = ref<string | null>(null)
+const aiBaseUrlInput = ref('')
+const aiModelInput = ref('')
+
+/** 当前 key 掩码（前 4 位 + ****；无 key 显示提示） */
+const apiKeyMasked = computed(() => settingsStore.settings.apiKeyMasked ?? '')
+
+async function saveAiConfig(): Promise<void> {
+  aiSaving.value = true
+  aiError.value = null
+  aiMessage.value = null
+  try {
+    const patch: { apiKey?: string; aiBaseUrl?: string; aiModel?: string } = {}
+    if (apiKeyInput.value.trim() !== '') {
+      patch.apiKey = apiKeyInput.value.trim()
+    }
+    if (aiBaseUrlInput.value.trim() !== '') patch.aiBaseUrl = aiBaseUrlInput.value.trim()
+    if (aiModelInput.value.trim() !== '') patch.aiModel = aiModelInput.value.trim()
+    if (Object.keys(patch).length > 0) {
+      await settingsStore.update(patch)
+    }
+    apiKeyInput.value = '' // 输入框清空（已保存；掩码区显示新掩码）
+    aiMessage.value = 'AI 配置已保存（apiKey 经系统加密存储）'
+  } catch (e) {
+    aiError.value = String(e)
+  } finally {
+    aiSaving.value = false
+  }
+}
+
+async function clearApiKey(): Promise<void> {
+  aiSaving.value = true
+  aiError.value = null
+  aiMessage.value = null
+  try {
+    await settingsStore.setApiKey('')
+    apiKeyInput.value = ''
+    aiMessage.value = '已清除 API Key（AI 降级为纯本地/生词本）'
+  } catch (e) {
+    aiError.value = String(e)
+  } finally {
+    aiSaving.value = false
+  }
+}
+
+onMounted(() => {
+  void settingsStore.load().then(() => {
+    aiBaseUrlInput.value = settingsStore.settings.aiBaseUrl ?? ''
+    aiModelInput.value = settingsStore.settings.aiModel ?? ''
+  })
+  void pendingStore.load()
+})
 
 /** 当前键位中文描述（FIX-2 去英文：'Plus' → '+ / 等号 / 数字键盘加号'；自定义 → 如 'Ctrl + K'） */
 const shortcutDisplay = computed(() => describeShortcut(settingsStore.settings.quickInputShortcut))
@@ -69,11 +129,6 @@ function cancelCapture(): void {
 
 onBeforeUnmount(() => {
   if (capturing.value) window.removeEventListener('keydown', onCaptureKey, true)
-})
-
-onMounted(() => {
-  void settingsStore.load()
-  void pendingStore.load()
 })
 
 function downloadJson(payload: unknown, fileName: string): void {
@@ -162,7 +217,7 @@ const aiModeTag = {
       </p>
     </NCard>
 
-    <!-- AI 模式 -->
+    <!-- AI 模式（v0.2：四态 + apiKey 配置 + OpenAI 兼容端点/模型） -->
     <NCard class="card" data-testid="card-aimode">
       <template #header>
         <div class="card-header">
@@ -176,7 +231,48 @@ const aiModeTag = {
           {{ aiModeTag[settingsStore.settings.aiMode].label }}
         </NTag>
       </div>
-      <p class="muted">v0.1 无 AI 联网（AI 闭环 v0.2）；无 key/断网时本地功能完整可用（AC-02）。</p>
+
+      <div class="ai-field" data-testid="ai-key-field">
+        <span class="row-label">API Key</span>
+        <div class="ai-input-row">
+          <NInput
+            v-model:value="apiKeyInput"
+            type="password"
+            show-password-on="click"
+            size="small"
+            :placeholder="apiKeyMasked ? `已配置：${apiKeyMasked}（输入新值替换，留空不修改）` : 'sk-…（未配置）'"
+            data-testid="ai-key-input"
+          />
+          <NButton size="small" type="primary" :loading="aiSaving" data-testid="ai-save" @click="saveAiConfig">
+            保存
+          </NButton>
+          <NButton
+            v-if="settingsStore.settings.hasApiKey"
+            size="small"
+            secondary
+            data-testid="ai-key-clear"
+            @click="clearApiKey"
+          >
+            清除
+          </NButton>
+        </div>
+      </div>
+
+      <div class="ai-field" data-testid="ai-endpoint-field">
+        <span class="row-label">API 端点（OpenAI 兼容）</span>
+        <NInput v-model:value="aiBaseUrlInput" size="small" placeholder="https://api.openai.com/v1" data-testid="ai-baseurl-input" />
+      </div>
+      <div class="ai-field" data-testid="ai-model-field">
+        <span class="row-label">模型名</span>
+        <NInput v-model:value="aiModelInput" size="small" placeholder="gpt-4o-mini" data-testid="ai-model-input" />
+      </div>
+
+      <p v-if="aiMessage" class="success" data-testid="ai-message">{{ aiMessage }}</p>
+      <p v-if="aiError" class="error" data-testid="ai-error">{{ aiError }}</p>
+      <p class="muted">
+        apiKey 经系统加密存储（Windows DPAPI）；解密失败视为未配置（降级纯本地，不崩不丢数据）。
+        无 key/断网时本地功能完整可用（AC-02）；未命中词条降级存入生词本。
+      </p>
     </NCard>
 
     <!-- 数据备份 -->
@@ -299,6 +395,23 @@ const aiModeTag = {
   font-size: var(--y-font-aux);
   margin: 4px 0 0;
   line-height: 1.6;
+}
+
+.ai-field {
+  margin: 10px 0;
+}
+
+.ai-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.success {
+  color: var(--y-primary);
+  font-size: 13px;
+  margin: 4px 0 0;
 }
 
 .error {

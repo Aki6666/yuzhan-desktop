@@ -6,6 +6,9 @@
  * - 默认快捷键改为「+」键（DEFAULT_SHORTCUT='Plus'，见 quickRecord.ts），移除 Ctrl+K 硬编码默认
  * - 加载时把旧版默认 'CommandOrControl+K' 迁移为 'Plus'（旧配置/主进程默认值兜底），
  *   用户自定义值（如 'Control+K'）原样保留
+ *
+ * v0.2 AI 层（t23）：apiKey 配置（safeStorage 加密存储，main 侧）、OpenAI 兼容 baseURL/模型可配；
+ * settings:get 派生 apiKeyMasked/hasApiKey 供 UI 掩码展示
  */
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
@@ -67,5 +70,15 @@ export const useSettingsStore = defineStore('settings', () => {
     return update({ aiMode: mode })
   }
 
-  return { settings, loaded, loading, error, load, update, setAiMode }
+  /** 配置/清除 apiKey（main 侧 safeStorage 加密存储；空串/空白 = 清除） */
+  function setApiKey(apiKey: string): Promise<AppSettings | null> {
+    return update({ apiKey })
+  }
+
+  /** 配置 OpenAI 兼容端点与模型（v0.2 AI 层） */
+  function setAiConfig(patch: { aiBaseUrl?: string; aiModel?: string }): Promise<AppSettings | null> {
+    return update(patch)
+  }
+
+  return { settings, loaded, loading, error, load, update, setAiMode, setApiKey, setAiConfig }
 })

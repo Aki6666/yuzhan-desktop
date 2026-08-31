@@ -98,12 +98,24 @@ export interface PendingItem {
 /** AI 模式状态机四态（§10.2） */
 export type AiMode = 'disabled' | 'configured' | 'online' | 'error'
 
+/** OpenAI 兼容默认端点（§10.2 Provider 抽象；设置页可配 baseURL/模型） */
+export const DEFAULT_AI_BASE_URL = 'https://api.openai.com/v1'
+export const DEFAULT_AI_MODEL = 'gpt-4o-mini'
+
 /** 应用设置（§5.6，userData/config.json） */
 export interface AppSettings {
   schemaVersion: number
   aiMode: AiMode
   /** v0.1 应用内快捷键（窗口聚焦时生效），全局注册增强失败静默降级（§3.4） */
   quickInputShortcut: string
+  /** OpenAI 兼容 baseURL（v0.2 AI 层，设置页可配） */
+  aiBaseUrl?: string
+  /** 模型名（v0.2 AI 层，设置页可配） */
+  aiModel?: string
+  /** 派生字段（main settings:get 填充，不入 config.json）：apiKey 掩码（前 4 位 + ****） */
+  apiKeyMasked?: string
+  /** 派生字段：是否已配置 apiKey（safeStorage 加密存储） */
+  hasApiKey?: boolean
 }
 
 export interface QuizAnswer {
@@ -125,7 +137,8 @@ export const IPC_CHANNELS = {
   quizRecord: 'quiz:record',
   settingsGet: 'settings:get',
   settingsSet: 'settings:set',
-  appLog: 'app:log'
+  appLog: 'app:log',
+  aiSearchWord: 'ai:searchWord'
 } as const
 
 export type IpcChannelName = (typeof IPC_CHANNELS)[keyof typeof IPC_CHANNELS]
@@ -140,6 +153,9 @@ export type IpcErrorCode =
   | 'FILE_CORRUPT'
   | 'NO_API_KEY'
   | 'IO_ERROR'
+  | 'AI_TIMEOUT'
+  | 'RATE_LIMITED'
+  | 'AI_ERROR'
   | 'UNKNOWN'
 
 export interface IpcError {
@@ -187,6 +203,43 @@ export interface QuizRecordRequest {
 export interface SettingsSetRequest {
   aiMode?: AiMode
   quickInputShortcut?: string
+  /** apiKey（v0.2）：main 侧经 safeStorage 加密存储（不入 config.json）；传 null/空串清除 */
+  apiKey?: string
+  aiBaseUrl?: string
+  aiModel?: string
+}
+
+// ---------------------------------------------------------------------------
+// AI（v0.2，§10.2/§10.4：ai:searchWord）
+// ---------------------------------------------------------------------------
+
+/** AI 返回的成语草稿卡（过 idiom.draft 宽松校验，缺字段明确标记；§10.1） */
+export interface AiDraftResult {
+  word: string
+  meaning: string
+  origin?: string
+  usage?: string
+  emotion: Emotion
+  register: Register
+  errorTypes: string[]
+  near?: NearItem[]
+  opposite?: string[]
+  examples?: ExampleItem[]
+  /** 频次分档 1–5（AI 初判，人工复核，§5.4） */
+  frequency: number
+  tags?: string[]
+}
+
+/** ai:searchWord 入参（word 必填；requestId 用于 stale 结果防护，§10.2） */
+export interface AiSearchWordRequest {
+  word: string
+  requestId?: string
+}
+
+export interface AiSearchWordResponse {
+  draft: AiDraftResult
+  /** 是否命中缓存（离线可看上次结果，§10.2） */
+  cached: boolean
 }
 
 /** app:log 入参（renderer 渲染错误转发 main 日志，§4.6） */
@@ -219,6 +272,10 @@ export interface YuzhanApi {
   settings: {
     get(): Promise<IpcResult<AppSettings>>
     set(patch: SettingsSetRequest): Promise<IpcResult<AppSettings>>
+  }
+  ai: {
+    /** AI 联网查询（v0.2）：无 key → NO_API_KEY；renderer 降级生词本（V2-F 消费） */
+    searchWord(word: string, requestId?: string): Promise<IpcResult<AiSearchWordResponse>>
   }
   /** 渲染错误经 app:log 转发到 main 日志（§4.6） */
   log(level: AppLogRequest['level'], message: string): Promise<IpcResult<null>>

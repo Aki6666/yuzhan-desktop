@@ -5,9 +5,12 @@
  * - 统一信封：{ ok: true, data } | { ok: false, error: { code, message } }
  * - 入参 schema 校验（轻量守卫；T2a 的 ajv 校验针对数据文件，本层管 IPC 入参）
  * - 写操作一律走 store 串行写队列（§10.3#5），禁止在 handler 里直接读改写
- * - 错误码约定：INVALID_ARGS / NOT_FOUND / FILE_CORRUPT / NO_API_KEY / IO_ERROR / UNKNOWN（§4.6）
+ * - 错误码约定：INVALID_ARGS / NOT_FOUND / FILE_CORRUPT / NO_API_KEY / AI_TIMEOUT /
+ *   RATE_LIMITED / AI_ERROR / IO_ERROR / UNKNOWN（§4.6）
+ * - AI（v0.2）：ai:searchWord 走 aiService（超时/重试/取消/冷却/缓存 LRU，§10.2）；
+ *   apiKey 经 settingsService safeStorage 加密（§4.4）；aiMode 迁移持久化到 config.json
  */
-import { app, ipcMain } from 'electron'
+import { app, ipcMain, safeStorage } from 'electron'
 import { join } from 'node:path'
 import {
   IPC_CHANNELS,
@@ -23,6 +26,8 @@ import {
   type SettingsSetRequest
 } from '@shared/ipc/contracts'
 import { createStorage, type Storage } from './store'
+import { createSettingsService } from './settings'
+import { createAiService, transitionAiMode, type AiService } from './ai'
 import { logger } from './logger'
 
 const PROGRESS_STATUSES: ProgressStatus[] = ['new', 'learning', 'mastered']
@@ -57,8 +62,45 @@ function createAppStorage(): Storage {
   })
 }
 
+/** 构造 AI 服务（Provider 惰性解析 + aiMode 迁移持久化；§10.2） */
+function createAppAiService(
+  storage: Storage,
+  settingsService: ReturnType<typeof createSettingsService>
+): AiService {
+  return createAiService({
+    cacheDir: join(app.getPath('userData'), 'cache'),
+    getProviderConfig: () => {
+      const key = settingsService.getApiKey()
+      if (!key) return null
+      const s = storage.getSettings()
+      return { apiKey: key, baseURL: s.aiBaseUrl ?? '', model: s.aiModel ?? '' }
+    },
+    onAiModeChange: (mode) => {
+      void storage.saveSettings({ aiMode: mode })
+    },
+    logger: {
+      info: (m) => logger.info(m),
+      warn: (m) => logger.warn(m),
+      error: (m) => logger.error(m)
+    }
+  })
+}
+
 export function registerIpcHandlers(): void {
   const storage = createAppStorage()
+  const settingsService = createSettingsService({
+    userDataDir: app.getPath('userData'),
+    safeStorage
+  })
+  const aiService = createAppAiService(storage, settingsService)
+
+  // 启动推导 aiMode（§10.2）：有 key 且当前 disabled → configured；无 key → disabled
+  {
+    const hasKey = settingsService.hasApiKey()
+    const current = storage.getSettings().aiMode
+    const desired = hasKey ? transitionAiMode(current, 'key-set') : 'disabled'
+    if (desired !== current) void storage.saveSettings({ aiMode: desired })
+  }
 
   // data:list — 启动一次性全量（§10.4 策略：过滤/搜索在 renderer 内存完成）
   ipcMain.handle(IPC_CHANNELS.dataList, (): IpcResult<ReturnType<Storage['listOfficial']>> => {
@@ -135,10 +177,14 @@ export function registerIpcHandlers(): void {
     }
   })
 
-  // settings:get / set — 设置读写
+  // settings:get / set — 设置读写（apiKey 经 safeStorage 加密，不入 config.json；§4.4）
   ipcMain.handle(IPC_CHANNELS.settingsGet, (): IpcResult<AppSettings> => {
     try {
-      return ipcOk(storage.getSettings())
+      return ipcOk({
+        ...storage.getSettings(),
+        apiKeyMasked: settingsService.getApiKeyMasked(),
+        hasApiKey: settingsService.hasApiKey()
+      })
     } catch (e) {
       logger.error(`[ipc] settings:get 失败: ${String(e)}`)
       return fail('IO_ERROR', '设置读取失败')
@@ -149,11 +195,43 @@ export function registerIpcHandlers(): void {
     const err = validateSettingsSet(patch)
     if (err) return err
     try {
-      const updated = await storage.saveSettings(patch as SettingsSetRequest)
-      return ipcOk(updated)
+      const p = patch as SettingsSetRequest
+      // apiKey 单独处理：safeStorage 加密存储 + aiMode 迁移（不入 config.json 明文）
+      if (p.apiKey !== undefined) {
+        await settingsService.setApiKey(p.apiKey || null)
+        const nextMode = transitionAiMode(storage.getSettings().aiMode, p.apiKey ? 'key-set' : 'key-cleared')
+        await storage.saveSettings({ aiMode: nextMode })
+      }
+      const updated = await storage.saveSettings({
+        ...(p.aiMode !== undefined ? { aiMode: p.aiMode } : {}),
+        ...(p.quickInputShortcut !== undefined ? { quickInputShortcut: p.quickInputShortcut } : {}),
+        ...(p.aiBaseUrl !== undefined ? { aiBaseUrl: p.aiBaseUrl } : {}),
+        ...(p.aiModel !== undefined ? { aiModel: p.aiModel } : {})
+      })
+      return ipcOk({ ...updated, apiKeyMasked: settingsService.getApiKeyMasked(), hasApiKey: settingsService.hasApiKey() })
     } catch (e) {
       logger.error(`[ipc] settings:set 失败: ${String(e)}`)
       return fail('IO_ERROR', '设置写入失败')
+    }
+  })
+
+  // ai:searchWord — AI 联网查询（v0.2，§10.2：超时/重试/取消/冷却/缓存；无 key → NO_API_KEY 降级生词本）
+  ipcMain.handle(IPC_CHANNELS.aiSearchWord, async (_e, payload: unknown): Promise<IpcResult<unknown>> => {
+    const err = validateAiSearchWord(payload)
+    if (err) return err
+    const { word } = payload as { word: string }
+    const result = await aiService.searchWord(word)
+    switch (result.status) {
+      case 'ok':
+        return ipcOk({ draft: result.data, cached: result.cached })
+      case 'no-key':
+        return fail('NO_API_KEY', '未配置 API Key（降级为生词本）')
+      case 'timeout':
+        return fail('AI_TIMEOUT', 'AI 查询超时（15s）')
+      case 'rate-limited':
+        return fail('RATE_LIMITED', '查询过于频繁（3s 冷却）')
+      default:
+        return fail('AI_ERROR', result.message || 'AI 查询失败')
     }
   })
 
@@ -213,6 +291,22 @@ function validateSettingsSet(patch: unknown): IpcResult<never> | null {
   }
   if (patch.quickInputShortcut !== undefined && (!isString(patch.quickInputShortcut) || patch.quickInputShortcut.length === 0)) {
     return fail('INVALID_ARGS', 'quickInputShortcut 必须为非空字符串')
+  }
+  if (patch.apiKey !== undefined && typeof patch.apiKey !== 'string') {
+    return fail('INVALID_ARGS', 'apiKey 必须为字符串（空串/空白 = 清除）')
+  }
+  if (patch.aiBaseUrl !== undefined && (!isString(patch.aiBaseUrl) || patch.aiBaseUrl.length === 0)) {
+    return fail('INVALID_ARGS', 'aiBaseUrl 必须为非空字符串')
+  }
+  if (patch.aiModel !== undefined && (!isString(patch.aiModel) || patch.aiModel.length === 0)) {
+    return fail('INVALID_ARGS', 'aiModel 必须为非空字符串')
+  }
+  return null
+}
+
+function validateAiSearchWord(payload: unknown): IpcResult<never> | null {
+  if (!isRecord(payload) || !isString(payload.word) || payload.word.trim().length === 0) {
+    return fail('INVALID_ARGS', 'ai:searchWord 入参必须为 { word: string }')
   }
   return null
 }

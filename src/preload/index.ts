@@ -1,6 +1,7 @@
 import { contextBridge, ipcRenderer } from 'electron'
 import {
   IPC_CHANNELS,
+  type AiSearchWordResponse,
   type AppLogRequest,
   type AppSettings,
   type DataListResponse,
@@ -40,6 +41,10 @@ const api: YuzhanApi = {
     get: (): Promise<IpcResult<AppSettings>> => ipcRenderer.invoke(IPC_CHANNELS.settingsGet),
     set: (patch: SettingsSetRequest): Promise<IpcResult<AppSettings>> =>
       ipcRenderer.invoke(IPC_CHANNELS.settingsSet, patch)
+  },
+  ai: {
+    searchWord: (word: string, requestId?: string): Promise<IpcResult<AiSearchWordResponse>> =>
+      ipcRenderer.invoke(IPC_CHANNELS.aiSearchWord, { word, requestId })
   },
   log: (level: AppLogRequest['level'], message: string): Promise<IpcResult<null>> =>
     ipcRenderer.invoke(IPC_CHANNELS.appLog, { level, message })
