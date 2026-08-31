@@ -22,12 +22,13 @@ const quickShortcutLabel = computed(() => describeShortcut(settingsStore.setting
 
 void settingsStore.load()
 
-/** 侧边导航项（§3.1：成语库 · 闪卡 · 自测 · 进度 · 生词本） */
+/** 侧边导航项（§3.1：成语库 · 闪卡 · 自测 · 进度 · 生词本；V2-D 增 错题本） */
 const NAV_ITEMS = [
   { to: '/idioms', label: '成语库', icon: 'book' },
   { to: '/flashcards', label: '闪卡', icon: 'flash' },
   { to: '/quiz', label: '自测', icon: 'check' },
   { to: '/progress', label: '进度', icon: 'chart' },
+  { to: '/wrongbook', label: '错题本', icon: 'xcircle' },
   { to: '/pending', label: '生词本', icon: 'bookmark' }
 ] as const
 
@@ -40,7 +41,8 @@ const ICON_PATHS: Record<string, string[]> = {
   flash: ['M13 2 3 14h9l-1 8 10-12h-9l1-8z'],
   check: ['M22 11.08V12a10 10 0 1 1-5.93-9.14', 'M22 4 12 14.01l-3-3'],
   chart: ['M18 20V10', 'M12 20V4', 'M6 20v-6'],
-  bookmark: ['M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z']
+  bookmark: ['M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'],
+  xcircle: ['M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z', 'M15 9l-6 6', 'M9 9l6 6']
 }
 </script>
 
