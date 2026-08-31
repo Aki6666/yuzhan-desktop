@@ -1,6 +1,11 @@
+<script setup lang="ts">
+/**
+ * 自测视图入口（路由 /quiz 由 T1 指向本文件）
+ * 实现委托给 QuizPage（T8，见 PLAN.md §3.2/F6），保持路由接线不变。
+ */
+import QuizPage from './QuizPage.vue'
+</script>
+
 <template>
-  <section class="view">
-    <h1>自测</h1>
-    <p class="placeholder">T8 待实现：10 题组 + 出题规则 + 即时反馈 + 错题记录（AC-06）</p>
-  </section>
+  <QuizPage />
 </template>
