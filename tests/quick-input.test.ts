@@ -7,7 +7,7 @@
  * - 使用真实计时器等待 200ms 防抖窗口（260ms/用例），避免 fake timers 与
  *   @vue/test-utils flushPromises（内部 setImmediate）互相干扰
  */
-import { describe, it, expect, vi, afterEach } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { flushPromises, mount } from '@vue/test-utils'
 import { createPinia, setActivePinia } from 'pinia'
 import { createMemoryHistory, createRouter } from 'vue-router'
@@ -556,7 +556,9 @@ describe('QuickInputModal AI 闭环（V2-F）', () => {
     await flushPromises()
     // 预览面板
     expect(bodyFind('ai-draft-panel')).not.toBeNull()
-    expect(bodyFind('draft-word')?.textContent).toContain('新造词甲')
+    expect(
+      document.body.querySelector<HTMLInputElement>('[data-testid="draft-word"] input')?.value
+    ).toBe('新造词甲')
     // 编辑词形
     const wordInput = document.body.querySelector<HTMLInputElement>('[data-testid="draft-word"] input')
     wordInput!.value = '新造词甲改'
