@@ -1,0 +1,95 @@
+/**
+ * 全局基础样式（U1 设计系统）
+ *
+ * - 设计变量（:root 的 --y-*）由 main.ts 的 installDesignTokens() 依据
+ *   styles/designTokens.ts 生成——本文件**禁止**硬编码色值/圆角/阴影，
+ *   只消费 var(--y-*)（designTokens.ts 为单一事实来源）
+ * - 全局元素与滚动条观感（Electron 桌面端）
+ */
+:root {
+  /* 占位默认值（installDesignTokens 会在启动时用 designTokens 覆盖，保证非 JS 环境兜底一致） */
+  --y-bg-page: #f7f7f8;
+  --y-bg-card: #ffffff;
+  --y-bg-subtle: #fafafa;
+  --y-bg-hover: #f0f0f1;
+  --y-bg-active: #e8e9eb;
+  --y-border: #e5e5e5;
+  --y-border-light: #efefef;
+  --y-text-primary: #1f1f1f;
+  --y-text-body: #3d3d3d;
+  --y-text-secondary: #6e6e73;
+  --y-text-tertiary: #9a9aa0;
+  --y-text-disabled: #c4c4c8;
+  --y-primary: #0f766e;
+  --y-primary-hover: #115e59;
+  --y-primary-active: #134e4a;
+  --y-primary-soft: #e6f4f2;
+  --y-danger: #dc2626;
+  --y-success: #16a34a;
+  --y-warning: #d97706;
+  --y-info: #2563eb;
+  --y-radius-sm: 8px;
+  --y-radius-md: 10px;
+  --y-radius-lg: 12px;
+  --y-radius-xl: 16px;
+  --y-space-xs: 4px;
+  --y-space-sm: 8px;
+  --y-space-md: 12px;
+  --y-space-lg: 16px;
+  --y-space-xl: 24px;
+  --y-space-xxl: 32px;
+  --y-space-xxxl: 48px;
+  --y-font-title-lg: 24px;
+  --y-font-title: 20px;
+  --y-font-body: 14px;
+  --y-font-aux: 12px;
+  --y-line-height-body: 1.6;
+  --y-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --y-shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--y-text-body);
+  background: var(--y-bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 细滚动条（桌面端观感） */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9de;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c4c4c8;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 键盘提示键（快速记录按钮内） */
+kbd {
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1;
+  padding: 3px 5px;
+  border: 1px solid var(--y-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--y-bg-card);
+  color: var(--y-text-secondary);
+}

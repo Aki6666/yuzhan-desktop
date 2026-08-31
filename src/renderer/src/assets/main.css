@@ -1,3 +1,7 @@
+/**
+ * 基础 reset 与字体（U1 设计系统）
+ * 颜色/背景等一律消费 styles/global.css 的 var(--y-*) 变量（designTokens.ts 为单一事实来源）。
+ */
 :root {
   font-family:
     'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -18,16 +22,16 @@ body,
 }
 
 body {
-  color: #2c3e50;
-  background: #fff;
+  color: var(--y-text-body);
+  background: var(--y-bg-page);
 }
 
 .view h1 {
   margin: 0 0 12px;
-  font-size: 20px;
+  font-size: var(--y-font-title);
 }
 
 .view .placeholder {
-  color: #888;
-  font-size: 14px;
+  color: var(--y-text-tertiary);
+  font-size: var(--y-font-body);
 }

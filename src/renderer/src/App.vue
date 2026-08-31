@@ -1,34 +1,129 @@
 <script setup lang="ts">
+/**
+ * 应用壳层（U1 UI 重构，PLAN.md 附录 B v0.1.1）
+ *
+ * - OpenAI 式简洁：大留白、细分割线、图标+文字侧边导航（激活态/hover 微交互）、精简顶栏
+ * - 视觉全部消费 designTokens 生成的 CSS 变量（var(--y-*)），禁止散落硬编码颜色
+ * - 硬约束保持：QuickInputModal 挂载与 Ctrl+K 接线（T6）、全部路由与 *View.vue 转发不动、
+ *   功能与信息架构不变
+ */
 import { ref } from 'vue'
 import { dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
 import QuickInputModal from '@renderer/components/quick-input/QuickInputModal.vue'
+import { themeOverrides } from '@renderer/theme/naiveTheme'
 
 const quickInputRef = ref<{ open: () => void } | null>(null)
+
+/** 侧边导航项（§3.1：成语库 · 闪卡 · 自测 · 进度 · 生词本） */
+const NAV_ITEMS = [
+  { to: '/idioms', label: '成语库', icon: 'book' },
+  { to: '/flashcards', label: '闪卡', icon: 'flash' },
+  { to: '/quiz', label: '自测', icon: 'check' },
+  { to: '/progress', label: '进度', icon: 'chart' },
+  { to: '/pending', label: '生词本', icon: 'bookmark' }
+] as const
+
+/** 内联图标（Feather 风格线性图标，stroke 继承 currentColor，18px） */
+const ICON_PATHS: Record<string, string[]> = {
+  book: [
+    'M4 19.5A2.5 2.5 0 0 1 6.5 17H20',
+    'M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'
+  ],
+  flash: ['M13 2 3 14h9l-1 8 10-12h-9l1-8z'],
+  check: ['M22 11.08V12a10 10 0 1 1-5.93-9.14', 'M22 4 12 14.01l-3-3'],
+  chart: ['M18 20V10', 'M12 20V4', 'M6 20v-6'],
+  bookmark: ['M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z']
+}
 </script>
 
 <template>
-  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN">
+  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme-overrides="themeOverrides">
     <div class="app-shell">
-      <!-- 侧边导航（PLAN.md §3.1） -->
+      <!-- 侧边导航：品牌 + 图标文字导航（§3.1） -->
       <aside class="sidebar">
-        <div class="brand">语栈</div>
-        <nav class="nav">
-          <RouterLink to="/idioms" class="nav-item">成语库</RouterLink>
-          <RouterLink to="/flashcards" class="nav-item">闪卡</RouterLink>
-          <RouterLink to="/quiz" class="nav-item">自测</RouterLink>
-          <RouterLink to="/progress" class="nav-item">进度</RouterLink>
-          <RouterLink to="/pending" class="nav-item">生词本</RouterLink>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">语</span>
+          <div class="brand-text">
+            <span class="brand-name">语栈</span>
+            <span class="brand-sub">言语理解 · 成语积累</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="主导航">
+          <RouterLink
+            v-for="item in NAV_ITEMS"
+            :key="item.to"
+            :to="item.to"
+            class="nav-item"
+          >
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path v-for="(d, i) in ICON_PATHS[item.icon]" :key="i" :d="d" />
+            </svg>
+            <span class="nav-label">{{ item.label }}</span>
+          </RouterLink>
         </nav>
+
+        <div class="sidebar-foot">
+          <NTag size="small" :bordered="false" round class="version-tag">v0.1 MVP</NTag>
+        </div>
       </aside>
 
       <div class="main-area">
-        <!-- 顶栏：右上 快速记录 (Ctrl+K) · 设置 -->
+        <!-- 顶栏：快速记录 (Ctrl+K) · 设置 -->
         <header class="topbar">
-          <NTag size="small" type="info" round>v0.1 MVP</NTag>
+          <div class="topbar-left">
+            <span class="topbar-hint">快速记录错词，碎片时间复习</span>
+          </div>
           <div class="topbar-actions">
-            <NButton size="small" secondary @click="quickInputRef?.open()">快速记录 Ctrl+K</NButton>
-            <RouterLink to="/settings">
-              <NButton size="small" secondary>设置</NButton>
+            <NButton size="small" secondary class="quick-btn" @click="quickInputRef?.open()">
+              <svg
+                class="btn-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+              </svg>
+              快速记录
+              <kbd>Ctrl K</kbd>
+            </NButton>
+            <RouterLink to="/settings" class="settings-link" title="设置" aria-label="设置">
+              <NButton size="small" quaternary circle>
+                <svg
+                  class="btn-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 21v-7" />
+                  <path d="M4 10V3" />
+                  <path d="M12 21v-9" />
+                  <path d="M12 8V3" />
+                  <path d="M20 21v-5" />
+                  <path d="M20 12V3" />
+                  <path d="M1 14h6" />
+                  <path d="M9 8h6" />
+                  <path d="M17 16h6" />
+                </svg>
+              </NButton>
             </RouterLink>
           </div>
         </header>
@@ -39,7 +134,7 @@ const quickInputRef = ref<{ open: () => void } | null>(null)
       </div>
     </div>
 
-    <!-- 全局快速记录弹层（Ctrl+K 任意页面唤起，T6） -->
+    <!-- 全局快速记录弹层（Ctrl+K 任意页面唤起，T6 接线保持不动） -->
     <QuickInputModal ref="quickInputRef" />
   </NConfigProvider>
 </template>
@@ -49,49 +144,116 @@ const quickInputRef = ref<{ open: () => void } | null>(null)
   display: flex;
   height: 100vh;
   overflow: hidden;
+  background: var(--y-bg-page);
 }
 
+/* ------------------------------------------------------------------ */
+/* 侧边导航：纯白底 + 细分割线，大留白 */
+/* ------------------------------------------------------------------ */
 .sidebar {
-  width: 180px;
-  flex: 0 0 180px;
+  width: 216px;
+  flex: 0 0 216px;
   display: flex;
   flex-direction: column;
-  padding: 16px 12px;
-  background: #f5f6f8;
-  border-right: 1px solid #e8e8e8;
+  padding: 20px 14px 16px;
+  background: var(--y-bg-card);
+  border-right: 1px solid var(--y-border-light);
 }
 
 .brand {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 8px 22px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--y-radius-md);
+  background: var(--y-primary);
+  color: #fff;
+  font-size: 16px;
   font-weight: 700;
-  color: #2c3e50;
-  padding: 4px 8px 20px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.brand-name {
+  font-size: var(--y-font-title);
+  font-weight: 700;
+  color: var(--y-text-primary);
+  line-height: 1.2;
+}
+
+.brand-sub {
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .nav-item {
-  padding: 8px 10px;
-  border-radius: 6px;
-  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--y-radius-sm);
+  color: var(--y-text-secondary);
   text-decoration: none;
-  font-size: 14px;
+  font-size: var(--y-font-body);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  opacity: 0.85;
 }
 
 .nav-item:hover {
-  background: #e9ecf1;
+  background: var(--y-bg-hover);
+  color: var(--y-text-body);
 }
 
+/* 激活态：主色浅底 + 深青文字（克制点缀） */
 .nav-item.router-link-active {
-  background: #d0d8e6;
-  color: #1f2d3d;
+  background: var(--y-primary-soft);
+  color: var(--y-primary);
   font-weight: 600;
 }
 
+.nav-item.router-link-active .nav-icon {
+  opacity: 1;
+}
+
+.sidebar-foot {
+  margin-top: auto;
+  padding: 12px 8px 0;
+}
+
+.version-tag {
+  color: var(--y-text-tertiary);
+}
+
+/* ------------------------------------------------------------------ */
+/* 主区：顶栏 + 内容（大留白） */
+/* ------------------------------------------------------------------ */
 .main-area {
   flex: 1;
   display: flex;
@@ -100,24 +262,46 @@ const quickInputRef = ref<{ open: () => void } | null>(null)
 }
 
 .topbar {
-  height: 48px;
-  flex: 0 0 48px;
+  height: 56px;
+  flex: 0 0 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 0 32px;
+  background: var(--y-bg-card);
+  border-bottom: 1px solid var(--y-border-light);
+}
+
+.topbar-hint {
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .topbar-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+}
+
+.quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.settings-link {
+  display: inline-flex;
+  color: inherit;
 }
 
 .content {
   flex: 1;
   overflow: auto;
-  padding: 20px;
+  padding: 28px 32px 40px;
 }
 </style>
