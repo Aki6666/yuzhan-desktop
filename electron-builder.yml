@@ -17,6 +17,7 @@ asarUnpack:
   - resources/**
 win:
   executableName: yuzhan
+  icon: build/icon.ico
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -24,5 +25,7 @@ nsis:
   createDesktopShortcut: always
   oneClick: false
   allowToChangeInstallationDirectory: true
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/
