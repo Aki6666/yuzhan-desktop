@@ -133,6 +133,14 @@ async function mountPending(opts: ApiMockOpts = {}) {
   return { wrapper, router, ...mocks }
 }
 
+/** 批量启动/操作后推进：双轮 flushPromises+nextTick（微任务链 + Vue 调度器 + 渲染全部落定） */
+async function flushBatch(): Promise<void> {
+  await flushPromises()
+  await nextTick()
+  await flushPromises()
+  await nextTick()
+}
+
 // ---------------------------------------------------------------------------
 // lib/batchFill.ts 纯逻辑
 // ---------------------------------------------------------------------------
@@ -309,16 +317,20 @@ describe('PendingPage 批量 AI 补全（V2-H）', () => {
     })
     expect(wrapper.find('[data-testid="batch-fill-start"]').attributes('disabled')).toBeUndefined()
     await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
-    await flushPromises()
-    await nextTick()
-    expect(aiSearchWord).toHaveBeenCalledTimes(2)
+    await flushBatch()
+    await vi.waitFor(() => {
+      expect(aiSearchWord).toHaveBeenCalledTimes(2)
+    })
     expect(aiSearchWord.mock.calls[0][0]).toBe('生僻词甲')
     expect(String(aiSearchWord.mock.calls[0][1])).toMatch(/^batch-0-/)
     expect(wrapper.find('[data-testid="batch-panel"]').exists()).toBe(true)
     expect(wrapper.findAll('[data-testid="batch-item"]').length).toBe(2)
-    const ready = wrapper.findAll('[data-testid="batch-item"]')
-    expect(ready[0].attributes('data-status')).toBe('ready')
-    expect(ready[0].text()).toContain('释义：生僻词甲')
+    await vi.waitFor(() => {
+      const ready = wrapper.findAll('[data-testid="batch-item"]')
+      expect(ready[0].attributes('data-status')).toBe('ready')
+      expect(ready[1].attributes('data-status')).toBe('ready')
+    })
+    expect(wrapper.find('[data-testid="batch-item"]').text()).toContain('释义：生僻词甲')
   })
 
   it('确认入库：写个人库（quality=user，与 V2-F 一致）+ progress 闪卡队列 + 移出生词本', async () => {
@@ -327,11 +339,12 @@ describe('PendingPage 批量 AI 补全（V2-H）', () => {
       pending: ['生僻词甲', '生僻词乙']
     })
     await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
+    await vi.waitFor(() => {
+      expect(wrapper.findAll('[data-testid="batch-item"]').length).toBe(2)
+    })
     await wrapper.find('[data-testid="batch-confirm"]').trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
     // 个人库注册表已收录（quality=user / library=user）
     const saved = findPersonal('生僻词甲')
     expect(saved).toBeDefined()
@@ -343,34 +356,40 @@ describe('PendingPage 批量 AI 补全（V2-H）', () => {
     // 生词本移出已入库词
     expect(api.pending.remove).toHaveBeenCalledWith('生僻词甲')
     expect(wrapper.findAll('[data-testid="pending-row"]').length).toBe(1)
-    expect(wrapper.find('[data-testid="batch-item"][data-word="生僻词甲"]').attributes('data-status')).toBe('saved')
+    await vi.waitFor(() => {
+      expect(wrapper.find('[data-testid="batch-item"][data-word="生僻词甲"]').attributes('data-status')).toBe('saved')
+    })
   })
 
   it('确认入库去重：同词已收录时二次确认幂等成功，个人库仅一条', async () => {
     const { wrapper } = await mountPending({ aiMode: 'online', pending: ['生僻词甲'] })
     await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
+    await vi.waitFor(() => {
+      expect(wrapper.find('[data-testid="batch-confirm"]').exists()).toBe(true)
+    })
     const confirmBtn = wrapper.find('[data-testid="batch-confirm"]')
     await confirmBtn.trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
     expect(listPersonalLibrary().filter((i) => i.word === '生僻词甲').length).toBe(1)
     // 再次确认（去重路径）仍成功
     await confirmBtn.trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
     expect(listPersonalLibrary().filter((i) => i.word === '生僻词甲').length).toBe(1)
   })
 
   it('跳过：状态 skipped，生词保留', async () => {
     const { wrapper } = await mountPending({ aiMode: 'online', pending: ['生僻词甲'] })
     await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
+    await vi.waitFor(() => {
+      expect(wrapper.find('[data-testid="batch-skip"]').exists()).toBe(true)
+    })
     await wrapper.find('[data-testid="batch-skip"]').trigger('click')
-    await nextTick()
-    expect(wrapper.find('[data-testid="batch-item"]').attributes('data-status')).toBe('skipped')
+    await flushBatch()
+    await vi.waitFor(() => {
+      expect(wrapper.find('[data-testid="batch-item"]').attributes('data-status')).toBe('skipped')
+    })
     expect(findPersonal('生僻词甲')).toBeUndefined()
     expect(wrapper.findAll('[data-testid="pending-row"]').length).toBe(1)
   })
@@ -378,12 +397,13 @@ describe('PendingPage 批量 AI 补全（V2-H）', () => {
   it('查询失败：展示失败原因，不影响其他词', async () => {
     const { wrapper } = await mountPending({ aiMode: 'online', pending: ['触发失败词', '正常词'] })
     await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
-    await flushPromises()
-    await nextTick()
-    const failed = wrapper.find('[data-testid="batch-item"][data-word="触发失败词"]')
-    expect(failed.attributes('data-status')).toBe('failed')
-    expect(failed.text()).toContain('查询失败：模拟超时')
-    expect(wrapper.find('[data-testid="batch-item"][data-word="正常词"]').attributes('data-status')).toBe('ready')
+    await flushBatch()
+    await vi.waitFor(() => {
+      const failed = wrapper.find('[data-testid="batch-item"][data-word="触发失败词"]')
+      expect(failed.attributes('data-status')).toBe('failed')
+      expect(failed.text()).toContain('查询失败：模拟超时')
+      expect(wrapper.find('[data-testid="batch-item"][data-word="正常词"]').attributes('data-status')).toBe('ready')
+    })
   })
 
   it('取消：停止后续查询，显示完成小结', async () => {
@@ -395,14 +415,14 @@ describe('PendingPage 批量 AI 补全（V2-H）', () => {
       () => new Promise((r) => { release = () => r({ ok: true, data: { draft: draft('乙词'), cached: false } }) })
     )
     await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
     expect(wrapper.find('[data-testid="batch-progress-text"]').text()).toContain('正在查询第 2/3 词')
     await wrapper.find('[data-testid="batch-cancel"]').trigger('click')
     release()
-    await flushPromises()
-    await nextTick()
-    expect(aiSearchWord).toHaveBeenCalledTimes(2) // 丙词未查询
+    await flushBatch()
+    await vi.waitFor(() => {
+      expect(aiSearchWord).toHaveBeenCalledTimes(2) // 丙词未查询
+    })
     expect(wrapper.find('[data-testid="batch-done-summary"]').exists()).toBe(true)
     expect(wrapper.findAll('[data-testid="batch-item"]')[2].attributes('data-status')).toBe('queued')
   })
@@ -410,8 +430,10 @@ describe('PendingPage 批量 AI 补全（V2-H）', () => {
   it('完成小结与关闭：显示统计，关闭后面板消失', async () => {
     const { wrapper } = await mountPending({ aiMode: 'online', pending: ['生僻词甲'] })
     await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
-    await flushPromises()
-    await nextTick()
+    await flushBatch()
+    await vi.waitFor(() => {
+      expect(wrapper.find('[data-testid="batch-done-summary"]').exists()).toBe(true)
+    })
     expect(wrapper.find('[data-testid="batch-done-summary"]').text()).toContain('已入库 0 · 失败 0 · 跳过 0')
     await wrapper.find('[data-testid="batch-dismiss"]').trigger('click')
     await nextTick()

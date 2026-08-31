@@ -102,7 +102,13 @@ export function createBatchFill(words: string[], deps: BatchFillDeps): BatchFill
         if (it.status === 'saved' || it.status === 'skipped') continue // 重跑时保留已处理项
         it.status = 'querying'
         notify()
-        const outcome = await deps.queryWord(it.word, currentIdx)
+        let outcome: QueryOutcome
+        try {
+          outcome = await deps.queryWord(it.word, currentIdx)
+        } catch (e) {
+          // 查询实现异常（不应发生，防御）：标记失败并继续，避免整批悬挂在 querying
+          outcome = { ok: false, reason: String(e) }
+        }
         if (outcome.ok) {
           it.draft = outcome.draft
           it.status = 'ready'

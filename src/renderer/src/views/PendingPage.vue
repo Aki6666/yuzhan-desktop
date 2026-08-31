@@ -80,6 +80,8 @@ function goSettings(): void {
 // ---------------------------------------------------------------------------
 
 const batch = ref<BatchFillController | null>(null)
+/** 渲染用条目快照：每次 onChange 赋新数组引用（v-for 以 word 为 key 强制重渲染，读取最新状态） */
+const batchItems = ref<BatchItem[]>([])
 /** 渲染触发：batchFill 控制器为纯逻辑（非响应式），每次状态变更经 onChange 自增刷新 */
 const refresh = ref(0)
 const savingWord = ref<string | null>(null)
@@ -124,10 +126,12 @@ function startBatch(): void {
     },
     saveDraft: saveUserDraft,
     onChange: () => {
+      if (batch.value) batchItems.value = batch.value.items().slice() // 新数组引用 → v-for 强制重渲染
       refresh.value++
     }
   })
   batch.value = c
+  batchItems.value = c.items().slice()
   void c.run()
 }
 
@@ -225,7 +229,7 @@ function statusLabel(item: BatchItem): string {
 
       <ul class="batch-list" data-testid="batch-list">
         <li
-          v-for="item in batchView.items()"
+          v-for="item in batchItems"
           :key="item.word"
           class="batch-item"
           data-testid="batch-item"
