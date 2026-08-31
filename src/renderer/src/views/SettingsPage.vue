@@ -6,7 +6,7 @@
  *
  * U2 视觉重构：分组设置卡片，消费 U1 设计 token；data-testid 与行为不变。
  */
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { NButton, NCard, NTag } from 'naive-ui'
 import { useSettingsStore } from '@renderer/stores/settings'
 import { usePendingStore } from '@renderer/stores/pending'
@@ -20,6 +20,13 @@ const progressStore = useProgressStore()
 const exporting = ref(false)
 const exportedAt = ref<string | null>(null)
 const exportError = ref<string | null>(null)
+
+/** 快捷键展示文案（FIX-1 去英文：accelerator 存储值 → 用户友好中文/符号形式） */
+const shortcutDisplay = computed(() => {
+  const acc = settingsStore.settings.quickInputShortcut
+  if (acc === 'CommandOrControl+K') return 'Ctrl+K'
+  return acc
+})
 
 onMounted(() => {
   void settingsStore.load()
@@ -85,12 +92,16 @@ const aiModeTag = {
       </template>
       <div class="row">
         <span class="row-label">快速记录（快速输入弹层）</span>
-        <NTag size="small" type="primary" round data-testid="shortcut-tag">
-          {{ settingsStore.settings.quickInputShortcut }}
-        </NTag>
+        <div class="shortcut-tags">
+          <NTag size="small" type="primary" round data-testid="shortcut-tag">
+            {{ shortcutDisplay }}
+          </NTag>
+          <NTag size="small" round>+ 键</NTag>
+        </div>
       </div>
       <p class="muted">
-        v0.1 应用内快捷键为主（窗口聚焦时生效）；全局注册为增强，被占用/失败时静默降级（§3.4/§10.2）。
+        v0.1 应用内快捷键为主（窗口聚焦时生效）：按 {{ shortcutDisplay }} 或
+        「+」键（主键盘 / 等号键 / 数字键盘加号）即可唤起快速记录；Esc 关闭、回车直接记录。
       </p>
     </NCard>
 
@@ -206,6 +217,12 @@ const aiModeTag = {
 .row-label {
   font-size: var(--y-font-body);
   color: var(--y-text-body);
+}
+
+.shortcut-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .muted {

@@ -116,11 +116,14 @@ function onBack(): void {
 </template>
 
 <style scoped>
+/* FIX-1：答题区/题干/选项/结果面板水平居中（附录 B v0.1.2），消费 U1 token */
 .quiz-page {
   display: flex;
   flex-direction: column;
   gap: var(--y-space-lg);
   max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .page-header {

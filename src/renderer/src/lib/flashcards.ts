@@ -98,10 +98,20 @@ export class FlashcardTracker {
 /** 页面级共享跟踪器（模块级单例；测试中可 reset） */
 export const flashcardTracker = new FlashcardTracker()
 
-/** 牌堆构建：待复习卡 = 非 mastered 词条（§3.3 空态：全部 mastered → 引导浏览/自测） */
+/**
+ * 牌堆构建：待复习卡 = 非 mastered 词条（§3.3 空态：全部 mastered → 引导浏览/自测），
+ * 并做 Fisher–Yates 洗牌随机抽取（FIX-1，附录 B v0.1.2：避免每轮固定顺序）。
+ * 随机源可注入（默认 Math.random），测试用种子保证确定性。
+ */
 export function buildReviewDeck(
   items: { id: string }[],
-  isMastered: (id: string) => boolean
+  isMastered: (id: string) => boolean,
+  random: () => number = Math.random
 ): { id: string }[] {
-  return items.filter((i) => !isMastered(i.id))
+  const deck = items.filter((i) => !isMastered(i.id))
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1))
+    ;[deck[i], deck[j]] = [deck[j], deck[i]]
+  }
+  return deck
 }

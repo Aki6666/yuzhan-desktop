@@ -58,6 +58,16 @@ export function eventMatchesAccelerator(e: KeyboardEvent, accelerator: string): 
   return e.key.toLowerCase() === spec.key
 }
 
+/**
+ * 「+」键直接触发判定（FIX-1，附录 B v0.1.2）：
+ * - 主键盘 '+'（美式布局 Shift+=）→ e.key === '+'
+ * - 等号键（无 Shift 布局直接出 '+'）→ e.key === '='
+ * - 数字键盘加号 → e.code === 'NumpadAdd'（现代浏览器 e.key 亦为 '+'，旧 keyCode 语义 'Add' 一并兼容）
+ */
+export function isPlusKey(e: KeyboardEvent): boolean {
+  return e.key === '+' || e.key === '=' || e.key === 'Add' || e.code === 'NumpadAdd'
+}
+
 // ---------------------------------------------------------------------------
 // 检索接线（复用 shared/lib/search.ts）
 // ---------------------------------------------------------------------------

@@ -146,6 +146,23 @@ describe('小结计数与牌堆过滤', () => {
     const deck = buildReviewDeck(items, isMastered)
     expect(deck.map((i) => i.id)).toEqual(['bu-jing-er-zou-01'])
   })
+
+  it('buildReviewDeck：Fisher-Yates 洗牌保留集合，随机源可注入（FIX-1）', () => {
+    const items = [fixtureA, fixtureB]
+    const isMastered = (): boolean => false
+    // 集合/计数不变（顺序无关）
+    const deck = buildReviewDeck(items, isMastered)
+    expect(deck).toHaveLength(2)
+    expect(new Set(deck.map((i) => i.id))).toEqual(
+      new Set(['ju-gong-jin-cui-01', 'bu-jing-er-zou-01'])
+    )
+    // random 恒 0 → j=0 交换 → 确定性反转（验证洗牌确实执行）
+    const deck0 = buildReviewDeck(items, isMastered, () => 0)
+    expect(deck0.map((i) => i.id)).toEqual(['bu-jing-er-zou-01', 'ju-gong-jin-cui-01'])
+    // random 恒 0.999… → j=i → 保持原序
+    const deckSame = buildReviewDeck(items, isMastered, () => 0.999)
+    expect(deckSame.map((i) => i.id)).toEqual(['ju-gong-jin-cui-01', 'bu-jing-er-zou-01'])
+  })
 })
 
 // ---------------------------------------------------------------------------
@@ -225,16 +242,31 @@ describe('FlashcardsPage 单卡复习流', () => {
     delete (window as unknown as { api?: unknown }).api
   })
 
+  /** 词形 → id（牌堆已洗牌，按当前第一张词形取 id，断言顺序无关） */
+  const WORD_TO_ID: Record<string, string> = {
+    鞠躬尽瘁: 'ju-gong-jin-cui-01',
+    不胫而走: 'bu-jing-er-zou-01'
+  }
+  /** 词形 → 释义片段（翻面断言按当前卡匹配） */
+  const WORD_TO_MEANING: Record<string, string> = {
+    鞠躬尽瘁: '忠诚奉献',
+    不胫而走: '没有腿却能跑'
+  }
+
   it('牌堆构建：展示第一张正面，认识判定后翻面展示释义并写入进度', async () => {
     const { w } = await mountPage()
     expect(w.find('[data-testid="session"]').exists()).toBe(true)
-    expect(w.find('.front-word').text()).toBe('鞠躬尽瘁')
+    // FIX-1 洗牌后首卡随机：断言为两卡之一（顺序无关）
+    const firstWord = w.find('.front-word').text()
+    expect(['鞠躬尽瘁', '不胫而走']).toContain(firstWord)
     expect(w.find('[data-testid="progress-text"]').exists()).toBe(true)
 
     await w.find('[data-testid="known-button"]').trigger('click')
     await flushPromises()
     expect(w.find('.flip-inner.flipped').exists()).toBe(true)
-    expect(w.find('[data-testid="card-back"] .back-meaning').text()).toContain('忠诚奉献')
+    expect(w.find('[data-testid="card-back"] .back-meaning').text()).toContain(
+      WORD_TO_MEANING[firstWord]
+    )
     expect(w.find('[data-testid="judge-badge"]').text()).toBe('认识')
     // 收敛规则：第 1 次认识 → learning
     expect(w.find('[data-testid="next-button"]').exists()).toBe(true)
@@ -254,6 +286,8 @@ describe('FlashcardsPage 单卡复习流', () => {
 
   it('撤销上一步：误点可回退，恢复正面与进度', async () => {
     const { w, pinia } = await mountPage()
+    const firstWord = w.find('.front-word').text()
+    const firstId = WORD_TO_ID[firstWord]
     await w.find('[data-testid="known-button"]').trigger('click')
     await flushPromises()
 
@@ -266,25 +300,28 @@ describe('FlashcardsPage 单卡复习流', () => {
     expect(w.find('[data-testid="judge-badge"]').exists()).toBe(false)
     expect(w.find('[data-testid="undo-button"]').exists()).toBe(false)
 
-    // 进度恢复为未判定（new）
+    // 进度恢复为未判定（new）——按实际首卡 id 断言（顺序无关）
     const { useProgressStore } = await import('../src/renderer/src/stores/progress')
     const store = useProgressStore(pinia)
-    expect(store.getProgressItem('ju-gong-jin-cui-01')?.status).toBe('new')
+    expect(store.getProgressItem(firstId)?.status).toBe('new')
     w.unmount()
     await flushPromises()
   })
 
   it('翻完一叠 → 会话小结（认识 X / 不认识 Y）并强制 flush', async () => {
-    const { w, save } = await mountPage() // 牌堆 2 张
+    const { w, save } = await mountPage() // 牌堆 2 张（洗牌后顺序不定）
 
     // 第 1 张：认识
+    const firstWord = w.find('.front-word').text()
     await w.find('[data-testid="known-button"]').trigger('click')
     await flushPromises()
     await w.find('[data-testid="next-button"]').trigger('click')
     await flushPromises()
 
-    // 第 2 张：不认识
-    expect(w.find('.front-word').text()).toBe('不胫而走')
+    // 第 2 张：不认识（顺序无关：断言为另一张）
+    const secondWord = w.find('.front-word').text()
+    expect(secondWord).not.toBe(firstWord)
+    expect(['鞠躬尽瘁', '不胫而走']).toContain(secondWord)
     await w.find('[data-testid="unknown-button"]').trigger('click')
     await flushPromises()
     await w.find('[data-testid="next-button"]').trigger('click') // 完成本轮
@@ -318,7 +355,8 @@ describe('FlashcardsPage 单卡复习流', () => {
     await w.find('[data-testid="restart-button"]').trigger('click')
     await flushPromises()
     expect(w.find('[data-testid="session"]').exists()).toBe(true)
-    expect(w.find('.front-word').text()).toBe('鞠躬尽瘁')
+    // 重新洗牌：首卡为两卡之一（顺序无关）
+    expect(['鞠躬尽瘁', '不胫而走']).toContain(w.find('.front-word').text())
     w.unmount()
     await flushPromises()
   })

@@ -14,10 +14,8 @@ import { useIdiomsStore } from '@renderer/stores/idioms'
 import IdiomVirtualList from '@renderer/components/idiom-list/IdiomVirtualList.vue'
 import {
   FREQUENCY_OPTIONS,
-  countByFirstChar,
   countByFrequency,
-  debounce,
-  firstCharOptions
+  debounce
 } from '@renderer/lib/listFilters'
 
 const store = useIdiomsStore()
@@ -34,20 +32,12 @@ onMounted(() => {
   void store.load()
 })
 
-const firstChars = computed(() => firstCharOptions(store.items))
 const freqCounts = computed(() => countByFrequency(store.items))
-const firstCharCounts = computed(() => countByFirstChar(store.items))
 
-const hasFilter = computed(
-  () => query.value.trim() !== '' || store.frequencyFilter !== null || store.firstCharFilter !== null
-)
+const hasFilter = computed(() => query.value.trim() !== '' || store.frequencyFilter !== null)
 
 function toggleFrequency(f: number): void {
   store.frequencyFilter = store.frequencyFilter === f ? null : f
-}
-
-function toggleFirstChar(c: string): void {
-  store.firstCharFilter = store.firstCharFilter === c ? null : c
 }
 
 function resetFilters(): void {
@@ -67,7 +57,7 @@ function retryLoad(): void {
     <header class="page-header">
       <div class="page-heading">
         <h1 class="page-title">成语库</h1>
-        <p class="page-sub">拼音 / 首字母 / 模糊检索 · 频次与首字筛选</p>
+        <p class="page-sub">拼音 / 首字母 / 模糊检索 · 频次筛选</p>
       </div>
       <span class="result-count" data-testid="result-count">
         共 {{ store.filtered.length }} / {{ store.items.length }} 条
@@ -100,7 +90,7 @@ function retryLoad(): void {
       </template>
     </NInput>
 
-    <!-- 筛选条：频次 / 首字 chips -->
+    <!-- 筛选条：频次 chips（FIX-1：首字筛选已移除，附录 B v0.1.2） -->
     <div class="filter-card">
       <div class="filter-row">
         <span class="filter-label">频次</span>
@@ -117,23 +107,6 @@ function retryLoad(): void {
             @click="toggleFrequency(f)"
           >
             {{ f }}<span class="chip-count">{{ freqCounts[f] ?? 0 }}</span>
-          </NButton>
-        </div>
-      </div>
-      <div class="filter-row">
-        <span class="filter-label">首字</span>
-        <div class="filter-options first-char-options" role="group" aria-label="首字过滤">
-          <NButton
-            v-for="c in firstChars"
-            :key="c"
-            size="small"
-            :type="store.firstCharFilter === c ? 'primary' : 'default'"
-            :secondary="store.firstCharFilter !== c"
-            class="filter-chip"
-            :data-testid="`first-${c}`"
-            @click="toggleFirstChar(c)"
-          >
-            {{ c }}<span class="chip-count">{{ firstCharCounts.get(c) ?? 0 }}</span>
           </NButton>
         </div>
       </div>
@@ -268,11 +241,6 @@ function retryLoad(): void {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-}
-
-.first-char-options {
-  max-height: 84px;
-  overflow-y: auto;
 }
 
 .filter-chip :deep(.n-button__content) {

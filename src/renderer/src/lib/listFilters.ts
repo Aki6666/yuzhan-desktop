@@ -2,8 +2,9 @@
  * 成语列表页 UI 层纯函数（PLAN.md §4.3 / §4.8 / F3）
  *
  * - 检索本身复用 shared/lib/search.ts（由 idioms store 的 filtered 计算属性调用），
- *   本文件只提供 UI 层派生数据（首字/频次选项与计数）与命中高亮定位，不含检索判定
+ *   本文件只提供 UI 层派生数据（频次选项与计数）与命中高亮定位，不含检索判定
  * - 全部纯函数、无 DOM / 无 Electron 依赖，可单测（tests/list.test.ts）
+ * - FIX-1：首字筛选已移除（附录 B v0.1.2），firstCharOptions/countByFirstChar 已清理
  */
 import type { Idiom } from '@shared/ipc/contracts'
 
@@ -21,32 +22,11 @@ export interface HighlightSpan {
 // 过滤派生数据
 // ---------------------------------------------------------------------------
 
-/** 首字选项：去重后按中文 locale 排序 */
-export function firstCharOptions(items: Idiom[]): string[] {
-  const chars = new Set<string>()
-  for (const item of items) {
-    const c = item.word.trim()[0]
-    if (c) chars.add(c)
-  }
-  return [...chars].sort((a, b) => a.localeCompare(b, 'zh-Hans-CN'))
-}
-
 /** 各频次分档词条数（1–5 全键，缺失为 0），供过滤按钮计数展示 */
 export function countByFrequency(items: Idiom[]): Record<number, number> {
   const counts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }
   for (const item of items) {
     if (item.frequency >= 1 && item.frequency <= 5) counts[item.frequency]++
-  }
-  return counts
-}
-
-/** 各首字词条数，供首字过滤按钮计数展示 */
-export function countByFirstChar(items: Idiom[]): Map<string, number> {
-  const counts = new Map<string, number>()
-  for (const item of items) {
-    const c = item.word.trim()[0]
-    if (!c) continue
-    counts.set(c, (counts.get(c) ?? 0) + 1)
   }
   return counts
 }

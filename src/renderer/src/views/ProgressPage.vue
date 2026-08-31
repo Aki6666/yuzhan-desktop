@@ -45,7 +45,7 @@ const hasData = computed(() => summary.value.total > 0)
         <div class="stat-card" data-testid="stat-mastered">
           <div class="stat-value" data-stat="mastered">{{ summary.mastered }}</div>
           <div class="stat-label">掌握</div>
-          <NTag size="small" type="success" :bordered="false" round>mastered</NTag>
+          <NTag size="small" type="success" :bordered="false" round>已掌握</NTag>
           <p class="stat-note">连续 3 次「认识」达到</p>
         </div>
       </NGridItem>
@@ -53,7 +53,7 @@ const hasData = computed(() => summary.value.total > 0)
         <div class="stat-card" data-testid="stat-reviewing">
           <div class="stat-value" data-stat="reviewing">{{ summary.reviewing }}</div>
           <div class="stat-label">待复习</div>
-          <NTag size="small" type="warning" :bordered="false" round>learning / new</NTag>
+          <NTag size="small" type="warning" :bordered="false" round>学习中 / 新词</NTag>
           <p class="stat-note">需要再次巩固的词条</p>
         </div>
       </NGridItem>
@@ -61,7 +61,7 @@ const hasData = computed(() => summary.value.total > 0)
         <div class="stat-card" data-testid="stat-wrong">
           <div class="stat-value" data-stat="wrong">{{ summary.wrong }}</div>
           <div class="stat-label">错词数</div>
-          <NTag size="small" type="error" :bordered="false" round>wrongTimes &gt; 0</NTag>
+          <NTag size="small" type="error" :bordered="false" round>答错过</NTag>
           <p class="stat-note">自测 / 复习中答错过的词条</p>
         </div>
       </NGridItem>

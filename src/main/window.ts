@@ -1,13 +1,19 @@
 import { join } from 'node:path'
-import { app, BrowserWindow, globalShortcut, shell } from 'electron'
-import { logger } from './logger'
+import { BrowserWindow, shell } from 'electron'
 
 /**
  * 应用主窗口（PLAN.md §4.2 window.ts）
  * - 安全基线：contextIsolation + sandbox + nodeIntegration:false（§4.4/§10.4）
  * - 单实例锁在 src/main/index.ts（requestSingleInstanceLock + second-instance 聚焦）
- * - 快捷键：v0.1 应用内快捷键为主（T6 renderer 侧处理）；globalShortcut 注册为增强，
- *   失败静默降级（§3.4/§10.2）
+ *
+ * 快捷键策略（FIX-1，附录 B v0.1.2）：
+ * - 快速记录唤起完全走 **renderer 应用内快捷键**（窗口聚焦时 window keydown：
+ *   Ctrl+K 与「+」键，见 QuickInputModal / quickRecord.ts），main 侧不注册 globalShortcut。
+ * - 根因记录：旧实现在此注册 globalShortcut('CommandOrControl+K')——Windows 下
+ *   RegisterHotKey 会在 OS 层**消费**该组合键，焦点窗口收不到 keydown，导致真实应用中
+ *   Ctrl+K 无法唤起快速记录（renderer 链路本身正确，测试因合成事件无法暴露此问题）。
+ *   「+」键不做全局注册：全局 '+' 会劫持其他应用内的 '+' 输入，故仅应用内触发。
+ * - focusWindow 保留供单实例锁 second-instance 聚焦使用（AC-09）。
  */
 export function createWindow(): BrowserWindow {
   const mainWindow = new BrowserWindow({
@@ -37,9 +43,6 @@ export function createWindow(): BrowserWindow {
     return { action: 'deny' }
   })
 
-  // 全局快捷键增强（失败静默降级为应用内快捷键，T6 renderer 侧兜底）
-  registerQuickInputShortcut(() => mainWindow)
-
   // 开发模式走 Vite dev server（HMR），生产加载打包产物
   const devServerUrl = process.env['ELECTRON_RENDERER_URL']
   if (devServerUrl) {
@@ -66,33 +69,4 @@ export function focusWindow(win: FocusableWindow): void {
     win.restore()
   }
   win.focus()
-}
-
-/**
- * Ctrl+K 全局快捷键注册（增强项）：注册成功则触发窗口聚焦（实际快速输入弹层由 T6
- * renderer 侧实现，窗口聚焦时应用内快捷键优先）；失败/异常静默降级并记日志（§3.4）。
- * 退出时统一 unregister。
- */
-function registerQuickInputShortcut(getMainWindow: () => BrowserWindow | null): void {
-  const handler = (): void => {
-    const win = getMainWindow()
-    if (win) {
-      focusWindow(win)
-      logger.info('[window] global shortcut CommandOrControl+K triggered')
-    }
-  }
-  try {
-    const ok = globalShortcut.register('CommandOrControl+K', handler)
-    if (ok) {
-      logger.info('[window] globalShortcut CommandOrControl+K registered')
-    } else {
-      logger.warn('[window] globalShortcut 注册失败（可能被占用），静默降级为应用内快捷键')
-    }
-  } catch (e) {
-    logger.warn(`[window] globalShortcut 注册异常，静默降级: ${String(e)}`)
-  }
-
-  app.on('will-quit', () => {
-    globalShortcut.unregisterAll()
-  })
 }

@@ -20,6 +20,7 @@ import {
   eventMatchesAccelerator,
   firstHit,
   formatAddedAt,
+  isPlusKey,
   isRecordableQuery,
   parseAccelerator,
   pendingWordFromQuery,
@@ -191,6 +192,15 @@ describe('quickRecord 纯函数', () => {
     expect(formatAddedAt('2026-08-31T12:00:00.000Z')).toBe('2026-08-31')
     expect(formatAddedAt('bad-iso')).toBe('bad-iso')
   })
+
+  it('isPlusKey（FIX-1）：主键盘 + / 等号 / 数字键盘 Add 均判定为「+」键', () => {
+    expect(isPlusKey(new KeyboardEvent('keydown', { key: '+' }))).toBe(true)
+    expect(isPlusKey(new KeyboardEvent('keydown', { key: '=' }))).toBe(true)
+    expect(isPlusKey(new KeyboardEvent('keydown', { key: 'Add' }))).toBe(true)
+    expect(isPlusKey(new KeyboardEvent('keydown', { key: '+', code: 'NumpadAdd' }))).toBe(true)
+    expect(isPlusKey(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))).toBe(false)
+    expect(isPlusKey(new KeyboardEvent('keydown', { key: 'Enter' }))).toBe(false)
+  })
 })
 
 // ---------------------------------------------------------------------------
@@ -225,6 +235,49 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
     expect(modal()).not.toBeNull()
 
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(false)
+    wrapper.unmount()
+  })
+
+  it('「+」键直接唤起（FIX-1）：+ / = / 数字键盘 Add 均可触发，无需组合键', async () => {
+    const { wrapper } = await mountModal()
+    expect(isOpen(wrapper)).toBe(false)
+
+    // 主键盘 +（Shift+= 产生）
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+' }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(true)
+
+    // 再次按 + → 关闭（toggle）
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+' }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(false)
+
+    // 等号键
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '=' }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(true)
+
+    // 数字键盘加号（key='Add' / code='NumpadAdd'）
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Add', code: 'NumpadAdd' }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(false) // toggle 关闭
+    wrapper.unmount()
+  })
+
+  it('「+」键带 ctrl/alt/meta 组合不触发（避免与编辑快捷键冲突）', async () => {
+    const { wrapper } = await mountModal()
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+', ctrlKey: true }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(false)
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+', altKey: true }))
     await nextTick()
     await nextTick()
     expect(isOpen(wrapper)).toBe(false)

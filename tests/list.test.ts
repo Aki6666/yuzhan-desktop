@@ -1,5 +1,5 @@
 /**
- * T4 列表页测试（AC-07 搜索 / 频次·首字过滤 / 虚拟滚动 / 跳转 / 空态）+ listFilters 纯函数单测
+ * T4 列表页测试（AC-07 搜索 / 频次过滤 / 虚拟滚动 / 跳转 / 空态）+ listFilters 纯函数单测（FIX-1：首字筛选已移除）
  *
  * 说明：
  * - 检索核心逻辑复用 shared/lib/search.ts（其单测见 tests/search.test.ts），本文件只覆盖 UI 接线与派生数据
@@ -15,10 +15,8 @@ import IdiomListPage from '../src/renderer/src/views/IdiomListPage.vue'
 import IdiomVirtualList from '../src/renderer/src/components/idiom-list/IdiomVirtualList.vue'
 import {
   FREQUENCY_OPTIONS,
-  countByFirstChar,
   countByFrequency,
   debounce,
-  firstCharOptions,
   highlightPinyinSpan,
   highlightSpan
 } from '../src/renderer/src/lib/listFilters'
@@ -145,13 +143,6 @@ describe('listFilters 纯函数', () => {
     expect(FREQUENCY_OPTIONS).toEqual([1, 2, 3, 4, 5])
   })
 
-  it('firstCharOptions：去重且覆盖全部首字', () => {
-    const chars = firstCharOptions(fixture)
-    const expected = new Set(fixture.map((i) => i.word[0]))
-    expect(chars.length).toBe(expected.size)
-    for (const c of expected) expect(chars).toContain(c)
-  })
-
   it('countByFrequency：1–5 全键，缺失为 0', () => {
     const c = countByFrequency(fixture)
     expect(c[5]).toBe(1)
@@ -160,13 +151,6 @@ describe('listFilters 纯函数', () => {
     expect(c[2]).toBe(1)
     expect(c[1]).toBe(1)
     expect(Object.keys(c)).toHaveLength(5)
-  })
-
-  it('countByFirstChar：按首字计数', () => {
-    const c = countByFirstChar(fixture)
-    expect(c.get('不')).toBe(2)
-    expect(c.get('鞠')).toBe(1)
-    expect(c.get('乐')).toBe(1)
   })
 
   it('debounce：防抖窗口内合并多次调用，只执行最后一次', () => {
@@ -293,10 +277,10 @@ describe('列表页搜索（AC-07）', () => {
 })
 
 // ---------------------------------------------------------------------------
-// 列表页：频次（1–5）与首字过滤 + 组合
+// 列表页：频次（1–5）过滤 + 组合（FIX-1：首字筛选已移除，附录 B v0.1.2）
 // ---------------------------------------------------------------------------
 
-describe('列表页频次/首字过滤', () => {
+describe('列表页频次过滤', () => {
   it('频次过滤：点击 频4 → 仅显示频次=4 的词条', async () => {
     const { wrapper } = await mountPage()
     await wrapper.find('[data-testid="freq-4"]').trigger('click')
@@ -311,15 +295,6 @@ describe('列表页频次/首字过滤', () => {
     await wrapper.find('[data-testid="freq-4"]').trigger('click')
     await wrapper.find('[data-testid="freq-4"]').trigger('click')
     expect(rows(wrapper)).toHaveLength(fixture.length)
-  })
-
-  it('首字过滤：点击 首字「不」 → 仅显示以「不」开头的词条', async () => {
-    const { wrapper } = await mountPage()
-    await wrapper.find('[data-testid="first-不"]').trigger('click')
-    expect(rows(wrapper).map((r) => r.attributes('data-id'))).toEqual([
-      'bu-luo-ke-jiu-01',
-      'bu-chi-xia-wen-01'
-    ])
   })
 
   it('组合过滤：关键字 ju + 频次 4 → 只剩 居安思危/安居乐业', async () => {

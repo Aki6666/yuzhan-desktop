@@ -1,7 +1,8 @@
 <script setup lang="ts">
 /**
  * 快速记录弹层（PLAN.md §10 / F7 / AC-03/04，§3.3 快速输入交互）
- * - Ctrl+K 任意页面唤起（自注册 window keydown，应用内快捷键为主；globalShortcut 由 main 侧升级/降级）
+ * - Ctrl+K 与「+」键任意页面唤起（自注册 window keydown，应用内快捷键为主；FIX-1：
+ *   main 侧不再注册 globalShortcut——Windows 下会消费组合键导致 renderer 收不到 keydown）
  * - 自动聚焦、Esc 关闭；输入防抖 200ms 后本地检索（复用 shared/lib/search.ts）
  * - 命中：展示卡片 + 「复习一次 / 标记掌握」（progress store 记录闭环，节流写 + 强制 flush）
  * - 未命中：v0.1 存入生词本（pending store，即时写 userData/pending.json）
@@ -23,6 +24,7 @@ import {
   createQuickIndex,
   eventMatchesAccelerator,
   firstHit,
+  isPlusKey,
   pendingWordFromQuery,
   searchHits,
   tierLabel
@@ -87,17 +89,28 @@ const progressStatusTag = computed<{ type: 'default' | 'warning' | 'success'; la
 })
 
 // ---------------------------------------------------------------------------
-// 唤起 / 关闭（§3.3：Ctrl+K 唤起、自动聚焦、Esc 关闭）
+// 唤起 / 关闭（§3.3 + FIX-1：Ctrl+K 或「+」键唤起、自动聚焦、Esc 关闭）
 // ---------------------------------------------------------------------------
 
 function onKeydown(e: KeyboardEvent): void {
+  // 应用内快捷键：Ctrl+K（settings.quickInputShortcut）；「+」键直接触发（无需组合键）
   if (eventMatchesAccelerator(e, shortcut.value)) {
     e.preventDefault()
-    if (show.value) close()
-    else open()
+    toggle()
+    return
+  }
+  // 「+」/「=」/数字键盘加号：直接唤起（排除 ctrl/alt/meta 组合；shift 允许——主键盘 '+' 常需 Shift）
+  if (isPlusKey(e) && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    e.preventDefault()
+    toggle()
     return
   }
   if (e.key === 'Escape' && show.value) close()
+}
+
+function toggle(): void {
+  if (show.value) close()
+  else open()
 }
 
 function open(): void {
@@ -289,9 +302,9 @@ defineExpose({ open, close, isOpen: () => show.value })
         </template>
       </div>
 
-      <!-- 快捷键提示行（§3.3 / U3：Ctrl+K 唤起 · Esc 关闭 · 回车记录） -->
+      <!-- 快捷键提示行（§3.3 / U3：Ctrl+K 或 + 唤起 · Esc 关闭 · 回车记录） -->
       <div class="shortcut-row">
-        <span class="shortcut-item"><kbd>{{ shortcut.includes('CommandOrControl') ? 'Ctrl' : shortcut }}</kbd> 唤起</span>
+        <span class="shortcut-item"><kbd>{{ shortcut.includes('CommandOrControl') ? 'Ctrl' : shortcut }}</kbd> 或 <kbd>+</kbd> 唤起</span>
         <span class="shortcut-item"><kbd>Esc</kbd> 关闭</span>
         <span class="shortcut-item"><kbd>回车</kbd> 直接记录</span>
       </div>
