@@ -184,9 +184,10 @@ describe('store 持久化铁律', () => {
 })
 
 describe('SM-2 迁移与调度字段（v0.2，§5.6）', () => {
-  const today = new Date().toISOString().slice(0, 10)
+  /** 运行时 today（UTC）；因 due=now 是运行时时间，在断言处即时计算，避免收集期/运行期跨日偏差 */
+  const todayNow = (): string => new Date().toISOString().slice(0, 10)
 
-  it('旧记录（无 review）启动迁移补默认值：due=now/interval=0/ease=2.5，旧字段保留', () => {
+  it('旧记录（无 review）启动迁移补默认值：due=now/interval=0/ease=2.5，旧字段保留', async () => {
     const dir = makeDir()
     // v0.1 旧格式：无 review 字段
     const legacy = {
@@ -200,14 +201,19 @@ describe('SM-2 迁移与调度字段（v0.2，§5.6）', () => {
     }
     writeFileSync(join(dir, 'progress.json'), JSON.stringify(legacy))
     const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s.flush() // 迁移写盘完成后再断言/teardown，避免队列微任务竞态
     const item = s.getProgressItem('ju-gong-jin-cui-01')
     // 旧数据兼容：v0.1 字段原样保留
     expect(item?.status).toBe('learning')
     expect(item?.wrongTimes).toBe(2)
     expect(item?.wrongTypes).toEqual({ 褒贬误用: 1 })
     expect(item?.lastSeen).toBe('2026-08-30')
-    // 迁移补默认
-    expect(item?.review).toEqual({ interval: 0, ease: 2.5, due: today })
+    // 迁移补默认：interval/ease 精确断言；due=now 运行时近似（格式 + 与即时 today 一致）
+    expect(item?.review).toBeDefined()
+    expect(item?.review?.interval).toBe(0)
+    expect(item?.review?.ease).toBe(2.5)
+    expect(item?.review?.due).toMatch(/^\d{4}-\d{2}-\d{2}$/)
+    expect(item?.review?.due).toBe(todayNow())
   })
 
   it('迁移幂等：不重复迁移、结果落盘、二次启动不覆盖', async () => {
@@ -219,12 +225,12 @@ describe('SM-2 迁移与调度字段（v0.2，§5.6）', () => {
     const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
     await s1.flush() // 迁移结果写盘
     const onDisk = JSON.parse(readFileSync(join(dir, 'progress.json'), 'utf8'))
-    expect(onDisk['a-01'].review).toEqual({ interval: 0, ease: 2.5, due: today })
+    expect(onDisk['a-01'].review).toEqual({ interval: 0, ease: 2.5, due: todayNow() })
 
     const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
     expect(s2.getProgressItem('a-01')?.review?.interval).toBe(0)
     expect(s2.getProgressItem('a-01')?.review?.ease).toBe(2.5)
-    expect(s2.getProgressItem('a-01')?.review?.due).toBe(today)
+    expect(s2.getProgressItem('a-01')?.review?.due).toBe(todayNow())
   })
 
   it('SM-2 字段持久化：saveProgress review patch → 跨实例读回', async () => {
@@ -261,9 +267,10 @@ describe('SM-2 迁移与调度字段（v0.2，§5.6）', () => {
     writeFileSync(join(dir, 'progress.json.bak'), JSON.stringify(legacy))
     const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
     expect(s.getRecoveryInfo().recoveredFromBackup).toContain('progress.json')
+    await s.flush() // 迁移写盘完成后再 teardown，避免队列微任务竞态
     const item = s.getProgressItem('d-01')
     expect(item?.status).toBe('learning') // 回退数据旧字段保留
-    expect(item?.review).toEqual({ interval: 0, ease: 2.5, due: today }) // 迁移补默认
+    expect(item?.review).toEqual({ interval: 0, ease: 2.5, due: todayNow() }) // 迁移补默认
   })
 })
 

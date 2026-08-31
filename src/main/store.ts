@@ -258,7 +258,10 @@ export function createStorage(options: StorageOptions): Storage {
   }
   if (migratedCount > 0) {
     logger.info(`[store] progress.json 迁移：${migratedCount} 条旧记录补 SM-2 默认字段（due=now/interval=0/ease=2.5）`)
-    void queue.enqueue('progress.json', () => atomicWriteJson('progress.json', progress))
+    // 迁移结果落盘（幂等：下次启动 review 已存在跳过）；失败仅记日志（幂等可重试，不产生未处理拒绝）
+    void queue
+      .enqueue('progress.json', () => atomicWriteJson('progress.json', progress))
+      .catch((e) => logger.error(`[store] SM-2 迁移落盘失败（幂等，下次启动重试）: ${String(e)}`))
   }
 
   function mergeRecovery(partial: Partial<RecoveryInfo>): void {
