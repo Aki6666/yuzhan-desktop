@@ -280,8 +280,13 @@ export function createAiCache(cacheDir: string, maxEntries = 200): AiCache {
         // 同毫秒写入时按文件名 tiebreak，保证确定性清理
         .sort((a, b) => (a.m - b.m) || (a.f < b.f ? -1 : 1))
       const overflow = withMtime.length - max
+      // 同步删除：保证 prune 返回后清理已落盘（测试与调用方依赖确定性；fs 操作量 ≤ overflow 小规模）
       for (let i = 0; i < overflow; i++) {
-        void fsp.rm(join(cacheDir, withMtime[i].f), { force: true }).catch(() => {})
+        try {
+          rmSync(join(cacheDir, withMtime[i].f), { force: true })
+        } catch {
+          /* 清理失败不阻塞 */
+        }
       }
     }
   }
