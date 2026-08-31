@@ -1,0 +1,200 @@
+/**
+ * store 持久化单测（AC-08 损坏回退 / AC-09 双开聚焦；§4.5/§10.3 铁律）
+ * - createStorage 不依赖 electron（路径注入），可直接单测
+ * - window.ts 的 focusWindow 依赖 electron 包，vi.mock 掉
+ */
+import { describe, it, expect, vi, afterEach } from 'vitest'
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
+
+vi.mock('electron', () => ({
+  app: { on: vi.fn(), isPackaged: false, getPath: () => 'tmp', getAppPath: () => '.' },
+  BrowserWindow: class {},
+  globalShortcut: { register: vi.fn(() => true), unregisterAll: vi.fn() },
+  shell: { openExternal: vi.fn() }
+}))
+
+import { createStorage } from '../src/main/store'
+import { focusWindow } from '../src/main/window'
+
+const dirs: string[] = []
+
+function makeDir(): string {
+  const dir = mkdtempSync(join(tmpdir(), 'yuzhan-store-'))
+  dirs.push(dir)
+  return dir
+}
+
+afterEach(() => {
+  for (const d of dirs.splice(0)) {
+    rmSync(d, { recursive: true, force: true })
+  }
+})
+
+describe('store 持久化铁律', () => {
+  it('AC-08: progress.json 损坏 → 启动自动回退 .bak，不崩溃且数据可恢复', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s1.saveProgress({ id: 'a-01', status: 'learning', wrongTimes: 1 })
+    await s1.flush()
+    // 第二次写产生 .bak（内容=第一次状态）
+    await s1.saveProgress({ id: 'a-01', status: 'mastered', wrongTimes: 2 })
+    await s1.flush()
+
+    // 人为破坏 progress.json（AC-08 场景）
+    writeFileSync(join(dir, 'progress.json'), '{corrupt json!!!')
+
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    const recovered = s2.getProgressItem('a-01')
+    // .bak 是最新一份的上一状态（learning/wrongTimes:1）
+    expect(recovered?.status).toBe('learning')
+    expect(recovered?.wrongTimes).toBe(1)
+    expect(s2.getRecoveryInfo().recoveredFromBackup).toContain('progress.json')
+    expect(s2.getRecoveryInfo().hasRecovery).toBe(true)
+    // 主文件已被 .bak 覆盖为合法 JSON
+    expect(() => JSON.parse(readFileSync(join(dir, 'progress.json'), 'utf8'))).not.toThrow()
+  })
+
+  it('原子写：写后无 *.tmp 残留；.bak 保留最近一份', async () => {
+    const dir = makeDir()
+    const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s.saveProgress({ id: 'b-01', status: 'learning', wrongTimes: 1 })
+    await s.flush()
+    expect(existsSync(join(dir, 'progress.json.tmp'))).toBe(false)
+
+    await s.saveProgress({ id: 'b-01', status: 'mastered', wrongTimes: 2 })
+    await s.flush()
+    expect(existsSync(join(dir, 'progress.json.bak'))).toBe(true)
+    const bak = JSON.parse(readFileSync(join(dir, 'progress.json.bak'), 'utf8')) as Record<string, { status: string }>
+    expect(bak['b-01'].status).toBe('learning') // .bak = 写入前状态
+    const main = JSON.parse(readFileSync(join(dir, 'progress.json'), 'utf8')) as Record<string, { status: string }>
+    expect(main['b-01'].status).toBe('mastered')
+  })
+
+  it('.bak 也损坏 → 原始保留为 *.corrupt，按空数据启动不崩溃（§10.3#2）', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s1.saveProgress({ id: 'c-01', status: 'learning' })
+    await s1.flush()
+
+    writeFileSync(join(dir, 'progress.json'), 'garbage{')
+    writeFileSync(join(dir, 'progress.json.bak'), 'also garbage{')
+
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s2.getProgress()).toEqual({})
+    expect(existsSync(join(dir, 'progress.json.corrupt'))).toBe(true)
+    expect(s2.getRecoveryInfo().preservedAsCorrupt).toContain('progress.json')
+    expect(s2.getRecoveryInfo().hasRecovery).toBe(true)
+  })
+
+  it('写队列：并发同 key 写串行合并，最终文件为最后一次状态', async () => {
+    const dir = makeDir()
+    const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await Promise.all([
+      s.saveProgress({ id: 'd-01', status: 'new' }),
+      s.saveProgress({ id: 'd-01', status: 'learning' }),
+      s.saveProgress({ id: 'd-01', status: 'mastered', wrongTimes: 3 })
+    ])
+    await s.flush()
+    const main = JSON.parse(readFileSync(join(dir, 'progress.json'), 'utf8')) as Record<
+      string,
+      { status: string; wrongTimes: number }
+    >
+    expect(main['d-01'].status).toBe('mastered')
+    expect(main['d-01'].wrongTimes).toBe(3)
+    expect(existsSync(join(dir, 'progress.json.tmp'))).toBe(false)
+  })
+
+  it('quiz:record：答错累计 wrongTimes 且 mastered 降级 learning；答对不动', async () => {
+    const dir = makeDir()
+    const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s.saveProgress({ id: 'q-01', status: 'mastered' })
+    await s.flush()
+    await s.recordQuizAnswers([
+      { id: 'q-01', correct: false },
+      { id: 'q-02', correct: true }
+    ])
+    await s.flush()
+    const item = s.getProgressItem('q-01')
+    expect(item?.wrongTimes).toBe(1)
+    expect(item?.status).toBe('learning')
+    expect(s.getProgressItem('q-02')).toBeUndefined()
+  })
+
+  it('生词本：add 幂等、remove、跨实例持久化', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s1.addPending('不落窠臼')
+    await s1.addPending('不落窠臼')
+    await s1.flush()
+    expect(s1.listPending()).toHaveLength(1)
+
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s2.listPending()).toHaveLength(1)
+    expect(s2.listPending()[0].word).toBe('不落窠臼')
+
+    await s2.removePending('不落窠臼')
+    await s2.flush()
+    expect(s2.listPending()).toHaveLength(0)
+    const s3 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s3.listPending()).toHaveLength(0)
+  })
+
+  it('设置：默认值 + patch 更新并跨实例持久化', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s1.getSettings().aiMode).toBe('disabled')
+    expect(s1.getSettings().quickInputShortcut).toBe('CommandOrControl+K')
+    await s1.saveSettings({ aiMode: 'online' })
+    await s1.flush()
+
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s2.getSettings().aiMode).toBe('online')
+    expect(s2.getSettings().quickInputShortcut).toBe('CommandOrControl+K')
+  })
+
+  it('正式库：按首字分区扫描（跳过 tags/exams 词表）+ 语料版本', () => {
+    const dir = makeDir()
+    const dataDir = join(dir, 'data')
+    mkdirSync(join(dataDir, 'idioms', 'j'), { recursive: true })
+    mkdirSync(join(dataDir, 'scripts'), { recursive: true })
+    writeFileSync(
+      join(dataDir, 'idioms', 'j', 'ju-gong-jin-cui-01.json'),
+      JSON.stringify({ id: 'ju-gong-jin-cui-01', word: '鞠躬尽瘁', pinyin: 'jū gōng jìn cuì', frequency: 5 })
+    )
+    writeFileSync(join(dataDir, 'idioms', 'tags.json'), JSON.stringify({ tags: ['态度'] }))
+    writeFileSync(join(dataDir, 'idioms', 'exams.json'), JSON.stringify({ exams: ['2023-国考-副省级'] }))
+    writeFileSync(join(dataDir, 'scripts', 'corpus-version.json'), JSON.stringify({ corpus: '2025.1' }))
+
+    const s = createStorage({ userDataDir: join(dir, 'ud'), dataDir })
+    const { items, version } = s.listOfficial()
+    expect(items).toHaveLength(1)
+    expect(items[0].id).toBe('ju-gong-jin-cui-01')
+    expect(version).toBe('2025.1')
+    expect(s.getOfficial('ju-gong-jin-cui-01')?.word).toBe('鞠躬尽瘁')
+    expect(s.getOfficial('not-exist')).toBeNull()
+  })
+
+  it('正式库：data 目录缺失 → 空列表兜底', () => {
+    const dir = makeDir()
+    const s = createStorage({ userDataDir: join(dir, 'ud'), dataDir: join(dir, 'no-data') })
+    expect(s.listOfficial().items).toEqual([])
+  })
+})
+
+describe('AC-09 双开聚焦', () => {
+  it('第二实例：最小化窗口 → restore + focus；非最小化 → 仅 focus', () => {
+    const restore = vi.fn()
+    const focus = vi.fn()
+    focusWindow({ isMinimized: () => true, restore, focus })
+    expect(restore).toHaveBeenCalledTimes(1)
+    expect(focus).toHaveBeenCalledTimes(1)
+
+    const focus2 = vi.fn()
+    const restore2 = vi.fn()
+    focusWindow({ isMinimized: () => false, restore: restore2, focus: focus2 })
+    expect(restore2).not.toHaveBeenCalled()
+    expect(focus2).toHaveBeenCalledTimes(1)
+  })
+})
