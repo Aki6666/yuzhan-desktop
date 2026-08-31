@@ -23,6 +23,13 @@ const idiomsStore = useIdiomsStore()
 const progressStore = useProgressStore()
 const quizStore = useQuizStore()
 
+/** 难度档位（v0.2.6 迭代：干扰项区分度） */
+const DIFFICULTY_OPTIONS = [
+  { value: 'easy', label: '简单', desc: '干扰项宽松（同主题随机），适合初次自测' },
+  { value: 'standard', label: '标准', desc: '默认：至少 1 个近义/形近干扰项，贴近真题' },
+  { value: 'hard', label: '困难', desc: '干扰项全为近义/形近词，高强度辨析' }
+] as const
+
 /** 档位选择（空数组 = 全部；用户要求 #6） */
 const selectedTiers = ref<number[]>([])
 
@@ -50,6 +57,7 @@ const pool = computed(() =>
 onMounted(() => {
   void idiomsStore.load()
   void loadHistory()
+  void quizStore.loadPairs() // v0.2.6 迭代：易混对参与干扰项生成
 })
 
 function startQuiz(): void {
@@ -115,6 +123,24 @@ function onBack(): void {
       <div class="tier-row" data-testid="quiz-tier-select">
         <span class="tier-label">档位</span>
         <FrequencyTierSelect :model-value="selectedTiers" :counts="freqCounts" @update:model-value="selectedTiers = $event" />
+      </div>
+      <!-- 难度选择（v0.2.6 迭代：干扰项区分度——标准=含近义干扰，困难=全近义/形近） -->
+      <div class="tier-row" data-testid="quiz-difficulty-select">
+        <span class="tier-label">难度</span>
+        <div class="difficulty-selector" role="group" aria-label="自测难度">
+          <button
+            v-for="d in DIFFICULTY_OPTIONS"
+            :key="d.value"
+            type="button"
+            class="diff-chip"
+            :class="{ active: quizStore.difficulty === d.value }"
+            :data-testid="`quiz-difficulty-${d.value}`"
+            :title="d.desc"
+            @click="quizStore.setDifficulty(d.value)"
+          >
+            {{ d.label }}
+          </button>
+        </div>
       </div>
       <!-- 题库不足：提示并引导浏览成语库（§3.3 空态） -->
       <template v-if="!quizStore.canStart(pool.length)">
@@ -261,6 +287,41 @@ function onBack(): void {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
   letter-spacing: 1px;
+}
+
+/* 难度选择（v0.2.6 迭代） */
+.difficulty-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.diff-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-size: 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 999px;
+  background: var(--y-bg-card);
+  color: var(--y-text-secondary);
+  cursor: pointer;
+  transition:
+    border-color var(--y-motion-fast) var(--y-motion-ease),
+    background-color var(--y-motion-fast) var(--y-motion-ease),
+    color var(--y-motion-fast) var(--y-motion-ease);
+}
+
+.diff-chip:hover {
+  background: var(--y-bg-hover);
+}
+
+.diff-chip.active {
+  border-color: color-mix(in srgb, var(--y-primary) 42%, var(--y-border));
+  background: var(--y-primary-soft);
+  color: var(--y-primary);
+  font-weight: 600;
 }
 
 /* 自测历史 */

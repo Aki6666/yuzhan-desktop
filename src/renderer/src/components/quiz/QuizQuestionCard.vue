@@ -24,6 +24,13 @@ const emit = defineEmits<{ select: [optionIndex: number]; next: [] }>()
 const answered = computed(() => props.selected !== null)
 const isCorrect = computed(() => props.selected !== null && props.selected === props.question.correctIndex)
 
+/** 答错且所选选项命中易混提示（v0.2.6 迭代：干扰项来自 near/pairs 时展示辨析） */
+const confusableHint = computed(() => {
+  if (!answered.value || isCorrect.value || props.selected === null) return undefined
+  const selectedText = props.question.options[props.selected]
+  return props.question.confusableHints?.find((h) => h.option === selectedText)
+})
+
 function optionType(i: number): 'default' | 'success' | 'error' {
   if (!answered.value) return 'default'
   if (i === props.question.correctIndex) return 'success'
@@ -90,6 +97,9 @@ function onSelect(i: number): void {
       </div>
       <div class="q-kaodian">
         <p class="kaodian-meaning"><b>释义：</b>{{ question.meaning }}</p>
+        <p v-if="confusableHint" class="kaodian-confusable" data-testid="q-confusable">
+          <b>易混提示：</b>「{{ confusableHint.word }}」—— {{ confusableHint.diff }}
+        </p>
         <div v-if="question.errorTypes.length > 0" class="kaodian-row">
           <span class="kaodian-label">误用类型：</span>
           <NTag v-for="t in question.errorTypes" :key="t" size="small" type="error" :bordered="false">{{ t }}</NTag>
@@ -246,6 +256,21 @@ function onSelect(i: number): void {
 .kaodian-meaning {
   margin: 0;
   line-height: var(--y-line-height-body);
+}
+
+.kaodian-confusable {
+  margin: 2px 0 0;
+  padding: 6px 10px;
+  border: 1px dashed color-mix(in srgb, var(--y-primary) 35%, var(--y-border));
+  border-radius: var(--y-radius-sm);
+  background: color-mix(in srgb, var(--y-primary-soft) 55%, var(--y-bg-card));
+  font-size: 13px;
+  line-height: var(--y-line-height-body);
+  color: var(--y-text-body);
+}
+
+.kaodian-confusable b {
+  color: var(--y-primary);
 }
 
 .kaodian-row {

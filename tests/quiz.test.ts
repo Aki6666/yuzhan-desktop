@@ -15,13 +15,19 @@ import {
   HIGH_FREQUENCY_TIERS,
   OPTION_COUNT,
   QUIZ_SIZE,
+  SCORE_NEAR,
+  SCORE_SAME_TAG,
   buildOptionsFor,
   buildQuiz,
+  confusableScore,
+  createDistractorIndex,
   selectQuizTargets
 } from '../shared/lib/quiz'
 import { useQuizStore } from '../src/renderer/src/stores/quiz'
 import { useProgressStore } from '../src/renderer/src/stores/progress'
 import QuizPage from '../src/renderer/src/views/QuizPage.vue'
+import QuizQuestionCard from '../src/renderer/src/components/quiz/QuizQuestionCard.vue'
+import type { QuizQuestion } from '../shared/lib/quiz'
 import type { Idiom, YuzhanApi } from '../shared/ipc/contracts'
 
 // ---------------------------------------------------------------------------
@@ -69,14 +75,14 @@ const LOW = [
   idiom({ id: 'l-06', word: '废寝忘食', pinyin: 'fèi qǐn wàng shí', meaning: '废寝忘食释义', frequency: 1, tags: ['勤勉'] })
 ]
 
-/** 近义辨析组对端（无共享 tag，强制走 nearGroup 干扰源） */
+/** 近义辨析组对端（near 对端无字形/主题交集，验证近义池独立入选） */
 const NEAR_TARGET = idiom({
   id: 'near-t',
   word: '鞠躬尽瘁',
   pinyin: 'jū gōng jìn cuì',
   meaning: '忠诚奉献直到生命结束',
   frequency: 5,
-  tags: ['品质'],
+  tags: ['态度奉献'],
   near: [{ word: '殚精竭虑', diff: '前者重忠诚奉献，后者重用尽心思' }]
 })
 const NEAR_PARTNER = idiom({
@@ -168,24 +174,31 @@ describe('shared/lib/quiz.ts 组卷规则（§3.3 / AC-06）', () => {
   })
 
   it('干扰项同主题优先：目标词含 tag 时，干扰项来自同主题词条释义', () => {
-    const target = HIGH[0] // 高风亮节，tags=['态度奉献']
-    const built = buildOptionsFor(target, fixture, mulberry32(7))
+    const target = HIGH[0] // 高风亮节，tags=['态度奉献']（无近义/形近候选 → 退化同主题）
+    const built = buildOptionsFor(target, createDistractorIndex(fixture), mulberry32(7))
     expect(built).not.toBeNull()
     const sameTagMeanings = HIGH.filter((h) => h.id !== target.id && h.tags?.includes('态度奉献')).map((h) => h.meaning)
     const distractorHits = built!.options.filter((o, i) => i !== built!.correctIndex && sameTagMeanings.includes(o))
     expect(distractorHits.length).toBeGreaterThan(0)
   })
 
-  it('干扰项近义辨析组：无共享 tag 时取 near 对端词释义', () => {
-    const built = buildOptionsFor(NEAR_TARGET, fixture, mulberry32(8))
+  it('干扰项近义辨析组：near 对端词释义入选且附带易混辨析提示（v0.2.6）', () => {
+    const index = createDistractorIndex(fixture)
+    const built = buildOptionsFor(NEAR_TARGET, index, mulberry32(8))
     expect(built).not.toBeNull()
     expect(built!.options.filter((o, i) => i !== built!.correctIndex)).toContain(NEAR_PARTNER.meaning)
+    // 近义干扰项附带 diff 提示（答错时展示「易与 X 混淆：diff」）
+    const hint = built!.hints.find((h) => h.word === '殚精竭虑')
+    expect(hint).toBeTruthy()
+    expect(hint!.diff).toContain('忠诚奉献')
+    expect(hint!.option).toBe(NEAR_PARTNER.meaning)
   })
 
   it('正确答案位置随机：不同随机源产生不同选项顺序', () => {
+    const index = createDistractorIndex(fixture)
     const indices = new Set<number>()
     for (let seed = 10; seed < 20; seed++) {
-      const built = buildOptionsFor(HIGH[1], fixture, mulberry32(seed))
+      const built = buildOptionsFor(HIGH[1], index, mulberry32(seed))
       expect(built).not.toBeNull()
       indices.add(built!.correctIndex)
     }
@@ -216,6 +229,156 @@ describe('shared/lib/quiz.ts 组卷规则（§3.3 / AC-06）', () => {
     }
     for (const l of ordered.slice(wrongLen + highCount)) {
       expect(HIGH_FREQUENCY_TIERS).not.toContain(l.frequency)
+    }
+  })
+})
+
+// ---------------------------------------------------------------------------
+// v0.2.6 迭代：干扰项混淆度引擎（§16.3 P0-⑤「选项区分度」）
+// ---------------------------------------------------------------------------
+
+describe('干扰项混淆度引擎（v0.2.6，§16.3 P0-⑤）', () => {
+  /** 形近对：一蹴而就 / 一挥而就（共享 3 字 + 同首 + 同尾，A 级高相似；真题易混对） */
+  const SHAPE_TARGET = idiom({
+    id: 'shape-t',
+    word: '一蹴而就',
+    pinyin: 'yī cù ér jiù',
+    meaning: '踏一步就成功，形容事情轻而易举',
+    frequency: 4,
+    tags: ['方法']
+  })
+  const SHAPE_SHARED = idiom({
+    id: 'shape-s',
+    word: '一挥而就',
+    pinyin: 'yī huī ér jiù',
+    meaning: '一动笔就写成，形容才思敏捷',
+    frequency: 3,
+    tags: ['言语表达']
+  })
+  const SHAPE_FIRST = idiom({
+    id: 'shape-f',
+    word: '一马当先',
+    pinyin: 'yī mǎ dāng xiān',
+    meaning: '作战或做事走在最前面',
+    frequency: 3,
+    tags: ['方法']
+  })
+  const TAG_ONLY = idiom({
+    id: 'tag-only',
+    word: '夜以继日',
+    pinyin: 'yè yǐ jì rì',
+    meaning: '日夜不停',
+    frequency: 2,
+    tags: ['方法']
+  })
+  // 扩充填充词：保证每个目标词都有 ≥3 个可作干扰项的候选
+  const FILL_A = idiom({
+    id: 'fill-a',
+    word: '举一反三',
+    pinyin: 'jǔ yī fǎn sān',
+    meaning: '从一件事情类推而知道许多事情',
+    frequency: 4,
+    tags: ['方法']
+  })
+  const FILL_B = idiom({
+    id: 'fill-b',
+    word: '一鸣惊人',
+    pinyin: 'yī míng jīng rén',
+    meaning: '平时没有突出的表现，一下子做出惊人的成绩',
+    frequency: 5,
+    tags: ['言语表达']
+  })
+  const FILL_C = idiom({
+    id: 'fill-c',
+    word: '白手起家',
+    pinyin: 'bái shǒu qǐ jiā',
+    meaning: '没有任何基础，靠自己的努力创立事业',
+    frequency: 4,
+    tags: ['处事方法']
+  })
+  const FILL_D = idiom({
+    id: 'fill-d',
+    word: '有条不紊',
+    pinyin: 'yǒu tiáo bù wěn',
+    meaning: '做事有条理，一点不乱',
+    frequency: 3,
+    tags: ['处事方法']
+  })
+  const shapeFixture: Idiom[] = [SHAPE_TARGET, SHAPE_SHARED, SHAPE_FIRST, TAG_ONLY, FILL_A, FILL_B, FILL_C, FILL_D]
+
+  it('confusableScore：near 对端 = 100；形近（共享3字+同首同尾）远高于同 tag；pairs 对端 = 100', () => {
+    const idx = createDistractorIndex(fixture)
+    // near 对端（鞠躬尽瘁 → 殚精竭虑）
+    const near = confusableScore(NEAR_TARGET, NEAR_PARTNER, idx)
+    expect(near.score).toBe(SCORE_NEAR)
+    expect(near.hint?.diff).toContain('忠诚奉献')
+
+    const sidx = createDistractorIndex(shapeFixture)
+    // 形近（一蹴而就 vs 一挥而就：共享 3 字 + 同首 + 同尾）：16 + 5 + 8 = 29
+    const shape = confusableScore(SHAPE_TARGET, SHAPE_SHARED, sidx)
+    expect(shape.score).toBeGreaterThanOrEqual(29)
+    // 同首字「一」+ 同 tag「方法」：5 + 2 = 7（低于形近）
+    const first = confusableScore(SHAPE_TARGET, SHAPE_FIRST, sidx)
+    expect(first.score).toBeGreaterThanOrEqual(7)
+    expect(first.score).toBeLessThan(shape.score)
+    // 仅同 tag（无字形相似）：2
+    const tag = confusableScore(SHAPE_TARGET, TAG_ONLY, sidx)
+    expect(tag.score).toBe(SCORE_SAME_TAG)
+
+    // pairs 对端（双向映射）
+    const pidx = createDistractorIndex(shapeFixture, [{ a: '一蹴而就', b: '一挥而就', diff: '一蹴而就重一步成功，一挥而就重一挥而成' }])
+    const pair = confusableScore(SHAPE_TARGET, SHAPE_SHARED, pidx)
+    expect(pair.score).toBe(SCORE_NEAR)
+    expect(pair.hint?.diff).toContain('一蹴而就重一步成功')
+  })
+
+  it('standard（默认）：至少 1 个高相似干扰项（形近/near），其余按混淆度降序', () => {
+    const idx = createDistractorIndex(shapeFixture)
+    const built = buildOptionsFor(SHAPE_TARGET, idx, mulberry32(21))
+    expect(built).not.toBeNull()
+    const distractors = built!.options.filter((o, i) => i !== built!.correctIndex)
+    // 高相似候选（一挥而就 score 29）必然入选
+    expect(distractors).toContain(SHAPE_SHARED.meaning)
+  })
+
+  it('hard：干扰项全部优先高相似（形近/近义）', () => {
+    const idx = createDistractorIndex(shapeFixture)
+    const built = buildOptionsFor(SHAPE_TARGET, idx, mulberry32(22), 'hard')
+    expect(built).not.toBeNull()
+    const distractors = built!.options.filter((o, i) => i !== built!.correctIndex)
+    expect(distractors).toContain(SHAPE_SHARED.meaning) // 29 分必选
+    expect(distractors).toContain(SHAPE_FIRST.meaning) // 7 分（同首+同 tag）在 hard 降级阈内优先于纯 tag
+  })
+
+  it('easy：宽松（同主题即可，不强求高相似）', () => {
+    const idx = createDistractorIndex(shapeFixture)
+    const built = buildOptionsFor(SHAPE_TARGET, idx, mulberry32(23), 'easy')
+    expect(built).not.toBeNull()
+    expect(built!.options.filter((o, i) => i !== built!.correctIndex)).toHaveLength(OPTION_COUNT - 1)
+  })
+
+  it('buildQuiz：size/difficulty + pairs 透传（pairs 对端入选且带易混提示）', () => {
+    const qs = buildQuiz(shapeFixture, {
+      size: 4,
+      pairs: [{ a: '一蹴而就', b: '一挥而就', diff: '一蹴而就重一步成功，一挥而就重一挥而成' }],
+      difficulty: 'standard',
+      random: mulberry32(24)
+    })
+    expect(qs).toHaveLength(4)
+    const q = qs.find((x) => x.id === 'shape-t')
+    expect(q).toBeTruthy()
+    expect(q!.options.filter((o, i) => i !== q!.correctIndex)).toContain(SHAPE_SHARED.meaning)
+    expect(q!.confusableHints?.some((h) => h.word === '一挥而就')).toBe(true)
+  })
+
+  it('释义去重仍成立：选项互不重复且唯一正确', () => {
+    for (const seed of [31, 32, 33]) {
+      const qs = buildQuiz(shapeFixture, { size: 4, random: mulberry32(seed) })
+      expect(qs).toHaveLength(4)
+      for (const q of qs) {
+        expect(new Set(q.options).size).toBe(OPTION_COUNT)
+        expect(q.options.filter((o) => o === q.meaning)).toHaveLength(1)
+      }
     }
   })
 })
@@ -360,6 +523,66 @@ describe('quiz store（AC-06）', () => {
 })
 
 // ---------------------------------------------------------------------------
+// QuizQuestionCard 易混辨析提示（v0.2.6 迭代：答错且命中 near/pairs 干扰项时展示）
+// ---------------------------------------------------------------------------
+
+describe('QuizQuestionCard 易混提示（v0.2.6）', () => {
+  function question(partial: Partial<QuizQuestion> = {}): QuizQuestion {
+    return {
+      id: 'q-01',
+      word: '一蹴而就',
+      pinyin: 'yī cù ér jiù',
+      options: ['正确释义', '一挥而就的释义', '无关释义', '另一释义'],
+      correctIndex: 0,
+      meaning: '正确释义',
+      errorTypes: [],
+      tags: [],
+      ...partial
+    }
+  }
+
+  it('答错且所选选项命中易混提示 → 展示「易混提示：词 —— diff」', () => {
+    const w = mount(QuizQuestionCard, {
+      props: {
+        question: question({
+          confusableHints: [{ option: '一挥而就的释义', word: '一挥而就', diff: '一蹴而就重一步成功，一挥而就重一挥而成' }]
+        }),
+        selected: 1,
+        index: 0,
+        total: 1
+      }
+    })
+    expect(w.find('[data-testid="q-confusable"]').exists()).toBe(true)
+    expect(w.find('[data-testid="q-confusable"]').text()).toContain('一挥而就')
+    expect(w.find('[data-testid="q-confusable"]').text()).toContain('一挥而成')
+    w.unmount()
+  })
+
+  it('答对 → 不显示易混提示（无混淆语境）', () => {
+    const w = mount(QuizQuestionCard, {
+      props: {
+        question: question({
+          confusableHints: [{ option: '一挥而就的释义', word: '一挥而就', diff: '重一挥而成' }]
+        }),
+        selected: 0, // 正确
+        index: 0,
+        total: 1
+      }
+    })
+    expect(w.find('[data-testid="q-confusable"]').exists()).toBe(false)
+    w.unmount()
+  })
+
+  it('答错但所选选项无易混提示（随机干扰项）→ 不显示', () => {
+    const w = mount(QuizQuestionCard, {
+      props: { question: question({ confusableHints: undefined }), selected: 2, index: 0, total: 1 }
+    })
+    expect(w.find('[data-testid="q-confusable"]').exists()).toBe(false)
+    w.unmount()
+  })
+})
+
+// ---------------------------------------------------------------------------
 // QuizPage 组件（三态 / 题库<10 空态 / 即时反馈）
 // ---------------------------------------------------------------------------
 
@@ -389,6 +612,17 @@ describe('QuizPage（§3.2 三态 / §3.3 空态 / F6）', () => {
     await wrapper.find('[data-testid="quiz-goto-browse"]').trigger('click')
     await flushPromises()
     expect(router.currentRoute.value.path).toBe('/idioms')
+    wrapper.unmount()
+  })
+
+  it('难度选择（v0.2.6）：默认 standard；点击困难 → store.difficulty=hard', async () => {
+    const { wrapper } = await mountPage()
+    const pinia = wrapper.vm.$pinia
+    const quizStore = useQuizStore(pinia)
+    expect(quizStore.difficulty).toBe('standard')
+    await wrapper.find('[data-testid="quiz-difficulty-hard"]').trigger('click')
+    expect(quizStore.difficulty).toBe('hard')
+    expect(wrapper.find('[data-testid="quiz-difficulty-hard"]').classes()).toContain('active')
     wrapper.unmount()
   })
 

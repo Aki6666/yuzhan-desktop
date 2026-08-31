@@ -746,7 +746,7 @@ Ctrl+K 全局唤起快速输入框（任何页面可用）
 | **v0.2.3** | **性能优化 + 易混淆修复 + 深度 UI（用户要求，2026-09-01）：① 性能——启动卡顿根因是 data:list 全量载荷 + renderer 启动时对 2600+ 词条逐个跑 pinyin-pro 全读音建索引（数秒）；修复：预生成检索索引缓存 `data/search-index.json`（§6.3 工具）随 data:list 下发、renderer `createSearchIndexFromCache` 免实时计算；列表 IPC 载荷剥离 `examples/origin`（详情页改经 `data:get` 按需拉全量），列表/自测/闪卡流畅；② 易混淆页空——旧构建未含新 IPC/数据，重新构建后生效，页面补空态提示；③ 深度 UI——依 frontend-design skill 方法论重做：详情页（渐变顶饰、频次档徽标+出现次数、分区标题主色条）、闪卡正面主色渐变、自测选项圆形字母徽标+hover 浮起、全局选中色/焦点环、品牌渐变徽标等；④ 重新构建 `out/` 产物（typecheck + electron-vite build 通过）。注意：词条变更后需重跑 `build-search-cache.mjs`；`pnpm validate:data` 2603 文件 0 错误** |
 | **v0.2.4** | **体验修复 + 功能补齐 + 全局 UI 重构（用户要求，2026-09-01）：① 成语库卡顿根治——items 改 shallowRef（免 2600+ 对象深响应式代理）、主进程 data:list 预排序（频次档→出现次数→id，默认视图零排序成本）；修复卡片元信息（频次/褒贬/出现次数）溢出卡片问题（出现次数移至拼音行）；② 易混淆页——补 word→id 详情跳转、语料预加载、数量展示；③ 自测错题进错题本——新增 `progress:list` IPC + progress store `load()`（启动/自测结束/错题本页从 main 全量同步），错题本/进度页读取持久化数据；④ 自测历史——新增 `quiz:history:list/add` IPC + userData/quiz-history.json（保留最近 200 条），自测页展示最近成绩列表；⑤ 全局 UI 重构——Naive UI 主题全面升级（按钮/输入/卡片/标签圆角与字重、胶囊标签）、body 主色径向渐变光晕、侧栏底部语料统计（语料 N 词）、结果计数胶囊化、筛选条标签强化；⑥ 重新构建 `out/`。typecheck 通过，`pnpm validate:data` 2603 文件 0 错误（vitest 仍因沙箱限制未在本会话运行）** |
 | **v0.2.5** | **仪表盘首页 + 成语库分页 + 排序语义修正 + 测试修复 + 反"默认感"UI（用户要求，2026-09-01）：① 仪表盘首页——路由 `/` 由重定向改为 DashboardPage（渐变欢迎区+最近自测正确率、语料/学习中/已掌握/错题/易混对统计卡、6 个功能入口大卡片），侧栏新增「首页」导航；② 成语库分页——每页 100 条、滚动触底/「加载更多」按钮增量加载、搜索/筛选/排序变化自动回第一页、底部「已显示 X/Y」状态条（IdiomVirtualList 新增 `limit` prop 与 `bottom` 触底事件）；③ 排序语义修正——**搜索命中保持 search() 相关度顺序（层级→频次→id）不再按档位重排**；无关键字浏览时按档位+出现次数**稳定排序**（同档同次返回 0，保持加载顺序）；④ 卡片溢出根治——卡片高度 78→90px（`box-sizing`+meta 溢出兜底），虚拟列表 cellHeight 同步 90；⑤ 测试修复——6+4 个失败全绿：detail 频次断言改档位徽标、虚拟滚动断言按新参数（10 行/61200px/14 行 item-051..064）、7 个测试文件 mock 补齐 `pairs.list`/`progress.list`/`quiz.history`、progress store `load()` 改**合并语义**（main 数据补进内存、本地未落盘写入优先）；⑥ 反"默认感" UI（参考 [kesslerio/taste-skill](https://github.com/kesslerio/taste-skill) 与 [pbakaus/impeccable](https://github.com/pbakaus/impeccable)）——暖纸色板（bgPage #FAF9F7）+ 深墨文字（#161617）、侧栏品牌区改主色渐变块（白字）、成语卡片 hover 抬升+主色左指示条；⑦ 生词本页新增「如何使用」引导卡（①记②补③学④清）；⑧ 易混淆页新增**旧版检测**（preload 无 pairs API 时明确提示需重新构建/重装，避免空白）；⑨ 搜索栏/快速记录 placeholder 精简（去长提示语）；⑩ 重新构建 `out/`。typecheck 通过、vitest 全绿（296 通过 / 1 跳过）、`pnpm validate:data` 2603 文件 0 错误** |
-| **v0.2.6** | **「墨韵」全局 UI 重构 + 交互迭代 P0（用户要求，2026-09-01）：UI 重构部分——① 设计方向：参考 anthropics/skills/frontend-design、kesslerio/taste-skill、pbakaus/impeccable（Operate 模式）方法论，自旧青绿 OpenAI 风彻底转向**墨韵 · Ink & Paper**：暖宣纸底（#F7F5F0）+ 深墨文字（#1C1B18）+ 朱砂主色（#C0432C）+ 苔绿/赭石/墨蓝支持色；衬线展示字（Noto Serif SC 系统字体，词形/页标题/印章），UI 正文无衬线，数字 tabular-nums；② Token 体系——designTokens.ts 重写（font-serif + motion token），main.ts applyTheme 注册全部 `--y-*`，global.css 重写（宣纸径向墨晕背景、共享工具类 .y-card/.y-page/.y-state/.y-seal/.y-count-pill、路由页过渡 y-page），naiveTheme.ts 对齐新色板；③ 应用壳——App.vue 重构（朱砂印章「语」+ 衬线品牌 + 导航激活态 + 顶栏页名 route.meta.title + RouterView y-page 过渡），router 补 meta.title；④ 各页视觉重建（仪表盘墨晕欢迎区/成语库衬线标题+朱砂筛选/详情页印章+分区眉题/闪卡宣纸正反面/自测/进度/错题本/生词本/易混淆/设置/快速弹层）；⑤ 硬约束——全部 data-testid/关键 class/文案/虚拟滚动几何（cellHeight 90 + gap 12）保持，仅视觉层重建。**交互迭代 P0（§16.3）**——⑥ 闪卡键盘快捷键：1=认识 / 2=不认识 / 空格=下一张 / U=撤销（输入框聚焦防误触，4 项新测试）；⑦ 快速记录剪贴板自动填充：唤起时剪贴板为纯 2–8 汉字自动填入（clipboardToQuery 纯函数 + 组件接线）；⑧ 暗色模式：designTokensDark「暖墨夜」双主题 + applyTheme(theme) 单入口 + Naive UI darkTheme + 设置页「外观」开关（theme-switch）+ IPC 契约 theme 字段 + config.json 持久化（默认 light，非法值清洗），程序化验证 8/8；⑨ 个人库落盘（修复 v0.2 已知限制 #1）：`user:list`/`user:add` IPC + `userData/idioms-user.json` 原子写/.bak 回退/损坏自愈 + user store 响应式快照（检索池=正式库+个人库）+ quickRecord 注册表持久化接线（重启可加载、按词形去重）。**测试与验证**——typecheck 0 错误、vitest 307 通过+1 跳过（+11 项新测试：闪卡快捷键 4 / clipboard 1 / IPC user+theme 3 / store 个人库+主题 3）、`pnpm validate:data` 2603 文件 0 错误、electron-vite build 通过、Playwright E2E 1 passed（修复默认路由改仪表盘后的导航失配：先等语料统计→导航成语库→词条行可见断言）、程序化视觉自检 15/15、暗色模式 8/8、13+1 页截图留证于 `.ui-shots/`（gitignore）；自检脚本 `capture.cjs`/`verify.cjs`/`verify-dark.cjs` 留存** |
+| **v0.2.6** | **「墨韵」全局 UI 重构 + 交互迭代 P0（用户要求，2026-09-01）：UI 重构部分——① 设计方向：参考 anthropics/skills/frontend-design、kesslerio/taste-skill、pbakaus/impeccable（Operate 模式）方法论，自旧青绿 OpenAI 风彻底转向**墨韵 · Ink & Paper**：暖宣纸底（#F7F5F0）+ 深墨文字（#1C1B18）+ 朱砂主色（#C0432C）+ 苔绿/赭石/墨蓝支持色；衬线展示字（Noto Serif SC 系统字体，词形/页标题/印章），UI 正文无衬线，数字 tabular-nums；② Token 体系——designTokens.ts 重写（font-serif + motion token），main.ts applyTheme 注册全部 `--y-*`，global.css 重写（宣纸径向墨晕背景、共享工具类 .y-card/.y-page/.y-state/.y-seal/.y-count-pill、路由页过渡 y-page），naiveTheme.ts 对齐新色板；③ 应用壳——App.vue 重构（朱砂印章「语」+ 衬线品牌 + 导航激活态 + 顶栏页名 route.meta.title + RouterView y-page 过渡），router 补 meta.title；④ 各页视觉重建（仪表盘墨晕欢迎区/成语库衬线标题+朱砂筛选/详情页印章+分区眉题/闪卡宣纸正反面/自测/进度/错题本/生词本/易混淆/设置/快速弹层）；⑤ 硬约束——全部 data-testid/关键 class/文案/虚拟滚动几何（cellHeight 90 + gap 12）保持，仅视觉层重建。**交互迭代 P0（§16.3）**——⑥ 闪卡键盘快捷键：1=认识 / 2=不认识 / 空格=下一张 / U=撤销（输入框聚焦防误触，4 项新测试）；⑦ 快速记录剪贴板自动填充：唤起时剪贴板为纯 2–8 汉字自动填入（clipboardToQuery 纯函数 + 组件接线）；⑧ 暗色模式：designTokensDark「暖墨夜」双主题 + applyTheme(theme) 单入口 + Naive UI darkTheme + 设置页「外观」开关（theme-switch）+ IPC 契约 theme 字段 + config.json 持久化（默认 light，非法值清洗），程序化验证 8/8；⑨ 个人库落盘（修复 v0.2 已知限制 #1）：`user:list`/`user:add` IPC + `userData/idioms-user.json` 原子写/.bak 回退/损坏自愈 + user store 响应式快照（检索池=正式库+个人库）+ quickRecord 注册表持久化接线（重启可加载、按词形去重）。**测试与验证**——typecheck 0 错误、vitest 307 通过+1 跳过（+11 项新测试：闪卡快捷键 4 / clipboard 1 / IPC user+theme 3 / store 个人库+主题 3）、`pnpm validate:data` 2603 文件 0 错误、electron-vite build 通过、Playwright E2E 1 passed（修复默认路由改仪表盘后的导航失配：先等语料统计→导航成语库→词条行可见断言）、程序化视觉自检 15/15、暗色模式 8/8、13+1 页截图留证于 `.ui-shots/`（gitignore）；自检脚本 `capture.cjs`/`verify.cjs`/`verify-dark.cjs` 留存。**交互迭代 P0-⑤（用户反馈，§16.4）**——⑩ 自测选项区分度：shared/lib/quiz.ts 重写干扰项生成（createDistractorIndex 倒排索引 + confusableScore 混淆度评分：near/pairs=100 → 共享≥2字=16 → 同尾=8 → 同首=5 → 同tag=2 → 同频=1；near/pairs 对端第二遍映射防顺序依赖）、难度档位 easy/standard(默认,至少1高相似)/hard(实测90%高相似)、QuizHint 易混辨析提示（答错展示「易与 X 混淆：diff」）、QuizPage 难度选择器 + quiz store difficulty/pairs 透传 + QuizQuestionCard q-confusable 面板；真实数据基准：索引 3ms / 组卷 27ms，standard 高相似干扰 46%、示例「大相径庭」干扰项含语义近似"形容差别极大"；新增 10 项测试（引擎 6 / 易混提示 3 / 难度 1），vitest 累计 317 通过+1 跳过** |
 
 ---
 
@@ -783,6 +783,33 @@ Ctrl+K 全局唤起快速输入框（任何页面可用）
 
 | 批次 | 项 | 验收 |
 |---|---|---|
-| **P0（v0.2.6 后半）✅ 已落地** | ① 闪卡键盘快捷键（1/2/空格/U）✅；② 快速记录剪贴板四字词自动填充 ✅；③ 暗色模式（双主题 + 设置开关 + 持久化）✅；④ 个人库落盘（user:list/add + idioms-user.json）✅ | vitest 307 通过+1 跳过、typecheck 0、build 通过、E2E 1 passed、暗色模式程序化验证 8/8 |
-| P1（v0.2.7） | 自测新题型（语境选词/释义选词 + near 辨析归因）、每日目标 + 今日到期入口、完整备份 | 同上 |
+| **P0（v0.2.6 后半）✅ 已落地** | ① 闪卡键盘快捷键（1/2/空格/U）✅；② 快速记录剪贴板四字词自动填充 ✅；③ 暗色模式（双主题 + 设置开关 + 持久化）✅；④ 个人库落盘（user:list/add + idioms-user.json）✅；⑤ 自测选项区分度（干扰项混淆度引擎 + 难度档位 + 易混辨析提示，§16.4）✅ | vitest 317 通过+1 跳过、typecheck 0、build 通过、E2E 1 passed、真实数据基准（索引 3ms / 组卷 27ms，standard 高相似干扰 46% / hard 90%） |
+| P1（v0.2.7） | 自测新题型（语境选词/释义选词 + 误用类型定向）、每日目标 + 今日到期入口、完整备份 | 同上 |
 | P2（v0.3） | 典故字段与 AI 例句批量、migrate 管线、路由 lazy、模拟真题、TTS、Anki 导出 | 按路线图 |
+
+### 16.4 第二轮迭代：自测选项区分度（用户反馈，2026-09-01）
+
+> 用户反馈：**自测题目选项之间差距太明显，拿不相关词语做辨析太简单**——希望选项像真题一样"长得像"。
+> 执行者据此开展多轮头脑风暴（出题人/教研/数据/工程角度）并落地。
+
+**多轮头脑风暴：**
+
+| 轮次 | 角度 | 洞察 | 采纳 |
+|---|---|---|---|
+| R1 | 考生 | 真题逻辑填空干扰项 = 近义词/形近词辨析；"给成语选释义"同样应给"像的释义" | ★ 核心 |
+| R1 | 出题人 | 干扰项混淆度分档：near 对端 / 易混对 / 同尾字 / 同首字 / 同主题，按"长得像"排序 | ★ 核心 |
+| R2 | 教研 | 干扰项要带"考点"：选错时讲清"你混淆了 X 与 Y 的区别"（near.diff / pairs.diff） | ★ 采纳 |
+| R2 | 数据 | near 覆盖仅 2.3%（60/2603）、pairs 86 对、tags 100% 但太粗（8 主题数百词/主题）→ 不能只靠人工标注，需**计算相似度**兜底 | ★ 采纳 |
+| R3 | 工程 | 2603² 两两算分不可行 → **倒排索引**（首字/尾字/tag/词形/near/pairs）+ 候选集打分，毫秒级 | ★ 采纳 |
+| R3 | 产品 | 难度档位（简单/标准/困难）让用户自选区分度；答错展示易混辨析提示强化记忆 | ★ 采纳 |
+| R4 | 延伸 | 误用类型定向出题、语境选词题型、形近对自动发现回写数据（v0.3 内容工程） | 排期 |
+
+**可行性分析：** 数据上 near/pairs 稀疏但 tags/字形/拼音可用 → 评分引擎兜底可行；性能上索引 O(n) + 每题 O(候选集) 实测 2603 词 3ms/27ms，满足 §4.7 预算；纯函数可单测（随机源注入）。**结论：可行，落地为 P0-⑤。**
+
+**P0-⑤ 落地（shared/lib/quiz.ts 重写干扰项生成）：**
+- `createDistractorIndex`：倒排索引（首字/尾字/tag/频次/词形/near/pairs 双向），near/pairs 对端**第二遍映射**（避免顺序依赖漏建）
+- `confusableScore`：near/pairs 对端=100（S 级）→ 共享≥2 字=16 → 同尾=8 → 同首=5 → 同 tag=2 → 同频=1
+- 难度：easy（同主题宽松）/ **standard（默认：至少 1 个高相似干扰）** / hard（优先全高相似，实测 90%）
+- `QuizHint` 易混辨析提示：干扰项来自 near/pairs 时生成「易与 X 混淆：diff」，答错展示（q-confusable）
+- QuizPage 难度选择器（quiz-difficulty-*）、quiz store difficulty/pairs 透传、QuizQuestionCard 易混提示面板
+- 验证：引擎 6 + 易混提示 3 + 难度 1 共 10 项新测试；真实数据基准 standard 高相似干扰 46%、hard 90%、示例题「大相径庭」干扰项含"形容差别极大"（语义近似）；索引 3ms/组卷 27ms

@@ -9,8 +9,13 @@
  */
 import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
-import type { Idiom, QuizAnswer, UserProgress } from '@shared/ipc/contracts'
-import { QUIZ_SIZE, buildQuiz, type QuizQuestion } from '@shared/lib/quiz'
+import type { ConfusablePair, Idiom, QuizAnswer, UserProgress } from '@shared/ipc/contracts'
+import {
+  QUIZ_SIZE,
+  buildQuiz,
+  type QuizDifficulty,
+  type QuizQuestion
+} from '@shared/lib/quiz'
 import { useProgressStore } from './progress'
 
 export type QuizPhase = 'idle' | 'active' | 'finished'
@@ -24,6 +29,11 @@ export const useQuizStore = defineStore('quiz', () => {
   const selectedIndex = ref<number | null>(null)
   const submitError = ref<string | null>(null)
   const writePending = ref(false)
+
+  /** 难度档位（v0.2.6 迭代：干扰项区分度，默认 standard） */
+  const difficulty = ref<QuizDifficulty>('standard')
+  /** 易混淆对（v0.2.6 迭代：pairs:list 加载，a/b 互为干扰项 + 辨析提示） */
+  const pairs = ref<ConfusablePair[]>([])
 
   /** 上轮词条（避免与上轮重复；含错词——错词下次仍需优先复测） */
   const lastSessionIds = ref<string[]>([])
@@ -48,14 +58,36 @@ export const useQuizStore = defineStore('quiz', () => {
     return itemsCount >= QUIZ_SIZE
   }
 
+  /** 设置难度档位（v0.2.6 迭代） */
+  function setDifficulty(d: QuizDifficulty): void {
+    difficulty.value = d
+  }
+
+  /** 加载易混淆对（pairs:list；失败静默，组卷退回无 pairs 模式） */
+  async function loadPairs(): Promise<void> {
+    try {
+      const res = await window.api.pairs.list()
+      if (res.ok) pairs.value = res.data.pairs
+    } catch {
+      /* pairs 不可用（旧版/测试）：组卷不依赖 pairs */
+    }
+  }
+
   /**
    * 组卷并进入答题态。
    * 出题优先级：progress 中 wrongTimes>0 的词 + 上轮错词 → 高频（4–5）→ 其余；
    * 避免与上轮重复（上轮答对的词；上轮错词仍需复测）。
+   * v0.2.6 迭代：干扰项按混淆度评分 + difficulty 档位生成（pairs 提供易混对）。
    * @returns 是否成功开始
    */
-  function start(items: Idiom[], progress: Record<string, UserProgress>): boolean {
+  function start(
+    items: Idiom[],
+    progress: Record<string, UserProgress>,
+    opts: { pairs?: ConfusablePair[]; difficulty?: QuizDifficulty } = {}
+  ): boolean {
     if (items.length < QUIZ_SIZE) return false
+    if (opts.difficulty) difficulty.value = opts.difficulty
+    if (opts.pairs) pairs.value = opts.pairs
     const lastWrongSet = new Set(lastSessionWrongIds.value)
     const avoidIds = lastSessionIds.value.filter((id) => !lastWrongSet.has(id))
     const wrongIds = [
@@ -64,7 +96,7 @@ export const useQuizStore = defineStore('quiz', () => {
         .filter((p) => p.wrongTimes > 0)
         .map((p) => p.id)
     ]
-    const qs = buildQuiz(items, { avoidIds, wrongIds })
+    const qs = buildQuiz(items, { avoidIds, wrongIds, pairs: pairs.value, difficulty: difficulty.value })
     if (qs.length < QUIZ_SIZE) return false
     questions.value = qs
     currentIndex.value = 0
@@ -153,8 +185,12 @@ export const useQuizStore = defineStore('quiz', () => {
     submitError,
     lastSessionIds,
     lastSessionWrongIds,
+    difficulty,
+    pairs,
     canStart,
     start,
+    setDifficulty,
+    loadPairs,
     answer,
     next,
     finish,
