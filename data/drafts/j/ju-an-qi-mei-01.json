@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "ju-an-qi-mei-01",
+  "word": "举案齐眉",
+  "pinyin": "jǔ àn qí méi",
+  "meaning": "送饭时把托盘举得跟眉毛一样高，形容夫妻互敬互爱。",
+  "origin": "《后汉书·梁鸿传》",
+  "usage": "只用于夫妻。【误用判定依据】§5.2 对象误用：只能用于夫妻关系，不能用于朋友、同事。",
+  "emotion": "褒",
+  "register": "无",
+  "near": [
+    {
+      "word": "相敬如宾",
+      "diff": "举案齐眉重\"相敬\"的举动，相敬如宾重\"如待宾客\"的态度"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "老两口相濡以沫，举案齐眉。",
+      "exam": "2025-联考-山东",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2025-联考-山东"
+  ],
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

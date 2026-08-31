@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "xiang-jing-ru-bin-01",
+  "word": "相敬如宾",
+  "pinyin": "xiāng jìng rú bīn",
+  "meaning": "形容夫妻相互尊敬，像对待宾客一样。",
+  "origin": "《左传·僖公三十三年》",
+  "usage": "只用于夫妻。【误用判定依据】§5.2 对象误用：只能用于夫妻，不能用于一般人际关系。",
+  "emotion": "褒",
+  "register": "无",
+  "near": [
+    {
+      "word": "举案齐眉",
+      "diff": "相敬如宾重态度，举案齐眉重举动，均只用于夫妻"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "他们结婚四十载，始终相敬如宾。",
+      "exam": "2024-省考-浙江",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2024-省考-浙江"
+  ],
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

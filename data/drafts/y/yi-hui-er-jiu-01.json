@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "yi-hui-er-jiu-01",
+  "word": "一挥而就",
+  "pinyin": "yī huī ér jiù",
+  "meaning": "一动笔就写成，形容才思敏捷、写字作文很快完成（用于写作）。",
+  "origin": "宋·朱弁《曲洧旧闻》",
+  "usage": "只用于写作、书画。【误用判定依据】§5.2 形近/音近混淆：与\"一蹴而就\"相混，前者专用于写作，后者用于事情成功。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "一蹴而就",
+      "diff": "一挥而就专指写作作画很快完成，一蹴而就指事情一下子办成"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "他文思泉涌，下笔一挥而就。",
+      "exam": "2024-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2024-国考-副省级"
+  ],
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "liang-you-bu-qi-01",
+  "word": "良莠不齐",
+  "pinyin": "liáng yǒu bù qí",
+  "meaning": "好人坏人混杂在一起（只用于人，不用于水平、质量）。",
+  "origin": "清·李宝嘉《官场现形记》",
+  "usage": "只用于人的好坏混杂。【误用判定依据】§5.2 对象误用：常被误用于\"水平、质量参差不齐\"，只能用于人的品行好坏混杂。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "参差不齐",
+      "diff": "良莠不齐只用于人（好坏混杂），参差不齐用于水平、长短等不整齐"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "行业门槛低，从业者良莠不齐。",
+      "exam": "2024-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2024-国考-副省级"
+  ],
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

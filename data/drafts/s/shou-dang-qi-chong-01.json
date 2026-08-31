@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "shou-dang-qi-chong-01",
+  "word": "首当其冲",
+  "pinyin": "shǒu dāng qí chōng",
+  "meaning": "比喻最先受到攻击或遭遇灾难、压力（\"冲\"=要冲）。",
+  "origin": "《汉书·五行志》",
+  "usage": "多用于最先受冲击的一方。【误用判定依据】§5.2 望文生义：常被误解为\"首先、冲在最前面\"，实指最先受到冲击或灾难。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "身先士卒",
+      "diff": "首当其冲指最先受到冲击（中性/贬），身先士卒指带头冲锋在前（褒）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "洪水来袭，下游村庄首当其冲。",
+      "exam": "2023-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 5,
+  "exams": [
+    "2023-国考-副省级"
+  ],
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-ke-li-yu-01",
+  "word": "不可理喻",
+  "pinyin": "bù kě lǐ yù",
+  "meaning": "没法跟他讲道理，形容蛮横固执（用于人，不是\"事物难以理解\"）。",
+  "origin": "明·沈德符《万历野获编》",
+  "usage": "只用于人。【误用判定依据】§5.2 搭配不当：常被误用于\"事物难以理解\"，只能用于人的蛮横不讲理。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "不可思议",
+      "diff": "不可理喻用于人（蛮横不讲理），不可思议用于事物（难以理解）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "搭配不当"
+  ],
+  "examples": [
+    {
+      "text": "他蛮横无理，简直不可理喻。",
+      "exam": "2025-联考-山东",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2025-联考-山东"
+  ],
+  "tags": [
+    "人际交往"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

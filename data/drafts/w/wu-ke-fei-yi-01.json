@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "wu-ke-fei-yi-01",
+  "word": "无可非议",
+  "pinyin": "wú kě fēi yì",
+  "meaning": "没有什么可以指责的，表示言行合乎情理（程度比\"无可厚非\"重）。",
+  "usage": "多用于对完美言行的肯定。【误用判定依据】§5.2 轻重失当：常与\"无可厚非\"混用，前者程度更重，指毫无缺点。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "无可厚非",
+      "diff": "无可非议是毫无缺点无可指责，无可厚非是略有不足但可谅解"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "她严谨尽责，工作表现无可非议。",
+      "exam": "2025-国考-行政执法",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2025-国考-行政执法"
+  ],
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

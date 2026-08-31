@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "zhuo-fa-nan-shu-01",
+  "word": "擢发难数",
+  "pinyin": "zhuó fà nán shǔ",
+  "meaning": "拔下头发都数不清，形容罪行多得数不清（贬义）。",
+  "origin": "《史记·范雎蔡泽列传》",
+  "usage": "只用于罪恶、罪行。【误用判定依据】§5.2 对象误用：只能用于罪行，不能用于一般过错或数量多的事物。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "罄竹难书",
+      "diff": "擢发难数侧重\"数不清\"，罄竹难书侧重\"写不完\"，均用于罪行"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "其罪行擢发难数，令人发指。",
+      "kind": "made"
+    }
+  ],
+  "frequency": 2,
+  "exams": [],
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

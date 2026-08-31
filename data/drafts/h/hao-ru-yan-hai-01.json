@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "hao-ru-yan-hai-01",
+  "word": "浩如烟海",
+  "pinyin": "hào rú yān hǎi",
+  "meaning": "形容文献、资料等非常丰富。",
+  "origin": "宋·司马光《进资治通鉴表》",
+  "usage": "多用于文献、资料。【误用判定依据】§5.2 对象误用：只能用于文献、资料、信息等，不能用于人才或物品。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "汗牛充栋",
+      "diff": "浩如烟海侧重资料文献数量浩瀚，汗牛充栋特指书籍多"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "相关研究文献浩如烟海。",
+      "exam": "2024-省考-浙江",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2024-省考-浙江"
+  ],
+  "tags": [
+    "学习事业"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

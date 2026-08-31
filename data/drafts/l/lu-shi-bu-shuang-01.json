@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "lu-shi-bu-shuang-01",
+  "word": "屡试不爽",
+  "pinyin": "lǚ shì bù shuǎng",
+  "meaning": "屡次试验都没有差错（\"爽\"=差错），不是\"不愉快\"。",
+  "usage": "多用于方法、经验反复灵验。【误用判定依据】§5.2 望文生义：\"爽\"被误释为\"爽快\"，把\"屡试不爽\"误解为\"每次都不痛快\"。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "屡见不鲜",
+      "diff": "屡试不爽是屡次试验无差错，屡见不鲜是多次见到已不新奇"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "望文生义"
+  ],
+  "examples": [
+    {
+      "text": "这套复习方法屡试不爽。",
+      "exam": "2024-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2024-国考-副省级"
+  ],
+  "tags": [
+    "处事方法"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

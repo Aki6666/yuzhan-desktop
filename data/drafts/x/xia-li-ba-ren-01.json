@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "xia-li-ba-ren-01",
+  "word": "下里巴人",
+  "pinyin": "xià lǐ bā rén",
+  "meaning": "战国时楚国的民间歌曲，泛指通俗的文艺作品（不是指人）。",
+  "origin": "战国·宋玉《对楚王问》",
+  "usage": "多用于文艺作品雅俗对比。【误用判定依据】§5.2 对象误用：常被按字面误解为\"地位低下的百姓\"，实指通俗文艺作品。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "阳春白雪",
+      "diff": "下里巴人指通俗文艺，阳春白雪指高雅文艺，雅俗相对"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "该节目雅俗共赏，既非下里巴人，也非曲高和寡。",
+      "exam": "2023-国考-地市级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2023-国考-地市级"
+  ],
+  "tags": [
+    "言语表达"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

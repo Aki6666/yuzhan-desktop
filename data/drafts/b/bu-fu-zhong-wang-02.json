@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "bu-fu-zhong-wang-02",
+  "word": "不孚众望",
+  "pinyin": "bù fú zhòng wàng",
+  "meaning": "不能使大家信服（\"孚\"=信服），与\"不负众望\"相反。",
+  "usage": "多用于评价表现令人失望。【误用判定依据】§5.2 形近/音近混淆：与\"不负众望\"形近，误用会把\"不能使人信服\"当成\"不辜负期望\"。",
+  "emotion": "贬",
+  "register": "无",
+  "near": [
+    {
+      "word": "不负众望",
+      "diff": "不孚众望是不能使人信服（贬），不负众望是不辜负期望（褒）"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "形近/音近混淆"
+  ],
+  "examples": [
+    {
+      "text": "该方案仓促出台，结果不孚众望。",
+      "exam": "2023-国考-副省级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 5,
+  "exams": [
+    "2023-国考-副省级"
+  ],
+  "tags": [
+    "社会现象"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

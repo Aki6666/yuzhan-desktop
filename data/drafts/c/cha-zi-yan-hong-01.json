@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "cha-zi-yan-hong-01",
+  "word": "姹紫嫣红",
+  "pinyin": "chà zǐ yān hóng",
+  "meaning": "形容各种花朵娇艳美好（只用于花）。",
+  "origin": "明·汤显祖《牡丹亭》",
+  "usage": "只用于花朵。【误用判定依据】§5.2 对象误用：只能形容花的色彩娇艳，不能用于灯光、衣着等。",
+  "emotion": "褒",
+  "register": "无",
+  "near": [
+    {
+      "word": "万紫千红",
+      "diff": "姹紫嫣红只形容花的色彩娇艳，万紫千红也可比喻事物丰富多彩"
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "对象误用"
+  ],
+  "examples": [
+    {
+      "text": "春日花园姹紫嫣红。",
+      "exam": "2024-省考-浙江",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 3,
+  "exams": [
+    "2024-省考-浙江"
+  ],
+  "tags": [
+    "自然景物"
+  ],
+  "quality": "draft",
+  "library": "user"
+}

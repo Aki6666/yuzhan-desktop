@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "wei-bu-zu-dao-01",
+  "word": "微不足道",
+  "pinyin": "wēi bù zú dào",
+  "meaning": "渺小得不值得一提。",
+  "usage": "多用于价值、力量渺小。【误用判定依据】§5.2 轻重失当：与\"微乎其微\"相混，前者重在\"不值得一提\"，后者重在\"非常小\"，程度侧重点不同。",
+  "emotion": "中性",
+  "register": "无",
+  "near": [
+    {
+      "word": "微乎其微",
+      "diff": "微不足道重\"不值得一提\"，微乎其微重\"非常小或少\""
+    }
+  ],
+  "opposite": [],
+  "errorTypes": [
+    "轻重失当"
+  ],
+  "examples": [
+    {
+      "text": "个人的得失与之相比微不足道。",
+      "exam": "2023-国考-地市级",
+      "kind": "exam"
+    }
+  ],
+  "frequency": 4,
+  "exams": [
+    "2023-国考-地市级"
+  ],
+  "tags": [
+    "状态程度"
+  ],
+  "quality": "draft",
+  "library": "user"
+}
