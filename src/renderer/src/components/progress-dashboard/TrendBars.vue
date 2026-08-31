@@ -85,16 +85,16 @@ function dayLabel(date: string): string {
   display: block;
   width: 10px;
   border-radius: 3px 3px 0 0;
-  transition: height 0.3s ease;
+  transition: height var(--y-motion-base) var(--y-motion-ease);
 }
 
 .trend-bar-review {
-  background: var(--y-primary);
-  opacity: 0.85;
+  background: linear-gradient(180deg, var(--y-primary) 0%, color-mix(in srgb, var(--y-primary) 70%, var(--y-bg-card)) 100%);
+  opacity: 0.9;
 }
 
 .trend-bar-mastered {
-  background: var(--y-success);
+  background: linear-gradient(180deg, var(--y-success) 0%, color-mix(in srgb, var(--y-success) 70%, var(--y-bg-card)) 100%);
   opacity: 0.9;
 }
 

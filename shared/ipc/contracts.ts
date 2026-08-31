@@ -49,6 +49,8 @@ export interface Idiom {
   examples?: ExampleItem[]
   /** 真题频次分档 1–5（§5.4） */
   frequency: number
+  /** 本批真题选项中的出现次数（§6.3 批量导入统计口径；供列表同档排序，可空=教研备用词/未统计） */
+  occurrences?: number
   exams?: string[]
   tags?: string[]
   quality: Quality
@@ -98,9 +100,12 @@ export interface PendingItem {
 /** AI 模式状态机四态（§10.2） */
 export type AiMode = 'disabled' | 'configured' | 'online' | 'error'
 
-/** OpenAI 兼容默认端点（§10.2 Provider 抽象；设置页可配 baseURL/模型） */
-export const DEFAULT_AI_BASE_URL = 'https://api.openai.com/v1'
-export const DEFAULT_AI_MODEL = 'gpt-4o-mini'
+/** 应用主题（v0.2.6 迭代，§16.3 P0-③ 暗色模式） */
+export type ThemeName = 'light' | 'dark'
+
+/** OpenAI 兼容默认端点（§10.2 Provider 抽象；设置页可配 baseURL/模型）。默认 DeepSeek（用户要求） */
+export const DEFAULT_AI_BASE_URL = 'https://api.deepseek.com'
+export const DEFAULT_AI_MODEL = 'deepseek-v4-flash'
 
 /** 应用设置（§5.6，userData/config.json） */
 export interface AppSettings {
@@ -112,6 +117,10 @@ export interface AppSettings {
   aiBaseUrl?: string
   /** 模型名（v0.2 AI 层，设置页可配） */
   aiModel?: string
+  /** 快速模式（默认开启）：关闭模型思考阶段（thinking:disabled）以换取查询速度（用户要求 #4） */
+  aiFastMode?: boolean
+  /** 应用主题（v0.2.6 迭代，§16.3 P0-③）：light=浅色（默认）/ dark=暗色 */
+  theme?: ThemeName
   /** 派生字段（main settings:get 填充，不入 config.json）：apiKey 掩码（前 4 位 + ****） */
   apiKeyMasked?: string
   /** 派生字段：是否已配置 apiKey（safeStorage 加密存储） */
@@ -123,6 +132,29 @@ export interface QuizAnswer {
   correct: boolean
 }
 
+/** 易混淆成语对（§6.4，data/pairs.json；a/b 均为库内词条） */
+export interface ConfusablePair {
+  a: string
+  b: string
+  /** 一句话说清核心区别 */
+  diff: string
+}
+
+/** pairs:list → 全部易混淆对 */
+export interface PairsListResponse {
+  pairs: ConfusablePair[]
+}
+
+/** user:list → 个人库全量（v0.2.6 迭代，§16.3 P0-④ 个人库落盘；userData/idioms-user.json） */
+export interface UserListResponse {
+  items: Idiom[]
+}
+
+/** user:add 入参（v0.2.6 迭代：quality=user 词条写盘 + 会话内去重） */
+export interface UserAddRequest {
+  idiom: Idiom
+}
+
 // ---------------------------------------------------------------------------
 // channel 常量（§10.4 权威清单）
 // ---------------------------------------------------------------------------
@@ -131,14 +163,20 @@ export const IPC_CHANNELS = {
   dataList: 'data:list',
   dataGet: 'data:get',
   progressSave: 'progress:save',
+  progressList: 'progress:list',
   pendingList: 'pending:list',
   pendingAdd: 'pending:add',
   pendingRemove: 'pending:remove',
   quizRecord: 'quiz:record',
+  quizHistoryList: 'quiz:history:list',
+  quizHistoryAdd: 'quiz:history:add',
+  userList: 'user:list',
+  userAdd: 'user:add',
   settingsGet: 'settings:get',
   settingsSet: 'settings:set',
   appLog: 'app:log',
-  aiSearchWord: 'ai:searchWord'
+  aiSearchWord: 'ai:searchWord',
+  pairsList: 'pairs:list'
 } as const
 
 export type IpcChannelName = (typeof IPC_CHANNELS)[keyof typeof IPC_CHANNELS]
@@ -182,6 +220,8 @@ export interface DataListResponse {
   items: Idiom[]
   /** 语料快照版本（§5.4 corpus-version.json；缺失时兜底 '0.0.0'） */
   version: string
+  /** 预生成检索索引缓存（性能优化 #1；缺失时 renderer 回退实时计算） */
+  search?: import('../lib/search').SearchCacheWord[]
 }
 
 /** progress:save 入参（§10.4，与 §5.6 模型一致；均为可选 patch） */
@@ -192,6 +232,25 @@ export interface ProgressSaveRequest {
   wrongTimes?: number
   /** SM-2 调度字段 patch（v0.2 扩展；与现有字段合并，§5.6） */
   review?: Partial<ReviewState>
+}
+
+/** progress:list → 全部用户进度（userData/progress.json；错题本/进度页读取，用户要求 #5） */
+export interface ProgressListResponse {
+  items: Record<string, UserProgress>
+}
+
+/** 自测历史条目（用户要求 #4；userData/quiz-history.json，保留最近 200 条） */
+export interface QuizHistoryItem {
+  /** 会话结束时间（ISO 8601） */
+  time: string
+  correct: number
+  wrong: number
+  total: number
+}
+
+/** quiz:history:list → 全部自测历史（按时间倒序） */
+export interface QuizHistoryListResponse {
+  items: QuizHistoryItem[]
 }
 
 /** quiz:record 入参（批量，一次 10 题，§10.4） */
@@ -207,6 +266,10 @@ export interface SettingsSetRequest {
   apiKey?: string
   aiBaseUrl?: string
   aiModel?: string
+  /** 快速模式开关（true=关闭思考更快；false=保留思考更准） */
+  aiFastMode?: boolean
+  /** 应用主题（v0.2.6 迭代，§16.3 P0-③） */
+  theme?: ThemeName
 }
 
 // ---------------------------------------------------------------------------
@@ -260,6 +323,8 @@ export interface YuzhanApi {
   }
   progress: {
     save(payload: ProgressSaveRequest): Promise<IpcResult<null>>
+    /** 全量进度读取（错题本/进度页，§5.6；用户要求 #5） */
+    list(): Promise<IpcResult<ProgressListResponse>>
   }
   pending: {
     list(): Promise<IpcResult<PendingItem[]>>
@@ -268,6 +333,21 @@ export interface YuzhanApi {
   }
   quiz: {
     record(payload: QuizRecordRequest): Promise<IpcResult<null>>
+    /** 自测历史（用户要求 #4）：读取 / 追加一条 */
+    history: {
+      list(): Promise<IpcResult<QuizHistoryListResponse>>
+      add(item: QuizHistoryItem): Promise<IpcResult<null>>
+    }
+  }
+  pairs: {
+    /** 易混淆成语对全量（启动一次性加载，§6.4） */
+    list(): Promise<IpcResult<PairsListResponse>>
+  }
+  user: {
+    /** 个人库全量（v0.2.6 迭代 P0-④：重启后个人词条可加载，userData/idioms-user.json） */
+    list(): Promise<IpcResult<UserListResponse>>
+    /** 追加个人词条（按词形去重；原子写 + .bak 复用持久化铁律） */
+    add(request: UserAddRequest): Promise<IpcResult<null>>
   }
   settings: {
     get(): Promise<IpcResult<AppSettings>>

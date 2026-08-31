@@ -21,7 +21,8 @@ const LEGACY_DEFAULT_SHORTCUT = 'CommandOrControl+K'
 const DEFAULT_SETTINGS: AppSettings = {
   schemaVersion: 1,
   aiMode: 'disabled',
-  quickInputShortcut: DEFAULT_SHORTCUT
+  quickInputShortcut: DEFAULT_SHORTCUT,
+  theme: 'light'
 }
 
 export const useSettingsStore = defineStore('settings', () => {
@@ -80,5 +81,15 @@ export const useSettingsStore = defineStore('settings', () => {
     return update(patch)
   }
 
-  return { settings, loaded, loading, error, load, update, setAiMode, setApiKey, setAiConfig }
+  /** 快速模式开关（关闭模型思考以提升查询速度，用户要求 #4） */
+  function setAiFastMode(fast: boolean): Promise<AppSettings | null> {
+    return update({ aiFastMode: fast })
+  }
+
+  /** 应用主题切换（v0.2.6 迭代，§16.3 P0-③ 暗色模式；持久化到 config.json） */
+  function setTheme(theme: 'light' | 'dark'): Promise<AppSettings | null> {
+    return update({ theme })
+  }
+
+  return { settings, loaded, loading, error, load, update, setAiMode, setApiKey, setAiConfig, setAiFastMode, setTheme }
 })

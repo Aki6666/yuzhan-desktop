@@ -72,7 +72,7 @@ function createAppAiService(
       const key = settingsService.getApiKey()
       if (!key) return null
       const s = storage.getSettings()
-      return { apiKey: key, baseURL: s.aiBaseUrl ?? '', model: s.aiModel ?? '' }
+      return { apiKey: key, baseURL: s.aiBaseUrl ?? '', model: s.aiModel ?? '', fastMode: s.aiFastMode !== false }
     },
     onAiModeChange: (mode) => {
       // 仅在模式变化时写盘（幂等 no-op 跳过）：避免 fire-and-forget 写入与测试 teardown 竞态
@@ -105,9 +105,17 @@ export function registerIpcHandlers(): void {
   }
 
   // data:list — 启动一次性全量（§10.4 策略：过滤/搜索在 renderer 内存完成）
-  ipcMain.handle(IPC_CHANNELS.dataList, (): IpcResult<ReturnType<Storage['listOfficial']>> => {
+  // 性能优化（用户要求 #1）：列表只返回列表/自测/闪卡所需字段，剥离体积最大的
+  // examples/origin（详情页经 data:get 按需取全量）；附带预生成检索索引缓存。
+  ipcMain.handle(IPC_CHANNELS.dataList, (): IpcResult<unknown> => {
     try {
-      return ipcOk(storage.listOfficial())
+      const full = storage.listOfficial()
+      const items = full.items.map((i) => ({
+        ...i,
+        examples: undefined,
+        origin: undefined
+      }))
+      return ipcOk({ items, version: full.version, search: full.search })
     } catch (e) {
       logger.error(`[ipc] data:list 失败: ${String(e)}`)
       return fail('IO_ERROR', '正式库加载失败')
@@ -121,6 +129,41 @@ export function registerIpcHandlers(): void {
     return ipcOk(item ?? null)
   })
 
+  // pairs:list — 易混淆成语对全量（§6.4，启动一次性）
+  ipcMain.handle(IPC_CHANNELS.pairsList, (): IpcResult<ReturnType<Storage['listPairs']>> => {
+    try {
+      return ipcOk(storage.listPairs())
+    } catch (e) {
+      logger.error(`[ipc] pairs:list 失败: ${String(e)}`)
+      return fail('IO_ERROR', '易混淆对加载失败')
+    }
+  })
+
+  // user:list / user:add — 个人库（v0.2.6 迭代 P0-④：quality=user 词条持久化，重启可加载）
+  ipcMain.handle(IPC_CHANNELS.userList, (): IpcResult<unknown> => {
+    try {
+      return ipcOk({ items: storage.listUserIdioms() })
+    } catch (e) {
+      logger.error(`[ipc] user:list 失败: ${String(e)}`)
+      return fail('IO_ERROR', '个人库读取失败')
+    }
+  })
+
+  ipcMain.handle(IPC_CHANNELS.userAdd, async (_e, payload: unknown): Promise<IpcResult<null>> => {
+    if (!isRecord(payload) || !isRecord(payload.idiom)) return fail('INVALID_ARGS', 'user:add 入参必须为 { idiom: {...} }')
+    const idiom = payload.idiom as Record<string, unknown>
+    if (!isString(idiom.id) || idiom.id.length === 0 || !isString(idiom.word) || idiom.word.trim().length === 0) {
+      return fail('INVALID_ARGS', 'idiom 必须含非空 id 与 word')
+    }
+    try {
+      await storage.addUserIdiom(idiom as never)
+      return ipcOk(null)
+    } catch (e) {
+      logger.error(`[ipc] user:add 失败: ${String(e)}`)
+      return fail('IO_ERROR', '个人库写入失败')
+    }
+  })
+
   // progress:save — 进度写入（renderer 节流 ≤1 次/2s，本侧串行队列兜底）
   ipcMain.handle(IPC_CHANNELS.progressSave, async (_e, payload: unknown): Promise<IpcResult<null>> => {
     const err = validateProgressSave(payload)
@@ -131,6 +174,16 @@ export function registerIpcHandlers(): void {
     } catch (e) {
       logger.error(`[ipc] progress:save 失败: ${String(e)}`)
       return fail('IO_ERROR', '进度写入失败')
+    }
+  })
+
+  // progress:list — 全量进度读取（错题本/进度页；用户要求 #5：自测错题要进错题本）
+  ipcMain.handle(IPC_CHANNELS.progressList, (): IpcResult<unknown> => {
+    try {
+      return ipcOk({ items: storage.getProgress() })
+    } catch (e) {
+      logger.error(`[ipc] progress:list 失败: ${String(e)}`)
+      return fail('IO_ERROR', '进度读取失败')
     }
   })
 
@@ -179,6 +232,37 @@ export function registerIpcHandlers(): void {
     }
   })
 
+  // quiz:history — 自测历史（用户要求 #4）
+  ipcMain.handle(IPC_CHANNELS.quizHistoryList, (): IpcResult<unknown> => {
+    try {
+      const items = [...storage.listQuizHistory()].reverse() // 最新在前
+      return ipcOk({ items })
+    } catch (e) {
+      logger.error(`[ipc] quiz:history:list 失败: ${String(e)}`)
+      return fail('IO_ERROR', '自测历史读取失败')
+    }
+  })
+
+  ipcMain.handle(IPC_CHANNELS.quizHistoryAdd, async (_e, item: unknown): Promise<IpcResult<null>> => {
+    if (!isRecord(item)) return fail('INVALID_ARGS', 'quiz:history:add 入参必须为对象')
+    const { time, correct, wrong, total } = item as Record<string, unknown>
+    if (
+      typeof time !== 'string' ||
+      typeof correct !== 'number' ||
+      typeof wrong !== 'number' ||
+      typeof total !== 'number'
+    ) {
+      return fail('INVALID_ARGS', 'history 需含 time(string)/correct/wrong/total(number)')
+    }
+    try {
+      await storage.addQuizHistory({ time, correct, wrong, total })
+      return ipcOk(null)
+    } catch (e) {
+      logger.error(`[ipc] quiz:history:add 失败: ${String(e)}`)
+      return fail('IO_ERROR', '自测历史写入失败')
+    }
+  })
+
   // settings:get / set — 设置读写（apiKey 经 safeStorage 加密，不入 config.json；§4.4）
   ipcMain.handle(IPC_CHANNELS.settingsGet, (): IpcResult<AppSettings> => {
     try {
@@ -208,7 +292,9 @@ export function registerIpcHandlers(): void {
         ...(p.aiMode !== undefined ? { aiMode: p.aiMode } : {}),
         ...(p.quickInputShortcut !== undefined ? { quickInputShortcut: p.quickInputShortcut } : {}),
         ...(p.aiBaseUrl !== undefined ? { aiBaseUrl: p.aiBaseUrl } : {}),
-        ...(p.aiModel !== undefined ? { aiModel: p.aiModel } : {})
+        ...(p.aiModel !== undefined ? { aiModel: p.aiModel } : {}),
+        ...(p.aiFastMode !== undefined ? { aiFastMode: p.aiFastMode } : {}),
+        ...(p.theme !== undefined ? { theme: p.theme } : {})
       })
       return ipcOk({ ...updated, apiKeyMasked: settingsService.getApiKeyMasked(), hasApiKey: settingsService.hasApiKey() })
     } catch (e) {
@@ -308,6 +394,12 @@ function validateSettingsSet(patch: unknown): IpcResult<never> | null {
   }
   if (patch.aiModel !== undefined && (!isString(patch.aiModel) || patch.aiModel.length === 0)) {
     return fail('INVALID_ARGS', 'aiModel 必须为非空字符串')
+  }
+  if (patch.aiFastMode !== undefined && typeof patch.aiFastMode !== 'boolean') {
+    return fail('INVALID_ARGS', 'aiFastMode 必须为布尔值')
+  }
+  if (patch.theme !== undefined && patch.theme !== 'light' && patch.theme !== 'dark') {
+    return fail('INVALID_ARGS', 'theme 必须为 light/dark')
   }
   return null
 }

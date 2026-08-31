@@ -71,6 +71,23 @@ export function selectQuizTargets(items: Idiom[], opts: QuizBuildOptions = {}): 
 }
 
 // ---------------------------------------------------------------------------
+// 选项净化（用户要求 #5：屏蔽释义中的括号提示，避免选项暴露答案）
+// ---------------------------------------------------------------------------
+
+/**
+ * 题库释义去除括号提示后再作选项展示：
+ * - 中文全角（）与英文半角() 内的注音/字义提示整体删除，如
+ *   「没有辜负大家的期望（"负"=辜负）。」→「没有辜负大家的期望。」
+ * - 仅用于选项文本；复习面板的完整释义（QuizQuestion.meaning）保留原样。
+ */
+export function sanitizeQuizOption(text: string): string {
+  return text
+    .replace(/[（(][^（）()]*[）)]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+// ---------------------------------------------------------------------------
 // 单题构建：干扰项（同主题 → 近义辨析组 → 随机词）+ 正确答案位置随机
 // ---------------------------------------------------------------------------
 
@@ -103,13 +120,13 @@ export function buildOptionsFor(target: Idiom, all: Idiom[], random: () => numbe
   }
 
   const distractors: string[] = []
-  const used = new Set<string>([target.meaning.trim()])
+  const used = new Set<string>([sanitizeQuizOption(target.meaning)])
   const draw = (pool: Idiom[]): string | null => {
-    const avail = pool.filter((p) => !used.has(p.meaning.trim()))
+    const avail = pool.filter((p) => !used.has(sanitizeQuizOption(p.meaning)))
     if (avail.length === 0) return null
     const pick = avail[Math.floor(random() * avail.length)]
-    used.add(pick.meaning.trim())
-    return pick.meaning
+    used.add(sanitizeQuizOption(pick.meaning))
+    return sanitizeQuizOption(pick.meaning)
   }
   for (const pool of [sameTag, nearGroup, others]) {
     while (distractors.length < OPTION_COUNT - 1) {
@@ -121,8 +138,9 @@ export function buildOptionsFor(target: Idiom, all: Idiom[], random: () => numbe
   }
   if (distractors.length < OPTION_COUNT - 1) return null
 
-  const options = shuffle([target.meaning, ...distractors], random)
-  return { options, correctIndex: options.indexOf(target.meaning) }
+  const correct = sanitizeQuizOption(target.meaning)
+  const options = shuffle([correct, ...distractors], random)
+  return { options, correctIndex: options.indexOf(correct) }
 }
 
 // ---------------------------------------------------------------------------

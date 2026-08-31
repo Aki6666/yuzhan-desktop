@@ -20,8 +20,9 @@ import { useIdiomsStore } from '@renderer/stores/idioms'
 import { usePendingStore } from '@renderer/stores/pending'
 import { useProgressStore } from '@renderer/stores/progress'
 import { useSettingsStore } from '@renderer/stores/settings'
+import { useUserStore } from '@renderer/stores/user'
 import { createBatchFill, type BatchFillController, type BatchItem } from '@renderer/lib/batchFill'
-import { addPersonalItem, aiEnabled, aiModeLabel, buildPersonalIdiom, findPersonal, formatAddedAt } from '@renderer/lib/quickRecord'
+import { aiEnabled, aiModeLabel, buildPersonalIdiom, findPersonal, formatAddedAt } from '@renderer/lib/quickRecord'
 import type { AiDraftResult } from '@shared/ipc/contracts'
 
 const router = useRouter()
@@ -29,6 +30,7 @@ const pendingStore = usePendingStore()
 const idiomsStore = useIdiomsStore()
 const progressStore = useProgressStore()
 const settingsStore = useSettingsStore()
+const userStore = useUserStore()
 
 const hint = ref<string | null>(null)
 
@@ -36,6 +38,7 @@ onMounted(() => {
   void pendingStore.load()
   void idiomsStore.load()
   void settingsStore.load()
+  void userStore.load()
 })
 
 const count = computed(() => pendingStore.items.length)
@@ -98,15 +101,15 @@ const batchRunning = computed(() => {
 })
 
 /**
- * 确认后的个人库写入（与 V2-F 快速输入确认流程完全一致，§10.1③ / quickRecord 个人库最小实现）：
- * buildPersonalIdiom（quality=user / library=user，id=词形slug+序号）→ addPersonalItem（会话内注册表，按词形去重）
+ * 确认后的个人库写入（与 V2-F 快速输入确认流程完全一致，§10.1③ / quickRecord 个人库实现）：
+ * buildPersonalIdiom（quality=user / library=user，id=词形slug+序号）→ user store add
+ * （会话内注册表 + user:add 落盘 userData/idioms-user.json，v0.2.6 P0-④，重启可加载）
  * → progressStore.recordAttempt（新建进度记录 → 闪卡队列）→ 强制 flush（§10.3#6 持久化）。
- * 注：userData 个人库文件落盘 + 对应 IPC channel 为 v0.2 记录项（附录 B，需 main 侧实现，超出本任务 inScope）。
  */
 async function saveUserDraft(word: string, draft: AiDraftResult): Promise<boolean> {
   if (findPersonal(word)) return true // 已收录 → 去重视为成功
   const idiom = buildPersonalIdiom(draft)
-  if (!addPersonalItem(idiom)) return false
+  if (!userStore.add(idiom)) return false
   progressStore.recordAttempt(idiom.id) // 加入闪卡队列（与 V2-F 一致）
   await progressStore.flush()
   return true
@@ -184,7 +187,10 @@ function statusLabel(item: BatchItem): string {
   <section class="view pending-page">
     <header class="page-header">
       <div class="page-heading">
-        <h1 class="page-title">生词本</h1>
+        <h1 class="page-title">
+          <span class="page-eyebrow" aria-hidden="true" />
+          生词本
+        </h1>
         <p class="page-sub">刷题遇到的未收录生词 · 可立即复习、删除或批量 AI 补全</p>
       </div>
       <div class="page-header-actions">
@@ -204,6 +210,14 @@ function statusLabel(item: BatchItem): string {
 
     <div v-if="hint" class="hint-bar" data-testid="pending-hint">
       <NTag size="small" type="warning" :bordered="false">{{ hint }}</NTag>
+    </div>
+
+    <!-- 使用说明（用户要求：生词本应该如何使用） -->
+    <div class="guide-card" data-testid="pending-guide">
+      <div class="guide-step"><b>① 记</b>刷题遇到没收录的词，按「+」快速记录自动存入生词本；或手动添加。</div>
+      <div class="guide-step"><b>② 补</b>点「批量 AI 补全」，AI 生成释义草稿，逐条「确认入库 / 跳过」。</div>
+      <div class="guide-step"><b>③ 学</b>「立即复习」记入闪卡队列；确认过的词会进入个人库并加入复习。</div>
+      <div class="guide-step"><b>④ 清</b>已消化或不需要的词可直接删除。</div>
     </div>
 
     <!-- AI 未就绪提示（§3.3：无 key/断网禁用并提示配置） -->
@@ -347,20 +361,33 @@ function statusLabel(item: BatchItem): string {
 .page-heading {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .page-title {
   margin: 0;
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title-lg);
   font-weight: 700;
+  letter-spacing: 2px;
   color: var(--y-text-primary);
+}
+
+.page-eyebrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  transform: translateY(-3px);
 }
 
 .page-sub {
   margin: 0;
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  padding-left: 18px;
 }
 
 .page-header-actions {
@@ -370,9 +397,42 @@ function statusLabel(item: BatchItem): string {
   padding-bottom: 2px;
 }
 
+/* 使用说明：朱砂序号步骤卡 */
+.guide-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
+}
+
+.guide-step {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--y-text-secondary);
+}
+
+.guide-step b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--y-primary-soft);
+  color: var(--y-primary);
+  font-size: 11px;
+  transform: translateY(3px);
+}
+
 .result-count {
   font-size: var(--y-font-aux);
   color: var(--y-text-secondary);
+  font-variant-numeric: tabular-nums;
 }
 
 .hint-bar {
@@ -439,6 +499,7 @@ function statusLabel(item: BatchItem): string {
 }
 
 .batch-item-word {
+  font-family: var(--y-font-serif);
   font-size: 15px;
   font-weight: 600;
   color: var(--y-text-primary);
@@ -497,6 +558,7 @@ function statusLabel(item: BatchItem): string {
   background: var(--y-bg-card);
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
   text-align: center;
 }
 
@@ -543,7 +605,7 @@ function statusLabel(item: BatchItem): string {
   gap: 12px;
   padding: 12px 16px;
   border-bottom: 1px solid var(--y-border-light);
-  transition: background-color 0.12s ease;
+  transition: background-color var(--y-motion-fast) var(--y-motion-ease);
 }
 
 .pending-row:last-child {
@@ -562,6 +624,7 @@ function statusLabel(item: BatchItem): string {
 }
 
 .pending-word {
+  font-family: var(--y-font-serif);
   font-size: 16px;
   font-weight: 600;
   color: var(--y-text-primary);
@@ -570,6 +633,7 @@ function statusLabel(item: BatchItem): string {
 .pending-date {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  font-variant-numeric: tabular-nums;
 }
 
 .pending-actions {

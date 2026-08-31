@@ -1,32 +1,58 @@
 <script setup lang="ts">
 /**
- * 应用壳层（U1 UI 重构，PLAN.md 附录 B v0.1.1）
+ * 应用壳层（v0.2.6「墨韵」全局 UI 重构，PLAN.md 附录 B）
  *
- * - OpenAI 式简洁：大留白、细分割线、图标+文字侧边导航（激活态/hover 微交互）、精简顶栏
- * - 视觉全部消费 designTokens 生成的 CSS 变量（var(--y-*)），禁止散落硬编码颜色
- * - 硬约束保持：QuickInputModal 挂载与快捷键接线（T6/FIX-2）、全部路由与 *View.vue 转发不动、
- *   功能与信息架构不变
+ * - 墨韵书斋：宣纸暖底侧栏 + 朱砂印章品牌 + 衬线品牌字 + 克制的导航激活态
+ * - 顶栏展示当前路由页名（route.meta.title，router/index.ts 同步维护），
+ *   右侧「快速记录」按钮（当前快捷键中文描述）+ 设置入口
+ * - 内容区 RouterView 挂载页面过渡（fade + 上移，GPU 友好）
+ * - 硬约束保持：QuickInputModal 挂载与快捷键接线、全部路由与页面组件转发不动、
+ *   功能与信息架构不变、data-testid 不变
  */
-import { computed, ref } from 'vue'
-import { dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
+import { computed, ref, watch } from 'vue'
+import { darkTheme, dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
+import { useRoute } from 'vue-router'
 import QuickInputModal from '@renderer/components/quick-input/QuickInputModal.vue'
 import { useSettingsStore } from '@renderer/stores/settings'
+import { useProgressStore } from '@renderer/stores/progress'
+import { useIdiomsStore } from '@renderer/stores/idioms'
 import { describeShortcut } from '@renderer/lib/quickRecord'
+import { applyTheme } from '@renderer/styles/designTokens'
 import { themeOverrides } from '@renderer/theme/naiveTheme'
 
 const quickInputRef = ref<{ open: () => void } | null>(null)
 const settingsStore = useSettingsStore()
+const route = useRoute()
 
-// FIX-2：顶栏展示当前唤起快捷键的中文描述（默认「+」，设置页可自定义），去英文 accelerator 串
+// 暗色模式（v0.2.6 迭代，§16.3 P0-③）：设置持久化 theme，切换即重应用 token 与 Naive 主题
+const isDark = computed(() => settingsStore.settings.theme === 'dark')
+watch(
+  () => settingsStore.settings.theme,
+  (t) => {
+    if (t === 'light' || t === 'dark') applyTheme(t)
+  }
+)
+
+// 顶栏展示当前唤起快捷键的中文描述（默认「+」，设置页可自定义），去英文 accelerator 串
 const quickShortcutLabel = computed(() => describeShortcut(settingsStore.settings.quickInputShortcut))
 
-void settingsStore.load()
+// 当前页面名（路由 meta.title；无则回退空，顶栏隐藏）
+const pageTitle = computed(() => String(route.meta.title ?? ''))
 
-/** 侧边导航项（§3.1：成语库 · 闪卡 · 自测 · 进度 · 生词本；V2-D 增 错题本） */
+void settingsStore.load()
+// 启动即加载持久化进度（错题本/进度页数据源）
+void useProgressStore().load()
+// 预加载语料库（侧栏统计 + 各页复用）
+const idiomsStore = useIdiomsStore()
+void idiomsStore.load()
+
+/** 侧边导航项（§3.1：首页仪表盘 · 成语库 · 闪卡 · 自测 · 进度 · 生词本；V2-D 增 错题本；易混淆） */
 const NAV_ITEMS = [
+  { to: '/', label: '首页', icon: 'home' },
   { to: '/idioms', label: '成语库', icon: 'book' },
   { to: '/flashcards', label: '闪卡', icon: 'flash' },
   { to: '/quiz', label: '自测', icon: 'check' },
+  { to: '/confusable', label: '易混淆', icon: 'shuffle' },
   { to: '/progress', label: '进度', icon: 'chart' },
   { to: '/wrongbook', label: '错题本', icon: 'xcircle' },
   { to: '/pending', label: '生词本', icon: 'bookmark' }
@@ -34,6 +60,7 @@ const NAV_ITEMS = [
 
 /** 内联图标（Feather 风格线性图标，stroke 继承 currentColor，18px） */
 const ICON_PATHS: Record<string, string[]> = {
+  home: ['M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z'],
   book: [
     'M4 19.5A2.5 2.5 0 0 1 6.5 17H20',
     'M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'
@@ -42,17 +69,23 @@ const ICON_PATHS: Record<string, string[]> = {
   check: ['M22 11.08V12a10 10 0 1 1-5.93-9.14', 'M22 4 12 14.01l-3-3'],
   chart: ['M18 20V10', 'M12 20V4', 'M6 20v-6'],
   bookmark: ['M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'],
-  xcircle: ['M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z', 'M15 9l-6 6', 'M9 9l6 6']
+  xcircle: ['M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z', 'M15 9l-6 6', 'M9 9l6 6'],
+  shuffle: ['M16 3h5v5', 'M4 20 21 3', 'M21 16v5h-5', 'M15 15l6 6', 'M4 4l5 5']
 }
 </script>
 
 <template>
-  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme-overrides="themeOverrides">
+  <NConfigProvider
+    :locale="zhCN"
+    :date-locale="dateZhCN"
+    :theme="isDark ? darkTheme : null"
+    :theme-overrides="themeOverrides(isDark ? 'dark' : 'light')"
+  >
     <div class="app-shell">
-      <!-- 侧边导航：品牌 + 图标文字导航（§3.1） -->
+      <!-- 侧边导航：朱砂印章品牌 + 图标文字导航（§3.1） -->
       <aside class="sidebar">
         <div class="brand">
-          <span class="brand-mark" aria-hidden="true">语</span>
+          <span class="brand-seal y-seal" aria-hidden="true">语</span>
           <div class="brand-text">
             <span class="brand-name">语栈</span>
             <span class="brand-sub">言语理解 · 成语积累</span>
@@ -83,14 +116,19 @@ const ICON_PATHS: Record<string, string[]> = {
         </nav>
 
         <div class="sidebar-foot">
-          <NTag size="small" :bordered="false" round class="version-tag">v0.1 MVP</NTag>
+          <div class="corpus-stat" title="正式库词条数">
+            <span class="stat-dot" aria-hidden="true" />
+            <span>语料 {{ idiomsStore.items.length }} 词</span>
+          </div>
+          <NTag size="small" :bordered="false" round class="version-tag">v0.2 MVP</NTag>
         </div>
       </aside>
 
       <div class="main-area">
-        <!-- 顶栏：快速记录（当前快捷键）· 设置 -->
+        <!-- 顶栏：当前页面名 · 快速记录（当前快捷键）· 设置 -->
         <header class="topbar">
           <div class="topbar-left">
+            <span v-if="pageTitle" class="topbar-title">{{ pageTitle }}</span>
             <span class="topbar-hint">快速记录错词，碎片时间复习</span>
           </div>
           <div class="topbar-actions">
@@ -139,7 +177,11 @@ const ICON_PATHS: Record<string, string[]> = {
         </header>
 
         <main class="content">
-          <RouterView />
+          <RouterView v-slot="{ Component }">
+            <Transition name="y-page" mode="out-in">
+              <component :is="Component" />
+            </Transition>
+          </RouterView>
         </main>
       </div>
     </div>
@@ -158,55 +200,60 @@ const ICON_PATHS: Record<string, string[]> = {
 }
 
 /* ------------------------------------------------------------------ */
-/* 侧边导航：纯白底 + 细分割线，大留白 */
+/* 侧边导航：宣纸暖底 + 细分割线，大留白 */
 /* ------------------------------------------------------------------ */
 .sidebar {
   width: 216px;
   flex: 0 0 216px;
   display: flex;
   flex-direction: column;
-  padding: 20px 14px 16px;
-  background: var(--y-bg-card);
+  padding: 18px 14px 16px;
+  background: color-mix(in srgb, var(--y-bg-card) 82%, var(--y-bg-page));
   border-right: 1px solid var(--y-border-light);
 }
 
+/* 品牌区：朱砂印章 + 衬线名称（书斋气质） */
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 2px 8px 22px;
+  gap: 12px;
+  margin: 0 2px 18px;
+  padding: 12px 12px;
+  border-radius: var(--y-radius-lg);
+  background:
+    radial-gradient(120px 60px at 0% 0%, color-mix(in srgb, var(--y-primary) 7%, transparent), transparent 70%),
+    var(--y-bg-subtle);
+  border: 1px solid var(--y-border-light);
 }
 
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--y-radius-md);
-  background: var(--y-primary);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
+.brand-seal {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  font-size: 18px;
+  letter-spacing: 0;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
   gap: 1px;
+  min-width: 0;
 }
 
 .brand-name {
-  font-size: var(--y-font-title);
+  font-family: var(--y-font-serif);
+  font-size: 19px;
   font-weight: 700;
   color: var(--y-text-primary);
   line-height: 1.2;
+  letter-spacing: 4px;
 }
 
 .brand-sub {
-  font-size: var(--y-font-aux);
+  font-size: 11px;
   color: var(--y-text-tertiary);
+  white-space: nowrap;
 }
 
 .nav {
@@ -225,15 +272,15 @@ const ICON_PATHS: Record<string, string[]> = {
   text-decoration: none;
   font-size: var(--y-font-body);
   transition:
-    background-color 0.15s ease,
-    color 0.15s ease;
+    background-color var(--y-motion-fast) var(--y-motion-ease),
+    color var(--y-motion-fast) var(--y-motion-ease);
 }
 
 .nav-icon {
   width: 18px;
   height: 18px;
   flex: 0 0 18px;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .nav-item:hover {
@@ -241,11 +288,24 @@ const ICON_PATHS: Record<string, string[]> = {
   color: var(--y-text-body);
 }
 
-/* 激活态：主色浅底 + 深青文字（克制点缀） */
+/* 激活态：朱砂浅底 + 朱砂文字 + 左侧圆角指示条 */
 .nav-item.router-link-active {
   background: var(--y-primary-soft);
   color: var(--y-primary);
   font-weight: 600;
+  position: relative;
+}
+
+.nav-item.router-link-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--y-primary);
 }
 
 .nav-item.router-link-active .nav-icon {
@@ -254,7 +314,26 @@ const ICON_PATHS: Record<string, string[]> = {
 
 .sidebar-foot {
   margin-top: auto;
-  padding: 12px 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 8px 0;
+  border-top: 1px solid var(--y-border-light);
+}
+
+.corpus-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--y-text-tertiary);
+}
+
+.stat-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--y-success);
 }
 
 .version-tag {
@@ -278,13 +357,32 @@ const ICON_PATHS: Record<string, string[]> = {
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  background: var(--y-bg-card);
+  background: color-mix(in srgb, var(--y-bg-card) 86%, transparent);
   border-bottom: 1px solid var(--y-border-light);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
+.topbar-title {
+  font-family: var(--y-font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--y-text-primary);
+  white-space: nowrap;
 }
 
 .topbar-hint {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .topbar-actions {

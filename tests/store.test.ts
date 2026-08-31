@@ -149,13 +149,13 @@ describe('store 持久化铁律', () => {
     const dir = makeDir()
     const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
     expect(s1.getSettings().aiMode).toBe('disabled')
-    expect(s1.getSettings().quickInputShortcut).toBe('CommandOrControl+K')
+    expect(s1.getSettings().quickInputShortcut).toBe('Plus')
     await s1.saveSettings({ aiMode: 'online' })
     await s1.flush()
 
     const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
     expect(s2.getSettings().aiMode).toBe('online')
-    expect(s2.getSettings().quickInputShortcut).toBe('CommandOrControl+K')
+    expect(s2.getSettings().quickInputShortcut).toBe('Plus')
   })
 
   it('正式库：按首字分区扫描（跳过 tags/exams 词表）+ 语料版本', () => {
@@ -291,5 +291,70 @@ describe('AC-09 双开聚焦', () => {
     focusWindow({ isMinimized: () => false, restore: restore2, focus: focus2 })
     expect(restore2).not.toHaveBeenCalled()
     expect(focus2).toHaveBeenCalledTimes(1)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// v0.2.6 迭代（§16.3 P0-④/P0-③）：个人库落盘 + 主题设置
+// ---------------------------------------------------------------------------
+
+describe('个人库落盘 + 主题设置（v0.2.6 P0-④/P0-③）', () => {
+  function makeUserIdiom(word: string, id: string) {
+    return {
+      schemaVersion: 1,
+      id,
+      word,
+      pinyin: 'xīn cí',
+      meaning: '新释义',
+      emotion: '中性',
+      register: '无',
+      errorTypes: [],
+      frequency: 3,
+      quality: 'user',
+      library: 'user'
+    }
+  }
+
+  it('个人库：add 幂等（按词形去重）、跨实例持久化（重启可加载）', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await expect(s1.addUserIdiom(makeUserIdiom('新词甲', 'xin-ci-u1') as never)).resolves.toBe(true)
+    // 同词形不同 id → 去重拒绝
+    await expect(s1.addUserIdiom(makeUserIdiom('新词甲', 'xin-ci-u2') as never)).resolves.toBe(false)
+    await expect(s1.addUserIdiom(makeUserIdiom('新词乙', 'xin-ci-u3') as never)).resolves.toBe(true)
+    await s1.flush()
+
+    // 新实例（重启）：个人库恢复
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    const items = s2.listUserIdioms()
+    expect(items).toHaveLength(2)
+    expect(items.map((i) => i.word)).toEqual(['新词甲', '新词乙'])
+  })
+
+  it('个人库文件损坏 → 回退 .bak 不崩溃（复用持久化铁律）', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s1.addUserIdiom(makeUserIdiom('新词甲', 'xin-ci-u1') as never)
+    await s1.addUserIdiom(makeUserIdiom('新词乙', 'xin-ci-u2') as never) // 产生 .bak
+    await s1.flush()
+    writeFileSync(join(dir, 'idioms-user.json'), '{corrupt!!!')
+
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    // .bak = 上一次状态（仅 新词甲）
+    expect(s2.listUserIdioms().map((i) => i.word)).toEqual(['新词甲'])
+  })
+
+  it('主题：默认 light；saveSettings({ theme: dark }) 持久化跨实例', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s1.getSettings().theme).toBe('light')
+    await s1.saveSettings({ theme: 'dark' })
+    await s1.flush()
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s2.getSettings().theme).toBe('dark')
+    // 非法 theme 清洗回默认
+    writeFileSync(join(dir, 'config.json'), JSON.stringify({ ...s2.getSettings(), theme: 'hacked' }))
+    const s3 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s3.getSettings().theme).toBe('light')
   })
 })

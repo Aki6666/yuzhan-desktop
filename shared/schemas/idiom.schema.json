@@ -124,6 +124,11 @@
           "maximum": 5,
           "description": "真题频次分档 1–5（§5.4）"
         },
+        "occurrences": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "本批真题选项中的出现次数（§6.3 批量导入统计口径；供列表同档排序，可空=教研备用词/未统计）"
+        },
         "exams": {
           "type": "array",
           "items": { "type": "string", "minLength": 1 },

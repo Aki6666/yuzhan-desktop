@@ -1,10 +1,9 @@
 /**
- * 基础 reset 与字体（U1 设计系统）
+ * 基础 reset 与字体（v0.2.6「墨韵」设计系统）
  * 颜色/背景等一律消费 styles/global.css 的 var(--y-*) 变量（designTokens.ts 为单一事实来源）。
  */
 :root {
-  font-family:
-    'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--y-font-family, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif);
   -webkit-font-smoothing: antialiased;
   color-scheme: light;
 }

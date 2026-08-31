@@ -24,6 +24,7 @@ import {
   aiModeTagType,
   buildPersonalIdiom,
   clearPersonalLibrary,
+  clipboardToQuery,
   createQuickIndex,
   derivePinyin,
   describeShortcut,
@@ -89,7 +90,11 @@ function installApiMock(
       list: vi.fn(async () => ({ ok: true, data: { items, version: '2026.1' } })),
       get: vi.fn(async () => ({ ok: true, data: null }))
     },
-    progress: { save: vi.fn(async () => ({ ok: true, data: null })) },
+    pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    progress: {
+      save: vi.fn(async () => ({ ok: true, data: null })),
+      list: vi.fn(async () => ({ ok: true, data: { items: {} } }))
+    },
     pending: {
       list: vi.fn(async () => ({ ok: true, data: [...pendingDb] })),
       add: vi.fn(async (word: string) => {
@@ -102,7 +107,13 @@ function installApiMock(
         return { ok: true, data: null }
       })
     },
-    quiz: { record: vi.fn(async () => ({ ok: true, data: null })) },
+    quiz: {
+      record: vi.fn(async () => ({ ok: true, data: null })),
+      history: {
+        list: vi.fn(async () => ({ ok: true, data: { items: [] } })),
+        add: vi.fn(async () => ({ ok: true, data: null }))
+      }
+    },
     settings: {
       get: vi.fn(async () => ({
         ok: true,
@@ -242,6 +253,17 @@ describe('quickRecord 纯函数', () => {
     expect(tierLabel(SearchTier.Prefix)).toBe('前缀命中')
     expect(tierLabel(SearchTier.Substring)).toBe('包含命中')
     expect(tierLabel(SearchTier.EditDistance)).toBe('模糊命中')
+  })
+
+  it('clipboardToQuery：纯 2–8 汉字采用（含首尾空白修剪）；非汉字/越界/空白返回空串（v0.2.6 P0-②）', () => {
+    expect(clipboardToQuery(' 不落窠臼 ')).toBe('不落窠臼')
+    expect(clipboardToQuery('守株待兔')).toBe('守株待兔')
+    expect(clipboardToQuery('生僻')).toBe('生僻')
+    expect(clipboardToQuery('abc')).toBe('')
+    expect(clipboardToQuery('一二三四五六七八九')).toBe('') // 9 字超限
+    expect(clipboardToQuery('你好world')).toBe('')
+    expect(clipboardToQuery('')).toBe('')
+    expect(clipboardToQuery('   ')).toBe('')
   })
 
   it('检索接线：jgj（鞠躬尽瘁首字母缩写前缀）命中 鞠躬尽瘁（复用 shared/lib/search.ts）', () => {

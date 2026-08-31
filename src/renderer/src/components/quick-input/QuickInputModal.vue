@@ -20,24 +20,24 @@ import { useIdiomsStore } from '@renderer/stores/idioms'
 import { usePendingStore } from '@renderer/stores/pending'
 import { useProgressStore } from '@renderer/stores/progress'
 import { useSettingsStore } from '@renderer/stores/settings'
+import { useUserStore } from '@renderer/stores/user'
 import { debounce } from '@renderer/lib/listFilters'
 import type { SearchHit } from '@shared/lib/search'
 import type { IpcErrorCode } from '@shared/ipc/contracts'
 import {
   DEFAULT_SHORTCUT,
   QUICK_INPUT_DEBOUNCE_MS,
-  addPersonalItem,
   aiEnabled,
   aiModeLabel,
   aiModeTagType,
   buildPersonalIdiom,
+  clipboardToQuery,
   createQuickIndex,
   describeShortcut,
   draftMissingFields,
   eventMatchesAccelerator,
   firstHit,
   isPlusKey,
-  listPersonalLibrary,
   pendingWordFromQuery,
   searchHits,
   tierLabel,
@@ -49,6 +49,7 @@ const idiomsStore = useIdiomsStore()
 const pendingStore = usePendingStore()
 const progressStore = useProgressStore()
 const settingsStore = useSettingsStore()
+const userStore = useUserStore()
 
 const show = ref(false)
 const query = ref('')
@@ -56,8 +57,8 @@ const hits = ref<SearchHit[]>([])
 const feedback = ref<string | null>(null)
 const lastAddedWord = ref<string | null>(null)
 
-// 检索池 = 正式库 + 个人库（V2-F：确认入个人库后会话内可检索命中）
-const index = computed(() => createQuickIndex([...idiomsStore.items, ...listPersonalLibrary()]))
+// 检索池 = 正式库 + 个人库（v0.2.6 P0-④：user store 响应式快照，重启加载后同样可检索命中）
+const index = computed(() => createQuickIndex([...idiomsStore.items, ...userStore.items]))
 const ready = computed(() => idiomsStore.loaded)
 const shortcut = computed(() => settingsStore.settings.quickInputShortcut)
 const aiMode = computed(() => settingsStore.settings.aiMode)
@@ -133,6 +134,24 @@ function toggle(): void {
 function open(): void {
   show.value = true
   focusInput()
+  void fillFromClipboard()
+}
+
+/**
+ * 剪贴板自动填充（v0.2.6 迭代，§16.3 P0-②）：
+ * 唤起时若检索框为空且剪贴板为纯 2–8 汉字（如刷题时复制的成语），自动填入并触发检索。
+ * 剪贴板不可读（无权限/异常）时静默忽略，不阻塞弹层。
+ */
+async function fillFromClipboard(): Promise<void> {
+  if (query.value.trim()) return
+  try {
+    if (typeof navigator === 'undefined' || !navigator.clipboard?.readText) return
+    const text = await navigator.clipboard.readText()
+    const q = clipboardToQuery(text)
+    if (q) query.value = q
+  } catch {
+    /* 剪贴板读取失败：静默降级为手动输入 */
+  }
 }
 
 function close(): void {
@@ -350,7 +369,7 @@ async function confirmDraft(): Promise<void> {
     ...form,
     near: (form.near ?? []).filter((n) => checkedNearWords.value.includes(n.word))
   })
-  addPersonalItem(idiom)
+  userStore.add(idiom)
   progressStore.recordAttempt(idiom.id) // 新建进度记录 → 闪卡队列（非 mastered）
   await progressStore.flush()
   aiFeedback.value = `已加入个人库并进入复习队列：${idiom.word}`
@@ -364,6 +383,7 @@ onMounted(() => {
   void idiomsStore.load()
   void pendingStore.load()
   void settingsStore.load()
+  void userStore.load()
 })
 
 onBeforeUnmount(() => {
@@ -389,7 +409,7 @@ defineExpose({ open, close, isOpen: () => show.value })
         v-model:value="query"
         clearable
         size="large"
-        placeholder="输入成语 / 拼音 / 首字母，如：jgj、鞠躬尽瘁，回车记录"
+        placeholder="搜索成语，回车记录"
         class="quick-input-field"
         data-testid="quick-input"
         @keydown.enter.prevent="onEnter"
@@ -403,9 +423,7 @@ defineExpose({ open, close, isOpen: () => show.value })
 
       <!-- 初始提示 -->
       <div v-else-if="status === 'idle'" class="state" data-testid="quick-state-idle">
-        <p class="state-text">
-          输入成语 / 拼音 / 首字母：命中已有词可直接「复习一次 / 标记掌握」；未命中可存入生词本。
-        </p>
+        <p class="state-text">命中已有词可复习；未命中自动进生词本。</p>
       </div>
 
       <!-- 命中卡片（记录闭环，不重复建卡，§10.1） -->
@@ -673,7 +691,8 @@ defineExpose({ open, close, isOpen: () => show.value })
 }
 
 .hit-card {
-  border: 1px solid var(--y-border);
+  border: 1px solid var(--y-border-light);
+  border-left: 3px solid var(--y-primary);
   border-radius: var(--y-radius-md);
   padding: var(--y-space-lg) var(--y-space-lg);
   background: var(--y-bg-card);
@@ -694,10 +713,11 @@ defineExpose({ open, close, isOpen: () => show.value })
 }
 
 .hit-word {
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title);
   font-weight: 700;
   color: var(--y-text-primary);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .hit-pinyin {
@@ -783,8 +803,10 @@ defineExpose({ open, close, isOpen: () => show.value })
 }
 
 .draft-title {
+  font-family: var(--y-font-serif);
   font-size: 15px;
   font-weight: 600;
+  letter-spacing: 1px;
   color: var(--y-text-primary);
 }
 
@@ -826,6 +848,7 @@ defineExpose({ open, close, isOpen: () => show.value })
 }
 
 .candidate-word {
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-body);
   color: var(--y-text-body);
 }

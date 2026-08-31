@@ -119,13 +119,16 @@
 
 | 路径 | 视图 | 进入方式 |
 |---|---|---|
-| `/` | 重定向 `/idioms` | 启动 |
-| `/idioms` | 成语列表页 | 导航 |
+| `/` | 仪表盘首页（v0.2.5：欢迎区 + 学习统计 + 功能入口） | 启动 |
+| `/idioms` | 成语列表页（多列网格 + 分页，v0.2.2–v0.2.5） | 导航 / 仪表盘入口 |
 | `/idioms/:id` | 成语详情页 | 列表点击 / 快速输入命中 |
-| `/flashcards` | 闪卡页 | 导航 |
-| `/quiz` | 自测页（组卷/答题/结果三态） | 导航 |
+| `/flashcards` | 闪卡页（v0.2.2：档位选择） | 导航 |
+| `/quiz` | 自测页（组卷/答题/结果三态 + 档位选择 + 自测历史，v0.2.2–v0.2.4） | 导航 |
+| `/confusable` | 易混淆成语库（§6.4，v0.2.2） | 导航 |
 | `/progress` | 进度页（v0.1 简版摘要） | 导航 |
-| `/settings` | 设置页 | 齿轮 |
+| `/wrongbook` | 错题本（v0.2.4：读取持久化错题） | 导航 |
+| `/pending` | 生词本（v0.2.5：使用引导卡） | 导航 |
+| `/settings` | 设置页（v0.2.2：AI 快速模式开关） | 齿轮 |
 
 ### 3.3 关键交互流与空态设计
 
@@ -133,8 +136,8 @@
 |---|---|---|
 | 快速输入 | Ctrl+K 弹层自动聚焦；Esc 关闭；回车检索；**命中已有词 → 展示卡片并提供「复习一次 / 标记掌握」动作（完成记录闭环）；未命中 → 两个动作** | 无结果 →「AI 查询（v0.2）/ 存入生词本」二选一 |
 | 闪卡 | 单卡流；「认识/不认识」立即判定并展示释义；**收敛规则：同一词连续 3 次「认识」→ mastered，1 次「不认识」→ 降级 learning**；翻完一叠显示小结 | 无待复习卡 → 引导去成语库浏览 / 自测积累 |
-| 自测 | 10 题一组；**出题规则：优先错词与高频词（频次 4–5），避免与上轮重复；干扰项来自同主题/近义辨析组/随机词，正确答案位置随机**；答完立即反馈对错并展示该词考点（强化记忆）；错词自动写入进度 | 题库 <10 → 提示并引导浏览成语库 |
-| 生词本 | 列表 + 手动删除 + 「立即复习」；v0.2 提供「批量 AI 补全」入口 | 空 → 引导语「刷题遇到生词，Ctrl+K 记下来」 |
+| 自测 | 10 题一组；**出题规则：优先错词与高频词（频次 4–5），避免与上轮重复；干扰项来自同主题/近义辨析组/随机词，正确答案位置随机**；答完立即反馈对错并展示该词考点（强化记忆）；错词经 `quiz:record` 写 main 持久化、renderer 经 `progress:list` 同步 → 立即进错题本（v0.2.4）；选项释义去除括号提示防泄题（v0.2.2）；抽题档位可选（v0.2.2）；每次会话记入自测历史 `quiz:history`（v0.2.4） | 题库 <10 → 提示并引导浏览成语库 |
+| 生词本 | 列表 + 手动删除 + 「立即复习」；v0.2 提供「批量 AI 补全」入口；**使用流程（v0.2.5 页面引导卡）：①记——快速记录未命中自动存入；②补——批量 AI 补全生成释义草稿逐条确认；③学——确认入个人库并加入闪卡队列 / 库内词立即复习；④清——已消化可删除** | 空 → 引导语「刷题遇到生词，Ctrl+K 记下来」 |
 | 首次启动（v0.1 轻量） | 3 步引导：欢迎 → 载入种子库 → 演示一次快速记录；可跳过 | 全程 ≤30 秒 |
 
 ### 3.4 交互规范
@@ -328,7 +331,9 @@ preload 只暴露 `shared/ipc.ts` 中声明的白名单 API，不透传 ipcRende
 
 > v0.1 只存上表字段；`review.interval/ease/due` 等 SM-2 字段随 v0.2 算法落地时再扩展（YAGNI）。
 
-另有 `userData/pending.json` 生词本（未命中词条待补全）、`userData/cache/`（AI 查询缓存，v0.2，带条数上限清理策略）、`userData/config.json`（设置，apiKey 加密存储）。
+另有 `userData/pending.json` 生词本（未命中词条待补全）、`userData/cache/`（AI 查询缓存，v0.2，带条数上限清理策略）、`userData/config.json`（设置：`aiMode`、快捷键 `quickInputShortcut`（默认「+」= `'Plus'`）、`aiBaseUrl`/`aiModel`（默认 DeepSeek 端点/模型，§10.2）、`aiFastMode`（快速模式，v0.2.2）；apiKey 经 safeStorage 加密存储，不入 config.json 明文）、`userData/quiz-history.json`（自测历史，v0.2.4，保留最近 200 条）。
+
+> **进度读取（v0.2.4）**：v0.1 起 renderer 只写不读进度；v0.2.4 新增 `progress:list` IPC，renderer progress store `load()` 以**合并语义**拉取（main 数据补进内存、本地未落盘写入优先），错题本/进度页/自测结束（`quiz:record` 后）据此同步，错题立即可见且重启不丢。
 
 ### 5.7 数据一致性规则（校验脚本 `pnpm validate:data` 的约束清单）
 
@@ -369,6 +374,24 @@ preload 只暴露 `shared/ipc.ts` 中声明的白名单 API，不透传 ipcRende
 - 例句规范：`exam` 例句原文照录（注明卷别，≤50 字截取）；`made` 自造例句必须语境清晰、无歧义；**真题例句只做简短引用，不整卷搬运**
 - `near[].diff` 一句话说清核心区别（如「鞠躬尽瘁」重"忠诚付出" vs「殚精竭虑」重"用尽心思」）
 - 每条词条标注 `verifiedBy`（reviewed 必填），开源协作可追溯
+
+### 6.3 批量导入记录（用户要求，2026-09-01）
+
+**来源与统计口径**：`E:\杂项\言语真题` 全部 **756 份**（各年国考/省考/联考，网友回忆版）试卷，**仅抽取选项行**（`A、/A./A．` 起始，41672 行选项 / 88902 个词元），按空白与中文标点切分纯汉字词元统计出现次数；出现 ≥2 次的词元共 7538 个（含大量虚词/常用词，如「因为」「影响」，不入库）。
+
+**选词（两批）**：本库定位成语积累——
+- **第一批（高频档）**：四字成语且出现 **≥20 次**（464 个，如 独树一帜 109 次、方兴未艾 106 次、无与伦比 104 次）；库内已收录 15 词跳过，实际新增 **447 张**。
+- **第二批（全量补齐档，2026-09-01 同批完成）**：四字成语且出现 **2–19 次**（2382 个候选），逐词筛除非成语片段（普通词组如「传承文明/历史悠久/自然景观」、现代口号如「行稳致远/踔厉奋发/守正创新」、错别字与变体如「饮鸠止渴/墨守陈规/故步自封/一孔见天」、口语叠词如「热热闹闹/实实在在」等约 500 词），**实际新增 2093 张**；同音不同形词（如 坚韧不拔/坚忍不拔）按 `slug-02` 序号区分。
+
+两批均由 AI 逐条撰写考试语境释义/用法/感情色彩/语域/误用类型（§5.2 八类）/主题标签（第二批为控制篇幅以紧凑字段为主、无例句）；卡片 `quality=reviewed`、`verifiedBy=AI导入`、拼音 pinyin-pro 生成并核实多音字（如 自怨自艾→yì、曲高和寡→hè）。**正式库累计 2600 张**（含原种子 60 张）。
+
+**frequency 口径（本批替代口径，与 §5.4 快照口径不同）**：按本批语料出现次数分档——≥80 次=5 / 45–79 次=4 / 10–44 次=3 / 5–9 次=2 / 2–4 次=1；后续可切换到 §5.4 快照口径重算。
+
+**工具与可复现**：`data/scripts/import-exam-vocab.mjs`（`scan` 词频扫描 / `generate` 卡片生成，读 `import-content.json` 释义源数据 + `import-report.json` 全量词频报告；已导入全部「出现≥2 次」的四字成语）；`data/scripts/build-search-cache.mjs`（预生成检索索引缓存 `data/search-index.json`，词条变更后需重跑，renderer 启动免 pinyin-pro 全量计算）。校验：`pnpm validate:data` 2600 个词条文件 0 错误。
+
+### 6.4 易混淆成语对（用户要求 #8，2026-09-01）
+
+`data/pairs.json`（86 对）：人工精选经典易混对 57 对（如 不负众望/不孚众望、相得益彰/相辅相成、一蹴而就/一挥而就、望其项背/望尘莫及、处心积虑/殚精竭虑、无微不至/无所不至…）+ 卡片 `near` 字段自动提取 29 对；每对含 `a`/`b`（均为库内词条）+ `diff`（一句话核心区别）。配套新增 IPC `pairs:list`（§10.4 权威清单扩展）与页面 `/confusable`（易混淆库，点词跳详情）。生成脚本 `data/scripts/build-pairs.mjs`（改 CURATED 表后重跑即可）。
 
 ---
 
@@ -500,6 +523,7 @@ Ctrl+K 全局唤起快速输入框（任何页面可用）
 
 - **检索算法**：依赖 `pinyin-pro`（`multiple: true` 全读音索引，多音字兜底）。命中优先级：精确（word/pinyin 全等）→ 前缀（首字/拼音首字母）→ 子串 → 编辑距离 ≤1（含错别字提示）；同分取频次高者
 - **AI provider 抽象**：`ai.ts` 定义 Provider 接口（OpenAI 兼容 / Ollama / mock 供测试），renderer 不感知具体实现
+- **默认端点/模型（用户要求，2026-09-01）**：`shared/ipc/contracts.ts` 常量 `DEFAULT_AI_BASE_URL = 'https://api.deepseek.com'`、`DEFAULT_AI_MODEL = 'deepseek-v4-flash'`（OpenAI 兼容；store 默认值同源引用，设置页占位符同步；用户可改）
 - **aiMode 状态机（四态）**：`disabled`（无 key）→ 快速输入直接走生词本；`configured`（有 key 未测）→ 首次查询前可选自检；`online`（可查询）；`error`（超时/限流）→ 提示并降级生词本。状态持久化，UI 显示当前态
 - **查询质量**：超时 15s；失败自动重试 1 次；**支持取消**（AbortSignal + request token，防 stale 结果覆盖新查询）；限流：查询按钮 3s 冷却 + 每日配额提示
 - **缓存**：落盘 `userData/cache/`（同词不重复调用、离线可看上次结果；**条数上限 200，超限按 LRU 清理**）
@@ -519,17 +543,20 @@ Ctrl+K 全局唤起快速输入框（任何页面可用）
 
 - **统一信封**：`{ ok: true, data } | { ok: false, error: { code, message } }`（全 channel 一致，renderer 按 code 展示文案）
 - **契约共享**：`shared/ipc/contracts.ts` 定义 channel 常量与 Request/Response 类型，main/preload/renderer 引用同一份
-- **data:list 策略**：启动时全量加载（≤600 条），**过滤/搜索在 renderer 端内存索引完成**——避免 IPC 高频往返；IPC 只承担一次性加载与写操作
+- **data:list 策略**：启动时全量加载（实际约 2600 条；v0.2.3 性能优化：IPC 载荷剥离 `examples/origin`——详情页经 `data:get` 按需拉全量，并附带预生成检索索引缓存 `search-index.json`），**过滤/搜索/排序在 renderer 端内存完成**——避免 IPC 高频往返；IPC 只承担一次性加载与写操作
 
 | channel | 方向 | 参数 | 返回 |
 |---|---|---|---|
-| `data:list` | main→renderer | —（全量，启动一次） | 正式库词条数组 + 版本号 |
-| `data:get` | main→renderer | id | 词条 / null |
+| `data:list` | main→renderer | —（全量，启动一次） | 词条（剥离例句/出处）+ 版本号 + 检索索引缓存 |
+| `data:get` | main→renderer | id | 全量词条 / null |
 | `progress:save` | renderer→main | `{ id, status?, wrongTypes? }`（与 §5.6 模型一致） | ok |
+| `progress:list` | main→renderer | — | 全量进度（错题本/进度页/自测结束同步，v0.2.4） |
 | `pending:list` | renderer→main | — | 生词本数组 |
 | `pending:add` / `pending:remove` | renderer→main | word | ok |
 | `quiz:record` | renderer→main | `{ answers: [{id, correct}] }`（批量，一次 10 题） | ok |
-| `settings:get` | renderer→main | — | 设置（key 掩码、快捷键、aiMode） |
+| `quiz:history:list` / `quiz:history:add` | renderer→main | — / 历史条目 | 自测历史（v0.2.4，userData/quiz-history.json） |
+| `pairs:list` | main→renderer | — | 易混淆对全量（§6.4，v0.2.2） |
+| `settings:get` | renderer→main | — | 设置（key 掩码、快捷键、aiMode、aiFastMode） |
 | `settings:set` | renderer→main | 设置项 | ok |
 | `ai:searchWord` | renderer→main | word（v0.2） | draft 词条 / 错误码 |
 | `app:log` | renderer→main | `{ level, message }` | ok |
@@ -714,3 +741,48 @@ Ctrl+K 全局唤起快速输入框（任何页面可用）
 | **v0.1.3** | **交互调整（用户要求，2026-08-31）：① 快速记录触发键重构——移除 Ctrl+K 硬编码唤起，改为设置页自定义按键（按键捕获器写入 settings.quickInputShortcut，renderer 动态生效），默认「+」键；UI 不再显示英文 accelerator 串「CommandOrControl+K」（顶栏/弹层/设置页改中文或自定义展示）；② 成语库列表频次筛选视觉重设计——不再以「序号+词语数」呈现，改为简洁视觉化表现（点阵/分段条等，计数移入副行或 tooltip），保留频次 1–5 过滤能力；③ 数据模型与 IPC 契约不变** |
 | **v0.2 启动** | **v0.2 里程碑启动（用户确认按 §8 全量，2026-08-31）：① SM-2 间隔重复——§5.6 用户进度模型扩展 review.interval/ease/due 字段，userData/progress.json 启动迁移补默认值（due=now、interval=0、ease=2.5），shared/lib/sm2.ts 纯算法落地；② AI 错词闭环——§10 ai.ts Provider 抽象（OpenAI 兼容/Ollama/mock）、aiMode 四态激活、ai:searchWord 落地、API key safeStorage 加密配置、缓存 LRU 200/限流/超时重试取消，快速输入预览确认面板（draft 可编辑/混淆词勾选/写个人库 quality=user→闪卡队列），生词本批量 AI 补全；③ 错题本 + 误用类型统计、掌握度仪表盘（§8）；④ 托盘常驻 + 全局快捷键（§3.4/§10.2）；⑤ Playwright E2E 主流程「记录→复习→自测」（§4.8 v0.2 起）** |
 | **v0.2 补充** | **v0.2 实施期补充设计（2026-08-31，实现推进中）：① 个人库落地——§10.1「写个人库 quality=user」的具体存储：userData/idioms-user.json（原子写+.bak 复用持久化铁律），新增 IPC channel `user:list`/`user:add`（§10.4 权威清单扩展，renderer 检索池=正式库+个人库合并）；② aiMode 变更写盘幂等（模式未变化不写盘，防 teardown/竞态未处理拒绝）；③ 设置页 AI 配置扩展（baseURL/模型白名单可配）** |
+| **v0.2.1** | **批量导入 + 默认设置调整（用户要求，2026-09-01）：① 设置默认值——AI 端点 `https://api.deepseek.com`、模型 `deepseek-v4-flash`（§10.2 常量 `DEFAULT_AI_BASE_URL`/`DEFAULT_AI_MODEL`，store 默认值/设置页占位符同步）；主进程 config.json 默认快捷键改 `'Plus'`（与 renderer 默认「+」一致）；测试夹具同步更新，typecheck 通过（vitest 因沙箱限制未在本会话运行）。② 高频成语批量导入——新增 §6.3：从 `E:\杂项\言语真题` 756 份试卷**仅选项**统计词频，分两批导入四字成语——高频档（出现≥20 次）447 张 + 全量补齐档（出现 2–19 次、筛除非成语片段约 500 词后）2093 张，**正式库累计 2600 张**（AI 释义、`verifiedBy=AI导入`、frequency 按本批出现次数分档、例句全部 `kind=made`），新增 `data/scripts/import-exam-vocab.mjs` / `import-content.json` / `import-report.json`；`pnpm validate:data` 2600 文件 0 错误。数据模型（§5）与 IPC 契约（§10.4）不变** |
+| **v0.2.2** | **体验修复 + 新功能 + 视觉重设计（用户要求，2026-09-01）：① BUG——自测错题 `quiz:record` 传 Vue reactive Proxy 致 IPC「An object could not be cloned」，改传纯对象修复；② 频次分档明确化——档位含义（5档=真题出现80次以上/4档=45–79/3档=10–44/2档=5–9/1档=2–4及教研备用）展示于筛选与行 tooltip（§6.3 口径），替换抽象点阵；③ 成语库多列网格（自适应列数虚拟滚动），同档按真题出现次数排序、可升降序切换，卡片新增 `occurrences` 字段（§5 schema 扩展）；④ AI 快速模式——请求体带 `thinking:disabled` 关闭思考提速，设置页可开关（§10.2）；⑤ 自测选项去除释义括号提示（避免暴露答案，§3.3）；⑥ 闪卡/自测抽题支持频次档位选择（§3.3）；⑦ 易混淆成语库——新增 §6.4 `data/pairs.json` 86 对 + `pairs:list` IPC + `/confusable` 页面；⑧ 视觉重设计——依 anthropics/skills/frontend-design 方法论刷新设计 token（暖中性色板/字体栈/大圆角/分层阴影）、侧边品牌与激活态；⑨ 新增 3 个教研备用词卡片（不可救药/泰然自若/无所不至，frequency=1）支撑易混对。typecheck 通过，`pnpm validate:data` 2603 文件 0 错误（vitest 仍因沙箱限制未在本会话运行）** |
+| **v0.2.3** | **性能优化 + 易混淆修复 + 深度 UI（用户要求，2026-09-01）：① 性能——启动卡顿根因是 data:list 全量载荷 + renderer 启动时对 2600+ 词条逐个跑 pinyin-pro 全读音建索引（数秒）；修复：预生成检索索引缓存 `data/search-index.json`（§6.3 工具）随 data:list 下发、renderer `createSearchIndexFromCache` 免实时计算；列表 IPC 载荷剥离 `examples/origin`（详情页改经 `data:get` 按需拉全量），列表/自测/闪卡流畅；② 易混淆页空——旧构建未含新 IPC/数据，重新构建后生效，页面补空态提示；③ 深度 UI——依 frontend-design skill 方法论重做：详情页（渐变顶饰、频次档徽标+出现次数、分区标题主色条）、闪卡正面主色渐变、自测选项圆形字母徽标+hover 浮起、全局选中色/焦点环、品牌渐变徽标等；④ 重新构建 `out/` 产物（typecheck + electron-vite build 通过）。注意：词条变更后需重跑 `build-search-cache.mjs`；`pnpm validate:data` 2603 文件 0 错误** |
+| **v0.2.4** | **体验修复 + 功能补齐 + 全局 UI 重构（用户要求，2026-09-01）：① 成语库卡顿根治——items 改 shallowRef（免 2600+ 对象深响应式代理）、主进程 data:list 预排序（频次档→出现次数→id，默认视图零排序成本）；修复卡片元信息（频次/褒贬/出现次数）溢出卡片问题（出现次数移至拼音行）；② 易混淆页——补 word→id 详情跳转、语料预加载、数量展示；③ 自测错题进错题本——新增 `progress:list` IPC + progress store `load()`（启动/自测结束/错题本页从 main 全量同步），错题本/进度页读取持久化数据；④ 自测历史——新增 `quiz:history:list/add` IPC + userData/quiz-history.json（保留最近 200 条），自测页展示最近成绩列表；⑤ 全局 UI 重构——Naive UI 主题全面升级（按钮/输入/卡片/标签圆角与字重、胶囊标签）、body 主色径向渐变光晕、侧栏底部语料统计（语料 N 词）、结果计数胶囊化、筛选条标签强化；⑥ 重新构建 `out/`。typecheck 通过，`pnpm validate:data` 2603 文件 0 错误（vitest 仍因沙箱限制未在本会话运行）** |
+| **v0.2.5** | **仪表盘首页 + 成语库分页 + 排序语义修正 + 测试修复 + 反"默认感"UI（用户要求，2026-09-01）：① 仪表盘首页——路由 `/` 由重定向改为 DashboardPage（渐变欢迎区+最近自测正确率、语料/学习中/已掌握/错题/易混对统计卡、6 个功能入口大卡片），侧栏新增「首页」导航；② 成语库分页——每页 100 条、滚动触底/「加载更多」按钮增量加载、搜索/筛选/排序变化自动回第一页、底部「已显示 X/Y」状态条（IdiomVirtualList 新增 `limit` prop 与 `bottom` 触底事件）；③ 排序语义修正——**搜索命中保持 search() 相关度顺序（层级→频次→id）不再按档位重排**；无关键字浏览时按档位+出现次数**稳定排序**（同档同次返回 0，保持加载顺序）；④ 卡片溢出根治——卡片高度 78→90px（`box-sizing`+meta 溢出兜底），虚拟列表 cellHeight 同步 90；⑤ 测试修复——6+4 个失败全绿：detail 频次断言改档位徽标、虚拟滚动断言按新参数（10 行/61200px/14 行 item-051..064）、7 个测试文件 mock 补齐 `pairs.list`/`progress.list`/`quiz.history`、progress store `load()` 改**合并语义**（main 数据补进内存、本地未落盘写入优先）；⑥ 反"默认感" UI（参考 [kesslerio/taste-skill](https://github.com/kesslerio/taste-skill) 与 [pbakaus/impeccable](https://github.com/pbakaus/impeccable)）——暖纸色板（bgPage #FAF9F7）+ 深墨文字（#161617）、侧栏品牌区改主色渐变块（白字）、成语卡片 hover 抬升+主色左指示条；⑦ 生词本页新增「如何使用」引导卡（①记②补③学④清）；⑧ 易混淆页新增**旧版检测**（preload 无 pairs API 时明确提示需重新构建/重装，避免空白）；⑨ 搜索栏/快速记录 placeholder 精简（去长提示语）；⑩ 重新构建 `out/`。typecheck 通过、vitest 全绿（296 通过 / 1 跳过）、`pnpm validate:data` 2603 文件 0 错误** |
+| **v0.2.6** | **「墨韵」全局 UI 重构 + 交互迭代 P0（用户要求，2026-09-01）：UI 重构部分——① 设计方向：参考 anthropics/skills/frontend-design、kesslerio/taste-skill、pbakaus/impeccable（Operate 模式）方法论，自旧青绿 OpenAI 风彻底转向**墨韵 · Ink & Paper**：暖宣纸底（#F7F5F0）+ 深墨文字（#1C1B18）+ 朱砂主色（#C0432C）+ 苔绿/赭石/墨蓝支持色；衬线展示字（Noto Serif SC 系统字体，词形/页标题/印章），UI 正文无衬线，数字 tabular-nums；② Token 体系——designTokens.ts 重写（font-serif + motion token），main.ts applyTheme 注册全部 `--y-*`，global.css 重写（宣纸径向墨晕背景、共享工具类 .y-card/.y-page/.y-state/.y-seal/.y-count-pill、路由页过渡 y-page），naiveTheme.ts 对齐新色板；③ 应用壳——App.vue 重构（朱砂印章「语」+ 衬线品牌 + 导航激活态 + 顶栏页名 route.meta.title + RouterView y-page 过渡），router 补 meta.title；④ 各页视觉重建（仪表盘墨晕欢迎区/成语库衬线标题+朱砂筛选/详情页印章+分区眉题/闪卡宣纸正反面/自测/进度/错题本/生词本/易混淆/设置/快速弹层）；⑤ 硬约束——全部 data-testid/关键 class/文案/虚拟滚动几何（cellHeight 90 + gap 12）保持，仅视觉层重建。**交互迭代 P0（§16.3）**——⑥ 闪卡键盘快捷键：1=认识 / 2=不认识 / 空格=下一张 / U=撤销（输入框聚焦防误触，4 项新测试）；⑦ 快速记录剪贴板自动填充：唤起时剪贴板为纯 2–8 汉字自动填入（clipboardToQuery 纯函数 + 组件接线）；⑧ 暗色模式：designTokensDark「暖墨夜」双主题 + applyTheme(theme) 单入口 + Naive UI darkTheme + 设置页「外观」开关（theme-switch）+ IPC 契约 theme 字段 + config.json 持久化（默认 light，非法值清洗），程序化验证 8/8；⑨ 个人库落盘（修复 v0.2 已知限制 #1）：`user:list`/`user:add` IPC + `userData/idioms-user.json` 原子写/.bak 回退/损坏自愈 + user store 响应式快照（检索池=正式库+个人库）+ quickRecord 注册表持久化接线（重启可加载、按词形去重）。**测试与验证**——typecheck 0 错误、vitest 307 通过+1 跳过（+11 项新测试：闪卡快捷键 4 / clipboard 1 / IPC user+theme 3 / store 个人库+主题 3）、`pnpm validate:data` 2603 文件 0 错误、electron-vite build 通过、Playwright E2E 1 passed（修复默认路由改仪表盘后的导航失配：先等语料统计→导航成语库→词条行可见断言）、程序化视觉自检 15/15、暗色模式 8/8、13+1 页截图留证于 `.ui-shots/`（gitignore）；自检脚本 `capture.cjs`/`verify.cjs`/`verify-dark.cjs` 留存** |
+
+---
+
+## 16. 头脑风暴与体验迭代计划（2026-09-01）
+
+> 由执行者按「用户/客户视角 → 工程视角」两轮头脑风暴产出，优先级定稿后写入本文档作为 v0.2.6+ 迭代依据。
+> 原则：先修已知限制与交互效率（低成本高感知），再延伸功能与内容；每项按 AC 验收、测试全绿。
+
+### 16.1 头脑风暴第一轮：用户视角 + 客户视角（备考者的真实一天）
+
+| # | 洞察 | 机会点 | 评估 |
+|---|---|---|---|
+| U1 | 刷题在网页/App 里，切到语栈要打字，记录成本高 | 快速记录弹层唤起时**自动填充剪贴板四字词**（零打字）；全局快捷键/托盘已就绪 | ★★★ 低成本高感知 |
+| U2 | 闪卡全靠鼠标点按钮，桌面端效率低 | **闪卡键盘快捷键**（1=认识 / 2=不认识 / 空格=下一张 / U=撤销） | ★★★ 低成本高感知 |
+| U3 | 自测题型单一（只会"给成语选释义"），考场是"给语境选词" | 扩展**语境选词（逻辑填空式）**与**释义选词（反向）**题型，组卷纯逻辑进 shared/lib | ★★★ 中成本高价值 |
+| U4 | 不知道自己弱在哪 | 自测答错时呈现**该词 near 辨析**（"你混淆了 X 与 Y"）+ 误用类型归因 | ★★ 低成本 |
+| U5 | 每天该干什么没有指引 | **每日目标**（今日复习 N 张/自测 M 组）+ 首页「今日到期」直达入口 | ★★ 中成本 |
+| U6 | 备考几个月的数据怕丢 | 设置页**一键完整备份**（userData 打包）+ 定期自动备份 | ★★ 中成本 |
+| U7 | 成语靠故事记得牢 | v0.3 内容工程补「典故」字段；AI 批量生成语境例句补全 2600 词条 | ★★ 内容工程 |
+| U8 | 晚间学习刺眼 | **暗色模式**（token 化已就绪，双主题表 + 设置开关 + 持久化） | ★★ 低成本高感知 |
+
+### 16.2 头脑风暴第二轮：工程视角（架构健康度与延伸）
+
+| # | 洞察 | 机会点 | 评估 |
+|---|---|---|---|
+| E1 | **已知限制（v0.2 记录在案）**：个人库（quality=user）仅会话内注册表、重启不加载 | 补 `user:list`/`user:add` IPC + `userData/idioms-user.json` 原子写落盘（复用持久化铁律），renderer 检索池=正式库+个人库 | ★★★ 必修（欠账） |
+| E2 | SM-2 迁移是单点实现 | 抽通用 migrate 管线（progress/personal/config 统一版本迁移） | ★★ 重构 |
+| E3 | 主题工程化 | dark token 表 + `color-scheme` 切换，一举覆盖 Naive UI 与全站 var | ★★（并入 U8） |
+| E4 | Dashboard/Confusable/Progress 缺组件级测试 | 新功能一律抽纯逻辑进 shared/lib + 组件测试补齐 | ★★ 质量债 |
+| E5 | 启动解析体积 | 路由级 lazy import 减少启动解析 | ★ 性能 |
+| E6 | 延伸功能（v0.3+/v0.4 路线） | 模拟真题模式（带倒计时）、TTS 朗读、Anki 导出、学习周报、悬浮窗、易混淆专项训练 | ★ 排期 |
+
+### 16.3 定稿迭代计划（P0 本轮实施，P1/P2 入路线图）
+
+| 批次 | 项 | 验收 |
+|---|---|---|
+| **P0（v0.2.6 后半）✅ 已落地** | ① 闪卡键盘快捷键（1/2/空格/U）✅；② 快速记录剪贴板四字词自动填充 ✅；③ 暗色模式（双主题 + 设置开关 + 持久化）✅；④ 个人库落盘（user:list/add + idioms-user.json）✅ | vitest 307 通过+1 跳过、typecheck 0、build 通过、E2E 1 passed、暗色模式程序化验证 8/8 |
+| P1（v0.2.7） | 自测新题型（语境选词/释义选词 + near 辨析归因）、每日目标 + 今日到期入口、完整备份 | 同上 |
+| P2（v0.3） | 典故字段与 AI 例句批量、migrate 管线、路由 lazy、模拟真题、TTS、Anki 导出 | 按路线图 |

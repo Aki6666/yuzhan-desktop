@@ -30,12 +30,16 @@ import {
 } from '@renderer/lib/flashcards'
 import FlashcardCard from '@renderer/components/flashcard/FlashcardCard.vue'
 import FlashcardSessionSummary from '@renderer/components/flashcard/FlashcardSessionSummary.vue'
+import FrequencyTierSelect from '@renderer/components/common/FrequencyTierSelect.vue'
+import { countByFrequency } from '@renderer/lib/listFilters'
 
 const idioms = useIdiomsStore()
 const progress = useProgressStore()
 
 /** 牌堆（构建时刻快照，非 mastered） */
 const deck = ref<Idiom[]>([])
+/** 档位选择（空数组 = 全部；用户要求 #6） */
+const selectedTiers = ref<number[]>([])
 /** 当前卡下标 */
 const index = ref(0)
 /** 当前卡是否已翻面（判定后展示释义） */
@@ -53,11 +57,18 @@ const history = ref<
 
 const current = computed<Idiom | null>(() => deck.value[index.value] ?? null)
 
+/** 各档位词条数（供档位选择器展示） */
+const freqCounts = computed(() => countByFrequency(idioms.items))
+
 const isMastered = (id: string): boolean => progress.getProgressItem(id)?.status === 'mastered'
 
-/** 构建牌堆并重置会话（再来一轮 / 首次进入） */
+/** 构建牌堆并重置会话（再来一轮 / 首次进入；按所选档位过滤，用户要求 #6） */
 function startSession(): void {
-  deck.value = buildReviewDeck(idioms.items, isMastered) as Idiom[]
+  const pool =
+    selectedTiers.value.length === 0
+      ? idioms.items
+      : idioms.items.filter((i) => selectedTiers.value.includes(i.frequency))
+  deck.value = buildReviewDeck(pool, isMastered) as Idiom[]
   index.value = 0
   flipped.value = false
   judgment.value = null
@@ -66,18 +77,17 @@ function startSession(): void {
   finished.value = deck.value.length === 0
 }
 
+/** 切换档位：立即按新档位重开本轮（闪卡会话短，直接重开最直观） */
+function onTierChange(tiers: number[]): void {
+  selectedTiers.value = tiers
+  if (idioms.loaded) startSession()
+}
+
 async function ensureLoaded(): Promise<void> {
   if (!idioms.loaded && !idioms.loading) {
     await idioms.load()
   }
 }
-
-onMounted(() => {
-  void (async () => {
-    await ensureLoaded()
-    startSession()
-  })()
-})
 
 /** 判定：认识 / 不认识（立即翻面展示释义，§3.3） */
 function judge(kind: FlashcardJudgment): void {
@@ -129,7 +139,49 @@ function next(): void {
 
 /** 会话中离开页面：兜底 flush（节流定时器之外立即落盘） */
 onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onSessionKeydown)
   if (history.value.length > 0) void progress.flush()
+})
+
+/**
+ * 闪卡键盘快捷键（v0.2.6 迭代，§16.3 P0-①）：
+ * 1 = 认识 / 2 = 不认识 / 空格 = 下一张（翻面后）/ U = 撤销上一步
+ * 仅在闪卡会话进行中生效；输入框/文本域/可编辑元素聚焦时跳过（防误触）。
+ */
+function onSessionKeydown(e: KeyboardEvent): void {
+  if (finished.value || !current.value) return
+  const t = e.target as HTMLElement | null
+  if (t && typeof t.closest === 'function' && (t.closest('input, textarea, select') || t.isContentEditable)) return
+  if (e.ctrlKey || e.metaKey || e.altKey) return
+  switch (e.key) {
+    case '1':
+      e.preventDefault()
+      judge('known')
+      break
+    case '2':
+      e.preventDefault()
+      judge('unknown')
+      break
+    case ' ':
+      e.preventDefault()
+      if (flipped.value) next()
+      break
+    case 'u':
+    case 'U':
+      e.preventDefault()
+      undo()
+      break
+    default:
+      break
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', onSessionKeydown)
+  void (async () => {
+    await ensureLoaded()
+    startSession()
+  })()
 })
 
 function retryLoad(): void {
@@ -143,7 +195,13 @@ function retryLoad(): void {
 <template>
   <section class="view">
     <header class="page-header">
-      <h1 class="page-title">闪卡</h1>
+      <div class="page-heading">
+        <h1 class="page-title">
+          <span class="page-eyebrow" aria-hidden="true" />
+          闪卡
+        </h1>
+        <p class="page-sub">回想释义再判定 · 连续 3 次认识即掌握</p>
+      </div>
       <NButton
         v-if="!finished && history.length > 0"
         size="small"
@@ -155,6 +213,12 @@ function retryLoad(): void {
         ← 撤销上一步
       </NButton>
     </header>
+
+    <!-- 档位选择（用户要求 #6：抽哪一档由用户定；切换即按新档重开本轮） -->
+    <div v-if="!finished" class="tier-row" data-testid="flashcard-tier-select">
+      <span class="tier-label">档位</span>
+      <FrequencyTierSelect :model-value="selectedTiers" :counts="freqCounts" @update:model-value="onTierChange" />
+    </div>
 
     <!-- 加载中 -->
     <div v-if="idioms.loading && !idioms.loaded" class="state-block" data-testid="state-loading">
@@ -224,14 +288,53 @@ function retryLoad(): void {
   margin-bottom: var(--y-space-xl);
 }
 
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .page-title {
   margin: 0;
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title);
+  letter-spacing: 2px;
   color: var(--y-text-primary);
+}
+
+.page-eyebrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  transform: translateY(-3px);
+}
+
+.page-sub {
+  margin: 0;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+  padding-left: 18px;
 }
 
 .undo-btn {
   color: var(--y-text-secondary);
+}
+
+.tier-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--y-space-lg);
+}
+
+.tier-label {
+  flex: 0 0 auto;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+  letter-spacing: 1px;
 }
 
 .session {
@@ -251,10 +354,11 @@ function retryLoad(): void {
   margin: 0;
   font-size: var(--y-font-aux);
   color: var(--y-text-secondary);
-  padding: 4px 12px;
+  padding: 4px 14px;
   border: 1px solid var(--y-border-light);
   border-radius: 999px;
   background: var(--y-bg-card);
+  font-variant-numeric: tabular-nums;
 }
 
 .progress-dot {
@@ -270,7 +374,7 @@ function retryLoad(): void {
 }
 
 .judge-btn {
-  min-width: 120px;
+  min-width: 128px;
   font-weight: 600;
 }
 
@@ -285,7 +389,7 @@ function retryLoad(): void {
 }
 
 .next-btn {
-  min-width: 140px;
+  min-width: 148px;
   font-weight: 600;
 }
 
@@ -301,7 +405,7 @@ function retryLoad(): void {
   max-width: 480px;
   margin: var(--y-space-xl) auto 0;
   padding: var(--y-space-xxl) var(--y-space-xl);
-  border: 1px solid var(--y-border);
+  border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
   background: var(--y-bg-card);
   box-shadow: var(--y-shadow-card);

@@ -137,6 +137,44 @@ export function createSearchIndex(items: Idiom[]): SearchIndex {
   return { entries }
 }
 
+/** 检索索引缓存的单条结构（data/search-index.json，字段短命名以减小体积） */
+export interface SearchCacheWord {
+  /** word */
+  w: string
+  /** 全拼候选项 */
+  v: string[]
+  /** 去空格全拼（子串/编辑距离） */
+  f: string[]
+  /** 首字母 */
+  i: string[]
+}
+
+/**
+ * 用预生成缓存快速重建索引（性能优化 #1：避免启动时对全部词条跑 pinyin-pro）。
+ * 命中缓存的词条直接取拼音数据；未命中（缓存过期/新增词）回退实时计算，保证不缺词。
+ */
+export function createSearchIndexFromCache(items: Idiom[], words: SearchCacheWord[]): SearchIndex {
+  const byWord = new Map(words.map((x) => [x.w, x]))
+  const entries: IndexEntry[] = items.map((idiom) => {
+    const hit = byWord.get(idiom.word)
+    if (hit && hit.v?.length > 0) {
+      return {
+        idiom,
+        pinyinVariants: hit.v,
+        pinyinFlat: hit.f ?? hit.v.map((s) => s.replace(/ /g, '')),
+        initials: hit.i ?? hit.v.map((s) => s.split(' ').map((p) => p[0] ?? '').join('')),
+        word: idiom.word
+      }
+    }
+    const syl = syllablesAll(idiom.word)
+    const pinyinVariants = combine(syl)
+    const pinyinFlat = pinyinVariants.map((s) => s.replace(/ /g, ''))
+    const initials = pinyinVariants.map((s) => s.split(' ').map((p) => p[0] ?? '').join(''))
+    return { idiom, pinyinVariants, pinyinFlat, initials, word: idiom.word }
+  })
+  return { entries }
+}
+
 // ---------------------------------------------------------------------------
 // 检索
 // ---------------------------------------------------------------------------

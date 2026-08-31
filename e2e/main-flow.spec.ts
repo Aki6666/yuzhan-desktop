@@ -52,9 +52,12 @@ test('主流程：记录 → 复习 → 自测（离线模式，AC-02/03/06 精�
   const app = await electron.launch({ args: ['.'] })
   const win = await app.firstWindow()
 
-  // ① 应用壳与成语库加载（离线本地数据，AC-02）
+  // ① 应用壳与成语库加载（v0.2.5 起默认路由为仪表盘首页：先等语料统计，再导航到成语库；
+  //    列表按频次+出现次数排序，目标词不在首页可视区——以词条行可见断言加载完成）
+  await expect(win.getByText('语料', { exact: false }).first()).toBeVisible({ timeout: 30_000 })
+  await win.locator('.nav-item', { hasText: '成语库' }).click()
   await expect(win.getByTestId('search-input')).toBeVisible({ timeout: 30_000 })
-  await expect(win.getByText('鞠躬尽瘁', { exact: false }).first()).toBeVisible({ timeout: 15_000 })
+  await expect(win.getByTestId('idiom-row').first()).toBeVisible({ timeout: 15_000 })
 
   // ② 记录：快速记录（顶栏按钮）→ jgj → 命中卡片 → 复习一次（AC-03 记录闭环）
   await win.locator('.quick-btn').click()

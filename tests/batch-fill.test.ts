@@ -81,7 +81,11 @@ function installApiMock(opts: ApiMockOpts = {}) {
       list: vi.fn(async () => ({ ok: true, data: { items, version: '2026.1' } })),
       get: vi.fn(async () => ({ ok: true, data: null }))
     },
-    progress: { save: vi.fn(async () => ({ ok: true, data: null })) },
+    pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    progress: {
+      save: vi.fn(async () => ({ ok: true, data: null })),
+      list: vi.fn(async () => ({ ok: true, data: { items: {} } }))
+    },
     pending: {
       list: vi.fn(async () => ({ ok: true, data: [...pendingDb] })),
       add: vi.fn(async (word: string) => {
@@ -94,7 +98,13 @@ function installApiMock(opts: ApiMockOpts = {}) {
         return { ok: true, data: null }
       })
     },
-    quiz: { record: vi.fn(async () => ({ ok: true, data: null })) },
+    quiz: {
+      record: vi.fn(async () => ({ ok: true, data: null })),
+      history: {
+        list: vi.fn(async () => ({ ok: true, data: { items: [] } })),
+        add: vi.fn(async () => ({ ok: true, data: null }))
+      }
+    },
     settings: {
       get: vi.fn(async () => ({
         ok: true,

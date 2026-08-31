@@ -21,8 +21,29 @@ import type { ProgressSaveRequest, ProgressStatus, ReviewState, UserProgress } f
 const THROTTLE_MS = 2000
 
 export const useProgressStore = defineStore('progress', () => {
-  /** 内存态：id → UserProgress（会话内事实源） */
+  /** 内存态：id → UserProgress（会话内事实源；启动/自测结束后从 main 全量同步，用户要求 #5） */
   const progress = ref<Record<string, UserProgress>>({})
+  const loaded = ref(false)
+  const loading = ref(false)
+
+  /** 从 main 拉取持久化进度并合并（userData/progress.json；错题本/进度页/自测结束调用）。
+   * 合并语义：main 数据补进内存，但**本地已有的会话写入优先**（节流窗口内尚未落盘的
+   * 写入不被 main 旧值覆盖；单实例下本地总是>=main 新鲜度）。 */
+  async function load(): Promise<void> {
+    if (loading.value) return
+    loading.value = true
+    try {
+      const res = await window.api.progress.list()
+      if (res.ok) {
+        progress.value = { ...res.data.items, ...progress.value }
+        loaded.value = true
+      }
+    } catch {
+      /* 读取失败不阻塞（保持内存态） */
+    } finally {
+      loading.value = false
+    }
+  }
 
   /** 待写合并缓冲（同 id 覆盖式合并） */
   const dirty = new Map<string, ProgressSaveRequest>()
@@ -160,6 +181,9 @@ export const useProgressStore = defineStore('progress', () => {
 
   return {
     progress,
+    loaded,
+    loading,
+    load,
     getProgressItem,
     recordAttempt,
     markStatus,

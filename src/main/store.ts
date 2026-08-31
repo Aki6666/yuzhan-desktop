@@ -24,10 +24,12 @@ import {
 import { join } from 'node:path'
 import type {
   AppSettings,
+  ConfusablePair,
   Idiom,
   PendingItem,
   ProgressSaveRequest,
   QuizAnswer,
+  QuizHistoryItem,
   ReviewState,
   SettingsSetRequest,
   UserProgress
@@ -103,9 +105,13 @@ function defaultSettings(): AppSettings {
   return {
     schemaVersion: 1,
     aiMode: 'disabled',
-    quickInputShortcut: 'CommandOrControl+K',
+    // 默认「+」键（与 renderer quickRecord.DEFAULT_SHORTCUT 一致，FIX-2 v0.1.3）
+    quickInputShortcut: 'Plus',
     aiBaseUrl: DEFAULT_AI_BASE_URL,
-    aiModel: DEFAULT_AI_MODEL
+    aiModel: DEFAULT_AI_MODEL,
+    aiFastMode: true,
+    // 默认浅色主题（v0.2.6 迭代，§16.3 P0-③ 暗色模式）
+    theme: 'light'
   }
 }
 
@@ -130,8 +136,13 @@ export interface StorageOptions {
 
 export interface Storage {
   // 正式库（只读，§4.1）
-  listOfficial(): { items: Idiom[]; version: string }
+  listOfficial(): { items: Idiom[]; version: string; search?: unknown }
   getOfficial(id: string): Idiom | null
+  // 易混淆对（只读，§6.4 data/pairs.json）
+  listPairs(): ConfusablePair[]
+  // 个人库（v0.2.6 迭代 P0-④：userData/idioms-user.json，quality=user 词条持久化）
+  listUserIdioms(): Idiom[]
+  addUserIdiom(idiom: Idiom): Promise<boolean>
   // 进度（§5.6）
   getProgress(): Record<string, UserProgress>
   getProgressItem(id: string): UserProgress | undefined
@@ -141,6 +152,9 @@ export interface Storage {
   listPending(): PendingItem[]
   addPending(word: string): Promise<void>
   removePending(word: string): Promise<void>
+  // 自测历史（用户要求 #4：userData/quiz-history.json）
+  listQuizHistory(): QuizHistoryItem[]
+  addQuizHistory(item: QuizHistoryItem): Promise<void>
   // 设置（§5.6 config.json）
   getSettings(): AppSettings
   saveSettings(patch: SettingsSetRequest): Promise<AppSettings>
@@ -218,7 +232,7 @@ export function createStorage(options: StorageOptions): Storage {
 
   /** 清理残留 *.tmp（上次写入中断遗留） */
   function cleanupStaleTmp(): void {
-    for (const name of ['progress.json', 'pending.json', 'config.json']) {
+    for (const name of ['progress.json', 'pending.json', 'config.json', 'quiz-history.json', 'idioms-user.json']) {
       const tmp = join(userDataDir, `${name}.tmp`)
       if (existsSync(tmp)) {
         try {
@@ -250,6 +264,15 @@ export function createStorage(options: StorageOptions): Storage {
   const settingsFile = loadJsonWithRecovery<AppSettings>('config.json', defaultSettings())
   let settings = sanitizeSettings(settingsFile.data)
   mergeRecovery(settingsFile.recovery)
+
+  const quizHistoryFile = loadJsonWithRecovery<QuizHistoryItem[]>('quiz-history.json', [])
+  let quizHistory = Array.isArray(quizHistoryFile.data) ? quizHistoryFile.data : []
+  mergeRecovery(quizHistoryFile.recovery)
+
+  // 个人库（v0.2.6 迭代 P0-④）：quality=user 词条持久化（userData/idioms-user.json）
+  const userIdiomsFile = loadJsonWithRecovery<Idiom[]>('idioms-user.json', [])
+  let userIdioms = Array.isArray(userIdiomsFile.data) ? userIdiomsFile.data : []
+  mergeRecovery(userIdiomsFile.recovery)
 
   // -------------------------------------------------------------------------
   // SM-2 迁移（v0.2，§5.6）：旧记录无 review 字段 → 启动补默认值
@@ -297,7 +320,9 @@ export function createStorage(options: StorageOptions): Storage {
           ? raw.quickInputShortcut
           : def.quickInputShortcut,
       aiBaseUrl: typeof raw.aiBaseUrl === 'string' && raw.aiBaseUrl.length > 0 ? raw.aiBaseUrl : def.aiBaseUrl,
-      aiModel: typeof raw.aiModel === 'string' && raw.aiModel.length > 0 ? raw.aiModel : def.aiModel
+      aiModel: typeof raw.aiModel === 'string' && raw.aiModel.length > 0 ? raw.aiModel : def.aiModel,
+      aiFastMode: typeof raw.aiFastMode === 'boolean' ? raw.aiFastMode : def.aiFastMode,
+      theme: raw.theme === 'light' || raw.theme === 'dark' ? raw.theme : def.theme
     }
   }
 
@@ -305,9 +330,10 @@ export function createStorage(options: StorageOptions): Storage {
   // 正式库（只读，data/idioms/**/*.json，§5.5 按首字拼音分区）
   // -------------------------------------------------------------------------
 
-  let officialCache: { items: Idiom[]; version: string } | null = null
+  let officialCache: { items: Idiom[]; version: string; search?: unknown } | null = null
+  let pairsCache: ConfusablePair[] | null = null
 
-  function loadOfficial(): { items: Idiom[]; version: string } {
+  function loadOfficial(): { items: Idiom[]; version: string; search?: unknown } {
     if (officialCache) return officialCache
     const items: Idiom[] = []
     let version = '0.0.0'
@@ -339,8 +365,28 @@ export function createStorage(options: StorageOptions): Storage {
       /* 版本缺失走兜底 */
     }
 
-    items.sort((a, b) => (a.id < b.id ? -1 : 1))
-    officialCache = { items, version }
+    // 预生成检索索引缓存（性能优化 #1：renderer 免启动时 pinyin-pro 全量计算）
+    let search: unknown = undefined
+    try {
+      const idxFile = join(dataDir, 'search-index.json')
+      if (existsSync(idxFile)) {
+        const idx = JSON.parse(readFileSync(idxFile, 'utf8')) as { words?: unknown[] }
+        if (Array.isArray(idx.words) && idx.words.length > 0) search = idx.words
+      }
+    } catch {
+      logger.warn('[store] search-index.json 解析失败，renderer 将回退实时计算')
+    }
+
+    // 预排序（用户要求 #2「提前排序好」）：频次档降序 → 真题出现次数降序 → id 字典序。
+    // renderer 默认「档位序」视图无需再排序；切换排序时在 renderer 侧重排（毫秒级）。
+    items.sort((a, b) => {
+      if (a.frequency !== b.frequency) return b.frequency - a.frequency
+      const ao = a.occurrences ?? 0
+      const bo = b.occurrences ?? 0
+      if (ao !== bo) return bo - ao
+      return a.id < b.id ? -1 : 1
+    })
+    officialCache = { items, version, search }
     return officialCache
   }
 
@@ -367,6 +413,27 @@ export function createStorage(options: StorageOptions): Storage {
     }
   }
 
+  /** 易混淆对加载（data/pairs.json，§6.4；缺失/损坏 → 空数组不崩） */
+  function loadPairs(): ConfusablePair[] {
+    if (pairsCache) return pairsCache
+    const file = join(dataDir, 'pairs.json')
+    try {
+      if (existsSync(file)) {
+        const parsed = JSON.parse(readFileSync(file, 'utf8')) as { pairs?: ConfusablePair[] }
+        if (Array.isArray(parsed.pairs)) {
+          pairsCache = parsed.pairs.filter(
+            (p) => p && typeof p.a === 'string' && typeof p.b === 'string' && typeof p.diff === 'string'
+          )
+          return pairsCache
+        }
+      }
+    } catch {
+      logger.warn('[store] pairs.json 解析失败，按空对处理')
+    }
+    pairsCache = []
+    return pairsCache
+  }
+
   // -------------------------------------------------------------------------
   // 对外 API
   // -------------------------------------------------------------------------
@@ -378,6 +445,24 @@ export function createStorage(options: StorageOptions): Storage {
 
     getOfficial(id: string): Idiom | null {
       return loadOfficial().items.find((i) => i.id === id) ?? null
+    },
+
+    listPairs(): ConfusablePair[] {
+      return loadPairs()
+    },
+
+    // 个人库（v0.2.6 迭代 P0-④）
+    listUserIdioms(): Idiom[] {
+      return userIdioms
+    },
+
+    async addUserIdiom(idiom: Idiom): Promise<boolean> {
+      const word = idiom.word?.trim()
+      if (!word) return false
+      if (userIdioms.some((i) => i.word === word)) return false // 按词形去重
+      userIdioms = [...userIdioms, idiom]
+      await queue.enqueue('idioms-user.json', () => atomicWriteJson('idioms-user.json', userIdioms))
+      return true
     },
 
     getProgress() {
@@ -444,6 +529,16 @@ export function createStorage(options: StorageOptions): Storage {
       }
     },
 
+    listQuizHistory(): QuizHistoryItem[] {
+      return quizHistory
+    },
+
+    async addQuizHistory(item: QuizHistoryItem): Promise<void> {
+      // 保留最近 200 条（防无限增长）
+      quizHistory = [...quizHistory, item].slice(-200)
+      return queue.enqueue('quiz-history.json', () => atomicWriteJson('quiz-history.json', quizHistory))
+    },
+
     getSettings(): AppSettings {
       return settings
     },
@@ -454,7 +549,9 @@ export function createStorage(options: StorageOptions): Storage {
         ...(patch.aiMode !== undefined ? { aiMode: patch.aiMode } : {}),
         ...(patch.quickInputShortcut !== undefined ? { quickInputShortcut: patch.quickInputShortcut } : {}),
         ...(patch.aiBaseUrl !== undefined ? { aiBaseUrl: patch.aiBaseUrl } : {}),
-        ...(patch.aiModel !== undefined ? { aiModel: patch.aiModel } : {})
+        ...(patch.aiModel !== undefined ? { aiModel: patch.aiModel } : {}),
+        ...(patch.aiFastMode !== undefined ? { aiFastMode: patch.aiFastMode } : {}),
+        ...(patch.theme !== undefined ? { theme: patch.theme } : {})
       }
       const sanitized = sanitizeSettings(next)
       // 幂等 no-op：内容无变化不写盘（避免无意义队列写入与 teardown 竞态）

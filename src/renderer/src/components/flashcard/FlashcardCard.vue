@@ -84,7 +84,7 @@ const registerText = computed(() => (props.idiom.register === '无' ? '' : props
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border: 1px solid var(--y-border);
+  border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-xl);
   background: var(--y-bg-card);
   display: flex;
@@ -96,28 +96,54 @@ const registerText = computed(() => (props.idiom.register === '无' ? '' : props
   box-shadow: var(--y-shadow-card);
 }
 
+/* 正面：宣纸暖白 + 朱砂顶饰 + 轻微墨晕 */
+.face-front {
+  background:
+    radial-gradient(240px 120px at 20% 0%, color-mix(in srgb, var(--y-primary) 7%, transparent), transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--y-primary-soft) 55%, var(--y-bg-card)) 0%, var(--y-bg-card) 82%);
+  border-color: color-mix(in srgb, var(--y-primary) 20%, var(--y-border));
+  position: relative;
+  overflow: hidden;
+}
+
+.face-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--y-primary) 0%, rgba(192, 67, 44, 0.35) 70%, transparent 100%);
+}
+
 .face-back {
   transform: rotateY(180deg);
+  background:
+    linear-gradient(180deg, var(--y-bg-subtle) 0%, var(--y-bg-card) 70%);
 }
 
 .front-hint {
   margin: 0 0 var(--y-space-xl);
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .front-word {
   margin: 0;
-  font-size: 42px;
-  letter-spacing: 6px;
+  font-family: var(--y-font-serif);
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 10px;
   color: var(--y-text-primary);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .front-pinyin {
   margin: var(--y-space-md) 0 0;
   font-size: var(--y-font-body);
   color: var(--y-text-secondary);
+  letter-spacing: 0.5px;
 }
 
 .judge-badge {
@@ -128,9 +154,10 @@ const registerText = computed(() => (props.idiom.register === '无' ? '' : props
 
 .back-word {
   margin: 0 0 var(--y-space-md);
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title-lg);
   color: var(--y-text-primary);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .back-meaning {

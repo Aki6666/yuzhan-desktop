@@ -38,8 +38,9 @@ defineProps<{ examples: ExampleItem[] }>()
 }
 
 .example-item {
-  padding: 10px 14px;
+  padding: 12px 14px;
   border: 1px solid var(--y-border-light);
+  border-left: 3px solid color-mix(in srgb, var(--y-primary) 55%, var(--y-border));
   border-radius: var(--y-radius-sm);
   background: var(--y-bg-subtle);
 }

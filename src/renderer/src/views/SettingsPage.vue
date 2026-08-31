@@ -9,7 +9,7 @@
  * U2 视觉重构：分组设置卡片，消费 U1 设计 token；data-testid 与行为不变。
  */
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import { NButton, NCard, NInput, NTag } from 'naive-ui'
+import { NButton, NCard, NInput, NSwitch, NTag } from 'naive-ui'
 import { useSettingsStore } from '@renderer/stores/settings'
 import { usePendingStore } from '@renderer/stores/pending'
 import { useProgressStore } from '@renderer/stores/progress'
@@ -175,7 +175,10 @@ const aiModeTag = {
   <section class="view settings-page" data-testid="settings-page">
     <header class="page-header">
       <div class="page-heading">
-        <h1 class="page-title">设置</h1>
+        <h1 class="page-title">
+          <span class="page-eyebrow" aria-hidden="true" />
+          设置
+        </h1>
         <p class="page-sub">快捷键与数据</p>
       </div>
     </header>
@@ -214,6 +217,29 @@ const aiModeTag = {
       <p class="muted">
         默认「+」键（主键盘 + / 等号键 / 数字键盘加号）唤起快速记录；点击「自定义按键」后按下新的
         按键或组合键即生效（保存后立即应用），Esc 取消；Esc 关闭弹层、回车直接记录。
+      </p>
+    </NCard>
+
+    <!-- 外观（v0.2.6 迭代，§16.3 P0-③ 暗色模式） -->
+    <NCard class="card" data-testid="card-theme">
+      <template #header>
+        <div class="card-header">
+          <span class="card-title">外观</span>
+          <NTag size="small" :bordered="false" round>主题</NTag>
+        </div>
+      </template>
+      <div class="row">
+        <span class="row-label">深色模式</span>
+        <NSwitch
+          :value="settingsStore.settings.theme === 'dark'"
+          size="small"
+          data-testid="theme-switch"
+          @update:value="(v: boolean) => settingsStore.setTheme(v ? 'dark' : 'light')"
+        />
+      </div>
+      <p class="muted">
+        暗色「暖墨夜」主题：深墨灰底 + 纸白文字，保留纸感不刺眼，适合晚间刷题复习；
+        选择即时生效并持久化（config.json）。
       </p>
     </NCard>
 
@@ -260,11 +286,21 @@ const aiModeTag = {
 
       <div class="ai-field" data-testid="ai-endpoint-field">
         <span class="row-label">API 端点（OpenAI 兼容）</span>
-        <NInput v-model:value="aiBaseUrlInput" size="small" placeholder="https://api.openai.com/v1" data-testid="ai-baseurl-input" />
+        <NInput v-model:value="aiBaseUrlInput" size="small" placeholder="https://api.deepseek.com" data-testid="ai-baseurl-input" />
       </div>
       <div class="ai-field" data-testid="ai-model-field">
         <span class="row-label">模型名</span>
-        <NInput v-model:value="aiModelInput" size="small" placeholder="gpt-4o-mini" data-testid="ai-model-input" />
+        <NInput v-model:value="aiModelInput" size="small" placeholder="deepseek-v4-flash" data-testid="ai-model-input" />
+      </div>
+      <div class="ai-field" data-testid="ai-fastmode-field">
+        <span class="row-label">快速模式</span>
+        <NSwitch
+          :value="settingsStore.settings.aiFastMode !== false"
+          size="small"
+          data-testid="ai-fastmode-switch"
+          @update:value="(v: boolean) => settingsStore.setAiFastMode(v)"
+        />
+        <span class="muted">开启后查询跳过模型思考阶段（thinking:disabled），成语释义查询速度更快；如需更深入的分析可关闭</span>
       </div>
 
       <p v-if="aiMessage" class="success" data-testid="ai-message">{{ aiMessage }}</p>
@@ -324,20 +360,33 @@ const aiModeTag = {
 .page-heading {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .page-title {
   margin: 0;
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title-lg);
   font-weight: 700;
+  letter-spacing: 2px;
   color: var(--y-text-primary);
+}
+
+.page-eyebrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  transform: translateY(-3px);
 }
 
 .page-sub {
   margin: 0;
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  padding-left: 18px;
 }
 
 .card {

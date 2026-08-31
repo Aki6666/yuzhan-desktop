@@ -51,7 +51,10 @@ const hasData = computed(() => summary.value.total > 0)
   <section class="view progress-page" data-testid="progress-page">
     <header class="page-header">
       <div class="page-heading">
-        <h1 class="page-title">进度</h1>
+        <h1 class="page-title">
+          <span class="page-eyebrow" aria-hidden="true" />
+          进度
+        </h1>
         <p class="page-sub">掌握度 / 复习趋势 / 误用类型 · 一览</p>
       </div>
     </header>
@@ -157,20 +160,33 @@ const hasData = computed(() => summary.value.total > 0)
 .page-heading {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .page-title {
   margin: 0;
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title-lg);
   font-weight: 700;
+  letter-spacing: 2px;
   color: var(--y-text-primary);
+}
+
+.page-eyebrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  transform: translateY(-3px);
 }
 
 .page-sub {
   margin: 0;
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  padding-left: 18px;
 }
 
 .empty-block {
@@ -178,6 +194,7 @@ const hasData = computed(() => summary.value.total > 0)
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
   padding: 40px 24px;
+  box-shadow: var(--y-shadow-card);
 }
 
 .empty-tip {
@@ -194,7 +211,7 @@ const hasData = computed(() => summary.value.total > 0)
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 20px 22px;
+  padding: 22px 24px;
   background: var(--y-bg-card);
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
@@ -208,7 +225,7 @@ const hasData = computed(() => summary.value.total > 0)
 }
 
 .mastery-value {
-  font-size: 44px;
+  font-size: 46px;
   font-weight: 700;
   line-height: 1.1;
   color: var(--y-primary);
@@ -230,6 +247,7 @@ const hasData = computed(() => summary.value.total > 0)
 .mastery-sub {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  font-variant-numeric: tabular-nums;
 }
 
 .mastery-track {
@@ -242,8 +260,8 @@ const hasData = computed(() => summary.value.total > 0)
 .mastery-fill {
   height: 100%;
   border-radius: 4px;
-  background: var(--y-primary);
-  transition: width 0.4s ease;
+  background: linear-gradient(90deg, var(--y-primary) 0%, color-mix(in srgb, var(--y-primary) 60%, var(--y-warning)) 100%);
+  transition: width var(--y-motion-slow) var(--y-motion-ease);
 }
 
 .stat-grid {
@@ -318,5 +336,6 @@ const hasData = computed(() => summary.value.total > 0)
 .total-line {
   margin: 0;
   padding-left: 2px;
+  font-variant-numeric: tabular-nums;
 }
 </style>

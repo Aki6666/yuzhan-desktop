@@ -231,21 +231,31 @@ function installApiMock(opts: { items?: Idiom[] } = {}) {
       list: vi.fn(async () => ({ ok: true, data: { items, version: '2026.1' } })),
       get: vi.fn(async () => ({ ok: true, data: null }))
     },
-    progress: { save: vi.fn(async () => ({ ok: true, data: null })) },
+    pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    progress: {
+      save: vi.fn(async () => ({ ok: true, data: null })),
+      list: vi.fn(async () => ({ ok: true, data: { items: {} } }))
+    },
     pending: {
       list: vi.fn(async () => ({ ok: true, data: [] })),
       add: vi.fn(async () => ({ ok: true, data: null })),
       remove: vi.fn(async () => ({ ok: true, data: null }))
     },
-    quiz: { record: vi.fn(async () => ({ ok: true, data: null })) },
+    quiz: {
+      record: vi.fn(async () => ({ ok: true, data: null })),
+      history: {
+        list: vi.fn(async () => ({ ok: true, data: { items: [] } })),
+        add: vi.fn(async () => ({ ok: true, data: null }))
+      }
+    },
     settings: {
       get: vi.fn(async () => ({
         ok: true,
-        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'Plus' }
       })),
       set: vi.fn(async () => ({
         ok: true,
-        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'Plus' }
       }))
     },
     log: vi.fn(async () => ({ ok: true, data: null }))

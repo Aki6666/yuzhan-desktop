@@ -36,9 +36,10 @@ const hitSpan = computed<HighlightSpan | null>(() =>
 
 <style scoped>
 .hl-hit {
-  background: var(--y-primary-soft);
+  background: color-mix(in srgb, var(--y-primary) 16%, transparent);
   color: var(--y-primary);
   border-radius: 3px;
   padding: 0 1px;
+  font-weight: 600;
 }
 </style>

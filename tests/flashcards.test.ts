@@ -8,6 +8,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { mount, flushPromises } from '@vue/test-utils'
 import { createPinia } from 'pinia'
 import { createMemoryHistory, createRouter } from 'vue-router'
+import type { VueWrapper } from '@vue/test-utils'
 import type { Idiom, YuzhanApi } from '../shared/ipc/contracts'
 import {
   MASTERED_AFTER_KNOWN,
@@ -201,9 +202,10 @@ function stubWindowApi(opts: { items?: Idiom[] } = {}): { save: ReturnType<typeo
       list: vi.fn().mockResolvedValue({ ok: true, data: { items: opts.items ?? [fixtureA, fixtureB], version: '1.0.0' } }),
       get: vi.fn()
     },
-    progress: { save },
+    pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    progress: { save, list: vi.fn(async () => ({ ok: true, data: { items: {} } })) },
     pending: { list: vi.fn(), add: vi.fn(), remove: vi.fn() },
-    quiz: { record: vi.fn() },
+    quiz: { record: vi.fn(), history: { list: vi.fn(async () => ({ ok: true, data: { items: [] } })), add: vi.fn(async () => ({ ok: true, data: null })) } },
     settings: { get: vi.fn(), set: vi.fn() },
     log: vi.fn()
   } as unknown as YuzhanApi
@@ -429,5 +431,72 @@ describe('AC-05 页面级：连续 3 次认识 → mastered', () => {
     t.judge('a-01', 'known')
     t.judge('a-01', 'unknown')
     expect(t.get('a-01')).toEqual({ status: 'learning', consecutiveKnown: 0 })
+  })
+})
+
+// ---------------------------------------------------------------------------
+// v0.2.6 迭代（§16.3 P0-①）：闪卡键盘快捷键 1/2/空格/U
+// ---------------------------------------------------------------------------
+
+describe('FlashcardsPage 键盘快捷键（v0.2.6 P0-①）', () => {
+  beforeEach(() => {
+    flashcardTracker.reset()
+  })
+
+  afterEach(() => {
+    delete (window as unknown as { api?: unknown }).api
+  })
+
+  /** 在 window 上派发按键（页面挂载时注册的监听器接收） */
+  async function press(w: VueWrapper, key: string): Promise<void> {
+    window.dispatchEvent(new KeyboardEvent('keydown', { key }))
+    await flushPromises()
+  }
+
+  it('按 1 → 认识判定翻面；再按空格 → 下一张恢复正面', async () => {
+    const { w } = await mountPage()
+    expect(w.find('[data-testid="session"]').exists()).toBe(true)
+    await press(w, '1')
+    expect(w.find('.flip-inner.flipped').exists()).toBe(true)
+    expect(w.find('[data-testid="judge-badge"]').text()).toBe('认识')
+    // 空格 → 下一张（两张牌堆未结束 → 恢复正面）
+    await press(w, ' ')
+    expect(w.find('.flip-inner.flipped').exists()).toBe(false)
+    w.unmount()
+    await flushPromises()
+  })
+
+  it('按 2 → 不认识判定翻面', async () => {
+    const { w } = await mountPage()
+    await press(w, '2')
+    expect(w.find('.flip-inner.flipped').exists()).toBe(true)
+    expect(w.find('[data-testid="judge-badge"]').text()).toBe('不认识')
+    w.unmount()
+    await flushPromises()
+  })
+
+  it('按 U（小写 u）→ 撤销上一步恢复正面', async () => {
+    const { w } = await mountPage()
+    await press(w, '1')
+    expect(w.find('.flip-inner.flipped').exists()).toBe(true)
+    await press(w, 'u')
+    expect(w.find('.flip-inner.flipped').exists()).toBe(false)
+    expect(w.find('[data-testid="undo-button"]').exists()).toBe(false)
+    w.unmount()
+    await flushPromises()
+  })
+
+  it('输入框聚焦时按 1 不触发判定（防误触）', async () => {
+    const { w } = await mountPage()
+    const input = document.createElement('input')
+    document.body.appendChild(input)
+    input.focus()
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: '1', bubbles: true }))
+    await flushPromises()
+    // 未翻面（事件 target 为 input → 跳过）
+    expect(w.find('.flip-inner.flipped').exists()).toBe(false)
+    input.remove()
+    w.unmount()
+    await flushPromises()
   })
 })

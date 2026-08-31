@@ -1,13 +1,15 @@
 <script setup lang="ts">
 /**
- * 列表行（固定行高 56px，与 IdiomVirtualList rowHeight 保持一致）
- * 点击跳转详情 /idioms/:id（§3.2；详情页为 T5 产物，链接先就位）
+ * 列表单元格（多列网格，固定高度 90px，与 IdiomVirtualList cellHeight 一致）
+ * 点击跳转详情 /idioms/:id
  *
- * U2 视觉重构：消费 U1 设计 token，行 hover/激活态，data-testid 与行为不变。
+ * v0.2.6 墨韵重构：衬线词形 + 纸感卡片 + 朱砂 hover 指示条；
+ * 高度/几何参数不变（cellHeight 90 + gap 12），data-testid/data-id 不变。
  */
 import { computed } from 'vue'
 import { NTag } from 'naive-ui'
 import type { Idiom } from '@shared/ipc/contracts'
+import { FREQUENCY_TIER_INFO } from '@renderer/lib/listFilters'
 import HighlightText from './HighlightText.vue'
 
 const props = defineProps<{ idiom: Idiom; keyword: string }>()
@@ -28,78 +30,136 @@ function tagType(f: number): 'default' | 'info' | 'success' | 'warning' | 'error
 }
 
 const freqTag = computed(() => tagType(props.idiom.frequency))
+
+/** 档位理由 tooltip，如「5档：真题出现 80 次以上」 */
+const freqTitle = computed(() => {
+  const f = props.idiom.frequency
+  const info = FREQUENCY_TIER_INFO[f as 1 | 2 | 3 | 4 | 5]
+  return info ? `${info.label}：${info.desc}` : `频次 ${f} 档`
+})
+
+/** 出现次数副行（无 occurrences 时隐藏，如教研备用词） */
+const occurrencesText = computed(() =>
+  typeof props.idiom.occurrences === 'number' && props.idiom.occurrences > 0
+    ? `真题出现 ${props.idiom.occurrences} 次`
+    : ''
+)
 </script>
 
 <template>
   <RouterLink
     :to="`/idioms/${idiom.id}`"
-    class="idiom-row"
+    class="idiom-cell"
     data-testid="idiom-row"
     :data-id="idiom.id"
   >
-    <div class="idiom-row-main">
+    <div class="idiom-cell-main">
       <span class="idiom-word">
         <HighlightText :text="idiom.word" :query="keyword" />
       </span>
       <span class="idiom-pinyin">
         <HighlightText mode="pinyin" :text="idiom.pinyin" :query="keyword" />
+        <span v-if="occurrencesText" class="idiom-occur" :title="occurrencesText">{{ occurrencesText }}</span>
       </span>
     </div>
-    <div class="idiom-row-meta">
-      <NTag size="small" :type="freqTag" round data-testid="freq-tag">频 {{ idiom.frequency }}</NTag>
+    <div class="idiom-cell-meta">
+      <NTag size="small" :type="freqTag" round :title="freqTitle" data-testid="freq-tag">
+        {{ idiom.frequency }}档
+      </NTag>
       <NTag size="small" round bordered class="emotion-tag">{{ idiom.emotion }}</NTag>
     </div>
   </RouterLink>
 </template>
 
 <style scoped>
-.idiom-row {
+.idiom-cell {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 12px;
-  height: 56px; /* 与虚拟列表 rowHeight 一致（固定行高） */
-  padding: 0 16px;
-  border-bottom: 1px solid var(--y-border-light);
+  gap: 4px;
+  height: 90px; /* 与 IdiomVirtualList cellHeight 一致（几何参数不变） */
+  padding: 10px 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-md);
+  background: var(--y-bg-card);
   text-decoration: none;
   color: inherit;
-  transition: background-color 0.12s ease;
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--y-motion-base) var(--y-motion-ease),
+    background-color var(--y-motion-base) var(--y-motion-ease),
+    box-shadow var(--y-motion-base) var(--y-motion-ease),
+    transform var(--y-motion-base) var(--y-motion-ease);
 }
 
-.idiom-row:hover {
-  background: var(--y-bg-hover);
+.idiom-cell:hover {
+  border-color: color-mix(in srgb, var(--y-primary) 30%, var(--y-border));
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-pop);
+  transform: translateY(-2px);
 }
 
-.idiom-row:active {
+/* hover 左侧朱砂指示条（印章落款感） */
+.idiom-cell:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--y-primary);
+}
+
+.idiom-cell:active {
   background: var(--y-bg-active);
 }
 
-.idiom-row:last-child {
-  border-bottom: none;
-}
-
-.idiom-row-main {
+.idiom-cell-main {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   min-width: 0;
 }
 
 .idiom-word {
-  font-size: 17px;
+  font-family: var(--y-font-serif);
+  font-size: 16px;
   font-weight: 600;
+  letter-spacing: 1px;
   color: var(--y-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .idiom-pinyin {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
-.idiom-row-meta {
+.idiom-occur {
+  flex: 0 0 auto;
+  color: var(--y-text-tertiary);
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
+.idiom-cell-meta {
   display: flex;
+  align-items: center;
   gap: 6px;
   flex: 0 0 auto;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .emotion-tag {

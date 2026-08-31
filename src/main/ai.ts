@@ -55,6 +55,8 @@ export interface AiProviderConfig {
   apiKey: string
   baseURL: string
   model: string
+  /** 快速模式（默认 true）：请求体带 thinking:disabled，跳过模型思考阶段以提升速度（用户要求 #4） */
+  fastMode?: boolean
 }
 
 /** AI 输出 → AiDraftResult 的宽松校验/清洗（§9.3：缺字段标记不丢原文） */
@@ -147,7 +149,10 @@ export function createProvider(type: AiProvider['id'], config: AiProviderConfig)
               { role: 'system', content: buildSystemPrompt() },
               { role: 'user', content: word }
             ],
-            temperature: 0.2
+            temperature: 0.2,
+            // 快速模式：关闭思考阶段（DeepSeek 官方 thinking 参数；成语释义查询无需深度推理，
+            // 可显著降低首字延迟，用户要求 #4）。仅对 OpenAI 兼容端点生效。
+            ...(config.fastMode !== false ? { thinking: { type: 'disabled' } } : {})
           })
       const headers: Record<string, string> = { 'Content-Type': 'application/json' }
       if (!isOllama) headers.Authorization = `Bearer ${config.apiKey}`

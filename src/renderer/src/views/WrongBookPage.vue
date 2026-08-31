@@ -20,6 +20,7 @@ const progressStore = useProgressStore()
 
 onMounted(() => {
   void idiomsStore.load()
+  void progressStore.load() // 错题本数据源（用户要求 #5：自测错题持久化读取）
 })
 
 const rows = computed(() => wrongItems(progressStore.progress, idiomsStore.items))
@@ -38,7 +39,10 @@ async function reviewNow(id: string): Promise<void> {
   <section class="view wrongbook-page" data-testid="wrongbook-page">
     <header class="page-header">
       <div class="page-heading">
-        <h1 class="page-title">错题本</h1>
+        <h1 class="page-title">
+          <span class="page-eyebrow" aria-hidden="true" />
+          错题本
+        </h1>
         <p class="page-sub">错词汇总 · 误用类型分布</p>
       </div>
       <span class="result-count" data-testid="wrongbook-count">
@@ -153,26 +157,44 @@ async function reviewNow(id: string): Promise<void> {
 .page-heading {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .page-title {
   margin: 0;
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title-lg);
   font-weight: 700;
+  letter-spacing: 2px;
   color: var(--y-text-primary);
+}
+
+.page-eyebrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  transform: translateY(-3px);
 }
 
 .page-sub {
   margin: 0;
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  padding-left: 18px;
 }
 
 .result-count {
   font-size: var(--y-font-aux);
   color: var(--y-text-secondary);
-  padding-bottom: 2px;
+  padding: 4px 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 999px;
+  background: var(--y-bg-card);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .list-state {
@@ -186,6 +208,7 @@ async function reviewNow(id: string): Promise<void> {
   background: var(--y-bg-card);
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
   text-align: center;
 }
 
@@ -267,7 +290,7 @@ async function reviewNow(id: string): Promise<void> {
   gap: 12px;
   padding: 12px 16px;
   border-bottom: 1px solid var(--y-border-light);
-  transition: background-color 0.12s ease;
+  transition: background-color var(--y-motion-fast) var(--y-motion-ease);
 }
 
 .wrong-row:last-child {
@@ -288,6 +311,7 @@ async function reviewNow(id: string): Promise<void> {
 }
 
 .wrong-word {
+  font-family: var(--y-font-serif);
   font-size: 16px;
   font-weight: 600;
   color: var(--y-text-primary);

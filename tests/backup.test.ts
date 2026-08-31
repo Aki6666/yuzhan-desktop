@@ -5,7 +5,7 @@ import { describe, it, expect } from 'vitest'
 import { backupFileName, buildBackupPayload } from '../src/renderer/src/lib/backup'
 import type { AppSettings, PendingItem, UserProgress } from '../shared/ipc/contracts'
 
-const settings: AppSettings = { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+const settings: AppSettings = { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'Plus' }
 const pending: PendingItem[] = [{ word: '不落窠臼', addedAt: '2026-08-31T00:00:00.000Z' }]
 const progress: Record<string, UserProgress> = {
   'ju-gong-jin-cui-01': { id: 'ju-gong-jin-cui-01', status: 'mastered', wrongTimes: 0, wrongTypes: {} }

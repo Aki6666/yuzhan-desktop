@@ -106,7 +106,7 @@ function onSelect(i: number): void {
 <style scoped>
 .quiz-question {
   max-width: 640px;
-  border: 1px solid var(--y-border);
+  border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
   padding: var(--y-space-xl) var(--y-space-xl);
   background: var(--y-bg-card);
@@ -121,6 +121,7 @@ function onSelect(i: number): void {
 .q-progress {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  font-variant-numeric: tabular-nums;
 }
 
 .q-main {
@@ -131,10 +132,11 @@ function onSelect(i: number): void {
 }
 
 .q-word {
-  font-size: 26px;
+  font-family: var(--y-font-serif);
+  font-size: 28px;
   font-weight: 700;
   color: var(--y-text-primary);
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 .q-pinyin {
@@ -146,6 +148,7 @@ function onSelect(i: number): void {
   margin: var(--y-space-sm) 0 0;
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  letter-spacing: 1px;
 }
 
 .q-options {
@@ -158,18 +161,24 @@ function onSelect(i: number): void {
 .q-option {
   justify-content: flex-start;
   height: auto;
-  min-height: 42px;
+  min-height: 44px;
   padding: var(--y-space-sm) var(--y-space-lg);
   white-space: normal;
   border-radius: var(--y-radius-md);
+  transition:
+    transform var(--y-motion-fast) var(--y-motion-ease),
+    box-shadow var(--y-motion-fast) var(--y-motion-ease),
+    background-color var(--y-motion-fast) var(--y-motion-ease);
 }
 
 /* hover 微交互（未作答时） */
 .q-option:not(:disabled):hover {
   background: var(--y-bg-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--y-shadow-card);
 }
 
-/* 柔和对错反馈：正确答案绿色浅底、误选红色浅底（color-mix 由 token 派生，非硬编码） */
+/* 柔和对错反馈：正确答案苔绿浅底、误选朱砂浅底 */
 .q-option.is-correct {
   background: color-mix(in srgb, var(--y-success) 10%, var(--y-bg-card));
   border-color: color-mix(in srgb, var(--y-success) 40%, var(--y-border));
@@ -188,8 +197,18 @@ function onSelect(i: number): void {
 
 .q-option-label {
   flex: 0 0 auto;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
   margin-right: var(--y-space-sm);
+  border-radius: 50%;
+  background: var(--y-bg-subtle);
+  border: 1px solid var(--y-border);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--y-text-secondary);
 }
 
 .q-option-text {
@@ -204,6 +223,7 @@ function onSelect(i: number): void {
   margin-top: var(--y-space-lg);
   padding: var(--y-space-lg);
   border: 1px solid var(--y-border-light);
+  border-left: 3px solid var(--y-primary);
   border-radius: var(--y-radius-md);
   background: var(--y-bg-subtle);
 }

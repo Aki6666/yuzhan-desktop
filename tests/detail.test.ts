@@ -82,12 +82,14 @@ describe('detailFormat 纯函数', () => {
 // ---------------------------------------------------------------------------
 
 describe('IdiomDetailCard 考点字段渲染（§5.1）', () => {
-  it('渲染词形、拼音与频次点', () => {
+  it('渲染词形、拼音与频次档徽标（档位含义 tooltip）', () => {
     const w = mount(IdiomDetailCard, { props: { idiom: fixture } })
     expect(w.find('.word').text()).toBe('鞠躬尽瘁')
     expect(w.find('.pinyin').text()).toBe('jū gōng jìn cuì')
-    expect(w.findAll('.freq-dot.on')).toHaveLength(4)
-    expect(w.find('.freq-num').text()).toBe('4/5')
+    // 用户要求 #2：频次以「档位徽标 + 出现次数」呈现（原抽象点阵已移除）
+    expect(w.find('.freq-tier').text()).toBe('4档')
+    expect(w.find('.freq-tier').attributes('title')).toContain('真题出现')
+    expect(w.find('.freq-occur').exists()).toBe(false) // fixture 无 occurrences 字段
   })
 
   it('释义多义项分号分隔渲染：分号拆成多条，无分号单条', () => {
@@ -209,9 +211,10 @@ function stubWindowApi(listImpl: () => Promise<unknown>): void {
       list: vi.fn(listImpl),
       get: vi.fn()
     },
-    progress: { save: vi.fn() },
+    pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    progress: { save: vi.fn(), list: vi.fn(async () => ({ ok: true, data: { items: {} } })) },
     pending: { list: vi.fn(), add: vi.fn(), remove: vi.fn() },
-    quiz: { record: vi.fn() },
+    quiz: { record: vi.fn(), history: { list: vi.fn(async () => ({ ok: true, data: { items: [] } })), add: vi.fn(async () => ({ ok: true, data: null })) } },
     settings: { get: vi.fn(), set: vi.fn() },
     log: vi.fn()
   } as unknown as YuzhanApi
@@ -276,9 +279,10 @@ describe('IdiomDetailPage 页面状态', () => {
       .mockResolvedValueOnce(listOk([fixture]))
     const api = {
       data: { list: listMock, get: vi.fn() },
-      progress: { save: vi.fn() },
+      pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    progress: { save: vi.fn(), list: vi.fn(async () => ({ ok: true, data: { items: {} } })) },
       pending: { list: vi.fn(), add: vi.fn(), remove: vi.fn() },
-      quiz: { record: vi.fn() },
+      quiz: { record: vi.fn(), history: { list: vi.fn(async () => ({ ok: true, data: { items: [] } })), add: vi.fn(async () => ({ ok: true, data: null })) } },
       settings: { get: vi.fn(), set: vi.fn() },
       log: vi.fn()
     } as unknown as YuzhanApi

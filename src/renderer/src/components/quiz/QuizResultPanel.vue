@@ -61,7 +61,7 @@ const emit = defineEmits<{ restart: []; back: [] }>()
 <style scoped>
 .quiz-result {
   max-width: 640px;
-  border: 1px solid var(--y-border);
+  border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
   padding: var(--y-space-xl) var(--y-space-xl);
   background: var(--y-bg-card);
@@ -79,7 +79,9 @@ const emit = defineEmits<{ restart: []; back: [] }>()
 
 .r-title {
   margin: 0;
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title);
+  letter-spacing: 2px;
   color: var(--y-text-primary);
 }
 
@@ -102,6 +104,7 @@ const emit = defineEmits<{ restart: []; back: [] }>()
   margin: 0 0 var(--y-space-sm);
   font-size: var(--y-font-aux);
   font-weight: 600;
+  letter-spacing: 1px;
   color: var(--y-text-secondary);
 }
 
@@ -114,6 +117,7 @@ const emit = defineEmits<{ restart: []; back: [] }>()
 .r-wrong-item {
   padding: var(--y-space-md) var(--y-space-lg);
   border: 1px solid var(--y-border-light);
+  border-left: 3px solid color-mix(in srgb, var(--y-danger) 60%, var(--y-border));
   border-radius: var(--y-radius-md);
   margin-bottom: var(--y-space-sm);
   background: var(--y-bg-subtle);
@@ -126,6 +130,7 @@ const emit = defineEmits<{ restart: []; back: [] }>()
 }
 
 .rw-word {
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-body);
   font-weight: 600;
   color: var(--y-text-primary);

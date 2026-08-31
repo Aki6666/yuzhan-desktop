@@ -1,37 +1,41 @@
 /**
- * 全局基础样式（U1 设计系统）
+ * 全局基础样式（v0.2.6「墨韵」设计系统）
  *
  * - 设计变量（:root 的 --y-*）由 main.ts 的 installDesignTokens() 依据
  *   styles/designTokens.ts 生成——本文件**禁止**硬编码色值/圆角/阴影，
  *   只消费 var(--y-*)（designTokens.ts 为单一事实来源）
- * - 全局元素与滚动条观感（Electron 桌面端）
+ * - 共享工具类（.y-card / .y-page / .y-state / .y-empty-icon 等）供各页复用，
+ *   保证「Operate 模式」下页面节奏一致
+ * - 全部效果为静态纹理 + transform/opacity 过渡（GPU 友好，性能预算不变）
  */
 :root {
-  /* 占位默认值（installDesignTokens 会在启动时用 designTokens 覆盖，保证非 JS 环境兜底一致） */
-  --y-bg-page: #f7f7f8;
+  /* 占位默认值（installDesignTokens 启动时覆盖，保证非 JS 环境兜底一致） */
+  --y-font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+  --y-font-serif: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+  --y-bg-page: #f7f5f0;
   --y-bg-card: #ffffff;
-  --y-bg-subtle: #fafafa;
-  --y-bg-hover: #f0f0f1;
-  --y-bg-active: #e8e9eb;
-  --y-border: #e5e5e5;
-  --y-border-light: #efefef;
-  --y-text-primary: #1f1f1f;
-  --y-text-body: #3d3d3d;
-  --y-text-secondary: #6e6e73;
-  --y-text-tertiary: #9a9aa0;
-  --y-text-disabled: #c4c4c8;
-  --y-primary: #0f766e;
-  --y-primary-hover: #115e59;
-  --y-primary-active: #134e4a;
-  --y-primary-soft: #e6f4f2;
-  --y-danger: #dc2626;
-  --y-success: #16a34a;
-  --y-warning: #d97706;
-  --y-info: #2563eb;
+  --y-bg-subtle: #f2efe8;
+  --y-bg-hover: #ebe7dd;
+  --y-bg-active: #e0dbce;
+  --y-border: #e5e0d4;
+  --y-border-light: #efebe1;
+  --y-text-primary: #1c1b18;
+  --y-text-body: #45423b;
+  --y-text-secondary: #7c776c;
+  --y-text-tertiary: #a9a394;
+  --y-text-disabled: #d8d3c6;
+  --y-primary: #c0432c;
+  --y-primary-hover: #ad3925;
+  --y-primary-active: #96301f;
+  --y-primary-soft: #f9e9e3;
+  --y-danger: #b3261e;
+  --y-success: #4c7a4c;
+  --y-warning: #a8781f;
+  --y-info: #5b6c9e;
   --y-radius-sm: 8px;
-  --y-radius-md: 10px;
-  --y-radius-lg: 12px;
-  --y-radius-xl: 16px;
+  --y-radius-md: 12px;
+  --y-radius-lg: 16px;
+  --y-radius-xl: 20px;
   --y-space-xs: 4px;
   --y-space-sm: 8px;
   --y-space-md: 12px;
@@ -39,13 +43,21 @@
   --y-space-xl: 24px;
   --y-space-xxl: 32px;
   --y-space-xxxl: 48px;
-  --y-font-title-lg: 24px;
-  --y-font-title: 20px;
+  --y-font-title-lg: 26px;
+  --y-font-title: 22px;
   --y-font-body: 14px;
   --y-font-aux: 12px;
-  --y-line-height-body: 1.6;
-  --y-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --y-shadow-pop: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --y-line-height-body: 1.65;
+  --y-shadow-card: 0 1px 2px rgba(76, 62, 45, 0.05), 0 2px 8px rgba(76, 62, 45, 0.04);
+  --y-shadow-pop: 0 16px 40px rgba(76, 62, 45, 0.13), 0 4px 12px rgba(76, 62, 45, 0.07);
+  --y-motion-fast: 120ms;
+  --y-motion-base: 180ms;
+  --y-motion-slow: 320ms;
+  --y-motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --y-scrollbar-thumb: #cfc9ba;
+  --y-scrollbar-thumb-hover: #b5ae9c;
+  --y-hero-ink-start: #2a2823;
+  --y-hero-ink-end: #1c1b18;
 }
 
 html,
@@ -57,24 +69,44 @@ body,
 }
 
 body {
+  font-family: var(--y-font-family);
   color: var(--y-text-body);
-  background: var(--y-bg-page);
+  /* 宣纸底：顶部一抹朱砂墨晕 + 右上墨蓝淡晕，极低透明度营造纸感层次（随主题 token 自适应） */
+  background:
+    radial-gradient(1100px 480px at 85% -180px, color-mix(in srgb, var(--y-primary) 5%, transparent), transparent 62%),
+    radial-gradient(900px 420px at -120px -120px, color-mix(in srgb, var(--y-info) 4.5%, transparent), transparent 58%),
+    var(--y-bg-page);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* 细滚动条（桌面端观感） */
+/* 选中文本：朱砂浅底（视觉统一） */
+::selection {
+  background: color-mix(in srgb, var(--y-primary) 16%, transparent);
+  color: var(--y-text-primary);
+}
+
+/* 键盘焦点：清晰但不刺眼的朱砂描边（可访问性 + 视觉统一） */
+:focus-visible {
+  outline: 2px solid var(--y-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 细滚动条（桌面端观感，随 token 灰阶） */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d9d9de;
+  background: var(--y-scrollbar-thumb);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c4c4c8;
+  background: var(--y-scrollbar-thumb-hover);
 }
 
 ::-webkit-scrollbar-track {
@@ -83,7 +115,7 @@ body {
 
 /* 键盘提示键（快速记录按钮内） */
 kbd {
-  font-family: inherit;
+  font-family: var(--y-font-family);
   font-size: 11px;
   line-height: 1;
   padding: 3px 5px;
@@ -92,4 +124,163 @@ kbd {
   border-radius: 4px;
   background: var(--y-bg-card);
   color: var(--y-text-secondary);
+}
+
+/* ------------------------------------------------------------------ */
+/* 共享工具类（Operate 模式：页面节奏一致）                            */
+/* ------------------------------------------------------------------ */
+
+/* 衬线展示字（成语词形 / 页标题 / 印章字符） */
+.y-serif {
+  font-family: var(--y-font-serif);
+}
+
+/* 统计数字：等宽数字变体（进度/计数对齐） */
+.y-num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 页面容器：统一宽度与纵向节奏 */
+.y-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* 页头：衬线大标题 + 副题 + 右侧计数/操作 */
+.y-page-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.y-page-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
+.y-page-title {
+  margin: 0;
+  font-family: var(--y-font-serif);
+  font-size: var(--y-font-title-lg);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--y-text-primary);
+}
+
+/* 标题前的朱砂小方章（品牌身份细节） */
+.y-page-eyebrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  transform: translateY(-2px);
+}
+
+.y-page-sub {
+  margin: 0;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+}
+
+/* 计数胶囊 */
+.y-count-pill {
+  flex: 0 0 auto;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-secondary);
+  padding: 4px 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 999px;
+  background: var(--y-bg-card);
+  white-space: nowrap;
+}
+
+/* 卡片表面：纸白 + 暖调细边框 + 柔和阴影 */
+.y-card {
+  background: var(--y-bg-card);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
+}
+
+/* 加载/错误/空态块 */
+.y-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 260px;
+  padding: 40px;
+  background: var(--y-bg-card);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
+  text-align: center;
+}
+
+.y-state-text {
+  margin: 0;
+  font-size: var(--y-font-body);
+  color: var(--y-text-secondary);
+  line-height: var(--y-line-height-body);
+}
+
+.y-empty-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--y-text-tertiary);
+  margin-bottom: 4px;
+}
+
+.y-empty-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--y-text-body);
+}
+
+.y-empty-desc {
+  margin: 0 0 6px;
+  font-size: var(--y-font-body);
+  color: var(--y-text-tertiary);
+}
+
+/* 朱砂小章（品牌身份：详情/闪卡/仪表盘复用） */
+.y-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--y-font-serif);
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(150deg, var(--y-primary) 0%, var(--y-primary-active) 100%);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(150, 48, 31, 0.28);
+  user-select: none;
+}
+
+/* 路由页面进入过渡（fade + 轻微上移，GPU 友好） */
+.y-page-enter-active,
+.y-page-leave-active {
+  transition:
+    opacity var(--y-motion-base) var(--y-motion-ease),
+    transform var(--y-motion-base) var(--y-motion-ease);
+}
+
+.y-page-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.y-page-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
 }

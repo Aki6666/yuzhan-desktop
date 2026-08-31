@@ -12,6 +12,18 @@ import type { Idiom } from '@shared/ipc/contracts'
 export const FREQUENCY_OPTIONS = [1, 2, 3, 4, 5] as const
 export type Frequency = (typeof FREQUENCY_OPTIONS)[number]
 
+/**
+ * 频次分档口径说明（§6.3 批量导入替代口径；1 档另含教研备用词）。
+ * 用户要求 #2：档位含义明确展示，不再只有抽象小点。
+ */
+export const FREQUENCY_TIER_INFO: Record<Frequency, { label: string; desc: string }> = {
+  5: { label: '5档', desc: '真题出现 80 次以上' },
+  4: { label: '4档', desc: '真题出现 45–79 次' },
+  3: { label: '3档', desc: '真题出现 10–44 次' },
+  2: { label: '2档', desc: '真题出现 5–9 次' },
+  1: { label: '1档', desc: '真题出现 2–4 次（含教研备用词）' }
+}
+
 /** 高亮区间：[start, end) 字符下标，作用于原字符串 */
 export interface HighlightSpan {
   start: number

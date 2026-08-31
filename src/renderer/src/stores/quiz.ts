@@ -11,6 +11,7 @@ import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { Idiom, QuizAnswer, UserProgress } from '@shared/ipc/contracts'
 import { QUIZ_SIZE, buildQuiz, type QuizQuestion } from '@shared/lib/quiz'
+import { useProgressStore } from './progress'
 
 export type QuizPhase = 'idle' | 'active' | 'finished'
 
@@ -104,8 +105,22 @@ export const useQuizStore = defineStore('quiz', () => {
     writePending.value = true
     submitError.value = null
     try {
-      const res = await window.api.quiz.record({ answers: answers.value })
+      // 注意：answers.value 是 Vue ref 深响应式 Proxy，Electron IPC 结构化克隆无法克隆
+      // Proxy（报 "An object could not be cloned."），这里显式构造纯对象数组再发送。
+      const plainAnswers = answers.value.map((a) => ({ id: a.id, correct: a.correct }))
+      const res = await window.api.quiz.record({ answers: plainAnswers })
       if (!res.ok) submitError.value = res.error.message
+      // 自测历史（用户要求 #4）：记录本次会话成绩
+      const { correct, wrong } = result.value
+      void window.api.quiz.history.add({
+        time: new Date().toISOString(),
+        correct,
+        wrong,
+        total: answers.value.length
+      })
+      // 同步 renderer 内存态（用户要求 #5：错题立即进错题本）——以 main 持久化进度为准全量拉取
+      const progressStore = useProgressStore()
+      await progressStore.load()
     } catch (e) {
       submitError.value = String(e)
     } finally {

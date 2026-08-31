@@ -4,12 +4,12 @@
  * 纯本地数据渲染（AC-02 离线可用，无 AI 依赖），数据由父级从 idioms store 注入。
  * 展示字段：释义（多义项「；」分隔渲染）/出处/感情色彩/语域/误用类型/近义辨析组（折叠）/反义/真题例句/频次/主题
  *
- * U2 视觉重构：信息层级——顶部词条区（大字词形+拼音+徽标）与正文分区卡片（细分割线分隔），
- * 消费 U1 设计 token；data-testid 与行为（默认折叠等）保持不变。
+ * v0.2.6 墨韵重构：衬线词形 + 朱砂频次徽标 + 分区眉题（细竖线）；data-testid/类名与行为不变。
  */
 import { computed } from 'vue'
 import { NTag } from 'naive-ui'
 import type { Idiom } from '@shared/ipc/contracts'
+import { FREQUENCY_TIER_INFO } from '@renderer/lib/listFilters'
 import { splitMeanings } from './detailFormat'
 import NearDiffGroup from './NearDiffGroup.vue'
 import ExampleList from './ExampleList.vue'
@@ -32,27 +32,36 @@ const emotionType = computed(() => {
 
 const registerText = computed(() => (props.idiom.register === '无' ? '' : props.idiom.register))
 
-const freqDots = computed(() => Array.from({ length: 5 }, (_, i) => i < props.idiom.frequency))
+/** 频次档位理由（如「5档：真题出现 80 次以上」） */
+const freqTitle = computed(() => {
+  const info = FREQUENCY_TIER_INFO[props.idiom.frequency as 1 | 2 | 3 | 4 | 5]
+  return info ? `${info.label}：${info.desc}` : `频次 ${props.idiom.frequency} 档`
+})
+
+/** 真题出现次数（存在时展示） */
+const occurrencesText = computed(() =>
+  typeof props.idiom.occurrences === 'number' && props.idiom.occurrences > 0
+    ? `真题出现 ${props.idiom.occurrences} 次`
+    : ''
+)
 </script>
 
 <template>
   <article class="idiom-card" data-testid="idiom-detail-card">
-    <!-- 顶部词条区：大字词形 + 拼音 + 频次 + 徽标（感情色彩/语域/误用类型） -->
+    <!-- 顶部词条区：朱砂顶饰 + 衬线大字词形 + 拼音 + 频次徽标（印章式）+ 感情色彩/语域/误用类型 -->
     <header class="card-hero">
+      <div class="hero-accent" aria-hidden="true" />
       <div class="hero-row">
         <div class="hero-main">
+          <span class="hero-seal y-seal" aria-hidden="true">语</span>
           <h2 class="word">{{ idiom.word }}</h2>
           <p class="pinyin">{{ idiom.pinyin }}</p>
         </div>
-        <div class="freq" :title="`真题频次 ${idiom.frequency}/5`" aria-label="真题频次">
-          <span
-            v-for="(on, i) in freqDots"
-            :key="i"
-            class="freq-dot"
-            :class="{ on }"
-            aria-hidden="true"
-          />
-          <span class="freq-num">{{ idiom.frequency }}/5</span>
+        <div class="freq-block">
+          <NTag size="small" type="warning" round :title="freqTitle" class="freq-tier" data-testid="freq-tier">
+            {{ idiom.frequency }}档
+          </NTag>
+          <span v-if="occurrencesText" class="freq-occur" :title="occurrencesText">{{ occurrencesText }}</span>
         </div>
       </div>
 
@@ -76,13 +85,15 @@ const freqDots = computed(() => Array.from({ length: 5 }, (_, i) => i < props.id
       </div>
     </header>
 
-    <!-- 正文分区卡片：细分割线分隔 -->
+    <!-- 正文分区：细分割线分隔 + 眉题细竖线 -->
     <div class="card-body">
       <!-- 释义：多义项分号分隔渲染 -->
       <section class="card-section" data-testid="section-meaning">
         <h3 class="sec-title">释义</h3>
         <ol v-if="senses.length > 1" class="senses">
-          <li v-for="(s, i) in senses" :key="i" class="sense-item">{{ s }}</li>
+          <li v-for="(s, i) in senses" :key="i" class="sense-item">
+            <span class="sense-index" aria-hidden="true">{{ i + 1 }}</span>{{ s }}
+          </li>
         </ol>
         <p v-else class="meaning">{{ idiom.meaning }}</p>
       </section>
@@ -141,11 +152,27 @@ const freqDots = computed(() => Array.from({ length: 5 }, (_, i) => i < props.id
   overflow: hidden;
 }
 
-/* 顶部词条区 */
+/* 顶部词条区：宣纸暖白 → 纸白渐变，朱砂顶饰 */
 .card-hero {
-  padding: 24px 28px 18px;
+  position: relative;
+  padding: 28px 28px 18px;
   border-bottom: 1px solid var(--y-border-light);
-  background: var(--y-bg-card);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--y-primary-soft) 45%, var(--y-bg-card)) 0%,
+    var(--y-bg-card) 100%
+  );
+  overflow: hidden;
+}
+
+/* 朱砂顶饰（印章落款感） */
+.hero-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--y-primary) 0%, rgba(192, 67, 44, 0.35) 70%, transparent 100%);
 }
 
 .hero-row {
@@ -157,46 +184,58 @@ const freqDots = computed(() => Array.from({ length: 5 }, (_, i) => i < props.id
 
 .hero-main {
   min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-seal {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  font-size: 14px;
+  align-self: center;
 }
 
 .word {
   margin: 0;
-  font-size: 32px;
+  font-family: var(--y-font-serif);
+  font-size: 36px;
   font-weight: 700;
   color: var(--y-text-primary);
-  letter-spacing: 3px;
-  line-height: 1.2;
+  letter-spacing: 6px;
+  line-height: 1.25;
 }
 
 .pinyin {
   margin: 8px 0 0;
   color: var(--y-text-secondary);
-  font-size: var(--y-font-body);
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
 
-.freq {
+.freq-block {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 4px;
   flex-shrink: 0;
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
-.freq-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--y-border);
+.freq-tier {
+  background: color-mix(in srgb, var(--y-primary) 10%, var(--y-bg-card)) !important;
+  color: var(--y-primary) !important;
+  border: 1px solid color-mix(in srgb, var(--y-primary) 30%, var(--y-border)) !important;
+  font-weight: 600;
 }
 
-.freq-dot.on {
-  background: var(--y-primary);
-}
-
-.freq-num {
-  margin-left: 4px;
-  font-size: var(--y-font-aux);
+.freq-occur {
+  font-size: 11px;
   color: var(--y-text-tertiary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .hero-tags {
@@ -221,24 +260,60 @@ const freqDots = computed(() => Array.from({ length: 5 }, (_, i) => i < props.id
 }
 
 .sec-title {
+  position: relative;
   margin: 0 0 8px;
+  padding-left: 12px;
   font-size: var(--y-font-aux);
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   color: var(--y-text-tertiary);
-  text-transform: uppercase;
+}
+
+.sec-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  opacity: 0.8;
 }
 
 .senses {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .sense-item {
-  margin: 4px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
   font-size: var(--y-font-body);
   line-height: var(--y-line-height-body);
   color: var(--y-text-body);
+}
+
+.sense-index {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--y-bg-subtle);
+  border: 1px solid var(--y-border-light);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--y-text-secondary);
+  transform: translateY(2px);
 }
 
 .meaning,
@@ -272,5 +347,9 @@ const freqDots = computed(() => Array.from({ length: 5 }, (_, i) => i < props.id
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+.tag-item {
+  color: var(--y-text-secondary);
 }
 </style>

@@ -81,8 +81,8 @@ defineProps<{ stats: WrongTypeStat[] }>()
   display: block;
   height: 100%;
   border-radius: 4px;
-  background: var(--y-primary);
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, var(--y-primary) 0%, color-mix(in srgb, var(--y-primary) 65%, var(--y-bg-card)) 100%);
+  transition: width var(--y-motion-base) var(--y-motion-ease);
 }
 
 .dist-bar.zero {

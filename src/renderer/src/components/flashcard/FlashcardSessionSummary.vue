@@ -56,7 +56,7 @@ const emit = defineEmits<{
   max-width: 560px;
   margin: var(--y-space-xl) auto 0;
   padding: var(--y-space-xxl) var(--y-space-xl);
-  border: 1px solid var(--y-border);
+  border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
   background: var(--y-bg-card);
   text-align: center;
@@ -65,7 +65,9 @@ const emit = defineEmits<{
 
 .summary-title {
   margin: 0 0 var(--y-space-xl);
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title);
+  letter-spacing: 2px;
   color: var(--y-text-primary);
 }
 
@@ -88,10 +90,11 @@ const emit = defineEmits<{
 }
 
 .stat-num {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--y-text-primary);
   line-height: 1.2;
+  font-variant-numeric: tabular-nums;
 }
 
 .summary-actions {

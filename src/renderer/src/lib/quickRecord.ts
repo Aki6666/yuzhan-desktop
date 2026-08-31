@@ -258,10 +258,24 @@ export function derivePinyin(word: string): string {
 }
 
 // ---------------------------------------------------------------------------
-// 个人库（v0.2 最小实现：renderer 会话内注册表）
-// 说明：userData 个人库文件落盘 + 对应 IPC channel 为计划扩展（附录 B v0.2 记录项，
-// 需 main 侧实现，超出本任务 inScope）。确认后的词条登记于此（会话内可检索），
-// 并立即写入 progress（闪卡队列，经既有 progress:save channel 持久化）。
+// 剪贴板自动填充（v0.2.6 迭代，§16.3 P0-②）：刷题复制成语 → 唤起快速记录零打字
+// ---------------------------------------------------------------------------
+
+/**
+ * 剪贴板文本 → 快速记录查询词。
+ * 仅当内容为纯 2–8 个汉字（成语/生词长度区间）时采用，避免把任意复制文本塞进检索框。
+ */
+export function clipboardToQuery(text: string): string {
+  const t = text.trim()
+  if (/^[\u4e00-\u9fa5]{2,8}$/.test(t)) return t
+  return ''
+}
+
+// ---------------------------------------------------------------------------
+// 个人库（v0.2 会话内注册表；v0.2.6 迭代 P0-④：userData/idioms-user.json 落盘，重启可加载）
+// 说明：注册表为 renderer 会话内事实源（检索/去重），addPersonalItem 同时经
+// user:add IPC 写盘（原子写 + .bak，复用持久化铁律）；启动时由 user store 的
+// load() 调 initPersonalLibrary 恢复。写盘失败不阻断会话内登记（下次 add 重试）。
 // ---------------------------------------------------------------------------
 
 let personalIdSeq = 0
@@ -270,6 +284,14 @@ const personalLibrary: Idiom[] = []
 /** 会话内个人库快照 */
 export function listPersonalLibrary(): Idiom[] {
   return personalLibrary.slice()
+}
+
+/** 启动恢复（v0.2.6 P0-④）：以 user:list 全量替换注册表（幂等，可重复调用） */
+export function initPersonalLibrary(items: Idiom[]): void {
+  personalLibrary.length = 0
+  for (const i of items) {
+    if (i && typeof i.word === 'string') personalLibrary.push(i)
+  }
 }
 
 /** 测试隔离用：清空个人库 */
@@ -323,9 +345,24 @@ export function buildPersonalIdiom(input: PersonalIdiomInput): Idiom {
   }
 }
 
-/** 登记个人词条（按词形去重；返回是否新增） */
+/** 登记个人词条（按词形去重；返回是否新增；v0.2.6 P0-④ 同时异步落盘 userData/idioms-user.json） */
 export function addPersonalItem(idiom: Idiom): boolean {
   if (personalLibrary.some((i) => i.word === idiom.word)) return false
   personalLibrary.push(idiom)
+  void persistPersonalItem(idiom)
   return true
+}
+
+/** 异步落盘（user:add；写盘失败静默——会话内登记不受影响，下次 add 会重试全量快照） */
+function persistPersonalItem(idiom: Idiom): void {
+  try {
+    const api = (window as unknown as { api?: { user?: { add: (r: { idiom: Idiom }) => Promise<unknown> } } }).api
+    if (api?.user?.add) {
+      void api.user.add({ idiom }).catch(() => {
+        /* 落盘失败：仅记会话内（测试/离线环境无 user API 属正常） */
+      })
+    }
+  } catch {
+    /* 测试环境无 window.api.user：跳过持久化 */
+  }
 }

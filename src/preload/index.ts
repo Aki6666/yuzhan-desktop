@@ -7,10 +7,16 @@ import {
   type DataListResponse,
   type Idiom,
   type IpcResult,
+  type PairsListResponse,
   type PendingItem,
+  type ProgressListResponse,
   type ProgressSaveRequest,
+  type QuizHistoryItem,
+  type QuizHistoryListResponse,
   type QuizRecordRequest,
   type SettingsSetRequest,
+  type UserAddRequest,
+  type UserListResponse,
   type YuzhanApi
 } from '../../shared/ipc/contracts'
 
@@ -26,7 +32,8 @@ const api: YuzhanApi = {
   },
   progress: {
     save: (payload: ProgressSaveRequest): Promise<IpcResult<null>> =>
-      ipcRenderer.invoke(IPC_CHANNELS.progressSave, payload)
+      ipcRenderer.invoke(IPC_CHANNELS.progressSave, payload),
+    list: (): Promise<IpcResult<ProgressListResponse>> => ipcRenderer.invoke(IPC_CHANNELS.progressList)
   },
   pending: {
     list: (): Promise<IpcResult<PendingItem[]>> => ipcRenderer.invoke(IPC_CHANNELS.pendingList),
@@ -35,7 +42,18 @@ const api: YuzhanApi = {
   },
   quiz: {
     record: (payload: QuizRecordRequest): Promise<IpcResult<null>> =>
-      ipcRenderer.invoke(IPC_CHANNELS.quizRecord, payload)
+      ipcRenderer.invoke(IPC_CHANNELS.quizRecord, payload),
+    history: {
+      list: (): Promise<IpcResult<QuizHistoryListResponse>> => ipcRenderer.invoke(IPC_CHANNELS.quizHistoryList),
+      add: (item: QuizHistoryItem): Promise<IpcResult<null>> => ipcRenderer.invoke(IPC_CHANNELS.quizHistoryAdd, item)
+    }
+  },
+  pairs: {
+    list: (): Promise<IpcResult<PairsListResponse>> => ipcRenderer.invoke(IPC_CHANNELS.pairsList)
+  },
+  user: {
+    list: (): Promise<IpcResult<UserListResponse>> => ipcRenderer.invoke(IPC_CHANNELS.userList),
+    add: (request: UserAddRequest): Promise<IpcResult<null>> => ipcRenderer.invoke(IPC_CHANNELS.userAdd, request)
   },
   settings: {
     get: (): Promise<IpcResult<AppSettings>> => ipcRenderer.invoke(IPC_CHANNELS.settingsGet),

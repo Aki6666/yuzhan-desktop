@@ -175,7 +175,7 @@ describe('IPC 入参校验与错误码（§4.6 / §10.4）', () => {
     }
     expect(r.ok).toBe(true)
     expect(r.data.aiMode).toBe('online')
-    expect(r.data.quickInputShortcut).toBe('CommandOrControl+K')
+    expect(r.data.quickInputShortcut).toBe('Plus')
   })
 
   it('settings:get → ok:true 默认设置', async () => {
@@ -247,5 +247,50 @@ describe('AI（v0.2，§10.2/§10.4 ai:searchWord）', () => {
     expect(r.data?.aiModel).toBe('qwen')
     await expect(call(IPC_CHANNELS.settingsSet, { aiBaseUrl: '' })).resolves.toEqual(INVALID)
     await expect(call(IPC_CHANNELS.settingsSet, { aiModel: '' })).resolves.toEqual(INVALID)
+  })
+})
+
+describe('个人库 + 主题（v0.2.6 P0-④/P0-③）', () => {
+  it('settings:set：theme 非法值 → INVALID_ARGS；合法 dark → ok 且回读为 dark（默认 light）', async () => {
+    await expect(call(IPC_CHANNELS.settingsSet, { theme: 'hacked' })).resolves.toEqual(INVALID)
+    const get0 = (await call(IPC_CHANNELS.settingsGet)) as { ok: boolean; data: { theme?: string } }
+    expect(get0.data.theme).toBe('light') // 默认浅色
+    const r = (await call(IPC_CHANNELS.settingsSet, { theme: 'dark' })) as { ok: boolean; data?: { theme?: string } }
+    expect(r.ok).toBe(true)
+    expect(r.data?.theme).toBe('dark')
+    const get1 = (await call(IPC_CHANNELS.settingsGet)) as { ok: boolean; data: { theme?: string } }
+    expect(get1.data.theme).toBe('dark')
+  })
+
+  it('user:add：入参校验（缺 idiom / 空 id / 空 word → INVALID_ARGS）', async () => {
+    await expect(call(IPC_CHANNELS.userAdd, {})).resolves.toEqual(INVALID)
+    await expect(call(IPC_CHANNELS.userAdd, { idiom: { id: 'x' } })).resolves.toEqual(INVALID)
+    await expect(call(IPC_CHANNELS.userAdd, { idiom: { id: 'x', word: '   ' } })).resolves.toEqual(INVALID)
+  })
+
+  it('user:add 合法词条 → ok 且 user:list 可读回（个人库落盘，重启可加载）', async () => {
+    const idiom = {
+      schemaVersion: 1,
+      id: 'xin-ci-u1',
+      word: '新词甲',
+      pinyin: 'xīn cí jiǎ',
+      meaning: '新释义',
+      emotion: '中性',
+      register: '无',
+      errorTypes: [],
+      frequency: 3,
+      quality: 'user',
+      library: 'user'
+    }
+    const r = (await call(IPC_CHANNELS.userAdd, { idiom })) as { ok: boolean }
+    expect(r.ok).toBe(true)
+    const list = (await call(IPC_CHANNELS.userList)) as { ok: boolean; data: { items: Array<{ word: string }> } }
+    expect(list.ok).toBe(true)
+    expect(list.data.items).toHaveLength(1)
+    expect(list.data.items[0]?.word).toBe('新词甲')
+    // 同词形去重：再次 add 不新增
+    await call(IPC_CHANNELS.userAdd, { idiom: { ...idiom, id: 'xin-ci-u2' } })
+    const list2 = (await call(IPC_CHANNELS.userList)) as { ok: boolean; data: { items: unknown[] } }
+    expect(list2.data.items).toHaveLength(1)
   })
 })

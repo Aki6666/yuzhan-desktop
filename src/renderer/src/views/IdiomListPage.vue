@@ -2,11 +2,11 @@
 /**
  * 成语列表页（PLAN.md §14.3 T4 / F3 / §3.3 / §3.4 / §4.7 / AC-07）
  * - 搜索：汉字/全拼/首字母/模糊（复用 shared/lib/search.ts，由 idioms store 的 filtered 承担），防抖 200ms
- * - 频次（1–5）/首字过滤：直接写 store 过滤状态（§4.3「列表过滤状态」在 idioms store）
+ * - 频次（1–5）过滤：直接写 store 过滤状态（§4.3「列表过滤状态」在 idioms store）
  * - 虚拟滚动：600 词条首屏 <300ms（IdiomVirtualList，固定行高）
- * - 点击行跳转 /idioms/:id（详情页为 T5 产物，链接先就位）
+ * - 点击行跳转 /idioms/:id
  *
- * U2 视觉重构：消费 U1 设计 token（var(--y-*)），data-testid 与行为保持不变。
+ * v0.2.6 墨韵重构：衬线页标题 + 朱砂筛选态 + 纸感卡片；data-testid 与行为不变。
  */
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { NButton, NInput, NSpin } from 'naive-ui'
@@ -14,6 +14,7 @@ import { useIdiomsStore } from '@renderer/stores/idioms'
 import IdiomVirtualList from '@renderer/components/idiom-list/IdiomVirtualList.vue'
 import {
   FREQUENCY_OPTIONS,
+  FREQUENCY_TIER_INFO,
   countByFrequency,
   debounce
 } from '@renderer/lib/listFilters'
@@ -34,6 +35,23 @@ onMounted(() => {
 
 const freqCounts = computed(() => countByFrequency(store.items))
 
+/** 分页（用户要求 #2：每次只显示一部分，触底/按钮加载更多） */
+const PAGE_SIZE = 100
+const limit = ref(PAGE_SIZE)
+const shown = computed(() => Math.min(limit.value, store.filtered.length))
+
+function loadMore(): void {
+  if (limit.value < store.filtered.length) limit.value += PAGE_SIZE
+}
+
+// 搜索/筛选/排序变化 → 回到第一页
+watch(
+  () => [store.keyword, store.frequencyFilter, store.sortMode, store.sortDirection],
+  () => {
+    limit.value = PAGE_SIZE
+  }
+)
+
 const hasFilter = computed(() => query.value.trim() !== '' || store.frequencyFilter !== null)
 
 function toggleFrequency(f: number): void {
@@ -53,10 +71,13 @@ function retryLoad(): void {
 
 <template>
   <section class="view idioms-page">
-    <!-- 页头：标题 + 副标题 + 结果计数 -->
+    <!-- 页头：衬线标题 + 副标题 + 结果计数 -->
     <header class="page-header">
       <div class="page-heading">
-        <h1 class="page-title">成语库</h1>
+        <h1 class="page-title">
+          <span class="page-eyebrow" aria-hidden="true" />
+          成语库
+        </h1>
         <p class="page-sub">拼音 / 首字母 / 模糊检索 · 频次筛选</p>
       </div>
       <span class="result-count" data-testid="result-count">
@@ -70,7 +91,7 @@ function retryLoad(): void {
       size="large"
       clearable
       class="search-input"
-      placeholder="输入成语 / 全拼 / 首字母，如：鞠躬尽瘁、jugongjincui、jgj"
+      placeholder="搜索成语"
       data-testid="search-input"
     >
       <template #prefix>
@@ -90,7 +111,7 @@ function retryLoad(): void {
       </template>
     </NInput>
 
-    <!-- 筛选条：频次视觉化（FIX-2：5 档点阵 + 计数副行，选中态与 U1 token 一致） -->
+    <!-- 筛选条：频次档位 + 排序控制 -->
     <div class="filter-card">
       <div class="filter-row">
         <span class="filter-label">频次</span>
@@ -103,14 +124,47 @@ function retryLoad(): void {
             :class="{ active: store.frequencyFilter === f }"
             :disabled="(freqCounts[f] ?? 0) === 0"
             :data-testid="`freq-${f}`"
-            :title="`频次 ${f}：${freqCounts[f] ?? 0} 条`"
+            :title="`${FREQUENCY_TIER_INFO[f].label}：${FREQUENCY_TIER_INFO[f].desc}，共 ${freqCounts[f] ?? 0} 条`"
             @click="toggleFrequency(f)"
           >
-            <span class="freq-dots" aria-hidden="true">
-              <span v-for="d in 5" :key="d" class="freq-dot-mini" :class="{ on: d <= f }" />
-            </span>
-            <span class="freq-count">{{ freqCounts[f] ?? 0 }}</span>
+            <span class="freq-label">{{ FREQUENCY_TIER_INFO[f].label }}</span>
+            <span class="freq-desc">{{ FREQUENCY_TIER_INFO[f].desc }}</span>
+            <span class="freq-count">{{ freqCounts[f] ?? 0 }} 条</span>
           </button>
+        </div>
+      </div>
+      <div class="filter-row sort-row">
+        <span class="filter-label">排序</span>
+        <div class="sort-controls">
+          <button
+            type="button"
+            class="sort-seg"
+            :class="{ active: store.sortMode === 'frequency' }"
+            data-testid="sort-frequency"
+            @click="store.sortMode = 'frequency'"
+          >
+            档位序
+          </button>
+          <button
+            type="button"
+            class="sort-seg"
+            :class="{ active: store.sortMode === 'pinyin' }"
+            data-testid="sort-pinyin"
+            @click="store.sortMode = 'pinyin'"
+          >
+            拼音序
+          </button>
+          <button
+            type="button"
+            class="sort-seg"
+            data-testid="sort-direction"
+            @click="store.toggleSortDirection()"
+          >
+            {{ store.sortDirection === 'desc' ? '降序 ↓' : '升序 ↑' }}
+          </button>
+          <span v-if="store.sortMode === 'frequency'" class="sort-hint">
+            同档按真题出现次数{{ store.sortDirection === 'desc' ? '降序' : '升序' }}
+          </span>
         </div>
       </div>
       <div v-if="hasFilter" class="filter-actions">
@@ -157,13 +211,25 @@ function retryLoad(): void {
       </NButton>
     </div>
 
-    <!-- 列表（虚拟滚动） -->
+    <!-- 列表（虚拟滚动 + 分页：每页 100 条，触底加载更多） -->
     <IdiomVirtualList
       v-else
       :items="store.filtered"
+      :limit="limit"
       :keyword="store.keyword"
       class="list-scroll"
+      @bottom="loadMore"
     />
+
+    <!-- 分页状态条 -->
+    <div v-if="store.filtered.length > 0" class="pager-bar">
+      <span class="pager-text" data-testid="pager-text">
+        已显示 {{ shown }} / {{ store.filtered.length }} 条
+      </span>
+      <NButton v-if="limit < store.filtered.length" size="small" quaternary data-testid="load-more" @click="loadMore">
+        加载更多
+      </NButton>
+    </div>
   </section>
 </template>
 
@@ -172,7 +238,7 @@ function retryLoad(): void {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  max-width: 880px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -186,30 +252,47 @@ function retryLoad(): void {
 .page-heading {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .page-title {
   margin: 0;
+  font-family: var(--y-font-serif);
   font-size: var(--y-font-title-lg);
   font-weight: 700;
+  letter-spacing: 2px;
   color: var(--y-text-primary);
+}
+
+.page-eyebrow {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background: var(--y-primary);
+  transform: translateY(-3px);
 }
 
 .page-sub {
   margin: 0;
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+  padding-left: 18px;
 }
 
 .result-count {
   font-size: var(--y-font-aux);
   color: var(--y-text-secondary);
-  padding-bottom: 2px;
+  padding: 4px 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 999px;
+  background: var(--y-bg-card);
+  white-space: nowrap;
 }
 
 .search-input {
-  --n-height: 44px;
+  --n-height: 46px;
 }
 
 .search-icon {
@@ -218,6 +301,7 @@ function retryLoad(): void {
   color: var(--y-text-tertiary);
 }
 
+/* 筛选卡：纸白表面 */
 .filter-card {
   display: flex;
   flex-direction: column;
@@ -226,6 +310,7 @@ function retryLoad(): void {
   background: var(--y-bg-card);
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
 }
 
 .filter-row {
@@ -236,11 +321,14 @@ function retryLoad(): void {
 
 .filter-label {
   flex: 0 0 32px;
-  font-size: var(--y-font-aux);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
   color: var(--y-text-tertiary);
+  padding-top: 4px;
 }
 
-/* 频次视觉化：5 档点阵 + 计数副行（FIX-2） */
+/* 频次档位：纸片式分段卡，激活为朱砂浅底 */
 .freq-selector {
   display: flex;
   flex-wrap: wrap;
@@ -250,17 +338,17 @@ function retryLoad(): void {
 .freq-seg {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  min-width: 56px;
-  padding: 9px 12px 8px;
+  align-items: flex-start;
+  gap: 3px;
+  min-width: 104px;
+  padding: 8px 12px;
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-sm);
   background: var(--y-bg-card);
   cursor: pointer;
   transition:
-    border-color 0.12s ease,
-    background-color 0.12s ease;
+    border-color var(--y-motion-fast) var(--y-motion-ease),
+    background-color var(--y-motion-fast) var(--y-motion-ease);
 }
 
 .freq-seg:hover:not(:disabled) {
@@ -273,35 +361,81 @@ function retryLoad(): void {
 }
 
 .freq-seg.active {
-  border-color: var(--y-primary);
+  border-color: color-mix(in srgb, var(--y-primary) 42%, var(--y-border));
   background: var(--y-primary-soft);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--y-primary) 14%, transparent);
 }
 
-.freq-dots {
-  display: flex;
-  gap: 3px;
+.freq-label {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--y-text-primary);
 }
 
-.freq-dot-mini {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--y-border);
-}
-
-.freq-dot-mini.on {
-  background: var(--y-primary);
+.freq-desc {
+  font-size: 11px;
+  line-height: 1.2;
+  color: var(--y-text-tertiary);
+  white-space: nowrap;
 }
 
 .freq-count {
   font-size: 11px;
-  line-height: 1;
+  line-height: 1.2;
   color: var(--y-text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.freq-seg.active .freq-label {
+  color: var(--y-primary);
 }
 
 .freq-seg.active .freq-count {
   color: var(--y-primary);
   font-weight: 600;
+}
+
+/* 排序控制 */
+.sort-row {
+  align-items: flex-start;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sort-seg {
+  padding: 5px 12px;
+  font-size: 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 999px;
+  background: var(--y-bg-card);
+  color: var(--y-text-secondary);
+  cursor: pointer;
+  transition:
+    border-color var(--y-motion-fast) var(--y-motion-ease),
+    background-color var(--y-motion-fast) var(--y-motion-ease),
+    color var(--y-motion-fast) var(--y-motion-ease);
+}
+
+.sort-seg:hover {
+  background: var(--y-bg-hover);
+}
+
+.sort-seg.active {
+  border-color: color-mix(in srgb, var(--y-primary) 42%, var(--y-border));
+  color: var(--y-primary);
+  background: var(--y-primary-soft);
+  font-weight: 600;
+}
+
+.sort-hint {
+  font-size: 11px;
+  color: var(--y-text-tertiary);
 }
 
 .filter-actions {
@@ -311,6 +445,7 @@ function retryLoad(): void {
   padding-top: 8px;
 }
 
+/* 状态块 */
 .list-state {
   flex: 1;
   display: flex;
@@ -323,6 +458,7 @@ function retryLoad(): void {
   background: var(--y-bg-card);
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
   text-align: center;
 }
 
@@ -355,5 +491,20 @@ function retryLoad(): void {
 .list-scroll {
   flex: 1;
   min-height: 0;
+}
+
+/* 分页状态条 */
+.pager-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 4px 0 2px;
+}
+
+.pager-text {
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+  font-variant-numeric: tabular-nums;
 }
 </style>

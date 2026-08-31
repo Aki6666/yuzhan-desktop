@@ -73,21 +73,31 @@ function installApiMock(opts: { items?: Idiom[]; listImpl?: () => Promise<unknow
       list: vi.fn(opts.listImpl ?? (async () => ({ ok: true, data: { items: opts.items ?? fixture, version: '2026.1' } }))),
       get: vi.fn(async () => ({ ok: true, data: null }))
     },
-    progress: { save: vi.fn(async () => ({ ok: true, data: null })) },
+    pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    progress: {
+      save: vi.fn(async () => ({ ok: true, data: null })),
+      list: vi.fn(async () => ({ ok: true, data: { items: {} } }))
+    },
     pending: {
       list: vi.fn(async () => ({ ok: true, data: [] })),
       add: vi.fn(async () => ({ ok: true, data: null })),
       remove: vi.fn(async () => ({ ok: true, data: null }))
     },
-    quiz: { record: vi.fn(async () => ({ ok: true, data: null })) },
+    quiz: {
+      record: vi.fn(async () => ({ ok: true, data: null })),
+      history: {
+        list: vi.fn(async () => ({ ok: true, data: { items: [] } })),
+        add: vi.fn(async () => ({ ok: true, data: null }))
+      }
+    },
     settings: {
       get: vi.fn(async () => ({
         ok: true,
-        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'Plus' }
       })),
       set: vi.fn(async () => ({
         ok: true,
-        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'Plus' }
       }))
     },
     log: vi.fn(async () => ({ ok: true, data: null }))
@@ -359,7 +369,7 @@ describe('列表页加载失败', () => {
 // ---------------------------------------------------------------------------
 
 describe('虚拟滚动', () => {
-  it('600 条只渲染可视窗口（约 16 行 DOM），占位高度覆盖全部条目', async () => {
+  it('600 条只渲染可视窗口（多列网格：jsdom 宽度 0 → 1 列，约 10 行 DOM），占位高度覆盖全部条目', async () => {
     const pinia = createPinia()
     setActivePinia(pinia)
     const router = createRouter({
@@ -370,15 +380,16 @@ describe('虚拟滚动', () => {
       props: { items: makeMany(600) },
       global: { plugins: [pinia, router] }
     })
-    // jsdom 无布局：clientHeight=0 → 兜底视口 640px，行高 56，overscan 4 → ceil(640/56)+4 = 16 行
-    expect(rows(wrapper)).toHaveLength(16)
+    // jsdom 无布局：clientWidth=0 → 1 列；clientHeight=0 → 兜底视口 640px，
+    // cellHeight 90 + gap 12 → 行高 102，overscan 3 → ceil(640/102)+3 = 10 行
+    expect(rows(wrapper)).toHaveLength(10)
     expect(rows(wrapper)[0].attributes('data-id')).toBe('item-000')
     const spacer = wrapper.find('.idiom-virtual-list-spacer')
-    expect(spacer.attributes('style')).toContain('33600px') // 600 × 56
+    expect(spacer.attributes('style')).toContain('61200px') // 600 × 102
     wrapper.unmount()
   })
 
-  it('滚动后可视窗口移动（scrollTop=5600 → 窗口 96..115）', async () => {
+  it('滚动后可视窗口移动（scrollTop=5600 → 行 51..64）', async () => {
     const pinia = createPinia()
     setActivePinia(pinia)
     const router = createRouter({
@@ -390,11 +401,12 @@ describe('虚拟滚动', () => {
       global: { plugins: [pinia, router] }
     })
     const scroller = wrapper.find('[data-testid="virtual-scroll"]')
-    scroller.element.scrollTop = 56 * 100
+    scroller.element.scrollTop = 5600
     await scroller.trigger('scroll')
-    expect(rows(wrapper)).toHaveLength(20) // start=96, end=min(600, ceil(6240/56)+4)=116
-    expect(rows(wrapper)[0].attributes('data-id')).toBe('item-096')
-    expect(rows(wrapper)[rows(wrapper).length - 1].attributes('data-id')).toBe('item-115')
+    // startRow=floor(5600/102)-3=51, endRow=min(600, ceil(6240/102)+3)=65 → 14 行
+    expect(rows(wrapper)).toHaveLength(14)
+    expect(rows(wrapper)[0].attributes('data-id')).toBe('item-051')
+    expect(rows(wrapper)[rows(wrapper).length - 1].attributes('data-id')).toBe('item-064')
     wrapper.unmount()
   })
 

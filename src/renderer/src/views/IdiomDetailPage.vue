@@ -2,7 +2,8 @@
 /**
  * 成语详情页（路由 /idioms/:id，PLAN.md §3.2 / F4 / AC-02）
  * - 由列表页点击 / 快速输入命中跳转进入（T4/T6 侧消费，本页只实现视图）
- * - 数据来自 idioms store（T3 提供，只消费不重写）；纯本地渲染，无 AI 依赖（AC-02 离线可用）
+ * - 数据：先以 store 列表条目即时渲染，再经 data:get 拉全量（examples/origin，
+ *   列表为性能已剥离这两字段，用户要求 #1）；纯本地渲染，无 AI 依赖（AC-02 离线可用）
  * - 三态：加载中（NSpin）/ 未收录（NEmpty + 返回引导）/ 正常（IdiomDetailCard）
  */
 import { computed, onMounted, ref, watch } from 'vue'
@@ -10,6 +11,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { NButton, NEmpty, NSpin } from 'naive-ui'
 import { useIdiomsStore } from '@renderer/stores/idioms'
 import IdiomDetailCard from '@renderer/components/idiom-detail/IdiomDetailCard.vue'
+import type { Idiom } from '@shared/ipc/contracts'
 
 const route = useRoute()
 const router = useRouter()
@@ -18,7 +20,16 @@ const store = useIdiomsStore()
 /** 当前词条 id（路由参数，/idioms/:id） */
 const idiomId = computed(() => String(route.params.id ?? ''))
 
-const idiom = computed(() => store.byId(idiomId.value))
+/** 全量词条（data:get 拉取后合并 examples/origin） */
+const fullIdiom = ref<Idiom | null>(null)
+
+/** 先显示列表条目（快），全量到达后合并 */
+const idiom = computed<Idiom | null>(() => {
+  const base = store.byId(idiomId.value) ?? null
+  const full = fullIdiom.value
+  if (!full) return base
+  return full
+})
 
 /** 加载失败重试计数器（驱动 watch 重新拉取） */
 const retryTick = ref(0)
@@ -26,6 +37,15 @@ const retryTick = ref(0)
 async function ensureLoaded(): Promise<void> {
   if (!store.loaded && !store.loading) {
     await store.load()
+  }
+  // 拉取全量（examples/origin；列表已剥离以减小 IPC 载荷）
+  const id = idiomId.value
+  if (!id) return
+  try {
+    const res = await window.api.data.get(id)
+    if (res.ok && res.data) fullIdiom.value = res.data
+  } catch {
+    /* 全量失败不阻塞：保留列表条目展示 */
   }
 }
 
@@ -35,6 +55,7 @@ onMounted(() => {
 
 // 路由参数变化（列表→详情、详情→详情）与重试时重新定位
 watch([idiomId, retryTick], () => {
+  fullIdiom.value = null
   void ensureLoaded()
 })
 
@@ -104,6 +125,7 @@ function goBackToList(): void {
   background: var(--y-bg-card);
   border: 1px solid var(--y-border-light);
   border-radius: var(--y-radius-lg);
+  box-shadow: var(--y-shadow-card);
 }
 
 .state-text {
