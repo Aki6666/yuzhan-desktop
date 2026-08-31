@@ -456,7 +456,12 @@ export function createStorage(options: StorageOptions): Storage {
         ...(patch.aiBaseUrl !== undefined ? { aiBaseUrl: patch.aiBaseUrl } : {}),
         ...(patch.aiModel !== undefined ? { aiModel: patch.aiModel } : {})
       }
-      settings = sanitizeSettings(next)
+      const sanitized = sanitizeSettings(next)
+      // 幂等 no-op：内容无变化不写盘（避免无意义队列写入与 teardown 竞态）
+      if (JSON.stringify(sanitized) === JSON.stringify(settings)) {
+        return settings
+      }
+      settings = sanitized
       await queue.enqueue('config.json', () => atomicWriteJson('config.json', settings))
       return settings
     },

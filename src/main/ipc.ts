@@ -75,7 +75,10 @@ function createAppAiService(
       return { apiKey: key, baseURL: s.aiBaseUrl ?? '', model: s.aiModel ?? '' }
     },
     onAiModeChange: (mode) => {
-      void storage.saveSettings({ aiMode: mode })
+      // 仅在模式变化时写盘（幂等 no-op 跳过）：避免 fire-and-forget 写入与测试 teardown 竞态
+      if (mode !== storage.getSettings().aiMode) {
+        void storage.saveSettings({ aiMode: mode })
+      }
     },
     logger: {
       info: (m) => logger.info(m),
