@@ -92,7 +92,10 @@ const batchView = computed<BatchFillController | null>(() => {
   return batch.value
 })
 
-const batchRunning = computed(() => batchView.value?.running() ?? false)
+const batchRunning = computed(() => {
+  void refresh.value
+  return batch.value?.running() ?? false
+})
 
 /**
  * 确认后的个人库写入（与 V2-F 快速输入确认流程完全一致，§10.1③ / quickRecord 个人库最小实现）：
