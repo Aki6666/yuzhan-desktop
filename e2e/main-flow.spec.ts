@@ -8,8 +8,29 @@
 import { test, expect, _electron as electron } from '@playwright/test'
 import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { execSync } from 'node:child_process'
 
 const IDIOM_ID = 'ju-gong-jin-cui-01' // 鞠躬尽瘁
+
+/**
+ * 开发环境专用：应用使用 requestSingleInstanceLock（§4.5），残留 electron 实例会令
+ * 新实例静默退出。best-effort 清理（Windows），避免 CI/本地重跑互踩；不影响用户数据。
+ */
+test.beforeAll(() => {
+  try {
+    execSync('taskkill /IM electron.exe /F', { stdio: 'ignore', windowsHide: true })
+  } catch {
+    /* 无残留实例属正常 */
+  }
+})
+
+test.afterAll(() => {
+  try {
+    execSync('taskkill /IM electron.exe /F', { stdio: 'ignore', windowsHide: true })
+  } catch {
+    /* ignore */
+  }
+})
 
 /** 从 progress.json（对象或数组两种形态兼容）取指定 id 的记录 */
 function findProgressRecord(id: string): Record<string, unknown> | undefined {
