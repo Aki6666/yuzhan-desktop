@@ -452,7 +452,9 @@ export function createStorage(options: StorageOptions): Storage {
       const next: AppSettings = {
         ...settings,
         ...(patch.aiMode !== undefined ? { aiMode: patch.aiMode } : {}),
-        ...(patch.quickInputShortcut !== undefined ? { quickInputShortcut: patch.quickInputShortcut } : {})
+        ...(patch.quickInputShortcut !== undefined ? { quickInputShortcut: patch.quickInputShortcut } : {}),
+        ...(patch.aiBaseUrl !== undefined ? { aiBaseUrl: patch.aiBaseUrl } : {}),
+        ...(patch.aiModel !== undefined ? { aiModel: patch.aiModel } : {})
       }
       settings = sanitizeSettings(next)
       await queue.enqueue('config.json', () => atomicWriteJson('config.json', settings))

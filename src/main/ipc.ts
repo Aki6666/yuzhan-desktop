@@ -29,7 +29,6 @@ import { createStorage, type Storage } from './store'
 import { createSettingsService } from './settings'
 import { createAiService, transitionAiMode, type AiService } from './ai'
 import { logger } from './logger'
-
 const PROGRESS_STATUSES: ProgressStatus[] = ['new', 'learning', 'mastered']
 const AI_MODES: AiMode[] = ['disabled', 'configured', 'online', 'error']
 const LOG_LEVELS: AppLogRequest['level'][] = ['debug', 'info', 'warn', 'error']
@@ -220,7 +219,13 @@ export function registerIpcHandlers(): void {
     const err = validateAiSearchWord(payload)
     if (err) return err
     const { word } = payload as { word: string }
-    const result = await aiService.searchWord(word)
+    let result: Awaited<ReturnType<AiService['searchWord']>>
+    try {
+      result = await aiService.searchWord(word)
+    } catch (e) {
+      logger.error(`[ipc] ai:searchWord 内部异常: ${String(e)}`)
+      return fail('AI_ERROR', 'AI 查询内部错误')
+    }
     switch (result.status) {
       case 'ok':
         return ipcOk({ draft: result.data, cached: result.cached })

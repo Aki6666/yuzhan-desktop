@@ -9,7 +9,7 @@
  */
 import { createHash } from 'node:crypto'
 import { promises as fsp } from 'node:fs'
-import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, statSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import type { AiDraftResult, AiMode, Emotion, Register } from '@shared/ipc/contracts'
 
@@ -227,8 +227,12 @@ export function createAiCache(cacheDir: string, maxEntries = 200): AiCache {
       writeFileSync(file, JSON.stringify({ ...entry, savedAt: now.toISOString() }, null, 2))
       return entry.data
     } catch {
-      // 损坏缓存：删除并视为未命中
-      void fsp.rm(file, { force: true }).catch(() => {})
+      // 损坏缓存：同步删除并视为未命中（清理立即可见，测试/后续读取一致）
+      try {
+        rmSync(file, { force: true })
+      } catch {
+        /* 忽略删除失败 */
+      }
       return null
     }
   }
