@@ -1,0 +1,33 @@
+:root {
+  font-family:
+    'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #2c3e50;
+  background: #fff;
+}
+
+.view h1 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.view .placeholder {
+  color: #888;
+  font-size: 14px;
+}

@@ -1,0 +1,42 @@
+# ---- 依赖 ----
+node_modules/
+
+# ---- electron-vite / electron-builder 产物 ----
+out/
+dist/
+release/
+
+# ---- 日志 ----
+*.log
+logs/
+
+# ---- 本地缓存（沙箱要求落在仓库内，不入库）----
+.cache/
+.runtime/
+.pnpm-store/
+
+# ---- 运行时个人数据（PLAN.md §4.1 userData，不入库）----
+userData/
+
+# ---- 工具内部状态 ----
+.agent-teams/
+
+# ---- 编辑器 ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- npm/pnpm ----
+.npm/
+npm-debug.log*
+pnpm-debug.log*

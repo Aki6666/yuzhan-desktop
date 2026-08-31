@@ -1,0 +1,28 @@
+# electron-builder 配置（PLAN.md §14.2：appId com.yuzhan.app，productName 语栈，NSIS）
+appId: com.yuzhan.app
+productName: 语栈
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!.cache/**'
+  - '!.pnpm-store/**'
+  - '!.agent-teams/**'
+asarUnpack:
+  - resources/**
+win:
+  executableName: yuzhan
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/

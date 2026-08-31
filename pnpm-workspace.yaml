@@ -1,0 +1,13 @@
+# pnpm 11 设置：pnpm 11 起项目设置统一在 pnpm-workspace.yaml 中（.npmrc / package.json 的 pnpm 字段不再读取，
+# 见 https://pnpm.io/settings）。PLAN.md §14.2 打包前置在此落实：
+# - nodeLinker=hoisted：electron-builder 打包必需（pnpm 11 默认即 hoisted，显式声明以防默认变化）
+# - allowBuilds：允许 electron（下载二进制）/ esbuild（校验平台二进制）构建脚本
+# 镜像类设置（electron_mirror 等）保留在 .npmrc（npm 兼容配置；electron 安装脚本读取 npm_config_electron_mirror）
+allowBuilds:
+  electron: true
+  esbuild: true
+  # electron-builder 的 Squirrel.Windows 安装器依赖（本产品用 NSIS，无需构建）
+  electron-winstaller: false
+
+nodeLinker: hoisted
+storeDir: E:/言语积累Ak/.pnpm-store

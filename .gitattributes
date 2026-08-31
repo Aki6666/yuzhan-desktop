@@ -1,0 +1,12 @@
+# 与 .editorconfig 一致：文本统一 LF（仓库内存储 LF，Windows 检出也保持 LF）
+* text=auto eol=lf
+
+# 二进制资源
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.icns binary
+*.exe binary
+*.zip binary
