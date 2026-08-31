@@ -6,31 +6,42 @@
  *   main 侧不注册 globalShortcut（FIX-1 根因：Windows 下会消费组合键）
  * - 自动聚焦、Esc 关闭；输入防抖 200ms 后本地检索（复用 shared/lib/search.ts）
  * - 命中：展示卡片 + 「复习一次 / 标记掌握」（progress store 记录闭环，节流写 + 强制 flush）
- * - 未命中：v0.1 存入生词本（pending store，即时写 userData/pending.json）
+ * - 未命中（V2-F，§10.1 ②③）：aiMode 可用时 → AI 查询（ai:searchWord）→ 草稿预览确认面板
+ *   （可编辑/混淆词勾选/缺字段标记/loading·超时·错误提示）→ 确认写个人库（会话内注册表 +
+ *   progress 闪卡队列）；aiMode 未配置/异常 → v0.1 降级直接存入生词本；请求序号防 stale
  *
  * U3 视觉重构：输入框醒目、命中/未命中反馈精修、快捷键提示行；消费 U1 设计 token；
  * 焦点逻辑与 data-testid 全部不变（quick-input 测试依赖）
  */
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { NButton, NInput, NModal, NSpin, NTag } from 'naive-ui'
+import { NButton, NInput, NModal, NSelect, NSpin, NTag } from 'naive-ui'
 import { useIdiomsStore } from '@renderer/stores/idioms'
 import { usePendingStore } from '@renderer/stores/pending'
 import { useProgressStore } from '@renderer/stores/progress'
 import { useSettingsStore } from '@renderer/stores/settings'
 import { debounce } from '@renderer/lib/listFilters'
 import type { SearchHit } from '@shared/lib/search'
+import type { IpcErrorCode } from '@shared/ipc/contracts'
 import {
   DEFAULT_SHORTCUT,
   QUICK_INPUT_DEBOUNCE_MS,
+  addPersonalItem,
+  aiEnabled,
+  aiModeLabel,
+  aiModeTagType,
+  buildPersonalIdiom,
   createQuickIndex,
   describeShortcut,
+  draftMissingFields,
   eventMatchesAccelerator,
   firstHit,
   isPlusKey,
+  listPersonalLibrary,
   pendingWordFromQuery,
   searchHits,
-  tierLabel
+  tierLabel,
+  type PersonalIdiomInput
 } from '@renderer/lib/quickRecord'
 
 const router = useRouter()
@@ -45,9 +56,11 @@ const hits = ref<SearchHit[]>([])
 const feedback = ref<string | null>(null)
 const lastAddedWord = ref<string | null>(null)
 
-const index = computed(() => createQuickIndex(idiomsStore.items))
+// 检索池 = 正式库 + 个人库（V2-F：确认入个人库后会话内可检索命中）
+const index = computed(() => createQuickIndex([...idiomsStore.items, ...listPersonalLibrary()]))
 const ready = computed(() => idiomsStore.loaded)
 const shortcut = computed(() => settingsStore.settings.quickInputShortcut)
+const aiMode = computed(() => settingsStore.settings.aiMode)
 
 const applySearch = debounce((v: string) => {
   const q = v.trim()
@@ -60,6 +73,7 @@ const applySearch = debounce((v: string) => {
 
 watch(query, (v) => {
   feedback.value = null
+  resetAiState() // 新查询使在途 AI 结果失效并收起预览（防 stale）
   applySearch(v)
 })
 
@@ -188,6 +202,7 @@ function onEnter(): void {
 function clearQuery(): void {
   query.value = ''
   lastAddedWord.value = null
+  resetAiState()
 }
 
 function goDetail(id: string): void {
@@ -198,6 +213,150 @@ function goDetail(id: string): void {
 function goPending(): void {
   close()
   void router.push('/pending')
+}
+
+// ---------------------------------------------------------------------------
+// v0.2 AI 查询闭环（V2-F，§10.1 ②③）：未命中 → ai:searchWord → 预览确认 → 写个人库
+// ---------------------------------------------------------------------------
+
+type AiState = 'idle' | 'loading' | 'ok' | 'error'
+
+const aiState = ref<AiState>('idle')
+const aiErrorText = ref<string | null>(null)
+const aiFeedback = ref<string | null>(null)
+/** 请求序号：新查询/取消自增，使在途响应失效（防 stale 覆盖，§10.2） */
+const aiSeq = ref(0)
+const draftForm = ref<PersonalIdiomInput | null>(null)
+const draftMissing = ref<string[]>([])
+const checkedNearWords = ref<string[]>([])
+
+const EMOTION_OPTIONS = [
+  { label: '褒', value: '褒' },
+  { label: '贬', value: '贬' },
+  { label: '中性', value: '中性' }
+]
+const REGISTER_OPTIONS = [
+  { label: '谦辞', value: '谦辞' },
+  { label: '敬辞', value: '敬辞' },
+  { label: '无', value: '无' }
+]
+const FREQ_OPTIONS = [1, 2, 3, 4, 5].map((f) => ({ label: `${f} 档`, value: f }))
+
+const draftErrorTypesText = computed<string>({
+  get: () => (draftForm.value?.errorTypes ?? []).join('，'),
+  set: (v: string) => {
+    if (draftForm.value) {
+      draftForm.value.errorTypes = v
+        .split(/[,，]/)
+        .map((s) => s.trim())
+        .filter(Boolean)
+    }
+  }
+})
+
+function resetAiState(): void {
+  aiSeq.value++
+  aiState.value = 'idle'
+  aiErrorText.value = null
+  aiFeedback.value = null
+  draftForm.value = null
+  draftMissing.value = []
+  checkedNearWords.value = []
+}
+
+function aiErrorMessage(code: IpcErrorCode): string {
+  switch (code) {
+    case 'NO_API_KEY':
+      return '未配置 API Key（可降级为生词本，或到设置页配置）'
+    case 'AI_TIMEOUT':
+      return 'AI 查询超时，请重试'
+    case 'RATE_LIMITED':
+      return '查询过于频繁，请稍后再试'
+    case 'AI_ERROR':
+      return 'AI 查询失败，请重试'
+    default:
+      return 'AI 查询出错，请重试'
+  }
+}
+
+/** AI 查询：ai:searchWord（V2-C）；requestId 随序号，防 stale */
+async function queryAi(): Promise<void> {
+  const word = query.value.trim()
+  if (!word || !aiEnabled(aiMode.value)) return
+  const seq = ++aiSeq.value
+  aiState.value = 'loading'
+  aiErrorText.value = null
+  aiFeedback.value = null
+  try {
+    const res = await window.api.ai.searchWord(word, String(seq))
+    if (seq !== aiSeq.value) return // stale：期间有新查询/取消
+    if (res.ok) {
+      const d = res.data.draft
+      draftForm.value = {
+        word: d.word?.trim() || word,
+        meaning: d.meaning?.trim() ?? '',
+        origin: d.origin,
+        usage: d.usage,
+        emotion: d.emotion ?? '中性',
+        register: d.register ?? '无',
+        errorTypes: Array.isArray(d.errorTypes) ? d.errorTypes : [],
+        near: Array.isArray(d.near) ? d.near : [],
+        opposite: d.opposite,
+        examples: d.examples,
+        frequency:
+          typeof d.frequency === 'number' && d.frequency >= 1 && d.frequency <= 5 ? d.frequency : 3,
+        tags: d.tags
+      }
+      draftMissing.value = draftMissingFields(d)
+      checkedNearWords.value = (draftForm.value.near ?? []).map((n) => n.word)
+      aiState.value = 'ok'
+    } else {
+      aiState.value = 'error'
+      aiErrorText.value = aiErrorMessage(res.error.code)
+    }
+  } catch (e) {
+    if (seq !== aiSeq.value) return
+    aiState.value = 'error'
+    aiErrorText.value = String(e)
+  }
+}
+
+/** 取消（renderer 侧）：使在途响应失效并收起预览 */
+function cancelAi(): void {
+  resetAiState()
+}
+
+function toggleNear(word: string): void {
+  const set = new Set(checkedNearWords.value)
+  if (set.has(word)) set.delete(word)
+  else set.add(word)
+  checkedNearWords.value = [...set]
+}
+
+/** 混淆词候选是否已在库（正式库或个人库） */
+function candidateInLibrary(word: string): boolean {
+  return idiomsStore.items.some((i) => i.word === word)
+}
+
+/** 确认：写个人库（会话内注册表）+ 加入闪卡队列（progress 新建记录，节流写 + flush） */
+async function confirmDraft(): Promise<void> {
+  const form = draftForm.value
+  if (!form) return
+  if (!form.word.trim() || !form.meaning.trim()) {
+    aiFeedback.value = '词形与释义为必填项，请补充后确认'
+    return
+  }
+  const idiom = buildPersonalIdiom({
+    ...form,
+    near: (form.near ?? []).filter((n) => checkedNearWords.value.includes(n.word))
+  })
+  addPersonalItem(idiom)
+  progressStore.recordAttempt(idiom.id) // 新建进度记录 → 闪卡队列（非 mastered）
+  await progressStore.flush()
+  aiFeedback.value = `已加入个人库并进入复习队列：${idiom.word}`
+  aiState.value = 'idle'
+  draftForm.value = null
+  draftMissing.value = []
 }
 
 onMounted(() => {
@@ -285,15 +444,168 @@ defineExpose({ open, close, isOpen: () => show.value })
         </div>
       </div>
 
-      <!-- 未命中：v0.1 直接入生词本（AI 查询 v0.2） -->
+      <!-- 未命中（V2-F）：aiMode 可用 → AI 草稿预览确认；否则 v0.1 降级存入生词本 -->
       <div v-else-if="status === 'miss'" class="state miss-state" data-testid="quick-state-miss">
-        <p class="state-text">词库未收录「{{ query }}」（AI 查询 v0.2 提供）</p>
-        <div class="miss-actions">
-          <NButton size="small" type="primary" data-testid="action-add-pending" @click="addToPending">
-            存入生词本
-          </NButton>
-          <span class="hint">回车也可直接存入</span>
-        </div>
+        <!-- AI 草稿预览确认面板 -->
+        <template v-if="aiState === 'ok' && draftForm">
+          <div class="draft-panel" data-testid="ai-draft-panel">
+            <div class="draft-head">
+              <span class="draft-title">AI 草稿确认</span>
+              <NTag
+                v-if="draftMissing.length > 0"
+                size="small"
+                type="warning"
+                :bordered="false"
+                data-testid="draft-missing"
+              >
+                缺字段：{{ draftMissing.join('、') }}
+              </NTag>
+            </div>
+
+            <div class="draft-field">
+              <label class="draft-label">词形</label>
+              <NInput v-model:value="draftForm.word" size="small" data-testid="draft-word" />
+            </div>
+            <div class="draft-field">
+              <label class="draft-label">释义</label>
+              <NInput
+                v-model:value="draftForm.meaning"
+                size="small"
+                type="textarea"
+                :autosize="{ minRows: 2, maxRows: 4 }"
+                data-testid="draft-meaning"
+              />
+            </div>
+            <div class="draft-field">
+              <label class="draft-label">适用</label>
+              <NInput
+                v-model:value="draftForm.usage"
+                size="small"
+                placeholder="可选"
+                data-testid="draft-usage"
+              />
+            </div>
+            <div class="draft-row">
+              <div class="draft-field draft-half">
+                <label class="draft-label">感情色彩</label>
+                <NSelect
+                  v-model:value="draftForm.emotion"
+                  size="small"
+                  :options="EMOTION_OPTIONS"
+                  data-testid="draft-emotion"
+                />
+              </div>
+              <div class="draft-field draft-half">
+                <label class="draft-label">语域</label>
+                <NSelect
+                  v-model:value="draftForm.register"
+                  size="small"
+                  :options="REGISTER_OPTIONS"
+                  data-testid="draft-register"
+                />
+              </div>
+            </div>
+            <div class="draft-field">
+              <label class="draft-label">误用类型</label>
+              <NInput
+                v-model:value="draftErrorTypesText"
+                size="small"
+                placeholder="逗号分隔，如：望文生义, 褒贬误用"
+                data-testid="draft-error-types"
+              />
+            </div>
+            <div class="draft-field">
+              <label class="draft-label">频次</label>
+              <NSelect
+                v-model:value="draftForm.frequency"
+                size="small"
+                :options="FREQ_OPTIONS"
+                data-testid="draft-freq"
+              />
+            </div>
+
+            <!-- 混淆词候选：逐条勾选（库内词标记 / 新词标候选草稿） -->
+            <div v-if="draftForm.near && draftForm.near.length > 0" class="draft-field">
+              <label class="draft-label">混淆词候选（勾选保留）</label>
+              <div class="candidate-list">
+                <label
+                  v-for="n in draftForm.near"
+                  :key="n.word"
+                  class="candidate"
+                  :data-testid="`candidate-${n.word}`"
+                >
+                  <input
+                    type="checkbox"
+                    :checked="checkedNearWords.includes(n.word)"
+                    data-testid="candidate-check"
+                    @change="toggleNear(n.word)"
+                  />
+                  <span class="candidate-word">{{ n.word }}</span>
+                  <NTag v-if="candidateInLibrary(n.word)" size="small" type="info" :bordered="false">
+                    库内
+                  </NTag>
+                  <NTag v-else size="small" :bordered="false" class="candidate-draft-tag">候选草稿</NTag>
+                </label>
+              </div>
+            </div>
+
+            <div class="draft-actions">
+              <NButton size="small" type="primary" data-testid="draft-confirm" @click="confirmDraft">
+                确认加入个人库
+              </NButton>
+              <NButton size="small" quaternary data-testid="draft-cancel" @click="cancelAi">取消</NButton>
+            </div>
+          </div>
+        </template>
+
+        <!-- 未命中默认面板：AI 查询成功反馈 / AI 模式状态 + 查询·降级动作 -->
+        <template v-else>
+          <div v-if="aiFeedback" class="feedback" data-testid="ai-feedback">
+            <NTag size="small" type="success" :bordered="false">{{ aiFeedback }}</NTag>
+            <NButton size="tiny" quaternary data-testid="continue-input" @click="clearQuery">继续输入</NButton>
+          </div>
+
+          <template v-else>
+            <div class="miss-head">
+              <p class="state-text">词库未收录「{{ query }}」</p>
+              <NTag
+                size="small"
+                :type="aiModeTagType(aiMode)"
+                :bordered="false"
+                data-testid="ai-mode-tag"
+              >
+                {{ aiModeLabel(aiMode) }}
+              </NTag>
+            </div>
+
+            <template v-if="aiState === 'loading'">
+              <NSpin size="small" />
+              <span class="state-text" data-testid="ai-loading">AI 查询中…</span>
+              <NButton size="small" quaternary data-testid="ai-cancel" @click="cancelAi">取消</NButton>
+            </template>
+            <template v-else-if="aiState === 'error'">
+              <span class="ai-error" data-testid="ai-error">{{ aiErrorText }}</span>
+              <NButton size="small" data-testid="ai-retry" @click="queryAi">重试</NButton>
+            </template>
+            <template v-else>
+              <div class="miss-actions">
+                <NButton
+                  v-if="aiEnabled(aiMode)"
+                  size="small"
+                  type="primary"
+                  data-testid="action-ai-query"
+                  @click="queryAi"
+                >
+                  AI 查询
+                </NButton>
+                <NButton size="small" secondary data-testid="action-add-pending" @click="addToPending">
+                  存入生词本
+                </NButton>
+                <span class="hint">回车也可直接存入</span>
+              </div>
+            </template>
+          </template>
+        </template>
       </div>
 
       <!-- 操作反馈 -->
@@ -438,5 +750,93 @@ defineExpose({ open, close, isOpen: () => show.value })
   gap: 4px;
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
+}
+
+/* V2-F：未命中 AI 面板 */
+.miss-head {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ai-error {
+  font-size: var(--y-font-body);
+  color: var(--y-danger);
+}
+
+/* AI 草稿预览确认面板 */
+.draft-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-md);
+  width: 100%;
+  text-align: left;
+}
+
+.draft-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-sm);
+}
+
+.draft-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--y-text-primary);
+}
+
+.draft-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.draft-row {
+  display: flex;
+  gap: var(--y-space-md);
+}
+
+.draft-half {
+  flex: 1;
+}
+
+.draft-label {
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+}
+
+.candidate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.candidate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-sm);
+  background: var(--y-bg-subtle);
+  cursor: pointer;
+}
+
+.candidate-word {
+  font-size: var(--y-font-body);
+  color: var(--y-text-body);
+}
+
+.candidate-draft-tag {
+  color: var(--y-text-tertiary);
+}
+
+.draft-actions {
+  display: flex;
+  gap: var(--y-space-sm);
+  margin-top: 2px;
 }
 </style>

@@ -18,13 +18,23 @@ import PendingPage from '../src/renderer/src/views/PendingPage.vue'
 import {
   DEFAULT_SHORTCUT,
   acceleratorFromEvent,
+  addPersonalItem,
+  aiEnabled,
+  aiModeLabel,
+  aiModeTagType,
+  buildPersonalIdiom,
+  clearPersonalLibrary,
   createQuickIndex,
+  derivePinyin,
   describeShortcut,
+  draftMissingFields,
   eventMatchesAccelerator,
+  findPersonal,
   firstHit,
   formatAddedAt,
   isPlusKey,
   isRecordableQuery,
+  listPersonalLibrary,
   parseAccelerator,
   pendingWordFromQuery,
   searchHits,
@@ -60,8 +70,16 @@ const fixture: Idiom[] = [
   idiom({ id: 'jin-xin-jie-li-01', word: '尽心竭力', pinyin: 'jìn xīn jié lì', frequency: 1 })
 ]
 
-function installApiMock(opts: { items?: Idiom[]; pending?: string[] } = {}) {
+function installApiMock(
+  opts: {
+    items?: Idiom[]
+    pending?: string[]
+    aiMode?: 'disabled' | 'configured' | 'online' | 'error'
+    aiSearchWord?: () => Promise<unknown>
+  } = {}
+) {
   const items = opts.items ?? fixture
+  const aiMode = opts.aiMode ?? 'disabled'
   const pendingDb: { word: string; addedAt: string }[] = (opts.pending ?? []).map((word, i) => ({
     word,
     addedAt: new Date(Date.UTC(2026, 7, 31 - i)).toISOString()
@@ -88,16 +106,35 @@ function installApiMock(opts: { items?: Idiom[]; pending?: string[] } = {}) {
     settings: {
       get: vi.fn(async () => ({
         ok: true,
-        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'Plus' }
+        data: { schemaVersion: 1, aiMode, quickInputShortcut: 'Plus' }
       })),
-      set: vi.fn(async (patch: { quickInputShortcut?: string }) => ({
+      set: vi.fn(async (patch: { quickInputShortcut?: string; aiMode?: string }) => ({
         ok: true,
         data: {
           schemaVersion: 1,
-          aiMode: 'disabled',
+          aiMode: patch.aiMode ?? aiMode,
           quickInputShortcut: patch.quickInputShortcut ?? 'Plus'
         }
       }))
+    },
+    ai: {
+      searchWord: vi.fn(
+        opts.aiSearchWord ??
+          (async () => ({
+            ok: true,
+            data: {
+              draft: {
+                word: '新造词甲',
+                meaning: '新造词甲释义',
+                emotion: '中性',
+                register: '无',
+                errorTypes: ['望文生义'],
+                frequency: 3
+              },
+              cached: false
+            }
+          }))
+      )
     },
     log: vi.fn(async () => ({ ok: true, data: null }))
   }
@@ -230,6 +267,53 @@ describe('quickRecord 纯函数', () => {
     expect(isPlusKey(new KeyboardEvent('keydown', { key: '+', code: 'NumpadAdd' }))).toBe(true)
     expect(isPlusKey(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))).toBe(false)
     expect(isPlusKey(new KeyboardEvent('keydown', { key: 'Enter' }))).toBe(false)
+  })
+
+  it('AI 模式（V2-F）：中文标签 / 标签类型 / 可用性判定（未配置·异常 → 降级生词本）', () => {
+    expect(aiModeLabel('disabled')).toBe('未配置')
+    expect(aiModeLabel('configured')).toBe('已配置')
+    expect(aiModeLabel('online')).toBe('在线')
+    expect(aiModeLabel('error')).toBe('异常')
+    expect(aiModeTagType('online')).toBe('success')
+    expect(aiModeTagType('error')).toBe('error')
+    expect(aiEnabled('disabled')).toBe(false)
+    expect(aiEnabled('error')).toBe(false)
+    expect(aiEnabled('configured')).toBe(true)
+    expect(aiEnabled('online')).toBe(true)
+  })
+
+  it('draftMissingFields：缺字段明确标记（§10.1）', () => {
+    const full = {
+      word: '词', meaning: '释义', emotion: '褒' as const, register: '无' as const,
+      errorTypes: ['望文生义'], frequency: 3
+    }
+    expect(draftMissingFields(full)).toEqual([])
+    expect(draftMissingFields({ ...full, meaning: '' })).toContain('释义')
+    expect(draftMissingFields({ ...full, word: '  ' })).toContain('词形')
+    expect(draftMissingFields({ ...full, errorTypes: [] })).toContain('误用类型')
+    expect(draftMissingFields({ ...full, frequency: 9 })).toContain('频次')
+  })
+
+  it('derivePinyin：词形 → 带声调拼音', () => {
+    expect(derivePinyin('鞠躬尽瘁')).toBe('jū gōng jìn cuì')
+    expect(derivePinyin('  ')).toBe('')
+  })
+
+  it('buildPersonalIdiom / addPersonalItem：quality=user、library=user、按词形去重', () => {
+    clearPersonalLibrary()
+    const a = buildPersonalIdiom({
+      word: '新造词', meaning: '新释义', emotion: '中性', register: '无',
+      errorTypes: ['望文生义'], frequency: 3, near: [{ word: '近义词', diff: '区别' }]
+    })
+    expect(a.quality).toBe('user')
+    expect(a.library).toBe('user')
+    expect(a.id).toMatch(/^新造词-u/)
+    expect(a.pinyin.length).toBeGreaterThan(0)
+    expect(addPersonalItem(a)).toBe(true)
+    expect(addPersonalItem(a)).toBe(false) // 同词去重
+    expect(listPersonalLibrary()).toHaveLength(1)
+    expect(findPersonal('新造词')?.meaning).toBe('新释义')
+    clearPersonalLibrary()
   })
 })
 
@@ -407,6 +491,178 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
     await flushPromises()
     expect(router.currentRoute.value.path).toBe('/idioms/ju-gong-jin-cui-01')
     expect(isOpen(wrapper)).toBe(false)
+    wrapper.unmount()
+  })
+})
+
+// ---------------------------------------------------------------------------
+// QuickInputModal AI 闭环（V2-F，§10.1 ②③）
+// ---------------------------------------------------------------------------
+
+describe('QuickInputModal AI 闭环（V2-F）', () => {
+  async function mountAiModal(opts: {
+    aiMode?: 'disabled' | 'configured' | 'online' | 'error'
+    aiSearchWord?: () => Promise<unknown>
+  } = {}) {
+    const { api } = installApiMock({ aiMode: opts.aiMode ?? 'online', aiSearchWord: opts.aiSearchWord })
+    const pinia = createPinia()
+    setActivePinia(pinia)
+    const router = createRouter({
+      history: createMemoryHistory(),
+      routes: [
+        { path: '/', component: { template: '<div />' } },
+        { path: '/idioms/:id', component: { template: '<div>detail</div>' } },
+        { path: '/pending', component: { template: '<div>pending</div>' } }
+      ]
+    })
+    await router.push('/')
+    await router.isReady()
+    const wrapper = mount(QuickInputModal, { global: { plugins: [pinia, router] } })
+    await flushPromises()
+    return { wrapper, router, api, pinia }
+  }
+
+  const bodyFind = (testId: string): HTMLElement | null =>
+    document.body.querySelector<HTMLElement>(`[data-testid="${testId}"]`)
+
+  beforeEach(() => {
+    clearPersonalLibrary()
+  })
+
+  afterEach(() => {
+    clearPersonalLibrary()
+  })
+
+  it('降级：aiMode=disabled/error → 无 AI 查询按钮，直接走生词本（v0.1 行为）', async () => {
+    for (const mode of ['disabled', 'error'] as const) {
+      const { wrapper, api } = await mountAiModal({ aiMode: mode })
+      await openAndType(wrapper, '生僻词x')
+      expect(bodyFind('ai-mode-tag')?.textContent).toBe(mode === 'disabled' ? '未配置' : '异常')
+      expect(bodyFind('action-ai-query')).toBeNull() // 无 AI 查询入口
+      expect(bodyFind('action-add-pending')).not.toBeNull()
+      bodyClick('action-add-pending')
+      await flushPromises()
+      expect(api.pending.add).toHaveBeenCalledWith('生僻词x')
+      wrapper.unmount()
+      document.body.innerHTML = ''
+    }
+  })
+
+  it('AI 查询 → 草稿预览：展示词形/释义，可编辑后确认写个人库并加入复习队列', async () => {
+    const { wrapper, api } = await mountAiModal()
+    await openAndType(wrapper, '生僻词x')
+    expect(bodyFind('ai-mode-tag')?.textContent).toBe('在线')
+    bodyClick('action-ai-query')
+    await flushPromises()
+    // 预览面板
+    expect(bodyFind('ai-draft-panel')).not.toBeNull()
+    expect(bodyFind('draft-word')?.textContent).toContain('新造词甲')
+    // 编辑词形
+    const wordInput = document.body.querySelector<HTMLInputElement>('[data-testid="draft-word"] input')
+    wordInput!.value = '新造词甲改'
+    wordInput!.dispatchEvent(new Event('input', { bubbles: true }))
+    await flushPromises()
+    // 确认
+    bodyClick('draft-confirm')
+    await flushPromises()
+    expect(bodyFind('ai-feedback')?.textContent).toContain('已加入个人库并进入复习队列')
+    // 个人库登记 + 闪卡队列（progress 新建记录 + flush）
+    expect(findPersonal('新造词甲改')).toBeDefined()
+    expect(api.progress.save).toHaveBeenCalledWith(
+      expect.objectContaining({ status: 'learning' })
+    )
+    wrapper.unmount()
+  })
+
+  it('混淆词候选：库内词标「库内」/新词标「候选草稿」，勾选过滤后保留选中项', async () => {
+    const { wrapper } = await mountAiModal({
+      aiSearchWord: async () => ({
+        ok: true,
+        data: {
+          draft: {
+            word: '生僻词x',
+            meaning: '生僻释义',
+            emotion: '中性',
+            register: '无',
+            errorTypes: ['望文生义'],
+            frequency: 3,
+            near: [
+              { word: '不落窠臼', diff: '库内对端' },
+              { word: '新词乙', diff: '新词候选' }
+            ]
+          },
+          cached: false
+        }
+      })
+    })
+    await openAndType(wrapper, '生僻词x')
+    bodyClick('action-ai-query')
+    await flushPromises()
+    // 库内词标记
+    const inLib = bodyFind('candidate-不落窠臼')
+    expect(inLib?.textContent).toContain('库内')
+    expect(inLib?.textContent).toContain('不落窠臼')
+    const newWord = bodyFind('candidate-新词乙')
+    expect(newWord?.textContent).toContain('候选草稿')
+    // 取消勾选 新词乙
+    newWord?.querySelector('input')?.click()
+    await flushPromises()
+    bodyClick('draft-confirm')
+    await flushPromises()
+    const saved = findPersonal('生僻词x')
+    expect(saved).toBeDefined()
+    expect(saved!.near?.map((n) => n.word)).toEqual(['不落窠臼'])
+    wrapper.unmount()
+  })
+
+  it('缺字段标记：AI 返回缺释义 → 预览面板提示「缺字段：释义」', async () => {
+    const { wrapper } = await mountAiModal({
+      aiSearchWord: async () => ({
+        ok: true,
+        data: {
+          draft: { word: '缺词', meaning: '', emotion: '中性', register: '无', errorTypes: ['望文生义'], frequency: 3 },
+          cached: false
+        }
+      })
+    })
+    await openAndType(wrapper, '缺词')
+    bodyClick('action-ai-query')
+    await flushPromises()
+    expect(bodyFind('draft-missing')?.textContent).toContain('缺字段：释义')
+    wrapper.unmount()
+  })
+
+  it('AI 查询错误：NO_API_KEY → 错误提示 + 重试按钮（§3.4 禁止无反馈等待）', async () => {
+    const { wrapper } = await mountAiModal({
+      aiSearchWord: async () => ({ ok: false, error: { code: 'NO_API_KEY', message: '未配置' } })
+    })
+    await openAndType(wrapper, '生僻词x')
+    bodyClick('action-ai-query')
+    await flushPromises()
+    expect(bodyFind('ai-error')?.textContent).toContain('未配置 API Key')
+    expect(bodyFind('ai-retry')).not.toBeNull()
+    wrapper.unmount()
+  })
+
+  it('取消/防 stale：查询在途时取消 → 响应到达不覆盖（无预览出现）', async () => {
+    let resolveAi!: (v: unknown) => void
+    const { wrapper } = await mountAiModal({
+      aiSearchWord: () => new Promise((r) => { resolveAi = r })
+    })
+    await openAndType(wrapper, '生僻词x')
+    bodyClick('action-ai-query')
+    await flushPromises()
+    expect(bodyFind('ai-loading')).not.toBeNull()
+    bodyClick('ai-cancel') // 取消：使在途响应失效
+    await flushPromises()
+    expect(bodyFind('ai-draft-panel')).toBeNull()
+    resolveAi({
+      ok: true,
+      data: { draft: { word: '迟到词', meaning: '迟到释义', emotion: '中性', register: '无', errorTypes: [], frequency: 3 }, cached: false }
+    })
+    await flushPromises()
+    expect(bodyFind('ai-draft-panel')).toBeNull() // stale 被忽略
+    expect(findPersonal('迟到词')).toBeUndefined()
     wrapper.unmount()
   })
 })

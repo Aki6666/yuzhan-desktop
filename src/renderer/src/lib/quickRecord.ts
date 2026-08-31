@@ -13,7 +13,16 @@ import {
   type SearchHit,
   type SearchIndex
 } from '@shared/lib/search'
-import type { Idiom } from '@shared/ipc/contracts'
+import { pinyin } from 'pinyin-pro'
+import type {
+  AiDraftResult,
+  AiMode,
+  Emotion,
+  ExampleItem,
+  Idiom,
+  NearItem,
+  Register
+} from '@shared/ipc/contracts'
 
 /** 搜索输入防抖（§3.4 通用 200ms） */
 export const QUICK_INPUT_DEBOUNCE_MS = 200
@@ -190,4 +199,133 @@ export function formatAddedAt(iso: string): string {
   const d = new Date(iso)
   if (Number.isNaN(d.getTime())) return iso
   return d.toISOString().slice(0, 10)
+}
+
+// ---------------------------------------------------------------------------
+// v0.2 AI 闭环（V2-F，§10.1 ②③）：aiMode 状态 / draft 校验 / 个人库最小实现
+// ---------------------------------------------------------------------------
+
+/** AI 模式中文标签（disabled/configured/online/error → 未配置/已配置/在线/异常） */
+export function aiModeLabel(mode: AiMode): string {
+  switch (mode) {
+    case 'configured':
+      return '已配置'
+    case 'online':
+      return '在线'
+    case 'error':
+      return '异常'
+    default:
+      return '未配置'
+  }
+}
+
+/** AI 模式标签类型（Naive NTag） */
+export function aiModeTagType(mode: AiMode): 'default' | 'info' | 'success' | 'error' {
+  switch (mode) {
+    case 'configured':
+      return 'info'
+    case 'online':
+      return 'success'
+    case 'error':
+      return 'error'
+    default:
+      return 'default'
+  }
+}
+
+/** AI 查询可用（§10.2 降级路径：未配置/异常 → 快速输入直接走生词本） */
+export function aiEnabled(mode: AiMode): boolean {
+  return mode === 'configured' || mode === 'online'
+}
+
+/** draft 缺字段标记（§10.1 缺字段明确标记）：返回缺失字段中文名列表 */
+export function draftMissingFields(draft: AiDraftResult): string[] {
+  const missing: string[] = []
+  if (!draft.word?.trim()) missing.push('词形')
+  if (!draft.meaning?.trim()) missing.push('释义')
+  if (!draft.emotion) missing.push('感情色彩')
+  if (!draft.register) missing.push('语域')
+  if (!Array.isArray(draft.errorTypes) || draft.errorTypes.length === 0) missing.push('误用类型')
+  if (typeof draft.frequency !== 'number' || draft.frequency < 1 || draft.frequency > 5) missing.push('频次')
+  return missing
+}
+
+/** 词形 → 带声调拼音（pinyin-pro；个人库词条展示与拼音检索用） */
+export function derivePinyin(word: string): string {
+  const w = word.trim()
+  if (!w) return ''
+  return pinyin(w, { toneType: 'symbol' }).trim()
+}
+
+// ---------------------------------------------------------------------------
+// 个人库（v0.2 最小实现：renderer 会话内注册表）
+// 说明：userData 个人库文件落盘 + 对应 IPC channel 为计划扩展（附录 B v0.2 记录项，
+// 需 main 侧实现，超出本任务 inScope）。确认后的词条登记于此（会话内可检索），
+// 并立即写入 progress（闪卡队列，经既有 progress:save channel 持久化）。
+// ---------------------------------------------------------------------------
+
+let personalIdSeq = 0
+const personalLibrary: Idiom[] = []
+
+/** 会话内个人库快照 */
+export function listPersonalLibrary(): Idiom[] {
+  return personalLibrary.slice()
+}
+
+/** 测试隔离用：清空个人库 */
+export function clearPersonalLibrary(): void {
+  personalLibrary.length = 0
+}
+
+/** 按词形查个人库（已收录词直接命中，避免重复建卡） */
+export function findPersonal(word: string): Idiom | undefined {
+  const w = word.trim()
+  return personalLibrary.find((i) => i.word === w)
+}
+
+export interface PersonalIdiomInput {
+  word: string
+  meaning: string
+  origin?: string
+  usage?: string
+  emotion: Emotion
+  register: Register
+  errorTypes: string[]
+  near?: NearItem[]
+  opposite?: string[]
+  examples?: ExampleItem[]
+  frequency: number
+  tags?: string[]
+}
+
+/** 构建个人库词条（quality=user / library=user；id = 词形 slug + 序号） */
+export function buildPersonalIdiom(input: PersonalIdiomInput): Idiom {
+  personalIdSeq += 1
+  const slug = input.word.trim().replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '').toLowerCase() || 'user'
+  return {
+    schemaVersion: 1,
+    id: `${slug}-u${personalIdSeq.toString(36)}`,
+    word: input.word.trim(),
+    pinyin: derivePinyin(input.word),
+    meaning: input.meaning.trim(),
+    ...(input.origin?.trim() ? { origin: input.origin.trim() } : {}),
+    ...(input.usage?.trim() ? { usage: input.usage.trim() } : {}),
+    emotion: input.emotion,
+    register: input.register,
+    ...(input.near && input.near.length > 0 ? { near: input.near } : {}),
+    ...(input.opposite && input.opposite.length > 0 ? { opposite: input.opposite } : {}),
+    ...(input.examples && input.examples.length > 0 ? { examples: input.examples } : {}),
+    errorTypes: input.errorTypes,
+    frequency: input.frequency,
+    ...(input.tags && input.tags.length > 0 ? { tags: input.tags } : {}),
+    quality: 'user',
+    library: 'user'
+  }
+}
+
+/** 登记个人词条（按词形去重；返回是否新增） */
+export function addPersonalItem(idiom: Idiom): boolean {
+  if (personalLibrary.some((i) => i.word === idiom.word)) return false
+  personalLibrary.push(idiom)
+  return true
 }
