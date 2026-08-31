@@ -1,6 +1,11 @@
+<script setup lang="ts">
+/**
+ * 闪卡视图入口（路由 /flashcards 由 T1 指向本文件）
+ * 实现委托给 FlashcardsPage（T7，见 PLAN.md §3.2/F5），保持路由接线不变。
+ */
+import FlashcardsPage from './FlashcardsPage.vue'
+</script>
+
 <template>
-  <section class="view">
-    <h1>闪卡</h1>
-    <p class="placeholder">T7 待实现：认识/不认识 + 收敛规则（3 次认识→mastered）+ 撤销 + 会话小结（AC-05）</p>
-  </section>
+  <FlashcardsPage />
 </template>
