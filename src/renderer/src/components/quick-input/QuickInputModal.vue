@@ -1,8 +1,9 @@
 <script setup lang="ts">
 /**
  * 快速记录弹层（PLAN.md §10 / F7 / AC-03/04，§3.3 快速输入交互）
- * - Ctrl+K 与「+」键任意页面唤起（自注册 window keydown，应用内快捷键为主；FIX-1：
- *   main 侧不再注册 globalShortcut——Windows 下会消费组合键导致 renderer 收不到 keydown）
+ * - 唤起快捷键（FIX-2，附录 B v0.1.3）：默认「+」键（+/=/数字键盘加号），可在设置页自定义
+ *   （settings.quickInputShortcut，renderer 动态监听、保存即生效）；应用内 window keydown 为主，
+ *   main 侧不注册 globalShortcut（FIX-1 根因：Windows 下会消费组合键）
  * - 自动聚焦、Esc 关闭；输入防抖 200ms 后本地检索（复用 shared/lib/search.ts）
  * - 命中：展示卡片 + 「复习一次 / 标记掌握」（progress store 记录闭环，节流写 + 强制 flush）
  * - 未命中：v0.1 存入生词本（pending store，即时写 userData/pending.json）
@@ -20,8 +21,10 @@ import { useSettingsStore } from '@renderer/stores/settings'
 import { debounce } from '@renderer/lib/listFilters'
 import type { SearchHit } from '@shared/lib/search'
 import {
+  DEFAULT_SHORTCUT,
   QUICK_INPUT_DEBOUNCE_MS,
   createQuickIndex,
+  describeShortcut,
   eventMatchesAccelerator,
   firstHit,
   isPlusKey,
@@ -93,14 +96,14 @@ const progressStatusTag = computed<{ type: 'default' | 'warning' | 'success'; la
 // ---------------------------------------------------------------------------
 
 function onKeydown(e: KeyboardEvent): void {
-  // 应用内快捷键：Ctrl+K（settings.quickInputShortcut）；「+」键直接触发（无需组合键）
+  // 应用内快捷键：settings.quickInputShortcut（默认「+」= 'Plus'，可在设置页自定义）
   if (eventMatchesAccelerator(e, shortcut.value)) {
     e.preventDefault()
     toggle()
     return
   }
-  // 「+」/「=」/数字键盘加号：直接唤起（排除 ctrl/alt/meta 组合；shift 允许——主键盘 '+' 常需 Shift）
-  if (isPlusKey(e) && !e.ctrlKey && !e.metaKey && !e.altKey) {
+  // 默认「+」键兜底：+/=/Add/NumpadAdd 均可触发（排除 ctrl/alt/meta；shift 允许——主键盘 '+' 常需 Shift）
+  if (shortcut.value === DEFAULT_SHORTCUT && isPlusKey(e) && !e.ctrlKey && !e.metaKey && !e.altKey) {
     e.preventDefault()
     toggle()
     return
@@ -216,7 +219,7 @@ defineExpose({ open, close, isOpen: () => show.value })
     :show="show"
     preset="card"
     :style="{ width: '560px', maxWidth: '92vw', borderRadius: 'var(--y-radius-xl)' }"
-    :title="`快速记录 ${shortcut}`"
+    :title="`快速记录 · ${describeShortcut(shortcut)}`"
     :bordered="false"
     :auto-focus="false"
     :trap-focus="false"
@@ -302,9 +305,9 @@ defineExpose({ open, close, isOpen: () => show.value })
         </template>
       </div>
 
-      <!-- 快捷键提示行（§3.3 / U3：Ctrl+K 或 + 唤起 · Esc 关闭 · 回车记录） -->
+      <!-- 快捷键提示行（FIX-2：展示当前键位中文描述 · Esc 关闭 · 回车记录） -->
       <div class="shortcut-row">
-        <span class="shortcut-item"><kbd>{{ shortcut.includes('CommandOrControl') ? 'Ctrl' : shortcut }}</kbd> 或 <kbd>+</kbd> 唤起</span>
+        <span class="shortcut-item"><kbd>{{ describeShortcut(shortcut) }}</kbd> 唤起</span>
         <span class="shortcut-item"><kbd>Esc</kbd> 关闭</span>
         <span class="shortcut-item"><kbd>回车</kbd> 直接记录</span>
       </div>

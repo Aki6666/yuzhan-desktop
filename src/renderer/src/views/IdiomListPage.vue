@@ -90,24 +90,27 @@ function retryLoad(): void {
       </template>
     </NInput>
 
-    <!-- 筛选条：频次 chips（FIX-1：首字筛选已移除，附录 B v0.1.2） -->
+    <!-- 筛选条：频次视觉化（FIX-2：5 档点阵 + 计数副行，选中态与 U1 token 一致） -->
     <div class="filter-card">
       <div class="filter-row">
         <span class="filter-label">频次</span>
-        <div class="filter-options" role="group" aria-label="频次过滤">
-          <NButton
+        <div class="freq-selector" role="group" aria-label="频次过滤">
+          <button
             v-for="f in FREQUENCY_OPTIONS"
             :key="f"
-            size="small"
-            :type="store.frequencyFilter === f ? 'primary' : 'default'"
-            :secondary="store.frequencyFilter !== f"
+            type="button"
+            class="freq-seg"
+            :class="{ active: store.frequencyFilter === f }"
             :disabled="(freqCounts[f] ?? 0) === 0"
-            class="filter-chip"
             :data-testid="`freq-${f}`"
+            :title="`频次 ${f}：${freqCounts[f] ?? 0} 条`"
             @click="toggleFrequency(f)"
           >
-            {{ f }}<span class="chip-count">{{ freqCounts[f] ?? 0 }}</span>
-          </NButton>
+            <span class="freq-dots" aria-hidden="true">
+              <span v-for="d in 5" :key="d" class="freq-dot-mini" :class="{ on: d <= f }" />
+            </span>
+            <span class="freq-count">{{ freqCounts[f] ?? 0 }}</span>
+          </button>
         </div>
       </div>
       <div v-if="hasFilter" class="filter-actions">
@@ -237,21 +240,68 @@ function retryLoad(): void {
   color: var(--y-text-tertiary);
 }
 
-.filter-options {
+/* 频次视觉化：5 档点阵 + 计数副行（FIX-2） */
+.freq-selector {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
-.filter-chip :deep(.n-button__content) {
-  display: inline-flex;
+.freq-seg {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  min-width: 56px;
+  padding: 9px 12px 8px;
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-sm);
+  background: var(--y-bg-card);
+  cursor: pointer;
+  transition:
+    border-color 0.12s ease,
+    background-color 0.12s ease;
 }
 
-.chip-count {
+.freq-seg:hover:not(:disabled) {
+  background: var(--y-bg-hover);
+}
+
+.freq-seg:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.freq-seg.active {
+  border-color: var(--y-primary);
+  background: var(--y-primary-soft);
+}
+
+.freq-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.freq-dot-mini {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--y-border);
+}
+
+.freq-dot-mini.on {
+  background: var(--y-primary);
+}
+
+.freq-count {
   font-size: 11px;
-  opacity: 0.6;
+  line-height: 1;
+  color: var(--y-text-tertiary);
+}
+
+.freq-seg.active .freq-count {
+  color: var(--y-primary);
+  font-weight: 600;
 }
 
 .filter-actions {

@@ -281,9 +281,10 @@ describe('列表页搜索（AC-07）', () => {
 // ---------------------------------------------------------------------------
 
 describe('列表页频次过滤', () => {
-  it('频次过滤：点击 频4 → 仅显示频次=4 的词条', async () => {
+  it('频次过滤：点击 频4 → 仅显示频次=4 的词条（FIX-2 新视觉：选中段 active 态）', async () => {
     const { wrapper } = await mountPage()
     await wrapper.find('[data-testid="freq-4"]').trigger('click')
+    expect(wrapper.find('[data-testid="freq-4"]').classes()).toContain('active')
     expect(rows(wrapper).map((r) => r.attributes('data-id'))).toEqual([
       'ju-an-si-wei-01',
       'an-ju-le-ye-01'

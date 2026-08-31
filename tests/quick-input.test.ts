@@ -16,7 +16,10 @@ import type { VueWrapper } from '@vue/test-utils'
 import QuickInputModal from '../src/renderer/src/components/quick-input/QuickInputModal.vue'
 import PendingPage from '../src/renderer/src/views/PendingPage.vue'
 import {
+  DEFAULT_SHORTCUT,
+  acceleratorFromEvent,
   createQuickIndex,
+  describeShortcut,
   eventMatchesAccelerator,
   firstHit,
   formatAddedAt,
@@ -85,11 +88,15 @@ function installApiMock(opts: { items?: Idiom[]; pending?: string[] } = {}) {
     settings: {
       get: vi.fn(async () => ({
         ok: true,
-        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'Plus' }
       })),
-      set: vi.fn(async () => ({
+      set: vi.fn(async (patch: { quickInputShortcut?: string }) => ({
         ok: true,
-        data: { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
+        data: {
+          schemaVersion: 1,
+          aiMode: 'disabled',
+          quickInputShortcut: patch.quickInputShortcut ?? 'Plus'
+        }
       }))
     },
     log: vi.fn(async () => ({ ok: true, data: null }))
@@ -142,7 +149,8 @@ const isOpen = (wrapper: VueWrapper): boolean =>
   (wrapper.vm as unknown as { isOpen: () => boolean }).isOpen()
 
 async function openModal(wrapper: VueWrapper): Promise<void> {
-  window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
+  // FIX-2：默认「+」键唤起
+  window.dispatchEvent(new KeyboardEvent('keydown', { key: '+' }))
   await nextTick()
   await nextTick()
   await flushPromises()
@@ -158,16 +166,38 @@ afterEach(() => {
 // ---------------------------------------------------------------------------
 
 describe('quickRecord 纯函数', () => {
-  it('parseAccelerator：CommandOrControl+K → ctrlOrMeta + key=k', () => {
+  it('parseAccelerator：CommandOrControl+K → ctrlOrMeta + key=k；Plus → key=+（FIX-2）', () => {
     expect(parseAccelerator('CommandOrControl+K')).toEqual({ ctrlOrMeta: true, alt: false, shift: false, key: 'k' })
     expect(parseAccelerator('Alt+Shift+X')).toEqual({ ctrlOrMeta: false, alt: true, shift: true, key: 'x' })
+    expect(parseAccelerator('Plus')).toEqual({ ctrlOrMeta: false, alt: false, shift: false, key: '+' })
+    expect(parseAccelerator('Control+Plus')).toEqual({ ctrlOrMeta: true, alt: false, shift: false, key: '+' })
   })
 
-  it('eventMatchesAccelerator：ctrl 或 meta 均匹配 CommandOrControl+K，其余不匹配', () => {
+  it('eventMatchesAccelerator：ctrl 或 meta 均匹配 CommandOrControl+K，其余不匹配；Plus 匹配 + 键', () => {
     expect(eventMatchesAccelerator(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }), 'CommandOrControl+K')).toBe(true)
     expect(eventMatchesAccelerator(new KeyboardEvent('keydown', { key: 'k', metaKey: true }), 'CommandOrControl+K')).toBe(true)
     expect(eventMatchesAccelerator(new KeyboardEvent('keydown', { key: 'k' }), 'CommandOrControl+K')).toBe(false)
     expect(eventMatchesAccelerator(new KeyboardEvent('keydown', { key: 'j', ctrlKey: true }), 'CommandOrControl+K')).toBe(false)
+    expect(eventMatchesAccelerator(new KeyboardEvent('keydown', { key: '+' }), 'Plus')).toBe(true)
+    expect(eventMatchesAccelerator(new KeyboardEvent('keydown', { key: '+' }), 'CommandOrControl+K')).toBe(false)
+  })
+
+  it('describeShortcut：中文/符号描述（去英文 accelerator 串，FIX-2）', () => {
+    expect(describeShortcut('Plus')).toBe('+')
+    expect(describeShortcut('Control+K')).toBe('Ctrl + K')
+    expect(describeShortcut('CommandOrControl+K')).toBe('Ctrl + K')
+    expect(describeShortcut('')).toBe('')
+  })
+
+  it('acceleratorFromEvent：按键事件 → accelerator（捕获器用，FIX-2）', () => {
+    expect(acceleratorFromEvent(new KeyboardEvent('keydown', { key: '+' }))).toBe('Plus')
+    expect(acceleratorFromEvent(new KeyboardEvent('keydown', { key: '=', code: 'NumpadAdd' }))).toBe('Plus')
+    expect(acceleratorFromEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))).toBe('Control+K')
+    expect(acceleratorFromEvent(new KeyboardEvent('keydown', { key: 'j', metaKey: true, shiftKey: true }))).toBe('Command+Shift+J')
+    expect(acceleratorFromEvent(new KeyboardEvent('keydown', { key: ' ' }))).toBe('Space')
+    // 单独修饰键 / Esc：捕获器忽略（返回空）
+    expect(acceleratorFromEvent(new KeyboardEvent('keydown', { key: 'Control' }))).toBe('')
+    expect(acceleratorFromEvent(new KeyboardEvent('keydown', { key: 'Escape' }))).toBe('')
   })
 
   it('tierLabel：精确→前缀→子串→模糊（编辑距离）', () => {
@@ -208,7 +238,7 @@ describe('quickRecord 纯函数', () => {
 // ---------------------------------------------------------------------------
 
 describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
-  it('Ctrl+K 唤起弹层并自动聚焦输入框；再次 Ctrl+K 关闭', async () => {
+  it('「+」键唤起弹层并自动聚焦输入框；再次按 + 关闭（FIX-2 默认键）', async () => {
     const { wrapper } = await mountModal()
     expect(modal()).toBeNull()
 
@@ -222,10 +252,42 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
       expect(document.activeElement).toBe(input)
     }, { timeout: 2000, interval: 40 })
 
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+' }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(false)
+    wrapper.unmount()
+  })
+
+  it('Ctrl+K 默认不再触发（FIX-2：已移除 CommandOrControl+K 硬编码默认）', async () => {
+    const { wrapper } = await mountModal()
     window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
     await nextTick()
     await nextTick()
     expect(isOpen(wrapper)).toBe(false)
+    wrapper.unmount()
+  })
+
+  it('自定义快捷键：保存 Control+K 后 Ctrl+K 立即生效（动态监听 settings.quickInputShortcut）', async () => {
+    const { wrapper, pinia } = await mountModal()
+    expect(isOpen(wrapper)).toBe(false)
+    // 模拟设置页保存自定义快捷键
+    const { useSettingsStore } = await import('../src/renderer/src/stores/settings')
+    const settingsStore = useSettingsStore(pinia)
+    await settingsStore.update({ quickInputShortcut: 'Control+K' })
+    expect(settingsStore.settings.quickInputShortcut).toBe('Control+K')
+
+    // 自定义键触发
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(true)
+
+    // 默认「+」键不再触发（自定义键接管）
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+' }))
+    await nextTick()
+    await nextTick()
+    expect(isOpen(wrapper)).toBe(true)
     wrapper.unmount()
   })
 

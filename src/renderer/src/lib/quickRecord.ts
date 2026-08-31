@@ -2,8 +2,8 @@
  * 快速记录（本地版）UI 层纯函数（PLAN.md §10 / F7 / AC-03/04）
  *
  * - 检索复用 shared/lib/search.ts（createSearchIndex/searchDetailed），本文件只做接线与展示派生
- * - 快捷键解析/匹配：应用内快捷键（窗口聚焦）为主；globalShortcut 升级/降级由 main 侧
- *   src/main/window.ts 承担（注册失败静默降级，§3.4/§10.2）
+ * - 快捷键（FIX-1/FIX-2，附录 B v0.1.2/v0.1.3）：应用内快捷键（窗口聚焦时 window keydown），
+ *   默认「+」键（DEFAULT_SHORTCUT='Plus'），可在设置页自定义；main 侧不注册 globalShortcut
  * - 全部纯函数、无 DOM 依赖（KeyboardEvent 匹配仅依赖事件字段），可单测（tests/quick-input.test.ts）
  */
 import {
@@ -29,7 +29,7 @@ export interface AcceleratorSpec {
   key: string
 }
 
-/** 解析 electron 风格 accelerator 字符串，如 'CommandOrControl+K' */
+/** 解析 electron 风格 accelerator 字符串，如 'CommandOrControl+K'；FIX-2：'Plus' 表示「+」键 */
 export function parseAccelerator(accelerator: string): AcceleratorSpec {
   const spec: AcceleratorSpec = { ctrlOrMeta: false, alt: false, shift: false, key: '' }
   for (const part of accelerator.split('+')) {
@@ -41,6 +41,8 @@ export function parseAccelerator(accelerator: string): AcceleratorSpec {
       spec.alt = true
     } else if (p === 'Shift') {
       spec.shift = true
+    } else if (p === 'Plus') {
+      spec.key = '+'
     } else {
       spec.key = p.toLowerCase()
     }
@@ -66,6 +68,75 @@ export function eventMatchesAccelerator(e: KeyboardEvent, accelerator: string): 
  */
 export function isPlusKey(e: KeyboardEvent): boolean {
   return e.key === '+' || e.key === '=' || e.key === 'Add' || e.code === 'NumpadAdd'
+}
+
+/**
+ * 默认触发键（FIX-2，附录 B v0.1.3）：「+」键。存储值为 'Plus'（parseAccelerator 兼容格式）。
+ * 旧版本默认 'CommandOrControl+K' 不再默认触发（settings store 加载时迁移为 'Plus'）。
+ */
+export const DEFAULT_SHORTCUT = 'Plus'
+
+/**
+ * 按键事件 → accelerator 字符串（FIX-2 自定义按键捕获用，parseAccelerator 兼容格式）。
+ * - 修饰键：ctrl→Control / alt→Alt / shift→Shift / meta→Command
+ * - 主键：「+」系列 → 'Plus'；字母数字 → 大写；空格/回车/方向键/Esc 有对应 token
+ * - 单独修饰键、未知键返回 ''（捕获器忽略，等待下一个有效键）
+ */
+export function acceleratorFromEvent(e: KeyboardEvent): string {
+  if (e.key === 'Escape' || e.key === 'Tab' || e.key === 'Shift' || e.key === 'Control' || e.key === 'Alt' || e.key === 'Meta') {
+    return ''
+  }
+  const mods: string[] = []
+  if (e.ctrlKey) mods.push('Control')
+  if (e.metaKey) mods.push('Command')
+  if (e.altKey) mods.push('Alt')
+  if (e.shiftKey && !isPlusKey(e)) mods.push('Shift')
+  let key = ''
+  if (isPlusKey(e)) {
+    key = 'Plus'
+  } else if (/^[a-zA-Z0-9]$/.test(e.key)) {
+    key = e.key.toUpperCase()
+  } else if (e.key === ' ') {
+    key = 'Space'
+  } else if (e.key === 'Enter') {
+    key = 'Enter'
+  } else if (e.key.startsWith('Arrow')) {
+    key = e.key.slice(5)
+  } else if (e.key.length === 1) {
+    key = e.key.toUpperCase()
+  } else {
+    return ''
+  }
+  return [...mods, key].join('+')
+}
+
+const MOD_LABELS: Record<string, string> = {
+  Control: 'Ctrl',
+  Command: '⌘',
+  CommandOrControl: 'Ctrl',
+  CmdOrCtrl: 'Ctrl',
+  Alt: 'Alt',
+  Option: 'Alt',
+  Shift: 'Shift'
+}
+const KEY_LABELS: Record<string, string> = {
+  Plus: '+',
+  Space: '空格',
+  Enter: '回车',
+  Esc: 'Esc',
+  Up: '↑',
+  Down: '↓',
+  Left: '←',
+  Right: '→'
+}
+
+/** accelerator → 中文描述（FIX-2 去英文：UI 展示用），如 'Control+K' → 'Ctrl + K'，'Plus' → '+' */
+export function describeShortcut(accelerator: string): string {
+  const parts = accelerator.split('+').map((p) => p.trim()).filter(Boolean)
+  if (parts.length === 0) return ''
+  const mods = parts.slice(0, -1).map((p) => MOD_LABELS[p] ?? p)
+  const key = parts[parts.length - 1]
+  return [...mods, KEY_LABELS[key] ?? key].join(' + ')
 }
 
 // ---------------------------------------------------------------------------

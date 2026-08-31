@@ -4,15 +4,23 @@
  *
  * - OpenAI 式简洁：大留白、细分割线、图标+文字侧边导航（激活态/hover 微交互）、精简顶栏
  * - 视觉全部消费 designTokens 生成的 CSS 变量（var(--y-*)），禁止散落硬编码颜色
- * - 硬约束保持：QuickInputModal 挂载与 Ctrl+K 接线（T6）、全部路由与 *View.vue 转发不动、
+ * - 硬约束保持：QuickInputModal 挂载与快捷键接线（T6/FIX-2）、全部路由与 *View.vue 转发不动、
  *   功能与信息架构不变
  */
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
 import QuickInputModal from '@renderer/components/quick-input/QuickInputModal.vue'
+import { useSettingsStore } from '@renderer/stores/settings'
+import { describeShortcut } from '@renderer/lib/quickRecord'
 import { themeOverrides } from '@renderer/theme/naiveTheme'
 
 const quickInputRef = ref<{ open: () => void } | null>(null)
+const settingsStore = useSettingsStore()
+
+// FIX-2：顶栏展示当前唤起快捷键的中文描述（默认「+」，设置页可自定义），去英文 accelerator 串
+const quickShortcutLabel = computed(() => describeShortcut(settingsStore.settings.quickInputShortcut))
+
+void settingsStore.load()
 
 /** 侧边导航项（§3.1：成语库 · 闪卡 · 自测 · 进度 · 生词本） */
 const NAV_ITEMS = [
@@ -78,7 +86,7 @@ const ICON_PATHS: Record<string, string[]> = {
       </aside>
 
       <div class="main-area">
-        <!-- 顶栏：快速记录 (Ctrl+K) · 设置 -->
+        <!-- 顶栏：快速记录（当前快捷键）· 设置 -->
         <header class="topbar">
           <div class="topbar-left">
             <span class="topbar-hint">快速记录错词，碎片时间复习</span>
@@ -99,7 +107,7 @@ const ICON_PATHS: Record<string, string[]> = {
                 <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
               </svg>
               快速记录
-              <kbd>Ctrl K</kbd>
+              <kbd>{{ quickShortcutLabel }}</kbd>
             </NButton>
             <RouterLink to="/settings" class="settings-link" title="设置" aria-label="设置">
               <NButton size="small" quaternary circle>
@@ -134,7 +142,7 @@ const ICON_PATHS: Record<string, string[]> = {
       </div>
     </div>
 
-    <!-- 全局快速记录弹层（Ctrl+K 任意页面唤起，T6 接线保持不动） -->
+    <!-- 全局快速记录弹层（快捷键任意页面唤起，T6 接线保持不动；FIX-2 默认「+」键可自定义） -->
     <QuickInputModal ref="quickInputRef" />
   </NConfigProvider>
 </template>
