@@ -1,6 +1,11 @@
+<script setup lang="ts">
+/**
+ * /idioms 路由入口：渲染 T4 成语列表页（IdiomListPage）。
+ * 路由表（T1 §3.2）保持不变，此处转发避免改动 router/index.ts 的既有装配。
+ */
+import IdiomListPage from './IdiomListPage.vue'
+</script>
+
 <template>
-  <section class="view">
-    <h1>成语库</h1>
-    <p class="placeholder">T4 待实现：搜索（汉字/拼音/首字母/模糊）+ 频次/首字过滤 + 虚拟滚动（AC-07）</p>
-  </section>
+  <IdiomListPage />
 </template>
