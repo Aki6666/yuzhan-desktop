@@ -10,6 +10,8 @@
  * - 撤销上一步（§3.4 误点回退）：可回退最近一次判定（含已翻到下一张后）
  * - 会话结束小结：本轮认识 X / 不认识 Y（§3.4）+ 强制 flush（§10.3#6）
  * - 进度经 T3 progress store（节流 ≤1 次/2s + flush），只消费不重写
+ *
+ * U3 视觉重构：消费 U1 设计 token（var(--y-*)），功能与 data-testid 不变
  */
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { NButton, NEmpty, NSpin } from 'naive-ui'
@@ -140,18 +142,19 @@ function retryLoad(): void {
 
 <template>
   <section class="view">
-    <div class="flash-head">
-      <h1 class="flash-h1">闪卡</h1>
+    <header class="page-header">
+      <h1 class="page-title">闪卡</h1>
       <NButton
         v-if="!finished && history.length > 0"
         size="small"
-        secondary
+        quaternary
         data-testid="undo-button"
+        class="undo-btn"
         @click="undo"
       >
-        撤销上一步
+        ← 撤销上一步
       </NButton>
-    </div>
+    </header>
 
     <!-- 加载中 -->
     <div v-if="idioms.loading && !idioms.loaded" class="state-block" data-testid="state-loading">
@@ -166,14 +169,14 @@ function retryLoad(): void {
     </div>
 
     <!-- 空态：无待复习卡（§3.3 引导去成语库浏览 / 自测积累） -->
-    <div v-else-if="finished && deck.length === 0" class="state-block" data-testid="state-empty">
+    <div v-else-if="finished && deck.length === 0" class="state-block state-card" data-testid="state-empty">
       <NEmpty description="暂无待复习的成语，先去积累吧">
         <template #extra>
           <RouterLink to="/idioms">
-            <NButton size="small" type="primary">去成语库浏览</NButton>
+            <NButton size="small" type="primary" class="empty-action">去成语库浏览</NButton>
           </RouterLink>
           <RouterLink to="/quiz">
-            <NButton size="small" secondary>去自测积累</NButton>
+            <NButton size="small" secondary class="empty-action">去自测积累</NButton>
           </RouterLink>
         </template>
       </NEmpty>
@@ -190,6 +193,7 @@ function retryLoad(): void {
     <!-- 单卡复习流 -->
     <div v-else-if="current" class="session" data-testid="session">
       <p class="progress-text" data-testid="progress-text">
+        <span class="progress-dot" aria-hidden="true" />
         第 {{ index + 1 }} / {{ deck.length }} 张
       </p>
 
@@ -197,14 +201,14 @@ function retryLoad(): void {
 
       <div class="actions">
         <template v-if="!flipped">
-          <NButton type="success" size="large" data-testid="known-button" @click="judge('known')">
+          <NButton type="success" size="large" class="judge-btn known" data-testid="known-button" @click="judge('known')">
             认识
           </NButton>
-          <NButton type="error" size="large" data-testid="unknown-button" @click="judge('unknown')">
+          <NButton type="error" size="large" class="judge-btn unknown" data-testid="unknown-button" @click="judge('unknown')">
             不认识
           </NButton>
         </template>
-        <NButton v-else size="large" type="primary" data-testid="next-button" @click="next">
+        <NButton v-else size="large" type="primary" class="next-btn" data-testid="next-button" @click="next">
           {{ index + 1 >= deck.length ? '完成本轮' : '下一张' }}
         </NButton>
       </div>
@@ -213,16 +217,21 @@ function retryLoad(): void {
 </template>
 
 <style scoped>
-.flash-head {
+.page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: var(--y-space-xl);
 }
 
-.flash-h1 {
+.page-title {
   margin: 0;
-  font-size: 20px;
+  font-size: var(--y-font-title);
+  color: var(--y-text-primary);
+}
+
+.undo-btn {
+  color: var(--y-text-secondary);
 }
 
 .session {
@@ -231,31 +240,81 @@ function retryLoad(): void {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: var(--y-space-xl);
+  padding: var(--y-space-xl) 0 var(--y-space-xxl);
 }
 
 .progress-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--y-space-sm);
   margin: 0;
-  font-size: 13px;
-  color: #7a8699;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-secondary);
+  padding: 4px 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 999px;
+  background: var(--y-bg-card);
+}
+
+.progress-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--y-primary);
 }
 
 .actions {
   display: flex;
-  gap: 12px;
+  gap: var(--y-space-md);
+}
+
+.judge-btn {
+  min-width: 120px;
+  font-weight: 600;
+}
+
+.judge-btn.known :deep(.n-button__content)::before {
+  content: '✓ ';
+  font-weight: 700;
+}
+
+.judge-btn.unknown :deep(.n-button__content)::before {
+  content: '✕ ';
+  font-weight: 700;
+}
+
+.next-btn {
+  min-width: 140px;
+  font-weight: 600;
 }
 
 .state-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 40px 0;
+  gap: var(--y-space-md);
+  padding: var(--y-space-xxl) 0;
+}
+
+.state-card {
+  max-width: 480px;
+  margin: var(--y-space-xl) auto 0;
+  padding: var(--y-space-xxl) var(--y-space-xl);
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-lg);
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
 }
 
 .state-text {
   margin: 0;
-  color: #7a8699;
-  font-size: 14px;
+  color: var(--y-text-secondary);
+  font-size: var(--y-font-body);
+  line-height: var(--y-line-height-body);
+}
+
+.empty-action {
+  margin: 0 var(--y-space-xs);
 }
 </style>

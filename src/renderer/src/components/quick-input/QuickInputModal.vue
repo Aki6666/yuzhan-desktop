@@ -5,6 +5,9 @@
  * - 自动聚焦、Esc 关闭；输入防抖 200ms 后本地检索（复用 shared/lib/search.ts）
  * - 命中：展示卡片 + 「复习一次 / 标记掌握」（progress store 记录闭环，节流写 + 强制 flush）
  * - 未命中：v0.1 存入生词本（pending store，即时写 userData/pending.json）
+ *
+ * U3 视觉重构：输入框醒目、命中/未命中反馈精修、快捷键提示行；消费 U1 设计 token；
+ * 焦点逻辑与 data-testid 全部不变（quick-input 测试依赖）
  */
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
@@ -199,7 +202,7 @@ defineExpose({ open, close, isOpen: () => show.value })
   <NModal
     :show="show"
     preset="card"
-    :style="{ width: '560px', maxWidth: '92vw' }"
+    :style="{ width: '560px', maxWidth: '92vw', borderRadius: 'var(--y-radius-xl)' }"
     :title="`快速记录 ${shortcut}`"
     :bordered="false"
     :auto-focus="false"
@@ -210,7 +213,9 @@ defineExpose({ open, close, isOpen: () => show.value })
       <NInput
         v-model:value="query"
         clearable
+        size="large"
         placeholder="输入成语 / 拼音 / 首字母，如：jgj、鞠躬尽瘁，回车记录"
+        class="quick-input-field"
         data-testid="quick-input"
         @keydown.enter.prevent="onEnter"
       />
@@ -265,7 +270,7 @@ defineExpose({ open, close, isOpen: () => show.value })
       </div>
 
       <!-- 未命中：v0.1 直接入生词本（AI 查询 v0.2） -->
-      <div v-else-if="status === 'miss'" class="state" data-testid="quick-state-miss">
+      <div v-else-if="status === 'miss'" class="state miss-state" data-testid="quick-state-miss">
         <p class="state-text">词库未收录「{{ query }}」（AI 查询 v0.2 提供）</p>
         <div class="miss-actions">
           <NButton size="small" type="primary" data-testid="action-add-pending" @click="addToPending">
@@ -283,6 +288,13 @@ defineExpose({ open, close, isOpen: () => show.value })
           <NButton size="tiny" quaternary data-testid="continue-input" @click="clearQuery">继续输入</NButton>
         </template>
       </div>
+
+      <!-- 快捷键提示行（§3.3 / U3：Ctrl+K 唤起 · Esc 关闭 · 回车记录） -->
+      <div class="shortcut-row">
+        <span class="shortcut-item"><kbd>{{ shortcut.includes('CommandOrControl') ? 'Ctrl' : shortcut }}</kbd> 唤起</span>
+        <span class="shortcut-item"><kbd>Esc</kbd> 关闭</span>
+        <span class="shortcut-item"><kbd>回车</kbd> 直接记录</span>
+      </div>
     </div>
   </NModal>
 </template>
@@ -291,48 +303,60 @@ defineExpose({ open, close, isOpen: () => show.value })
 .quick-input {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--y-space-md);
+}
+
+.quick-input-field {
+  border-radius: var(--y-radius-md);
 }
 
 .state {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 18px 0 6px;
+  gap: var(--y-space-md);
+  padding: var(--y-space-lg) 0 var(--y-space-sm);
 }
 
 .state-text {
   margin: 0;
-  font-size: 13px;
-  color: #7a8699;
+  font-size: var(--y-font-body);
+  color: var(--y-text-secondary);
   text-align: center;
-  line-height: 1.7;
+  line-height: var(--y-line-height-body);
+}
+
+.miss-state {
+  padding: var(--y-space-lg);
+  border: 1px dashed var(--y-border);
+  border-radius: var(--y-radius-md);
+  background: var(--y-bg-subtle);
 }
 
 .miss-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--y-space-md);
 }
 
 .hint {
-  font-size: 12px;
-  color: #b0b8c4;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .hit-card {
-  border: 1px solid #e3e6ea;
-  border-radius: 10px;
-  padding: 14px 16px;
-  background: #fafbfc;
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-md);
+  padding: var(--y-space-lg) var(--y-space-lg);
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
 }
 
 .hit-head {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 10px;
+  gap: var(--y-space-md);
 }
 
 .hit-head-main {
@@ -342,40 +366,61 @@ defineExpose({ open, close, isOpen: () => show.value })
 }
 
 .hit-word {
-  font-size: 22px;
+  font-size: var(--y-font-title);
   font-weight: 700;
-  color: #1f2d3d;
+  color: var(--y-text-primary);
   letter-spacing: 1px;
 }
 
 .hit-pinyin {
-  font-size: 12px;
-  color: #7a8699;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-secondary);
 }
 
 .hit-head-meta {
   display: flex;
-  gap: 6px;
+  gap: var(--y-space-sm);
   flex: 0 0 auto;
 }
 
 .hit-meaning {
-  margin: 10px 0 0;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #333;
+  margin: var(--y-space-md) 0 0;
+  font-size: var(--y-font-body);
+  line-height: var(--y-line-height-body);
+  color: var(--y-text-body);
 }
 
 .hit-actions {
   display: flex;
-  gap: 8px;
-  margin-top: 12px;
+  gap: var(--y-space-sm);
+  margin-top: var(--y-space-md);
 }
 
 .feedback {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--y-space-sm);
   flex-wrap: wrap;
+  padding: var(--y-space-sm) var(--y-space-md);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-sm);
+  background: var(--y-bg-subtle);
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--y-space-lg);
+  padding-top: var(--y-space-sm);
+  border-top: 1px solid var(--y-border-light);
+}
+
+.shortcut-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 </style>

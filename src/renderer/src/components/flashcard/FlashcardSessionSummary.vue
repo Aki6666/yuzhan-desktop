@@ -3,6 +3,8 @@
  * 闪卡会话小结（PLAN.md §3.4：会话结束显示「本轮认识 X / 不认识 Y」）
  * - 展示本轮统计 + 剩余/总卡数
  * - 操作：再来一轮（重开牌堆）/ 去成语库 / 去自测（空态引导，§3.3）
+ *
+ * U3 视觉重构：小结面板卡片化，消费 U1 设计 token；data-testid 不变
  */
 import { NButton, NTag } from 'naive-ui'
 import type { SessionSummary } from '@renderer/lib/flashcards'
@@ -52,49 +54,50 @@ const emit = defineEmits<{
 <style scoped>
 .summary {
   max-width: 560px;
-  margin: 0 auto;
-  padding: 28px 24px;
-  border: 1px solid #e3e6ea;
-  border-radius: 12px;
-  background: #fff;
+  margin: var(--y-space-xl) auto 0;
+  padding: var(--y-space-xxl) var(--y-space-xl);
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-lg);
+  background: var(--y-bg-card);
   text-align: center;
-  box-shadow: 0 2px 8px rgba(31, 45, 61, 0.06);
+  box-shadow: var(--y-shadow-card);
 }
 
 .summary-title {
-  margin: 0 0 20px;
-  font-size: 20px;
-  color: #1f2d3d;
+  margin: 0 0 var(--y-space-xl);
+  font-size: var(--y-font-title);
+  color: var(--y-text-primary);
 }
 
 .summary-stats {
   display: flex;
   justify-content: center;
-  gap: 28px;
-  margin-bottom: 24px;
+  gap: var(--y-space-xxl);
+  margin-bottom: var(--y-space-xl);
 }
 
 .stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: var(--y-space-sm);
 }
 
 .stat-tag {
-  font-size: 13px;
+  font-size: var(--y-font-aux);
 }
 
 .stat-num {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  color: #1f2d3d;
+  color: var(--y-text-primary);
+  line-height: 1.2;
 }
 
 .summary-actions {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: var(--y-space-md);
   flex-wrap: wrap;
 }
 </style>

@@ -2,6 +2,8 @@
 /**
  * 自测结果面板（PLAN.md §3.3：翻完一叠显示小结——答对 X / 答错 Y）
  * 展示错题列表（词条 + 释义考点）与「再来一组」
+ *
+ * U3 视觉重构：结果面板卡片化，消费 U1 设计 token；功能与 data-testid 不变
  */
 import { NButton, NTag } from 'naive-ui'
 import type { QuizQuestion } from '@shared/lib/quiz'
@@ -59,47 +61,48 @@ const emit = defineEmits<{ restart: []; back: [] }>()
 <style scoped>
 .quiz-result {
   max-width: 640px;
-  border: 1px solid #e3e6ea;
-  border-radius: 12px;
-  padding: 20px 24px;
-  background: #fff;
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-lg);
+  padding: var(--y-space-xl) var(--y-space-xl);
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
 }
 
 .r-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #eef0f3;
+  gap: var(--y-space-md);
+  padding-bottom: var(--y-space-md);
+  border-bottom: 1px solid var(--y-border-light);
 }
 
 .r-title {
   margin: 0;
-  font-size: 18px;
-  color: #1f2d3d;
+  font-size: var(--y-font-title);
+  color: var(--y-text-primary);
 }
 
 .r-stats {
   display: flex;
-  gap: 6px;
+  gap: var(--y-space-sm);
 }
 
 .r-error {
-  margin: 12px 0 0;
-  font-size: 12px;
-  color: #d03050;
+  margin: var(--y-space-md) 0 0;
+  font-size: var(--y-font-aux);
+  color: var(--y-danger);
 }
 
 .r-wrong {
-  margin-top: 14px;
+  margin-top: var(--y-space-lg);
 }
 
 .r-sec-title {
-  margin: 0 0 8px;
-  font-size: 13px;
+  margin: 0 0 var(--y-space-sm);
+  font-size: var(--y-font-aux);
   font-weight: 600;
-  color: #7a8699;
+  color: var(--y-text-secondary);
 }
 
 .r-wrong-list {
@@ -109,40 +112,40 @@ const emit = defineEmits<{ restart: []; back: [] }>()
 }
 
 .r-wrong-item {
-  padding: 10px 12px;
-  border: 1px solid #f0f1f4;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  background: #fafbfc;
+  padding: var(--y-space-md) var(--y-space-lg);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-md);
+  margin-bottom: var(--y-space-sm);
+  background: var(--y-bg-subtle);
 }
 
 .rw-head {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: var(--y-space-sm);
 }
 
 .rw-word {
-  font-size: 15px;
+  font-size: var(--y-font-body);
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--y-text-primary);
 }
 
 .rw-pinyin {
-  font-size: 12px;
-  color: #9aa4b2;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .rw-meaning {
-  margin: 4px 0 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color: #444;
+  margin: var(--y-space-xs) 0 0;
+  font-size: var(--y-font-body);
+  line-height: var(--y-line-height-body);
+  color: var(--y-text-body);
 }
 
 .r-actions {
   display: flex;
-  gap: 8px;
-  margin-top: 16px;
+  gap: var(--y-space-sm);
+  margin-top: var(--y-space-lg);
 }
 </style>

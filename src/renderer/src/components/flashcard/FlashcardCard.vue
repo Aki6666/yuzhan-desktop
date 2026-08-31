@@ -4,6 +4,8 @@
  * - 正面：词形 + 拼音
  * - 背面：释义（考试语境）+ 感情色彩/语域徽标 + 判定结果（认识/不认识）
  * - flipped=false 显示正面；判定后 flipped=true 翻面展示释义
+ *
+ * U3 视觉重构：消费 U1 设计 token（var(--y-*)），翻面动效/类名/data-testid 不变
  */
 import { computed } from 'vue'
 import { NTag } from 'naive-ui'
@@ -60,7 +62,9 @@ const registerText = computed(() => (props.idiom.register === '无' ? '' : props
 <style scoped>
 .flip-scene {
   perspective: 1200px;
-  height: 260px;
+  height: 300px;
+  width: 100%;
+  max-width: 560px;
 }
 
 .flip-inner {
@@ -80,16 +84,16 @@ const registerText = computed(() => (props.idiom.register === '无' ? '' : props
   inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border: 1px solid #e3e6ea;
-  border-radius: 12px;
-  background: #fff;
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-xl);
+  background: var(--y-bg-card);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: var(--y-space-xxl);
   text-align: center;
-  box-shadow: 0 2px 8px rgba(31, 45, 61, 0.08);
+  box-shadow: var(--y-shadow-card);
 }
 
 .face-back {
@@ -97,48 +101,49 @@ const registerText = computed(() => (props.idiom.register === '无' ? '' : props
 }
 
 .front-hint {
-  margin: 0 0 18px;
-  font-size: 12px;
-  color: #a0aab8;
+  margin: 0 0 var(--y-space-xl);
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+  letter-spacing: 1px;
 }
 
 .front-word {
   margin: 0;
-  font-size: 40px;
-  letter-spacing: 4px;
-  color: #1f2d3d;
+  font-size: 42px;
+  letter-spacing: 6px;
+  color: var(--y-text-primary);
 }
 
 .front-pinyin {
-  margin: 12px 0 0;
-  font-size: 15px;
-  color: #7a8699;
+  margin: var(--y-space-md) 0 0;
+  font-size: var(--y-font-body);
+  color: var(--y-text-secondary);
 }
 
 .judge-badge {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: var(--y-space-lg);
+  right: var(--y-space-lg);
 }
 
 .back-word {
-  margin: 0 0 12px;
-  font-size: 22px;
-  color: #1f2d3d;
+  margin: 0 0 var(--y-space-md);
+  font-size: var(--y-font-title-lg);
+  color: var(--y-text-primary);
   letter-spacing: 2px;
 }
 
 .back-meaning {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.8;
-  color: #333;
-  max-width: 560px;
+  font-size: var(--y-font-body);
+  line-height: var(--y-line-height-body);
+  color: var(--y-text-body);
+  max-width: 460px;
 }
 
 .back-tags {
   display: flex;
-  gap: 6px;
-  margin-top: 14px;
+  gap: var(--y-space-sm);
+  margin-top: var(--y-space-lg);
 }
 </style>

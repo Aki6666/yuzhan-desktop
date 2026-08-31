@@ -4,6 +4,8 @@
  * - 组卷规则在 shared/lib/quiz.ts（纯逻辑，只消费不重写）
  * - 即时反馈 + 考点展示（QuizQuestionCard）；错题批量 quiz:record（quiz store）
  * - 题库 <10 → 提示并引导浏览成语库（§3.3 空态）
+ *
+ * U3 视觉重构：三态卡片化，消费 U1 设计 token；功能与 data-testid 不变
  */
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
@@ -57,19 +59,19 @@ function onBack(): void {
     </header>
 
     <!-- 词库加载中 -->
-    <div v-if="idiomsStore.loading && !idiomsStore.loaded" class="state-block" data-testid="quiz-loading">
+    <div v-if="idiomsStore.loading && !idiomsStore.loaded" class="state-block state-card" data-testid="quiz-loading">
       <NSpin size="small" />
       <span class="state-text">词库加载中…</span>
     </div>
 
     <!-- 加载失败 -->
-    <div v-else-if="idiomsStore.error && !idiomsStore.loaded" class="state-block" data-testid="quiz-error">
+    <div v-else-if="idiomsStore.error && !idiomsStore.loaded" class="state-block state-card" data-testid="quiz-error">
       <p class="state-text">词库加载失败：{{ idiomsStore.error }}</p>
       <NButton size="small" @click="idiomsStore.load()">重试</NButton>
     </div>
 
     <!-- 组卷入口（idle） -->
-    <div v-else-if="quizStore.phase === 'idle'" class="state-block" data-testid="quiz-idle">
+    <div v-else-if="quizStore.phase === 'idle'" class="state-block state-card" data-testid="quiz-idle">
       <!-- 题库不足：提示并引导浏览成语库（§3.3 空态） -->
       <template v-if="!quizStore.canStart(idiomsStore.items.length)">
         <NEmpty description="题库不足 10 题，先去成语库补充吧">
@@ -84,7 +86,7 @@ function onBack(): void {
         <p class="state-text">
           共 {{ idiomsStore.items.length }} 题可出 · 错词与高频词优先 · 答错自动进入复习优先队列
         </p>
-        <NButton type="primary" data-testid="quiz-start" @click="startQuiz">开始自测（10 题）</NButton>
+        <NButton type="primary" data-testid="quiz-start" class="start-btn">开始自测（10 题）</NButton>
       </template>
     </div>
 
@@ -117,25 +119,25 @@ function onBack(): void {
 .quiz-page {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--y-space-lg);
   max-width: 720px;
 }
 
 .page-header {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: var(--y-space-md);
 }
 
 .page-title {
   margin: 0;
-  font-size: 20px;
-  color: #2c3e50;
+  font-size: var(--y-font-title);
+  color: var(--y-text-primary);
 }
 
 .page-sub {
-  font-size: 12px;
-  color: #888;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .state-block {
@@ -143,15 +145,28 @@ function onBack(): void {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: var(--y-space-md);
   min-height: 240px;
   text-align: center;
 }
 
+.state-card {
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-lg);
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
+  padding: var(--y-space-xxl) var(--y-space-xl);
+}
+
 .state-text {
   margin: 0;
-  font-size: 14px;
-  color: #7a8699;
-  line-height: 1.7;
+  font-size: var(--y-font-body);
+  color: var(--y-text-secondary);
+  line-height: var(--y-line-height-body);
+}
+
+.start-btn {
+  min-width: 160px;
+  font-weight: 600;
 }
 </style>

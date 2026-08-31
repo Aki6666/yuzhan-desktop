@@ -3,6 +3,9 @@
  * 自测题目卡（PLAN.md §3.3 / F6）
  * - 展示词条 + 4 个释义选项；作答后立即反馈对/错并展示该词考点（释义/误用类型/主题，强化记忆）
  * - 正确答案位置随机（组卷时由 shared/lib/quiz.ts 决定）
+ *
+ * U3 视觉重构：选项 hover/选中/对错反馈柔和配色（对绿错红），考点区卡片化，
+ * 消费 U1 设计 token；功能与 data-testid 不变
  */
 import { computed } from 'vue'
 import { NButton, NTag } from 'naive-ui'
@@ -28,6 +31,14 @@ function optionType(i: number): 'default' | 'success' | 'error' {
   return 'default'
 }
 
+/** 状态 class：作答后正确答案绿色、误选红色（柔和反馈配色） */
+function optionState(i: number): string {
+  if (!answered.value) return ''
+  if (i === props.question.correctIndex) return 'is-correct'
+  if (i === props.selected) return 'is-wrong'
+  return 'is-neutral'
+}
+
 function onSelect(i: number): void {
   if (!answered.value) emit('select', i)
 }
@@ -49,6 +60,7 @@ function onSelect(i: number): void {
         v-for="(opt, i) in question.options"
         :key="i"
         class="q-option"
+        :class="optionState(i)"
         :type="optionType(i)"
         :secondary="optionType(i) === 'default'"
         :disabled="answered"
@@ -62,9 +74,20 @@ function onSelect(i: number): void {
 
     <!-- 即时反馈 + 考点（§3.3：答完立即反馈对错并展示该词考点） -->
     <div v-if="answered" class="q-feedback" data-testid="q-feedback">
-      <NTag :type="isCorrect ? 'success' : 'error'" size="small" :bordered="false" data-testid="q-result-tag">
-        {{ isCorrect ? '回答正确' : '回答错误' }}
-      </NTag>
+      <div class="q-feedback-head">
+        <NTag :type="isCorrect ? 'success' : 'error'" size="small" :bordered="false" data-testid="q-result-tag">
+          {{ isCorrect ? '回答正确' : '回答错误' }}
+        </NTag>
+        <NButton
+          size="small"
+          type="primary"
+          data-testid="q-next"
+          class="q-next"
+          @click="emit('next')"
+        >
+          {{ index + 1 >= total ? '查看结果' : '下一题' }}
+        </NButton>
+      </div>
       <div class="q-kaodian">
         <p class="kaodian-meaning"><b>释义：</b>{{ question.meaning }}</p>
         <div v-if="question.errorTypes.length > 0" class="kaodian-row">
@@ -76,15 +99,6 @@ function onSelect(i: number): void {
           <NTag v-for="t in question.tags" :key="t" size="small" :bordered="false">{{ t }}</NTag>
         </div>
       </div>
-      <NButton
-        size="small"
-        type="primary"
-        data-testid="q-next"
-        class="q-next"
-        @click="emit('next')"
-      >
-        {{ index + 1 >= total ? '查看结果' : '下一题' }}
-      </NButton>
     </div>
   </article>
 </template>
@@ -92,66 +106,90 @@ function onSelect(i: number): void {
 <style scoped>
 .quiz-question {
   max-width: 640px;
-  border: 1px solid #e3e6ea;
-  border-radius: 12px;
-  padding: 20px 24px;
-  background: #fff;
+  border: 1px solid var(--y-border);
+  border-radius: var(--y-radius-lg);
+  padding: var(--y-space-xl) var(--y-space-xl);
+  background: var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
 }
 
 .q-head {
-  padding-bottom: 12px;
-  border-bottom: 1px solid #eef0f3;
+  padding-bottom: var(--y-space-md);
+  border-bottom: 1px solid var(--y-border-light);
 }
 
 .q-progress {
-  font-size: 12px;
-  color: #7a8699;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .q-main {
   display: flex;
   align-items: baseline;
-  gap: 10px;
-  margin-top: 6px;
+  gap: var(--y-space-md);
+  margin-top: var(--y-space-sm);
 }
 
 .q-word {
   font-size: 26px;
   font-weight: 700;
-  color: #1f2d3d;
+  color: var(--y-text-primary);
   letter-spacing: 2px;
 }
 
 .q-pinyin {
-  font-size: 13px;
-  color: #7a8699;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-secondary);
 }
 
 .q-prompt {
-  margin: 8px 0 0;
-  font-size: 13px;
-  color: #555;
+  margin: var(--y-space-sm) 0 0;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .q-options {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 14px;
+  gap: var(--y-space-sm);
+  margin-top: var(--y-space-lg);
 }
 
 .q-option {
   justify-content: flex-start;
   height: auto;
-  min-height: 40px;
-  padding: 8px 14px;
+  min-height: 42px;
+  padding: var(--y-space-sm) var(--y-space-lg);
   white-space: normal;
+  border-radius: var(--y-radius-md);
+}
+
+/* hover 微交互（未作答时） */
+.q-option:not(:disabled):hover {
+  background: var(--y-bg-hover);
+}
+
+/* 柔和对错反馈：正确答案绿色浅底、误选红色浅底（color-mix 由 token 派生，非硬编码） */
+.q-option.is-correct {
+  background: color-mix(in srgb, var(--y-success) 10%, var(--y-bg-card));
+  border-color: color-mix(in srgb, var(--y-success) 40%, var(--y-border));
+  color: var(--y-success);
+}
+
+.q-option.is-wrong {
+  background: color-mix(in srgb, var(--y-danger) 10%, var(--y-bg-card));
+  border-color: color-mix(in srgb, var(--y-danger) 40%, var(--y-border));
+  color: var(--y-danger);
+}
+
+.q-option.is-neutral {
+  opacity: 0.72;
 }
 
 .q-option-label {
   flex: 0 0 auto;
   font-weight: 700;
-  margin-right: 8px;
+  margin-right: var(--y-space-sm);
 }
 
 .q-option-text {
@@ -162,40 +200,43 @@ function onSelect(i: number): void {
 .q-feedback {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 14px;
-  padding: 14px;
-  border-radius: 8px;
-  background: #f7f9fc;
+  gap: var(--y-space-md);
+  margin-top: var(--y-space-lg);
+  padding: var(--y-space-lg);
+  border: 1px solid var(--y-border-light);
+  border-radius: var(--y-radius-md);
+  background: var(--y-bg-subtle);
+}
+
+.q-feedback-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-md);
 }
 
 .q-kaodian {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-  color: #333;
+  gap: var(--y-space-sm);
+  font-size: var(--y-font-body);
+  color: var(--y-text-body);
 }
 
 .kaodian-meaning {
   margin: 0;
-  line-height: 1.7;
+  line-height: var(--y-line-height-body);
 }
 
 .kaodian-row {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--y-space-sm);
   flex-wrap: wrap;
 }
 
 .kaodian-label {
-  color: #7a8699;
-  font-size: 12px;
-}
-
-.q-next {
-  align-self: flex-end;
+  color: var(--y-text-secondary);
+  font-size: var(--y-font-aux);
 }
 </style>
