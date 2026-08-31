@@ -6,7 +6,7 @@
  * - 命中：展示卡片 + 「复习一次 / 标记掌握」（progress store 记录闭环，节流写 + 强制 flush）
  * - 未命中：v0.1 存入生词本（pending store，即时写 userData/pending.json）
  */
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { NButton, NInput, NModal, NSpin, NTag } from 'naive-ui'
 import { useIdiomsStore } from '@renderer/stores/idioms'
@@ -99,7 +99,7 @@ function onKeydown(e: KeyboardEvent): void {
 
 function open(): void {
   show.value = true
-  void focusInput()
+  focusInput()
 }
 
 function close(): void {
@@ -110,10 +110,15 @@ function onUpdateShow(v: boolean): void {
   show.value = v
 }
 
-async function focusInput(): Promise<void> {
-  await nextTick()
-  await nextTick() // NModal 内容挂载后再聚焦
-  document.querySelector<HTMLInputElement>('[data-testid="quick-input"] input')?.focus()
+/**
+ * 弹层打开后自动聚焦输入框（§3.3 自动聚焦）。
+ * NModal 自身 autoFocus=false（避免 VFocusTrap 把焦点抢到面板 div），
+ * 这里用宏任务延迟，确保 NModal 内容挂载完成后再聚焦。
+ */
+function focusInput(): void {
+  setTimeout(() => {
+    document.querySelector<HTMLInputElement>('[data-testid="quick-input"] input')?.focus()
+  }, 30)
 }
 
 // ---------------------------------------------------------------------------
@@ -188,13 +193,13 @@ defineExpose({ open, close, isOpen: () => show.value })
     :style="{ width: '560px', maxWidth: '92vw' }"
     :title="`快速记录 ${shortcut}`"
     :bordered="false"
+    :auto-focus="false"
     @update:show="onUpdateShow"
   >
     <div class="quick-input" data-testid="quick-input-modal">
       <NInput
         v-model:value="query"
         clearable
-        autofocus
         placeholder="输入成语 / 拼音 / 首字母，如：jgj、鞠躬尽瘁，回车记录"
         data-testid="quick-input"
         @keydown.enter.prevent="onEnter"

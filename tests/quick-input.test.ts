@@ -207,7 +207,7 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
     await openModal(wrapper)
     expect(isOpen(wrapper)).toBe(true)
     expect(modal()).not.toBeNull()
-    await waitMs(40) // 等 NModal 渲染 + 自聚焦完成
+    await waitMs(80) // 等组件 30ms 聚焦宏任务 + NModal 渲染完成
     const input = qInput()
     expect(input).not.toBeNull()
     expect(document.activeElement).toBe(input)
