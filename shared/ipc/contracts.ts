@@ -61,6 +61,22 @@ export interface Idiom {
 
 export type ProgressStatus = 'new' | 'learning' | 'mastered'
 
+/**
+ * SM-2 间隔重复调度状态（§5.6 v0.2 扩展）
+ * v0.1 只存旧字段；v0.2 起旧记录启动迁移补默认值（main store，幂等+日志），
+ * 字段由 V2-B SM-2 算法维护（interval/ease/due）。
+ */
+export interface ReviewState {
+  /** 间隔天数（首次复习后按 SM-2 增长；0 表示刚复习过/立即可复习） */
+  interval: number
+  /** 难度系数 EF（默认 2.5，V2-B 按答题质量调整） */
+  ease: number
+  /** 到期日 YYYY-MM-DD（due=今天 表示可立即复习） */
+  due: string
+  /** 上次复习时间（ISO 8601） */
+  reviewAt?: string
+}
+
 /** 用户进度（§5.6，userData/progress.json，key=idiom id） */
 export interface UserProgress {
   id: string
@@ -69,6 +85,8 @@ export interface UserProgress {
   /** key 必须来自 §5.2 误用类型词表 */
   wrongTypes: Record<string, number>
   lastSeen?: string
+  /** SM-2 调度状态（v0.2 扩展；旧记录启动迁移补默认值，§5.6） */
+  review?: ReviewState
 }
 
 /** 生词本条目（§5.6，userData/pending.json） */
@@ -156,6 +174,8 @@ export interface ProgressSaveRequest {
   status?: ProgressStatus
   wrongTypes?: Record<string, number>
   wrongTimes?: number
+  /** SM-2 调度字段 patch（v0.2 扩展；与现有字段合并，§5.6） */
+  review?: Partial<ReviewState>
 }
 
 /** quiz:record 入参（批量，一次 10 题，§10.4） */

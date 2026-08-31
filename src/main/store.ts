@@ -28,6 +28,7 @@ import type {
   PendingItem,
   ProgressSaveRequest,
   QuizAnswer,
+  ReviewState,
   SettingsSetRequest,
   UserProgress
 } from '@shared/ipc/contracts'
@@ -101,8 +102,13 @@ function defaultSettings(): AppSettings {
   return { schemaVersion: 1, aiMode: 'disabled', quickInputShortcut: 'CommandOrControl+K' }
 }
 
+/** SM-2 调度默认值（v0.2，§5.6）：due=now、interval=0、ease=2.5 */
+function defaultReview(): ReviewState {
+  return { interval: 0, ease: 2.5, due: today() }
+}
+
 function defaultProgress(id: string): UserProgress {
-  return { id, status: 'new', wrongTimes: 0, wrongTypes: {} }
+  return { id, status: 'new', wrongTimes: 0, wrongTypes: {}, review: defaultReview() }
 }// ---------------------------------------------------------------------------
 // 存储实现
 // ---------------------------------------------------------------------------
@@ -238,6 +244,23 @@ export function createStorage(options: StorageOptions): Storage {
   let settings = sanitizeSettings(settingsFile.data)
   mergeRecovery(settingsFile.recovery)
 
+  // -------------------------------------------------------------------------
+  // SM-2 迁移（v0.2，§5.6）：旧记录无 review 字段 → 启动补默认值
+  // （due=now / interval=0 / ease=2.5），幂等（有 review 即跳过）+ 日志 + 落盘。
+  // 对回退 .bak 恢复出的数据同样生效；持久化铁律（原子写/队列）不变。
+  // -------------------------------------------------------------------------
+  let migratedCount = 0
+  for (const item of Object.values(progress)) {
+    if (item && typeof item === 'object' && !item.review) {
+      item.review = defaultReview()
+      migratedCount += 1
+    }
+  }
+  if (migratedCount > 0) {
+    logger.info(`[store] progress.json 迁移：${migratedCount} 条旧记录补 SM-2 默认字段（due=now/interval=0/ease=2.5）`)
+    void queue.enqueue('progress.json', () => atomicWriteJson('progress.json', progress))
+  }
+
   function mergeRecovery(partial: Partial<RecoveryInfo>): void {
     if (partial.recoveredFromBackup?.length) {
       recoveryInfo.recoveredFromBackup.push(...partial.recoveredFromBackup)
@@ -360,6 +383,10 @@ export function createStorage(options: StorageOptions): Storage {
       if (payload.status) next.status = payload.status
       if (payload.wrongTypes) next.wrongTypes = { ...current.wrongTypes, ...payload.wrongTypes }
       if (payload.wrongTimes !== undefined) next.wrongTimes = payload.wrongTimes
+      // SM-2 调度字段 patch 合并（v0.2，§5.6）
+      if (payload.review) {
+        next.review = { ...(current.review ?? defaultReview()), ...payload.review }
+      }
       next.lastSeen = today()
       progress = { ...progress, [id]: next } // 先改内存快照，再入队写盘
       return queue.enqueue('progress.json', () => atomicWriteJson('progress.json', progress))

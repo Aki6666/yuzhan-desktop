@@ -3,8 +3,11 @@
  *
  * 完整 API（供 T6/T7/T8 消费）：
  * - recordAttempt(id)      复习一次（快速记录「复习一次」/ 闪卡翻卡）：new→learning，更新 lastSeen
+ *                          + SM-2 调度字段（v0.2 §5.6：无 review 补默认，reviewAt=now）
  * - markStatus(id, status) 标记状态（闪卡收敛规则：连续 3 次认识→mastered，1 次不认识→learning）
  * - incrementWrong(id, type?) 错题计数（wrongTimes+1，可选 wrongTypes 累加；mastered 降级 learning）
+ * - scheduleReview(id, patch) SM-2 调度字段写入（V2-B 算法消费；interval/ease/due/reviewAt）
+ * - getReview(id)          读取调度状态（V2-B 消费）
  * - flush()                强制立即写盘（会话结束时调用）
  *
  * 说明：§10.4 权威 channel 清单未含进度读取 channel（仅 progress:save 写），
@@ -13,7 +16,7 @@
  */
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import type { ProgressSaveRequest, ProgressStatus, UserProgress } from '@shared/ipc/contracts'
+import type { ProgressSaveRequest, ProgressStatus, ReviewState, UserProgress } from '@shared/ipc/contracts'
 
 const THROTTLE_MS = 2000
 
@@ -43,15 +46,26 @@ export const useProgressStore = defineStore('progress', () => {
     const item = ensure(id)
     fn(item)
     progress.value = { ...progress.value, [id]: { ...item } }
-    markDirty({ id, status: item.status, wrongTypes: item.wrongTypes, wrongTimes: item.wrongTimes })
+    markDirty({
+      id,
+      status: item.status,
+      wrongTypes: item.wrongTypes,
+      wrongTimes: item.wrongTimes,
+      review: item.review ? { ...item.review } : undefined
+    })
   }
 
-  /** 复习一次：new→learning，更新 lastSeen（快速记录「复习一次」/ 闪卡翻卡共用） */
+  /** 复习一次：new→learning，更新 lastSeen；SM-2 调度字段（v0.2）：无 review 补默认、reviewAt=now */
   function recordAttempt(id: string): void {
-    const today = new Date().toISOString().slice(0, 10)
+    const now = new Date()
+    const today = now.toISOString().slice(0, 10)
     mutate(id, (item) => {
       if (item.status === 'new') item.status = 'learning'
       item.lastSeen = today
+      item.review = {
+        ...(item.review ?? { interval: 0, ease: 2.5, due: today }),
+        reviewAt: now.toISOString()
+      }
     })
   }
 
@@ -74,17 +88,40 @@ export const useProgressStore = defineStore('progress', () => {
     })
   }
 
+  /**
+   * SM-2 调度字段写入（v0.2，§5.6）：与现有 review 合并，供 V2-B 算法消费
+   * （如 scheduleReview(id, { interval: 3, ease: 2.5, due: '2026-09-03' })）
+   */
+  function scheduleReview(id: string, patch: Partial<ReviewState>): void {
+    mutate(id, (item) => {
+      const now = new Date()
+      const today = now.toISOString().slice(0, 10)
+      item.review = {
+        ...(item.review ?? { interval: 0, ease: 2.5, due: today }),
+        ...patch
+      }
+    })
+  }
+
+  /** 读取 SM-2 调度状态（V2-B 消费；无记录返回 undefined） */
+  function getReview(id: string): ReviewState | undefined {
+    return progress.value[id]?.review
+  }
+
   // ---------------------------------------------------------------------------
   // 节流写：≤1 次/2s；同窗口内多次变更合并为每 id 一次 progress:save；flush 强制立即写
   // ---------------------------------------------------------------------------
 
   function markDirty(payload: ProgressSaveRequest): void {
     const prev = dirty.get(payload.id)
+    const mergedReview =
+      prev?.review || payload.review ? { ...(prev?.review ?? {}), ...(payload.review ?? {}) } : undefined
     dirty.set(payload.id, {
       ...(prev ?? { id: payload.id }),
       ...payload,
       wrongTypes: { ...(prev?.wrongTypes ?? {}), ...(payload.wrongTypes ?? {}) },
-      wrongTimes: payload.wrongTimes ?? prev?.wrongTimes
+      wrongTimes: payload.wrongTimes ?? prev?.wrongTimes,
+      ...(mergedReview ? { review: mergedReview } : {})
     })
     scheduleWrite()
   }
@@ -121,5 +158,14 @@ export const useProgressStore = defineStore('progress', () => {
     await flushNow()
   }
 
-  return { progress, getProgressItem, recordAttempt, markStatus, incrementWrong, flush }
+  return {
+    progress,
+    getProgressItem,
+    recordAttempt,
+    markStatus,
+    incrementWrong,
+    scheduleReview,
+    getReview,
+    flush
+  }
 })

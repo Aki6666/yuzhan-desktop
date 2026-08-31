@@ -183,6 +183,90 @@ describe('store 持久化铁律', () => {
   })
 })
 
+describe('SM-2 迁移与调度字段（v0.2，§5.6）', () => {
+  const today = new Date().toISOString().slice(0, 10)
+
+  it('旧记录（无 review）启动迁移补默认值：due=now/interval=0/ease=2.5，旧字段保留', () => {
+    const dir = makeDir()
+    // v0.1 旧格式：无 review 字段
+    const legacy = {
+      'ju-gong-jin-cui-01': {
+        id: 'ju-gong-jin-cui-01',
+        status: 'learning',
+        wrongTimes: 2,
+        wrongTypes: { 褒贬误用: 1 },
+        lastSeen: '2026-08-30'
+      }
+    }
+    writeFileSync(join(dir, 'progress.json'), JSON.stringify(legacy))
+    const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    const item = s.getProgressItem('ju-gong-jin-cui-01')
+    // 旧数据兼容：v0.1 字段原样保留
+    expect(item?.status).toBe('learning')
+    expect(item?.wrongTimes).toBe(2)
+    expect(item?.wrongTypes).toEqual({ 褒贬误用: 1 })
+    expect(item?.lastSeen).toBe('2026-08-30')
+    // 迁移补默认
+    expect(item?.review).toEqual({ interval: 0, ease: 2.5, due: today })
+  })
+
+  it('迁移幂等：不重复迁移、结果落盘、二次启动不覆盖', async () => {
+    const dir = makeDir()
+    writeFileSync(
+      join(dir, 'progress.json'),
+      JSON.stringify({ 'a-01': { id: 'a-01', status: 'new', wrongTimes: 0, wrongTypes: {} } })
+    )
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s1.flush() // 迁移结果写盘
+    const onDisk = JSON.parse(readFileSync(join(dir, 'progress.json'), 'utf8'))
+    expect(onDisk['a-01'].review).toEqual({ interval: 0, ease: 2.5, due: today })
+
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s2.getProgressItem('a-01')?.review?.interval).toBe(0)
+    expect(s2.getProgressItem('a-01')?.review?.ease).toBe(2.5)
+    expect(s2.getProgressItem('a-01')?.review?.due).toBe(today)
+  })
+
+  it('SM-2 字段持久化：saveProgress review patch → 跨实例读回', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s1.saveProgress({
+      id: 'b-01',
+      review: { interval: 3, ease: 2.8, due: '2026-09-03', reviewAt: '2026-08-31T10:00:00.000Z' }
+    })
+    await s1.flush()
+    const s2 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s2.getProgressItem('b-01')?.review).toEqual({
+      interval: 3,
+      ease: 2.8,
+      due: '2026-09-03',
+      reviewAt: '2026-08-31T10:00:00.000Z'
+    })
+  })
+
+  it('review patch 部分更新：与现有字段合并，不丢其余字段', async () => {
+    const dir = makeDir()
+    const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s.saveProgress({ id: 'c-01', review: { interval: 5, ease: 2.6, due: '2026-09-10' } })
+    await s.saveProgress({ id: 'c-01', review: { interval: 7 } }) // 只改 interval
+    await s.flush()
+    const item = s.getProgressItem('c-01')
+    expect(item?.review).toEqual({ interval: 7, ease: 2.6, due: '2026-09-10' })
+  })
+
+  it('损坏回退 .bak 恢复出的旧数据同样执行迁移（铁律不变）', async () => {
+    const dir = makeDir()
+    const legacy = { 'd-01': { id: 'd-01', status: 'learning', wrongTimes: 1, wrongTypes: {} } }
+    writeFileSync(join(dir, 'progress.json'), '{corrupt!!!')
+    writeFileSync(join(dir, 'progress.json.bak'), JSON.stringify(legacy))
+    const s = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    expect(s.getRecoveryInfo().recoveredFromBackup).toContain('progress.json')
+    const item = s.getProgressItem('d-01')
+    expect(item?.status).toBe('learning') // 回退数据旧字段保留
+    expect(item?.review).toEqual({ interval: 0, ease: 2.5, due: today }) // 迁移补默认
+  })
+})
+
 describe('AC-09 双开聚焦', () => {
   it('第二实例：最小化窗口 → restore + focus；非最小化 → 仅 focus', () => {
     const restore = vi.fn()
