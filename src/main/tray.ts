@@ -113,7 +113,8 @@ export function acceleratorToInputEvent(
     }
   }
   if (!key) return null
-  return { type: 'keyDown', keyCode: key.length === 1 ? key : key.toLowerCase(), modifiers }
+  // 单字母统一小写（与 renderer eventMatchesAccelerator 的 e.key.toLowerCase() 匹配对齐）；'+' 等符号原样
+  return { type: 'keyDown', keyCode: /^[a-zA-Z]$/.test(key) ? key.toLowerCase() : key, modifiers }
 }
 
 /** 从 config.json 读取当前快捷键（缺省/损坏回退默认 'Plus'；与 store 的 sanitize 语义一致） */

@@ -55,7 +55,7 @@ describe('托盘菜单模板', () => {
     const quit = vi.fn()
     const template = buildTrayMenuTemplate({ show, hide, quit })
     expect(template.map((i) => i.label)).toEqual(['显示主窗口', '隐藏窗口', undefined, '退出'])
-    expect(template[1]?.type).toBe('separator')
+    expect(template[2]?.type).toBe('separator')
     template[0]?.click?.({} as never, undefined as never, {} as never)
     template[1]?.click?.({} as never, undefined as never, {} as never)
     template[3]?.click?.({} as never, undefined as never, {} as never)
