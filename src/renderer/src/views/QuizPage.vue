@@ -86,7 +86,7 @@ function onBack(): void {
         <p class="state-text">
           共 {{ idiomsStore.items.length }} 题可出 · 错词与高频词优先 · 答错自动进入复习优先队列
         </p>
-        <NButton type="primary" data-testid="quiz-start" class="start-btn">开始自测（10 题）</NButton>
+        <NButton type="primary" data-testid="quiz-start" class="start-btn" @click="startQuiz">开始自测（10 题）</NButton>
       </template>
     </div>
 
