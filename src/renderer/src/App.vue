@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
+import QuickInputModal from '@renderer/components/quick-input/QuickInputModal.vue'
+
+const quickInputRef = ref<{ open: () => void } | null>(null)
 </script>
 
 <template>
@@ -13,6 +17,7 @@ import { dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
           <RouterLink to="/flashcards" class="nav-item">闪卡</RouterLink>
           <RouterLink to="/quiz" class="nav-item">自测</RouterLink>
           <RouterLink to="/progress" class="nav-item">进度</RouterLink>
+          <RouterLink to="/pending" class="nav-item">生词本</RouterLink>
         </nav>
       </aside>
 
@@ -21,7 +26,7 @@ import { dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
         <header class="topbar">
           <NTag size="small" type="info" round>v0.1 MVP</NTag>
           <div class="topbar-actions">
-            <NButton size="small" secondary disabled title="T6 实现">快速记录 Ctrl+K</NButton>
+            <NButton size="small" secondary @click="quickInputRef?.open()">快速记录 Ctrl+K</NButton>
             <RouterLink to="/settings">
               <NButton size="small" secondary>设置</NButton>
             </RouterLink>
@@ -33,6 +38,9 @@ import { dateZhCN, NButton, NConfigProvider, NTag, zhCN } from 'naive-ui'
         </main>
       </div>
     </div>
+
+    <!-- 全局快速记录弹层（Ctrl+K 任意页面唤起，T6） -->
+    <QuickInputModal ref="quickInputRef" />
   </NConfigProvider>
 </template>
 

@@ -5,6 +5,7 @@ import FlashcardsView from '@renderer/views/FlashcardsView.vue'
 import QuizView from '@renderer/views/QuizView.vue'
 import ProgressView from '@renderer/views/ProgressView.vue'
 import SettingsView from '@renderer/views/SettingsView.vue'
+import PendingPage from '@renderer/views/PendingPage.vue'
 
 /**
  * 路由表（PLAN.md §3.2）
@@ -20,6 +21,7 @@ const router = createRouter({
     { path: '/quiz', name: 'quiz', component: QuizView },
     { path: '/progress', name: 'progress', component: ProgressView },
     { path: '/settings', name: 'settings', component: SettingsView },
+    { path: '/pending', name: 'pending', component: PendingPage },
     { path: '/:pathMatch(.*)*', redirect: '/idioms' }
   ]
 })
