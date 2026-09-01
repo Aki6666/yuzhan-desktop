@@ -158,6 +158,8 @@ export interface Storage {
   // 设置（§5.6 config.json）
   getSettings(): AppSettings
   saveSettings(patch: SettingsSetRequest): Promise<AppSettings>
+  // 全量 userData JSON 导出（v0.2.6 P1-③：完整备份）
+  exportUserDataJson(): Record<string, string>
   // 恢复信息（§3.4 UI 一次性提示）
   getRecoveryInfo(): RecoveryInfo
   // 等待所有写队列排空
@@ -565,6 +567,27 @@ export function createStorage(options: StorageOptions): Storage {
 
     getRecoveryInfo(): RecoveryInfo {
       return recoveryInfo
+    },
+
+    /** 全量 userData JSON 导出（v0.2.6 P1-③）：读取主 .json 文件（排除 .bak/.tmp/.corrupt） */
+    exportUserDataJson(): Record<string, string> {
+      const out: Record<string, string> = {}
+      let entries: string[]
+      try {
+        entries = readdirSync(userDataDir)
+      } catch {
+        return out
+      }
+      for (const name of entries) {
+        if (!name.endsWith('.json')) continue
+        if (name.endsWith('.bak') || name.endsWith('.tmp') || name.endsWith('.corrupt')) continue
+        try {
+          out[name] = readFileSync(join(userDataDir, name), 'utf8')
+        } catch {
+          /* 单个文件读失败跳过（不阻塞整体导出） */
+        }
+      }
+      return out
     },
 
     flush(): Promise<void> {

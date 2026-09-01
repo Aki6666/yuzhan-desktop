@@ -132,6 +132,12 @@ function toggle(): void {
 }
 
 function open(): void {
+  // 每次打开清空上次搜索/反馈（用户要求）；剪贴板 2–8 汉字自动填充仍生效
+  query.value = ''
+  hits.value = []
+  feedback.value = null
+  lastAddedWord.value = null
+  resetAiState()
   show.value = true
   focusInput()
   void fillFromClipboard()

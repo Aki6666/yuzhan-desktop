@@ -381,6 +381,21 @@ describe('干扰项混淆度引擎（v0.2.6，§16.3 P0-⑤）', () => {
       }
     }
   })
+
+  it('反向题型（v0.2.6 P1）：选项=词形，正确答案词形在选项中且干扰项为易混词形', () => {
+    const qs = buildQuiz(shapeFixture, { size: 4, mode: 'meaning-to-word', random: mulberry32(41) })
+    expect(qs).toHaveLength(4)
+    for (const q of qs) {
+      expect(q.mode).toBe('meaning-to-word')
+      expect(q.options[q.correctIndex]).toBe(q.word) // 正确选项=目标词形
+      for (const opt of q.options) expect(opt.length).toBeGreaterThanOrEqual(2) // 词形非释义
+    }
+    // 一蹴而就 的反向题：干扰项含易混词形（一挥而就，形近 score 29）
+    const q = qs.find((x) => x.id === 'shape-t')
+    expect(q).toBeTruthy()
+    const distractors = q!.options.filter((o, i) => i !== q!.correctIndex)
+    expect(distractors).toContain('一挥而就')
+  })
 })
 
 // ---------------------------------------------------------------------------
@@ -506,19 +521,34 @@ describe('quiz store（AC-06）', () => {
 
     quizStore.reset()
     expect(quizStore.start(fixture, {})).toBe(true)
-    // 上轮错词优先：本轮前若干题应包含上轮错词
+    // 上轮错词优先（v0.2.6 分层随机：错词层最多 ceil(10/3)=4 题强制复测，层内乱序）：
+    // 前若干题应全部来自上轮错词
     const ids = quizStore.questions.map((q) => q.id)
-    expect(ids.slice(0, wrongIds.length).sort()).toEqual([...wrongIds].sort())
+    const wrongHead = ids.slice(0, Math.min(4, wrongIds.length))
+    expect(wrongHead.length).toBeGreaterThan(0)
+    for (const id of wrongHead) expect(wrongIds).toContain(id)
   })
 
-  it('progress 中 wrongTimes>0 的词也优先出题', () => {
+  it('混合模式（v0.2.6 P1）：默认 start 正向/反向交替各半，题型覆盖两种', () => {
+    const { quizStore } = freshStores()
+    expect(quizStore.start(fixture, {})).toBe(true)
+    expect(quizStore.questions).toHaveLength(QUIZ_SIZE)
+    const modes = new Set(quizStore.questions.map((q) => q.mode))
+    expect(modes.has('word-to-meaning')).toBe(true)
+    expect(modes.has('meaning-to-word')).toBe(true)
+    // 交替顺序：第 0 正向、第 1 反向……
+    expect(quizStore.questions[0]?.mode).toBe('word-to-meaning')
+    expect(quizStore.questions[1]?.mode).toBe('meaning-to-word')
+  })
+
+  it('progress 中 wrongTimes>0 的词也优先出题（层内随机，错词都在前段）', () => {
     const { quizStore, progressStore } = freshStores()
     progressStore.incrementWrong('l-01')
     progressStore.incrementWrong('l-02')
     quizStore.start(fixture, progressStore.progress)
     const ids = quizStore.questions.map((q) => q.id)
-    expect(ids[0]).toBe('l-01')
-    expect(ids[1]).toBe('l-02')
+    // 两个错词都在前 2 位（v0.2.6 错词层随机，顺序不定但都在头部）
+    expect(new Set(ids.slice(0, 2))).toEqual(new Set(['l-01', 'l-02']))
   })
 })
 
@@ -537,6 +567,7 @@ describe('QuizQuestionCard 易混提示（v0.2.6）', () => {
       meaning: '正确释义',
       errorTypes: [],
       tags: [],
+      mode: 'word-to-meaning',
       ...partial
     }
   }
@@ -578,6 +609,27 @@ describe('QuizQuestionCard 易混提示（v0.2.6）', () => {
       props: { question: question({ confusableHints: undefined }), selected: 2, index: 0, total: 1 }
     })
     expect(w.find('[data-testid="q-confusable"]').exists()).toBe(false)
+    w.unmount()
+  })
+
+  it('反向题（v0.2.6 P1）：题干=释义、选项=词形，考点显示「答案：词形 —— 释义」', () => {
+    const w = mount(QuizQuestionCard, {
+      props: {
+        question: question({
+          mode: 'meaning-to-word',
+          options: ['一挥而就', '一蹴而就', '一马当先', '夜以继日'],
+          correctIndex: 1,
+          meaning: '踏一步就成功'
+        }),
+        selected: 1,
+        index: 0,
+        total: 1
+      }
+    })
+    expect(w.find('[data-testid="q-word"]').text()).toBe('踏一步就成功') // 题干=释义
+    expect(w.find('[data-testid="q-options"]').text()).toContain('一挥而就') // 选项=词形
+    expect(w.find('[data-testid="q-feedback"]').text()).toContain('答案')
+    expect(w.find('[data-testid="q-feedback"]').text()).toContain('一蹴而就')
     w.unmount()
   })
 })
@@ -623,6 +675,24 @@ describe('QuizPage（§3.2 三态 / §3.3 空态 / F6）', () => {
     await wrapper.find('[data-testid="quiz-difficulty-hard"]').trigger('click')
     expect(quizStore.difficulty).toBe('hard')
     expect(wrapper.find('[data-testid="quiz-difficulty-hard"]').classes()).toContain('active')
+    wrapper.unmount()
+  })
+
+  it('换一组（v0.2.6 需求-9）：答题中点击 → 重新组卷回到第 1 题', async () => {
+    const { wrapper } = await mountPage()
+    await wrapper.find('[data-testid="quiz-start"]').trigger('click')
+    const pinia = wrapper.vm.$pinia
+    const quizStore = useQuizStore(pinia)
+    expect(quizStore.phase).toBe('active')
+    expect(quizStore.currentIndex).toBe(0)
+    // 答一题后换一组
+    await wrapper.find('[data-testid="q-option-0"]').trigger('click')
+    await flushPromises()
+    await wrapper.find('[data-testid="quiz-swap"]').trigger('click')
+    await flushPromises()
+    expect(quizStore.phase).toBe('active') // 重新组卷仍答题态
+    expect(quizStore.currentIndex).toBe(0) // 回到第 1 题
+    expect(quizStore.answers).toHaveLength(0) // 新组清空答案
     wrapper.unmount()
   })
 

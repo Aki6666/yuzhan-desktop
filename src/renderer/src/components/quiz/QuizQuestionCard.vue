@@ -24,6 +24,11 @@ const emit = defineEmits<{ select: [optionIndex: number]; next: [] }>()
 const answered = computed(() => props.selected !== null)
 const isCorrect = computed(() => props.selected !== null && props.selected === props.question.correctIndex)
 
+/** 题型（v0.2.6 P1：反向=释义题干 + 词形选项） */
+const isForward = computed(
+  () => (props.question.mode ?? 'word-to-meaning') === 'word-to-meaning'
+)
+
 /** 答错且所选选项命中易混提示（v0.2.6 迭代：干扰项来自 near/pairs 时展示辨析） */
 const confusableHint = computed(() => {
   if (!answered.value || isCorrect.value || props.selected === null) return undefined
@@ -56,10 +61,13 @@ function onSelect(i: number): void {
     <header class="q-head">
       <span class="q-progress" data-testid="q-progress">第 {{ index + 1 }} / {{ total }} 题</span>
       <div class="q-main">
-        <span class="q-word" data-testid="q-word">{{ question.word }}</span>
-        <span class="q-pinyin">{{ question.pinyin }}</span>
+        <!-- 正向：词形大字 + 拼音；反向（v0.2.6 P1）：释义题干 -->
+        <span class="q-word" data-testid="q-word" :class="{ 'q-word-rev': !isForward }">
+          {{ isForward ? question.word : question.meaning }}
+        </span>
+        <span v-if="isForward" class="q-pinyin">{{ question.pinyin }}</span>
       </div>
-      <p class="q-prompt">选出与成语含义相符的选项</p>
+      <p class="q-prompt">{{ isForward ? '选出与成语含义相符的选项' : '选出与释义相符的成语' }}</p>
     </header>
 
     <div class="q-options" data-testid="q-options">
@@ -75,7 +83,7 @@ function onSelect(i: number): void {
         @click="onSelect(i)"
       >
         <span class="q-option-label">{{ String.fromCharCode(65 + i) }}.</span>
-        <span class="q-option-text">{{ opt }}</span>
+        <span class="q-option-text" :class="{ 'q-option-word': !isForward }">{{ opt }}</span>
       </NButton>
     </div>
 
@@ -96,7 +104,9 @@ function onSelect(i: number): void {
         </NButton>
       </div>
       <div class="q-kaodian">
-        <p class="kaodian-meaning"><b>释义：</b>{{ question.meaning }}</p>
+        <p class="kaodian-meaning">
+          <b v-if="!isForward">答案：</b>{{ !isForward ? `${question.word} —— ` : '' }}<b v-if="isForward">释义：</b>{{ question.meaning }}
+        </p>
         <p v-if="confusableHint" class="kaodian-confusable" data-testid="q-confusable">
           <b>易混提示：</b>「{{ confusableHint.word }}」—— {{ confusableHint.diff }}
         </p>
@@ -147,6 +157,16 @@ function onSelect(i: number): void {
   font-weight: 700;
   color: var(--y-text-primary);
   letter-spacing: 4px;
+}
+
+/* 反向题：释义题干（v0.2.6 P1） */
+.q-word-rev {
+  font-family: var(--y-font-family);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: var(--y-line-height-body);
+  max-width: 520px;
 }
 
 .q-pinyin {
@@ -224,6 +244,15 @@ function onSelect(i: number): void {
 .q-option-text {
   text-align: left;
   line-height: 1.6;
+}
+
+/* 反向题选项：词形衬线（v0.2.6 P1） */
+.q-option-word {
+  font-family: var(--y-font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--y-text-primary);
 }
 
 .q-feedback {

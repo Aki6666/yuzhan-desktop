@@ -212,6 +212,10 @@ function stubWindowApi(listImpl: () => Promise<unknown>): void {
       get: vi.fn()
     },
     pairs: { list: vi.fn(async () => ({ ok: true, data: { pairs: [] } })) },
+    user: {
+      list: vi.fn(async () => ({ ok: true, data: { items: [] } })),
+      add: vi.fn(async () => ({ ok: true, data: null }))
+    },
     progress: { save: vi.fn(), list: vi.fn(async () => ({ ok: true, data: { items: {} } })) },
     pending: { list: vi.fn(), add: vi.fn(), remove: vi.fn() },
     quiz: { record: vi.fn(), history: { list: vi.fn(async () => ({ ok: true, data: { items: [] } })), add: vi.fn(async () => ({ ok: true, data: null })) } },
@@ -250,6 +254,44 @@ describe('IdiomDetailPage 页面状态', () => {
 
   afterEach(() => {
     delete (window as unknown as { api?: unknown }).api
+  })
+
+  it('易混词区块（v0.2.6，BUG-4）：pairs 对端展示为易混词 + 跳转链接', async () => {
+    const partner: Idiom = {
+      ...fixture,
+      id: 'dan-jing-jie-lu-01',
+      word: '殚精竭虑',
+      pinyin: 'dān jīng jié lǜ',
+      meaning: '用尽精力思虑谋划'
+    }
+    stubWindowApi(() => Promise.resolve(listOk([fixture, partner])))
+    const api = window.api as unknown as {
+      pairs: { list: ReturnType<typeof vi.fn> }
+      user: { list: ReturnType<typeof vi.fn> }
+    }
+    api.pairs.list = vi.fn(async () => ({
+      ok: true,
+      data: { pairs: [{ a: '鞠躬尽瘁', b: '殚精竭虑', diff: '前者重忠诚奉献，后者重用尽心思' }] }
+    }))
+    api.user.list = vi.fn(async () => ({ ok: true, data: { items: [] } }))
+    const w = await mountPage(router)
+    const sec = w.find('[data-testid="section-confusable"]')
+    expect(sec.exists()).toBe(true)
+    expect(sec.text()).toContain('殚精竭虑')
+    // 辨析说明（near diff 或 pairs diff 均有效）
+    expect(sec.text()).toContain('忠诚奉献')
+    const link = sec.find('a')
+    expect(link.attributes('href')).toContain('/idioms/dan-jing-jie-lu-01')
+    w.unmount()
+  })
+
+  it('无易混词（无 pairs/near/形近候选）→ 不渲染易混词区块', async () => {
+    stubWindowApi(() => Promise.resolve(listOk([fixture])))
+    const api = window.api as unknown as { user: { list: ReturnType<typeof vi.fn> } }
+    api.user.list = vi.fn(async () => ({ ok: true, data: { items: [] } }))
+    const w = await mountPage(router)
+    expect(w.find('[data-testid="section-confusable"]').exists()).toBe(false)
+    w.unmount()
   })
 
   it('命中词条：渲染详情卡片（store 数据，纯本地无 AI）', async () => {

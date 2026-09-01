@@ -19,6 +19,7 @@ import {
   type AiMode,
   type AppLogRequest,
   type AppSettings,
+  type ConfusablePair,
   type IpcResult,
   type ProgressSaveRequest,
   type ProgressStatus,
@@ -129,10 +130,10 @@ export function registerIpcHandlers(): void {
     return ipcOk(item ?? null)
   })
 
-  // pairs:list — 易混淆成语对全量（§6.4，启动一次性）
-  ipcMain.handle(IPC_CHANNELS.pairsList, (): IpcResult<ReturnType<Storage['listPairs']>> => {
+  // pairs:list — 易混淆成语对全量（§6.4，启动一次性；契约见 PairsListResponse { pairs }）
+  ipcMain.handle(IPC_CHANNELS.pairsList, (): IpcResult<{ pairs: ConfusablePair[] }> => {
     try {
-      return ipcOk(storage.listPairs())
+      return ipcOk({ pairs: storage.listPairs() })
     } catch (e) {
       logger.error(`[ipc] pairs:list 失败: ${String(e)}`)
       return fail('IO_ERROR', '易混淆对加载失败')
@@ -161,6 +162,16 @@ export function registerIpcHandlers(): void {
     } catch (e) {
       logger.error(`[ipc] user:add 失败: ${String(e)}`)
       return fail('IO_ERROR', '个人库写入失败')
+    }
+  })
+
+  // backup:export — 全量 userData JSON 导出（v0.2.6 P1-③：完整备份）
+  ipcMain.handle(IPC_CHANNELS.backupExport, (): IpcResult<unknown> => {
+    try {
+      return ipcOk({ files: storage.exportUserDataJson(), exportedAt: new Date().toISOString() })
+    } catch (e) {
+      logger.error(`[ipc] backup:export 失败: ${String(e)}`)
+      return fail('IO_ERROR', '备份导出失败')
     }
   })
 

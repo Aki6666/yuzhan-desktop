@@ -17,6 +17,7 @@ import {
   type SettingsSetRequest,
   type UserAddRequest,
   type UserListResponse,
+  type BackupExportResponse,
   type YuzhanApi
 } from '../../shared/ipc/contracts'
 
@@ -54,6 +55,9 @@ const api: YuzhanApi = {
   user: {
     list: (): Promise<IpcResult<UserListResponse>> => ipcRenderer.invoke(IPC_CHANNELS.userList),
     add: (request: UserAddRequest): Promise<IpcResult<null>> => ipcRenderer.invoke(IPC_CHANNELS.userAdd, request)
+  },
+  backup: {
+    export: (): Promise<IpcResult<BackupExportResponse>> => ipcRenderer.invoke(IPC_CHANNELS.backupExport)
   },
   settings: {
     get: (): Promise<IpcResult<AppSettings>> => ipcRenderer.invoke(IPC_CHANNELS.settingsGet),

@@ -35,20 +35,26 @@ onMounted(() => {
 
 const freqCounts = computed(() => countByFrequency(store.items))
 
-/** 分页（用户要求 #2：每次只显示一部分，触底/按钮加载更多） */
-const PAGE_SIZE = 100
-const limit = ref(PAGE_SIZE)
-const shown = computed(() => Math.min(limit.value, store.filtered.length))
+/** 分页（v0.2.6 修复，BUG-2：每页条数自选 + 页码切换，替换滚动加载） */
+const PAGE_SIZES = [50, 100, 200, 500] as const
+const pageSize = ref<number>(100)
+const page = ref(1)
 
-function loadMore(): void {
-  if (limit.value < store.filtered.length) limit.value += PAGE_SIZE
+const totalPages = computed(() => Math.max(1, Math.ceil(store.filtered.length / pageSize.value)))
+const paged = computed(() => {
+  const start = (page.value - 1) * pageSize.value
+  return store.filtered.slice(start, start + pageSize.value)
+})
+
+function setPage(p: number): void {
+  page.value = Math.min(totalPages.value, Math.max(1, p))
 }
 
-// 搜索/筛选/排序变化 → 回到第一页
+// 搜索/筛选/排序/每页条数变化 → 回到第一页
 watch(
-  () => [store.keyword, store.frequencyFilter, store.sortMode, store.sortDirection],
+  () => [store.keyword, store.frequencyFilter, store.sortMode, store.sortDirection, pageSize.value],
   () => {
-    limit.value = PAGE_SIZE
+    page.value = 1
   }
 )
 
@@ -211,24 +217,63 @@ function retryLoad(): void {
       </NButton>
     </div>
 
-    <!-- 列表（虚拟滚动 + 分页：每页 100 条，触底加载更多） -->
+    <!-- 列表（虚拟滚动 + 分页：每页条数自选，页码切换） -->
     <IdiomVirtualList
       v-else
-      :items="store.filtered"
-      :limit="limit"
+      :items="paged"
       :keyword="store.keyword"
       class="list-scroll"
-      @bottom="loadMore"
     />
 
-    <!-- 分页状态条 -->
+    <!-- 分页状态条（v0.2.6：上一页/下一页 + 页码 + 每页条数） -->
     <div v-if="store.filtered.length > 0" class="pager-bar">
       <span class="pager-text" data-testid="pager-text">
-        已显示 {{ shown }} / {{ store.filtered.length }} 条
+        第 {{ page }} / {{ totalPages }} 页 · 共 {{ store.filtered.length }} 条
       </span>
-      <NButton v-if="limit < store.filtered.length" size="small" quaternary data-testid="load-more" @click="loadMore">
-        加载更多
-      </NButton>
+      <div class="pagination" role="group" aria-label="分页">
+        <button
+          type="button"
+          class="page-btn"
+          data-testid="page-prev"
+          :disabled="page <= 1"
+          @click="setPage(page - 1)"
+        >
+          ← 上一页
+        </button>
+        <span class="page-indicator">
+          <input
+            class="page-input"
+            data-testid="page-input"
+            type="number"
+            min="1"
+            :max="totalPages"
+            :value="page"
+            @change="setPage(Number(($event.target as HTMLInputElement).value))"
+          />
+          <span>/ {{ totalPages }}</span>
+        </span>
+        <button
+          type="button"
+          class="page-btn"
+          data-testid="page-next"
+          :disabled="page >= totalPages"
+          @click="setPage(page + 1)"
+        >
+          下一页 →
+        </button>
+        <label class="page-size">
+          每页
+          <select
+            class="page-size-select"
+            data-testid="page-size"
+            :value="pageSize"
+            @change="pageSize = Number(($event.target as HTMLSelectElement).value)"
+          >
+            <option v-for="s in PAGE_SIZES" :key="s" :value="s">{{ s }}</option>
+          </select>
+          条
+        </label>
+      </div>
     </div>
   </section>
 </template>
@@ -493,18 +538,88 @@ function retryLoad(): void {
   min-height: 0;
 }
 
-/* 分页状态条 */
+/* 分页状态条（v0.2.6：页码 + 每页条数） */
 .pager-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 12px;
-  padding: 4px 0 2px;
+  padding: 6px 2px 2px;
+  flex-wrap: wrap;
 }
 
 .pager-text {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
   font-variant-numeric: tabular-nums;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  padding: 5px 12px;
+  font-size: 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 999px;
+  background: var(--y-bg-card);
+  color: var(--y-text-secondary);
+  cursor: pointer;
+  transition:
+    border-color var(--y-motion-fast) var(--y-motion-ease),
+    background-color var(--y-motion-fast) var(--y-motion-ease),
+    color var(--y-motion-fast) var(--y-motion-ease);
+}
+
+.page-btn:hover:not(:disabled) {
+  background: var(--y-bg-hover);
+  color: var(--y-text-primary);
+}
+
+.page-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.page-input {
+  width: 48px;
+  padding: 4px 6px;
+  font-size: 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 6px;
+  background: var(--y-bg-card);
+  color: var(--y-text-primary);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.page-size {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+}
+
+.page-size-select {
+  padding: 4px 6px;
+  font-size: 12px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 6px;
+  background: var(--y-bg-card);
+  color: var(--y-text-primary);
 }
 </style>

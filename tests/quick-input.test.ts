@@ -409,6 +409,27 @@ describe('QuickInputModal（§3.3 快速输入交互，AC-03/04）', () => {
     wrapper.unmount()
   })
 
+  it('每次打开清空上次搜索（v0.2.6，BUG-7）', async () => {
+    const { wrapper } = await mountModal()
+    await openAndType(wrapper, 'jgj')
+    expect(document.body.querySelector('[data-testid="quick-hit-card"]')).not.toBeNull()
+    // 关闭（+ 键 toggle）
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+' }))
+    await nextTick()
+    await nextTick()
+    await flushPromises()
+    expect(isOpen(wrapper)).toBe(false)
+    // 再次打开 → 输入清空、无残留命中卡片
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: '+' }))
+    await nextTick()
+    await nextTick()
+    await flushPromises()
+    expect(isOpen(wrapper)).toBe(true)
+    expect(qInput()?.value ?? '').toBe('')
+    expect(document.body.querySelector('[data-testid="quick-hit-card"]')).toBeNull()
+    wrapper.unmount()
+  })
+
   it('「+」键直接唤起（FIX-1）：+ / = / 数字键盘 Add 均可触发，无需组合键', async () => {
     const { wrapper } = await mountModal()
     expect(isOpen(wrapper)).toBe(false)

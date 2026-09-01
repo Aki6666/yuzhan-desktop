@@ -33,6 +33,9 @@ export const HIGH_FREQUENCY_TIERS = [4, 5] as const
 /** 难度档位（v0.2.6 迭代：干扰项区分度） */
 export type QuizDifficulty = 'easy' | 'standard' | 'hard'
 
+/** 题型（v0.2.6 P1：正向=给成语选释义 / 反向=给释义选成语，考场逻辑填空反查） */
+export type QuizMode = 'word-to-meaning' | 'meaning-to-word'
+
 /** 易混辨析提示（v0.2.6 迭代：干扰项来自 near/pairs 时生成） */
 export interface QuizHint {
   /** 对应选项文本（答错时按所选选项匹配） */
@@ -48,7 +51,7 @@ export interface QuizQuestion {
   id: string
   word: string
   pinyin: string
-  /** 4 个释义选项 */
+  /** 4 个选项（正向=释义文本；反向=词形） */
   options: string[]
   /** 正确答案下标（0–3） */
   correctIndex: number
@@ -56,6 +59,8 @@ export interface QuizQuestion {
   meaning: string
   errorTypes: string[]
   tags: string[]
+  /** 题型（v0.2.6 P1：决定题干/选项渲染方式） */
+  mode: QuizMode
   /** 易混辨析提示（v0.2.6 迭代：答错且命中时展示「易与 X 混淆：diff」） */
   confusableHints?: QuizHint[]
 }
@@ -70,6 +75,8 @@ export interface QuizBuildOptions {
   frequencyTiers?: number[]
   /** 难度（v0.2.6 迭代：默认 standard） */
   difficulty?: QuizDifficulty
+  /** 题型（v0.2.6 P1：默认 word-to-meaning） */
+  mode?: QuizMode
   /** 易混淆对（v0.2.6 迭代：data/pairs.json，a/b 互为干扰项 + 辨析提示） */
   pairs?: ConfusablePair[]
   /** 随机源（默认 Math.random；测试可注入种子） */
@@ -260,16 +267,30 @@ function candidatePool(target: Idiom, index: DistractorIndex): Idiom[] {
 }
 
 /**
- * 为 target 构建 4 个释义选项（1 正确 + 3 干扰项）。
- * 干扰项按混淆度评分降序选取，按难度档位控制区分度；释义去重；
- * near/pairs 干扰项附带易混辨析提示（QuizHint）。
+ * 为 target 构建 4 个选项（1 正确 + 3 干扰项）。
+ * - 正向（word-to-meaning）：题干=词形，选项=释义；干扰项按混淆度评分降序选取（v0.2.6）
+ * - 反向（meaning-to-word，v0.2.6 P1）：题干=释义，选项=词形；干扰项=易混词形
+ * 按难度档位控制区分度；near/pairs 干扰项附带易混辨析提示（QuizHint）。
  * 返回 null 表示干扰项不足。
  */
 export function buildOptionsFor(
   target: Idiom,
   index: DistractorIndex,
   random: () => number,
-  difficulty: QuizDifficulty = 'standard'
+  difficulty: QuizDifficulty = 'standard',
+  mode: QuizMode = 'word-to-meaning'
+): { options: string[]; correctIndex: number; hints: QuizHint[] } | null {
+  return mode === 'meaning-to-word'
+    ? buildReverseOptions(target, index, random, difficulty)
+    : buildForwardOptions(target, index, random, difficulty)
+}
+
+/** 正向：题干=词形，选项=释义（v0.2.6 混淆度引擎） */
+function buildForwardOptions(
+  target: Idiom,
+  index: DistractorIndex,
+  random: () => number,
+  difficulty: QuizDifficulty
 ): { options: string[]; correctIndex: number; hints: QuizHint[] } | null {
   const correct = sanitizeQuizOption(target.meaning)
 
@@ -288,12 +309,10 @@ export function buildOptionsFor(
 
   /** 按分数段抽取（score ≥ 15 为 A/S 级高相似） */
   const draw = (minScore: number): string | null => {
-    // 从剩余候选中取第一个满足阈值且释义未用的（高分优先，同一分随机扰动保持多样性）
     const avail = scored.filter(
       (s) => s.score >= minScore && !usedMeanings.has(sanitizeQuizOption(s.item.meaning))
     )
     if (avail.length === 0) return null
-    // 同分时随机挑选（避免每题都取同一组干扰项）
     const pick = avail[Math.floor(random() * avail.length)]
     const meaning = sanitizeQuizOption(pick.item.meaning)
     usedMeanings.add(meaning)
@@ -302,44 +321,121 @@ export function buildOptionsFor(
     return meaning
   }
 
-  const need = OPTION_COUNT - 1
-  if (difficulty === 'hard') {
-    // 全高相似优先（≥16 形近/近义），不足降级到 ≥8（同尾），再不足 ≥2（同主题）
-    for (const min of [SCORE_SHARED_TWO, SCORE_SAME_LAST, SCORE_SAME_TAG]) {
-      while (distractors.length < need) {
-        if (draw(min) === null) break
-      }
-      if (distractors.length === need) break
-    }
-  } else if (difficulty === 'easy') {
-    // 宽松：同主题即可（不强制高相似；优先随机，保持简单）
-    for (const min of [SCORE_SAME_TAG, SCORE_SAME_FREQ]) {
-      while (distractors.length < need) {
-        if (draw(min) === null) break
-      }
-      if (distractors.length === need) break
-    }
-  } else {
-    // standard（默认）：至少 1 个高相似（≥16），其余按分降序（≥2）
-    if (draw(SCORE_SHARED_TWO) !== null) {
-      while (distractors.length < need) {
-        if (draw(SCORE_SAME_TAG) === null) break
-      }
-    } else {
-      // 无高相似候选（罕见小库）：退化为同主题优先
-      for (const min of [SCORE_SAME_TAG, SCORE_SAME_FREQ]) {
-        while (distractors.length < need) {
-          if (draw(min) === null) break
-        }
-        if (distractors.length === need) break
-      }
+  // 难度策略抽取（失败不提前返回：下方「其余词」兜底保证可出题）
+  fillByDifficulty(draw, difficulty)
+
+  // 候选池不足（如主题孤僻词）：回退「其余词」补足，保证可出题（原逻辑 others 兜底行为）
+  if (distractors.length < OPTION_COUNT - 1) {
+    const others = index.items.filter(
+      (i) => i.id !== target.id && !usedMeanings.has(sanitizeQuizOption(i.meaning))
+    )
+    while (distractors.length < OPTION_COUNT - 1 && others.length > 0) {
+      const pick = others[Math.floor(random() * others.length)]
+      const m = sanitizeQuizOption(pick.meaning)
+      usedMeanings.add(m)
+      distractors.push(m)
+      others.splice(others.indexOf(pick), 1)
     }
   }
-
-  if (distractors.length < need) return null
+  if (distractors.length < OPTION_COUNT - 1) return null
 
   const options = shuffle([correct, ...distractors], random)
   return { options, correctIndex: options.indexOf(correct), hints }
+}
+
+/** 反向（v0.2.6 P1）：题干=释义，选项=词形（给释义选成语，考场逻辑填空反查） */
+function buildReverseOptions(
+  target: Idiom,
+  index: DistractorIndex,
+  random: () => number,
+  difficulty: QuizDifficulty
+): { options: string[]; correctIndex: number; hints: QuizHint[] } | null {
+  const correct = target.word
+  const scored = candidatePool(target, index)
+    .map((item) => {
+      const { score, hint } = confusableScore(target, item, index)
+      return { item, score, hint }
+    })
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+
+  const usedWords = new Set<string>([correct])
+  const hints: QuizHint[] = []
+  const distractors: string[] = []
+
+  const draw = (minScore: number): boolean => {
+    const avail = scored.filter((s) => s.score >= minScore && !usedWords.has(s.item.word))
+    if (avail.length === 0) return false
+    const pick = avail[Math.floor(random() * avail.length)]
+    usedWords.add(pick.item.word)
+    distractors.push(pick.item.word)
+    if (pick.hint) hints.push({ option: pick.item.word, word: pick.hint.word, diff: pick.hint.diff })
+    return true
+  }
+
+  // 难度策略抽取（失败不提前返回：下方「其余词」兜底保证可出题）
+  fillByDifficulty(draw, difficulty)
+
+  // 兜底：任意词形
+  if (distractors.length < OPTION_COUNT - 1) {
+    const others = index.items.filter((i) => i.id !== target.id && !usedWords.has(i.word))
+    while (distractors.length < OPTION_COUNT - 1 && others.length > 0) {
+      const pick = others[Math.floor(random() * others.length)]
+      usedWords.add(pick.word)
+      distractors.push(pick.word)
+      others.splice(others.indexOf(pick), 1)
+    }
+  }
+  if (distractors.length < OPTION_COUNT - 1) return null
+
+  const options = shuffle([correct, ...distractors], random)
+  return { options, correctIndex: options.indexOf(correct), hints }
+}
+
+/** 难度策略：hard（≥16→≥8→≥2）/ easy（≥2→≥1）/ standard（至少 1 个 ≥16，其余 ≥2） */
+function fillByDifficulty(
+  draw: (minScore: number) => string | null | boolean,
+  difficulty: QuizDifficulty
+): boolean {
+  const need = OPTION_COUNT - 1
+  let count = 0
+  const attempt = (minScore: number): boolean => {
+    const r = draw(minScore)
+    if (r !== null && r !== false) {
+      count += 1
+      return true
+    }
+    return false
+  }
+  if (difficulty === 'hard') {
+    for (const min of [SCORE_SHARED_TWO, SCORE_SAME_LAST, SCORE_SAME_TAG]) {
+      while (count < need && attempt(min)) {
+        /* 循环抽 */
+      }
+      if (count === need) break
+    }
+  } else if (difficulty === 'easy') {
+    for (const min of [SCORE_SAME_TAG, SCORE_SAME_FREQ]) {
+      while (count < need && attempt(min)) {
+        /* 循环抽 */
+      }
+      if (count === need) break
+    }
+  } else {
+    if (attempt(SCORE_SHARED_TWO)) {
+      while (count < need && attempt(SCORE_SAME_TAG)) {
+        /* 循环抽 */
+      }
+    } else {
+      for (const min of [SCORE_SAME_TAG, SCORE_SAME_FREQ]) {
+        while (count < need && attempt(min)) {
+          /* 循环抽 */
+        }
+        if (count === need) break
+      }
+    }
+  }
+  return count === need
 }
 
 function shuffle<T>(arr: T[], random: () => number): T[] {
@@ -351,6 +447,39 @@ function shuffle<T>(arr: T[], random: () => number): T[] {
   return out
 }
 
+/**
+ * 详情页易混词（v0.2.6 迭代，BUG-4）：按混淆度评分取该词最易混的若干词
+ * （near/pairs 对端 → 形近 → 同首/同尾 → 同主题），附一句话区别（diff）或释义。
+ */
+export interface ConfusableWordItem {
+  word: string
+  /** 一句话核心区别（near.diff / pairs.diff；无标注时为空，调用方可展示释义） */
+  diff?: string
+  meaning: string
+  score: number
+}
+
+export function findConfusableWords(
+  target: Idiom,
+  index: DistractorIndex,
+  limit = 4
+): ConfusableWordItem[] {
+  return candidatePool(target, index)
+    .map((item) => {
+      const { score, hint } = confusableScore(target, item, index)
+      return { item, score, hint }
+    })
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((s) => ({
+      word: s.item.word,
+      ...(s.hint ? { diff: s.hint.diff } : {}),
+      meaning: s.item.meaning,
+      score: s.score
+    }))
+}
+
 // ---------------------------------------------------------------------------
 // 组卷主函数
 // ---------------------------------------------------------------------------
@@ -358,7 +487,9 @@ function shuffle<T>(arr: T[], random: () => number): T[] {
 /**
  * 组卷：返回 size（默认 10）道题。
  * - 题库（items）不足 size → 返回 []（调用方提示「题库 <10」并引导浏览成语库）
- * - 避免重复：优先从「上轮未出/上轮错词」中选题；上轮词条不足以填充时允许复用（尽力避免）
+ * - 目标词分层随机（v0.2.6 修复「永远同一批词」）：错词（洗牌，最多 ceil(size/3) 强制复测）
+ *   → 高频（洗牌）→ 其余（洗牌）→ 上轮被避免词（洗牌兜底）；层内随机保证每次组卷轮换，
+ *   同层稳定序（频次/id）仅作随机源兜底
  * - 干扰项：v0.2.6 迭代按混淆度评分 + 难度档位生成（buildOptionsFor）
  * - 单题干扰项不足时跳过该目标词，直到凑满 size（或耗尽）
  */
@@ -366,16 +497,44 @@ export function buildQuiz(items: Idiom[], opts: QuizBuildOptions = {}): QuizQues
   const size = opts.size ?? QUIZ_SIZE
   const random = opts.random ?? Math.random
   const difficulty = opts.difficulty ?? 'standard'
+  const mode = opts.mode ?? 'word-to-meaning'
   if (items.length < size) return []
 
   const avoidSet = new Set(opts.avoidIds ?? [])
   const wrongSet = new Set(opts.wrongIds ?? [])
+  const freqSet = new Set(opts.frequencyTiers ?? HIGH_FREQUENCY_TIERS)
   const ordered = selectQuizTargets(items, opts)
-  // 优先：错词（无论是否在上轮——错词需复测，AC-06）+ 未避免词条；
-  // 不足时用被避免词条补齐
-  const preferred = ordered.filter((i) => !avoidSet.has(i.id) || wrongSet.has(i.id))
-  const fallback = ordered.filter((i) => avoidSet.has(i.id) && !wrongSet.has(i.id))
-  const targets = [...preferred, ...fallback]
+
+  const shuffle = <T,>(arr: T[]): T[] => {
+    const out = [...arr]
+    for (let i = out.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1))
+      ;[out[i], out[j]] = [out[j], out[i]]
+    }
+    return out
+  }
+
+  // 分层：错词（强制复测）→ 高频未避免 → 其余未避免 → 上轮被避免词（兜底）
+  const wrongPool = ordered.filter((i) => wrongSet.has(i.id))
+  const highPool = ordered.filter((i) => !wrongSet.has(i.id) && freqSet.has(i.frequency) && !avoidSet.has(i.id))
+  const restPool = ordered.filter((i) => !wrongSet.has(i.id) && !freqSet.has(i.frequency) && !avoidSet.has(i.id))
+  const fallbackPool = ordered.filter((i) => avoidSet.has(i.id) && !wrongSet.has(i.id))
+
+  // 错词最多 ceil(size/3) 题（避免每次自测全是错词复测）；其余按需从高频/其余层随机取
+  const wrongLimit = Math.min(wrongPool.length, Math.max(1, Math.ceil(size / 3)))
+  const targets: Idiom[] = []
+  for (const pool of [
+    shuffle(wrongPool).slice(0, wrongLimit),
+    shuffle(highPool),
+    shuffle(restPool),
+    shuffle(fallbackPool)
+  ]) {
+    for (const item of pool) {
+      if (targets.length >= size) break
+      targets.push(item)
+    }
+    if (targets.length >= size) break
+  }
 
   // 干扰项索引只建一次（v0.2.6 迭代）
   const index = createDistractorIndex(items, opts.pairs)
@@ -383,7 +542,7 @@ export function buildQuiz(items: Idiom[], opts: QuizBuildOptions = {}): QuizQues
   const questions: QuizQuestion[] = []
   for (const target of targets) {
     if (questions.length >= size) break
-    const built = buildOptionsFor(target, index, random, difficulty)
+    const built = buildOptionsFor(target, index, random, difficulty, mode)
     if (!built) continue
     questions.push({
       id: target.id,
@@ -394,6 +553,7 @@ export function buildQuiz(items: Idiom[], opts: QuizBuildOptions = {}): QuizQues
       meaning: target.meaning,
       errorTypes: target.errorTypes ?? [],
       tags: target.tags ?? [],
+      mode,
       confusableHints: built.hints.length > 0 ? built.hints : undefined
     })
   }

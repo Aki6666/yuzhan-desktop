@@ -30,6 +30,13 @@ const DIFFICULTY_OPTIONS = [
   { value: 'hard', label: '困难', desc: '干扰项全为近义/形近词，高强度辨析' }
 ] as const
 
+/** 题型（v0.2.6 P1：正向/反向/混合） */
+const MODE_OPTIONS = [
+  { value: 'word-to-meaning', label: '正向', desc: '给成语选释义（传统题型）' },
+  { value: 'meaning-to-word', label: '反向', desc: '给释义选成语（逻辑填空反查）' },
+  { value: 'mixed', label: '混合', desc: '默认：正向/反向交替各半' }
+] as const
+
 /** 档位选择（空数组 = 全部；用户要求 #6） */
 const selectedTiers = ref<number[]>([])
 
@@ -91,6 +98,19 @@ function onRestart(): void {
 function onBack(): void {
   quizStore.reset()
 }
+
+/** 换一组（v0.2.6 需求-9）：放弃当前组，按当前档位/难度重新组卷 */
+function swapGroup(): void {
+  if (quizStore.phase !== 'active') return
+  quizStore.reset()
+  quizStore.start(pool.value, progressStore.progress)
+}
+
+/** 历史记录展开（v0.2.6 需求-9：详细练习记录） */
+const expandedHistory = ref<number | null>(null)
+function toggleHistory(i: number): void {
+  expandedHistory.value = expandedHistory.value === i ? null : i
+}
 </script>
 
 <template>
@@ -142,6 +162,24 @@ function onBack(): void {
           </button>
         </div>
       </div>
+      <!-- 题型选择（v0.2.6 P1：正向=给成语选释义 / 反向=给释义选成语 / 混合） -->
+      <div class="tier-row" data-testid="quiz-mode-select">
+        <span class="tier-label">题型</span>
+        <div class="difficulty-selector" role="group" aria-label="自测题型">
+          <button
+            v-for="m in MODE_OPTIONS"
+            :key="m.value"
+            type="button"
+            class="diff-chip"
+            :class="{ active: quizStore.mode === m.value }"
+            :data-testid="`quiz-mode-${m.value}`"
+            :title="m.desc"
+            @click="quizStore.setMode(m.value)"
+          >
+            {{ m.label }}
+          </button>
+        </div>
+      </div>
       <!-- 题库不足：提示并引导浏览成语库（§3.3 空态） -->
       <template v-if="!quizStore.canStart(pool.length)">
         <NEmpty :description="`所选档位题库不足 10 题（当前 ${pool.length} 题），换档位或先去成语库补充吧`">
@@ -160,16 +198,29 @@ function onBack(): void {
       </template>
     </div>
 
-    <!-- 答题态 -->
-    <QuizQuestionCard
-      v-else-if="quizStore.phase === 'active' && quizStore.current"
-      :question="quizStore.current"
-      :selected="quizStore.selectedIndex"
-      :index="quizStore.currentIndex"
-      :total="quizStore.total"
-      @select="onSelect"
-      @next="onNext"
-    />
+    <!-- 答题态（v0.2.6 需求-9：顶部「换一组」中途换一批新题） -->
+    <div v-else-if="quizStore.phase === 'active' && quizStore.current" class="quiz-active-wrap">
+      <div class="quiz-active-head">
+        <span class="quiz-active-hint">正在作答 · 答完即反馈考点</span>
+        <NButton
+          size="small"
+          quaternary
+          data-testid="quiz-swap"
+          :disabled="!quizStore.canStart(pool.length)"
+          @click="swapGroup"
+        >
+          换一组
+        </NButton>
+      </div>
+      <QuizQuestionCard
+        :question="quizStore.current"
+        :selected="quizStore.selectedIndex"
+        :index="quizStore.currentIndex"
+        :total="quizStore.total"
+        @select="onSelect"
+        @next="onNext"
+      />
+    </div>
 
     <!-- 结果态 -->
     <QuizResultPanel
@@ -191,13 +242,29 @@ function onBack(): void {
       </div>
       <ul class="history-list">
         <li v-for="(h, i) in history.slice(0, 20)" :key="i" class="history-item">
-          <span class="history-time">{{ formatTime(h.time) }}</span>
-          <span class="history-score">
-            <b class="score-correct">{{ h.correct }}</b>
-            <span class="score-sep">/</span>
-            <span class="score-total">{{ h.total }}</span>
-            <span class="score-rate">{{ Math.round((h.correct / h.total) * 100) }}%</span>
-          </span>
+          <button type="button" class="history-main" data-testid="history-expand" @click="toggleHistory(i)">
+            <span class="history-time">{{ formatTime(h.time) }}</span>
+            <span class="history-score">
+              <b class="score-correct">{{ h.correct }}</b>
+              <span class="score-sep">/</span>
+              <span class="score-total">{{ h.total }}</span>
+              <span class="score-rate">{{ Math.round((h.correct / h.total) * 100) }}%</span>
+            </span>
+          </button>
+          <!-- 详细练习记录（v0.2.6 需求-9：每题词条 + 对错） -->
+          <div v-if="expandedHistory === i && h.details && h.details.length > 0" class="history-detail" data-testid="history-detail">
+            <ul class="detail-list">
+              <li v-for="(d, di) in h.details" :key="di" class="detail-row">
+                <span class="detail-word">{{ d.word }}</span>
+                <span class="detail-result" :class="d.correct ? 'ok' : 'bad'">
+                  {{ d.correct ? '对' : '错' }}
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div v-else-if="expandedHistory === i" class="history-detail" data-testid="history-detail">
+            <p class="detail-empty">该组无明细记录</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -362,15 +429,33 @@ function onBack(): void {
 
 .history-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 4px;
+  flex-direction: column;
   border-bottom: 1px solid var(--y-border-light);
   font-size: var(--y-font-body);
 }
 
 .history-item:last-child {
   border-bottom: none;
+}
+
+.history-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  border-radius: 6px;
+  transition: background-color var(--y-motion-fast) var(--y-motion-ease);
+}
+
+.history-main:hover {
+  background: var(--y-bg-hover);
 }
 
 .history-time {
@@ -403,6 +488,84 @@ function onBack(): void {
   font-size: var(--y-font-aux);
   color: var(--y-text-tertiary);
   font-variant-numeric: tabular-nums;
+}
+
+/* 详细练习记录（v0.2.6 需求-9） */
+.history-detail {
+  padding: 4px 8px 10px;
+}
+
+.detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 8px;
+  border: 1px solid var(--y-border-light);
+  border-radius: 6px;
+  background: var(--y-bg-subtle);
+  font-size: 12px;
+}
+
+.detail-word {
+  font-family: var(--y-font-serif);
+  color: var(--y-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-result {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+
+.detail-result.ok {
+  color: var(--y-success);
+  background: color-mix(in srgb, var(--y-success) 12%, var(--y-bg-card));
+}
+
+.detail-result.bad {
+  color: var(--y-danger);
+  background: color-mix(in srgb, var(--y-danger) 12%, var(--y-bg-card));
+}
+
+.detail-empty {
+  margin: 0;
+  padding: 4px 8px;
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+}
+
+/* 答题态：换一组（v0.2.6 需求-9） */
+.quiz-active-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-md);
+}
+
+.quiz-active-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.quiz-active-hint {
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
 }
 
 .start-btn {

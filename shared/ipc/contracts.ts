@@ -155,6 +155,14 @@ export interface UserAddRequest {
   idiom: Idiom
 }
 
+/** backup:export → 全量 userData JSON 文件（v0.2.6 P1-③ 完整备份） */
+export interface BackupExportResponse {
+  /** 文件名 → 文件内容（progress.json / pending.json / config.json / quiz-history.json / idioms-user.json） */
+  files: Record<string, string>
+  /** 导出时间（ISO 8601） */
+  exportedAt: string
+}
+
 // ---------------------------------------------------------------------------
 // channel 常量（§10.4 权威清单）
 // ---------------------------------------------------------------------------
@@ -172,6 +180,7 @@ export const IPC_CHANNELS = {
   quizHistoryAdd: 'quiz:history:add',
   userList: 'user:list',
   userAdd: 'user:add',
+  backupExport: 'backup:export',
   settingsGet: 'settings:get',
   settingsSet: 'settings:set',
   appLog: 'app:log',
@@ -246,6 +255,12 @@ export interface QuizHistoryItem {
   correct: number
   wrong: number
   total: number
+  /** 每题明细（v0.2.6 迭代，需求-9：详细练习记录；按答题顺序） */
+  details?: Array<{
+    id: string
+    word: string
+    correct: boolean
+  }>
 }
 
 /** quiz:history:list → 全部自测历史（按时间倒序） */
@@ -348,6 +363,10 @@ export interface YuzhanApi {
     list(): Promise<IpcResult<UserListResponse>>
     /** 追加个人词条（按词形去重；原子写 + .bak 复用持久化铁律） */
     add(request: UserAddRequest): Promise<IpcResult<null>>
+  }
+  backup: {
+    /** 全量 userData JSON 导出（v0.2.6 P1-③：完整备份，含重启前完整 progress.json） */
+    export(): Promise<IpcResult<BackupExportResponse>>
   }
   settings: {
     get(): Promise<IpcResult<AppSettings>>

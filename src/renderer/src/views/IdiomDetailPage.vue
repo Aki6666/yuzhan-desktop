@@ -6,12 +6,14 @@
  *   列表为性能已剥离这两字段，用户要求 #1）；纯本地渲染，无 AI 依赖（AC-02 离线可用）
  * - 三态：加载中（NSpin）/ 未收录（NEmpty + 返回引导）/ 正常（IdiomDetailCard）
  */
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, shallowRef, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { NButton, NEmpty, NSpin } from 'naive-ui'
 import { useIdiomsStore } from '@renderer/stores/idioms'
 import IdiomDetailCard from '@renderer/components/idiom-detail/IdiomDetailCard.vue'
-import type { Idiom } from '@shared/ipc/contracts'
+import ConfusableWords from '@renderer/components/idiom-detail/ConfusableWords.vue'
+import { createDistractorIndex, type DistractorIndex } from '@shared/lib/quiz'
+import type { ConfusablePair, Idiom } from '@shared/ipc/contracts'
 
 const route = useRoute()
 const router = useRouter()
@@ -23,6 +25,11 @@ const idiomId = computed(() => String(route.params.id ?? ''))
 /** 全量词条（data:get 拉取后合并 examples/origin） */
 const fullIdiom = ref<Idiom | null>(null)
 
+/** 易混词索引缓存（正式库+个人库，懒建一次；个人库变化时刷新） */
+const indexCache = shallowRef<DistractorIndex | null>(null)
+const userItems = ref<Idiom[]>([])
+const pairs = ref<ConfusablePair[]>([])
+
 /** 先显示列表条目（快），全量到达后合并 */
 const idiom = computed<Idiom | null>(() => {
   const base = store.byId(idiomId.value) ?? null
@@ -30,6 +37,31 @@ const idiom = computed<Idiom | null>(() => {
   if (!full) return base
   return full
 })
+
+/** 易混词候选池 = 正式库 + 个人库（v0.2.6，BUG-4：详情页易混淆词） */
+const confusableItems = computed<Idiom[]>(() => {
+  const seen = new Map<string, Idiom>()
+  for (const i of [...store.items, ...userItems.value]) {
+    if (i && typeof i.word === 'string') seen.set(i.word, i)
+  }
+  return [...seen.values()]
+})
+
+async function loadConfusableData(): Promise<void> {
+  try {
+    if (userItems.value.length === 0) {
+      const res = await window.api.user.list()
+      if (res.ok) userItems.value = res.data.items
+    }
+    if (pairs.value.length === 0) {
+      const res = await window.api.pairs.list()
+      if (res.ok) pairs.value = res.data.pairs
+    }
+  } catch {
+    /* 个人库/pairs 不可用：易混词区块仅基于正式库与 near 计算 */
+  }
+  indexCache.value = createDistractorIndex(confusableItems.value, pairs.value)
+}
 
 /** 加载失败重试计数器（驱动 watch 重新拉取） */
 const retryTick = ref(0)
@@ -47,6 +79,7 @@ async function ensureLoaded(): Promise<void> {
   } catch {
     /* 全量失败不阻塞：保留列表条目展示 */
   }
+  await loadConfusableData()
 }
 
 onMounted(() => {
@@ -94,7 +127,16 @@ function goBackToList(): void {
     </div>
 
     <!-- 正常展示 -->
-    <IdiomDetailCard v-else :idiom="idiom" />
+    <template v-else>
+      <IdiomDetailCard :idiom="idiom" />
+      <!-- 易混淆词（v0.2.6，BUG-4：形近/近义词 + 跳转/释义） -->
+      <ConfusableWords
+        v-if="indexCache"
+        :idiom="idiom"
+        :items="confusableItems"
+        :pairs="pairs"
+      />
+    </template>
   </section>
 </template>
 

@@ -303,21 +303,24 @@ describe('batchFill 纯逻辑（createBatchFill）', () => {
 // ---------------------------------------------------------------------------
 
 describe('PendingPage 批量 AI 补全（V2-H）', () => {
-  it('无 key（aiMode=disabled）：入口禁用 + 提示配置；点击不触发 AI 查询', async () => {
-    const { wrapper, aiSearchWord } = await mountPending({ aiMode: 'disabled', pending: ['生僻词甲'] })
+  it('无 key（aiMode=disabled）：入口可点击但点击跳设置页引导配置，不触发 AI 查询（v0.2.6 BUG-6 优化）', async () => {
+    const { wrapper, aiSearchWord, router } = await mountPending({ aiMode: 'disabled', pending: ['生僻词甲'] })
     const btn = wrapper.find('[data-testid="batch-fill-start"]')
-    expect(btn.attributes('disabled')).toBeDefined()
+    expect(btn.attributes('disabled')).toBeUndefined() // 不再单纯禁用
     expect(wrapper.find('[data-testid="batch-ai-hint"]').exists()).toBe(true)
     await btn.trigger('click')
     await flushPromises()
     expect(aiSearchWord).not.toHaveBeenCalled()
     expect(wrapper.find('[data-testid="batch-panel"]').exists()).toBe(false)
+    expect(router.currentRoute.value.path).toBe('/settings') // 引导去配置
   })
 
-  it('aiMode=error：入口禁用并提示不可用', async () => {
-    const { wrapper } = await mountPending({ aiMode: 'error', pending: ['生僻词甲'] })
-    expect(wrapper.find('[data-testid="batch-fill-start"]').attributes('disabled')).toBeDefined()
+  it('aiMode=error：提示不可用；点击同样引导去设置页', async () => {
+    const { wrapper, router } = await mountPending({ aiMode: 'error', pending: ['生僻词甲'] })
     expect(wrapper.find('[data-testid="batch-ai-hint"]').text()).toContain('AI 模式「异常」不可用')
+    await wrapper.find('[data-testid="batch-fill-start"]').trigger('click')
+    await flushPromises()
+    expect(router.currentRoute.value.path).toBe('/settings')
   })
 
   it('aiMode=online + 生词：入口可用 → 点击开始批量 → 逐词查询并展示预览/进度', async () => {

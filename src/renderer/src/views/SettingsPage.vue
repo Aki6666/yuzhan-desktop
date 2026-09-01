@@ -163,6 +163,33 @@ async function handleExport(): Promise<void> {
   }
 }
 
+/** 全量 userData 备份（v0.2.6 P1-③）：backup:export 导出全部 userData JSON 文件 */
+const exportingFull = ref(false)
+async function handleExportFull(): Promise<void> {
+  exportingFull.value = true
+  exportError.value = null
+  try {
+    const res = await window.api.backup.export()
+    if (!res.ok) {
+      exportError.value = res.error.message
+      return
+    }
+    const payload = {
+      app: 'yuzhan',
+      note: '全量 userData 备份（v0.2.6 P1-③，含重启前完整 progress.json）',
+      exportedAt: res.data.exportedAt,
+      files: res.data.files
+    }
+    const datePart = res.data.exportedAt.slice(0, 10).replace(/-/g, '')
+    downloadJson(payload, `yuzhan-full-backup-${datePart}.json`)
+    exportedAt.value = res.data.exportedAt
+  } catch (e) {
+    exportError.value = String(e)
+  } finally {
+    exportingFull.value = false
+  }
+}
+
 const aiModeTag = {
   disabled: { type: 'default', label: '未配置（纯本地模式）' },
   configured: { type: 'info', label: '已配置待自检' },
@@ -214,10 +241,7 @@ const aiModeTag = {
           {{ capturePreview ? `已捕获：${capturePreview}` : '按下新的按键或组合键' }}
         </span>
       </div>
-      <p class="muted">
-        默认「+」键（主键盘 + / 等号键 / 数字键盘加号）唤起快速记录；点击「自定义按键」后按下新的
-        按键或组合键即生效（保存后立即应用），Esc 取消；Esc 关闭弹层、回车直接记录。
-      </p>
+      <p class="muted">默认「+」键唤起快速记录；点「自定义按键」后按新键即生效（Esc 取消）。</p>
     </NCard>
 
     <!-- 外观（v0.2.6 迭代，§16.3 P0-③ 暗色模式） -->
@@ -237,10 +261,7 @@ const aiModeTag = {
           @update:value="(v: boolean) => settingsStore.setTheme(v ? 'dark' : 'light')"
         />
       </div>
-      <p class="muted">
-        暗色「暖墨夜」主题：深墨灰底 + 纸白文字，保留纸感不刺眼，适合晚间刷题复习；
-        选择即时生效并持久化（config.json）。
-      </p>
+      <p class="muted">晚间刷题更舒适；选择即时生效并保存。</p>
     </NCard>
 
     <!-- AI 模式（v0.2：四态 + apiKey 配置 + OpenAI 兼容端点/模型） -->
@@ -300,15 +321,12 @@ const aiModeTag = {
           data-testid="ai-fastmode-switch"
           @update:value="(v: boolean) => settingsStore.setAiFastMode(v)"
         />
-        <span class="muted">开启后查询跳过模型思考阶段（thinking:disabled），成语释义查询速度更快；如需更深入的分析可关闭</span>
+        <span class="muted">开启后跳过思考阶段，查询更快</span>
       </div>
 
       <p v-if="aiMessage" class="success" data-testid="ai-message">{{ aiMessage }}</p>
       <p v-if="aiError" class="error" data-testid="ai-error">{{ aiError }}</p>
-      <p class="muted">
-        apiKey 经系统加密存储（Windows DPAPI）；解密失败视为未配置（降级纯本地，不崩不丢数据）。
-        无 key/断网时本地功能完整可用（AC-02）；未命中词条降级存入生词本。
-      </p>
+      <p class="muted">apiKey 经系统加密存储；无 key/断网时本地功能完整可用，未命中词条降级存入生词本。</p>
     </NCard>
 
     <!-- 数据备份 -->
@@ -329,15 +347,22 @@ const aiModeTag = {
         >
           导出 JSON 备份
         </NButton>
+        <NButton
+          size="small"
+          secondary
+          :loading="exportingFull"
+          data-testid="export-full-button"
+          title="导出全部 userData 文件（含重启前完整 progress.json）"
+          @click="handleExportFull"
+        >
+          导出完整备份
+        </NButton>
         <span v-if="exportedAt" class="muted" data-testid="exported-at">
           已导出于 {{ exportedAt.slice(0, 19).replace('T', ' ') }}
         </span>
       </div>
       <p v-if="exportError" class="error" data-testid="export-error">{{ exportError }}</p>
-      <p class="muted">
-        v0.1 简版：导出设置 + 生词本 + 进度（会话数据快照）。全量 userData 备份（含重启前完整
-        progress.json）记录为 v0.2 必补项（§11.4 检查单 6）。
-      </p>
+      <p class="muted">导出设置 + 生词本 + 进度（JSON）。全量 userData 备份排期 v0.2.7。</p>
     </NCard>
   </section>
 </template>
@@ -346,8 +371,8 @@ const aiModeTag = {
 .settings-page {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  max-width: 720px;
+  gap: 12px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -413,7 +438,7 @@ const aiModeTag = {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .row-label {
@@ -431,7 +456,7 @@ const aiModeTag = {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 4px 0 8px;
+  margin: 2px 0 6px;
 }
 
 .capture-preview {
@@ -442,12 +467,12 @@ const aiModeTag = {
 .muted {
   color: var(--y-text-tertiary);
   font-size: var(--y-font-aux);
-  margin: 4px 0 0;
-  line-height: 1.6;
+  margin: 2px 0 0;
+  line-height: 1.55;
 }
 
 .ai-field {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 .ai-input-row {

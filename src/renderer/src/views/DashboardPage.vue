@@ -6,8 +6,10 @@
  * - 入口：成语库 / 闪卡 / 自测 / 易混淆 / 错题本 / 生词本
  */
 import { computed, onMounted, ref } from 'vue'
+import { NButton } from 'naive-ui'
 import { useIdiomsStore } from '@renderer/stores/idioms'
 import { useProgressStore } from '@renderer/stores/progress'
+import { todayDueCount } from '@renderer/components/progress-dashboard/dashboardStats'
 import type { QuizHistoryItem } from '@shared/ipc/contracts'
 
 const idiomsStore = useIdiomsStore()
@@ -15,6 +17,12 @@ const progressStore = useProgressStore()
 
 const pairCount = ref(0)
 const history = ref<QuizHistoryItem[]>([])
+
+/** 今日（YYYY-MM-DD，UTC 口径与 store lastSeen/due 一致） */
+const todayStr = new Date().toISOString().slice(0, 10)
+
+/** 今日到期待复习数（SM-2 调度，v0.2.6 P1-② 每日目标） */
+const dueToday = computed(() => todayDueCount(progressStore.progress, todayStr))
 
 const stats = computed(() => {
   const p = progressStore.progress
@@ -43,12 +51,12 @@ const lastRate = computed<number | null>(() => {
 })
 
 const ENTRIES = [
-  { to: '/idioms', label: '成语库', desc: '浏览 2600+ 高频成语 · 多列检索', icon: 'M4 19.5A2.5 2.5 0 0 1 6.5 17H20 M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z' },
-  { to: '/flashcards', label: '闪卡', desc: '碎片时间复习 · 3 次认识即掌握', icon: 'M13 2 3 14h9l-1 8 10-12h-9l1-8z' },
-  { to: '/quiz', label: '自测', desc: '10 题一组 · 错题进错题本', icon: 'M22 11.08V12a10 10 0 1 1-5.93-9.14 M22 4 12 14.01l-3-3' },
-  { to: '/confusable', label: '易混淆', desc: '结对辨析 · 一句话说清区别', icon: 'M16 3h5v5 M4 20 21 3 M21 16v5h-5 M15 15l6 6 M4 4l5 5' },
-  { to: '/wrongbook', label: '错题本', desc: '错词汇总 · 误用类型分布', icon: 'M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z M15 9l-6 6 M9 9l6 6' },
-  { to: '/pending', label: '生词本', desc: '未收录词条暂存 · AI 补全', icon: 'M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z' }
+  { to: '/idioms', label: '成语库', desc: '浏览 2600+ 高频成语 · 多列检索', icon: ['M4 19.5A2.5 2.5 0 0 1 6.5 17H20', 'M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'] },
+  { to: '/flashcards', label: '闪卡', desc: '碎片时间复习 · 3 次认识即掌握', icon: ['M13 2 3 14h9l-1 8 10-12h-9l1-8z'] },
+  { to: '/quiz', label: '自测', desc: '10 题一组 · 错题进错题本', icon: ['M22 11.08V12a10 10 0 1 1-5.93-9.14', 'M22 4 12 14.01l-3-3'] },
+  { to: '/confusable', label: '易混淆', desc: '结对辨析 · 一句话说清区别', icon: ['M16 3h5v5', 'M4 20 21 3', 'M21 16v5h-5', 'M15 15l6 6', 'M4 4l5 5'] },
+  { to: '/wrongbook', label: '错题本', desc: '错词汇总 · 误用类型分布', icon: ['M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z', 'M15 9l-6 6', 'M9 9l6 6'] },
+  { to: '/pending', label: '生词本', desc: '未收录词条暂存 · AI 补全', icon: ['M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'] }
 ] as const
 
 onMounted(() => {
@@ -78,6 +86,18 @@ onMounted(() => {
         <span class="rate-label">最近自测正确率</span>
       </div>
     </header>
+
+    <!-- 每日目标：今日到期待复习（v0.2.6 P1-②） -->
+    <div v-if="dueToday > 0" class="due-banner" data-testid="today-due">
+      <span class="due-seal" aria-hidden="true">今</span>
+      <div class="due-main">
+        <span class="due-title">今日有 <b class="due-num">{{ dueToday }}</b> 张到期复习</span>
+        <span class="due-sub">趁热打铁，先清今天的卡</span>
+      </div>
+      <RouterLink to="/flashcards" class="due-action">
+        <NButton size="small" type="primary" data-testid="goto-flashcards">去复习</NButton>
+      </RouterLink>
+    </div>
 
     <!-- 学习统计 -->
     <div class="stats-grid">
@@ -116,7 +136,7 @@ onMounted(() => {
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path v-for="(d, i) in e.icon.split(' ')" :key="i" :d="d" />
+            <path v-for="(d, i) in e.icon" :key="i" :d="d" />
           </svg>
         </span>
         <div class="entry-text">
@@ -220,6 +240,63 @@ onMounted(() => {
 .rate-label {
   font-size: var(--y-font-aux);
   opacity: 0.7;
+}
+
+/* 每日目标横幅（v0.2.6 P1-②） */
+.due-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 1px solid color-mix(in srgb, var(--y-primary) 28%, var(--y-border-light));
+  border-radius: var(--y-radius-lg);
+  background:
+    radial-gradient(200px 80px at 0% 0%, color-mix(in srgb, var(--y-primary) 6%, transparent), transparent 70%),
+    var(--y-bg-card);
+  box-shadow: var(--y-shadow-card);
+}
+
+.due-seal {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--y-font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(150deg, var(--y-primary) 0%, var(--y-primary-active) 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(150, 48, 31, 0.28);
+}
+
+.due-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.due-title {
+  font-size: var(--y-font-body);
+  color: var(--y-text-body);
+}
+
+.due-num {
+  color: var(--y-primary);
+  font-size: 18px;
+}
+
+.due-sub {
+  font-size: var(--y-font-aux);
+  color: var(--y-text-tertiary);
+}
+
+.due-action {
+  margin-left: auto;
+  text-decoration: none;
 }
 
 /* 统计卡 */

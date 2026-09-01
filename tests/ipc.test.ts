@@ -293,4 +293,18 @@ describe('个人库 + 主题（v0.2.6 P0-④/P0-③）', () => {
     const list2 = (await call(IPC_CHANNELS.userList)) as { ok: boolean; data: { items: unknown[] } }
     expect(list2.data.items).toHaveLength(1)
   })
+
+  it('backup:export → 全量 userData JSON（v0.2.6 P1-③）：写入 progress/pending 后导出含对应文件', async () => {
+    await call(IPC_CHANNELS.progressSave, { id: 'a-01', status: 'learning' })
+    await call(IPC_CHANNELS.pendingAdd, '未收录词甲')
+    const r = (await call(IPC_CHANNELS.backupExport)) as {
+      ok: boolean
+      data: { files: Record<string, string>; exportedAt: string }
+    }
+    expect(r.ok).toBe(true)
+    expect(r.data.files['progress.json']).toBeTruthy()
+    expect(r.data.files['progress.json']).toContain('a-01')
+    expect(r.data.files['pending.json']).toContain('未收录词甲')
+    expect(r.data.exportedAt).toBeTruthy()
+  })
 })

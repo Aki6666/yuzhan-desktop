@@ -357,4 +357,19 @@ describe('个人库落盘 + 主题设置（v0.2.6 P0-④/P0-③）', () => {
     const s3 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
     expect(s3.getSettings().theme).toBe('light')
   })
+
+  it('全量导出（v0.2.6 P1-③）：exportUserDataJson 含全部主 .json，排除 .bak/.tmp', async () => {
+    const dir = makeDir()
+    const s1 = createStorage({ userDataDir: dir, dataDir: join(dir, 'data') })
+    await s1.saveProgress({ id: 'a-01', status: 'learning' })
+    await s1.addPending('未收录词甲')
+    await s1.saveSettings({ theme: 'dark' })
+    await s1.flush()
+    const files = s1.exportUserDataJson()
+    expect(files['progress.json']).toContain('a-01')
+    expect(files['pending.json']).toContain('未收录词甲')
+    expect(files['config.json']).toContain('dark')
+    // 备份/临时文件不入导出
+    expect(Object.keys(files).some((n) => n.endsWith('.bak') || n.endsWith('.tmp'))).toBe(false)
+  })
 })

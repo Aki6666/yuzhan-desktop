@@ -51,14 +51,14 @@ const fixture: Idiom[] = [
   idiom({ id: 'jin-xin-jie-li-01', word: '尽心竭力', pinyin: 'jìn xīn jié lì', frequency: 1 })
 ]
 
-/** 生成 n 条词条（用于虚拟滚动大数据量场景） */
+/** 生成 n 条词条（用于虚拟滚动大数据量场景；全同频次=5 → store 排序保持生成顺序） */
 function makeMany(n: number): Idiom[] {
   return Array.from({ length: n }, (_, i) =>
     idiom({
       id: `item-${String(i).padStart(3, '0')}`,
       word: `成语${String(i).padStart(3, '0')}`,
       pinyin: `chéng yǔ ${i}`,
-      frequency: ((i % 5) + 1) as 1 | 2 | 3 | 4 | 5
+      frequency: 5
     })
   )
 }
@@ -361,6 +361,62 @@ describe('列表页加载失败', () => {
     expect(wrapper.find('[data-testid="error-state"]').exists()).toBe(true)
     expect(wrapper.find('[data-testid="retry-load"]').exists()).toBe(true)
     expect(rows(wrapper)).toHaveLength(0)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// 分页（v0.2.6 修复，BUG-2：每页条数自选 + 页码切换）
+// ---------------------------------------------------------------------------
+
+describe('成语库分页（v0.2.6，BUG-2）', () => {
+  it('默认每页 100 条：超过 100 条时仅渲染第一页 + 显示页码', async () => {
+    const { wrapper } = await mountPage({ items: makeMany(250) })
+    // 250 条 → 每页 100 → 3 页；仅渲染第 1 页的 100 条（虚拟列表只渲染可视行，此处断言 paged 逻辑）
+    expect(wrapper.find('[data-testid="pager-text"]').text()).toContain('第 1 / 3 页')
+    expect(wrapper.find('[data-testid="page-next"]').exists()).toBe(true)
+    expect((wrapper.find('[data-testid="page-next"]').attributes('disabled'))).toBeUndefined()
+    // 第一页起点
+    expect(rows(wrapper)[0]?.attributes('data-id')).toBe('item-000')
+    wrapper.unmount()
+  })
+
+  it('下一页：页码 1→2，列表起点变为第 101 条', async () => {
+    const { wrapper } = await mountPage({ items: makeMany(250) })
+    await wrapper.find('[data-testid="page-next"]').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('[data-testid="pager-text"]').text()).toContain('第 2 / 3 页')
+    expect(rows(wrapper)[0]?.attributes('data-id')).toBe('item-100')
+    wrapper.unmount()
+  })
+
+  it('每页条数自选：改 50 条 → 5 页，改 500 条 → 1 页', async () => {
+    const { wrapper } = await mountPage({ items: makeMany(250) })
+    const select = wrapper.find('[data-testid="page-size"]')
+    await select.setValue('50')
+    await flushPromises()
+    expect(wrapper.find('[data-testid="pager-text"]').text()).toContain('第 1 / 5 页')
+    await select.setValue('500')
+    await flushPromises()
+    expect(wrapper.find('[data-testid="pager-text"]').text()).toContain('第 1 / 1 页')
+    wrapper.unmount()
+  })
+
+  it('搜索变化自动回到第一页', async () => {
+    const { wrapper } = await mountPage({ items: makeMany(250) })
+    await wrapper.find('[data-testid="page-next"]').trigger('click')
+    await flushPromises()
+    expect(wrapper.find('[data-testid="pager-text"]').text()).toContain('第 2 / 3 页')
+    await typeAndSettle(wrapper, '成语001')
+    expect(wrapper.find('[data-testid="pager-text"]').text()).toContain('第 1 /')
+    wrapper.unmount()
+  })
+
+  it('虚拟滚动断言（既有回归）：600 条仅渲染可视窗口', async () => {
+    const { wrapper } = await mountPage({ items: makeMany(600) })
+    expect(wrapper.find('[data-testid="virtual-scroll"]').exists()).toBe(true)
+    expect(rows(wrapper).length).toBeLessThan(600)
+    expect(rows(wrapper).length).toBeGreaterThan(0)
+    wrapper.unmount()
   })
 })
 

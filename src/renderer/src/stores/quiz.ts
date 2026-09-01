@@ -14,11 +14,15 @@ import {
   QUIZ_SIZE,
   buildQuiz,
   type QuizDifficulty,
+  type QuizMode,
   type QuizQuestion
 } from '@shared/lib/quiz'
 import { useProgressStore } from './progress'
 
 export type QuizPhase = 'idle' | 'active' | 'finished'
+
+/** 题型选择（v0.2.6 P1：正向/反向/混合） */
+export type QuizModeChoice = QuizMode | 'mixed'
 
 export const useQuizStore = defineStore('quiz', () => {
   const phase = ref<QuizPhase>('idle')
@@ -32,6 +36,8 @@ export const useQuizStore = defineStore('quiz', () => {
 
   /** 难度档位（v0.2.6 迭代：干扰项区分度，默认 standard） */
   const difficulty = ref<QuizDifficulty>('standard')
+  /** 题型（v0.2.6 P1：默认混合——正向/反向交替） */
+  const mode = ref<QuizModeChoice>('mixed')
   /** 易混淆对（v0.2.6 迭代：pairs:list 加载，a/b 互为干扰项 + 辨析提示） */
   const pairs = ref<ConfusablePair[]>([])
 
@@ -63,6 +69,11 @@ export const useQuizStore = defineStore('quiz', () => {
     difficulty.value = d
   }
 
+  /** 设置题型（v0.2.6 P1：正向/反向/混合） */
+  function setMode(m: QuizModeChoice): void {
+    mode.value = m
+  }
+
   /** 加载易混淆对（pairs:list；失败静默，组卷退回无 pairs 模式） */
   async function loadPairs(): Promise<void> {
     try {
@@ -77,16 +88,18 @@ export const useQuizStore = defineStore('quiz', () => {
    * 组卷并进入答题态。
    * 出题优先级：progress 中 wrongTimes>0 的词 + 上轮错词 → 高频（4–5）→ 其余；
    * 避免与上轮重复（上轮答对的词；上轮错词仍需复测）。
-   * v0.2.6 迭代：干扰项按混淆度评分 + difficulty 档位生成（pairs 提供易混对）。
+   * v0.2.6 迭代：干扰项按混淆度评分 + difficulty 档位生成（pairs 提供易混对）；
+   * v0.2.6 P1：mode 题型（混合=正向/反向交替各半，反向避免与正向重复）。
    * @returns 是否成功开始
    */
   function start(
     items: Idiom[],
     progress: Record<string, UserProgress>,
-    opts: { pairs?: ConfusablePair[]; difficulty?: QuizDifficulty } = {}
+    opts: { pairs?: ConfusablePair[]; difficulty?: QuizDifficulty; mode?: QuizModeChoice } = {}
   ): boolean {
     if (items.length < QUIZ_SIZE) return false
     if (opts.difficulty) difficulty.value = opts.difficulty
+    if (opts.mode) mode.value = opts.mode
     if (opts.pairs) pairs.value = opts.pairs
     const lastWrongSet = new Set(lastSessionWrongIds.value)
     const avoidIds = lastSessionIds.value.filter((id) => !lastWrongSet.has(id))
@@ -96,7 +109,32 @@ export const useQuizStore = defineStore('quiz', () => {
         .filter((p) => p.wrongTimes > 0)
         .map((p) => p.id)
     ]
-    const qs = buildQuiz(items, { avoidIds, wrongIds, pairs: pairs.value, difficulty: difficulty.value })
+    const base: Parameters<typeof buildQuiz>[1] = {
+      avoidIds,
+      wrongIds,
+      pairs: pairs.value,
+      difficulty: difficulty.value
+    }
+    let qs: QuizQuestion[]
+    if (mode.value === 'mixed') {
+      // 混合：正向/反向交替合并（各半；反向避免与正向重复）
+      const half = Math.ceil(QUIZ_SIZE / 2)
+      const fwd = buildQuiz(items, { ...base, size: half, mode: 'word-to-meaning' })
+      const rev = buildQuiz(items, {
+        ...base,
+        size: QUIZ_SIZE - half,
+        mode: 'meaning-to-word',
+        avoidIds: [...avoidIds, ...fwd.map((q) => q.id)]
+      })
+      qs = []
+      for (let i = 0; i < Math.max(fwd.length, rev.length); i++) {
+        if (fwd[i]) qs.push(fwd[i])
+        if (rev[i]) qs.push(rev[i])
+      }
+      qs = qs.slice(0, QUIZ_SIZE)
+    } else {
+      qs = buildQuiz(items, { ...base, mode: mode.value })
+    }
     if (qs.length < QUIZ_SIZE) return false
     questions.value = qs
     currentIndex.value = 0
@@ -142,13 +180,19 @@ export const useQuizStore = defineStore('quiz', () => {
       const plainAnswers = answers.value.map((a) => ({ id: a.id, correct: a.correct }))
       const res = await window.api.quiz.record({ answers: plainAnswers })
       if (!res.ok) submitError.value = res.error.message
-      // 自测历史（用户要求 #4）：记录本次会话成绩
+      // 自测历史（用户要求 #4 + v0.2.6 详细练习记录）：成绩 + 每题明细
       const { correct, wrong } = result.value
+      const details = questions.value.map((q) => ({
+        id: q.id,
+        word: q.word,
+        correct: answers.value.some((a) => a.id === q.id && a.correct)
+      }))
       void window.api.quiz.history.add({
         time: new Date().toISOString(),
         correct,
         wrong,
-        total: answers.value.length
+        total: answers.value.length,
+        details
       })
       // 同步 renderer 内存态（用户要求 #5：错题立即进错题本）——以 main 持久化进度为准全量拉取
       const progressStore = useProgressStore()
@@ -186,10 +230,12 @@ export const useQuizStore = defineStore('quiz', () => {
     lastSessionIds,
     lastSessionWrongIds,
     difficulty,
+    mode,
     pairs,
     canStart,
     start,
     setDifficulty,
+    setMode,
     loadPairs,
     answer,
     next,

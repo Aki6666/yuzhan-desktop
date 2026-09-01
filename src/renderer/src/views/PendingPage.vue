@@ -78,6 +78,19 @@ function goSettings(): void {
   void router.push('/settings')
 }
 
+/**
+ * 批量补全点击（v0.2.6 优化，BUG-6）：无 key / AI 不可用时点击引导去设置页配置，
+ * 而不是单纯禁用让用户困惑；已配置才真正开始批量。
+ */
+function onBatchClick(): void {
+  if (!aiReady.value) {
+    hint.value = 'AI 未配置：先到设置页配置 API Key，再回来批量补全'
+    void router.push('/settings')
+    return
+  }
+  startBatch()
+}
+
 // ---------------------------------------------------------------------------
 // 批量 AI 补全（V2-H）
 // ---------------------------------------------------------------------------
@@ -199,9 +212,9 @@ function statusLabel(item: BatchItem): string {
           size="small"
           secondary
           type="primary"
-          :disabled="!aiReady || count === 0 || batchRunning"
+          :disabled="count === 0 || batchRunning"
           data-testid="batch-fill-start"
-          @click="startBatch"
+          @click="onBatchClick"
         >
           批量 AI 补全
         </NButton>
@@ -212,12 +225,24 @@ function statusLabel(item: BatchItem): string {
       <NTag size="small" type="warning" :bordered="false">{{ hint }}</NTag>
     </div>
 
-    <!-- 使用说明（用户要求：生词本应该如何使用） -->
+    <!-- 使用说明（用户要求：生词本应该如何使用；v0.2.6 对齐修复：序号徽标与文字分离） -->
     <div class="guide-card" data-testid="pending-guide">
-      <div class="guide-step"><b>① 记</b>刷题遇到没收录的词，按「+」快速记录自动存入生词本；或手动添加。</div>
-      <div class="guide-step"><b>② 补</b>点「批量 AI 补全」，AI 生成释义草稿，逐条「确认入库 / 跳过」。</div>
-      <div class="guide-step"><b>③ 学</b>「立即复习」记入闪卡队列；确认过的词会进入个人库并加入复习。</div>
-      <div class="guide-step"><b>④ 清</b>已消化或不需要的词可直接删除。</div>
+      <div class="guide-step">
+        <span class="guide-num" aria-hidden="true">①</span>
+        <span class="guide-body"><b>记</b>刷题遇到没收录的词，按「+」快速记录自动存入生词本；或手动添加。</span>
+      </div>
+      <div class="guide-step">
+        <span class="guide-num" aria-hidden="true">②</span>
+        <span class="guide-body"><b>补</b>点「批量 AI 补全」，AI 生成释义草稿，逐条「确认入库 / 跳过」。</span>
+      </div>
+      <div class="guide-step">
+        <span class="guide-num" aria-hidden="true">③</span>
+        <span class="guide-body"><b>学</b>「立即复习」记入闪卡队列；确认过的词会进入个人库并加入复习。</span>
+      </div>
+      <div class="guide-step">
+        <span class="guide-num" aria-hidden="true">④</span>
+        <span class="guide-body"><b>清</b>已消化或不需要的词可直接删除。</span>
+      </div>
     </div>
 
     <!-- AI 未就绪提示（§3.3：无 key/断网禁用并提示配置） -->
@@ -397,7 +422,7 @@ function statusLabel(item: BatchItem): string {
   padding-bottom: 2px;
 }
 
-/* 使用说明：朱砂序号步骤卡 */
+/* 使用说明：朱砂序号徽标 + 步骤文字（对齐：徽标固定，文字换行不受影响） */
 .guide-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -410,23 +435,37 @@ function statusLabel(item: BatchItem): string {
 }
 
 .guide-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 12px;
   line-height: 1.6;
   color: var(--y-text-secondary);
 }
 
-.guide-step b {
+.guide-num {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin-right: 6px;
   border-radius: 50%;
   background: var(--y-primary-soft);
   color: var(--y-primary);
   font-size: 11px;
-  transform: translateY(3px);
+  font-weight: 700;
+  transform: translateY(1px);
+}
+
+.guide-body {
+  min-width: 0;
+}
+
+.guide-body b {
+  color: var(--y-primary);
+  font-weight: 700;
+  margin-right: 2px;
 }
 
 .result-count {
